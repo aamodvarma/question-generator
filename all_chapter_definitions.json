@@ -1,0 +1,192 @@
+{
+    "Parametric Equations and Polar Coordinates": {
+        "1-1-parametric-equations": [
+            "If x and y are continuous functions of t on an interval I, then the equations\nx=x(t)andy=y(t)x=x(t)andy=y(t)\nare called parametric equations and t is called the parameter. The set of points (x,y)(x,y) obtained as t varies over the interval I is called the graph of the parametric equations. The graph of parametric equations is called a parametric curve or plane curve, and is denoted by C."
+        ],
+        "1-2-calculus-of-parametric-curves": [],
+        "1-3-polar-coordinates": [],
+        "1-4-area-and-arc-length-in-polar-coordinates": [],
+        "1-5-conic-sections": [
+            "A parabola is the set of all points whose distance from a fixed point, called the focus, is equal to the distance from a fixed line, called the directrix. The point halfway between the focus and the directrix is called the vertex of the parabola.",
+            "An ellipse is the set of all points for which the sum of their distances from two fixed points (the foci) is constant.",
+            "A hyperbola is the set of all points where the difference between their distances from two fixed points (the foci) is constant.",
+            "The eccentricity e of a conic section is defined to be the distance from any point on the conic section to its focus, divided by the perpendicular distance from that point to the nearest directrix. This value is constant for any conic section, and can define the conic section as well:\n\nIf e=1,e=1, the conic is a parabola.\nIf e<1,e<1, it is an ellipse.\nIf e>1,e>1, it is a hyperbola.\n\nThe eccentricity of a circle is zero. The directrix of a conic section is the line that, together with the point known as the focus, serves to define a conic section. Hyperbolas and noncircular ellipses have two foci and two associated directrices. Parabolas have one focus and one directrix."
+        ]
+    },
+    "Vectors in Space": {
+        "2-1-vectors-in-the-plane": [
+            "A vector is a quantity that has both magnitude and direction.",
+            "Vectors are said to be equivalent vectors if they have the same magnitude and direction.",
+            "The product kvkv of a vector v and a scalar k is a vector with a magnitude that is |k||k| times the magnitude of v,v, and with a direction that is the same as the direction of vv if k>0,k>0, and opposite the direction of vv if k<0.k<0. This is called scalar multiplication. If k=0k=0 or v=0,v=0, then kv=0.kv=0.",
+            "The sum of two vectors vv and ww can be constructed graphically by placing the initial point of ww at the terminal point of v.v. Then, the vector sum, v+w,v+w, is the vector with an initial point that coincides with the initial point of vv and has a terminal point that coincides with the terminal point of w.w. This operation is known as vector addition.",
+            "The vector with initial point (0,0)(0,0) and terminal point (x,y)(x,y) can be written in component form as\nv=〈x,y〉.v=〈x,y〉.\nThe scalars xx and yy are called the components of v.v.",
+            "Let v=〈x1,y1〉v=〈x1,y1〉 and w=〈x2,y2〉w=〈x2,y2〉 be vectors, and let kk be a scalar.\nScalar multiplication:kv=〈kx1,ky1〉kv=〈kx1,ky1〉\nVector addition:v+w=〈x1,y1〉+〈x2,y2〉=〈x1+x2,y1+y2〉v+w=〈x1,y1〉+〈x2,y2〉=〈x1+x2,y1+y2〉"
+        ],
+        "2-2-vectors-in-three-dimensions": [
+            "The three-dimensional rectangular coordinate system consists of three perpendicular axes: the x-axis, the y-axis, the z-axis, and an origin at the point of intersection (0) of the axes. Because each axis is a number line representing all real numbers in ℝ,ℝ, the three-dimensional system is often denoted by ℝ3.ℝ3.",
+            "A sphere is the set of all points in space equidistant from a fixed point, the center of the sphere (Figure 2.34), just as the set of all points in a plane that are equidistant from the center represents a circle. In a sphere, as in a circle, the distance from the center to a point on the sphere is called the radius."
+        ],
+        "2-3-the-dot-product": [
+            "The dot product of vectors u=〈u1,u2,u3〉u=〈u1,u2,u3〉 and v=〈v1,v2,v3〉v=〈v1,v2,v3〉 is given by the sum of the products of the components\nu·v=u1v1+u2v2+u3v3.u·v=u1v1+u2v2+u3v3.\n(2.3)",
+            "The angles formed by a nonzero vector and the coordinate axes are called the direction angles for the vector (Figure 2.48). The cosines for these angles are called the direction cosines.",
+            "The vector projection of vv onto uu is the vector labeled projuv in Figure 2.50. It has the same initial point as uu and vv and the same direction as uu, and represents the component of vv that acts in the direction of uu. If θθ represents the angle between uu and vv, then, by properties of triangles, we know the length of projuvprojuv is ‖projuv‖=‖v‖cosθ.‖projuv‖=‖v‖cosθ. Note that when the angle θθ between uu and vv is an obtuse angle, the projection will be in the opposite direction of uu.  When expressing cosθcosθ in terms of the dot product, this becomes\n‖projuv‖=‖v‖cosθ=‖v‖(|u·v|‖u‖‖v‖)=|u·v|‖u‖.‖projuv‖=‖v‖cosθ=‖v‖(|u·v|‖u‖‖v‖)=|u·v|‖u‖.We now multiply by a unit vector in the direction of uu to get projuv:projuv:\nprojuv=u·v‖u‖(1‖u‖u)=u·v‖u‖2u.projuv=u·v‖u‖(1‖u‖u)=u·v‖u‖2u.\n(2.6)\n\n\nThe length of this vector is also known as the scalar projection of vv onto uu and is denoted by\nprojuv=compuv=u·v‖u‖.projuv=compuv=u·v‖u‖.\n(2.7)",
+            "When a constant force is applied to an object so the object moves in a straight line from point P to point Q, the work W done by the force F, acting at an angle θ from the line of motion, is given by\nW=F·PQ→=‖F‖‖PQ→‖cosθ.W=F·PQ→=‖F‖‖PQ→‖cosθ.\n(2.8)"
+        ],
+        "2-4-the-cross-product": [
+            "Let u=〈u1,u2,u3〉andv=〈v1,v2,v3〉.u=〈u1,u2,u3〉andv=〈v1,v2,v3〉. Then, the cross product u×vu×v is vector\nu×v=(u2v3−u3v2)i−(u1v3−u3v1)j+(u1v2−u2v1)k=〈u2v3−u3v2,−(u1v3−u3v1),u1v2−u2v1〉.u×v=(u2v3−u3v2)i−(u1v3−u3v1)j+(u1v2−u2v1)k=〈u2v3−u3v2,−(u1v3−u3v1),u1v2−u2v1〉.\n(2.9)",
+            "The triple scalar product of vectors u,u, v,v, and ww is u·(v×w).u·(v×w).",
+            "Torque, ττ (the Greek letter tau), measures the tendency of a force to produce rotation about an axis of rotation. Let rr be a vector with an initial point located on the axis of rotation and with a terminal point located at the point where the force is applied, and let vector FF represent the force. Then torque is equal to the cross product of rr and F:F:\nτ=r×F.τ=r×F.\nSee Figure 2.61."
+        ],
+        "2-5-equations-of-lines-and-planes-in-space": [
+            "Given a point PP and vector n,n, the set of all points QQ satisfying the equation n·PQ→=0n·PQ→=0 forms a plane. The equation\nn·PQ→=0n·PQ→=0\n(2.17)\n\n\nis known as the vector equation of a plane.\nThe scalar equation of a plane containing point P=(x0,y0,z0)P=(x0,y0,z0) with normal vector n=〈a,b,c〉n=〈a,b,c〉 is\na(x−x0)+b(y−y0)+c(z−z0)=0.a(x−x0)+b(y−y0)+c(z−z0)=0.\n(2.18)\n\n\nThis equation can be expressed as ax+by+cz+d=0,ax+by+cz+d=0, where d=−ax0−by0−cz0.d=−ax0−by0−cz0. This form of the equation is sometimes called the general form of the equation of a plane."
+        ],
+        "2-6-quadric-surfaces": [
+            "A set of lines parallel to a given line passing through a given curve is known as a cylindrical surface, or cylinder. The parallel lines are called rulings.",
+            "The traces of a surface are the cross-sections created when the surface intersects a plane parallel to one of the coordinate planes.",
+            "Quadric surfaces are the graphs of equations that can be expressed in the form\nAx2+By2+Cz2+Dxy+Exz+Fyz+Gx+Hy+Jz+K=0.Ax2+By2+Cz2+Dxy+Exz+Fyz+Gx+Hy+Jz+K=0."
+        ],
+        "2-7-cylindrical-and-spherical-coordinates": [
+            "In the cylindrical coordinate system, a point in space (Figure 2.89) is represented by the ordered triple (r,θ,z),(r,θ,z), where\n\n(r,θ)(r,θ) are the polar coordinates of the point’s projection in the xy-plane\nzz is the usual z-coordinatez-coordinate in the Cartesian coordinate system",
+            "In the spherical coordinate system, a point PP in space (Figure 2.97) is represented by the ordered triple (ρ,θ,φ)(ρ,θ,φ) where\n\nρρ (the Greek letter rho) is the distance between PP and the origin (ρ≠0);(ρ≠0);\nθθ is the same angle used to describe the location in cylindrical coordinates;\nφφ (the Greek letter phi) is the angle formed by the positive z-axis and line segment OP—,OP—, where OO is the origin and 0≤φ≤π.0≤φ≤π."
+        ]
+    },
+    "Vector-Valued Functions": {
+        "3-1-vector-valued-functions-and-space-curves": [
+            "A vector-valued function is a function of the form\nr(t)=f(t)i+g(t)jorr(t)=f(t)i+g(t)j+h(t)k,r(t)=f(t)i+g(t)jorr(t)=f(t)i+g(t)j+h(t)k,\n(3.1)\n\n\nwhere the component functions f, g, and h, are real-valued functions of the parameter t. Vector-valued functions are also written in the form\nr(t)=〈f(t),g(t)〉orr(t)=〈f(t),g(t),h(t)〉.r(t)=〈f(t),g(t)〉orr(t)=〈f(t),g(t),h(t)〉.\n(3.2)\n\n\nIn both cases, the first form of the function defines a two-dimensional vector-valued function; the second form describes a three-dimensional vector-valued function.",
+            "A vector-valued function r approaches the limit L as t approaches a, written\nlimt→ar(t)=L,limt→ar(t)=L,\nprovided\nlimt→a||r(t)−L||=0.limt→a||r(t)−L||=0.",
+            "Let f, g, and h be functions of t. Then, the vector-valued function r(t)=f(t)i+g(t)jr(t)=f(t)i+g(t)j is continuous at point t=at=a if the following three conditions hold:\n\nr(a)r(a) exists\nlimt→ar(t)limt→ar(t) exists\nlimt→ar(t)=r(a)limt→ar(t)=r(a)\n\nSimilarly, the vector-valued function r(t)=f(t)i+g(t)j+h(t)kr(t)=f(t)i+g(t)j+h(t)k is continuous at point t=at=a if the following three conditions hold:\n\nr(a)r(a) exists\nlimt→ar(t)limt→ar(t) exists\nlimt→ar(t)=r(a)limt→ar(t)=r(a)"
+        ],
+        "3-2-calculus-of-vector-valued-functions": [
+            "The derivative of a vector-valued function r(t)r(t) is\nr′(t)=limΔt→0r(t+Δt)−r(t)Δt,r′(t)=limΔt→0r(t+Δt)−r(t)Δt,\n(3.5)\n\n\nprovided the limit exists. If r′(t)r′(t) exists, then r is differentiable at t. If r′(t)r′(t) exists for all t in an open interval (a,b),(a,b), then r is differentiable over the interval (a,b).(a,b). For the function to be differentiable over the closed interval [a,b],[a,b], the following two limits must exist as well:\nr′(a)=limΔt→0+r(a+Δt)−r(a)Δtandr′(b)=limΔt→0−r(b+Δt)−r(b)Δt.r′(a)=limΔt→0+r(a+Δt)−r(a)Δtandr′(b)=limΔt→0−r(b+Δt)−r(b)Δt.",
+            "Let C be a curve defined by a vector-valued function r, and assume that r′(t)r′(t) exists when t=t0.t=t0. A tangent vector v at t=t0t=t0 is any vector such that, when the tail of the vector is placed at point r(t0)r(t0) on the graph, vector v is tangent to curve C. Vector r′(t0)r′(t0) is an example of a tangent vector at point t=t0.t=t0. Furthermore, assume that r′(t)≠0.r′(t)≠0. The principal unit tangent vector at t is defined to be\nT(t)=r′(t)‖r′(t)‖,T(t)=r′(t)‖r′(t)‖,\n(3.6)\n\n\nprovided ‖r′(t)‖≠0.‖r′(t)‖≠0.",
+            "Let f, g, and h be integrable real-valued functions over the closed interval [a,b].[a,b].\n\nThe indefinite integral of a vector-valued function r(t)=f(t)i+g(t)jr(t)=f(t)i+g(t)j is\n∫[f(t)i+g(t)j]dt=[∫f(t)dt]i+[∫g(t)dt]j.∫[f(t)i+g(t)j]dt=[∫f(t)dt]i+[∫g(t)dt]j.\n(3.7)\n\n\nThe definite integral of a vector-valued function is\n∫ab[f(t)i+g(t)j]dt=[∫abf(t)dt]i+[∫abg(t)dt]j.∫ab[f(t)i+g(t)j]dt=[∫abf(t)dt]i+[∫abg(t)dt]j.\n(3.8)\n\n\nThe indefinite integral of a vector-valued function r(t)=f(t)i+g(t)j+h(t)kr(t)=f(t)i+g(t)j+h(t)k is\n∫[f(t)i+g(t)j+h(t)k]dt=[∫f(t)dt]i+[∫g(t)dt]j+[∫h(t)dt]k.∫[f(t)i+g(t)j+h(t)k]dt=[∫f(t)dt]i+[∫g(t)dt]j+[∫h(t)dt]k.\n(3.9)\n\n\nThe definite integral of the vector-valued function is\n∫ab[f(t)i+g(t)j+h(t)k]dt=[∫abf(t)dt]i+[∫abg(t)dt]j+[∫abh(t)dt]k.∫ab[f(t)i+g(t)j+h(t)k]dt=[∫abf(t)dt]i+[∫abg(t)dt]j+[∫abh(t)dt]k.\n(3.10)"
+        ],
+        "3-3-arc-length-and-curvature": [
+            "Let C be a smooth curve in the plane or in space given by r(s),r(s), where ss is the arc-length parameter. The curvature κκ at s is\nκ=‖dTds‖=‖T′(s)‖.κ=‖dTds‖=‖T′(s)‖.",
+            "Let C be a three-dimensional smooth curve represented by r over an open interval I. If T′(t)≠0,T′(t)≠0, then the principal unit normal vector at t is defined to be\nN(t)=T′(t)‖T′(t)‖.N(t)=T′(t)‖T′(t)‖.\n(3.18)\n\n\nThe binormal vector at t is defined as\nB(t)=T(t)×N(t),B(t)=T(t)×N(t),\n(3.19)\n\n\nwhere T(t)T(t) is the unit tangent vector."
+        ],
+        "3-4-motion-in-space": [
+            "Let r(t)r(t) be a twice-differentiable vector-valued function of the parameter t that represents the position of an object as a function of time. The velocity vector v(t)v(t) of the object is given by\nVelocity=v(t)=r′(t).Velocity=v(t)=r′(t).\n(3.20)\n\n\nThe acceleration vector a(t)a(t) is defined to be\nAcceleration=a(t)=v′(t)=r″(t).Acceleration=a(t)=v′(t)=r″(t).\n(3.21)\n\n\nThe speed is defined to be\nSpeed=v(t)=‖v(t)‖=‖r′(t)‖=dsdt.Speed=v(t)=‖v(t)‖=‖r′(t)‖=dsdt.\n(3.22)"
+        ]
+    },
+    "Differentiation of Functions of Several Variables": {
+        "4-1-functions-of-several-variables": [
+            "A function of two variables z=f(x,y)z=f(x,y) maps each ordered pair (x,y)(x,y) in a subset DD of the real plane ℝ2ℝ2 to a unique real number z.z. The set DD is called the domain of the function. The range of ff is the set of all real numbers zz that has at least one ordered pair (x,y)∈D(x,y)∈D such that f(x,y)=zf(x,y)=z as shown in the following figure.",
+            "Given a function f(x,y)f(x,y) and a number cc in the range of f,af,a level curve of a function of two variables for the value cc is defined to be the set of points satisfying the equation f(x,y)=c.f(x,y)=c.",
+            "Consider a function z=f(x,y)z=f(x,y) with domain D⊆ℝ2.D⊆ℝ2. A vertical trace of the function can be either the set of points that solves the equation f(a,y)=zf(a,y)=z for a given constant x=ax=a or f(x,b)=zf(x,b)=z for a given constant y=b.y=b.",
+            "Given a function f(x,y,z)f(x,y,z) and a number cc in the range of f,f, a level surface of a function of three variables is defined to be the set of points satisfying the equation f(x,y,z)=c.f(x,y,z)=c."
+        ],
+        "4-2-limits-and-continuity": [
+            "Consider a point (a,b)∈ℝ2.(a,b)∈ℝ2. A δδ disk centered at point (a,b)(a,b) is defined to be an open disk of radius δδ centered at point (a,b)(a,b)—that is,\n{(x,y)∈ℝ2|(x−a)2+(y−b)2<δ2}{(x,y)∈ℝ2|(x−a)2+(y−b)2<δ2}\nas shown in the following graph.",
+            "Let ff be a function of two variables, xx and y.y. The limit of f(x,y)f(x,y) as (x,y)(x,y) approaches (a,b)(a,b) is L,L, written\nlim(x,y)→(a,b)f(x,y)=Llim(x,y)→(a,b)f(x,y)=L\nif for each ε>0ε>0 there exists a small enough δ>0δ>0 such that for all points (x,y)(x,y) in a δδ disk around (a,b),(a,b), except possibly for (a,b)(a,b) itself, the value of f(x,y)f(x,y) is no more than εε away from LL (Figure 4.15). Using symbols, we write the following: For any ε>0,ε>0, there exists a number δ>0δ>0 such that\n|f(x,y)−L|<εwhenever0<(x−a)2+(y−b)2<δ.|f(x,y)−L|<εwhenever0<(x−a)2+(y−b)2<δ.",
+            "Let S be a subset of ℝ2ℝ2 (Figure 4.17).\n\nA point P0P0 is called an interior point of SS if there is a δδ disk centered around P0P0 contained completely in S.S.\nA point P0P0 is called a boundary point of SS if every δδ disk centered around P0P0 contains points both inside and outside S.S.",
+            "Let S be a subset of ℝ2ℝ2 (Figure 4.17).\n\nSS is called an open set if every point of SS is an interior point.\nSS is called a closed set if it contains all its boundary points.",
+            "Let S be a subset of ℝ2ℝ2 (Figure 4.17).\n\nAn open set SS is a connected set if it cannot be represented as the union of two or more disjoint, nonempty open subsets.\nA set SS is a region if it is open, connected, and nonempty.",
+            "Let ff be a function of two variables, xx and y,y, and suppose (a,b)(a,b) is on the boundary of the domain of f.f. Then, the limit of f(x,y)f(x,y) as (x,y)(x,y) approaches (a,b)(a,b) is L,L, written\nlim(x,y)→(a,b)f(x,y)=L,lim(x,y)→(a,b)f(x,y)=L,\nif for any ε>0,ε>0, there exists a number δ>0δ>0 such that for any point (x,y)(x,y) inside the domain of ff and within a suitably small distance positive δδ of (a,b),(a,b), the value of f(x,y)f(x,y) is no more than εε away from LL (Figure 4.15). Using symbols, we can write: For any ε>0,ε>0, there exists a number δ>0δ>0 such that\n|f(x,y)−L|<εwhenever0<(x−a)2+(y−b)2<δ.|f(x,y)−L|<εwhenever0<(x−a)2+(y−b)2<δ.",
+            "A function f(x,y)f(x,y) is continuous at a point (a,b)(a,b) in its domain if the following conditions are satisfied:\n\nf(a,b)f(a,b) exists.\nlim(x,y)→(a,b)f(x,y)lim(x,y)→(a,b)f(x,y) exists.\nlim(x,y)→(a,b)f(x,y)=f(a,b).lim(x,y)→(a,b)f(x,y)=f(a,b).",
+            "Let (x0,y0,z0)(x0,y0,z0) be a point in ℝ3.ℝ3. Then, a δδ ball in three dimensions consists of all points in ℝ3ℝ3 lying at a distance of less than δδ from (x0,y0,z0)(x0,y0,z0)—that is,\n{(x,y,z)∈ℝ3|(x−x0)2+(y−y0)2+(z−z0)2<δ}.{(x,y,z)∈ℝ3|(x−x0)2+(y−y0)2+(z−z0)2<δ}.\nTo define a δδ ball in higher dimensions, add additional terms under the radical to correspond to each additional dimension. For example, given a point P=(w0,x0,y0,z0)P=(w0,x0,y0,z0) in ℝ4,ℝ4, a δδ ball around PP can be described by\n{(w,x,y,z)∈ℝ4|(w−w0)2+(x−x0)2+(y−y0)2+(z−z0)2<δ}.{(w,x,y,z)∈ℝ4|(w−w0)2+(x−x0)2+(y−y0)2+(z−z0)2<δ}."
+        ],
+        "4-3-partial-derivatives": [
+            "Let f(x,y)f(x,y) be a function of two variables. Then the partial derivative of ff with respect to x,x, written as ∂f/∂x,∂f/∂x, or fx,fx, is defined as\n∂f∂x=limh→0f(x+h,y)−f(x,y)h.∂f∂x=limh→0f(x+h,y)−f(x,y)h.\n(4.12)\n\n\nThe partial derivative of ff with respect to y,y, written as ∂f/∂y,∂f/∂y, or fy,fy, is defined as\n∂f∂y=limk→0f(x,y+k)−f(x,y)k.∂f∂y=limk→0f(x,y+k)−f(x,y)k.\n(4.13)",
+            "Let f(x,y,z)f(x,y,z) be a function of three variables. Then, the partial derivative of ff with respect to x, written as ∂f/∂x,∂f/∂x, or fx,fx, is defined to be\n∂f∂x=limh→0f(x+h,y,z)−f(x,y,z)h.∂f∂x=limh→0f(x+h,y,z)−f(x,y,z)h.\n(4.14)\n\n\nThe partial derivative of ff with respect to y,y, written as ∂f/∂y,∂f/∂y, or fy,fy, is defined to be\n∂f∂y=limk→0f(x,y+k,z)−f(x,y,z)k.∂f∂y=limk→0f(x,y+k,z)−f(x,y,z)k.\n(4.15)\n\n\nThe partial derivative of ff with respect to z,z, written as ∂f/∂z,∂f/∂z, or fz,fz, is defined to be\n∂f∂z=limm→0f(x,y,z+m)−f(x,y,z)m.∂f∂z=limm→0f(x,y,z+m)−f(x,y,z)m.\n(4.16)"
+        ],
+        "4-4-tangent-planes-and-linear-approximations": [
+            "Let P0=(x0,y0,z0)P0=(x0,y0,z0) be a point on a surface S,S, and let CC be any curve passing through P0P0 and lying entirely in S.S. If the tangent lines to all such curves CC at P0P0 lie in the same plane, then this plane is called the tangent plane to SS at P0P0 (Figure 4.27).",
+            "Let SS be a surface defined by a differentiable function z=f(x,y),z=f(x,y), and let P0=(x0,y0)P0=(x0,y0) be a point in the domain of f.f. Then, the equation of the tangent plane to SS at P0P0 is given by\nz=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0).z=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0).\n(4.24)",
+            "Given a function z=f(x,y)z=f(x,y) with continuous partial derivatives that exist at the point (x0,y0),(x0,y0), the linear approximation of ff at the point (x0,y0)(x0,y0) is given by the equation\nL(x,y)=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0).L(x,y)=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0).\n(4.25)",
+            "A function f(x,y)f(x,y) is differentiable at a point P(x0,y0)P(x0,y0) if, for all points (x,y)(x,y) in a δδ disk around P,P, we can write\nf(x,y)=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0)+E(x,y),f(x,y)=f(x0,y0)+fx(x0,y0)(x−x0)+fy(x0,y0)(y−y0)+E(x,y),\n(4.26)\n\n\nwhere the error term EE satisfies\nlim(x,y)→(x0,y0)E(x,y)(x−x0)2+(y−y0)2=0.lim(x,y)→(x0,y0)E(x,y)(x−x0)2+(y−y0)2=0.",
+            "Let z=f(x,y)z=f(x,y) be a function of two variables with (x0,y0)(x0,y0) in the domain of f,f, and let ΔxΔx and ΔyΔy be chosen so that (x0+Δx,y0+Δy)(x0+Δx,y0+Δy) is also in the domain of f.f. If ff is differentiable at the point (x0,y0),(x0,y0), then the differentials dxdx and dydy are defined as\ndx=Δxanddy=Δy.dx=Δxanddy=Δy.The differential dz,dz, also called the total differential of z=f(x,y)z=f(x,y) at (x0,y0),(x0,y0), is defined as\ndz=fx(x0,y0)dx+fy(x0,y0)dy.dz=fx(x0,y0)dx+fy(x0,y0)dy.\n(4.27)",
+            "A function f(x,y,z)f(x,y,z) is differentiable at a point P(x0,y0,z0)P(x0,y0,z0) if for all points (x,y,z)(x,y,z) in a δδ disk around PP we can write\nf(x,y,z)=f(x0,y0,z0)+fx(x0,y0,z0)(x−x0)+fy(x0,y0,z0)(y−y0)+fz(x0,y0,z0)(z−z0)+E(x,y,z),f(x,y,z)=f(x0,y0,z0)+fx(x0,y0,z0)(x−x0)+fy(x0,y0,z0)(y−y0)+fz(x0,y0,z0)(z−z0)+E(x,y,z),\n(4.28)\n\n\nwhere the error term E satisfies\nlim(x,y,z)→(x0,y0,z0)E(x,y,z)(x−x0)2+(y−y0)2+(z−z0)2=0.lim(x,y,z)→(x0,y0,z0)E(x,y,z)(x−x0)2+(y−y0)2+(z−z0)2=0."
+        ],
+        "4-5-the-chain-rule": [],
+        "4-6-directional-derivatives-and-the-gradient": [
+            "Suppose z=f(x,y)z=f(x,y) is a function of two variables with a domain of D.D. Let (a,b)∈D(a,b)∈D and define u=cosθi+sinθj.u=cosθi+sinθj. Then the directional derivative of ff in the direction of uu is given by\nDuf(a,b)=limh→0f(a+hcosθ,b+hsinθ)−f(a,b)h,Duf(a,b)=limh→0f(a+hcosθ,b+hsinθ)−f(a,b)h,\n(4.36)\n\n\nprovided the limit exists.",
+            "Let z=f(x,y)z=f(x,y) be a function of xandyxandy such that fxfx and fyfy exist. The vector ∇f(x,y)∇f(x,y) is called the gradient of ff and is defined as\n∇f(x,y)=fx(x,y)i+fy(x,y)j.∇f(x,y)=fx(x,y)i+fy(x,y)j.\n(4.39)\n\n\nThe vector ∇f(x,y)∇f(x,y) is also written as “gradf.”“gradf.”",
+            "Let w=f(x,y,z)w=f(x,y,z) be a function of three variables such that fx,fy,andfzfx,fy,andfz exist. The vector ∇f(x,y,z)∇f(x,y,z) is called the gradient of ff and is defined as\n∇f(x,y,z)=fx(x,y,z)i+fy(x,y,z)j+fz(x,y,z)k.∇f(x,y,z)=fx(x,y,z)i+fy(x,y,z)j+fz(x,y,z)k.\n(4.40)\n\n\n∇f(x,y,z)∇f(x,y,z) can also be written as gradf(x,y,z).gradf(x,y,z).",
+            "Suppose w=f(x,y,z)w=f(x,y,z) is a function of three variables with a domain of D.D. Let (x0,y0,z0)∈D(x0,y0,z0)∈D and let u=cosαi+cosβj+cosγku=cosαi+cosβj+cosγk be a unit vector. Then, the directional derivative of ff in the direction of uu is given by\nDuf(x0,y0,z0)=limt→0f(x0+tcosα,y0+tcosβ,z0+tcosγ)−f(x0,y0,z0)t,Duf(x0,y0,z0)=limt→0f(x0+tcosα,y0+tcosβ,z0+tcosγ)−f(x0,y0,z0)t,\n(4.41)\n\nprovided the limit exists."
+        ],
+        "4-7-maxima-minima-problems": [
+            "Let z=f(x,y)z=f(x,y) be a function of two variables that is defined on an open set containing the point (x0,y0).(x0,y0). The point (x0,y0)(x0,y0) is called a critical point of a function of two variables ff if one of the two following conditions holds:\nfx(x0,y0)=fy(x0,y0)=0fx(x0,y0)=fy(x0,y0)=0\nEither fx(x0,y0)orfy(x0,y0)fx(x0,y0)orfy(x0,y0) does not exist.",
+            "Let z=f(x,y)z=f(x,y) be a function of two variables that is defined and continuous on an open set containing the point (x0,y0).(x0,y0). Then f has a local maximum at (x0,y0)(x0,y0) if\nf(x0,y0)≥f(x,y)f(x0,y0)≥f(x,y)\nfor all points (x,y)(x,y) within some disk centered at (x0,y0).(x0,y0). The number f(x0,y0)f(x0,y0) is called a local maximum value. If the preceding inequality holds for every point (x,y)(x,y) in the domain of f,f, then ff has a global maximum (also called an absolute maximum) at (x0,y0).(x0,y0).\nThe function ff has a local minimum at (x0,y0)(x0,y0) if\nf(x0,y0)≤f(x,y)f(x0,y0)≤f(x,y)\nfor all points (x,y)(x,y) within some disk centered at (x0,y0).(x0,y0). The number f(x0,y0)f(x0,y0) is called a local minimum value. If the preceding inequality holds for every point (x,y)(x,y) in the domain of f,f, then ff has a global minimum (also called an absolute minimum) at (x0,y0).(x0,y0).\nIf f(x0,y0)f(x0,y0) is either a local maximum or local minimum value, then it is called a local extremum (see the following figure).",
+            "Given the function z=f(x,y),z=f(x,y), the point (x0,y0,f(x0,y0))(x0,y0,f(x0,y0)) is a saddle point if both fx(x0,y0)=0fx(x0,y0)=0 and fy(x0,y0)=0,fy(x0,y0)=0, but ff does not have a local extremum at (x0,y0).(x0,y0)."
+        ],
+        "4-8-lagrange-multipliers": []
+    },
+    "Multiple Integration": {
+        "5-1-double-integrals-over-rectangular-regions": [
+            "The double integral of the function f(x,y)f(x,y) over the rectangular region RR in the xyxy-plane is defined as∬Rf(x,y)dA=limm,n→∞∑i=1m∑j=1nf(xi*,yj*)ΔA.∬Rf(x,y)dA=limm,n→∞∑i=1m∑j=1nf(xi*,yj*)ΔA.\n(5.1)",
+            "Assume a,b,c,a,b,c, and dd are real numbers. We define an iterated integral for a function f(x,y)f(x,y) over the rectangular region RR =[a,b]×[c,d]=[a,b]×[c,d] as\n\n∫ab∫cdf(x,y)dydx=∫ab[∫cdf(x,y)dy]dx∫ab∫cdf(x,y)dydx=∫ab[∫cdf(x,y)dy]dx\n(5.2)\n\n\n∫cd∫abf(x,y)dxdy=∫cd[∫abf(x,y)dx]dy.∫cd∫abf(x,y)dxdy=∫cd[∫abf(x,y)dx]dy.\n(5.3)",
+            "The area of the region RR is given by A(R)=∬R1dA.A(R)=∬R1dA.",
+            "The average value of a function of two variables over a region RR is\nfave=1AreaR∬Rf(x,y)dA.fave=1AreaR∬Rf(x,y)dA.\n(5.4)"
+        ],
+        "5-2-double-integrals-over-general-regions": [
+            "A region DD in the (x,y)(x,y)-plane is of Type I if it lies between two vertical lines and the graphs of two continuous functions g1(x)g1(x) and g2(x).g2(x). That is (Figure 5.13),\nD={(x,y)|a≤x≤b,g1(x)≤y≤g2(x)}.D={(x,y)|a≤x≤b,g1(x)≤y≤g2(x)}.\nA region DD in the xyxy plane is of Type II if it lies between two horizontal lines and the graphs of two continuous functions h1(y)andh2(y).h1(y)andh2(y). That is (Figure 5.14),\nD={(x,y)|c≤y≤d,h1(y)≤x≤h2(y)}.D={(x,y)|c≤y≤d,h1(y)≤x≤h2(y)}.",
+            "The area of a plane-bounded region DD is defined as the double integral ∬D1dA.∬D1dA.",
+            "If f(x,y)f(x,y) is integrable over a plane-bounded region DD with positive area A(D),A(D), then the average value of the function is\nfave=1A(D)∬Df(x,y)dA.fave=1A(D)∬Df(x,y)dA.\nNote that the area is A(D)=∬D1dA.A(D)=∬D1dA.",
+            "Consider a pair of continuous random variables XX and Y,Y, such as the birthdays of two people or the number of sunny and rainy days in a month. The joint density function ff of XX and YY satisfies the probability that (X,Y)(X,Y) lies in a certain region D:D:\nP((X,Y)∈D)=∬Df(x,y)dA.P((X,Y)∈D)=∬Df(x,y)dA.\nSince the probabilities can never be negative and must lie between 00 and 1,1, the joint density function satisfies the following inequality and equation:\nf(x,y)≥0and∬R2f(x,y)dA=1.f(x,y)≥0and∬R2f(x,y)dA=1.",
+            "The variables XX and YY are said to be independent random variables if their joint density function is the product of their individual density functions:\nf(x,y)=f1(x)f2(y).f(x,y)=f1(x)f2(y).",
+            "In probability theory, we denote the expected values E(X)E(X) and E(Y),E(Y), respectively, as the most likely outcomes of the events. The expected values E(X)E(X) and E(Y)E(Y) are given by\nE(X)=∬Sxf(x,y)dAandE(Y)=∬Syf(x,y)dA,E(X)=∬Sxf(x,y)dAandE(Y)=∬Syf(x,y)dA,\nwhere SS is the sample space of the random variables XX and Y.Y."
+        ],
+        "5-3-double-integrals-in-polar-coordinates": [
+            "The double integral of the function f(r,θ)f(r,θ) over the polar rectangular region RR in the rθrθ-plane is defined as\n∬Rf(r,θ)dA=limm,n→∞∑i=1m∑j=1nf(rij*,θij*)ΔA=limm,n→∞∑i=1m∑j=1nf(rij*,θij*)rij*ΔrΔθ.∬Rf(r,θ)dA=limm,n→∞∑i=1m∑j=1nf(rij*,θij*)ΔA=limm,n→∞∑i=1m∑j=1nf(rij*,θij*)rij*ΔrΔθ.\n(5.8)"
+        ],
+        "5-4-triple-integrals": [
+            "The triple integral of a function f(x,y,z)f(x,y,z) over a rectangular box BB is defined as\nliml,m,n→∞∑i=1l∑j=1m∑k=1nf(xijk*,yijk*,zijk*)ΔxΔyΔz=∭Bf(x,y,z)dVliml,m,n→∞∑i=1l∑j=1m∑k=1nf(xijk*,yijk*,zijk*)ΔxΔyΔz=∭Bf(x,y,z)dV\n(5.10)\n\n\nif this limit exists."
+        ],
+        "5-5-triple-integrals-in-cylindrical-and-spherical-coordinates": [
+            "Consider the cylindrical box (expressed in cylindrical coordinates)\nB={(r,θ,z)|a≤r≤b,α≤θ≤β,c≤z≤d}.B={(r,θ,z)|a≤r≤b,α≤θ≤β,c≤z≤d}.\nIf the function f(r,θ,z)f(r,θ,z) is continuous on BB and if (rijk*,θijk*,zijk*)(rijk*,θijk*,zijk*) is any sample point in the cylindrical subbox Bijk=[ri−1,ri]×[θj−1,θj]×[zk−1,zk]Bijk=[ri−1,ri]×[θj−1,θj]×[zk−1,zk] (Figure 5.51), then we can define the triple integral in cylindrical coordinates as the limit of a triple Riemann sum, provided the following limit exists:\nliml,m,n→∞∑i=1l∑j=1m∑k=1nf(rijk*,θijk*,zijk*)rijk*ΔrΔθΔz.liml,m,n→∞∑i=1l∑j=1m∑k=1nf(rijk*,θijk*,zijk*)rijk*ΔrΔθΔz.",
+            "The triple integral in spherical coordinates is the limit of a triple Riemann sum,\nliml,m,n→∞∑i=1l∑j=1m∑k=1nf(ρijk*,θijk*,φijk*)(ρijk*)2sinφijk*ΔρΔθΔφliml,m,n→∞∑i=1l∑j=1m∑k=1nf(ρijk*,θijk*,φijk*)(ρijk*)2sinφijk*ΔρΔθΔφ\nprovided the limit exists."
+        ],
+        "5-6-calculating-centers-of-mass-and-moments-of-inertia": [
+            "If we have a solid object QQ with a density function ρ(x,y,z)ρ(x,y,z) at any point (x,y,z)(x,y,z) in space, then its mass is\nm=∭Qρ(x,y,z)dV.m=∭Qρ(x,y,z)dV.\nIts moments about the xy-plane,xy-plane, the xz-plane,xz-plane, and the yz-planeyz-plane are\nMxy=∭Qzρ(x,y,z)dV,Mxz=∭Qyρ(x,y,z)dV,Myz=∭Qxρ(x,y,z)dV.Mxy=∭Qzρ(x,y,z)dV,Mxz=∭Qyρ(x,y,z)dV,Myz=∭Qxρ(x,y,z)dV.\nIf the center of mass of the object is the point (x−,y−,z−),(x−,y−,z−), then\nx−=Myzm,y−=Mxzm,z−=Mxym.x−=Myzm,y−=Mxzm,z−=Mxym.\nAlso, if the solid object is homogeneous (with constant density), then the center of mass becomes the centroid of the solid. Finally, the moments of inertia about the yz-plane,yz-plane, the xz-plane,xz-plane, and the xy-planexy-plane are\nIx=∭Q(y2+z2)ρ(x,y,z)dV,Iy=∭Q(x2+z2)ρ(x,y,z)dV,Iz=∭Q(x2+y2)ρ(x,y,z)dV.Ix=∭Q(y2+z2)ρ(x,y,z)dV,Iy=∭Q(x2+z2)ρ(x,y,z)dV,Iz=∭Q(x2+y2)ρ(x,y,z)dV."
+        ],
+        "5-7-change-of-variables-in-multiple-integrals": [
+            "A transformation T:G→R,T:G→R, defined as T(u,v)=(x,y),T(u,v)=(x,y), is said to be a one-to-one transformation if no two points map to the same image point.",
+            "The Jacobian of the C1C1 transformation T(u,v)=(g(u,v),h(u,v))T(u,v)=(g(u,v),h(u,v)) is denoted by J(u,v)J(u,v) and is defined by the 2×22×2 determinant\nJ(u,v)=|∂(x,y)∂(u,v)|=|∂x∂u∂y∂u∂x∂v∂y∂v|=(∂x∂u∂y∂v−∂x∂v∂y∂u).J(u,v)=|∂(x,y)∂(u,v)|=|∂x∂u∂y∂u∂x∂v∂y∂v|=(∂x∂u∂y∂v−∂x∂v∂y∂u).",
+            "The Jacobian determinant J(u,v,w)J(u,v,w) in three variables is defined as follows:\nJ(u,v,w)=|∂x∂u∂y∂u∂z∂u∂x∂v∂y∂v∂z∂v∂x∂w∂y∂w∂z∂w|.J(u,v,w)=|∂x∂u∂y∂u∂z∂u∂x∂v∂y∂v∂z∂v∂x∂w∂y∂w∂z∂w|.\nThis is also the same as\nJ(u,v,w)=|∂x∂u∂x∂v∂x∂w∂y∂u∂y∂v∂y∂w∂z∂u∂z∂v∂z∂w|.J(u,v,w)=|∂x∂u∂x∂v∂x∂w∂y∂u∂y∂v∂y∂w∂z∂u∂z∂v∂z∂w|.\nThe Jacobian can also be simply denoted as ∂(x,y,z)∂(u,v,w).∂(x,y,z)∂(u,v,w)."
+        ]
+    },
+    "Vector Calculus": {
+        "6-1-vector-fields": [
+            "A vector field FF in ℝ2ℝ2 is an assignment of a two-dimensional vector F(x,y)F(x,y) to each point (x,y)(x,y) of a subset D of ℝ2.ℝ2. The subset D is the domain of the vector field.\nA vector field F in ℝ3ℝ3 is an assignment of a three-dimensional vector F(x,y,z)F(x,y,z) to each point (x,y,z)(x,y,z) of a subset D of ℝ3.ℝ3. The subset D is the domain of the vector field.",
+            "A vector field FF in ℝ2ℝ2 or in ℝ3ℝ3 is a gradient field if there exists a scalar function ff such that ∇f=F.∇f=F."
+        ],
+        "6-2-line-integrals": [
+            "Let ff be a function with a domain that includes the smooth curve CC that is parameterized by r(t)=〈x(t),y(t),z(t)〉,r(t)=〈x(t),y(t),z(t)〉, a≤t≤b.a≤t≤b. The scalar line integral of ff along CC is\n∫Cf(x,y,z)ds=limn→∞∑i=1nf(Pi*)Δsi∫Cf(x,y,z)ds=limn→∞∑i=1nf(Pi*)Δsi\n(6.5)\n\n\nif this limit exists (ti*(ti* and ΔsiΔsi are defined as in the previous paragraphs). If C is a planar curve, then C can be represented by the parametric equations x=x(t),y=y(t),x=x(t),y=y(t), and a≤t≤b.a≤t≤b. If C is smooth and f(x,y)f(x,y) is a function of two variables, then the scalar line integral of ff along C is defined similarly as\n∫Cf(x,y)ds=limn→∞∑i=1nf(Pi*)Δsi,∫Cf(x,y)ds=limn→∞∑i=1nf(Pi*)Δsi,\nif this limit exists.",
+            "The vector line integral of vector field F along oriented smooth curve C is\n∫CF·Tds=limn→∞∑i=1nF(Pi*)·T(Pi*)Δsi∫CF·Tds=limn→∞∑i=1nF(Pi*)·T(Pi*)Δsi\nif that limit exists.",
+            "The flux of F across C is line integral ∫CF·n(t)‖n(t)‖ds.∫CF·n(t)‖n(t)‖ds."
+        ],
+        "6-3-conservative-vector-fields": [
+            "Curve C is a closed curve if there is a parameterization r(t),a≤t≤br(t),a≤t≤b of C such that the parameterization traverses the curve exactly once and r(a)=r(b).r(a)=r(b). Curve C is a simple curve if C does not cross itself. That is, C is simple if there exists a parameterization r(t),a≤t≤br(t),a≤t≤b of C such that r is one-to-one over (a,b).(a,b). It is possible for r(a)=r(b),r(a)=r(b), meaning that the simple curve is also closed.",
+            "A region D is a connected region if, for any two points P1P1 and P2,P2, there is a path from P1P1 to P2P2 with a trace contained entirely inside D. A region D is a simply connected region if D is connected for any simple closed curve C that lies inside D, and curve C can be shrunk continuously to a point while staying entirely inside D. In two dimensions, a region is simply connected if it is connected and has no holes.",
+            "Let F be a vector field with domain D. The vector field F is independent of path (or path independent) if ∫C1F·dr=∫C2F·dr∫C1F·dr=∫C2F·dr for any paths C1C1 and C2C2 in D with the same initial and terminal points."
+        ],
+        "6-4-greens-theorem": [],
+        "6-5-divergence-and-curl": [
+            "If F=〈P,Q,R〉F=〈P,Q,R〉 is a vector field in ℝ3ℝ3 and Px,Qy,Px,Qy, and RzRz all exist, then the divergence of F is defined by\ndivF=Px+Qy+Rz=∂P∂x+∂Q∂y+∂R∂z.divF=Px+Qy+Rz=∂P∂x+∂Q∂y+∂R∂z.\n(6.16)",
+            "If F=〈P,Q,R〉F=〈P,Q,R〉 is a vector field in ℝ3,ℝ3, and Px, Py, Pz, Qy, Qx, Qz, Rz, Rx, and RyPx, Py, Pz, Qy, Qx, Qz, Rz, Rx, and Ry all exist, then the curl of F is defined by\ncurlF=(Ry−Qz)i+(Pz−Rx)j+(Qx−Py)k=(∂R∂y−∂Q∂z)i+(∂P∂z−∂R∂x)j+(∂Q∂x−∂P∂y)k.curlF=(Ry−Qz)i+(Pz−Rx)j+(Qx−Py)k=(∂R∂y−∂Q∂z)i+(∂P∂z−∂R∂x)j+(∂Q∂x−∂P∂y)k.\n(6.17)\n\n\nNote that the curl of a vector field is a vector field, in contrast to divergence."
+        ],
+        "6-6-surface-integrals": [
+            "Given a parameterization of surface r(u,v)=〈x(u,v),y(u,v),z(u,v)〉,r(u,v)=〈x(u,v),y(u,v),z(u,v)〉, the parameter domain of the parameterization is the set of points in the uv-plane that can be substituted into r.",
+            "Parameterization r(u,v)=〈x(u,v),y(u,v),z(u,v)〉r(u,v)=〈x(u,v),y(u,v),z(u,v)〉 is a regular parameterization if ru×rvru×rv is not zero for point (u,v)(u,v) in the parameter domain.",
+            "A surface parameterization r(u,v)=〈x(u,v),y(u,v),z(u,v)〉r(u,v)=〈x(u,v),y(u,v),z(u,v)〉 is smooth if vector ru×rvru×rv is not zero for any choice of u and v in the parameter domain.",
+            "Let r(u,v)=〈x(u,v),y(u,v),z(u,v)〉r(u,v)=〈x(u,v),y(u,v),z(u,v)〉 with parameter domain D be a smooth parameterization of surface S. Furthermore, assume that S is traced out only once as (u,v)(u,v) varies over D. The surface area of S is\n∬D‖tu×tv‖dA,∬D‖tu×tv‖dA,\n(6.18)\n\n\nwhere tu=〈∂x∂u,∂y∂u,∂z∂u〉tu=〈∂x∂u,∂y∂u,∂z∂u〉 and tv=〈∂x∂v,∂y∂v,∂z∂v〉tv=〈∂x∂v,∂y∂v,∂z∂v〉 and all partial derivatives are continuous.",
+            "The surface integral of a scalar-valued function of ff over a piecewise smooth surface S is\n∬Sf(x,y,z)dS=limm,n→∞∑i=1m∑j=1nf(Pij)ΔSij.∬Sf(x,y,z)dS=limm,n→∞∑i=1m∑j=1nf(Pij)ΔSij.",
+            "Let F be a continuous vector field with a domain that contains oriented surface S with unit normal vector N. The surface integral of F over S is\n∬SF·dS=∬SF·NdS.∬SF·dS=∬SF·NdS.\n(6.20)"
+        ],
+        "6-7-stokes-theorem": [],
+        "6-8-the-divergence-theorem": []
+    },
+    "Second-Order Differential Equations": {
+        "7-1-second-order-linear-equations": [
+            "A second-order differential equation is linear if it can be written in the form\na2(x)y″+a1(x)y′+a0(x)y=r(x),a2(x)y″+a1(x)y′+a0(x)y=r(x),\n(7.1)\n\n\nwhere a2(x),a2(x), a1(x),a1(x), a0(x),a0(x), and r(x)r(x) are real-valued functions and a2(x)a2(x) is not identically zero. If r(x)≡0r(x)≡0—in other words, if r(x)=0r(x)=0 for every value of x—the equation is said to be a homogeneous linear equation. If r(x)≠0r(x)≠0 for some value of x,x, the equation is said to be a nonhomogeneous linear equation.",
+            "A set of functions f1(x),f2(x),…,fn(x)f1(x),f2(x),…,fn(x) is said to be linearly dependent if there are constants c1,c2,…cn,c1,c2,…cn, not all zero, such that c1f1(x)+c2f2(x)+⋯+cnfn(x)=0c1f1(x)+c2f2(x)+⋯+cnfn(x)=0 for all x over the interval of interest. A set of functions that is not linearly dependent is said to be linearly independent.",
+            "The characteristic equation of the differential equation ay″+by′+cy=0ay″+by′+cy=0 is aλ2+bλ+c=0.aλ2+bλ+c=0."
+        ],
+        "7-2-nonhomogeneous-linear-equations": [
+            "A solution yp(x)yp(x) of a differential equation that contains no arbitrary constants is called a particular solution to the equation."
+        ],
+        "7-3-applications": [],
+        "7-4-series-solutions-of-differential-equations": []
+    }
+}
