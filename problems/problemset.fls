@@ -1,4 +1,4 @@
-PWD /home/ajrv/Projects/MathCurDev/problems
+PWD /media/drive/ajrv/Projects/MathCurDev/question-generator/problems
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT problemset.tex
@@ -36,7 +36,6 @@ INPUT ./problemset.aux
 INPUT ./problemset.aux
 INPUT problemset.aux
 OUTPUT problemset.aux
-INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT problemset.pdf
