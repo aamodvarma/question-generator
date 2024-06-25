@@ -1,0 +1,126 @@
+{
+    "Integration": {
+        "1-1-approximating-areas": [
+            "A set of points P={xi}P={xi} for i=0,1,2,…,ni=0,1,2,…,n with a=x0<x1<x2<⋯<xn=b,a=x0<x1<x2<⋯<xn=b, which divides the interval [a,b][a,b] into subintervals of the form [x0,x1],[x1,x2],…,[xn−1,xn][x0,x1],[x1,x2],…,[xn−1,xn] is called a partition of [a,b].[a,b]. If the subintervals all have the same width, the set of points forms a regular partition of the interval [a,b].[a,b].",
+            "Let f(x)f(x) be defined on a closed interval [a,b][a,b] and let P be a regular partition of [a,b].[a,b]. Let Δx be the width of each subinterval [xi−1,xi][xi−1,xi] and for each i, let xi*xi* be any point in [xi−1,xi].[xi−1,xi]. A Riemann sum is defined for f(x)f(x) as\n∑i=1nf(xi*)Δx.∑i=1nf(xi*)Δx.",
+            "Let f(x)f(x) be a continuous, nonnegative function on an interval [a,b],[a,b], and let ∑i=1nf(xi*)Δx∑i=1nf(xi*)Δx be a Riemann sum for f(x).f(x). Then, the area under the curve y=f(x)y=f(x) on [a,b][a,b] is given by\nA=limn→∞∑i=1nf(xi*)Δx.A=limn→∞∑i=1nf(xi*)Δx."
+        ],
+        "1-2-the-definite-integral": [
+            "If f(x)f(x) is a function defined on an interval [a,b],[a,b], the definite integral of f from a to b is given by\n∫abf(x)dx=limn→∞∑i=1nf(xi*)Δx,∫abf(x)dx=limn→∞∑i=1nf(xi*)Δx,\n(1.8)\n\n\nprovided the limit exists. If this limit exists, the function f(x)f(x) is said to be integrable on [a,b],[a,b], or is an integrable function.",
+            "Let f(x)f(x) be an integrable function defined on an interval [a,b].[a,b]. Let A1 represent the area between f(x)f(x) and the x-axis that lies above the axis and let A2 represent the area between f(x)f(x) and the x-axis that lies below the axis. Then, the net signed area between f(x)f(x) and the x-axis is given by\n∫abf(x)dx=A1−A2.∫abf(x)dx=A1−A2.\nThe total area between f(x)f(x) and the x-axis is given by\n∫ab|f(x)|dx=A1+A2.∫ab|f(x)|dx=A1+A2.",
+            "Let f(x)f(x) be continuous over the interval [a,b].[a,b]. Then, the average value of the function f(x)f(x) (or fave) on [a,b][a,b] is given by\nfave=1b−a∫abf(x)dx.fave=1b−a∫abf(x)dx."
+        ],
+        "1-3-the-fundamental-theorem-of-calculus": [],
+        "1-4-integration-formulas-and-the-net-change-theorem": [],
+        "1-5-substitution": [],
+        "1-6-integrals-involving-exponential-and-logarithmic-functions": [],
+        "1-7-integrals-resulting-in-inverse-trigonometric-functions": []
+    },
+    "Applications of Integration": {
+        "2-1-areas-between-curves": [],
+        "2-2-determining-volumes-by-slicing": [],
+        "2-3-volumes-of-revolution-cylindrical-shells": [],
+        "2-4-arc-length-of-a-curve-and-surface-area": [],
+        "2-5-physical-applications": [
+            "If a variable force F(x)F(x) moves an object in a positive direction along the x-axis from point a to point b, then the work done on the object is\nW=∫abF(x)dx.W=∫abF(x)dx.\n(2.12)"
+        ],
+        "2-6-moments-and-centers-of-mass": [],
+        "2-7-integrals-exponential-functions-and-logarithms": [
+            "For x>0,x>0, define the natural logarithm function by\nlnx=∫1x1tdt.lnx=∫1x1tdt.\n(2.24)",
+            "The number ee is defined to be the real number such that\nlne=1.lne=1.",
+            "For any real number x,x, define y=exy=ex to be the number for which\nlny=ln(ex)=x.lny=ln(ex)=x.\n(2.25)",
+            "For any a>0,a>0, and for any real number x,x, define y=axy=ax as follows:\ny=ax=exlna.y=ax=exlna."
+        ],
+        "2-8-exponential-growth-and-decay": [
+            "If a quantity grows exponentially, the doubling time is the amount of time it takes the quantity to double. It is given by\nDoubling time=ln2k.Doubling time=ln2k.",
+            "If a quantity decays exponentially, the half-life is the amount of time it takes the quantity to be reduced by half. It is given by\nHalf-life=ln2k.Half-life=ln2k."
+        ],
+        "2-9-calculus-of-the-hyperbolic-functions": []
+    },
+    "Techniques of Integration": {
+        "3-1-integration-by-parts": [],
+        "3-2-trigonometric-integrals": [],
+        "3-3-trigonometric-substitution": [],
+        "3-4-partial-fractions": [],
+        "3-5-other-strategies-for-integration": [],
+        "3-6-numerical-integration": [
+            "If BB is our estimate of some quantity having an actual value of A,A, then the absolute error is given by |A−B|.|A−B|. The relative error is the error as a percentage of the absolute value and is given by |A−BA|=|A−BA|·100%.|A−BA|=|A−BA|·100%."
+        ],
+        "3-7-improper-integrals": [
+            "Let f(x)f(x) be continuous over an interval of the form [a,+∞).[a,+∞). Then\n∫a+∞f(x)dx=limt→+∞∫atf(x)dx,∫a+∞f(x)dx=limt→+∞∫atf(x)dx,\n(3.16)\n\n\nprovided this limit exists.\nLet f(x)f(x) be continuous over an interval of the form (−∞,b].(−∞,b]. Then\n∫−∞bf(x)dx=limt→−∞∫tbf(x)dx,∫−∞bf(x)dx=limt→−∞∫tbf(x)dx,\n(3.17)\n\n\nprovided this limit exists.\nIn each case, if the limit exists, then the improper integral is said to converge. If the limit does not exist, then the improper integral is said to diverge.\nLet f(x)f(x) be continuous over (−∞,+∞).(−∞,+∞). Then\n∫−∞+∞f(x)dx=∫−∞0f(x)dx+∫0+∞f(x)dx,∫−∞+∞f(x)dx=∫−∞0f(x)dx+∫0+∞f(x)dx,\n(3.18)\n\n\nprovided that ∫−∞0f(x)dx∫−∞0f(x)dx and ∫0+∞f(x)dx∫0+∞f(x)dx both converge. If either one or both of these two integrals diverge, then ∫−∞+∞f(x)dx∫−∞+∞f(x)dx diverges. (It can be shown that, in fact, ∫−∞+∞f(x)dx=∫−∞af(x)dx+∫a+∞f(x)dx∫−∞+∞f(x)dx=∫−∞af(x)dx+∫a+∞f(x)dx for any value of a.)a.)",
+            "Let f(x)f(x) be continuous over [a,b).[a,b). Then,\n∫abf(x)dx=limt→b−∫atf(x)dx.∫abf(x)dx=limt→b−∫atf(x)dx.\n(3.19)\n\n\nLet f(x)f(x) be continuous over (a,b].(a,b]. Then,\n∫abf(x)dx=limt→a+∫tbf(x)dx.∫abf(x)dx=limt→a+∫tbf(x)dx.\n(3.20)\n\n\nIn each case, if the limit exists, then the improper integral is said to converge. If the limit does not exist, then the improper integral is said to diverge.\nIf f(x)f(x) is continuous over [a,b][a,b] except at a point cc in (a,b),(a,b), then\n∫abf(x)dx=∫acf(x)dx+∫cbf(x)dx,∫abf(x)dx=∫acf(x)dx+∫cbf(x)dx,\n(3.21)\n\n\nprovided both ∫acf(x)dx∫acf(x)dx and ∫cbf(x)dx∫cbf(x)dx converge. If either of these integrals diverges, then ∫abf(x)dx∫abf(x)dx diverges."
+        ]
+    },
+    "Introduction to Differential Equations": {
+        "4-1-basics-of-differential-equations": [
+            "A differential equation is an equation involving an unknown function y=f(x)y=f(x) and one or more of its derivatives. A solution to a differential equation is a function y=f(x)y=f(x) that satisfies the differential equation when ff and its derivatives are substituted into the equation.",
+            "The order of a differential equation is the highest order of any derivative of the unknown function that appears in the equation."
+        ],
+        "4-2-direction-fields-and-numerical-methods": [
+            "A direction field (slope field) is a mathematical object used to graphically represent solutions to a first-order differential equation. At each point in a direction field, a line segment appears whose slope is equal to the slope of a solution to the differential equation passing through that point.",
+            "Consider the differential equation y′=f(x,y).y′=f(x,y). An equilibrium solution is any solution to the differential equation of the form y=c,y=c, where cc is a constant.",
+            "Consider the differential equation y′=f(x,y),y′=f(x,y), and assume that all solutions to this differential equation are defined for x≥x0.x≥x0. Let y=ky=k be an equilibrium solution to the differential equation.\n\ny=ky=k is an asymptotically stable solution to the differential equation if there exists ε>0ε>0 such that for any value c∈(k−ε,k+ε)c∈(k−ε,k+ε) the solution to the initial-value problem\ny′=f(x,y),y(x0)=cy′=f(x,y),y(x0)=c\napproaches kk as xx approaches infinity.\ny=ky=k is an asymptotically unstable solution to the differential equation if there exists ε>0ε>0 such that for any value c∈(k−ε,k+ε)c∈(k−ε,k+ε) the solution to the initial-value problem\ny′=f(x,y),y(x0)=cy′=f(x,y),y(x0)=c\nnever approaches kk as xx approaches infinity.\ny=ky=k is an asymptotically semi-stable solution to the differential equation if it is neither asymptotically stable nor asymptotically unstable."
+        ],
+        "4-3-separable-equations": [
+            "A separable differential equation is any equation that can be written in the form\ny′=f(x)g(y).y′=f(x)g(y).\n(4.3)"
+        ],
+        "4-4-the-logistic-equation": [
+            "The carrying capacity of an organism in a given environment is defined to be the maximum population of that organism that the environment can sustain indefinitely.",
+            "Let KK represent the carrying capacity for a particular organism in a given environment, and let rr be a real number that represents the growth rate. The function P(t)P(t) represents the population of this organism as a function of time t,t, and the constant P0P0 represents the initial population (population of the organism at time t=0).t=0). Then the logistic differential equation is\ndPdt=rP(1−PK)dPdt=rP(1−PK)\n(4.8)"
+        ],
+        "4-5-first-order-linear-equations": [
+            "A first-order differential equation is linear if it can be written in the form\na(x)y′+b(x)y=c(x),a(x)y′+b(x)y=c(x),\n(4.14)\n\n\nwhere a(x),b(x),a(x),b(x), and c(x)c(x) are arbitrary functions of x.x."
+        ]
+    },
+    "Sequences and Series": {
+        "5-1-sequences": [
+            "An infinite sequence{an}{an} is an ordered list of numbers of the form\na1,a2,…,an,….a1,a2,…,an,….\nThe subscript nn is called the index variable of the sequence. Each number anan is a term of the sequence. Sometimes sequences are defined by explicit formulas, in which case an=f(n)an=f(n) for some function f(n)f(n) defined over the positive integers. In other cases, sequences are defined by using a recurrence relation. In a recurrence relation, one term (or more) of the sequence is given explicitly, and subsequent terms are defined in terms of earlier terms in the sequence.",
+            "Given a sequence {an},{an}, if the terms anan become arbitrarily close to a finite number LL as nn becomes sufficiently large, we say {an}{an} is a convergent sequence and LL is the limit of the sequence. In this case, we write\nlimn→∞an=L.limn→∞an=L.\nIf a sequence {an}{an} is not convergent, we say it is a divergent sequence.",
+            "A sequence {an}{an} converges to a real number LL if for all ε>0,ε>0, there exists an integer NN such that |an−L|<ε|an−L|<ε if n≥N.n≥N. The number LL is the limit of the sequence and we write\nlimn→∞an=Loran→L.limn→∞an=Loran→L.\nIn this case, we say the sequence {an}{an} is a convergent sequence. If a sequence does not converge, it is a divergent sequence, and we say the limit does not exist.",
+            "A sequence {an}{an} is bounded above if there exists a real number MM such that\nan≤Man≤M\nfor all positive integers n.n.\nA sequence {an}{an} is bounded below if there exists a real number MM such that\nM≤anM≤an\nfor all positive integers n.n.\nA sequence {an}{an} is a bounded sequence if it is bounded above and bounded below.\nIf a sequence is not bounded, it is an unbounded sequence.",
+            "A sequence {an}{an} is increasing for all n≥n0n≥n0 if\nan≤an+1for alln≥n0.an≤an+1for alln≥n0.\nA sequence {an}{an} is decreasing for all n≥n0n≥n0 if\nan≥an+1for alln≥n0.an≥an+1for alln≥n0.\nA sequence {an}{an} is a monotone sequence for all n≥n0n≥n0 if it is increasing for all n≥n0n≥n0 or decreasing for all n≥n0.n≥n0."
+        ],
+        "5-2-infinite-series": [
+            "An infinite series is an expression of the form\n∑n=1∞an=a1+a2+a3+⋯.∑n=1∞an=a1+a2+a3+⋯.\nFor each positive integer k,k, the sum\nSk=∑n=1kan=a1+a2+a3+⋯+akSk=∑n=1kan=a1+a2+a3+⋯+ak\nis called the kthkth partial sum of the infinite series. The partial sums form a sequence {Sk}.{Sk}. If the sequence of partial sums converges to a real number S,S, the infinite series converges. If we can describe the convergence of a series to S,S, we call SS the sum of the series, and we write\n∑n=1∞an=S.∑n=1∞an=S.\nIf the sequence of partial sums diverges, we have the divergence of a series.",
+            "A geometric series is a series of the form\n∑n=1∞arn−1=a+ar+ar2+ar3+⋯.∑n=1∞arn−1=a+ar+ar2+ar3+⋯.\nIf |r|<1,|r|<1, the series converges, and\n∑n=1∞arn−1=a1−rfor|r|<1.∑n=1∞arn−1=a1−rfor|r|<1.\n(5.7)\n\n\nIf |r|≥1,|r|≥1, the series diverges.",
+            "A telescoping series is a series in which most of the terms cancel in each of the partial sums, leaving only some of the first terms and some of the last terms."
+        ],
+        "5-3-the-divergence-and-integral-tests": [
+            "For any real number p,p, the series\n∑n=1∞1np∑n=1∞1np\nis called a p-series."
+        ],
+        "5-4-comparison-tests": [],
+        "5-5-alternating-series": [
+            "Any series whose terms alternate between positive and negative values is called an alternating series. An alternating series can be written in the form\n∑n=1∞(−1)n+1bn=b1−b2+b3−b4+⋯∑n=1∞(−1)n+1bn=b1−b2+b3−b4+⋯\n(5.13)\n\n\nor\n∑n=1∞(−1)nbn=−b1+b2−b3+b4−⋯∑n=1∞(−1)nbn=−b1+b2−b3+b4−⋯\n(5.14)\n\n\nWhere bn>0bn>0 for all positive integers n.",
+            "A series ∑n=1∞an∑n=1∞an exhibits absolute convergence if ∑n=1∞|an|∑n=1∞|an| converges. A series ∑n=1∞an∑n=1∞an exhibits conditional convergence if ∑n=1∞an∑n=1∞an converges but ∑n=1∞|an|∑n=1∞|an| diverges."
+        ],
+        "5-6-ratio-and-root-tests": []
+    },
+    "Power Series": {
+        "6-1-power-series-and-functions": [
+            "A series of the form\n∑n=0∞cnxn=c0+c1x+c2x2+⋯∑n=0∞cnxn=c0+c1x+c2x2+⋯\n(6.1)\n\n\nis a power series centered at x=0.x=0. A series of the form\n∑n=0∞cn(x−a)n=c0+c1(x−a)+c2(x−a)2+⋯∑n=0∞cn(x−a)n=c0+c1(x−a)+c2(x−a)2+⋯\n(6.2)\n\n\nis a power series centered at x=a.x=a.",
+            "Consider the power series ∑n=0∞cn(x−a)n.∑n=0∞cn(x−a)n. The set of real numbers x where the series converges is the interval of convergence. If there exists a real number R>0R>0 such that the series converges for |x−a|<R|x−a|<R and diverges for |x−a|>R,|x−a|>R, then R is the radius of convergence. If the series converges only at x=a,x=a, we say the radius of convergence is R=0.R=0. If the series converges for all real numbers x, we say the radius of convergence is R=∞R=∞ (Figure 6.2)."
+        ],
+        "6-2-properties-of-power-series": [],
+        "6-3-taylor-and-maclaurin-series": [
+            "If ff has derivatives of all orders at x=a,x=a, then the Taylor series for the function ff at aa is\n∑n=0∞f(n)(a)n!(x−a)n=f(a)+f′(a)(x−a)+f″(a)2!(x−a)2+⋯+f(n)(a)n!(x−a)n+⋯.∑n=0∞f(n)(a)n!(x−a)n=f(a)+f′(a)(x−a)+f″(a)2!(x−a)2+⋯+f(n)(a)n!(x−a)n+⋯.\n(6.5)\n\n\nThe Taylor series for ff at 0 is known as the Maclaurin series for f.f.",
+            "If ff has n derivatives at x=a,x=a, then the nth Taylor polynomial for ff at aa is\npn(x)=f(a)+f′(a)(x−a)+f″(a)2!(x−a)2+f‴(a)3!(x−a)3+⋯+f(n)(a)n!(x−a)n.pn(x)=f(a)+f′(a)(x−a)+f″(a)2!(x−a)2+f‴(a)3!(x−a)3+⋯+f(n)(a)n!(x−a)n.\nThe nth Taylor polynomial for ff at 0 is known as the nth Maclaurin polynomial for f.f."
+        ],
+        "6-4-working-with-taylor-series": [
+            "For any real number r,r, the Maclaurin series for f(x)=(1+x)rf(x)=(1+x)r is the binomial series. It converges to ff for |x|<1,|x|<1, and we write\n(1+x)r=∑n=0∞(rn)xn=1+rx+r(r−1)2!x2+⋯+r(r−1)⋯(r−n+1)n!xn+⋯(1+x)r=∑n=0∞(rn)xn=1+rx+r(r−1)2!x2+⋯+r(r−1)⋯(r−n+1)n!xn+⋯\nfor |x|<1.|x|<1."
+        ]
+    },
+    "Parametric Equations and Polar Coordinates": {
+        "7-1-parametric-equations": [
+            "If x and y are continuous functions of t on an interval I, then the equations\nx=x(t)andy=y(t)x=x(t)andy=y(t)\nare called parametric equations and t is called the parameter. The set of points (x,y)(x,y) obtained as t varies over the interval I is called the graph of the parametric equations. The graph of parametric equations is called a parametric curve or plane curve, and is denoted by C."
+        ],
+        "7-2-calculus-of-parametric-curves": [],
+        "7-3-polar-coordinates": [],
+        "7-4-area-and-arc-length-in-polar-coordinates": [],
+        "7-5-conic-sections": [
+            "A parabola is the set of all points whose distance from a fixed point, called the focus, is equal to the distance from a fixed line, called the directrix. The point halfway between the focus and the directrix is called the vertex of the parabola.",
+            "An ellipse is the set of all points for which the sum of their distances from two fixed points (the foci) is constant.",
+            "A hyperbola is the set of all points where the difference between their distances from two fixed points (the foci) is constant.",
+            "The eccentricity e of a conic section is defined to be the distance from any point on the conic section to its focus, divided by the perpendicular distance from that point to the nearest directrix. This value is constant for any conic section, and can define the conic section as well:\n\nIf e=1,e=1, the conic is a parabola.\nIf e<1,e<1, it is an ellipse.\nIf e>1,e>1, it is a hyperbola.\n\nThe eccentricity of a circle is zero. The directrix of a conic section is the line that, together with the point known as the focus, serves to define a conic section. Hyperbolas and noncircular ellipses have two foci and two associated directrices. Parabolas have one focus and one directrix."
+        ]
+    }
+}
