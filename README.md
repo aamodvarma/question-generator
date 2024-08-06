@@ -13,7 +13,7 @@ GPT-4o is used to generate questions. A prompt is created with a definition and 
 Lastly the generated questions are formatted according to the specific usecase. This repository has (or will have) code for,
 
 1. WeBWorK
-2. Canva
+2. Canvas
 3. Question Bank (Book)
 
 
