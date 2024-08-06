@@ -3,8 +3,8 @@ Question generator is a program to generate question given definitions and theor
 
 Definitions/theorems can be extracted from various sources. This repository has code for (to be expanded),
 
-1 OpenStax Textbooks
-2 Lecture Notes
+1. OpenStax Textbooks
+2. Lecture Notes
 
 The extracted information is then formatted into a json file with specific sections and sub-sections.
 
