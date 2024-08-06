@@ -1,0 +1,16 @@
+# ignore api keys
+apikeys.sh
+
+# ignore generated problems
+problems/
+
+# ignore generated files
+generated_files/
+
+#ignore batches
+batches/
+
+#ignore data
+data/
+
+.ipynb_checkpoints/
