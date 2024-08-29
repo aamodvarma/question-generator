@@ -1,0 +1,288 @@
+{
+    "Chapter1": {
+        "1_7_1.tex": [],
+        "1_2_1.tex": [],
+        "1_8_1.tex": [],
+        "1_5_2.tex": [
+            "Linear systems of the form $A\\vec x = \\vec 0$ are \\Emph{homogeneous}. \\\\[12pt]\n        Linear systems of the form $A\\vec x = \\vec b, \\ \\vec b \\ne \\vec 0$, are \\Emph{inhomogeneous}."
+        ],
+        "1_1_1.tex": [
+            "The set of all possible values of $x_1, x_2, \\ldots x_n$ that satisfy all equations is the \\Emph{solution set} of the system. \\pause One point in the solution set is a \\Emph{solution}.",
+            "The solution set to a system of linear equations can only have\n    \\begin{itemize}\n        \\item<2-> exactly one point (there is a unique solution), or\n        \\item<3-> infinitely many points (there are many solutions), or\n        \\item<4-> no points (there are no solutions)\n    \\end{itemize}"
+        ],
+        "1_2_2.tex": [],
+        "1_7_2.tex": [],
+        "1_3_2.tex": [
+            "Given vectors $ \\vec v_1, \\vec v_2 ,\\dotsc, \\vec v_p \\in \\mathbb R ^{n} $, and scalars $ c_1 , c_2, \\dotsc, c_p$,  the vector $\\vec y$, where\n        \\begin{equation*}\n        \\vec y = c_1 \\vec v_1 + c_2 \\vec v_2 + \\cdots + c_p \\vec v_p\n        \\end{equation*}\\pause \n        is called a \\Emph{linear combination} of $\\vec v_1, \\vec v_2 ,\\dotsc, \\vec v_p $ with weights $ c_1 , c_2 ,\\dotsc, c_p$."
+        ],
+        "1_9_2.tex": [
+            "%     Let $  T \\;:\\;  \\mathbb R ^n \\mapsto \\mathbb R ^m $ be a linear transformation.  \n%     Then there is a unique matrix $ A$ such that \n%     \\begin{equation*}\n%         T ( \\vec x ) = A \\vec x, \\qquad \\vec x\\in \\mathbb R ^{n}. \n%     \\end{equation*}\n%     In fact, $ A$ is a $ m \\times n$, and its $ j^{th}$ column is the vector $ T (\\vec e _j)$.  \n%     \\begin{equation*}\n%         A = \\begin{pmatrix}\n%         T (\\vec e_1) & T(\\vec e_2)  & \\cdots  & T (\\vec e_n)\n%     \\end{pmatrix}\n%     \\end{equation*}\n\n%"
+        ],
+        "1_5_1.tex": [
+            "Linear systems of the form $A\\vec x = \\vec 0$ are \\Emph{homogeneous}. \\\\[12pt]\n        Linear systems of the form $A\\vec x = \\vec b, \\ \\vec b \\ne \\vec 0$, are \\Emph{inhomogeneous}."
+        ],
+        "1_9_1.tex": [
+            "\\vspace{4pt}\n\n    Let $  T $ be a linear transformation that maps $ \\mathbb R ^n$ to $\\mathbb R ^m$. Then there is a unique matrix $ A$ such that \n    \\onslide<2->{\n    \\begin{equation*}\n        T ( \\vec x ) = A \\vec x, \\qquad \\vec x\\in \\mathbb R ^{n}. \n    \\end{equation*}\n    } \\onslide<3->{\n    \\hspace{-.4cm}Also, $ A$ is a $ m \\times n$, and column $j$ is the vector $ T (\\vec e _j)$.} \\onslide<4->{In other words, $A = \\begin{pmatrix} T (\\vec e_1) & T(\\vec e_2)  & \\cdots  & T (\\vec e_n) \\end{pmatrix}$.}"
+        ],
+        "1_2_3.tex": [
+            "A linear system is consistent if and only if (exactly when) the last column of the \\Emph{augmented} matrix does not have a pivot. This is the same as saying that the RREF of the augmented matrix does \\Emph{not} have a row of the form\n$$\\spalignmat{0 , 0, 0,  \\cdots, 0 | 1}$$\nMoreover, if a linear system is consistent, then it has\n\\begin{enumerate}\n    \\item a unique solution if and only if there are no free variables, and\n    \\item infinitely many solutions that are parameterized by free variables. \n\\end{enumerate}"
+        ],
+        "1_9_3.tex": [
+            "A linear transformation $ T \\;:\\; \\mathbb R ^{n} \\to \\mathbb R ^{m} $ is \\Emph{onto} if for all $ \\vec b \\in \\mathbb R ^{m}$ there is a $ \\vec x\\in \\mathbb R ^{n}$ so that $ T (\\vec x) = A\\vec x = \\vec b$.",
+            "A linear transformation $ T \\;:\\; \\mathbb R ^{n} \\to \\mathbb R ^{m} $ is \\Emph{one-to-one}  \n if \n for all $ \\vec b \\in \\mathbb R ^{m}$ there is at most one (possibly no) $ \\vec x\\in \\mathbb R ^{n}$ so that $ T\\left( \\vec x \\right)= A\\vec x = \\vec b$.",
+            "For a linear transformation $ T \\;:\\; \\mathbb R ^{n} \\to \\mathbb R ^{m}$ with standard matrix $ A$, these are equivalent statements.  \n    %%  ENUMERATE\n    \\begin{enumerate}\n    \\item  $ T$ is onto. \n    \n    \\item $ A$ has  columns that span $ \\mathbb R ^{m}$. \n    \n    \\item Every row of $A$ is pivotal.  \n    \\end{enumerate}\n    %% ENUMERATE",
+            "For a linear transformation $ T \\;:\\; \\mathbb R ^{n} \\to \\mathbb R ^{m}$ with standard matrix $ A$, these are equivalent statements.  \n    \n    \\begin{enumerate}\n    \\item  $ T$ is one-to-one. \n    \n    \\item The unique solution to $ T \\left( \\vec x \\right) = \\vec 0$ is the trivial one. \n    \n    \\item $A$ has linearly independent columns.  \n    \n    \\item Each column of $A $ is pivotal.  \n    \\end{enumerate}"
+        ],
+        "1_4_2.tex": [
+            "The equation $ A \\vec x = \\vec b $ has a solution if and only if $ \\vec b$ is a linear combination of the columns of $ A$."
+        ],
+        "1_1_2.tex": [
+            "A linear system is \\Emph{consistent} if it has at least one solution.",
+            "Two matrices are \\Emph{row equivalent} if a sequence of row operations transforms one matrix into the other."
+        ],
+        "images": [],
+        "1_3_3.tex": [
+            "Given vectors $ \\vec v_1, \\vec v_2 ,\\dotsc, \\vec v_p \\in \\mathbb R ^{n} $, and scalars $ c_1 , c_2, \\dotsc, c_p$. The set of all linear combinations of $ \\vec v_1, \\vec v_2 ,\\dotsc, \\vec v_p $ is called the \\Emph{span} of $ \\vec v_1, \\vec v_2 ,\\dotsc, \\vec v_p $."
+        ],
+        "1_4_1.tex": [
+            "If $ A \\in \\mathbb R^{m \\times n}$ has columns $ \\vec a_1 ,\\dotsc, \\vec a_n$ and $\\vec x \\in \\mathbb R ^{n}$, then the \\Emph{matrix vector product} $A \\vec x$ is a linear combination of the columns of $A$.\n    \\begin{equation*}\n    A \\vec x \n    = \n    \\begin{pmatrix*}\n    \\vert & \\vert & \\cdots & \\vert  \n    \\\\\n    \\vec a_1 & \\vec a_2 & \\cdots & \\vec a_n\n    \\\\\n    \\vert & \\vert & \\cdots & \\vert  \n    \\end{pmatrix*} \n    \\begin{pmatrix*}\n    x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n\n    \\end{pmatrix*} \n    = x_1 \\vec a_1 + x_2 \\vec a_2 + \\cdots + x_n \\vec a_n\n    \\end{equation*}\n    Note that $ A \\vec x$ is in the span of the columns of $ A$."
+        ],
+        "1_3_1.tex": [],
+        "1_8_2.tex": []
+    },
+    "Chapter2": {
+        "2_9_1.tex": [],
+        "2_8_1.tex": [
+            "A \\Emph{subset of $\\mathbb R^n$} is any collection of vectors that are in $\\mathbb R^n$.",
+            "A subset $ H $ of $ \\mathbb R ^{n}$ is a \\Emph{subspace} if it is closed under scalar multiplies and vector addition.  That is: for any $c\\in\\mathbb R$ and for $\\vec u,  \\vec v\\in H$, \n\n    \\begin{enumerate}\n        \\item $c \\,\\vec u  \\in H$\n        \\item $\\vec u + \\vec v \\in H$\n    \\end{enumerate}"
+        ],
+        "2_1_3.tex": [],
+        "2_8_3.tex": [
+            "A \\Emph{basis} for a subspace $ H$ is a set of linearly independent vectors in $H$ that span $ H$."
+        ],
+        "2_5_1.tex": [
+            "\\vspace{2pt}\n\n        If $ A$ is an $ m \\times n$ matrix that can be row reduced to echelon form without row exchanges, then $ A = L U $. $ L $ is a lower triangular $ m \\times m$ matrix with $ 1$'s on the diagonal, $ U$ is an \\Emph{echelon} form of $ A$."
+        ],
+        "2_7_2.tex": [],
+        "2_4_2.tex": [
+            "% Let $ A$ be $ m \\times n$ and $ B$ be $ n \\times p$ matrix. Then,  \n% \\begin{align*}\n%  AB &= \n%  \\begin{pmatrix}\n% \\operatorname {col}_1 A & \\cdots & \\operatorname {col}_n A \n% \\end{pmatrix}\n%  \\begin{pmatrix}\n% \\operatorname {row}_1 B \\\\ \\vdots \\\\  \\operatorname {row}_n B \n% \\end{pmatrix}\n% \\\\&= \n% \\underbrace{\n% \\operatorname {col}_1 A \\operatorname {row}_1 B + \\cdots \\operatorname {col}_n A \\operatorname {row}_n B } \n% _{\\textup{$ m \\times p$ matrices}} \n% \\end{align*}\n% This is the \\Emph{Column Row Method} for matrix multiplication.\n\n%"
+        ],
+        "2_5_2.tex": [],
+        "2_2_3.tex": [
+            "Matrix $A$ is invertible if and only if it is row equivalent to the identity. In this case, the any sequence of elementary row operations that transforms $ A$ into $ I$, applied to $ I$, generates $ A ^{-1} $."
+        ],
+        "2_3_1.tex": [
+            "\\item If $A$ and $B $ are $ n \\times n $ matrices and $ AB=I$, then $ A$ and $ B$ are invertible, and $ B = A ^{-1} $ and $ A = B ^{-1} $."
+        ],
+        "images": [],
+        "2_1_2.tex": [
+            "Let $ A $ be an $ m \\times n $ matrix, and $ B$ be an $ n \\times p$ matrix. \\onslide<2->{ The product  $ A B  $ is an $ m \\times p$ matrix,} \\onslide<3->{equal to} \\onslide<4->{$$ A B = A \n    \\begin{pmatrix}\n    \\vec b_1 & \\cdots & \\vec b_p\n    \\end{pmatrix} = \n    \\begin{pmatrix}\n    A \\vec b_1 & \\cdots & A \\vec b_p\n    \\end{pmatrix}\n    $$ }"
+        ],
+        "2_2_2.tex": [
+            "$A \\in \\R^{n\\times n}$ has an inverse if and only if for all $ \\vec b \\in \\mathbb R ^{n}$, $ A \\vec x= \\vec b$ has a unique solution.  And, in this case, $ \\vec  x = A ^{-1} \\vec b$."
+        ],
+        "2_7_1.tex": [],
+        "2_1_1.tex": [
+            "% Let $ A $ be a $ m \\times n $ matrix, and $ B$ be a $ n \\times p$ matrix. The product is  $ A B  $ a $ m \\times p$ matrix, equal to $$ A B = A \n% \\begin{pmatrix}\n% \\vec b_1 & \\cdots & \\vec b_p\n% \\end{pmatrix} = \n% \\begin{pmatrix}\n% A \\vec b_1 & \\cdots & A \\vec b_p\n% \\end{pmatrix}\n% $$ \n%"
+        ],
+        "2_6_1.tex": [],
+        "2_4_1.tex": [
+            "Let $ A$ be $ m \\times n$ and $ B$ be $ n \\times p$ matrix. Then, the $ (i,j)$ entry of $ AB$ is \n\\begin{equation*}\n\\operatorname {row}_i A  \\cdot   \\operatorname {col}_j B . \n\\end{equation*}\nThis is the \\Emph{Row Column Method} for matrix multiplication.",
+            "% Let $ A$ be $ m \\times n$ and $ B$ be $ n \\times p$ matrix. Then,  \n% \\begin{align*}\n%  AB &= \n%  \\begin{pmatrix}\n% \\operatorname {col}_1 A & \\cdots & \\operatorname {col}_n A \n% \\end{pmatrix}\n%  \\begin{pmatrix}\n% \\operatorname {row}_1 B \\\\ \\vdots \\\\  \\operatorname {row}_n B \n% \\end{pmatrix}\n% \\\\&= \n% \\underbrace{\n% \\operatorname {col}_1 A \\operatorname {row}_1 B + \\cdots \\operatorname {col}_n A \\operatorname {row}_n B } \n% _{\\textup{$ m \\times p$ matrices}} \n% \\end{align*}\n% This is the \\Emph{Column Row Method} for matrix multiplication.\n\n%"
+        ],
+        "2_2_1.tex": [
+            "$A \\in \\R^{n\\times n}$ is \\Emph{invertible} (or \\Emph{non-singular}) if there is a $C \\in \\R^{n\\times n}$ so that $$AC = CA = I_n.$$  If there is, we write $C= A ^{-1}$.",
+            "The  $ 2 \\times 2 $ matrix  $  \\begin{pmatrix*}[r]\na & b \\\\ c & d \n\\end{pmatrix*}$ is non-singular if and only if $ ad - bc \\neq 0$, and \n\\begin{equation*}\n \\begin{pmatrix*}[r]\na & b \\\\ c & d \n\\end{pmatrix*} ^{-1} = \\frac 1 {ad-bc} \n \\begin{pmatrix*}[r]\nd & -b \\\\ -c & a  \n\\end{pmatrix*}\n\\end{equation*}"
+        ],
+        "2_9_2.tex": [
+            "The \\Emph{dimension} (or cardinality) of a non-zero subspace $H$, $ \\operatorname {dim} H $, is the number of vectors in a basis of $H$.\n    We define $ \\operatorname {dim} \\{\\vec 0\\}$ = 0.",
+            "Suppose $H$ is a $p$-dimensional subspace of $\\mathbb R^n$. Any set of $p$ independent vectors that are in $H$ are automatically a basis for $H$."
+        ],
+        "2_8_2.tex": [
+            "Given an $ m \\times n $ matrix $ A = \\begin{bmatrix}\n    \\vec a_1 & \\cdots & \\vec a _{n}\n    \\end{bmatrix}$ \\vspace{2pt}\n    \\begin{itemize}\n        \\item  The \\Emph{column space of $ A$}, $ \\operatorname {Col} A $, is the subspace of $ \\mathbb R ^{m}$ spanned by $ \\vec a_1 ,\\dotsc, \\vec a_n$.  \\vspace{2pt}\n        \\item The \\Emph{null space of $A$}, $ \\operatorname {Null} A $, is the subspace of $\\mathbb R^n$ spanned by the set of all vectors $ \\vec x$ that solve $ A \\vec x= \\vec 0$. \n    \\end{itemize}"
+        ],
+        "2_9_3.tex": [
+            "The \\Emph{rank} of a matrix is the dimension of its column space.",
+            "If a matrix $ A$ has $ n$ columns, then $ \\operatorname {Rank} A  + \\operatorname {dim(Nul} A) = n$."
+        ]
+    },
+    "Chapter3": {
+        "3_2_1.tex": [
+            "Let $ A$ be a square matrix. \n\n%%  ENUMERATE\n\\begin{enumerate}\n\\item<1-> If a multiple of a row of $ A$ is added to another row to produce $ B$, then \n$ \\operatorname {det} B = \\operatorname {det} A $. \n\n\\item<2-> If two rows are interchanged to produce $ B$, then $  \\operatorname {det} B = -\\operatorname {det} A $. \n\n\\item<3-> If one row of $ A$ is multiplied by a scalar $ k$ to produce $ B$, then \n$  \\operatorname {det} B = k\\operatorname {det} A $. \n\\end{enumerate}\n%% ENUMERATE"
+        ],
+        "3_3_2.tex": [
+            "%\n%Let $ A$ be an invertible $ n \\times n $ matrix. For any $ \\vec b \\in \\mathbb R ^{n}$, the unique solution $\\vec x$ of the equation $ A \\vec x = \\vec b$ has the $ i$th entry given by \n%\\begin{equation*}\n%x_i = \\frac { \\operatorname {det} A_i (\\vec b)} {\\operatorname {det} A} , \\qquad i=1 ,\\dotsc, n. \n%\\end{equation*}\n%\n%",
+            "%\n%\\begin{equation*}\n%A ^{-1} = \\frac 1 {\\operatorname {det} A} \n%= \n%\\begin{bmatrix*}[r]\n%C _{11}  & C _{21} & \\cdots & C _{n1} \n%\\\\\n%C _{12} &  C _{22} & \\cdots & C _{n2} \n%\\\\\n%\\vdots  & \\vdots & \\ddots & \\vdots \n%\\\\\n%C _{1n} & C _{2n} & \\cdots & C _{nn}\n%\\end{bmatrix*}\n%\\end{equation*}\n%\n%",
+            "The volume of the parallelpiped spanned by the columns of an $n\\times n$ matrix $ A$ is $ \\lvert  \\operatorname {det} A\\rvert $."
+        ],
+        "3_1_1.tex": [],
+        "images": [],
+        "3_2_2.tex": [],
+        "3_1_2.tex": [
+            "The $ (i,j)$ cofactor of an $ n \\times n $ matrix $ A$ is  \\begin{equation*} C _{ij} = (-1) ^{i+j} \\operatorname {det} A _{ij}    \\end{equation*}",
+            "The determinant of a matrix $ A$ can be computed down any row or column of the matrix. For instance, \n    down the $j^{th}$ column, the determinant is \n    \\begin{equation*}\n    \\operatorname {det} A = \n    a _{1j} C _{1j} + a _{2j} C _{2j} + \\cdots + a _{nj} C _{nj} . \n    \\end{equation*}",
+            "If $ A$ is a triangular matrix then $\\operatorname {det} A = a _{11} a _{22} a _{33} \\cdots a _{nn}$."
+        ],
+        "3_3_1.tex": [
+            "The absolute value of the determinant of a $2\\times 2$ matrix, whose columns  determine adjacent edges of a parallelogram, will give the area of the parallelogram."
+        ],
+        "3_3_3.tex": [
+            "If $T_A \\ : \\R^n \\mapsto \\R^n$, and $S$ is some parallelogram in $\\R^n$, then $$\\operatorname{volume}\\left(T_A(S)\\right) = \\left|\\det(A)\\right| \\cdot \\operatorname{volume}(S)$$\n    where $T_A (\\vec x) = A \\vec x$."
+        ]
+    },
+    "Chapter4": {
+        "4_9_1.tex": [],
+        "4_9_2.tex": [
+            "A stochastic matrix $P$ is \\Emph{regular} if there is some $k$ such that $P^k$ only contains strictly positive entries.",
+            "If $P$ is a regular stochastic matrix, then $P$ has a unique steady-state vector $\\vec q$, and $\\vec x_{k+1} = P\\vec x_k$ converges to $\\vec q$ as $k \\rightarrow \\infty$."
+        ]
+    },
+    "Chapter5": {
+        "5_1_1.tex": [],
+        "5_PR_3.tex": [],
+        "5_5_2.tex": [
+            "Every polynomial of degree $n$ has exactly $n$ complex roots, counting multiplicity.",
+            "If $\\lambda \\in \\mathbb C$ is a root of a real polynomial $p (x)$, then the conjugate $\\overline{\\lambda}$ is also a root of $p(x)$."
+        ],
+        "5_3_4.tex": [],
+        "5_2_2.tex": [
+            "The \\Emph{algebraic multiplicity} of an eigenvalue is its multiplicity as a root of the characteristic polynomial.",
+            "The \\Emph{geometric multiplicity} of an eigenvalue $\\lambda$  is  the dimension of $ \\operatorname{Null} (A - \\lambda I)$."
+        ],
+        "5_3_3.tex": [],
+        "5_1_3.tex": [],
+        "5_5_4.tex": [
+            "If $A$ is a real $2 \\times 2$ matrix with eigenvalue $\\lambda = a - bi$ (where $b \\neq 0$) and associated eigenvector $\\vec v$, then we may construct the decomposition\n    \n    \\[ A = PCP^{-1} \\]\n    where\n    \\[ P = (\\textrm{Re}\\, \\vec v\\ \\ \\  \\textrm{Im}\\, \\vec v) \\quad \\text{and} \\quad C = \\spalignmat{ a -b ; b  a }. \\]"
+        ],
+        "5_2_3.tex": [],
+        "5_PR_1.tex": [
+            "A stochastic matrix $P$ is \\Emph{regular} if there is some $k$ such that $P^k$ only contains strictly positive entries.",
+            "\\vspace{4pt} \n\n    If $P$ is a regular $m \\times m$ stochastic matrix with $m \\ge 2$, then:\n    \n    \\begin{itemize}\n        \\item for any initial probability vector $\\vec x_0$, $\\displaystyle \\lim_{n \\rightarrow \\infty} P^n \\vec x_0 = \\vec q$ \\pause\n        \\item $P$ has a unique eigenvector, $\\vec q$, which has eigenvalue $\\lambda = 1$ \\pause    \n        \\item there is a stochastic matrix $\\Pi$ such that $\\displaystyle \\lim_{n \\rightarrow \\infty} P^n = \\Pi$ \\pause\n        \\item each column of $\\Pi$  is the same probability vector $\\vec q$ \\pause\n        \\item the eigenvalues of $P$ satisfy $|\\lambda| \\le 1$ \n    \\end{itemize}"
+        ],
+        "5_5_1.tex": [],
+        "5_PR_2.tex": [],
+        "5_3_2.tex": [
+            "If $A$ is $n\\times n$ and has $n$ distinct eigenvalues, then $A$ is diagonalizable."
+        ],
+        "5_2_4.tex": [
+            "$n \\times n$ matrices $A$ and $B$ are \\Emph{similar} if there is a $P$ so that $A = PBP^{-1}$.",
+            "If $A$ and $B$ similar, then they have the same characteristic polynomial."
+        ],
+        "5_3_1.tex": [
+            "A matrix is \\Emph{diagonal} if the only non-zero elements, if any, are on the main diagonal.",
+            "Suppose $A \\in \\R^{n \\times n}$. We say that $A$ is \\Emph{diagonalizable} if it is similar to a diagonal matrix, $D$. That is, we can write $A = PDP^{-1}$.",
+            "If $ A$ is diagonalizable $\\Leftrightarrow A$ has $n$ linearly independent eigenvectors."
+        ],
+        "images": [],
+        "5_2_1.tex": [],
+        "5_1_2.tex": [
+            "Suppose $A \\in \\R^{n \\times n}$. The eigenvectors for a given $\\lambda$ span a subspace of $\\R^n$ called the $\\lambda$-\\Emph{eigenspace} of $A$."
+        ],
+        "5_5_3.tex": [
+            "A matrix of the form $C =  \\spalignmat{ a  -b ; b  a }$ is a \\Emph{rotation-dilation matrix} \\pause because it is the composition of a rotation by $\\phi$ and dilation by $r$, \\pause where \n        $$r^2 = a^2 + b^2, \\quad \\tan \\phi = \\frac ba$$\n        \\pause Moreover, the eigenvalues of $C$ are $\\lambda = a \\pm bi$."
+        ]
+    },
+    "Chapter6": {
+        "6_2_3.tex": [
+            "An $ m \\times n$ matrix $ U$ has orthonormal columns if and only if $ U ^{T} U = I_n $.",
+            "Suppose  $ m \\times n$ matrix $U$ has orthonormal columns and $\\vec x$ and $\\vec y$ are vectors in $\\mathbb R^n$. \n\n    \\begin{enumerate}\n        \\item<2-> $ \\lVert U \\vec x\\rVert = \\lVert \\vec x \\rVert$\n        \\item<3-> $ (U \\vec x  ) \\cdot (U \\vec y) = \\vec x \\cdot \\vec y$\n        \\item<4-> $ (U \\vec x  ) \\cdot (U \\vec y) = 0$ if and only if $\\vec x \\cdot \\vec y = 0$\n    \\end{enumerate}"
+        ],
+        "6_1_2.tex": [
+            "Two vectors $ \\vec u$ and $ \\vec v$ are \\Emph{orthogonal} if $ \\vec u \\cdot \\vec v =0$.  \n    This is equivalent to: \n    \\begin{equation*}\n    \\lVert \\vec u + \\vec v \\rVert ^2 =  \\lVert \\vec u  \\lVert^2  +  \\lVert  \\vec v \\rVert ^2\n    \\end{equation*}"
+        ],
+        "6_4_1.tex": [],
+        "6_6_3.tex": [],
+        "6_1_4.tex": [
+            "\\begin{tikzpicture} \\node [mybox](box){\\begin{minipage}{0.75\\textwidth}\n        \\vspace{2pt}\n        \n        Row$A$ is the space spanned by the rows of matrix $A$.",
+            "For any $ A \\in \\mathbb R^{m\\times n}$,  the orthogonal complement of $\\Row A$ is $ \\Null A$, and the orthogonal complement of $ \\Col A$ is  $ \\Null A ^{T}$."
+        ],
+        "6_4_3.tex": [
+            "A set of vectors form an \\Emph{orthonormal basis} if the vectors are mutually orthogonal and have unit length.",
+            "\\vspace{2pt}\n\n    Any  $ m \\times n $ matrix $A$ with linearly independent columns has the \\Emph{QR factorization}\n    \\begin{equation*}\n        A = Q R \n    \\end{equation*}\n    where \n\n    \\begin{itemize}\n        \\item $ Q$ is $ m \\times n$, its columns are an orthonormal basis for $ \\operatorname {Col} A$. \n        \\item $ R$ is $ n \\times n$, upper triangular, with positive entries on its diagonal % and \n    \\end{itemize}"
+        ],
+        "6_5_3.tex": [
+            "If $A \\in \\mathbb R^{m \\times n}$ has linearly independent columns, then $A = QR$, and for every $ \\vec b\\in \\mathbb R ^{m}$, $ A \\vec x=\\vec b$ has the unique least-squares solution \\onslide<2->{\n        \\begin{equation*}\n            R\\widehat x =  Q ^{T} \\vec b.\n        \\end{equation*}}\n    \\vspace{-12pt}"
+        ],
+        "6_2_1.tex": [
+            "A set of vectors $ \\{\\vec u_1 ,\\dotsc, \\vec u_p\\}$ are an \\Emph{orthogonal set} of vectors if for each $ j\\neq k$, $ \\vec u_j \\perp \\vec u_k$.",
+            "Let  $S = \\{\\vec u_1 ,\\dotsc, \\vec u_p\\}$ be an \\Emph{orthogonal set} of vectors.  %Then, for scalars $ c_1 ,\\dotsc, c_p$, \n    % \\begin{equation*}\n    % \\bigl\\lVert c_1 \\vec u_1 + \\cdots + c_p \\vec u_p  \\bigr\\rVert ^2 \n    % = c_1 ^2 \\lVert \\vec u_1 \\rVert ^2 + \\cdots + c_p ^2 \\lVert \\vec u_p\\rVert ^2 . \n    % \\end{equation*}    In particular, \n    If $ \\vec u_i$ are non-zero, the then $S$ is a set of \\Emph{linearly independent} vectors.",
+            "Let  $ \\{\\vec u_1 ,\\dotsc, \\vec u_p\\}$ be an orthogonal  basis for a subspace $ W$ of $ \\mathbb R ^{n}$. Then, for any vector $ \\vec w\\in W$, \n        \\begin{equation*}\n            \\vec w= c_1  \\vec u_1   + \\cdots + c_p   \\vec u_p  . \n        \\end{equation*}\n        Above, the scalars are $ \\displaystyle c_ q = \\frac { \\vec w \\, \\cdot \\, \\vec u_q } { \\vec u _{q} \\cdot \\, \\vec u_q }$.",
+            "An \\Emph{orthonormal basis} for a subspace $ W$ is an orthogonal basis $ \\{\\vec u_1 ,\\dotsc, \\vec u_p\\}$ \n        in which every vector $ \\vec u_q$ has unit length.  In this case, for each $ \\vec w\\in W$,  \n        \\begin{gather*}\n        \\vec w = (\\vec w \\cdot \\vec u_1) \\vec u_1 + \\cdots +  (\\vec w \\cdot \\vec u_p ) \\vec u_p\n        \\\\\n        \\lVert \\vec w \\rVert  =  \\sqrt{(\\vec w \\cdot \\vec u_1) ^2 + \\cdots +  (\\vec w \\cdot \\vec u_p) ^2} \n    \\end{gather*}"
+        ],
+        "6_3_1.tex": [
+            "\\vspace{4pt}\n        Let $ W$ be a subspace of $ \\mathbb R ^{n}$.   Then, each vector $ \\vec y \\in \\mathbb R ^{n}$ has the \\Emph{unique} decomposition \n        \\begin{equation*}\n            \\vec y =   \\widehat y  +  z, \\quad  \\widehat y  \\in W, \\quad   z \\in W ^{\\perp}. \n        \\end{equation*}\n    \n        And, if $  \\vec u_1 ,\\dotsc, \\vec u_p$ is any orthogonal basis for $ W$, \n        \\begin{equation*}\n            \\widehat y =  \\frac {\\vec y \\cdot \\vec u_1} {\\vec u_1 \\cdot \\vec u_1} \\vec u_1 + \\cdots + \n            \\frac {\\vec y \\cdot \\vec u_p} {\\vec u_p \\cdot \\vec u_p} \\vec u_p. \n        \\end{equation*}\n        We say that $ \\widehat y  $ is the \\Emph{orthogonal projection of $ \\vec y$ onto $ W$.}"
+        ],
+        "6_5_2.tex": [
+            "The least-squares solutions to $ A \\vec x = \\vec b $ coincide with the solutions to \n    $$\n        A ^{T} A \\widehat x = A ^{T} \\vec b\n    $$\n    This linear system is referred to as the \\Emph{Normal Equations}.",
+            "Let $A$ be any $ m \\times n$ matrix.  These statements are equivalent.  \n    %%  itemize\n    \\begin{itemize}\n    \\item<2-> The columns of $ A$ are linearly independent. \n    \\item<3-> The matrix $  A ^{T} A $ is invertible.  \n    \\item<4-> The equation $ A \\vec x = \\vec b $  has a unique least-squares solution for each $ \\vec b \\in \\mathbb R ^{m}$. \n    \\end{itemize}\n    %% itemize\n    \\vspace{4pt} \n    \\onslide<5->{If the above statements hold, the least square solution is} $$\\onslide<5->{\\widehat x = ( A ^{T} A ) ^{-1} A ^{T} \\vec b.}$$\n    \\vspace{-24pt}"
+        ],
+        "6_1_3.tex": [
+            "\\vspace{2pt} \n\n    Let $W$ be a subspace of $\\mathbb R ^{n}$.  Vector $\\vec z \\in \\mathbb R ^{n}$ is \\Emph{orthogonal} to $W$ if $\\vec z$ is orthogonal to every vector in $W$.\n\n    \\vspace{12pt} \n\n    The set of all vectors orthogonal to $ W$ is a subspace, the \\Emph{orthogonal compliment} of $W$, or $ W ^{\\perp}$.\n    \\begin{equation*}\n        W ^{\\perp} = \\{ \\vec z \\in \\mathbb R ^{n}  \\;:\\;  \\vec z \\cdot  \\vec w = 0 \\ \\text{for all } \\vec w \\in W \\} \n    \\end{equation*}"
+        ],
+        "6_5_1.tex": [
+            "Let $ A$ be an $ m \\times n $ matrix. \n        A \\Emph{least-squares solution to $ A \\vec x = \\vec b$} is \\onslide<2->{ the solution $ \\widehat x $ for which} \\onslide<3->{ \n        \\begin{equation*}\n            \\lVert \\, \\vec b - A \\widehat x \\, \\rVert \\leq \\lVert \\, \\vec b - A  \\vec x \\, \\rVert \n        \\end{equation*}\n        for all $\\vec x\\in \\mathbb R ^{n}$.}"
+        ],
+        "images": [],
+        "6_3_2.tex": [
+            "Let $ W$ be a subspace of $ \\mathbb R ^{n}$,  $ \\vec y \\in \\mathbb R ^{n}$, and $ \\widehat y $ is the orthogonal projection of $ \\vec y$ onto $ W$.  \\onslide<2->{ Then for \\Emph{any} $ \\vec v \\neq \\hat y$, $\\vec v  \\in W$, we have\n    \\begin{equation*}\n    \\lVert \\vec y - \\widehat y \\rVert< \\lVert \\vec y - \\vec v \\rVert\n    \\end{equation*}\n    }\n    \\onslide<3->{That is, $ \\widehat y $ is the unique vector in $ W$ that is closest to $ \\vec y$.  }"
+        ],
+        "6_6_2.tex": [],
+        "6_2_2.tex": [
+            "Let $ \\vec u$ be a non-zero vector in $\\mathbb R^n$, and let $ \\vec y$ be any vector in $\\mathbb R^n$.  The \\Emph{orthogonal projection of $ \\vec y$ onto $ \\vec u$} is the vector in the span of $ \\vec u$ that is closest to $ \\vec y$. \n    \\begin{equation*}\n        \\textup{proj} _{\\vec u} \\, \\vec y = \\frac {\\vec y \\cdot \\vec u} {\\vec u \\cdot \\vec u} \\vec u \n    \\end{equation*}\n    Moreover, $\\vec y = \\widehat y + \\vec z$, where $\\vec z \\in W\\Perp$."
+        ],
+        "6_4_2.tex": [],
+        "6_6_1.tex": [],
+        "6_1_1.tex": [
+            "The \\Emph{length} of a vector $\\vec u \\in \\mathbb R^n$ is  \\begin{equation*}\n            \\lVert \\vec u\\rVert = \\sqrt { \\vec u \\cdot \\vec u} = \n            \\sqrt {  u_1 ^2 + u_2 ^2 + \\cdots + u_n ^2 }\n        \\end{equation*}",
+            "If $ \\vec v \\in \\mathbb R^n$ has length one, we say that it is a \\Emph{unit vector.}",
+            "For $ \\vec u, \\vec v \\in \\mathbb R ^{n}$, the \\Emph{distance} between $ \\vec u$ and $ \\vec v$ is given by the formula $||\\vec u - \\vec v ||$.",
+            "\\begin{tikzpicture} \\node [mybox](box){\\begin{minipage}{0.65\\textwidth}\n        \\vspace{2pt}\n        \n        $ \\vec a \\cdot \\vec b= ||\\vec a|| \\, ||\\vec b|| \\,  \\cos\\theta$. Thus, if $\\vec a \\cdot \\vec b = 0$, then: \n        \\begin{itemize} \\setlength\\itemsep{0.25em}\n            \\item<2-> $ \\vec a$ and/or $ \\vec b$ are zero vectors, or \n            \\item<3-> $ \\vec a$ are $ \\vec b$ are perpendicular to each other. % orthogonal \n        \\end{itemize}"
+        ]
+    },
+    "Chapter7": {
+        "7_4_5_FourFund.tex": [],
+        "7_1_3.tex": [],
+        "7_3_2.tex": [],
+        "7_4_5_Cond.tex": [],
+        "7_1_1.tex": [
+            "If matrix $ A = A^T$, then $A$ is \\Emph{symmetric}."
+        ],
+        "7_4_4.tex": [],
+        "7_2_2.tex": [
+            "If $A$ is a symmetric matrix then there exists an orthogonal change of variable $\\vec x = P \\vec y$ that transforms $\\vec x^{\\,T} A \\vec x$ to $\\vec y^{\\,T} D \\vec y$ with no cross-product terms."
+        ],
+        "7_2_1.tex": [
+            "A \\Emph{quadratic form} is a function $ Q \\;:\\; \\mathbb R ^{n} \\to \\mathbb R $, given by \n    \\begin{equation*}\n        Q (\\vec x ) =  \\vec x ^{\\, T} A \\vec x   = \n    \\begin{pmatrix}\n        x_1 & x _2 & \\cdots & x_n \n    \\end{pmatrix} \\begin{pmatrix}\n        a_ {11} & a _{12} & \\cdots & a _{1n} \n        \\\\\n        a _{12} & a _{22}  & \\cdots & a _{2n} \n        \\\\ \n        \\vdots &   \\vdots & \\ddots &   \\vdots \n        \\\\\n        a _{1n} & a _{2n} & \\cdots & a _{nn}\n    \\end{pmatrix}\n    \\begin{pmatrix}\n        x_1 \\\\ x _2\\\\ \\vdots \\\\ x_n \n    \\end{pmatrix}\n    \\end{equation*}\n    Matrix $ A$ is $n \\times n$ and symmetric."
+        ],
+        "7_1_2.tex": [
+            "If $ A$ is a symmetric matrix, with eigenvectors $ \\vec v_1$ and $ \\vec v_2$ corresponding to two distinct eigenvalues, then $\\vec v_1$ and $\\vec v_2$ are orthogonal.  \\\\\n    \n    More generally, eigenspaces associated to distinct eigenvalues are orthogonal subspaces.",
+            "An $ n \\times n $ symmetric matrix $A$ has the following properties.\n    \n    \\vspace{6pt}\n\n    \\begin{itemize} \\setlength\\itemsep{4pt}\n        \\item All eigenvalues of $ A$ are real.\n        \\item The eigenspaces are mutually orthogonal. \n        \\item $ A$ can be diagonalized as $  A = P D P ^{T}$, where $D$ is diagonal and $ P$ is orthogonal.\n    \\end{itemize}"
+        ],
+        "images": [],
+        "7_4_5_Spectral.tex": [],
+        "7_4_3.tex": [
+            "Suppose $A$ is an $ m \\times n$ matrix with singular values $ \\sigma_1 \\geq \\sigma _2 \\geq \\cdots \\geq \\sigma _n  $ and $m \\ge n$. \\onslide<2->{Then $A$ has the decomposition $A = U \\Sigma V ^{T}$ where }\\onslide<3->{\n        \\begin{equation*}\n            \\Sigma = \\spalignmat{D;\\mathbf{0}_{m-n,n}}, \\\n            D = \n            \\begin{pmatrix}\n                \\sigma _1 & 0 & \\ldots & 0   \n                \\\\\n                0 & \\sigma _2 & \\ldots   &  \\vdots \n                \\\\\n                \\vdots & \\vdots & \\ddots & \\vdots\n                \\\\\n                0 & 0& \\ldots & \\sigma _n  \n            \\end{pmatrix}\n        \\end{equation*} }\n        \\onslide<4->{$U$ is a $ m \\times m $ orthogonal matrix, and $ V $ is a $ n \\times n$ orthogonal matrix. }\\onslide<5->{If $m < n$, then $\\Sigma = \\spalignmat{D \\mathbf0_{m,n-m}}$ with everything else the same. }"
+        ],
+        "7_3_3.tex": [
+            "Suppose $Q = \\vec x^{\\, T} A \\vec x$, where $A \\in \\mathbb R^{n\\times n}$ is symmetric and has eigenvalues\n        $$\\lambda_1 \\ge \\lambda_2 \\ldots \\ge \\lambda_n$$\n        and associated eigenvectors\n        $$\\vec u_1, \\vec u_2, \\ldots , \\vec u_n$$\n        \\onslide<2->{Subject to the constraints $||\\vec x ||=1$ and} \\onslide<3->{$\\vec x \\cdot \\vec u_1 = 0$,}\n        \\begin{itemize}\n            \\item<4-> the maximum value of $Q(\\vec x) = \\lambda_{2}$, attained at $\\vec x = \\vec u_{2}$\n            \\item<5-> the minimum value of $Q(\\vec x) = \\lambda_n$, attained at $\\vec x = \\vec u_n$\n        \\end{itemize}\n        \n        % \\vspace{6pt} \n        \n        % Note that $\\lambda_2$ is the second largest eigenvalue of $A$."
+        ],
+        "7_4_1.tex": [
+            "The singular values of any $m\\times n$ real matrix $A$ are the square roots of the eigenvalues of $A^TA$.",
+            "The eigenvalues of $ A ^{T} A $ are non-negative.",
+            "The singular values, $\\sigma_j$, of any $m\\times n$ real matrix $A$ are the square roots of the eigenvalues of $A^TA$. Singular values are arranged in decreasing order.\n        \n        $$\\sigma _1 = \\sqrt {\\lambda _1 } \\geq \\sigma _2 = \\sqrt {\\lambda _2}  \\geq \\ \\cdots \\ \\geq \\sigma _n=\\sqrt {\\lambda _n} $$"
+        ],
+        "7_3_1.tex": [
+            "If $Q = \\vec x^{\\, T} A \\vec x$, $A$ is a real $n\\times n$ symmetric matrix, with eigenvalues \n        $$\\lambda_1 \\ge \\lambda_2 \\ldots \\ge \\lambda_n$$\n        and associated normalized eigenvectors \n        $$\\vec u_1, \\vec u_2, \\ldots , \\vec u_n$$\n        \\onslide<2->{Then, subject to the constraint $||\\vec x ||=1$, }\n        \\begin{itemize}\n            \\item<3-> the \\Emph{maximum} value of $Q(\\vec x) = \\lambda_1$, attained at $\\vec x = \\pm \\, \\vec u_1$.\n            \\item<4-> the \\Emph{minimum} value of $Q(\\vec x) = \\lambda_n$, attained at $\\vec x = \\pm \\, \\vec u_n$.\n        \\end{itemize}"
+        ],
+        "7_4_2.tex": [
+            "For any $ A \\in \\mathbb R^{m\\times n}$,  the orthogonal complement of $\\Row A$ is $ \\Null A$, and the orthogonal complement of $ \\Col A$ is  $ \\Null A ^{T}$.",
+            "Suppose $\\vec v_i$ are the $n$ orthogonal eigenvectors of $A^TA$, ordered so that their corresponding eigenvalues satisfy $\\lambda_1 \\ge \\lambda_2 \\ge \\ldots \\ \\ge \\lambda_n$. \\onslide<2->{Suppose also that $A$ has $r$ non-zero singular values, $r \\le n$. }\\onslide<3->{Then the set of vectors $$\\{\\vec v_{r+1},  \\vec v_{r+2}, \\ \\ldots \\ , \\vec v_n\\}$$ is an orthogonal basis for $\\Nul A$, and the set $$\\{\\vec v_{1},  \\vec v_{2}, \\ \\ldots \\ , \\vec v_r\\}$$ is an orthogonal basis for $\\Row A$, and $\\text{rank} A = r$. }",
+            "Suppose $\\vec v_i$ are the $n$ orthonormal eigenvectors of $A^TA$, ordered so that their corresponding eigenvalues satisfy $\\lambda_1 \\ge \\lambda_2 \\ge \\ldots \\ \\ge \\lambda_n$. \\onslide<2->{Suppose also that $A$ has $r$ non-zero singular values. }\\onslide<3->{Then $$\\{A\\vec v_1, A\\vec v_2, \\ \\ldots \\ , A\\vec v_r\\}$$ are an orthogonal basis for $\\Col A$.}",
+            "The vectors $\\{\\vec u_i\\}$ for $i \\le m$ are the \\Emph{left singular vectors} of $A$. \n        The vectors $\\{\\vec v_i\\}$ for $i \\le n$ are the \\Emph{right singular vectors} of $A$."
+        ],
+        "7_2_3.tex": [
+            "A quadratic form $Q$ is \n        \\begin{itemize}\n            \\item<2-> \\Emph{positive definite} if $Q > 0$ for all $\\vec x \\ne \\vec 0$.\n            \\item<2-> \\Emph{negative definite} if $Q<0$ for all $\\vec x \\ne \\vec 0$.\n            \\item<3-> \\Emph{positive semidefinite} if $Q\\ge0$ for all $\\vec x$.\n            \\item<3-> \\Emph{negative semidefinite} if $Q\\le0$ for all $\\vec x$.\n            \\item<4-> \\Emph{indefinite} if $Q$ takes on positive and negative values for $\\vec x \\ne \\vec 0$.\n        \\end{itemize}",
+            "\\linespread{1.5}\n    \n        If $A$ is a symmetric matrix with eigenvalues $\\lambda_i$, then $Q = \\vec x^{\\,T} A \\vec x$ is \n        \n        \\begin{itemize}\n            \\item \\onslide<2->{\\Emph{positive definite} when all eigenvalues are positive}\n            \\item \\onslide<2->{\\Emph{negative definite} when all eigenvalues are negative}\n            \\item \\onslide<3->{\\Emph{indefinite} when at least one eigenvalue is negative and at least one eigenvalue is positive}\n        \\end{itemize}"
+        ]
+    }
+}
