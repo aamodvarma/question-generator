@@ -1,0 +1,87 @@
+% UNIT 2 SOMETHING
+b) &  
+\ifnum \Version=1         
+    Matrix $A$ has dimensions $5\times7$, $\Rank A = 6$, $\dim(\Null A) = 1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. The rank of a matrix is at most the minimum of $m$ and $n$.  } \fi
+\fi
+\ifnum \Version=2      
+    $T(\vec x) = A\vec x$ is an onto linear transform, $A$ is $n\times n$, and $A$ is singular.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. If the transform is onto the matrix cannot be singular.  } \fi
+\fi    
+\ifnum \Version=3  
+    $E$ is a $2\times 2$ singular elementary matrix. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. Every elementary matrix is invertible. } \fi
+\fi    
+\ifnum \Version=4    
+    $V$ is a set of linearly independent vectors in $\mathbb R^3$ that form a basis for the column space of an invertible $3\times3$ matrix.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. If the matrix is invertible its columns must be independent and therefore span $\mathbb R^3$, and so there is a basis for the column space. } \fi
+\fi   
+\ifnum \Version=5    
+    Matrix $A$ is a standard matrix for a linear transform that performs a counterclockwise rotation in $\mathbb R^2$, $\text{dim}(\text{Null}(A))=0$, $\text{det}(A)=1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. For example \setlength{\extrarowheight}{0.00cm}  $A = \begin{pmatrix} 0&-1\\1&0\end{pmatrix}$ is the standard matrix for a counter-clockwise rotation by $\pi/2$ radians, and $\text{dim}(\text{Null}(A))=0$, $\text{det}(A)=1$.  } \fi
+\fi    
+\ifnum \Version=6      
+    $V$ is a set of linearly independent vectors in $\mathbb R^3$ that form a basis for the null space of an invertible $3\times3$ matrix.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. The null space of a square invertible matrix would only contain the zero vector, which cannot be a basis vector.  } \fi
+\fi        
+\ifnum \Version=7  
+    Matrix $A$ has dimensions $7\times3$, $\Rank A = 6$, $\dim(\Null A) = 1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. The rank of a matrix is at most the minimum of $m$ and $n$.  }  \fi
+\fi      
+\ifnum \Version=8
+    $E$ is a $4\times 4$  singular elementary matrix. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. Elementary matrices are invertible. 
+    } \fi
+\fi      
+\ifnum \Version=9
+    \setlength{\extrarowheight}{0.00cm} 
+    $V$ is a set of linearly independent vectors in $\mathbb R^4$ that form a basis for the null space of an  $4\times 4$ 
+     matrix of rank 1. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible.  } \fi
+\fi      
+\ifnum \Version=10
+    \setlength{\extrarowheight}{0.00cm} 
+    $E$ is an upper triangular matrix that is not in echelon form. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. For example $\begin{pmatrix} 0& 1 \\ 0 & 1\end{pmatrix}$. } \fi
+\fi      
+\ifnum \Version=11
+    $T(\vec x) = A\vec x$ is a linear transform that is not onto, $A$ is $n\times n$ and invertible.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. If the transform is not onto then it cannot have pivots in every row, so the matrix must be singular. } \fi
+\fi      
+\ifnum \Version=12
+    \setlength{\extrarowheight}{0.00cm} 
+     Matrix $A$ is a standard matrix for a linear transform that reflects over the line $x_1=x_2$ in $\mathbb R^2$, $\text{dim}(\text{Null}(A))=0$, $\text{det}(A)=-1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution: Possible because the standard matrix would be $\begin{pmatrix} 0&1\\1&0 \end{pmatrix}$, which is a matrix with determinant equal to $-1$ and the dimension of its null space is 0. 
+    } \fi
+\fi    
+\ifnum \Version=13 % s
+    \setlength{\extrarowheight}{0.00cm} $E_1$ and $E_2$ are elementary matrices, and $E_1E_2 = I$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  possible. 
+    } \fi
+\fi    
+\ifnum \Version=14 % 
+    \setlength{\extrarowheight}{0.00cm} $A$ and $B$ are $2\times2$ non-zero matrices, but the product $AB$ is the zero matrix.
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  possible. For example, we could have $A = \begin{pmatrix} 0&1\\0&0\end{pmatrix}, B = \begin{pmatrix} 0&0\\0&1\end{pmatrix}$. 
+    } \fi
+\fi    
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} 
+    Matrix $A$ is a standard matrix for a linear transform that reflects around the line $x_1=x_2$ in $\mathbb R^2$, $\text{dim}(\text{Null}(A))=0$, $\text{det}(A)=1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. The determinant is $-1$. 
+    } \fi
+\fi    
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} $V$ is a set of linearly independent vectors in $\mathbb R^4$ that form a basis for the null space of a $4\times 4$ matrix $A$, and $\rank A = 2$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. The dimension of the Null space would need to be 2, so we would also need $\dim V = 2$. } \fi
+\fi    
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 2
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+    } \fi
+\fi    
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 2
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+    } \fi
+\fi    
+& $\bigcirc$  & $\bigcirc$ \\     

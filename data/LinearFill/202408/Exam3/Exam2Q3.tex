@@ -1,0 +1,344 @@
+\question[6] Fill in the blanks. You do not need to show your work. 
+
+\begin{parts} 
+
+% PART A DETERMINANTS AND ITS PROPERTIES 1
+\part 
+    \ifnum \Version=0
+        If $A = \begin{pmatrix} a&b\\c&d\end{pmatrix}$ and $ B = \begin{pmatrix} 2b&2a\\d&c \end{pmatrix} $, and $ \det A = 3$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the answer is $-6$. Using properties of the determinant:
+        \begin{align}
+            3 & = \det A \\
+            &= \begin{vmatrix}\begin{pmatrix} a&b\\c&d \end{pmatrix}\end{vmatrix} \\
+            &= \frac12 \begin{vmatrix}\begin{pmatrix} 2a&2b\\c&d \end{pmatrix}\end{vmatrix} \\
+            &= -\frac12 \begin{vmatrix}\begin{pmatrix} 2b&2a\\d&c \end{pmatrix}\end{vmatrix}, \quad \text{column swap} \\
+            \begin{vmatrix}\begin{pmatrix} 2b&2a\\d&c \end{pmatrix}\end{vmatrix} & = -6
+        \end{align} 
+         A few notes about the solution to this problem: don't forget that column swaps change the sign of the determinant. This is because a column swap can be obtained using the sequence: transpose, row swap, transpose. And row swaps change the sign of the determinant, transposes don't change the determinant. 
+        }
+        \fi    
+    \fi 
+    \ifnum \Version=1
+        If $\det A = 3$ then $\det (A^T) = \framebox{\strut\hspace{1cm}}$
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\text{det}A = 3$ because the determinant of a matrix does not change when the matrix is transposed. } \fi    
+    \fi 
+    \ifnum \Version=2
+        If $a$, $b$, and $c$ are real numbers, and $A = \begin{pmatrix} a&b\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}c&c\\a-2c&b-2c \end{pmatrix}$, and $ \det B = 5$, then $\det A =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $A$ can be obtained from $B$ with one row swap and by adding a multiple of a row to another row. Adding a multiple of a row to another doesn't change the determinant, and a row swap changes the sign of the determinant. So $\det A = -5$. } \fi    
+    \fi 
+    \ifnum \Version=3
+        If $a$, $b$, and $c$ are real numbers, and $A = \begin{pmatrix} a&b\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}c&c\\a-4c&b-4c \end{pmatrix}$, and $ \det A = 4$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ with one row swap and by adding a multiple of a row to another row. Adding a multiple of a row to another doesn't change the determinant, and a row swap changes the sign of the determinant. So $\det B = -4$. } \fi  
+    \fi 
+    \ifnum \Version=4
+        If $a$, $b$, and $c$ are real numbers, and $A = \begin{pmatrix} a&b\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}3c&3c\\a-4c&b-4c \end{pmatrix}$, and $ \det A = 3$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ with one row swap, scaling a row by 3, and by adding a multiple of a row to another row. Adding a multiple of a row to another doesn't change the determinant, scaling a row by 3 multiplies the determinant by 3, and a row swap changes the sign of the determinant. So $\det B = -9$. } \fi  
+    \fi 
+    \ifnum \Version=5
+        If $a$, $b$, and $c$ are real numbers, and $A = \begin{pmatrix} a&b\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}c&c\\a-4c&b-4c \end{pmatrix}$, and $ \det A = 3$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ with one row swap and by adding a multiple of a row to another row. Adding a multiple of a row to another doesn't change the determinant, and a row swap changes the sign of the determinant. So $\det B = -3$. } \fi  
+    \fi 
+    \ifnum \Version=6
+      If  $c \in \mathbb R$,  $A = \begin{pmatrix} 5&4\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}2c&2c\\5-4c&4-4c \end{pmatrix}$, and $ \det A = 3$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ with one row swap and by adding a multiple of a row to another row. And multiplying a column by $2$.  Adding a multiple of a row to another doesn't change the determinant, and a row swap changes the sign of the determinant. Multiplying a column by $2$ multiplies the determinant by $2$. So $\det B = -6$. }
+        \fi
+    \fi    
+    \ifnum \Version=7
+              If  $c$ is a  real number,  $A = \begin{pmatrix} 5&4\\c&c\end{pmatrix}$, $ B = \begin{pmatrix}10& c\\8 & c  \end{pmatrix}$, and $ \det A = 4$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ taking a transpose,  and multiplying a column by $2$. A tranpose does not change the determinant.  Multiplying a column by $2$ multiplies the determinant by $2$. So $\det B = 8$. }
+        
+         \fi
+    \fi    
+    \ifnum \Version=8
+              If  $c$ is a  real number,  $A = \begin{pmatrix} 7&c \\2&c\end{pmatrix}$, $ B = \begin{pmatrix}  c+7 &21 \\c+2&6 \end{pmatrix}$, and $ \det A = 5$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ with one row swap and by adding a multiple of a row to another row. And multiplying a column by $3$.  Adding a multiple of a row to another doesn't change the determinant, and a row swap changes the sign of the determinant. Multiplying a column by $3$ multiplies the determinant by $3$. So $\det B = -15$. }
+             \fi
+    \fi          
+
+
+
+
+
+
+
+% PART B CALCULATE A DETERMINANT
+\part 
+    \ifnum \Version=0
+        The determinant of $A = \begin{pmatrix}  1&2&3\\1&2&3\\1&2&3\end{pmatrix}$ is: $\framebox{\strut\hspace{1.2cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection the matrix has dependent columns, so the matrix is singular. The determinant of a singular matrix is zero. So it isn't necessary to compute the determinant using a co-factor expansion.} \fi    
+    \fi 
+    \ifnum \Version=1
+        The determinant of $A = \begin{pmatrix} 2&3\\0&-3\end{pmatrix}$ is equal to \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\det A = 2\cdot (-3) = -6$. The matrix is triangular so the determinant is the product of the entries on the diagonal. } \fi    
+    \fi 
+    \ifnum \Version=2
+        The determinant of $A = \begin{pmatrix} 2&0&0\\4&3&0\\12&-3&4\end{pmatrix}$ is equal to \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\det A = 2\cdot 3 \cdot 4= 24$. The matrix is triangular so the determinant is the product of the entries on the diagonal. } \fi    
+    \fi 
+    \ifnum \Version=3
+        The determinant of $A = \begin{pmatrix} 2&0\\4&5\end{pmatrix}$ is equal to \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\det A = 2\cdot 5 = 10$. The matrix is triangular so the determinant is the product of the entries on the diagonal.  } \fi    
+    \fi 
+    \ifnum \Version=4
+        The determinant of $A = \begin{pmatrix} 2&0\\4&6\end{pmatrix}$ is equal to \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  $\det A = 2\cdot 6 = 12$. The matrix is triangular so the determinant is the product of the entries on the diagonal. } \fi    
+    \fi 
+    \ifnum \Version=5
+        The determinant of $A = \begin{pmatrix} 2&0\\4&-4\end{pmatrix}$ is equal to \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\det A = 2\cdot (-4) = -8$. The matrix is triangular so the determinant is the product of the entries on the diagonal.  } \fi    
+    \fi 
+    \ifnum \Version=6
+        Suppose $\det A = \begin{pmatrix} 2& c\\4&3\end{pmatrix}=14$. 
+        Then $c = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  calculate the determinant: \begin{align}
+            14 &= |A| = 6 -4c \\ 4c &= -8 \\ c &= -2
+        \end{align}So $c = -2$. } \fi    
+    \fi 
+    
+    \ifnum \Version=7
+        The determinant of $A = \begin{pmatrix}  1&2&0\\1&2&0\\1&2&1\end{pmatrix}$ is: $\framebox{\strut\hspace{1.2cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection the matrix has dependent columns, so the matrix is singular. The determinant of a singular matrix is zero. So it isn't necessary to compute the determinant using a co-factor expansion.}
+          \fi
+    \fi    
+    \ifnum \Version=8
+        The determinant of $A = \begin{pmatrix}  1&0&3\\1&0&3\\1&2&3\end{pmatrix}$ is: $\framebox{\strut\hspace{1.2cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection the matrix has dependent columns, so the matrix is singular. The determinant of a singular matrix is zero. So it isn't necessary to compute the determinant using a co-factor expansion.}
+        \fi
+    \fi      
+
+% PART C DETERMINANT AND TRANSFORM 
+\part 
+    \ifnum \Version=0
+        Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first rotates vectors in $\mathbb R^2$ clockwise about the origin by $\pi/2$ radians, then reflects them across the $x_2$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection $\det A = -1$ because the standard matrix of the transform is $A = A_{reflect}A_{rotate}$ and $\det A = \det (A_{reflect}A_{rotate}) = \det A_{reflect} \det A_{rotate} = (-1)(1) = -1$.}\fi
+    \fi 
+    \ifnum \Version=1
+        Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first rotates vectors in $\mathbb R^2$ counterclockwise by $\pi/2$ radians about the origin, then projects them onto the $x_1$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  $\det A = 0$. The determinant of a projection is zero. And the standard matrix of the transform is $A = A_{\textup{project}}A_{\textup{rotate}}$ and $\det A = \det (A_{\textup{project}}A_{\textup{rotate}}) = \det A_{\textup{project}} \det A_{\textup{rotate}}  = (0)(1) = 0$.} \fi    
+    \fi 
+    \ifnum \Version=2
+        Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first rotates vectors in $\mathbb R^2$ counterclockwise by $\pi/2$ radians about the origin, then reflects them across the $x_2$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection $\det A = -1$ because the standard matrix of the transform is $A = A_{\textup{reflect}}A_{\textup{rotate}}$ and $\det A = \det (A_{\textup{reflect}}A_{\textup{rotate}}) = \det A_{\textup{reflect}} \det A_{\textup{rotate}} = (-1)(1) = -1$.} \fi    
+    \fi 
+    \ifnum \Version=3
+        Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first projects vectors in $\mathbb R^2$ onto the $x_1$-axis, then reflects them across the $x_2$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  $\det A = 0$, since there is a projection. The standard matrix of the transform is $A = A_{\textup{reflect}}A_{\textup{proj}}$ and $\det A = \det (A_{\textup{reflect}}A_{\textup{proj}}) = \det A_{\textup{reflect}} \det A_{\textup{proj}} = (-1)(0) = 0$.}\fi    
+    \fi 
+    \ifnum \Version=4
+        $R$ is the parallelogram determined by $\vec p_1 = \begin{pmatrix}3\\4 \end{pmatrix}$, and $\vec p_2 = \begin{pmatrix} 2\\2\end{pmatrix}$.  If $A = \begin{pmatrix} 1&-1\\1&1\end{pmatrix}$, the area of the image of $R$ under the map $ \vec x\mapsto A\vec x$ is \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} 
+        The parallelogram has area $2$, and the matrix has determinant $2$, so the area is $4$.} \fi    
+    \fi 
+    \ifnum \Version=5
+        $R$ is the parallelogram determined by $\vec p_1 = \begin{pmatrix}3\\4 \end{pmatrix}$, and $\vec p_2 = \begin{pmatrix} 2\\2\end{pmatrix}$.  If $A = \begin{pmatrix} 1&-1\\1&4\end{pmatrix}$, then $\det A = \framebox{\strut\hspace{1cm}}$, and the area of the image of $R$ under the map $ \vec x\mapsto A\vec x$ is \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The determinant of $A$ is $$\det A = \begin{vmatrix} 1&-1\\1&4 \end{vmatrix} = 5$$ The parallelogram has area equal to $$\begin{vmatrix} 3&2\\4&2 \end{vmatrix} = 6-8 = -2$$ The matrix has determinant $5$, so the area is $| -2 \cdot 5| = |-10| = 10$. No partial credit for writing that the area is $-10$. Area cannot be negative. } \fi    
+    \fi 
+    \ifnum \Version=6
+    Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first reflects vectors in $\mathbb R^2$ across the $x_1$-axis, then reflects them across the $x_2$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  $\det A = 1$, since each reflection matrix has determinant $-1$. The standard matrix of the transform is given by $ A e_1 = -e_1 $ and $A e_2 = -e_2$.}    
+    \fi
+    \fi    
+    \ifnum \Version=7
+         Suppose $A$ is a $2\times 2$ matrix and $T_A = A\vec x$ is a linear transformation that first rotates vectors in $\mathbb R^2$ counterclockwise by $\pi/4$ radians about the origin, then reflects them across the $x_1$-axis. Then det$A$ = \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} by inspection $\det A = -1$ because the standard matrix of the transform is $A = A_{\textup{reflect}}A_{\textup{rotate}}$ and $\det A = \det (A_{\textup{reflect}}A_{\textup{rotate}}) = \det A_{\textup{reflect}} \det A_{\textup{rotate}} = (-1)(1) = -1$.}
+        \fi
+    \fi    
+    \ifnum \Version=8
+        $R$ is the parallelogram determined by $\vec p_1 = \begin{pmatrix}3\\1 \end{pmatrix}$, and $\vec p_2 = \begin{pmatrix} 2\\2\end{pmatrix}$.  If $A = \begin{pmatrix} 1&-1\\1&1\end{pmatrix}$, the area of the image of $R$ under the map $ \vec x\mapsto A\vec x$ is \framebox{\strut\hspace{1cm}}.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} 
+        The parallelogram has area $4$, and the matrix has determinant $2$, so the area is $8$.}
+        \fi 
+        
+    \fi      
+
+% D DETERMINANT PROPERTIES (eg det(AB)=det(A)det(B))
+\part 
+    \ifnum \Version=0
+        $S$ is the parallelogram determined by $\vec v_1 = \begin{pmatrix} 4\\5\end{pmatrix}$, and $\vec v_2 =\begin{pmatrix}3\\4 \end{pmatrix}$.  If $A = \begin{pmatrix}2&2 \\5&3 \end{pmatrix}$, the area of the image of $S$ under the map $ \vec x\mapsto A\vec x$ is $\framebox{\strut\hspace{1cm}}$.  
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The area will be the absolute value of $\det \left(AB \right)$ where $B=\begin{pmatrix} \vec v_1 & \vec v_2\end{pmatrix}$. Then $$
+        \begin{vmatrix} \det \left( AB \right) \end{vmatrix}
+        = \begin{vmatrix} \det \left(\begin{pmatrix} 4&3\\5&4\end{pmatrix}\begin{pmatrix} 2&2 \\5&3\end{pmatrix} \right) \end{vmatrix}
+        = \left| \, \begin{vmatrix} 4&3\\5&4\end{vmatrix}\begin{vmatrix} 2&2 \\5&3\end{vmatrix}\, \right|
+        = \begin{vmatrix} (16-15)(6-10)\end{vmatrix}
+        = 4$$ Don't forget that area is non-negative, so we need to take the absolute value.} 
+        \fi    
+    \fi 
+    \ifnum \Version=1
+        If $A$ and $B$ are $n\times n$ matrices, $\det A = -3$, and $\det B= 2$, then $\det(AB^2) = \framebox{\strut\hspace{1cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $\det(AB^2) = \det A \det B \det B = -12$. } \fi    
+    \fi 
+    \ifnum \Version=2
+        A $2\times 2$ matrix $A$ has columns $\vec a_1$, $\vec a_2$, so that $A = (\vec a_1 \ \ \vec a_2)$. If $\det(A) = 3$, and matrix $B = (\vec a_2 \ \ 2\vec a_1)$, then $\det(B) = \framebox{\strut\hspace{1.2cm}}$
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $-6$ because a column swap changes the determinant by a factor of $-1$ and the factor of 2 will increase the determinant by a factor of 2.  } \fi    
+    \fi 
+    \ifnum \Version=3
+        If $A$, $B$, and $C$ are $n\times n$ matrices, $\det A = -1$, $\det B = 2$, and $\det(BC) = 4$, then $\det(AB^2C) = \framebox{\strut\hspace{1cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $-8$ because $\det(AB^2C) = (\det A) (\det B) (\det BC) = - 8$. } \fi    
+    \fi 
+    \ifnum \Version=4
+        A $2\times 2$ matrix $A$ has columns $\vec a_1$, $\vec a_2$, so that $A = (\vec a_1 \ \ \vec a_2)$. If $\det(A) = 4$, and matrix $B = (\vec a_2 \ \ 3\vec a_1)$, then $\det(B) = \framebox{\strut\hspace{1.2cm}}$
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $-12$ because a column swap changes the determinant by a factor of $-1$ and the factor of 3 will increase the determinant by a factor of 3. No partial credit. } \fi  
+    \fi 
+    \ifnum \Version=5
+        If $A$, $B$, and $C$ are $n\times n$ matrices, $\det A = -1$, $\det B = 2$, and $\det(BC) = 5$, then $\det(AB^2C) = \framebox{\strut\hspace{1cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $-10$ because $\det(AB^2C) = (\det A) (\det B) (\det BC) = (-1)(2)(5) = - 10$. } \fi    
+    \fi 
+    \ifnum \Version=6
+        If $A$, $B$, and $C$ are $n\times n$ matrices, $\det A = -3$, $\det B = 2$, and $\det(BC) = -5$, then $\det(AB^2C) = \framebox{\strut\hspace{1cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $30$ because $\det(AB^2C) = (\det A) (\det B) (\det BC) = 30$. }\fi
+    \fi    
+    \ifnum \Version=7
+        If $A$, $B$, and $C$ are $n\times n$ matrices, $\det A = -1$, $\det B = 2$, and $\det(BC) = -5$, then $\det(AB^2C^T) = \framebox{\strut\hspace{1cm}}$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $10$ because $\det(AB^2C^T) = (\det A) (\det B) (\det BC) = (-1)(2)(-5) = 10$. } \fi
+    \fi    
+    \ifnum \Version=8
+       A $3\times 3$ matrix $A$ has columns $\vec a_1$, $\vec a_2$, $\vec a_3$, so that $A = (\vec a_1 \ \ \vec a_2\ \ \vec a_3)$. If $\det(A) = 4$, and matrix $B = (3\vec a_2 \ \ \vec a_1 \ \ 2\vec a_3)$, then $\det(B) = \framebox{\strut\hspace{1.2cm}}$
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $-24$ because a column swap changes the determinant by a factors of $2$ and $3$ will increase the determinant by a factor of $2\cdot 3 = 6$.  } \fi
+    \fi      
+
+
+
+
+
+
+
+
+
+
+% E SOMETHING RELATED TO CHARACTERISITC POLYNOMIAL
+\part 
+    \ifnum \Version=0
+        If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 - 5\lambda + 6$, then the eigenvalues of $A$ are $\lambda_1 = \framebox{\strut\hspace{1cm}}$ and $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Factoring yields $\lambda ^2 - 5\lambda + 6 = (\lambda - 2)(\lambda - 3)$. Thus the roots are 2 and 3 and the eigenvalues are $$\lambda_1 = 2, \lambda_2 = 3$$ It would also be correct to write $$\lambda_1 = 3, \lambda_2 = 2$$ There is no requirement for the first eigenvalue to be the largest or smallest eigenvalue of the matrix.  } \fi    
+    \fi 
+    \ifnum \Version=1
+        If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 - 6\lambda + k$, then $A$ has exactly one eigenvalue with algebraic multiplicity 2 when $k = \framebox{\strut\hspace{1cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} quadratic equation for roots of the polynomial yields $$\lambda = \frac{6}{2} \pm \frac12 \sqrt{(-6)^2 - 4\cdot 1 \cdot k} = 3 \pm \frac12 \sqrt{36 - 4 k}$$ Thus the roots are repeated when $k=9$. So when $k=9$, the matrix has one eigenvalue with algebraic multiplicity 2. For all other values of $k$ the eigenvalues are distinct.  } \fi    
+    \fi 
+    \ifnum \Version=2
+        If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 + k\lambda + 9$, then $A$ has complex eigenvalues with a non-zero imaginary component when $\framebox{\strut\hspace{1cm}} < k < \framebox{\strut\hspace{1cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} quadratic equation for roots of the polynomial yields $$\lambda = \frac{-k}{2} \pm \frac12 \sqrt{(k)^2 - 4\cdot 1 \cdot 9} = 3 \pm \frac12 \sqrt{k^2 - 36}$$ Thus the roots are complex when $k^2 - 36 < 0$, which is when $|k| < 6$. So when $-6 < k < 6$, the matrix has complex eigenvalues with an imaginary component that is non-zero. For all other values of $k$ the eigenvalues are real.  } \fi    
+    \fi 
+    \ifnum \Version=3
+        If $A$ is a square matrix whose characteristic polynomial is $\lambda (\lambda - 5)$, then the $A$ has $\framebox{\strut\hspace{1cm}}$ columns, $\det A = \framebox{\strut\hspace{1cm}}$, and the eigenvalues of $A$ are \framebox{\strut\hspace{1cm}} and \framebox{\strut\hspace{1cm}}.  
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} there are exactly two roots, so the corresponding matrix must be $2\times 2$ (hence there are two columns). One of the eigenvalues is zero, so the determinant of the matrix is also zero. The eigenvalues are $0$ and $5$, and we could put them either order. In other words, there is no requirement that the first eigenvalue be zero and the second eigenvalue be 5.  } \fi    
+    \fi 
+    \ifnum \Version=4
+        If the characteristic polynomial of a square $2\times2$ matrix is $\lambda^2 -2\lambda -3 - k$, then one of the eigenvalues of $A$ is zero when $k = \framebox{\strut\hspace{1cm}}$ and $A$ has an eigenvalue with algebraic multiplicity 2 when $k = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using the quadratic equation for the roots:
+        \begin{align}
+            \lambda = \frac{2}{2} \pm \frac12 \sqrt{2^2 - 4(-3-k)} = 1 \pm \frac12 \sqrt{16 + 4k} = 1 \pm \sqrt{4 + k}
+        \end{align}
+        So one of the eigenvalues is zero when 
+        \begin{align}
+            0 &= 1 - \sqrt{4 + k} \quad \Rightarrow \quad k = -3
+        \end{align} And $A$ has a repeated eigenvalue with algebraic multiplicity when $4+k=0$, or when $k = -4$.} \fi    
+    \fi 
+    \ifnum \Version=5
+        If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 - 5\lambda + 4$, then the eigenvalues of $A$ are $\lambda_1 = \framebox{\strut\hspace{1cm}}$ and $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} factoring yields $\lambda ^2 + 7\lambda + 12 = (\lambda - 4)(\lambda -1)$. Thus the roots are 4 and 1 and the eigenvalues are $$\lambda_1 = 4, \lambda_2 = 1$$ It would also be correct to write $$\lambda_1 = 1, \lambda_2 = 4$$ There is no requirement for the first eigenvalue to be the largest or smallest. } 
+        \fi    
+    \fi 
+    \ifnum \Version=6
+    If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 - 6\lambda + 8$, then the eigenvalues of $A$ are $\lambda_1 = \framebox{\strut\hspace{1cm}}$ and $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} factoring yields $\lambda ^2 + 6\lambda + 8 = (\lambda - 4)(\lambda -2)$. Thus the roots are 4 and 2 and the eigenvalues are $$\lambda_1 = 4, \lambda_2 = 2$$ It would also be correct to write $$\lambda_1 = 2, \lambda_2 = 4$$ There is no requirement for the first eigenvalue to be the largest or smallest. }
+        \fi
+    \fi    
+    \ifnum \Version=7
+    If $A$ is a $2\times 2$ matrix whose characteristic polynomial is $\lambda ^2 - \lambda -12$, then the eigenvalues of $A$ are $\lambda_1 = \framebox{\strut\hspace{1cm}}$ and $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} factoring yields $\lambda ^2 - \lambda -12 = (\lambda - 4)(\lambda +3)$. Thus the roots are 4 and $-3$ and the eigenvalues are $\lambda_1 = 4, \lambda_2 = -3$. It would also be correct to write $$\lambda_1 = -3, \lambda_2 = 4$$ There is no requirement for the first eigenvalue to be the largest or smallest eigenvalue of the matrix. }
+        \fi
+    \fi    
+    \ifnum \Version=8
+        If the characteristic polynomial of a square $2\times2$ matrix is $\lambda^2 -4\lambda +2 + k$, then one of the eigenvalues of $A$ is zero when $k = \framebox{\strut\hspace{1cm}}$ and $A$ has an eigenvalue with algebraic multiplicity 2 when $k = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using the quadratic equation for the roots:
+        \begin{align}
+            \lambda = \frac{4}{2} \pm \frac12 \sqrt{4^2 - 4(2+k)} = 2 \pm \frac12 \sqrt{8 - 4k} = 2 \pm \sqrt{2 - k}
+        \end{align}
+        So one of the eigenvalues is zero when $k = -2$. And $A$ has a repeated eigenvalue with algebraic multiplicity when $2-k=0$, or when $k = 2$.} \fi    
+    \fi      
+
+    % GOOD PROBLEM WE DIDN'T USE IN 2023
+    \ifnum \Version=9
+    If $A = \begin{pmatrix} 1&k\\5&7\end{pmatrix}$, and the roots of the characteristic polynomial, $p(\lambda)$, are $\lambda_1=6$ or $\lambda_2=2$, then $k= \framebox{\strut\hspace{1cm}}$. 
+    
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the determinant of $A-\lambda I$ is the characteristic polynomial $$p = (1-\lambd)(7-\lambda) -5k = \lambda^2 -8\lambda +7-5k$$ But the roots of the characteristic polynomial are 6 and 2, so $$p(\lambda) = (\lambda - 2)(\lambda - 6) = \lambda^2 -8\lambda + 12$$ Comparing the two expressions for $p$, we obtain
+        $$12 = 7 - 5k$$
+        So $k = -1$. 
+        } \fi
+    \fi
+
+% F GEOMETRIC MULTIPLICITY, DIAGONALIZABILITY, OR AV=λV
+\part 
+    \ifnum \Version=0
+        Suppose $A$ is a diagonalizable $5\times 5$ matrix and $\det (A - \lambda I) =  (\lambda -4)^2(\lambda-6)^3$. Then $4$ is an eigenvalue of $A$ that has algebraic multiplicity \framebox{\strut\hspace{1cm}} and geometric multiplicity \framebox{\strut\hspace{1cm}}.  
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The algebraic multiplicity of the eigenvalue $\lambda = 4$ is the number of times the eigenvalue repeats as a root of the characteristic polynomial, which is 2. When a matrix is diagonalizable the geometric and algebraic multiplicities are equal, so the geometric multiplicity is also 2.  } \fi    
+    \fi 
+    \ifnum \Version=1
+        If $A = \begin{pmatrix} a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}$ is a $2\times 2$ matrix in echelon form whose eigenvalues are equal to 4 and 1 then $a_{11} = \framebox{\strut\hspace{1cm}}$, $a_{21} = \framebox{\strut\hspace{1cm}}$, $a_{22} = \framebox{\strut\hspace{1cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} a possible solution to this question is \begin{align}
+            a_{11} = 1,  a_{21} = 0, a_{22}=4
+        \end{align} 
+        and the only other possible solution is \begin{align}
+            a_{11} = 4,  a_{21} = 0, a_{22}=1
+        \end{align} 
+        
+        } \fi    
+    \fi 
+
+    \ifnum \Version=2
+        If $A$ has eigenvector $v = \begin{pmatrix} 2\\3 \end{pmatrix}$ with corresponding eigenvalue $\lambda = 2$, then $A^2v = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} If $\lambda = 2$ is an eigenvalue of $A$, then $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$, and $\lambda^2 = 4$, so $A^2v = 4 v = \begin{pmatrix} 8\\12\end{pmatrix}$.   } \fi    
+    \fi 
+    \ifnum \Version=3
+        If $\lambda = 2$ is an eigenvalue of $A$, then an eigenvalue of $A^2$ is \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} 4, because if $\lambda = 2$ is an eigenvalue of $A$, then for some $v$, we will have $Av=2v$. So $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$, and $\lambda^2 = 2^2=4$ is an eigenvalue of $A^2$.  } \fi    
+    \fi     
+    \ifnum \Version=4
+        Suppose $A$ is a diagonalizable $6\times 6$ matrix and $\left|A - \lambda I\right| =  (\lambda -2)^2(\lambda-4)(\lambda-6)^3$. Then $6$ is an eigenvalue of $A$ that has algebraic multiplicity \framebox{\strut\hspace{1cm}} and geometric multiplicity \framebox{\strut\hspace{1cm}}.  
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The algebraic multiplicity of the eigenvalue $\lambda = 6$ is the number of times the eigenvalue repeats as a root of the characteristic polynomial, which is 3. When a matrix is diagonalizable the geometric and algebraic multiplicities are equal, so the geometric multiplicity is also 3.  } \fi      
+    \fi 
+    \ifnum \Version=5
+        Suppose $k$ is a real number, $A = \begin{pmatrix} 2&k\\12&4\end{pmatrix}$ is a singular matrix whose eigenvalues are $\lambda_1$ and $\lambda_2$. Then $\det A = \framebox{\strut\hspace{1cm}}$, and $\lambda_1 + \lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} if the matrix is singular its determinant is zero, so $\det A =0$. And the sum of the entries on the diagonal is equal to the sum of the eigenvalues, so $\lambda_1 + \lambda_2 = 2 + 4 = 6$.  } \fi      
+    \fi 
+    \ifnum \Version=6
+         If $\lambda_1 = -4$ is an eigenvalue of $A$ with corresponding eigenvector $v_1 = \begin{pmatrix} 2\\3\end{pmatrix}$, then an eigenvalue of $A^2$ is $\lambda = \framebox{\strut\hspace{.8cm}}$ with corresponding eigenvector $v = \begin{pmatrix} c_1\\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{.8cm}}, c_2= \framebox{\strut\hspace{.8cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The eigenvalue is $\lambda = 16$ because if $\lambda = -4$ is an eigenvalue of $A$, then for some $v$, we will have $Av=\lambda v$. So $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$, and $\lambda^2 = 16$ is an eigenvalue of $A^2$. The corresponding eigenvector is $v = v_1$, so $c_1 =2$ and $c_2=3$. Any non-zero scalar multiple is ok, although most correct answers will be $c_1 =2$ and $c_2=3$. Note that we could NOT use $c_1 =2^2$ and $c_2=3^2$, as this would give us a vector that is not parallel to $v_1$. } 
+        \fi
+    \fi    
+
+    \ifnum \Version=7
+         If $\lambda_1 = -2$ is an eigenvalue of $A$ with corresponding eigenvector $v_1 = \begin{pmatrix} 4\\3\end{pmatrix}$, then an eigenvalue of $A^2$ is \framebox{\strut\hspace{1cm}} with corresponding eigenvector $v = \begin{pmatrix} c_1\\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}, c_2= \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The eigenvalue is 16, because if $\lambda = -4$ is an eigenvalue of $A$, then for some $v$, we will have $Av=\lambda v$. So $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$, and $\lambda^2 = 16$ is an eigenvalue of $A^2$. The corresponding eigenvector is $v = v_1$, so $c_1 =4$ and $c_2=3$. Any non-zero scalar multiple is ok, although most correct answers will be $c_1 =4$ and $c_2=3$. Note that we could NOT use $c_1 =4^2$ and $c_2=3^2$, as this would give us a vector that is not parallel to $v_1$. } 
+        \fi
+    \fi        
+
+    \ifnum \Version=8
+        Suppose $A$ is a diagonalizable $8\times 8$ matrix and $\left|A - \lambda I\right| =  (\lambda -2)^2(\lambda-3)(\lambda-4)^5$. Then $4$ is an eigenvalue of $A$ that has algebraic multiplicity \framebox{\strut\hspace{1cm}} and geometric multiplicity \framebox{\strut\hspace{1cm}}.  
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The algebraic multiplicity of the eigenvalue $\lambda = 5$ is the number of times the eigenvalue repeats as a root of the characteristic polynomial, which is 5. When a matrix is diagonalizable the geometric and algebraic multiplicities are equal, so the geometric multiplicity is also 5.  } \fi  
+    \fi        
+    
+    \ifnum \Version=9
+        If $\lambda = 4$ is an eigenvalue of $A$, then an eigenvalue of $A^2$ is \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} 16, because if $\lambda = 4$ is an eigenvalue of $A$, then for some $v$, we will have $Av=\lambda v$. So $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$, and $\lambda^2 = 16$ is an eigenvalue of $A^2$.  } \fi    
+    \fi 
+
+    \ifnum \Version=10
+    If $\lambda = -1$ is an eigenvalue of $A$, then an eigenvalue of $A^3$ is \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} -1, because if $\lambda = -1$ is an eigenvalue of $A$, then for some $v$, we will have $Av=\lambda v$. So $A(Av) = A(\lambda v)$ becomes $A^2v = \lambda^2v$,  and  $A(A^2v)= \lambda^3 v$. 
+        So $\lambda^3 = -1$ is an eigenvalue of $A^3$.  } 
+        \fi
+    \fi        
+\end{parts}

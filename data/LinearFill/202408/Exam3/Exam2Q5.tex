@@ -1,0 +1,333 @@
+\question[5] Fill in the blanks. You do not need to show your work. 
+
+\begin{parts} 
+
+% A) EIGENVECTORS
+\part 
+    \ifnum \Version=0
+        If $\lambda$ is an eigenvalue of $A$, and $A - \lambda I = \begin{pmatrix} 3&1\\6&2\end{pmatrix}$, then an eigenvector of $A$ is $v = \begin{pmatrix} 1\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $v$ has to be in the null space of $A - \lambda I$, so we need to obtain $k$ so that $$\begin{pmatrix} 3&1\\6&2\end{pmatrix}\begin{pmatrix} 1\\k \end{pmatrix} = \begin{pmatrix}0\\0 \end{pmatrix}$$ The only value of $k$ that will satisfy this equation is $k = -3$. } \fi    
+    \fi 
+    \ifnum \Version=1
+        If $A = \begin{pmatrix} 3&1\\6&2\end{pmatrix}$, then $\lambda_1=5$ is an eigenvalue, and a basis for the $\lambda_1$ eigenspace is $v = \begin{pmatrix} 3\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $k=6$ because a vector in the null space of $A-5I = \begin{pmatrix} -2&1\\6&-3\end{pmatrix}$ is $v = \begin{pmatrix}3\\6 \end{pmatrix}$. The dimension of $A-\lambda_1I$ is one, so one vector is sufficient for a basis.  } \fi    
+    \fi 
+    \ifnum \Version=2
+        If $A = \begin{pmatrix} 4&2\\6&5\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=1$ is $v = \begin{pmatrix} 2\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} 
+        $Av = \begin{pmatrix} 8+2k\\12+5k\end{pmatrix}
+        =\begin{pmatrix} 2\\k\end{pmatrix}$. 
+        So $k=-3$. }
+        %   $\begin{pmatrix} 4&2\\6&5\end{pmatrix} - \lambda I_2 = \begin{pmatrix} 3&2\\6&4\end{pmatrix}$, so $v = \begin{pmatrix} 2\\-3\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = -3$.} 
+        \fi    
+    \fi 
+    \ifnum \Version=3
+        If $A = \begin{pmatrix} 5&2\\6&6\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=2$ is $v = \begin{pmatrix} 2\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} 3&2\\6&4\end{pmatrix}$, so $v = \begin{pmatrix} 2\\-3\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = -3$.} \fi    
+    \fi 
+    \ifnum \Version=4
+        If $v_1 = \begin{pmatrix} 2 & 2+4i\end{pmatrix}^T$ is an eigenvector of $A$ that corresponds to eigenvalue $\lambda_1$, then an eigenvector of $A$ that corresponds to the other eigenvalue $\lambda_2$ is $v_2 = \begin{pmatrix} 1 & k\end{pmatrix}^T$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Eigenvectors come in complex conjugate pairs, so if $v_1 = \begin{pmatrix} 2 & 2+4i\end{pmatrix}^T$ is an eigenvector, then $v_2 = \begin{pmatrix} 2 & 2-4i\end{pmatrix}^T$ is an eigenvector for $\lambda_2$. Any non-zero scalar multiple of an eigenvector is also an eigenvector for the same eigenvalue, so if the first entry of $v_2$ needs to be 1, then we can use $v_2 = \begin{pmatrix} 1 & 2=1-2i\end{pmatrix}^T$. So $k = 1-2i$} \fi     
+    \fi 
+    \ifnum \Version=5
+        If $A = \begin{pmatrix} 6&2\\6&7\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=3$ is $v = \begin{pmatrix} 2\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} 3&2\\6&4\end{pmatrix}$, so $v = \begin{pmatrix} 2\\-3\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = -3$.} \fi    
+    \fi 
+    \ifnum \Version=6
+        If $A = \begin{pmatrix} 6&2\\6&7\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=10$ is $v = \begin{pmatrix} 1\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} -4&2\\6&-3\end{pmatrix}$, so $v = \begin{pmatrix} 1\\2\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = 2$.} \fi
+    \fi    
+    \ifnum \Version=7
+        If $A = \begin{pmatrix} 6&2\\6&7\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=10$ is $v = \begin{pmatrix} 2\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} -4&2\\6&-3\end{pmatrix}$, so $v = \begin{pmatrix} 2\\4\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = 4$.}
+        \fi
+    \fi    
+    \ifnum \Version=8    % The other eigenvalue is 15 for this matrix. 
+        If $A = \begin{pmatrix} 3&4\\3&14\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=2$ is $v = \begin{pmatrix} 4\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} 1&4\\3&12\end{pmatrix}$, so $v = \begin{pmatrix} 4\\-1\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = -1$.}
+        
+        \fi
+    \fi      
+
+    \ifnum \Version=9
+        If $A = \begin{pmatrix} 6&2\\6&7\end{pmatrix}$, then an eigenvector of $A$ that corresponds to eigenvalue $\lambda=3$ is $v = \begin{pmatrix} 2\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$.     
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A - \lambda I_2 = \begin{pmatrix} 3&2\\6&4\end{pmatrix}$, so $v = \begin{pmatrix} 2\\-3\end{pmatrix}$ is in the null space of $A - \lambda I$, so $k = -3$.} \fi     
+    \fi 
+
+    
+% B DIAGOANLIZABILITY AND/OR MULTIPLICITIES
+\part 
+    \ifnum \Version=0
+        If $k = \framebox{\strut\hspace{1cm}}$ then $A = \begin{pmatrix} k&1\\0&3\end{pmatrix}$ is not diagonalizable. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $k=3$. This is because any matrix with distinct eigenvalues will be diagonalizable, and the eigenvalues of a trianagular matrix are the entries on the main diagonal, so we need $k = 3$ to force $A$ to have repeated eigenvalues. Note that not all matrices with repeated eigenvalues are not diagonalizable, but in this case the matrix is not diagonalizable for $k=3$ because  we won't be able to form $2$ linearly independent eigenvectors to construct $P$ in the diagonalization $A = PDP^{-1}$. } \fi    
+    \fi 
+
+    
+    \ifnum \Version=1
+        Suppose that a $2\times 2$ matrix $A$ is diagonalizable, and that the eigenvalues of $A$ are $\lambda = 1$ and $\lambda= 1/2$. Then as $N$ tends to infinity, what does $\det(A^N)$ tend to? \framebox{\strut\hspace{1cm}}
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using properties of determinants:
+        \begin{align}
+            \det(A^N) &= (\det A)^N \\
+            &= (\det (PDP^{-1}))^N \\
+            &= (\det P \det D \det P^{-1})^N\\
+            &= (\det P  \det P^{-1} \det D)^N\\
+            &= (\det (P P^{-1}) \det D)^N\\
+            &= (\det (I) \det D)^N\\
+            &= (\det D)^N
+        \end{align}
+        But $D$ is diagonal and its eigenvalues are 1 and 0.5, so $D$ is either 
+        \begin{align}
+            \begin{pmatrix} 1&0\\0&0.5\end{pmatrix} \quad \text{or} \quad \begin{pmatrix} 0.5&0\\0&1\end{pmatrix}
+        \end{align}        
+        Either way, $\det D = 1 \cdot \frac{1}{2} = \frac12$. So 
+        \begin{align}
+            \det(A^N) = (\det D)^N = \frac{1}{2^N}
+        \end{align}
+        So as $N \to \infty$,  $\det(A^N) \to 0$. 
+        } \fi    
+    \fi 
+
+    
+    \ifnum \Version=2
+        Suppose that a $2\times 2$ matrix $A$ is diagonalizable, and that the eigenvalues of $A$ are $\lambda = 2$ and $\lambda= 1$. Then $\det(A^4) =  \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using properties of determinants:
+        \begin{align}
+            \det(A^4) &= (\det A)^4 \\
+            &= (\det (PDP^{-1}))^4 \\
+            &= (\det P \det D \det P^{-1})^4\\
+            &= (\det P  \det P^{-1} \det D)^4\\
+            &= (\det (P P^{-1}) \det D)^4\\
+            &= (\det (I) \det D)^4\\
+            &= (\det D)^4
+        \end{align}
+        But $D$ is diagonal and its eigenvalues are 2 and 1, so $D$ is either 
+        \begin{align}
+            \begin{pmatrix} 1&0\\0&2\end{pmatrix} \quad \text{or} \quad \begin{pmatrix} 2&0\\0&1\end{pmatrix}
+        \end{align}        
+        Either way, $\det D = 1 \cdot 2 = 2$. So 
+        \begin{align}
+            \det(A^4) 
+            &= (\det D)^4 = 2^4 = 16
+        \end{align}        
+        } \fi    
+    \fi 
+    \ifnum \Version=3
+        Suppose $A$ is $4\times4$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The algebraic multiplicity of $\lambda_1$ is 1, and the algebraic multiplicity of $\lambda_2$ is 3. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 3, then the geometric multiplicity of $\lambda_2$ is also 3. } \fi     
+    \fi 
+    \ifnum \Version=4
+        Suppose $A$ is $4\times4$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The algebraic multiplicity of $\lambda_1$ is 1, and the algebraic multiplicity of $\lambda_2$ is 3. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 3, then the geometric multiplicity of $\lambda_2$ is also 3. } \fi      
+    \fi 
+    \ifnum \Version=5
+        Suppose $A$ is $7\times7$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The algebraic multiplicity of $\lambda_1$ is 1, and the algebraic multiplicity of $\lambda_2$ is 6. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 6, then the geometric multiplicity of $\lambda_2$ is also 6. } \fi     
+    \fi 
+    \ifnum \Version=6
+        Suppose $A$ is $6\times6$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The algebraic multiplicity of $\lambda_1$ is 1, and the algebraic multiplicity of $\lambda_2$ is 5. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 5, then the geometric multiplicity of $\lambda_2$ is also 5. } \fi
+    \fi    
+    \ifnum \Version=7
+        Suppose $A$ is $8\times8$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The geometric multiplicity of $\lambda_1$ is 2, and the algebraic multiplicity of $\lambda_2$ is 6. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 6, then the geometric multiplicity of $\lambda_2$ is also 6. } \fi
+    \fi    
+    \ifnum \Version=8
+        Suppose $A$ is $5\times5$, has only two distinct eigenvalues $\lambda_1$ and $\lambda_2$ and all eigenvalues of $A$ are real. The algebraic multiplicity of $\lambda_1$ is 1, and the algebraic multiplicity of $\lambda_2$ is 4. If $A$ is diagonalizable, the geometric multiplicity of $\lambda_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} for a matrix to be diagonalizable, the geometric multiplicity of each eigenvalue has to be equal to the corresponding algebraic multiplicity. So if the algebraic multiplicity of $\lambda_2$ is 4, then the geometric multiplicity of $\lambda_2$ is also 4. } \fi
+    \fi      
+
+
+
+% C COMPLEX 1
+\part 
+    \ifnum \Version=0
+        An eigenvalue of $A = \begin{pmatrix} 3&-2\\1&1\end{pmatrix}$ is $\lambda_1 = 2+i$. The corresponding eigenvector is $\vec v_1 = \begin{pmatrix} 2 \\ k \end{pmatrix}$, where $k = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The answer is $k = 1-i$, which could be found by inspection. But an explanation for how to obtain this answer is below. \\[2pt] 
+        
+        To determine the eigenvector corresponding to $\lambda_1$ we look for a vector in the null space of $A - \lambda_1I$. $$A-\lambda_1 I = \begin{pmatrix} 3&-2\\1&1\end{pmatrix} - (2+i) \begin{pmatrix} 1&0\\0&1 \end{pmatrix} = \begin{pmatrix} 1-i & -2 \\ \ast & \ast \end{pmatrix} $$
+        
+        The symbol $\ast$ denotes an value that is not needed. If you are wondering why the second row isn't actually needed: don't forget that $A - \lambda I$ is $2\times 2$ and must be singular. So the second row of $A - \lambda I$ must be a multiple of the first, otherwise each row would be pivotal, which would force $A - \lambda I$ to be invertible, which it isn't. When calculating eigenvectors of $2\times 2$ matrices by hand, you never need both rows. You can use both rows in your calculations but you don't need to. 
+        
+        Vector $\vec v_1$ has to be in the null space of $A - \lambda_1 I$, so \begin{align}
+            (A - \lambda_1 I) \vec v & = \begin{pmatrix} 0\\0 \end{pmatrix} \\
+            \begin{pmatrix} 1-i & -2 \\ \ast & \ast \end{pmatrix}\begin{pmatrix} 2 \\ k \end{pmatrix}& = \begin{pmatrix} 0\\0 \end{pmatrix} \\ \text{the first row is: } (1-i)\cdot 2 - 2k &= 0 \\
+            \text{solve for } k: \quad k &= 1 - i
+        \end{align}
+        
+     } \fi    
+    \fi 
+    \ifnum \Version=1
+        Suppose $A$ is a real $4\times 4$ matrix that has the eigenvalues $3$, $2$, and $1+2i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1-2i$.  } \fi    
+    \fi 
+    \ifnum \Version=2
+        Suppose $A$ is a real $4\times 4$ matrix that has the eigenvalues $3$, $2$, and $1+4i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1-4i$.  } \fi   
+    \fi 
+    \ifnum \Version=3
+        Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $3$, $2$, and $1+2i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1-2i$.  } \fi      
+    \fi 
+    \ifnum \Version=4
+        Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $3$, $2$, and $1+2i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1-2i$.  } \fi  
+    \fi 
+    \ifnum \Version=5
+        Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $3$, $2$, and $1+2i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1-2i$.  } \fi  
+    \fi 
+    \ifnum \Version=6
+       Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $3$, $-1$, and $1-6i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1+6i$.  }
+        \fi
+    \fi    
+    \ifnum \Version=7
+        Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $3$, $0$, and $7i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $-7i$.  } \fi
+    \fi    
+    \ifnum \Version=8
+        Suppose $A$ is a $4\times 4$ matrix that has the eigenvalues $5$, $0$, and $1-3i$. Then $A$ also has an eigenvalue that is equal to $\framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} complex eigenvalues come in conjugate pairs so the remaining eigenvalue is $1+3i$.  } \fi
+    \fi      
+
+
+% D GOOGLE OR COMPLEX 2
+\part 
+    \ifnum \Version=0
+        $G$ is the Google Matrix for the set of four web pages that link to each other according to the diagram below. If the damping factor is $p=0.85$, then 
+        
+            \begin{tikzpicture}
+                \begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.75cm,ultra thick, main node/.style={circle,fill=gray!10,draw}]
+                \node[main node] (1) {A};
+                \node[main node] (2) [right of=1] {B};
+                \node[main node] (3) [below of=2] {D};
+                \node[main node] (4) [right of=2] {C};
+                \path[every node/.style={font=\sffamily\small}]
+                (4) edge node[below] {} (3)
+                (2) edge node [above] {} (1)
+                edge [left] node {}  (3) 
+                edge [left] node {}  (4) 
+                (3) edge node {} (1)
+                edge node[right] {} (2);
+                %edge node[right] {} (5)
+                %(4) edge node [above] {} (5)
+                %(4) edge node [above] {} (5);
+                \end{scope}
+                \node[left] at (-2, -0.85) {$G = p\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix} + (1-p)\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix}.$};
+            \end{tikzpicture}  
+            
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The Google matrix is $$G = p \begin{pmatrix} 1/4&1/3&0&1/2\\1/4&0&0&1/2\\1/4&1/3&0&0\\1/4&1/3&1&0 \end{pmatrix} + (1-p)\begin{pmatrix}1/4&1/4&1/4&1/4\\1/4&1/4&1/4&1/4\\1/4&1/4&1/4&1/4\\1/4&1/4&1/4&1/4 \end{pmatrix}$$ } \fi    
+    \fi 
+    
+    \ifnum \Version=1
+      Suppose $A$ is a $2\times2$ matrix with a complex eigenvalue $\lambda = 2+3i$, and an associated eigenvector $v=\begin{pmatrix} 4+i\\5\end{pmatrix}$. Then $A=PCP^{-1}$, where $P=\begin{pmatrix} p_{11}&p_{12}\\p_{21}&p_{22} \end{pmatrix}$, $C=\begin{pmatrix} c_{11}&c_{12}\\c_{21}&c_{22}\end{pmatrix}$ is a real $2\times 2$ matrix, $p_{11} = \framebox{\strut\hspace{1cm}}$ and $c_{11} = \framebox{\strut\hspace{1cm}}$.
+      
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using the $PCP^{-1}$ decomposition that assumes that $C$ is a rotation dilation matrix and $\lambda_1$ is complex, we have 
+        \begin{align}
+            A=PCP^{-1}, \quad P = \begin{pmatrix} 4&1\\5&0\end{pmatrix}, \quad C=\begin{pmatrix} 2&3\\-3&2\end{pmatrix}
+        \end{align}
+        Then $p_{11} = 4$, $c_{11} = 2$. Note the following. 
+        \begin{itemize}
+            \item The question did specify that $P$ and $C$ had to be real. If we were allowed to make $C$ be a diagonal matrix with complex entries, then a correct answer could be obtained by using a diagonalization, and either of the following would also be acceptable. 
+        \begin{align}
+            A&=PCP^{-1}, \quad P = \begin{pmatrix} 4+i&4-i\\5&5\end{pmatrix}, \quad C = \begin{pmatrix} 2+3i&0\\0&2-3i \end{pmatrix} \\
+            A&=PCP^{-1}, \quad P = \begin{pmatrix} 4-i&4+i\\5&5\end{pmatrix}, \quad C= \begin{pmatrix} 2-3i&0\\0&2+3i \end{pmatrix} 
+        \end{align}
+        In this special case, it would be ok to use $p_{11} = 4+i$ and $c_{11} = 2+3i$, or $p_{11} = 4-i$ and $c_{11} = 2-3i$. But we were told that $C$ had to be real, so this would be only be correct if we didn't have that constraint. 
+            \item Don't forget that the $PDP^{-1}$ factorization does not require that the eigenvalues of $A$ be real. The $A=PDP^{-1}$ factorization will exist for $n\times n$ matrix $A$ when $A$ has $n$ linearly independent eigenvectors, regardless of whether the eigenvectors are real or complex. 
+            \item Regardless of what factorization was used, the result should give us the same result for $A$. Computing every entry of $P$, $C$, and $P^{-1}$ and then multiplying them together wasn't required for this question (because it requires a lot of calculations). But if you were to hand this calculation over to a computer you should obtain
+            \begin{align}
+                A = \begin{pmatrix} 14&-10.2\\15&-10\end{pmatrix}
+            \end{align}
+        \end{itemize}   } \fi    
+    \fi 
+    \ifnum \Version=2
+      Suppose $A$ is a $2\times2$ matrix with a complex eigenvalue $\lambda = 2+3i$, and an associated eigenvector $v=\begin{pmatrix} 4+i\\5\end{pmatrix}$. Then $A=PCP^{-1}$, where $P=\begin{pmatrix} p_{11}&p_{12}\\p_{21}&p_{22} \end{pmatrix}$, $C=\begin{pmatrix} c_{11}&c_{12}\\c_{21}&c_{22}\end{pmatrix}$ is a rotation dilation matrix, $p_{11} = \framebox{\strut\hspace{1cm}}$ and $c_{11} = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The first column of $P$ is the real part of the eigenvector $v$. The first column of $C$ is from the eigenvalue $2+3i$. 
+        $p_{11} = 4$, $c_{11} = 2$.  } \fi    
+    \fi 
+    \ifnum \Version=3
+      Suppose $A$ is a $2\times2$ matrix with a complex eigenvalue $\lambda = 1+3i$, and an associated eigenvector $v=\begin{pmatrix} 2+i\\5\end{pmatrix}$. Then $A=PCP^{-1}$, where $P=\begin{pmatrix} p_{11}&p_{12}\\p_{21}&p_{22} \end{pmatrix}$, $C=\begin{pmatrix} c_{11}&c_{12}\\c_{21}&c_{22}\end{pmatrix}$ is a rotation dilation matrix, $p_{11} = \framebox{\strut\hspace{1cm}}$ and $c_{11} = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $p_{11} = 2$, $c_{11} = 1$.  } \fi      
+    \fi 
+    \ifnum \Version=4
+        If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 3&-4\\4&3\end{pmatrix}$, then the transform $x \to Ax$ is the composition of a rotation and a scaling. The angle of the rotation is $\phi = \tan^{-1} \left( \, \framebox{\strut\hspace{1cm}}\, \right)$ and the scale factor is $r = \framebox{\strut\hspace{1cm}}$. Assume that $\phi$ measures angles counter-clockwise from the $x_1$-axis. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the angle is $\pi = \tan ^{-1} (4/3)$ and the scale factor is $\sqrt{3^2 + 4^2} = 5$. } \fi    
+    \fi 
+    \ifnum \Version=5
+        If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 3&-4\\4&3\end{pmatrix}$, then the transform $x \to Ax$ is the composition of a rotation and a scaling. The angle of the rotation is $\phi = \tan^{-1} \left( \, \framebox{\strut\hspace{1cm}}\, \right)$ and the scale factor is $r = \framebox{\strut\hspace{1cm}}$. Assume that $\phi$ measures angles counter-clockwise from the $x_1$-axis. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the angle is $\pi = \tan ^{-1} (4/3)$ and the scale factor is $\sqrt{3^2 + 4^2} = 5$. } \fi  
+    \fi 
+    \ifnum \Version=6
+        If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 3&-2\\2&3\end{pmatrix}$, then the transform $x \to Ax$ is the composition of a rotation and a scaling. The angle of the rotation is $\phi = \tan^{-1} \left( \, \framebox{\strut\hspace{1cm}}\, \right)$ and the scale factor is $r = \framebox{\strut\hspace{1cm}}$. Assume that $\phi$ measures angles counter-clockwise from the $x_1$-axis. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the angle is $\pi = \tan ^{-1} (2/3)$ and the scale factor is $\sqrt{3^2 + 2^2} = \sqrt{13}$. } \fi
+    \fi    
+    \ifnum \Version=7
+        If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 3&2\\-2&3\end{pmatrix}$, then the transform $x \to Ax$ is the composition of a rotation and a scaling. The angle of the rotation is $\phi = \tan^{-1} \left( \, \framebox{\strut\hspace{1cm}}\, \right)$ and the scale factor is $r = \framebox{\strut\hspace{1cm}}$. Assume that $\phi$ measures angles counter-clockwise from the $x_1$-axis. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the angle is $\pi = \tan ^{-1} (-2/3)$ and the scale factor is $\sqrt{3^2 + 2^2} = \sqrt{13}$. } \fi
+    \fi    
+    \ifnum \Version=8
+        If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 3&-1\\1&3\end{pmatrix}$, then the transform $x \to Ax$ is the composition of a rotation and a scaling. The angle of the rotation is $\phi = \tan^{-1} \left( \, \framebox{\strut\hspace{1cm}}\, \right)$ and the scale factor is $r = \framebox{\strut\hspace{1cm}}$. Assume that $\phi$ measures angles counter-clockwise from the $x_1$-axis. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the angle is $\pi = \tan ^{-1} (1/3)$ and the scale factor is $\sqrt{3^2 + 1^2} = \sqrt{10}$. }
+        \fi
+    \fi      
+
+
+% E STOCHASTIC MATRICES PROPERTIES OR DYNAMICAL SYSTEMS
+\part 
+    \ifnum \Version=0
+        The steady-state vector of $P=\dfrac14\begin{pmatrix} 3&2\\1&2\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \begin{pmatrix} -1/4&2/4\\1/4&-2/4 \end{pmatrix} \sim \begin{pmatrix} -1&2\\1&-2\end{pmatrix}$$ Then $\begin{pmatrix} 2\\1\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac13 \begin{pmatrix} 2\\1\end{pmatrix}$. So $c_1 = 2/3, \ c_2 = 1/3$. } \fi    
+    \fi 
+    \ifnum \Version=1
+        Matrix $A$ is $2\times 2$ with eigenvalues $\lambda_1 = 1$ and $\lambda_2= 1/2$. The corresponding eigenvectors are $v_1 = \begin{pmatrix} 2\\1\end{pmatrix}$ and $v_2=\begin{pmatrix} 2\\3\end{pmatrix}$. If $ p = 3v_1+2v_2$, $A^kp \to \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$ as $k\to \infty$, then $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A^kp = A^k(3v_1 + 2v_2) = 3A^kv_1 + 2A^kv_2 = 3\lambda_1^kv_1 + 2\lambda_2^kv_2$. But $\lambda_1^k =1^k = 1$, and $\lambda_2^k = (1/2)^k\to 0$ as $k\to \infty$. So \begin{align}
+            \lim_{k \to \infty} A^kp = 3v_1 + 0v_2 = \begin{pmatrix} 6\\3\end{pmatrix}
+        \end{align} So $c_1 = 6$, $c_2 = 3$. } \fi    
+    \fi 
+    \ifnum \Version=2
+        If $A$ is a singular $2\times 2$ matrix that is stochastic, the eigenvalues of $A$ are \framebox{\strut\hspace{1cm}} and \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} singular matrices have an eigenvalue equal to zero and stochastic matrices have an eigenvalue equal to one. So one of the two blanks should be filled with 1 and the other should be filled with 0. } \fi     
+    \fi 
+    \ifnum \Version=3
+        If $A$ is a singular $2\times 2$ matrix that is stochastic, the eigenvalues of $A$ are \framebox{\strut\hspace{1cm}} and \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} singular matrices have an eigenvalue equal to zero and stochastic matrices have an eigenvalue equal to one. So one of the two blanks should be filled with 1 and the other should be filled with 0. } \fi  
+    \fi 
+    \ifnum \Version=4
+        If $A$ is a singular $2\times 2$ matrix that is stochastic, the eigenvalues of $A$ are \framebox{\strut\hspace{1cm}} and \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} singular matrices have an eigenvalue equal to zero and stochastic matrices have an eigenvalue equal to one. So one of the two blanks should be filled with 1 and the other should be filled with 0. } \fi  
+    \fi 
+    \ifnum \Version=5
+        If $A$ is a singular $2\times 2$ matrix that is stochastic, the eigenvalues of $A$ are \framebox{\strut\hspace{1cm}} and \framebox{\strut\hspace{1cm}}. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} singular matrices have an eigenvalue equal to zero and stochastic matrices have an eigenvalue equal to one. So one of the two blanks should be filled with 1 and the other should be filled with 0. } \fi  
+    \fi 
+    \ifnum \Version=6
+        Matrix $A$ is $2\times 2$. Its eigenvalues are $\lambda_1 = 1$ and $\lambda_2= 1/4$. The corresponding eigenvectors are $v_1 = \begin{pmatrix} 3\\2\end{pmatrix}$ and $v_2=\begin{pmatrix} -2\\3\end{pmatrix}$. If $ p = 2v_1+v_2$, and $A^kp \to \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$ as $k\to \infty$, then $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A^kp = A^k(2v_1 + v_2) = 2A^kv_1 + A^kv_2 = 2\lambda_1^kv_1 + \lambda_2^kv_2$. But $\lambda_1^k =1^k = 1$, and $\lambda_2^k = (1/2)^k\to 0$ as $k\to \infty$. So \begin{align}
+            \lim_{k \to \infty} A^kp = 2v_1 + 0v_2 = 2v_1 = \begin{pmatrix} 6\\4\end{pmatrix}
+        \end{align} So $c_1 = 6$, $c_2 = 4c$. } \fi    
+    
+    \fi    
+    \ifnum \Version=7
+        The steady-state vector of $P=\dfrac15\begin{pmatrix} 2&1\\3&4\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \dfrac15\begin{pmatrix} -3&1\\3&-1 \end{pmatrix} $$ Then $\begin{pmatrix} 1\\3\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac14\begin{pmatrix} 1\\3\end{pmatrix}$. So $c_1 = 1/4, \ c_2 = 3/4$. } \fi
+    \fi    
+    \ifnum \Version=8
+        The steady-state vector of $P=\dfrac15\begin{pmatrix} 2&4\\3&1\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \dfrac15\begin{pmatrix} -3&4\\3&-4 \end{pmatrix} $$ Then $\begin{pmatrix} 4\\3\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac17\begin{pmatrix} 4\\3\end{pmatrix}$. So $c_1 = 4/7, \ c_2 = 3/7$. } \fi
+    \fi      
+
+
+    \ifnum \Version=9
+        The steady-state vector of $P=\dfrac14\begin{pmatrix} 1&2\\3&2\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \dfrac14\begin{pmatrix} -3&2\\3&-2 \end{pmatrix} \sim \begin{pmatrix} -3&2\\3&-2\end{pmatrix}$$ Then $\begin{pmatrix} 2\\3\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac15\begin{pmatrix} 2\\3\end{pmatrix}$. So $c_1 = 2/5, \ c_2 = 3/5$. } \fi
+    \fi    
+
+\end{parts}

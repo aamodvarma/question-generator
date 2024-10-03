@@ -1,0 +1,74 @@
+% DETERMINANTS OR EIGENVALUES
+\ifnum \Version=1         
+    If $A^k$ is $n\times n$ and invertible for some integer $k$, then $A$ must also be invertible.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Using determinants, if $A^k$ is invertible, then $\det(A^k) \ne 0$. But $\det(A^k) = (\det A)^k$, which also has to be non-zero. So $\det A \ne 0$, which means that $A$ is invertible. } \fi
+\fi
+\ifnum \Version=2      
+    An eigenspace is a subspace spanned by at least one eigenvector.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. This is the definition of an eigenspace. } \fi
+\fi    
+\ifnum \Version=3  
+    If $A$ and $B$ are $n \times n$ matrices and 0 is an eigenvalue of $AB$, then 0 is an eigenvalue of $BA$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Using determinants, if 0 is an eigenvalue of $AB$, then $\det(AB) = \det(A)\det(B) = 0$. But $\det(BA) = \det(B)\det(A) = \det(A)\det(B) = \det(AB)$. So $BA$ is also singular, so 0 is an eigenvalue of $BA$.} \fi
+\fi    
+\ifnum \Version=4    
+    An eigenspace is a subspace spanned by an eigenvector.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } False. The space may be spanned by more than one vector.  } \fi
+\fi   
+\ifnum \Version=5    
+    If $A$ is $n\times n$ and singular, then the non-zero vectors in the null space of $A$ are also eigenvectors of $A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Because if $A$ is singular then $\lambda=0$ is an eigenvalue and their corresponding eigenvectors are vectors in the null space of $A - \lambda I = A - 0I = A$.  } \fi
+\fi    
+\ifnum \Version=6      
+     If $A$ is a square matrix, $\vec v$ and $\vec w$ are eigenvectors of $A$, then $\vec v + \vec w$ is also an eigenvector of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. It is possible that the sum of two eigenvectors gives another eigenvector, but it is not always the case.  } \fi
+\fi        
+\ifnum \Version=7 
+   Every eigenspace is one dimensional.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. The $2\times 2$ identity, for instance. } \fi
+\fi     
+\ifnum \Version=8
+   A $2 \times 2$ matrix $A$ has eigenvectors $\vec v_1$ and $\vec v_2$. Then $\vec v_1 + \vec v_2$ is also an eigenvector of $A$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. If the eigenvalues are different, the sum will not be an eigenvector unless they correspond to the same eigenvalue.} \fi
+\fi     
+\ifnum \Version=9
+    For a square matrix $A$, if the determinant of $A^3$ is zero, then the matrix is singular. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The determinant of $A$ is zero as well. So the matrix is singular.   } \fi
+\fi     
+\ifnum \Version=10
+    If $A$ is a symmetric $4\times 4$ matrix, and  for two non-zero vectors $\vec v_1$ and $\vec v_2$, we have $A \vec v_1= 3 \vec v_1 $ and $A \vec v_2=\vec v_2$, then $\vec v_1$ and $\vec v_2$ are orthogonal. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. An important property of symmetric matrices.  } \fi
+\fi     
+\ifnum \Version=11
+      For a square matrix $A$, if  $A^5$ is the zero matrix,  then the matrix is singular. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True. The determinant of $A^5$ is zero, so the determinant of $A$ is zero.  } \fi
+\fi     
+\ifnum \Version=12
+    If $A$ is a square singular matrix then at least one of the eigenvalues of $A$ is $\lambda=0$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. A singular matrix has non-zero vector $x$ with $Ax=0 \cdot x$ } \fi
+\fi    
+\ifnum \Version=13
+    If matrices $A$ and $B$ are row equivalent then they have the same eigenvalues. 
+    \ifnum \Solutions=1 \setlength{\extrarowheight}{0.0cm} {\color{DarkBlue} \textit{Solution:  } False. Matrices $A = \begin{pmatrix} 1&0\\0&2\end{pmatrix}, B = \begin{pmatrix} 0&2\\1&0\end{pmatrix}$ are row equivalent but do not have the same eigenvalues. } \fi
+\fi    
+\ifnum \Version=14
+    If $A$ is $n\times n$ and has $n$ pivots, and $\lambda$ is an eigenvalue of $A$, then $\dim(\Null (A - \lambda I)) = n-1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. If the eigenvalue is repeated, the dimension will be less than $n-1$. } \fi
+\fi    
+\ifnum \Version=15
+    TRUE/FALSE ON DETERMINANTS OR EIGENVALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+\ifnum \Version=16
+    TRUE/FALSE ON DETERMINANTS OR EIGENVALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+\ifnum \Version=17
+    TRUE/FALSE ON DETERMINANTS OR EIGENVALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+\ifnum \Version=18
+    TRUE/FALSE ON DETERMINANTS OR EIGENVALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+& $\bigcirc$  & $\bigcirc$ \\   

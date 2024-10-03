@@ -1,0 +1,27 @@
+
+% READY
+\ifnum \Version=3
+% TAYLOR APPROXIMATION
+\question[4] Use Taylor's formula to construct a quadratic approximation to $f(x,y) = x^3+2xy$ near the origin. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solutions:} The partials we need are: 
+\begin{align*}
+    f_x(0,0) &= 3x^2 + 2y\big|_{(0,0)} = 0 \\
+    f_y(0,0) &= 2x \big|_{(0,0)} = 0 \\
+    f_{xx}(0,0) &= 6x\big|_{(0,0)} = 0 \\
+    f_{xy}(0,0) &= 2 \big|_{(0,0)} = 2 \\    
+    f_{yy}(0,0) &= 0 \big|_{(0,0)} = 0 
+\end{align*}
+The approximation is
+\begin{align*}
+    f(x,y) 
+    &\approx f(0,0) + (xf_x + yf_y) + \frac12(x^2f_{xx} + 2xyf_{xy} + y^2f_{yy}) \\ 
+    &= 0 + (0+0) + \frac12 (0+4xy+0) \\ 
+    &= 2xy
+\end{align*}
+
+    } 
+   \else
+      
+   \fi
+    
+\fi

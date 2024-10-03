@@ -1,0 +1,88 @@
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+
+% TIKZ DIAGRAMS (IF NEEDED)
+\usepackage{color}
+\usepackage{tikz}  
+\usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween}
+
+% ADJUST MARGINS
+\usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+\geometry{margin=0.76in}
+
+% COLORS FOR SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.0,0.2,0.25} % 
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+\headheight 42pt % distance from top of page to top of header
+\headsep 12pt % space between header and top of body
+
+\newcommand{\ID}{Fill in the blanks with a dark pen or pencil. 
+Using only capital letters print your \\ first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, the remaining digits \\[2pt] of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}, the High School you attend: \framebox{\strut\hspace{5.2cm}}.}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% AUGMENTED MATRIX
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+
+% DERIVATIVES
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\dfdx}{\frac{df}{dx}}
+\newcommand{\dfdt}{\frac{df}{dt}}
+\newcommand{\dgdt}{\frac{dg}{dt}}
+\newcommand{\dhdt}{\frac{dh}{dt}}
+\newcommand{\dxdt}{\frac{dx}{dt}}
+\newcommand{\dydt}{\frac{dy}{dt}}
+\newcommand{\dzdt}{\frac{dz}{dt}}
+\newcommand{\DDX}{\frac{\partial}{\partial x}}
+\newcommand{\DDY}{\frac{\partial}{\partial y}}
+\newcommand{\DDZ}{\frac{\partial}{\partial z}}
+\newcommand{\DFDX}{\frac{\partial f}{\partial x}}
+\newcommand{\DFDY}{\frac{\partial f}{\partial y}}
+\newcommand{\DFDZ}{\frac{\partial f}{\partial z}}
+
+\newcommand{\DFFDX}{\frac{\partial F}{\partial x}}
+\newcommand{\DFFDY}{\frac{\partial F}{\partial y}}
+\newcommand{\DFFDZ}{\frac{\partial F}{\partial z}}
+
+\newcommand{\DZDX}{\frac{\partial z}{\partial x}}
+\newcommand{\DZDY}{\frac{\partial z}{\partial y}}
+\newcommand{\DFDXX}{\frac{\partial^2 f}{\partial x^2}}
+\newcommand{\DFDYY}{\frac{\partial^2 f}{\partial y^2}}
+\newcommand{\DFDXY}{\frac{\partial^2 f}{\partial x\partial y}}
+\newcommand{\DFDYX}{\frac{\partial^2 f}{\partial y\partial x}}
+
+\newcommand{\DXDU}{\frac{\partial x}{\partial u}}
+\newcommand{\DXDV}{\frac{\partial x}{\partial v}}
+\newcommand{\DYDU}{\frac{\partial y}{\partial u}}
+\newcommand{\DYDV}{\frac{\partial y}{\partial v}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=DarkBlue,
+    filecolor=DarkBlue,      
+    urlcolor=DarkBlue,
+    pdfpagemode=FullScreen,
+}

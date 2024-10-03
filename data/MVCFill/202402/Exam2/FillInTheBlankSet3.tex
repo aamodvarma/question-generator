@@ -1,0 +1,249 @@
+% SECTIONS 14.3 TO 14.4
+
+% SECTIONS 14.3 TO 14.4
+\ifnum \Version=1
+% THOMAS 14.3
+% SLOPE OF TANGENT LINE
+
+\part Consider the surface $f(x,y) = x^3+y^2$ and the point $P(10,3)$. The slope of the tangent line to the surface at $P$ and is in the plane $x=10$ is $\framebox{\strut\hspace{1cm}}$. The slope of the tangent line to the surface at $P$ and is in the plane $y=3$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the tangent line for any $y$ and constant $x$ has slope
+$$\frac{\partial f}{\partial y} = \frac{\partial}{\partial y}\left( x^3+y^2 \right) = 2y$$
+At the point $(10,3)$ the tangent line has slope $2\cdot 3 = 6$. Likewise the tangent line for any $x$ and constant $y$ has slope
+$$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}\left( x^3+y^2 \right) = 3x^2$$
+At the point $(10,3)$ the tangent line has slope $3\cdot 10^2 = 300$. 
+}
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=2
+% THOMAS 14.4
+% IMPLICIT
+
+\part Compute the value of $\displaystyle \DZDY$ at the point $P(1,3,2)$ if $x + z^2y = 19$ defines $z$ as a function of the two independent variables $x$ and $y$ and the partial derivative exists. $\displaystyle \DZDY$ at $P$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} Implicit differentiation:
+\begin{align}
+    x + z^2y &= 19 \\
+    \DDY \left( x + z^2y \right) &= \DDY \, 19 \\
+    0 + 2z\DZDY y + z^2 &= 0 
+\end{align}
+At the point $(1,3,2)$ this is
+\begin{align}
+     2(2)\DZDY (3) + (2)^2 &= 0 \\
+     12\DZDY + 4 &= 0 \\
+     \DZDY &= - 4/12
+\end{align}
+}
+\else
+\fi
+\fi
+
+\ifnum \Version=3
+% THOMAS 14.4
+% CHAIN
+
+\part The partial derivatives of a function $f(x,y)$ on the curve $x(t) = t$, $y(t) = t^2-4t$ are $f_x=-t$, $f_y=1$. Then along this curve, the extreme values of $f(x,y)$ occur when $t = \framebox{\strut\hspace{2cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \vspace{6pt}\textit{Answer:} $t =4$ \\[12pt] \textit{Solutions:} by the chain rule: $$\frac{df}{dt}=\frac{df}{dx}\frac{dx}{dt}+ \frac{df}{dy}\frac{dy}{dt} = (-t) (1) + (1)(2t-4) = t - 4$$
+The maximum values occur when $df/dt=0$. Thus 
+$$\frac{df}{dt} = t-4 =0 \quad \Rightarrow \quad t = 4$$
+}
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=4
+% THOMAS 14.4
+% CHAIN
+
+\part An object travels along a path on a surface $z=z(x,y)$.  At time $t=t_0$ it is known that
+	\[ \DZDX=-4, \quad \DZDY=2, \quad \dfrac{dx}{dt}=3, \quad \dfrac{dy}{dt}=8. \]
+	The rate of change of the height $z$ of the object with respect to $t$ at $t=t_0$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \vspace{6pt}\textit{Answer:} $t =4$ \\[12pt] \textit{Solutions:} by the chain rule: $$\frac{dz}{dt}=\DZDX\frac{dx}{dt}+ \DZDY\frac{dy}{dt} = (-4)(3) + (2)(8) = -12 + 16 = 4$$
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+% SECTIONS 14.3 TO 14.4
+\ifnum \Version=5
+% THOMAS 14.3
+% INTERPRET DERIVATIVE
+
+\part Suppose $f(x,y)$ is the surface given by $f(x,y) = x^2y + 4$. The slope of the line tangent to this surface that is in the plane $y=2$ and is at the point $(3,2)$ is $\framebox{\strut\hspace{2cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \vspace{6pt}\textit{Answer:} $12$ \\[12pt] \textit{Solutions:} the tangent line for any $x$ and constant $y$ has slope
+$$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}\left( x^2y + 4 \right) = 2xy$$
+At the point $(3,2)$ the tangent line has slope $2\cdot 3 \cdot 2 = 12$. 
+}
+\else
+  
+\fi
+\fi
+
+
+% SECTIONS 14.3 TO 14.4
+\ifnum \Version=6
+% THOMAS 14.3
+% INTERPRET DERIVATIVE
+
+\part Suppose $f(x,y)$ is the surface given by $f(x,y) = x^2y + 4$. The slope of the line tangent to this surface that is in the plane $y=2$ and is at the point $(3,2)$ is $\framebox{\strut\hspace{2cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \vspace{6pt}\textit{Answer:} $12$ \\[12pt] \textit{Solutions:} the tangent line for any $x$ and constant $y$ has slope
+$$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}\left( 2x^2 + 3y - 4 \right) = 4x$$
+At the point $(3,-4)$ the tangent line has slope $4\cdot 3 = 12$. 
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+% SECTIONS 14.3 TO 14.4
+\ifnum \Version=7
+% THOMAS 14.3
+% SLOPE OF TANGENT LINE
+
+\part Consider the surface $f(x,y) = x^2+xy-y^2$ and the point $P(4,1)$. The slope of the tangent line to the surface at $P$ and is in the plane $x=4$ is $\framebox{\strut\hspace{1cm}}$. The slope of the tangent line to the surface at $P$ and is in the plane $y=1$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} there are two parts to this question. 
+\begin{itemize}
+    \item The tangent line for any $y$ and constant $x$ has slope
+    $$\frac{\partial f}{\partial y} = \frac{\partial}{\partial y}\left( x^2+xy-y^2 \right) = x-2y$$
+    At the point $(4,1)$ the tangent line has slope $4-2\cdot1 = 2$. 
+    \item Likewise the tangent line for any $x$ and constant $y$ has slope
+    $$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}\left( x^2+xy-y^2 \right) = 2x+y$$
+    At the point $(4,1)$ the tangent line has slope $2\cdot4 + 1 = 9$. 
+\end{itemize}
+}
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=8
+% THOMAS 14.4
+% CHAIN
+
+\part An object travels along a path on a surface $z=z(x,y)$.  At time $t=t_0$ it is known that
+	\[ \DZDX=3, \quad \dfrac{dx}{dt}=10, \quad \DZDY=6, \quad \dfrac{dy}{dt}=2. \]
+	The rate of change of the height $z$ of the object with respect to $t$ at $t=t_0$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} by the chain rule: $$\frac{dz}{dt}=\DZDX\frac{dx}{dt}+ \DZDY\frac{dy}{dt} = (3)(10) + (6)(2) = 30 + 12 = 42$$
+}
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=9
+% THOMAS 14.4
+% CHAIN
+
+\part An object travels along a path on a surface $z=z(x,y)$.  At time $t=t_0$ it is known that
+	\[ \DZDX=2, \quad \dfrac{dx}{dt}=5, \quad \DZDY=10, \quad \dfrac{dy}{dt}=7. \]
+	The rate of change of the height $z$ of the object with respect to $t$ at $t=t_0$ is $\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} by the chain rule: $$\frac{dz}{dt}=\DZDX\frac{dx}{dt}+ \DZDY\frac{dy}{dt} = (2)(5) + (10)(7) = 10 + 70 = 80$$
+}
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=10
+% THOMAS 14.4
+% IMPLICIT
+
+\part Compute the values of $\displaystyle \DZDX$ and $\displaystyle \DZDY$ at the point $P(-1,2,1)$ if $y + xz^2 = 1$ defines $z$ as a function of the two independent variables $x$ and $y$ and the partial derivative exists. $\displaystyle \DZDX$ at $P$ is $\framebox{\strut\hspace{1cm}}$, and $\displaystyle \DZDY$ at $P$ is $\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} This question has two parts. 
+
+\begin{itemize}
+    \item Implicit differentiation with $\DDX$:
+    \begin{align}
+        y+xz^2 &= 1 \\
+        \DDX \left( y+xz^2 \right) &= 0 \\
+        0 + z^2 + 2xz\DZDX&= 0 
+    \end{align}
+    At the point $(-1,2,1)$ this is
+    \begin{align}
+         1^2 + 2\cdot (-1) \cdot 1 \cdot\DZDX &= 0 \\
+         1  - 2 z_x &= 0 \\
+         z_x &=  1/2
+    \end{align}
+    \item Implicit differentiation with $\DDY$:
+    \begin{align}
+        y+xz^2 &= 1 \\
+        \DDY \left( y+xz^2 \right) &= 0 \\
+        1 + 2xz\DZDY&= 0 
+    \end{align}
+    At the point $(-1,2,1)$ this is
+    \begin{align}
+         1 + 2(-1)(1)\DZDY &= 0 \\
+         -2\DZDY &= -1 \\
+         \DZDY &= 1/2
+    \end{align}
+\end{itemize}
+}
+\else
+\fi
+\fi
+
+
+
+\ifnum \Version=11
+% THOMAS 14.4
+% IMPLICIT
+
+\part Compute the values of $\displaystyle \DZDX$ and $\displaystyle \DZDY$ at the point $P(-1,2,1)$ if $y + xz^2 = 1$ defines $z$ as a function of the two independent variables $x$ and $y$ and the partial derivative exists. $\displaystyle \DZDX$ at $P$ is $\framebox{\strut\hspace{1cm}}$, and $\displaystyle \DZDY$ at $P$ is $\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} This question has two parts. 
+
+\begin{itemize}
+    \item Implicit differentiation with $\DDX$:
+    \begin{align}
+        y+xz^2 &= 1 \\
+        \DDX \left( y+xz^2 \right) &= 0 \\
+        0 + z^2 + 2xz\DZDX&= 0 
+    \end{align}
+    At the point $(-1,2,1)$ this is
+    \begin{align}
+         1^2 + 2\cdot (-1) \cdot 1 \cdot\DZDX &= 0 \\
+         1  - 2 z_x &= 0 \\
+         z_x &=  1/2
+    \end{align}
+    \item Implicit differentiation with $\DDY$:
+    \begin{align}
+        y+xz^2 &= 1 \\
+        \DDY \left( y+xz^2 \right) &= 0 \\
+        1 + 2xz\DZDY&= 0 
+    \end{align}
+    At the point $(-1,2,1)$ this is
+    \begin{align}
+         1 + 2(-1)(1)\DZDY &= 0 \\
+         -2\DZDY &= -1 \\
+         \DZDY &= 1/2
+    \end{align}
+\end{itemize}
+}
+\else
+\fi
+\fi

@@ -1,0 +1,67 @@
+% DIAGONALIZABILITY OR OTHER QUESTION ON DIAGONALIZING MATRICES
+\ifnum \Version=1         
+    If $A$ is $n\times n$ and does not have $n$ distinct eigenvalues, then $A$ cannot be diagonalized. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. \setlength{\extrarowheight}{0.0cm} The identity matrix $A = \begin{pmatrix} 1&0\\0&1\end{pmatrix}$ can be diagonalized. For an $n\times n$ matrix to be diagonalizable we only need to have $n$ linearly independent eigenvectors. } \fi
+\fi
+\ifnum \Version=2      
+    If $A$ is $n\times n$ and invertible then $A$ is diagonalizable.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix} 1&1\\0&1\end{pmatrix}$ is invertible and cannot be diagonalized.  } \fi
+\fi    
+\ifnum \Version=3  
+    If $A$ is diagonalizable, then $A^k$ is diagonalizable for any $k = 2, 3, 4, \ldots$
+    \ifnum \Solutions=1 {\color{DarkBlue}   \textit{Solution:  } True. Because if $A$ is diagonalizable we can write $$A = PDP^{-1}$$ and $A^k = PD^kP^{-1}$. So $A^k$ can be diagonalized, and its diagonalization is $$A = PD^kP^{-1}$$} \fi
+\fi    
+\ifnum \Version=4    
+    If $A$ is $n\times n$, and $A$ is diagonalizable, then $A$ has $n$ distinct eigenvalues. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The identity matrix, for example, does not have distinct eigenvalues and is diagonalizable. } \fi
+\fi   
+\ifnum \Version=5    
+    An $n\times n$ stochastic matrix with a zero entry can not be regular stochastic. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A counter-example is  \setlength{\extrarowheight}{0.0cm} $P= \frac14 \begin{pmatrix} 1&2&1\\1&0&2\\2&2&1\end{pmatrix}$ because $P$ has a zero entry and is stochastic, but every entry of $P^2$ is positive so $P$ is regular stochastic. } \fi
+\fi    
+\ifnum \Version=6      
+    If $A$ is triangular, then $A$ can be diagonalized.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix} 1&1\\0&1\end{pmatrix}$ is triangular and cannot be diagonalized.  } \fi
+\fi        
+\ifnum \Version=7 
+   If $A$ is diagonalizable, then $A^2$ is diagonalizable. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If $A= P^{-1}DP$, then $A^2$ has the diagonalization $A^2 =(PDP^{-1})(PDP^{-1}) = P^{-1}D^2 P$. } \fi
+\fi     
+\ifnum \Version=8
+  Diagonalizable matrices are non-singular.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The zero matrix is diagonalizable and singular.  } \fi
+\fi     
+\ifnum \Version=9
+    Stochastic matrices with zero entries can be regular stochastic.  
+    \ifnum \Solutions=1 {\color{DarkBlue} True. Some stochastic matrices with zero entries are regular.  } \fi
+\fi     
+\ifnum \Version=10
+    If $A$ is $n\times n$ diagonalizable and invertible then $A$ has distinct eigenvalues.
+    \ifnum \Solutions=1 {\color{DarkBlue} False. Take for example the matrix $A = \begin{pmatrix} 1&0\\0&1\end{pmatrix}$. } \fi
+\fi
+\ifnum \Version=11
+        If an eigenvalue of $n\times n$ matrix $A$ is $\lambda = 1$, then $\dim(\Null(A - I)) = n-1$.    
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } false, a counterexample would be \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix}1&0\\0&1 \end{pmatrix}$, because $\dim(\Null(A - I)) = 2 \ne n -1$. } \fi
+\fi     
+\ifnum \Version=12
+     If $A$ is $n\times n$, and $A$ has $n$ distinct eigenvalues, then $A$ is diagonalizable. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} True.   } \fi
+\fi   
+\ifnum \Version=13
+    If $A$ is $n\times n$ and invertible then $A$ is diagonalizable.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix} 1&1\\0&1\end{pmatrix}$ is invertible and cannot be diagonalized.  } \fi
+\fi   
+\ifnum \Version=14
+    If $A$ is $n\times n$, and $A$ is diagonalizable, then $A$ has $n$ distinct eigenvalues. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The identity matrix, for example, does not have distinct eigenvalues and is diagonalizable. } \fi
+\fi   
+\ifnum \Version=15
+     A $2 \times 2$ rotation matrix $R$ is similar to the identity matrix. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. 
+    Using the change of basis $e_1 \to R e_2$ and $e_2\to R e_1$, the matrix is the identity. }  \fi
+\fi   
+\ifnum \Version=16
+    DIAGONALIZABILITY OR OTHER QUESTION ON DIAGONALIZING MATRICES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+& $\bigcirc$  & $\bigcirc$ \\   

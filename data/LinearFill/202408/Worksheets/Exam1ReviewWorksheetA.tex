@@ -1,0 +1,189 @@
+\documentclass[12pt]{exam}
+
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+\usepackage{spalign}
+
+\let\mat\spalignmat
+\let\vector\spalignvec
+
+\addpoints
+
+\usepackage{tikz}
+\usetikzlibrary{automata, arrows.meta}
+
+\tikzset{
+  vector/.style={thick, -{Stealth[length=3mm]}},
+  }
+  
+% Initials
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{2pt}}
+
+% Joe Rabinoff's matrix package
+\usepackage{spalign} 
+
+% Do not need to show
+\newcommand{\JustDoIt}{\textit{You do not need to justify your reasoning for questions on this page.}}
+
+% FANCY HEADERS - MAKE EMPTY
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{{ }}
+
+% \node[anchor=north east,scale=0.25] at ([shift={(8in,-1cm)}]current page.north west) {\includegraphics[width=0.4\textwidth]{images/GT-Logo.png} };   
+
+% ADJUST MARGINS
+\usepackage[tmargin=1.0in,bmargin=1.0in]{geometry}
+\geometry{margin=0.8in}
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.1,0.2,0.5} % 
+\definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+\definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+\definecolor{LightBlue}{rgb}{0.0,0.5,1.0} % 
+\definecolor{Orange}{rgb}{1.0,0.5,0.0} % 
+\definecolor{LightGray}{rgb}{0.8,0.8,0.8} % 
+\definecolor{LightGreen}{rgb}{0.3,0.9,0.3} % 
+
+
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+
+% FONT FORMAT
+% \renewcommand*\rmdefault{ppl} % change font to Palatino
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 1554}
+\newcommand{\Semester}{Fall}
+
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+
+% SUBSPACES AND ORTHOGONALITY
+\newcommand{\Perp}{^{\perp}}
+\newcommand{\Row}{\text{Row}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\Nul}{\text{Null}}
+\newcommand{\Null}{\text{Null}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Rank}{\text{rank}}
+\newcommand{\Dim}{\text{dim}}
+
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Exam Review Worksheet A, Modules 1 and 2}
+
+\begin{document}
+    
+\begin{center}
+{\Large \TestName} %, \Semester \ \Year}
+\end{center}
+
+\begin{questions}
+\question[1] Fill in the blanks with a dark pen or pencil. 
+Using capital letters only, print your first name: \framebox{\strut\hspace{5cm}}, last name: \framebox{\strut\hspace{5cm}}, the \\[2pt] remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}, and the High School that you attend: \\[2pt]\framebox{\strut\hspace{6cm}}.
+
+\question[5] Indicate \textbf{true} if the statement is true, otherwise, indicate \textbf{false}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.25cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{.15cm} p{14.5cm} p{.5cm} p{.6cm} }
+        
+         & & true &  false  \\[2pt] \hline 
+
+        a) & If $A$ is $m \times n$, and $ A \vec x = \vec b$ is consistent for any $\vec b$ in $\mathbb R^m$, then the transform $\vec x \to A\vec x$ is one-to-one.  & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        b) & When a linear system has more equations than unknowns there could be a unique solution to the system. & $\bigcirc$  & $\bigcirc$ \\ 
+
+        c) & If $A$ is $m\times n$ and has linearly independent columns, then the columns of $A$ span $\mathbb R^m$.  & $\bigcirc$  & $\bigcirc$ \\ 
+
+        d) & If $\vec x, \vec y$ form a basis for subspace $S$, then $\vec x + \vec y$ and $\vec x - \vec y$ also form a basis for $S$.  & $\bigcirc$  & $\bigcirc$ \\ 
+
+        e) & The set $S=\{\vec x \in \mathbb R^2 \, | \, x_1x_2 =0\}$ is a subspace. & $\bigcirc$  & $\bigcirc$  
+        \\[1pt] \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+
+\question[2] Indicate whether the situations are \textbf{possible} or \textbf{impossible}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.25cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{.2cm} p{10cm} p{1.4cm} p{1.75cm} }
+        
+        & & possible &  impossible  \\[2pt] \hline 
+        
+        % a) & $A$ is an $n \times n$ matrix whose columns are linearly independent and do not span $\mathbb R^n$. & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        a) & $E$ is an echelon form of matrix $A$, and $\Nul A \ne \Nul E$. & $\bigcirc$  & $\bigcirc$ \\ 
+                
+
+        b) & $\vec y$ is a vector in the co-domain of the linear transform $T_A(\vec x) = A\vec x$, but $\vec y$ is not in the range of $T_A(\vec x)$. & $\bigcirc$  & $\bigcirc$ \\[4pt] \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+    \vspace{-6pt} 
+
+    \question[4] Fill in the blanks. You do not need to justify your reasoning. 
+    \begin{parts}
+        \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first reflects points in $\mathbb R^2$ through the line $x_1 = x_2$ and then projects them onto the $x_1$-axis then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+        \part The dimension of the subspace $\{\vec x \in \mathbb R^6 \, | \, x_1 + x_2 + x_6 = 0\}$ is \framebox{\strut\hspace{1.25cm}} .
+        
+        \part A $2\times 2$ matrix whose nullspace is the line $x_1+3x_2=0$ and whose column space is the line $2x_1- x_2 =0$ has the form $A = \begin{pmatrix} 1 & a \\ b & c\end{pmatrix}$ where $a = \framebox{\strut\hspace{1.25cm}}$, $b = \framebox{\strut\hspace{1.25cm}}$, and $c = \framebox{\strut\hspace{1.25cm}}$.
+        
+        \part If the Leontief production equation for an economy with two sectors has consumption matrix $C=\begin{pmatrix}0.4&0\\0.1&0.2 \end{pmatrix}$ and demand vector $\vec d=\begin{pmatrix} 60\\6\end{pmatrix}$ then the production vector has the form $\vec x = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$ where $x_1 = \framebox{\strut\hspace{1.25cm}}$ and $x_2 = \framebox{\strut\hspace{1.25cm}}$.
+
+    \end{parts}
+
+\end{questions}
+
+\newpage
+{\color{DarkBlue} \textit{Solutions} 
+\begin{enumerate}
+    \item Note that your facilitator should know your GTID, but you can also obtain it from the GT website: https://registrar.gatech.edu/info/gtid-lookup
+    \item True or False. 
+    \begin{enumerate}
+        \item False.
+        \item True.
+        \item False.
+        \item True. 
+        \item False.
+    \end{enumerate}
+    \item Possible/impossible. 
+    \begin{enumerate}
+        \item Impossible because row operations do not change solution sets.
+        \item Possible. 
+    \end{enumerate}
+    \item Fill in the blank.
+    \begin{enumerate}
+        \item $A = \begin{pmatrix} 0&1\\0&0 \end{pmatrix}$
+    \item 5
+    \item $a=3$, $b=2, c = 6$
+    \item $x_1 = 100, x_2 = 20$
+    \end{enumerate}
+\end{enumerate}
+
+} 
+
+
+\end{document}

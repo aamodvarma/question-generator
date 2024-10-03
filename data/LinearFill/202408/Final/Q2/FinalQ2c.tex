@@ -1,0 +1,76 @@
+% BASIS, RANK, INVERTIBILITY
+\ifnum \Version=1         
+    If $A$ is $m\times n$, and $\Rank (A) = n$, then the columns of $A$ are linearly independent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If there are $n$ columns and $\Rank A = n$, then there must be a pivot in every column. } \fi
+\fi
+\ifnum \Version=2      
+     If a set of vectors spans subspace $S$, then that set of vectors are a basis for $S$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False, vectors must also be independent. } \fi
+\fi    
+\ifnum \Version=3  
+    If $S$ is a subspace of $\mathbb R^n$, and $U= \{\vec v_1 , \vec v_2\}$ is a basis for $S$, then the set $V=\{-\vec v_1 - \vec v_2, \vec v_1 + \vec v_2\}$ is also a basis for $S$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The two vectors listed in $V$ are multiples of each other, so they are dependent. A set of dependent vectors cannot form a basis. } \fi
+\fi    
+\ifnum \Version=4    
+    If $A$, $B$, and $C$ are $n\times n$ matrices, then $A(B+C) = (B+C)A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} False. Matrix multiplication does not commute. } \fi
+\fi   
+\ifnum \Version=5    
+    If $ A $ is $n\times n$ and invertible, then the columns of $ A ^{-1}$ span $ \mathbb R ^{n}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. $A^{-1}$ is invertible and its inverse is $A$ because $A^{-1}A = I$, and invertible $n\times n$ matrices have columns that span $\mathbb R^n$.} \fi
+\fi    
+\ifnum \Version=6      
+    All elementary matrices are square, invertible, and triangular.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Every elementary matrix is square and invertible, but not all elementary matrices are triangular. One such matrix is \setlength{\extrarowheight}{0.0cm} $E = \begin{pmatrix} 0&1\\1&0\end{pmatrix}$. } \fi
+\fi        
+\ifnum \Version=7 
+    If $A$ is an $m \times n$ matrix, then the columns of $A$ are a basis for $\Col A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} False. 
+    This columns would need to be linearly independent.} \fi
+\fi     
+\ifnum \Version=8
+     If $S$ is a subspace of $\mathbb R^n$, and $U= \{\vec v_1 , \vec v_2\}$ is a basis for $S$, then the set $V=\{\vec v_1 - \vec v_2, \vec v_1 + \vec v_2\}$ is also a basis for $S$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.  }
+    \fi
+\fi     
+\ifnum \Version=9
+    The largest possible rank of a $6 \times 3$ matrix $A$ is $6$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. 
+    The rank is the dimension of column space, which is at most 3} \fi
+\fi     
+\ifnum \Version=10
+    The largest possible rank of a $6 \times 3$ matrix $A$ is $3$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. 
+    The rank is the dimension of column space, which is at most 3}  \fi
+\fi     
+\ifnum \Version=11
+    If $A$ is $7\times 5$, and $\Rank (A) = 5$, then the columns of $A$ are linearly independent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If there are $n$ columns and $\Rank A = n$, then there must be a pivot in every column. }
+    \fi
+\fi     
+\ifnum \Version=12
+    If $A$ is $7\times 5$, and $\Rank (A) = 4$, then the columns of $A$ are linearly dependent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. One of the columns does not have a pivot.} \fi
+\fi    
+\ifnum \Version=13
+     If a set of vectors spans subspace $V$, then the set of vectors are also a basis for $V$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False, vectors must also be independent for them to be a basis. } \fi
+\fi    
+\ifnum \Version=14
+    If $A$ is $m\times n$, and $\Rank (A) = n$, then the columns of $A$ are linearly independent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If there are $n$ columns and $\Rank A = n$, then there must be a pivot in every column. } \fi
+\fi    
+\ifnum \Version=15
+    TRUE FALSE ON BASIS, RANK, INVERTIBILITY
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } } \fi
+\fi    
+\ifnum \Version=16
+    TRUE FALSE ON BASIS, RANK, INVERTIBILITY
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } } \fi
+\fi    
+\ifnum \Version=17
+    TRUE FALSE ON BASIS, RANK, INVERTIBILITY
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } } \fi
+\fi    
+& $\bigcirc$  & $\bigcirc$ \\   
+

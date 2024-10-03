@@ -1,0 +1,134 @@
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample A} \fi
+\ifnum \Version=2 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample B} \fi
+\ifnum \Version=3 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample C} \fi
+\ifnum \Version=4 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample D} \fi
+\ifnum \Version=5 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample E} \fi
+\ifnum \Version=6 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam Sample F} \fi 
+\ifnum \Version=7 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam A1} \fi
+\ifnum \Version=8 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam A2} \fi
+\ifnum \Version=9 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam B1} \fi
+\ifnum \Version=10 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam B2} \fi
+\ifnum \Version=11 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam C1} \fi
+\ifnum \Version=12 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam C2} \fi
+\ifnum \Version=13 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam D1} \fi
+\ifnum \Version=14 \renewcommand{\TestName}{Year 1 MATH 2551 Final Exam D2} \fi
+
+
+% TITLE
+\begin{center}
+\ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{Solutions}}\\[4pt]}\fi
+{\Large \TestName}
+\end{center}
+
+\begin{center}
+
+\textit{Work done on scratch paper will not be graded.}
+
+\vspace{6pt}
+
+\textbf{A Few Helpful Formulas}
+
+\vspace{2pt}
+
+% MODULE 1
+$\small{
+\begin{array}{lllllllll}
+    \displaystyle d = \left| \mathbf{PS}\cdot \frac{ \mathbf n}{|\mathbf n|}\right| ,
+    & \displaystyle d = \frac{|\mathbf{PS}\times \mathbf v|}{|\mathbf v|}  ,
+    & \displaystyle \mathbf N = \frac{d\mathbf T/dt}{\left| d\mathbf T/dt \right|}  ,
+    & \displaystyle \kappa = \frac{1}{|\mathbf v|}\left| \frac{d\mathbf T}{dt}\right|  ,
+    & \displaystyle \kappa = \frac{|f''(x)|}{\left[ 1+ (f'(x))^2\right]^{3/2}} 
+\end{array} 
+}
+$
+
+% MODULE 2
+$\small{
+\begin{array}{lllllllll}
+    \displaystyle D_{\mathbf u} f = \nabla f \cdot \mathbf u,
+    & \displaystyle D = f_{xx}f_{yy} - \left(f_{xy}\right)^2,
+    & \displaystyle \nabla f = \lambda \nabla g  
+    & \ & \ 
+\end{array} 
+}
+$
+
+% MODULE 3
+$\small{
+\begin{array}{lllllllll}
+    \displaystyle x = \rho \sin\phi \cos\theta,
+    & \displaystyle y = \rho \sin\phi \sin\theta,
+    & \displaystyle z = \rho \cos\phi,
+    & \displaystyle dV = \rho^2 \sin \phi \, d\rho \, d\phi \, d\theta,
+    & \displaystyle J(u,v) = x_uy_v - y_ux_v    
+\end{array} 
+}
+$
+
+% MODULE 4 
+% FLUX
+$\small{
+\begin{array}{lll}
+    \mathbf{F} = M\mathbf{i} + N \mathbf{j},
+    &
+    &
+    \displaystyle \int_C \mathbf F\cdot \mathbf n \, ds = \int_C M\,dy - N\,dx = \iint_R \left( \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} \right) dx\,dy  
+\end{array} 
+}
+$
+
+
+% MODULE 4 
+% FLOW
+$\small{
+\begin{array}{l}
+    \displaystyle \int_C \mathbf F\cdot d\mathbf r
+    = \int_a^b \mathbf F\cdot \mathbf  r'(t) \, dt 
+    = \int_a^b \left( M\frac{dx}{dt} + N\frac{dy}{dt}\right) dt 
+    = \int_a^b  M\,dx + N\, dy 
+\end{array} 
+}
+$
+
+
+
+% MODULE 4 
+% GREEN FLOW AND FLUX
+$\small{
+\begin{array}{lll}
+    \displaystyle \oint_C \mathbf F\cdot d\mathbf r 
+    = \iint_R \left( \frac{\partial N}{\partial x} - \frac{\partial M}{\partial y} \right) dx\,dy , 
+    & 
+    & \displaystyle \oint_C \mathbf F\cdot \mathbf n \, ds
+    = \iint_R \left( \frac{\partial M}{\partial x} + \frac{\partial N}{\partial y} \right) dx\,dy 
+\end{array} 
+}
+$
+
+% MODULE 4 
+% SURFACE
+$\small{
+\begin{array}{l}
+    \displaystyle \iint_S G(x,y,z) \, d\sigma 
+    = \iint_S G(f(u,v),g(u,v),h(u,v)) \, |\mathbf r_u \times \mathbf r_v | \, du \, dv  
+    = \iint_S G(x,y,z) \, \frac{|\nabla F|}{|\nabla F \cdot \mathbf p| } \, dA
+\end{array} 
+}
+$
+
+% MODULE 4 
+% STOKES AND DIVERGENCE
+$\small{
+\begin{array}{lll}
+    \displaystyle \oint_C \mathbf F\cdot d\mathbf r 
+    = \iint_S \nabla \times \mathbf F\cdot \mathbf n \, d\sigma  ,
+    &
+    & \displaystyle \iint_S \mathbf F\cdot \mathbf n \, d\sigma = \iiint _D \nabla \cdot \mathbf F \, dV
+\end{array} 
+}
+$
+
+\end{center}
+
+\vspace{-8pt}

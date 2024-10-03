@@ -1,0 +1,184 @@
+% A) UNIT 1 TRANSFORMS
+\part 
+\ifnum \Version=1
+    If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points clockwise in $\mathbb R^2$ about the origin by $\pi/2$ radians and then reflects them through the line $x_2 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    } 
+    \else
+    \fi    
+\fi 
+
+\ifnum \Version=2
+        If the transform $T_A(\vec x) = A\vec x$ is onto, where $T_A \ : \ \mathbb R^{12} \to \mathbb R^9$, then $A$ has exactly $\framebox{\strut\hspace{0.80cm}}$ pivots, the domain of $T_A$ is $\framebox{\strut\hspace{0.80cm}}$, the co-domain of $T_A$ is $\framebox{\strut\hspace{0.80cm}}$, and the range of $T_A$ is $\framebox{\strut\hspace{0.80cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        If the transform is onto, every row must be pivotal. So there are 9 pivots, the domain is $\mathbb R^{12}$, the co-domain is $\mathbb R^9$, and the range is also $\mathbb R^9$. It would \textbf{not} be correct to say that the domain is $12$ and that the co-domain is $9$. 
+        } 
+       \fi      
+\fi 
+
+\ifnum \Version=3
+    If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points counter-clockwise in $\mathbb R^2$ about the origin by $\pi/2$ radians and then reflects them through the line $x_1 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix} \to \begin{pmatrix}1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    } 
+    \else
+    \fi        
+\fi 
+
+
+\ifnum \Version=4
+        If the transform $T_A(\vec x) = A\vec x$ is one-to-one, where $T_A \ : \ \mathbb R^{8} \to \mathbb R^{14}$, then $A$ has exactly $\framebox{\strut\hspace{1.00cm}}$ pivots, the domain of $T_A$ is \framebox{\strut\hspace{1.00cm}}, the co-domain of $T_A$ is $\framebox{\strut\hspace{1.00cm}}$, and the range of $T_A$ is a subspace of $\mathbb R^p$, where $p = \framebox{\strut\hspace{1.00cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        If the transform is one-to-one, every column must be pivotal. So there are 8 pivots, the domain is $\mathbb R^{8}$, the co-domain is $\mathbb R^{14}$, and the range is a subspace of $\mathbb R^{14}$. It would \textbf{not} be correct to say that the domain is $8$ and that the co-domain is $14$. $8$ is a number, $\mathbb R^8$ is a set. 
+        } 
+       \fi      
+\fi 
+\ifnum \Version=5
+        If the transform $T_A(\vec x) = A\vec x$ is onto, where $T_A \ : \ \mathbb R^6 \to \mathbb R^4$, then $A$ has exactly $\framebox{\strut\hspace{1.00cm}}$ pivots, the domain of $T_A$ is \framebox{\strut\hspace{1.00cm}}, the co-domain of $T_A$ is $\framebox{\strut\hspace{1.00cm}}$, and the range of $T_A$ is $\framebox{\strut\hspace{1.00cm}}$. 
+        
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        The standard matrix of the transform must be $4\times6$. If the transform is onto, every row must be pivotal. So there are 4 pivots, the domain is $\mathbb R^6$, the co-domain is $\mathbb R^4$, and the range is also $\mathbb R^4$. It would \textbf{not} be correct to say that the domain is $6$ and that the co-domain is $4$. 
+        } 
+       \fi    
+\fi 
+\ifnum \Version=6
+    Suppose $A$, $B$, and $C$ are $2\times2$ matrices, $A = BC$, and $B$ is the standard matrix for a transform that projects vectors in $\mathbb R^2$ onto the $x_1$-axis. If $T(\vec x)=C\vec x$ rotates vectors clockwise by $\pi/2$ radians about the origin, then $\Null A$ is spanned by $\vec y = \begin{pmatrix} y_1\\y_2\end{pmatrix}$ where $y_1 = \framebox{\strut\hspace{1.0cm}}$ and $y_2 = \framebox{\strut\hspace{1.0cm}}$. Please use numbers for $y_1$ and $y_2$ (not variables). 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    Note that $B = \begin{pmatrix} 1&0\\0&0\end{pmatrix}$, so the nullspace of $B$ is the line $x_1= 0$. Note also that the line $x_1=0$ is the $x_2$-axis, and that there are a few ways to approach this problem. Here are a few different methods. 
+    \begin{itemize}
+        \item \textbf{Method 1}: The transform $T(x) = Ax = BCx$ first rotates vectors clockwise by $\pi/2$ radians about the origin. Any vector on the $x_1$-axis gets rotated to the $x_2$-axis. Vectors on the $x_1$-axis are in the span of $y = \begin{pmatrix} 1\\0 \end{pmatrix}$. So any vector in the span of $y$ is rotated into $\Null B$, so $BCy = 0$. But $A=BC$ so $\Null A$ is spanned by $y = \begin{pmatrix} 1\\0\end{pmatrix}$. We can choose $y_1 = 1$ and $y_2=0$. 
+        % \item \textbf{Method 2}: The transform $T(x) = Ax = BCx$ first rotates vectors clockwise by $\pi/2$ radians about the origin. In other words, $C$ will transform $e_1 = \begin{pmatrix} 1\\0 \end{pmatrix}$ to $T_C(e_1) = \begin{pmatrix} 0\\-1 \end{pmatrix}$, and $e_2 = \begin{pmatrix} 0\\ 1 \end{pmatrix}$ to $T_C(e_2) = \begin{pmatrix} 1\\0 \end{pmatrix}$. This means that the standard matrix of the transform $T_C$ is $C = \begin{pmatrix} 0&1\\-1&0\end{pmatrix}$, and $C$ will transform a vector of the form $\begin{pmatrix}x_1\\x_2 \end{pmatrix}$ to $\begin{pmatrix} x_2 \\ -x_1\end{pmatrix}$. But $\Null B$ is the line spanned by $\begin{pmatrix} 0\\1\end{pmatrix}$, so $T_C(x)$ is in $\Null B$ when $x_2 = 0$. So $y = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} = \begin{pmatrix}x_1\\0 \end{pmatrix}$. So we can choose $y_1 = 1$ and $y_2 = 0$. 
+        \item \textbf{Method 2}: Using the general form of a rotation matrix, $C$ is $$C = \begin{pmatrix} 0&1\\-1&0\end{pmatrix}$$
+        But $T(x) = Ax = BCx$, and so
+        $$BC = \begin{pmatrix} 1&0\\0&0\end{pmatrix}\begin{pmatrix} 0&1\\-1&0\end{pmatrix} = \begin{pmatrix} 0 & 1 \\ 0&0\end{pmatrix}$$
+        A vector in the null space of this matrix is $y = \begin{pmatrix} 1\\0\end{pmatrix}$. We can choose $y_1 = 1$ and $y_2=0$. 
+    \end{itemize}
+    Do not leave your answer as $y_1 = x_1$ and $y_2=0$ because then you haven't specified that $x_1 \ne 0$. 
+    } 
+    \fi    
+
+\fi 
+\ifnum \Version=7
+    If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points counter-clockwise in $\mathbb R^2$ about the origin by $\pi$ radians and then reflects them through the line $x_1+x_2 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}-1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 0\\-1 \end{pmatrix} \to \begin{pmatrix}1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    } 
+    \else
+    \fi    
+\fi 
+\ifnum \Version=8
+    Let $T \, : \, \mathbb R^2 \to \mathbb R^2$ be a linear transform such that $T(x_1,x_2) = (x_1+x_2, 2x_2)$, and $b = \begin{pmatrix} 5& 4\end{pmatrix}^T$, and $\vec x= \begin{pmatrix} x_1,x_2 \end{pmatrix}^T$. Then $T(\vec x) = b$ when $x_1 = \framebox{\strut\hspace{1cm}}$ and $x_2 = \framebox{\strut\hspace{1cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The standard matrix of the transform is $A = \begin{pmatrix} 1&1\\0&2\end{pmatrix}$, so $Ax = b$, or as an augmented matrix: 
+    \begin{align}
+        \begin{pmatrix}1&1&5\\0&2&4 \end{pmatrix}
+        \sim \begin{pmatrix}1&1&5\\0&1&2 \end{pmatrix}
+        \sim \begin{pmatrix}1&0&3\\0&1&2 \end{pmatrix}
+    \end{align} 
+    So $x_1 =3$, $x_2 = 2$. }\fi    
+\fi 
+\ifnum \Version=9
+     Suppose $e_1 = \begin{pmatrix}1\\0 \end{pmatrix}$, $e_2 = \begin{pmatrix} 0\\1\end{pmatrix}$, and $T \, : \, \mathbb R^2 \to \mathbb R^2$ is a linear transform such that $T(e_1) = \begin{pmatrix} 2\\0 \end{pmatrix}$, and $T(e_2) = \begin{pmatrix} -3\\2\end{pmatrix}$. If $x = \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$, and $T(x) = b = \begin{pmatrix} 2\\ 4\end{pmatrix}$, then $c_1 = \framebox{\strut\hspace{0.75cm}}$ and $c_2 = \framebox{\strut\hspace{0.75cm}}$. 
+     
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The standard matrix of the transform is $$A = \begin{pmatrix}2&-3\\0&2 \end{pmatrix}$$ But if $Ax=b$, then we may solve: 
+    \begin{align}
+        \begin{pmatrix} A \, | \, b \end{pmatrix} &= \begin{pmatrix} 2&-3&2\\0&2&4\end{pmatrix}
+        \sim \begin{pmatrix} 2&-3&2\\0&1&2\end{pmatrix} 
+        \sim \begin{pmatrix} 2&0&8\\0&1&2\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&4\\0&1&2\end{pmatrix} 
+    \end{align} So $c_1 = 4$ and $c_2 = 2$.} \fi    
+\fi 
+\ifnum \Version=10
+      If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points in $\mathbb R^2$ counter-clockwise about the origin by $\pi/2$ radians and then reflects them through the line $x_1 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+            Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+            \begin{align}
+                e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+                e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix}
+            \end{align}
+            Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+        } 
+       \fi
+\fi 
+\ifnum \Version=11
+    Let $T \, : \, \mathbb R^2 \to \mathbb R^2$ be a linear transformation that maps
+    $u = \begin{pmatrix} 3\\2 \end{pmatrix}$ to $T(u) = \begin{pmatrix} 4\\5\end{pmatrix}$ and maps $v = \begin{pmatrix}8\\-2 \end{pmatrix}$ to $T(v) = \begin{pmatrix} 2\\1\end{pmatrix}$. Then $T(2u+3v) = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using linearity, $$T(2u+3v) = 2T(u) + 3T(v) = 2\begin{pmatrix} 4\\5\end{pmatrix} + 3\begin{pmatrix} 2\\1\end{pmatrix} = \begin{pmatrix} 14\\13\end{pmatrix}$$ So $c_1 = 14$, $c_2 = 13$.  } \fi    
+\fi 
+\ifnum \Version=12
+    Let $\vec x = \begin{pmatrix} x_1 \\x_2\end{pmatrix}$, $\vec v_1 = \begin{pmatrix} 9\\56\end{pmatrix}$, and $\vec v_2 = \begin{pmatrix} 15\\23\end{pmatrix}$. Let $T \, : \, \mathbb R^2 \to \mathbb R^2$ be a linear transformation that maps $\vec x$ to $T(\vec x) = x_1 \vec v_1 + x_2 \vec v_2$. Then a matrix $A$ that $T(\vec x) = A\vec x$ for every $\vec x$ in the domain of $T$ is $A = \begin{pmatrix} a_1&a_2\\a_3&a_4\end{pmatrix}$, where $a_1 = \framebox{\strut\hspace{1cm}}$, $a_2 = \framebox{\strut\hspace{1cm}}$, $a_3 = \framebox{\strut\hspace{1cm}}$, $a_4 = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} take $\vec x$ to be the standard vectors $\vec e_1$ and $\vec e_2$ to obtain the columns of $A$. 
+    \begin{align}
+        T(\vec e_1) &= A\vec e_1 = 1\cdot \vec v_1 + 0 \cdot \vec v_2 = \vec v_1 \\
+        T(\vec e_2) &= A\vec e_2 = 0\cdot \vec v_1 + 1 \cdot \vec v_2 = \vec v_2 \\
+        A &= \begin{pmatrix} \vec v_1 & \vec v_2 \end{pmatrix} = \begin{pmatrix} 9&15\\56&23\end{pmatrix}
+    \end{align}
+    So $a_1 = 9, a_2 = 15, a_3=56, a_4=23$. 
+    } \fi
+\fi 
+\ifnum \Version=13 % 
+    % DONE
+    Let $T \, : \, \mathbb R^2 \to \mathbb R^2$ be a linear transformation that maps
+    $u=\begin{pmatrix} 1\\6 \end{pmatrix}$ into $T(u) = \begin{pmatrix} 2\\15\end{pmatrix}$ and maps $v=\begin{pmatrix} 3\\5\end{pmatrix}$ to $T(v) = \begin{pmatrix} 5\\4\end{pmatrix}$. Then $T(2u+3v) = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using linearity, $$T(2u+3v) = 2T(u) + 3T(v) = 2\begin{pmatrix} 2\\15\end{pmatrix} + 3\begin{pmatrix} 5\\4 \end{pmatrix} = \begin{pmatrix}19\\42 \end{pmatrix}$$  } \fi    
+\fi 
+\ifnum \Version=14 % 
+    Suppose $\vec v_1= \begin{pmatrix}3\\0\\5 \end{pmatrix}$, $\vec v_2 = \begin{pmatrix}1\\1\\0 \end{pmatrix}$, and $\vec y = \begin{pmatrix} 2\\c_1\\c_2\end{pmatrix}$. If $A$ has 2 pivots, the transform $T(\vec x)=A\vec x$ satisfies $T(\vec v_1) = 2T(\vec v_2) \ne \vec 0$, and $\vec y$ satisfies $A\vec y = \vec 0$, then $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        Let the columns of $A$ be $a_1, a_2, a_3$. Then using linearity: 
+        \begin{align}
+            T(\vec v_1) &= 2T(\vec v_2) \\
+            0 & = T(\vec v_1) - 2T(\vec v_2) \\
+            0 & = T(\vec v_1 - 2\vec v_2) \\
+            0 & = T\left( \begin{pmatrix}3\\0\\5 \end{pmatrix}- 2 \begin{pmatrix}1\\1\\0 \end{pmatrix} \right) \\
+            0 & = T\left( \begin{pmatrix}2\\-2\\5 \end{pmatrix}\right) \\
+            0 & = A y , \ \text{where } y = \begin{pmatrix}2\\-2\\5 \end{pmatrix} 
+        \end{align}
+        So $c_1 = -2$, and $c_2 = 5$. 
+        } 
+   \else
+   \fi 
+\fi 
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    Suppose $A = \begin{pmatrix} 3 & 0\\3 & 1\end{pmatrix}$ and the image of $x= \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$ under the transform $T(x) = Ax$ is $b = \begin{pmatrix} 6\\7\end{pmatrix}$, then $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} We need to solve $Ax=b$. Expressing as an augmented matrix and row reducing yields
+    $$\begin{pmatrix} 3&0&6\\3&1&7\end{pmatrix} 
+    \sim \begin{pmatrix} 1&0&2\\3&1&7\end{pmatrix} 
+    \sim \begin{pmatrix} 1&0&2\\0&1&1\end{pmatrix} 
+    $$ So $c_1 = 2$ and $c_2 = 1$.} \fi  
+\fi 
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 1 LINEAR TRANSFORMS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 1 LINEAR TRANSFORMS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 1 LINEAR TRANSFORMS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 

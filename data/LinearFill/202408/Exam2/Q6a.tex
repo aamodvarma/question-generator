@@ -1,0 +1,216 @@
+\ifnum \Version=1
+\part Suppose that we want reflect points in $\mathbb R^2$ across the line $x_1 = 4$. Using homogeneous coordinates we can use a transform of the form $T(\vec x) = A\vec x$, where $\vec x \in \mathbb R^3$ and $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$ Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+The matrices we need are
+$$A = \begin{pmatrix} 1&0&4\\0&1&0\\0&0&1\end{pmatrix}\begin{pmatrix}-1&0&0\\0&1&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&-4\\0&1&0\\0&0&1 \end{pmatrix}$$    
+So $a_1 = 4, a_2 = 0, b_1 = -1, b_2 = 0, c_1 = -4, c_2 = 0$. 
+} 
+\fi    
+\fi 
+
+
+
+
+
+\ifnum \Version=2
+    \part Suppose $A = \begin{pmatrix} 2&4\\2&5\end{pmatrix}$ and $A^{-1} = \begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix}$. Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$, $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} We can either use the formula for the inverse of a $2\times 2 $ matrix or row reduce the block matrix $\begin{pmatrix} A & I\end{pmatrix}$. The latter yields
+    \begin{align}
+        \begin{pmatrix} A & I\end{pmatrix} = \begin{pmatrix} 2&4&1&0\\2&5&0&1\end{pmatrix} 
+        \sim \begin{pmatrix} 1&2&1/2&0\\0&1&-1&1\end{pmatrix}
+        \sim \begin{pmatrix} 1&0&5/2&-2\\0&1&-1&1\end{pmatrix}
+    \end{align}
+    Thus $A^{-1} =\begin{pmatrix} 5/2&-2\\-1&1\end{pmatrix}$. 
+    } 
+    \fi        
+\fi  
+
+\ifnum \Version=3
+    %%% NUMBERS MORE MESSY THAN NECESSARY %%%
+    \part Suppose $A$ has the LU factorization $A=LU$, where $L = \begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$ and $U = \begin{pmatrix} 2 & 5 \\ 0 & 4 \end{pmatrix}$. Then the system $Ax=b$ where $b = \begin{pmatrix} 2\\3 \end{pmatrix}$ can be solved using $Ly=b$ and $Ux=y$, with $y = \begin{pmatrix} y_1\\y_2\end{pmatrix}$ and $x= \begin{pmatrix} x_1\\x_2\end{pmatrix}$. Then $y_1 = \framebox{\strut\hspace{1.0cm}}$, $y_2 = \framebox{\strut\hspace{1.0cm}}$, $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+
+    %%% NUMBERS MORE MESSY THAN NECESSARY %%%    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    We can solve $Ly=b$ by row reducing the augmented matrix $( L \, | \, b)$.
+    $$\begin{pmatrix} 1&0&2\\4&1&3\end{pmatrix} \sim \begin{pmatrix} 1&0&2\\0&1&-5\end{pmatrix}$$
+    Thus $y = \begin{pmatrix} 2\\-5\end{pmatrix}$. Solve $Ux=y$ by row reducing the augmented matrix $(U \, | \ y)$. 
+    $$\begin{pmatrix} 2&5&2\\0&4&-5\end{pmatrix} 
+    \sim \begin{pmatrix} 2&5&2\\0&1&-5/4\end{pmatrix}
+    \sim \begin{pmatrix} 2&0&8/4+25/4\\0&1&-5/4\end{pmatrix}
+    \sim \begin{pmatrix} 1&0&33/8\\0&1&-5/4\end{pmatrix}
+    $$
+    Thus $y_1=2, y_2=-5, x_1=33/8, x_2 = -5/4$. 
+    } 
+    \fi        
+\fi  
+
+
+\ifnum \Version=4
+\part If the consumption matrix for an economy is $C=\frac{1}{10}\begin{pmatrix} 2&0\\4&9\end{pmatrix}$ then the output $x$ to meet a desired output $d=\begin{pmatrix} 16\\20\end{pmatrix}$ is $x=\begin{pmatrix} x_1\\x_2 \end{pmatrix}$, where $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+The output we need satisfies 
+$$x = d + Cx$$
+Which is also
+$$(I-C)x = d$$
+But 
+$$I-C = \begin{pmatrix} 1&0\\0&1\end{pmatrix} - \begin{pmatrix} 0.2 & 0 \\ 0.4 & 0.9 \end{pmatrix} = \begin{pmatrix} 0.8 & 0 \\ -0.4 & 0.1 \end{pmatrix}$$
+Thus we can determine $x$ by reducing the augmented matrix below as follows. 
+\begin{align}
+    \begin{pmatrix} 0.8 & 0 & 16\\ -0.4 &  0.1 & 20\end{pmatrix} 
+    & \sim \begin{pmatrix} 8 & 0 & 160\\ -4 & 1 & 200\end{pmatrix} 
+     \sim \begin{pmatrix} 1 & 0 & 20\\ -4 & 1 & 200\end{pmatrix} 
+     \sim \begin{pmatrix} 1 & 0 & 20\\ 0 & 1 & 280\end{pmatrix} 
+\end{align}
+Thus $x_1 = 20$, $x_2 = 280$. 
+} 
+\fi        
+\fi        
+
+
+
+
+
+\ifnum \Version=5
+\part Suppose we want to project points in $\mathbb R^2$ onto the line $x_2=4$. Using homogeneous coordinates we can use a transform of the form $T(\vec x) = A\vec x$, where $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$
+Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+The matrices we need are
+$$A = 
+\begin{pmatrix} 1&0&0\\0&1&4\\0&0&1\end{pmatrix}
+\begin{pmatrix} 1&0&0\\0&0&0\\0&0&1 \end{pmatrix}
+\begin{pmatrix} 1&0&0\\0&1&-4\\0&0&1 \end{pmatrix}
+$$    
+So $a_1 = 0, a_2 = 4, b_1 = 1, b_2 = 0, c_1 = 0, c_2 = -4$. 
+} 
+\fi        
+\fi        
+    
+
+        
+\ifnum \Version=6
+    \part Suppose that we want reflect points in $\mathbb R^2$ across the line $x_2 = 4$. Using homogeneous coordinates we can use a transform of the form $T(\vec x) = A\vec x$, where $\vec x \in \mathbb R^3$ and $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$ Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    The matrices we need are
+    $$A = \begin{pmatrix} 1&0&0\\0&1&4\\0&0&1\end{pmatrix}\begin{pmatrix}1&0&0\\0&-1&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&0\\0&1&-4\\0&0&1 \end{pmatrix}$$    
+    } 
+    \fi    
+\fi 
+    
+    
+
+\ifnum \Version=7
+    \part If the Leontief production equation for an economy with two sectors has consumption matrix $C=\begin{pmatrix}0.4&0\\0.1&0.2 \end{pmatrix}$ and demand vector $\vec d=\begin{pmatrix} 60\\6\end{pmatrix}$ then the production vector has the form $\vec x = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$ where $x_1 = \framebox{\strut\hspace{1.25cm}}$ and $x_2 = \framebox{\strut\hspace{1.25cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    The production model is $$x = d + Cx$$ Rearranging yields $$(I-C)x = d$$ And $I-C$ is
+    \begin{align}
+        I -  C = \begin{pmatrix} 1&0\\0&1 \end{pmatrix} - \begin{pmatrix} .4&0\\.1&.2\end{pmatrix} = \begin{pmatrix} .6&0\\-0.1&.8\end{pmatrix} 
+    \end{align} 
+    Expressing $(I-C)x=d$ as an augmented matrix and reducing gives the solution. 
+    \begin{align}
+        \begin{pmatrix} .6&0&60\\-0.1&.8&6\end{pmatrix} \sim \begin{pmatrix} 6&0&600\\-1&8&60\end{pmatrix}\sim \begin{pmatrix} 1&0&100\\-1&8&60\end{pmatrix}\sim\begin{pmatrix} 1&0&100\\0&1&20\end{pmatrix}
+    \end{align}
+    Therefore $x_1=100$, $x_2 = 20$. 
+    } 
+    \fi        
+\fi        
+
+
+
+\ifnum \Version=8
+
+    \part If $A$ has LU factorization $A=LU$, where $U = \begin{pmatrix} 2&0\\0&3\end{pmatrix}$, and the solution to $L\vec y = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec y = \begin{pmatrix} -2\\27 \end{pmatrix}$, then the solution to $A\vec x = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec x = \begin{pmatrix} x_1\\x_2\end{pmatrix}$, where $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+    %
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    If $A\vec x = LU\vec x = \begin{pmatrix} 6\\12 \end{pmatrix}$, and $L\vec y = \begin{pmatrix} 6\\12 \end{pmatrix}$ then $U\vec x = \vec y$. But we are given $\vec y$, so \begin{align} U\vec x = \begin{pmatrix} -2\\27 \end{pmatrix}\end{align} Expressing this as an augmented matrix we obtain 
+    $$\begin{pmatrix} 2&0 & -2\\0&3&27 \end{pmatrix}$$
+    Thus $x_1 = -1$, $x_2= 27/3 = 9$. 
+    } 
+    \else
+      
+    \fi
+\fi        
+
+
+
+
+\ifnum \Version=9
+
+\part Suppose we want to use homogeneous coordinates to rotate points in $\mathbb R^2$ counter-clockwise by $\pi/2$ radians about the point $(-1,2)$. We can use a transform of the form $T(\vec x) = A\vec x$, where $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$
+Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+The matrices we need are
+$$A = 
+\begin{pmatrix} 1&0&-1\\0&1&2\\0&0&1\end{pmatrix}
+\begin{pmatrix} 0&1&0\\-1&0&0\\0&0&1 \end{pmatrix}
+\begin{pmatrix} 1&0&1\\0&1&-2\\0&0&1 \end{pmatrix}
+$$    
+So $a_1 = 1, a_2 = 0, b_1 = 0, b_2 = 1, c_1 = 1, c_2 = 0$. 
+} 
+\fi        
+\fi        
+
+
+
+\ifnum \Version=10
+
+\part Suppose we want to use homogeneous coordinates to rotate points in $\mathbb R^2$ clockwise by $\pi/2$ radians about the point $(2,1)$. We can use a transform of the form $T(\vec x) = A\vec x$, where $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$
+Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+The matrices we need are
+$$A = 
+\begin{pmatrix} 1&0&2\\0&1&1\\0&0&1\end{pmatrix}
+\begin{pmatrix} 0&1&0\\-1&0&0\\0&0&1 \end{pmatrix}
+\begin{pmatrix} 1&0&-2\\0&1&-1\\0&0&1 \end{pmatrix}
+$$    
+So $a_1 = 2, a_2 = 1, b_1 = 0, b_2 = 1, c_1 = -2, c_2 = -1$. 
+} 
+\fi    
+\fi   
+
+
+
+\ifnum \Version=11
+\part If the LU factorization is $A=LU$, where $U$ is obtained by applying one row operation to $A$, and $A = \begin{pmatrix} 1&2&1\\8&20&50\end{pmatrix}$. Then $L = \begin{pmatrix} 1& 0\\l_1 & 1 \end{pmatrix} $ and $U= \begin{pmatrix} 1&2 & 4\\u_1 & u_2 & u_3 \end{pmatrix}$, where $l_1 = \framebox{\strut\hspace{1.25cm}}$, $u_1 = \framebox{\strut\hspace{1.25cm}}$, $u_2 = \framebox{\strut\hspace{1.25cm}}$ and $u_3 = \framebox{\strut\hspace{1.25cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+To reduce $A$ to $U$ we need exactly one row operation, $R_2 - 8R_1 \to R_2$. That row operation applied to $A$ gives us NEED TO FIX THIS PART $$ U = \begin{pmatrix} 2&3\\0&3\end{pmatrix}$$. So $u_1 = 2, u_2 = 3, u_3=0, u_4 = 3$. 
+} 
+\fi        
+\fi        
+
+
+\ifnum \Version=12
+
+\part If $A$ has LU factorization $A=LU$, where $U = \begin{pmatrix} 2&1\\0&3\end{pmatrix}$, and the solution to $L\vec y = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec y = \begin{pmatrix} 2\\24 \end{pmatrix}$, then the solution to $A\vec x = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec x = \begin{pmatrix} x_1\\x_2\end{pmatrix}$, where $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+If $A\vec x = LU\vec x = \begin{pmatrix} 6\\12 \end{pmatrix}$, and $L\vec y = \begin{pmatrix} 6\\12 \end{pmatrix}$ then $U\vec x = \vec y$. But we are given $\vec y$, so \begin{align} U\vec x = \begin{pmatrix} 2\\24 \end{pmatrix}\end{align} Expressing this as an augmented matrix we obtain 
+$$\begin{pmatrix} 2&0 & 2\\0&3&24 \end{pmatrix}$$
+Thus $x_1 = 1$, $x_2= 24/3 = 8$. 
+} 
+\else
+  
+\fi
+\fi       
+
+\ifnum \Version=13
+\part If $A$ has LU factorization $A=LU$, where $U = \begin{pmatrix} 2&0\\0&3\end{pmatrix}$, and the solution to $L\vec y = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec y = \begin{pmatrix} 2\\24 \end{pmatrix}$, then the solution to $A\vec x = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec x = \begin{pmatrix} x_1\\x_2\end{pmatrix}$, where $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+If $A\vec x = LU\vec x = \begin{pmatrix} 6\\12 \end{pmatrix}$, and $L\vec y = \begin{pmatrix} 6\\12 \end{pmatrix}$ then $U\vec x = \vec y$. But we are given $\vec y$, so \begin{align} U\vec x = \begin{pmatrix} 2\\24 \end{pmatrix}\end{align} Expressing this as an augmented matrix we obtain 
+$$\begin{pmatrix} 2&0 & 2\\0&3&24 \end{pmatrix}$$
+Thus $x_1 = 1$, $x_2= 24/3 = 8$. 
+} 
+\else
+\fi
+\fi    
+
+
+\ifnum \Version=14
+\part If $A = \begin{pmatrix} 2&3\\4&9 \end{pmatrix}$ has the LU factorization $A=LU$, where $L = \begin{pmatrix} 1 & 0 \\ l_1 & 1 \end{pmatrix}$ and $U = \begin{pmatrix} u_1 & u_2 \\ u_3 & u_4 \end{pmatrix}$, then $l_1 = \framebox{\strut\hspace{1.0cm}}$, $u_1 = \framebox{\strut\hspace{1.0cm}}$, $u_2 = \framebox{\strut\hspace{1.0cm}}$, $u_3 = \framebox{\strut\hspace{1.0cm}}$,$u_4 = \framebox{\strut\hspace{1.0cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+To reduce $A$ to $U$ we need exactly one row operation, $R_2 - 2R_1 \to R_2$. That row operation applied to $A$ gives us $$ U = \begin{pmatrix} 2&3\\0&3\end{pmatrix}$$. So $u_1 = 2, u_2 = 3, u_3=0, u_4 = 3$. 
+} 
+\fi        
+\fi  

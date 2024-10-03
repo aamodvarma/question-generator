@@ -1,0 +1,73 @@
+% OTHER UNIT 4 THING
+\ifnum \Version=1         
+    If the columns of $n\times n$ matrix $A$ are orthonormal and $\vec x$ is a vector in $\mathbb R^n$, then $\| A\vec x \| = \|\vec x\|$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True. This is a defining property of orthogonal matrices. Recall also that a square matrix with orthonormal columns is referred to as an orthogonal matrix.  } \fi
+\fi
+\ifnum \Version=2      
+    If $u$ and $ v$ are vectors in $\mathbb R^n$, and $\| u \|^2 + \|v\|^2 = \|u+v\|^2$, then $u$ and $v$ must be orthogonal. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. By the $n$-dimensional Pythagorean Theorem. } \fi
+\fi    
+\ifnum \Version=3  
+    If $A$ is $m\times n$, $A$ has linearly independent columns, and $A$ has the QR factorization $A=QR$, then the columns of $Q$ are a basis for $\Col A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True. By definition of the factorization, $Q$ has columns that are an orthonormal basis for $\Col A$. }  } \fi
+\fi    
+\ifnum \Version=4    
+    If $\vec v_1$ and $\vec v_2$ are non-zero orthogonal vectors, then $\vec v_1$ and $\vec v_2$ must also be linearly independent. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If they are non-zero and orthogonal, they cannot be multiples of each other, so they have to be independent.} \fi
+\fi   
+\ifnum \Version=5    
+    If $\vec u$ is in subspace $S$ and $\vec v \cdot \vec u = 0$, then $\vec v \in S^{\perp}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. $\vec v$ could be in $S$. For example take $S$ to be the span of the vectors $u = \begin{pmatrix} 1\\0\\0\end{pmatrix}$ and $v=\begin{pmatrix} 0\\1\\0\end{pmatrix}$. Both $u$ and $v$ are in $S$ and their dot product is zero. } \fi
+\fi    
+\ifnum \Version=6      
+    If $A$ is $n \times n$ and $\vec x$ and $\vec y$ are vectors in $\mathbb R^{n}$, then $A\vec x \cdot A\vec y = \vec x^{\, T} A^TA\, \vec y$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Don't forget that the dot product between vectors $u$ and $v$ as $u\cdot v = u^T v$.  } \fi
+\fi   
+\ifnum \Version=7 
+   If $\vec u$ is in subspace $S$ and $\vec v \in S^{\perp}$ 
+   then $\vec v \cdot \vec u = 0$.
+ \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True.  } \fi
+\fi     
+\ifnum \Version=8
+    Let $S$ be a 2 dimensional subspace in $\mathbb R^{11}$.  There are no vectors that are in both $S$ and $S^\perp$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. The zero vector is in both. } \fi
+\fi     
+\ifnum \Version=9
+   If $A$ in an $m\times n$ matrix with orthogonal columns, then $A^TA$ is diagonal. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.   } \fi
+\fi     
+\ifnum \Version=10 
+     The Gram-Schmidt algorithm applied to three distinct vectors  
+     $\vec x_1,\vec  x_2,\vec  x_3$  in $\mathbb R^3$ always produces an orthogonal basis 
+     for $\mathbb R^3$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. 
+    The vectors could dependent. For example they could be multiples of each other.}  \fi
+\fi     
+\ifnum \Version=11
+    If $u$ and $ v$ are non-zero orthogonal vectors in $\mathbb R^n$, then $u$ and $v$ must also be linearly independent. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Because if they were dependent then they would be multiples of each other and so their dot product would not be zero. In other words, if they were orthogonal and dependent, then $u = kv$ for some non-zero scalar $k$, and $u\cdot v = k u\cdot u = k\sqrt{\| u \|}$. But $u$ is non-zero, so $u\cdot v$ couldn't be zero. This is a contradiction. } \fi
+\fi     
+\ifnum \Version=12
+    If $A$ is $5\times 3$ and has linearly independent columns, then $A$ has a $QR$ factorization $A=QR$, and $\Col A = \Col Q$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The factorization is defined when $A$ has independent columns, and the columns of $Q$ are an orthonormal basis for $\Col A$. } \fi
+\fi   
+\ifnum \Version=13
+    A least-squares line that best fits the data points $ (0, y_1), (1, y_2), (2,y_3)$ is unique for any values $y_1,y_2,y_3$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The least squares line is determined by solving the normal equations: 
+    $A^TA \hat x = A^T \vec b$. But: 
+    $$A = \begin{pmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{pmatrix}, \quad A^TA = \begin{pmatrix} 3 & 3 \\ 3 & 5 \end{pmatrix} $$
+    Thus, $A^TA$ is invertible and there will be a unique solution to the normal equations, regardless of what $\vec b$ happens to be.  } \fi
+\fi   
+\ifnum \Version=14
+    The Gram-Schmidt algorithm applied to a set of $n$ vectors in $\mathbb R^n$ produces an orthogonal basis for $\mathbb{R}^n$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The algorithm would only give an orthogonal basis for $\mathbb R^n$ if the input vectors were also linearly independent. } \fi
+\fi   
+\ifnum \Version=15
+    QR, GRAM SCHMIDT, LEAST SQUARES, OR OTHER OTHOGONALITY 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+\ifnum \Version=16
+    QR, GRAM SCHMIDT, LEAST SQUARES, OR OTHER OTHOGONALITY 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+& $\bigcirc$  & $\bigcirc$ \\   

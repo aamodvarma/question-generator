@@ -1,0 +1,54 @@
+\ifnum \Version=1
+    \part Suppose the entries of $n\times n$ matrix $A$ are $a_{ij}$, and $n>2$. If $a_{ij} = 1$ when $i+j$ is even, and $a_{ij} = 0$ when $i+j$ is odd, how many pivot columns would $A$ have? \framebox{\strut\hspace{1.25cm}} 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}
+
+    For $n=3$ we have the matrix below.
+    $$\begin{pmatrix} 1&0&1\\0&1&0\\1&0&1\end{pmatrix}$$
+    The first and last rows are identical. If we reduce the matrix to echelon form there will be exactly two pivots. Likewise if $n=4$ we have
+    $$
+    \begin{pmatrix} 1&0&1&0\\0&1&0&1\\1&0&1&0\\0&1&0&1\end{pmatrix}
+    $$
+    The first and third rows are identical. And the second and fourth rows are identical. So if we reduce the matrix to echelon form there will be exactly two pivots again. Likewise if $n>4$ we always have exactly two pivots. So the answer to this question is two. 
+    } 
+   \fi      
+\fi
+
+\ifnum \Version=2
+    \part $A= \begin{pmatrix} 1&0&4\\0&1&26\end{pmatrix}$ and $B=\begin{pmatrix}1&0&4\\4&1&k \end{pmatrix}$ are row equivalent when $k = \framebox{\strut\hspace{1.0cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} Applying one row operation to $B$ we find that $$B = \begin{pmatrix}1&0&4\\4&1&k \end{pmatrix} \sim \begin{pmatrix} 1&0&4\\0&1&k-16\end{pmatrix}$$
+    Comparing to $A$ we need the last entry in the second row to satisfy
+    $$
+    26 = k - 16
+    $$
+    Solving for $k$ gives us $k=42$. 
+    } 
+   \fi    
+\fi
+
+\ifnum \Version=3   
+    \part If $A$ is $5\times6$ and $A\vec x = \vec 0$ has exactly 2 free variables, how many pivots does $A$ have? \framebox{\strut\hspace{1.25cm}}
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    
+    The number of columns of $A$ is the number of variables, and the number of variables is equal the number of basic variables plus the number of free variables.  
+    \begin{align}
+    \text{number of variables} &= (\text{number of basic variables}) + (\text{number of free variables}) \\ 
+    \text{number of variables} &= (\text{number of pivots}) + (\text{number of free variables}) \\ 
+    6 &= (\text{number of pivots}) + 2 \\ 
+    \text{number of pivots}  &= 6 - 2 = 4
+    \end{align}
+    There are 4 pivots. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+\ifnum \Version=4
+    \part Suppose $T(\vec x)$ is a linear transform such that $T \, : \, \mathbb R^2 \to \mathbb R^2$, and $\vec e_1$ and $\vec e_2$ are the standard vectors in $\mathbb R^2$. If $T(\vec e_1) = \begin{pmatrix} 2\\1\end{pmatrix}$, $T(\vec e_2) = \begin{pmatrix} 0\\3\end{pmatrix}$, and $\vec u = \begin{pmatrix} 1\\2\end{pmatrix}$, then $T(\vec u) = \begin{pmatrix} a\\b \end{pmatrix}$, where $a =\framebox{\strut\hspace{1.25cm}}$, $b = \framebox{\strut\hspace{1.25cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} Since $T(\vec x) = A\vec x$ and $T$ is a matrix transform, we have that $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 2&0\\1&3\end{pmatrix}$. So $$T(\vec u) = \begin{pmatrix} 2&0\\1&3\end{pmatrix} \begin{pmatrix} 1\\2\end{pmatrix} = \begin{pmatrix} 2\cdot 1 + 0\cdot 2\\ 1\cdot 1 + 3\cdot 2\end{pmatrix} = \begin{pmatrix} 2\\7\end{pmatrix}$$ So $a = 2$, $b = 7$. 
+    } 
+   \fi
+\fi 

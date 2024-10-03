@@ -1,0 +1,68 @@
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments 
+\usepackage{comment} 
+
+% TIKZ DIAGRAMS (IF NEEDED)
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% SUBSPACES AND ORTHOGONALITY
+\newcommand{\Perp}{^{\perp}}
+\newcommand{\Row}{\text{Row}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\Nul}{\text{Null}}
+\newcommand{\Null}{\text{Null}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Rank}{\text{rank}}
+\newcommand{\Dim}{\text{dim}}
+
+% ADJUST MARGINS
+\usepackage[tmargin=2.2in,bmargin=1.75in]{geometry}
+\geometry{margin=0.75in}
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.0,0.2,0.4} % 
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+\newcommand{\ID}{Fill in the blanks with a dark pen or pencil. 
+Using only capital letters print your \\ first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, the remaining digits \\[2pt] of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}, the high school you attend: \framebox{\strut\hspace{5.2cm}}.}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% AUGMENTED MATRIX
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+% CUSTOMIZED EMPHASIS
+\newcommand{\Emph}[1]{{\color{DarkBlue}\textbf{#1}}} 
+
+% \usepackage{titlesec}
+% % \usepackage{lipsum}
+% \titleformat{\section}
+%   {\normalfont}{\thesection}{0em}{}
+
+% \titleformat{\section}[wrap]
+% {\normalfont}
+% {\thesection.}{0.5em}{}

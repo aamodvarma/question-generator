@@ -1,0 +1,423 @@
+% SPHERICAL OR CYLINDRICAL (14.7)
+
+
+\ifnum \Version=1
+% READY TO BE USED FOR PRACTICE EXAM
+% SPHERICAL INTEGRATION
+% VERBATUM FROM SPRING 2022 QUIZ
+% OK FOR A PRACTICE EXAM
+% hand written solution only
+\question[6] Evaluate the triple integral $I=\displaystyle \iiint_D \frac{16\, x}{\sqrt2}  \, dV$, where $D$ is the region in the first octant bounded by $x^2+y^2+z^2=1$ and the planes $y=0$ and $x=y$. Please show your work. Hint: you may need to use the identity $2\sin ^2x = 1 - \cos(2x)$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} below is a screen capture of a hand-written solution from a previous offer of MATH 2551. 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{202302/Exam3/Images/ImgE3.OR.05.png}
+    \end{figure}  
+    
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+\ifnum \Version=2
+% OK FOR A PRACTICE EXAM
+% NOT SO SHORT CYLINDRICAL EXERCISE
+% VERBATUM FROM SPRING 2022 QUIZ
+% hand written solution only
+\question[6] Use cylindrical coordinates to determine the volume of the region bounded above by $z = 4-3x^2-3y^2$ and bounded below by $z = \sqrt{x^2+y^2}$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} below is a screen capture of a hand-written solution from a previous offer of MATH 2551. 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=11cm]{202302/Exam3/Images/ImgE3.OR1C.png}
+    \end{figure}  
+    
+    There are other ways to set up this particular integral, but the above is sufficient. 
+
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+
+
+
+
+\ifnum \Version=3
+% USE FOR VERSION A
+% LONG SPHERICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+\question[6] An object $D$ lying in the first octant is bounded by the planes $x=0, y=0, z=0$, and the sphere $x^2+y^2 + z^2 = 4$. The density of the object at any point in $D$ is equal to the distance from the point to the origin. 
+
+\begin{parts}
+    \part Use spherical coordinates to calculate the mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Using $\delta = \sqrt{x^2+y^2+z^2} = \rho$, the mass is computed using 
+    \begin{align}
+        M &= \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 \rho^3\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^{\pi/2} \left. \frac14 \rho^4\sin\phi \right|_0^2 \, d\phi\,d\theta \\
+        &= 4 \int_0^{\pi/2} \int_0^{\pi/2} \sin\phi \, d\phi\,d\theta \\
+        &= 4 \int_0^{\pi/2} \left. -\cos\phi \right|_0^{\pi/2} \, d\theta \\
+        &= 4 \int_0^{\pi/2}  \, d\theta \\
+        &= 2\pi
+    \end{align}
+    
+    } 
+   \else
+      \vspace{14cm}
+   \fi    
+
+   \part Use your results from the previous part to set up an integral in spherical coordinates that can be used to determine the $x-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+    \ifnum \Solutions=1 {\color{DarkBlue} In spherical coordinates, $$x = \rho \sin\phi \cos\theta$$and the $x-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar x &= \frac{M_{yz}}{M} \\ 
+    &= \frac{1}{M} \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 (\rho \sin\phi \cos\theta) \, \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+    &= \frac{1}{M} \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 \rho^4\sin^2\phi \cos\theta \, d\rho\,d\phi\,d\theta 
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+ 
+\fi
+
+
+
+
+
+
+
+
+\ifnum \Version=4
+% USE FOR VERSION B
+% LONG CYLINDRICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+\question[6] An object $D$ lying in the first octant is bounded by the planes $x=0, y=0, z=0$, $z=3+4x$ and the cylinder $x^2+y^2 = 4$. The density of the object at a point in $D$ is equal to the distance from the point to the $z$-axis. 
+
+    \begin{parts} 
+    \part Use cylindrical coordinates to calculate the total of mass of the object, $M$. Please show your work. 
+
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} using $\delta = \sqrt{x^2+y^2} = r$, the $z-$coordinate of the center of mass is computed using 
+    \begin{align}
+        M &= \iiint_D  \delta \, dV \\
+        &= \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\cos\theta}  \delta(r,\theta) \, r\, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\cos\theta}   r^2 \, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\cos\theta}   r^2 \, dz\,dr\,d\theta \\ 
+        &= \int_0^{\pi/2} \int_0^2    r^2 \, (3+4r\cos\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^2     \, (3r^2+4r^3\cos\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/2}  \left. \, (r^3+r^4\cos\theta) \right|_0^2 \, d\theta \\
+        &= \int_0^{\pi/2}  (8+16\cos\theta) d\theta \\
+        &=  \left. (8\theta+16\sin\theta) \right|_0^{\pi/2} \\
+        &= 4\pi + 16  
+    \end{align}
+    
+    } 
+   \else
+      \vspace{14cm}      
+   \fi
+    \part Use your results from the previous part to set up a triple integral that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $z-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar z &= \frac{M_{xy}}{M} \\
+    &= \frac{1}{16 +4\pi} \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\cos\theta}  z \, \delta(r,\theta) \, r\, dz\,dr\,d\theta
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+    
+\fi
+
+
+\ifnum \Version=5
+% USE FOR VERSION C
+% LONG SPHERICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+\question[6] An object $D$ lies above the $xy-$plane and below the upper half of the sphere $x^2+y^2 + z^2 = 4$. The density of the object at any point in $D$ is equal to the distance from the point to the origin. 
+
+\begin{parts}
+    \part Use spherical coordinates to calculate the mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Using $\delta = \sqrt{x^2+y^2+z^2} = \rho$, the mass is computed using 
+    \begin{align}
+        M &= \int_0^{2\pi} \int_0^{\pi/2} \int_0^2 \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/2} \int_0^2 \rho^3\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/2} \left. \frac14 \rho^4\sin\phi \right|_0^2 \, d\phi\,d\theta \\
+        &= 4 \int_0^{2\pi} \int_0^{\pi/2} \sin\phi \, d\phi\,d\theta \\
+        &= 4 \int_0^{2\pi} \left. -\cos\phi \right|_0^{\pi/2} \, d\theta \\
+        &= 4 \int_0^{2\pi}  \, d\theta \\
+        &= 8\pi
+    \end{align}
+    
+    } 
+   \else
+      \vspace{14cm}
+   \fi    
+
+   \part Use your results from the previous part to set up an integral in spherical coordinates that can be used to determine the $x-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+   
+    \ifnum \Solutions=1 {\color{DarkBlue} In spherical coordinates, $$x = \rho \sin\phi \cos\theta$$and the $x-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar x &= \frac{M_{yz}}{M} \\ 
+    &= \frac{1}{M} \int_0^{2\pi} \int_0^{\pi/2} \int_0^2 (\rho \sin\phi \cos\theta) \, \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+    &= \frac{1}{M} \int_0^{2\pi} \int_0^{\pi/2} \int_0^2 \rho^4\sin^2\phi \cos\theta \, d\rho\,d\phi\,d\theta 
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+
+ \fi 
+
+
+
+
+\ifnum \Version=6
+% USE FOR VERSION B
+% LONG CYLINDRICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+\question[6] An object $D$ lying in the first octant is bounded by the planes $y=x, y=0, z=0$, $z=9+8y$ and the cylinder $x^2+y^2 = 1$. The density of the object at any point in $D$ is equal to the distance from the given point to the $z$-axis. 
+
+    \begin{parts} 
+    \part Use cylindrical coordinates to calculate the total of mass of the object, $M$. Please show your work. 
+
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} using $\delta = \sqrt{x^2+y^2} = r$, mass is computed using the following. 
+    \begin{align}
+        M &= \iiint_D  \delta \, dV \\
+        &= \int_0^{\pi/4} \int_0^1 \int_0^{9+8r\sin\theta}  \delta(r,\theta) \, r\, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/4} \int_0^1 \int_0^{9+8r\sin\theta}   r^2 \, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/4} \int_0^1    r^2 \, (9+8r\sin\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/4} \int_0^1     \, (9r^2+8r^3\sin\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/4}  \left. \, (3r^3+2r^4\sin\theta) \right|_0^1 \, d\theta \\
+        &= \int_0^{\pi/4}  (3+2\sin\theta) d\theta \\
+        &=  \left. (3\theta-2\cos\theta) \right|_0^{\pi/4} \\
+        &= 3\pi/4 - 2/\sqrt2  + 2
+    \end{align}
+    
+    Note the following. 
+    \begin{itemize}
+        \item We could also write final answer as $M = 3\pi/4 + 2 - \sqrt2$. 
+        \item We cannot use:
+        \begin{align}
+            M = \iiint_D  \delta \, dV 
+        &= \int_0^{\pi/4}  \int_0^{9+8r\sin\theta} \int_0^1 r^2\, dr\,dz\,d\theta
+        \end{align}
+        In other words we can't switch the order of the innermost two integrals because the limits for $z$ use both $r$ and $\theta$. 
+        \item A common error might be to use $0 \le \theta \le \pi/2$, which would give us the answer $$M = 3\pi/2 + 2 $$
+        The above is not correct!         
+        \item A common mistake might be to integrate with respect to the wrong variable. For example, doing something like: 
+        \begin{align}
+            \int_0^{\pi/4}  (3+2\sin\theta) d\theta 
+            &=  \left. (3r+2\sin\theta) \right|_0^{\pi/4} 
+        \end{align}     
+        The above is not correct! 
+    \end{itemize}
+    } 
+   \else
+      \vspace{14cm}      
+   \fi
+    \part Use your results from the previous part to set up a triple integral that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $z-$coordinate of the center of mass, $\bar z$, is
+    \begin{align}
+    \bar z 
+    &= \frac{M_{xy}}{M} 
+    = \frac{1}{M} \int_0^{\pi/4} \int_0^1 \int_0^{9+8r\sin\theta}  z \,  r^2\, dz\,dr\,d\theta
+    \end{align}
+    Note the following. 
+    \begin{itemize}
+        \item The limits of integration in part (b) should be identical to what was used in part (a). So if an error were made in the limits for part (a), then points should be deducted in part a. And if the limits in part (b) are the same as what were used in part (a) then no further point deductions are needed for the limits of integration. 
+        \item It isn't necessary to re-state what $M$ is in this last part of the question, because it should have been found in part (a). 
+    \end{itemize}    
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+    
+\fi
+
+
+
+\ifnum \Version=7
+% USE FOR VERSION C
+% LONG SPHERICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+\question[6] An object $D$ is in the shape of an ice cream cone, as it is bounded on top by the sphere $\rho =2$ and on the sides by the cone $\phi = \pi/4$. The density of the object at any point in $D$ is equal to the distance from the given point to the origin. 
+
+\begin{parts}
+    \part Use spherical coordinates to calculate the mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Using $\delta = \sqrt{x^2+y^2+z^2} = \rho$, the mass is computed using 
+    \begin{align}
+        M &= \int_0^{2\pi} \int_0^{\pi/4} \int_0^2 \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/4} \int_0^2 \rho^3\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/4} \left. \frac14 \rho^4\sin\phi \right|_{\rho = 0}^{\rho = 2} \, d\phi\,d\theta \\
+        &= 4 \int_0^{2\pi} \int_0^{\pi/4} \sin\phi \, d\phi\,d\theta \\
+        &= 4 \int_0^{2\pi} \left. -\cos\phi \right|_0^{\pi/4} \, d\theta \\
+        &= -4 \int_0^{2\pi}  \sqrt{2}/2 - 1\, d\theta \\
+        &= 8\pi(1-\sqrt2/2)
+    \end{align}
+    % If we had used $\delta = \rho$ and $\pi/4 \le \rho \le 2$ and $0 \le \phi \le \pi/2$, we would find that 
+    % \begin{align}
+    %     M &= \int_0^{2\pi} \int_0^{\pi/4} \int_{\pi/4}^2 \rho \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+    %     = 
+    % \end{align}
+    } 
+   \else
+      \vspace{14cm}
+   \fi    
+
+   \part Use your results from the previous part to set up an integral in spherical coordinates that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+   
+    \ifnum \Solutions=1 {\color{DarkBlue} In spherical coordinates, $z = \rho \cos\phi$, and the $z-$coordinate of the center of mass, $\bar z$, is
+    \begin{align}
+    \bar z &= \frac{M_{xy}}{M} \\ 
+    &= \frac{1}{M} \int_0^{2\pi} \int_0^{\pi/4} \int_0^2 (\rho \cos\phi) \, \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+    &= \frac{1}{M} \int_0^{2\pi} \int_0^{\pi/4} \int_0^2 \rho^4\sin\phi\cos\phi \cos\theta \, d\rho\,d\phi\,d\theta 
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+
+\fi 
+
+
+
+\ifnum \Version=8
+% LONG CYLINDRICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+% MESSY ALGEBRA BUT CAN BE MADE A BIT EASIER
+\question[6] An object $D$ is the right circular cylinder whose base is the cylinder $r=2\cos\theta$ in the $xy-$plane and whose top is the plane $z=15+4y$. The density of the object at any point in $D$ is equal to the distance from the given point to the $z$-axis. 
+
+    \begin{parts} 
+    \part Use cylindrical coordinates to calculate the total of mass of the object, $M$. Please show your work. 
+
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} using $\delta = \sqrt{x^2+y^2} = r$, the total mass is 
+    \begin{align}
+        M = \iiint_D  \delta \, dV 
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} \int_0^{15+4r\sin\theta}   r^2 \, dz\,dr\,d\theta\\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta}    r^2 \, (15+4r\sin\theta) \,dr\,d\theta \\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta}     \, (15r^2 + 4r^3\sin\theta) \,dr\,d\theta \\
+        &= \int_{-\pi/2}^{\pi/2}  \left. \, (5r^3+r^4\sin\theta) \right|_0^{2\cos\theta} \, d\theta \\
+        &= \int_{-\pi/2}^{\pi/2}  (40\cos^3\theta+16\cos^4\theta \sin\theta) d\theta \\
+        &= 40 \int_{-\pi/2}^{\pi/2}  \cos^3\theta \, d\theta +16 \int_{-\pi/2}^{\pi/2}\cos^4\theta \sin\theta d\theta \label{ref:cos4sin}\\
+        &= 80 \int_{0}^{\pi/2}  \cos\theta(1 - \sin^2\theta ) \, d\theta  -\frac{16}{5}\cos^5\theta |_{-\pi/2}^{\pi/2} \\
+\        &= 80 \int_{0}^{\pi/2}  \cos\theta \, d\theta - 80\int_{0}^{\pi/2} \cos\theta \sin^2\theta \, d\theta  + 0 \\
+        &= 80  \sin\theta \huge|_{0}^{\pi/2} - \frac{80}{3} \sin^3\theta|_{0}^{\pi/2} \\
+        &= 80  - \frac{80}{3} 
+    \end{align}    
+    Note that the second term in (\ref{ref:cos4sin}) is the integral of an odd function over a symmetric integral, so it must be zero. Also in (\ref{ref:cos4sin}) we used the idea that integrals of even functions over symmetric intervals centered on the origin can be simplified. 
+    } 
+   \else
+      \vspace{14cm}      
+   \fi
+    \part Use your results from the previous part to set up a triple integral that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $z-$coordinate of the center of mass, $\bar z$, is
+    \begin{align}
+    \bar z &= \frac{M_{xy}}{M} 
+    = \frac{1}{M} \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} \int_0^{15+4r\sin\theta}  z \,  r^2\, dz\,dr\,d\theta
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+    
+\fi
+
+
+
+
+
+\ifnum \Version=9
+% LONG CYLINDRICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+% FROM 15.8
+% MESSY ALGEBRA BUT CAN BE MADE A BIT EASIER
+\question[6] An object $D$ is the right circular cylinder whose base is the cylinder $r=2\cos\theta$ in the $xy-$plane and whose top is the plane $z=15+4y$. The density of the object at any point in $D$ is equal to the distance from the given point to the $z$-axis. 
+
+    \begin{parts} 
+    \part Use cylindrical coordinates to calculate the total of mass of the object, $M$. Please show your work. 
+
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} using $\delta = \sqrt{x^2+y^2} = r$, the total mass is 
+    \begin{align}
+        M &= \iiint_D  \delta \, dV \\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} \int_0^{15+4r\sin\theta}  \delta(r,\theta) \, r\, dz\,dr\,d\theta\\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} \int_0^{15+4r\sin\theta}   r^2 \, dz\,dr\,d\theta\\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta}    r^2 \, (15+4r\sin\theta) \,dr\,d\theta \\
+        &= \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta}     \, (15r^2 + 4r^3\sin\theta) \,dr\,d\theta \\
+        &= \int_{-\pi/2}^{\pi/2}  \left. \, (5r^3+r^4\sin\theta) \right|_0^{2\cos\theta} \, d\theta \\
+        &= \int_{-\pi/2}^{\pi/2}  (40\cos^3\theta+16\cos^4\theta \sin\theta) d\theta \\
+        &= 40 \int_{-\pi/2}^{\pi/2}  \cos^3\theta \, d\theta +16 \int_{-\pi/2}^{\pi/2}\cos^4\theta \sin\theta d\theta 
+    \end{align}
+    The second term is the integral of an odd function over a symmetric integral, so it must be zero. The first term is the integral of an even function over a symmetric interval, so it can be simplified.
+    \begin{align}
+        M 
+        &= 80 \int_{0}^{\pi/2}  \cos^3\theta \, d\theta  \\
+        &= 80 \int_{0}^{\pi/2}  \cos\theta(1 - 
+        \sin^2\theta ) \, d\theta  \\
+        &= 80 \int_{0}^{\pi/2}  \cos\theta \, d\theta - 80\int_{0}^{\pi/2} \cos\theta \sin^2\theta \, d\theta  \\
+        &= 80  \sin\theta \huge|_{0}^{\pi/2} - \frac{80}{3} \sin^3\theta|_{0}^{\pi/2} \\
+        &= 80  - \frac{80}{3} 
+    \end{align}    
+
+    } 
+   \else
+      \vspace{14cm}      
+   \fi
+    \part Use your results from the previous part to set up a triple integral that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $z-$coordinate of the center of mass, $\bar z$, is
+    \begin{align}
+    \bar z &= \frac{M_{xy}}{M} 
+    = \frac{1}{M} \int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} \int_0^{15+4r\sin\theta}  z \,  r^2\, dz\,dr\,d\theta
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+    
+\fi
+
+
+
+
+
+\ifnum \Version=12
+% LONG CYLINDRICAL THAT USES MOMENT OF INERTIA
+% VERBATUM FROM SPRING 2022 QUIZ
+% hand written solution only
+\question[6] An object $D$ is bounded by the planes $z=0$ and $z=3+4x+8y$ and the cylinder $x^2+y^2 = 2$. The density of the object at a point is equal to the distance from the point to the $z$-axis. Use cylindrical coordinates to calculate the moment of inertia of $D$ about the $z$-axis.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} A screen capture from a hand-written solution from a previous offer of MATH 2551 is below. 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{2023Spr/Exam3/Images/ImgE3.OR.07.png}
+    \end{figure}  
+    
+    } 
+   \else
+      
+   \fi
+    
+\fi
+    

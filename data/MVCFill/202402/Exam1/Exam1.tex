@@ -1,0 +1,101 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\Version}{7} 
+\newcommand{\Solutions}{1} 
+
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+
+% TIKZ DIAGRAMS (IF NEEDED)
+\usepackage{color}
+\usepackage{tikz}  
+\usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% ADJUST MARGINS 
+\usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+\geometry{margin=0.76in}
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.0,0.2,0.25} % 
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+\headheight 42pt % distance from top of page to top of header
+\headsep 12pt % space between header and top of body
+
+\newcommand{\ID}{Fill in the blanks with a dark pen or pencil. 
+Using only capital letters print your \\ first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, the remaining digits \\[2pt] of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}, the High School you attend: \framebox{\strut\hspace{5.2cm}}.}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% AUGMENTED MATRIX
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+% --------------------------------------------------------------------
+\begin{document}
+
+\input{202402/Exam1/Exam1Cover}
+\newpage 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample A} \fi
+\ifnum \Version=2 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample B} \fi
+\ifnum \Version=3 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample C} \fi
+\ifnum \Version=4 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample D} \fi
+\ifnum \Version=5 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample E} \fi
+\ifnum \Version=6 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample F} \fi
+\ifnum \Version=7 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version A} \fi
+\ifnum \Version=8 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version B} \fi
+\ifnum \Version=9 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version C} \fi
+\ifnum \Version=10 \newcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version D} \fi
+
+% % % VERSION 1
+\input{202402/Exam1/Exam1Questions}
+
+% VERSION 2
+\newpage 
+\renewcommand{\Version}{8} 
+\renewcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version B}
+\input{202402/Exam1/Exam1Questions}
+% VERSION 3
+\newpage 
+\renewcommand{\Version}{9} 
+\renewcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version C}
+\input{202402/Exam1/Exam1Questions}
+% VERSION 4
+\newpage 
+\renewcommand{\Version}{10} 
+\renewcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version D}
+\input{202402/Exam1/Exam1Questions}
+% % VERSION 5
+% \newpage 
+% \renewcommand{\Version}{5} 
+% \renewcommand{\TestName}{Year 1 MATH 2551 Exam 1 Version E}
+% \input{202402/Exam1/Exam1Questions}
+% % VERSION 6
+% \newpage 
+% \renewcommand{\Version}{6} 
+% \renewcommand{\TestName}{Year 1 MATH 2551 Exam 1 Sample F}
+% \input{202402/Exam1/Exam1Questions}
+
+
+\end{document}

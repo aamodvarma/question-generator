@@ -1,0 +1,258 @@
+% QUESTIONS FOR THOMAS SECTIONS 14.5 
+
+\ifnum \Version=1
+% THOMAS 14.5
+% FROM 2022
+\part The rate of change of $f(x,y)=2x^2+y$ at $P(1,1)$ in the direction of $\mathbf u=\langle 0.6, 0.8 \rangle$ is \framebox{\strut\hspace{0.8cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} Here we apply the formula for the directional derivative, $D_{\mathbf u} f = \nabla f \cdot \mathbf u$. 
+$$(\nabla f \cdot \mathbf u )\big|_P = (\langle 4x,1\rangle \cdot \langle 0.6, 0.8 \rangle ) \big|_P= (2.4x + 0.8 ) \big|_P = 2.4 + 0.8 = 3.2$$
+
+} 
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=2
+% THOMAS 14.5
+% FROM 2022
+\part The maximum rate of change of $f(x,y)=3x^2+y^3+2y$ at $P(2,1)$ is \framebox{\strut\hspace{2cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $13$ \\[12pt] \textit{Solutions:} 
+$$\left| \nabla f(x,y) \right| = \left| \langle 6x, 3y^2+2\rangle \right|$$
+Then at $P(2,1)$
+$$\left| \nabla f(2,1) \right| = \left| \langle 12, 5\rangle \right| = \sqrt{12^2+5^2} = \sqrt{169}=13$$
+For the purposes of this course it is ok to leave your answer as $\sqrt{12^2+5^2}$. 
+
+} 
+\else
+  
+\fi       
+\fi
+
+
+\ifnum \Version=3
+% THOMAS 14.5
+% FROM 2022
+\part The rate of change of $z=x^2+xy$ at $P(1,1)$ in the direction of $\mathbf v=\langle 1,2 \rangle$ is \framebox{\strut\hspace{1.5cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Set $\mathbf u = \frac{\mathbf v}{|\mathbf v|} = \frac{1}{\sqrt 5}\langle 1, 2 \rangle$. Then 
+\begin{align}
+    D_{\mathbf u} f(x,y) = (\nabla f \cdot \mathbf u )
+    &= (\langle 2x+y,x\rangle \cdot \langle \frac{1}{\sqrt5}, \frac{2}{\sqrt5} \rangle ) = \frac1{\sqrt5}(4x+y) 
+\end{align}
+At $P(1,1)$, $D_{\mathbf u}f(1,1) = 5/\sqrt5$. Also ok to express as $D_{\mathbf u} f(1,1)=\sqrt5$. 
+
+} 
+\else
+  
+\fi
+
+\fi
+
+
+
+\ifnum \Version=4
+% THOMAS 14.5
+\part If $a\ge 0$ and the rate of change of $z=x^2-2xy$ at $P(1,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$, then $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 2x-2y, -2x\rangle \\
+     \nabla z(1,1) &= \langle 0,-2\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$. That is, 
+\begin{align}
+    \mathbf u &= \left\langle \pm 1,0 \right\rangle
+\end{align}
+So $a=1$ and $b=0$. Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. 
+
+}
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=5
+% THOMAS 14.5
+\part If $a\ge 0$ and the rate of change of $z=x-xy+2y$ at $P(1,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$, then $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 1-y,-x+2\rangle \\
+     \nabla z(1,1) &= \langle 0,1\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$. That is, 
+\begin{align}
+    \mathbf u &= \left\langle \pm 1,0 \right\rangle
+\end{align}
+So $a=1$ and $b=0$. Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. 
+
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+\ifnum \Version=6 % NOT NEEDED? 
+% THOMAS 14.5
+% FROM 2022
+% BUG SOMEWHERE
+\part The rate of change of $z=x^2+3y$ at $P(2,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $5$ when $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the length of the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 2x, 3\rangle \\
+     \nabla z(2,1) &= \langle 4, 3\rangle \\
+    |\nabla z (2,1)| &= |\langle 4, 3\rangle| = \sqrt{4^2 + 3^2} = 5
+\end{align}
+The length of the gradient at $P$ is 5, and the rate of change of $z$ at the given point must also be $5$. So the unit vector must point in the direction of $\nabla z$. That is, 
+\begin{align}
+    \mathbf u &= \left\langle \frac45, \frac35 \right\rangle
+\end{align}
+So $a=\frac45$ and $b=\frac35$. Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. 
+
+\vspace{12pt}
+\textbf{An Alternate Method} \\
+The rate of change of $z$ in the direction of $\mathbf u$ is $D_{\mathbf u}z = \nabla z \cdot \mathbf u$. At the given point $P$, this is 
+\begin{align}
+    D_{\mathbf u}z(2,1) &= \langle 4, 3 \rangle \cdot \langle a, b \rangle = |\langle 4, 3 \rangle | \, | \langle a, b \rangle| \cos \theta
+\end{align}
+But $\mathbf u$ is a unit vector, so $| \langle a, b \rangle | = 1$. And $|\langle 4, 3 \rangle | = 5$. Therefore, 
+\begin{align}
+    D_{\mathbf u}z(2,1) &= \langle 4, 3 \rangle \cdot \langle a, b \rangle = 5 \cos \theta
+\end{align}
+We are given that the rate of change of $z$ at $P$ is 5, so we can solve
+\begin{align}
+    D_{\mathbf u}z(2,1) = 5 &= 5 \cos \theta
+\end{align}
+We need $\theta = 0$, which implies that the gradient and unit vectors point in the same direction. The gradient at $P$ is 
+\begin{align}
+    \nabla z (2,1) = \langle 4,3\rangle
+\end{align}
+The direction vector $\mathbf u$ points in the same direction and has unit length, so 
+\begin{align}
+    \mathbf u &= \left\langle \frac45, \frac35 \right\rangle
+\end{align}
+So $a=\frac45$ and $b=\frac35$. Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. 
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+
+\ifnum \Version=7
+% THOMAS 14.5
+\part The rate of change of $f(x,y)=x^5+5y^2$ at the point $P(1,1)$ in the direction of $\mathbf u=\langle 0.6, 0.8 \rangle$ is equal to \framebox{\strut\hspace{1cm}}. And $\displaystyle \DFDY$ at the point $Q(3,5)$ is equal to \framebox{\strut\hspace{1cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} Here we apply the formula for the directional derivative, $D_{\mathbf u} f = \nabla f \cdot \mathbf u$. 
+$$(\nabla f \cdot \mathbf u )\big|_P = (\langle 5x,10y\rangle \cdot \langle 0.6, 0.8 \rangle ) \big|_P= (3x + 8y ) \big|_P = 3 + 8 = 11$$
+And 
+$$\DFDY  = 10y, \qquad f_y(3,5) = 50$$
+
+} 
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=8
+% THOMAS 14.5
+\part If $a > 0$ and the rate of change of $z=6x-xy+5y$ at $P(4,5)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$, then $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 6-y,-x+5\rangle \\
+     \nabla z(4,5) &= \langle -1,1\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$ at $P$ for the vectors to be orthogonal. That is, 
+\begin{align}
+    \mathbf u &=  \frac{\pm1}{\sqrt2} \left( \mathbf i + \mathbf j \right) = \frac{\pm1}{\sqrt2} \begin{pmatrix} 1\\1\end{pmatrix} = \frac{\pm\sqrt2}{2} \begin{pmatrix} 1\\1\end{pmatrix}
+\end{align}
+It was given that $a>0$, so $$a=+\frac{1}{\sqrt2}, \quad \frac{1}{\sqrt2}$$
+Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. 
+
+}
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=9
+% THOMAS 14.5
+\part If the rate of change of $z=4x-xy+5y$ at $P(1,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$, then $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 4-y,-x+5\rangle \\
+     \nabla z(1,1) &= \langle 3,4\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$ at $P$ for the vectors to be orthogonal. That is, 
+\begin{align}
+    \mathbf u &= \pm ( \frac45\mathbf i - \frac35 \mathbf j)
+\end{align}
+So either $$a=+4/5, \quad b=-3/5$$
+or $$a=-4/5, \quad b = +3/5$$ Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. Perhaps most students will set $\mathbf u =  \frac45 \mathbf i - \frac35  \mathbf j$. 
+
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+\ifnum \Version=10
+% THOMAS 14.5
+\part The rate of change of $f(x,y)=4x^5+10y^2$ at the point $P(1,1)$ in the direction of $\mathbf u=\langle 0.6, 0.8 \rangle$ is equal to \framebox{\strut\hspace{1cm}}. And $\DFDX$ at $Q(2,3)$ is \framebox{\strut\hspace{1cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} Here we apply the formula for the directional derivative, $D_{\mathbf u} f = \nabla f \cdot \mathbf u$. 
+$$(\nabla f \cdot \mathbf u )\big|_P = (\langle 20x,20y\rangle \cdot \langle 0.6, 0.8 \rangle ) \big|_P= (12x + 16y ) \big|_P = 12 + 16 = 28$$
+And 
+$$\DFDX  = 20x^4, \qquad f_x(2,3) = 20\cdot2^4 = 20 \cdot 16 = 320$$
+} 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=11
+% THOMAS 14.5
+\part If the rate of change of $z=4x-xy+5y$ at $P(1,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$, then $ a = \framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$.
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+Calculate the gradient of $z(x,y)$ at the point:
+\begin{align}
+    \nabla z &= \langle 4-y,-x+5\rangle \\
+     \nabla z(1,1) &= \langle 3,4\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$ at $P$ for the vectors to be orthogonal. That is, 
+\begin{align}
+    \mathbf u &= \pm ( \frac45\mathbf i - \frac35 \mathbf j)
+\end{align}
+So either $$a=+4/5, \quad b=-3/5$$
+or $$a=-4/5, \quad b = +3/5$$ Note that $\mathbf u$ is a unit vector, so $|\mathbf u| = 1$. Perhaps most students will set $\mathbf u =  \frac45 \mathbf i - \frac35  \mathbf j$. 
+
+}
+\else
+  
+\fi
+\fi

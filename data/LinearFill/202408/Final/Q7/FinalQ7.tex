@@ -1,0 +1,618 @@
+\question[4]
+
+\ifnum \Version=1 
+    Consider the system of linear equations $Ax=b$, where $A$ and $b$ are given below. 
+    \begin{align*}
+        A = \begin{pmatrix} 1&0&1&-2\\2&0&3&-7\\1&0&3&-8\end{pmatrix}, \ b = \begin{pmatrix} 2\\5\\4 \end{pmatrix}
+    \end{align*}
+    \begin{parts}
+        \part Express the system as a $3\times5$ augmented matrix, $\begin{pmatrix} A & b\end{pmatrix}$, and then reduce the augmented matrix to RREF. Please show your work. 
+        \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+        \begin{pmatrix} A & b \end{pmatrix} 
+        = \begin{pmatrix} 1&0&1&-2&2\\2&0&3&-7&5\\1&0&3&-8&4\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&1&-2&2\\0&0&1&-3&1\\0&0&2&-6&2\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&0&1 &1 \\0&0&1&-3&1\\0&0&0&0&0\end{pmatrix} 
+        \end{align}
+        
+        } 
+        \else
+        \vspace{9cm}
+        \fi
+        \part Use your results in part (a) to state a basis for $\Col A$. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\
+        A basis for $\Col A$ is given by the pivotal columns of the original matrix (not the RREF). 
+        $$\left\{ \begin{pmatrix} 1\\2\\1\end{pmatrix}, \begin{pmatrix} 1\\3\\3 \end{pmatrix}\right\}$$
+        } 
+        \else
+        \vspace{2cm}
+        \fi
+        \part If possible, use your results in part (a) to express the solution set of the linear system $Ax=b$ in parametric vector form. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue}\\
+        By inspection:
+        \begin{align}
+            \vec x = \begin{pmatrix}x_1\\x_2\\x_3\\x_4 \end{pmatrix} = \begin{pmatrix} 1-x_4\\x_2\\1 +3x_4 \\x_4\end{pmatrix} = \begin{pmatrix} 1\\0\\1\\0\end{pmatrix} + x_2 \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix} + x_4\begin{pmatrix} -1\\0\\3\\1\end{pmatrix}
+        \end{align}
+        } 
+        \fi        
+    \end{parts}
+\fi
+
+
+
+\ifnum \Version=2
+Consider the quadratic form $Q = \vec x ^T A \vec x = 5x_1^2 - 5x_2^2 + 5x_3^2 + 6x_1x_3$, where  $A = A^T$ and $\vec x = \begin{pmatrix} x_1 & x_2 & x_3 \end{pmatrix}^T$. The eigenvalues of the symmetric matrix $A$ are $\lambda_1 = 8$, $\lambda_2 = 2$, and $\lambda_3 = -5$. 
+
+\begin{parts}
+    \part Construct matrix $A$. For this part you can state the matrix, you do not need to show work for this part because it can be done by inspection. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The matrix is $$A = \begin{pmatrix} 5&0&3\\0&-5&0\\3&0&5\end{pmatrix}$$  
+    } 
+    \else 
+    \vspace{3 cm}
+    \fi    
+
+    
+    \part Determine all locations where $Q$ is maximized subject to the constraint that $\|\vec x \| = 1$.  Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The eigenvector corresponding to the largest eigenvalue is in the null space of 
+    \begin{align}
+        A - \lambda_1 I = \begin{pmatrix} 5&0&3\\0&-5&0\\3&0&5\end{pmatrix} - \begin{pmatrix} 8&0&0\\0&8&0\\0&0&8\end{pmatrix} = \begin{pmatrix} -3&0&3\\0&-13&0\\3&0&-3\end{pmatrix}
+    \end{align}
+    A vector in the null space is
+    \begin{align}
+        \vec v_1 = \begin{pmatrix} 1\\0\\1\end{pmatrix}
+    \end{align}
+    The maximum values of $Q$ are obtained at two locations: 
+    \begin{align}
+        \pm \frac{1}{\sqrt 2} \vec v_1 = \pm \frac{1}{\sqrt 2}  \begin{pmatrix} 1\\0\\1\end{pmatrix}
+    \end{align}    
+    } 
+    \else 
+    \vspace{7 cm}
+    \fi    
+
+    
+    \part Determine all locations where $Q$ is minimized subject to the constraint that $\|\vec x \| = 1$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The eigenvector corresponding to the smallest eigenvalue is in the null space of 
+        \begin{align}
+            A - \lambda_3 I = \begin{pmatrix} 5&0&3\\0&-5&0\\3&0&5\end{pmatrix} + (-5) \begin{pmatrix} 1&0&0\\0&1&0\\0&0&1\end{pmatrix} = \begin{pmatrix} 10&0&3\\0&0&0\\3&0&10\end{pmatrix}
+        \end{align}
+        A vector in the null space is
+        \begin{align}
+            \vec v_3 = \begin{pmatrix} 0\\1\\0\end{pmatrix}
+        \end{align}
+        The minimum values of $Q$ are obtained at two locations: 
+        \begin{align}
+            \pm \vec v_3 = \pm \begin{pmatrix} 0 \\1\\0\end{pmatrix}
+        \end{align}           
+    } 
+    \else 
+    \vspace{2 cm}
+    \fi    
+\end{parts}
+\fi
+
+
+
+\ifnum \Version=3
+    Consider the system of linear equations $Ax=b$, where $A$ and $b$ are given below. 
+    \begin{align*}
+        A = \begin{pmatrix} 1&1&0&-2\\2&3&0&-7\\1&3&0&-8\end{pmatrix}, \ b = \begin{pmatrix} 2\\5\\4 \end{pmatrix}
+    \end{align*}
+    \begin{parts}
+        \part Express the system as a $3\times5$ augmented matrix, $\begin{pmatrix} A & b\end{pmatrix}$, and then reduce the augmented matrix to RREF. Please show your work. 
+        \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+        \begin{pmatrix} A & b \end{pmatrix} 
+        = \begin{pmatrix} 1&1&0&-2&2\\2&3&0&-7&5\\1&3&0&-8&4\end{pmatrix} 
+        \sim \begin{pmatrix} 1&1&0&-2&2\\0&1&0&-3&1\\0&2&0&-6&2\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&0&1 &1 \\0&1&0&-3&1\\0&0&0&0&0\end{pmatrix} 
+        \end{align}
+        
+        } 
+        \else
+        \vspace{9cm}
+        \fi
+        \part Use your results in part (a) to state a basis for $\Col A$. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\
+        A basis for $\Col A$ is given by the pivotal columns of the original matrix (not the RREF). 
+        $$\left\{ \begin{pmatrix} 1\\2\\1\end{pmatrix}, \begin{pmatrix} 1\\3\\3 \end{pmatrix}\right\}$$
+        } 
+        \else
+        \vspace{2cm}
+        \fi
+        \part If possible, use your results in part (a) to express the solution set of the linear system $Ax=b$ in parametric vector form. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue}\\
+        By inspection:
+        \begin{align}
+            \vec x = \begin{pmatrix}x_1\\x_2\\x_3\\x_4 \end{pmatrix} = \begin{pmatrix} 1-x_4\\1+3x_4\\x_3\\x_4\end{pmatrix} = \begin{pmatrix} 1\\1\\0\\0\end{pmatrix} + x_3 \begin{pmatrix} 0\\0\\1\\0 \end{pmatrix} + x_4\begin{pmatrix} -1\\3\\0\\1\end{pmatrix}
+        \end{align}
+        } 
+        \fi        
+    \end{parts}
+\fi
+
+
+
+\ifnum \Version=4
+    Consider the matrix $
+        A = \begin{pmatrix} 1&1\\1&0\\0&1 \end{pmatrix}$.
+    \begin{parts}
+    \part Calculate $A^TA$.
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    $A^TA$ is
+        \begin{align}
+            A^TA = \begin{pmatrix} 1&1&0\\1&0&1 \end{pmatrix}\begin{pmatrix} 1&1\\1&0\\0&1 \end{pmatrix}= \begin{pmatrix} 2&1\\1&2\end{pmatrix}
+        \end{align}
+    } 
+    \else 
+    \vspace{2cm}
+    \fi
+    \part Determine the singular values of $A$. Please show your work. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The eigenvalues of $A^TA$ are $1$ and $3$ because $A-3I$ and $A-I$ are singular. The square roots of the eigenvalues are the singular values, so 
+    $$\sigma_1 = \sqrt3, \sigma_2=1$$
+    Note that the largest singular value must be the first singular value. It would not be correct to set $\sigma_2 = \sqrt3$. 
+    } 
+    \else 
+    \vspace{5 cm}
+    \fi
+    \part Determine the first right singular vector of $A$, $\vec v_1$. Please show your work.
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The right singular vectors are the unit eigenvectors of $A^TA$. The first right singular vector is a unit eigenvector that corresponds to $\sigma_1$, which is the positive square root of the largest eigenvalue of $A^TA$. 
+        \begin{align}
+            A^TA  - \lambda_1 I = A^TA  - \sigma_1^2 I = \begin{pmatrix} 2&1\\1&2 \end{pmatrix} - 3\begin{pmatrix} 1&0\\0&1 \end{pmatrix} = \begin{pmatrix} -1&1\\1&-1 \end{pmatrix}
+        \end{align}
+        A unit vector in the null space of this matrix is the vector 
+        \begin{align}
+            \vec v_1 = \frac{1}{\sqrt 2}\begin{pmatrix} 1\\1\end{pmatrix}
+        \end{align}
+        It is ok to use the negative of this vector. 
+        \begin{align}
+            \vec v_1 = -\frac{1}{\sqrt 2}\begin{pmatrix} 1\\1\end{pmatrix}
+        \end{align}
+        But those two vectors are the only two possible answers for this part. 
+    } 
+    \else 
+    \vspace{5 cm}
+    \fi
+    \part Determine the first left singular vector of $A$, $\vec u_1$. Please show your work.
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    The first left singular vector can be found using the usual formula
+        $$\vec u_1 = \frac{1}{\sigma_1} A\vec v_1$$
+        Using our values for $\vec v_1$, $\sigma_1$ and $A$, we obtain
+        \begin{align}
+            \vec u_1 
+            = \frac{1}{\sqrt3}\begin{pmatrix} 1&1\\1&0\\0&1\end{pmatrix} \begin{pmatrix} 1/\sqrt{2}\\1/\sqrt2\end{pmatrix} 
+            = \frac{1}{\sqrt3} \begin{pmatrix} 2/\sqrt2\\1/\sqrt2\\1/\sqrt2\end{pmatrix} = \frac{1}{\sqrt6}\begin{pmatrix}2\\1\\1 \end{pmatrix}
+        \end{align}
+    } 
+    
+    \fi    
+    \end{parts}
+\fi 
+
+\ifnum \Version=5
+    Suppose $A = \begin{pmatrix} 4&-6\\3&8\\0&0 \end{pmatrix}$. 
+\begin{parts}
+    \part Calculate $A^TA$ and the singular values of $A$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $A^TA$ is
+        \begin{align}
+            A^TA = \begin{pmatrix} 4&3&0\\-6&8&0 \end{pmatrix}\begin{pmatrix} 4&-6\\3&8\\0&0 \end{pmatrix}= \begin{pmatrix} 25&0\\0&100\end{pmatrix}
+        \end{align}
+        The eigenvalues of $A^TA$ are $\lambda_1 = 100$ and $\lambda_2 = 25$. So $\sigma_1 = 10$, and $\sigma_2 = 5$. 
+    } 
+   \else
+      \vspace{5cm}
+   \fi
+    \part Determine the first right singular vector of $A$, $\vec v_1$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    The right singular vectors are the unit eigenvectors of $A^TA$. The first right singular vector is a unit eigenvector that corresponds to $\sigma_1$, which is the positive square root of the largest eigenvalue of $A^TA$. 
+        \begin{align}
+            A^TA  - \lambda_1 I = A^TA  - \sigma_1^2 I = \begin{pmatrix} 25&0\\0&100 \end{pmatrix} - \begin{pmatrix} 100&0\\0&100 \end{pmatrix} \sim \begin{pmatrix} 1&0\\0&0 \end{pmatrix}
+        \end{align}
+        A unit vector in the null space of this matrix is the vector 
+        \begin{align}
+            \vec v_1 = \begin{pmatrix} 0\\1\end{pmatrix}
+        \end{align}
+        It is ok to use the negative of this vector, the SVD is not unique. But $\vec v_1$ must have unit length. 
+    } 
+   \else
+      \vspace{6cm}
+   \fi    
+    \part Determine the first left singular vector of $A$, $\vec u_1$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The first left singular vector can be found using the usual formula
+    $$\vec u_1 = \frac{1}{\sigma_1} A\vec v_1$$
+    Using our values for $\vec v_1$, $\sigma_1$ and $A$, we obtain
+    \begin{align}
+        \vec u_1 = \frac{1}{10}\begin{pmatrix} 4&-6\\3&8\\0&0 \end{pmatrix} \begin{pmatrix} 0\\1 \end{pmatrix} = \frac{1}{10}\begin{pmatrix} -6\\8\\0 \end{pmatrix} 
+    \end{align}
+    }       
+   \fi    
+\end{parts}
+\fi
+
+
+
+
+\ifnum \Version=6
+    Suppose $A = \begin{pmatrix} 1&0\\6&5 \end{pmatrix}$. 
+    \begin{parts}
+    \part Calculate the eigenvalues of $A$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $A$ is triangular, so the eigenvalues must be the entries on the main diagonal. We can set $\lambda_1 = 1$ and $\lambda_2 = 5$. 
+    } 
+   \else
+      \vspace{3cm}
+   \fi
+    \part Determine the eigenvectors of $A$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $\lambda_1$: $$A-\lambda_1I = \begin{pmatrix} 0&0\\6&4\end{pmatrix}$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 2\\-3\end{pmatrix}$.
+
+    $\lambda_2$: $$A-\lambda_2 I = \begin{pmatrix} -4&0\\6&0\end{pmatrix}$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 0\\1\end{pmatrix}$.
+} 
+   \else
+      \vspace{7cm}
+   \fi    
+    \part If possible, construct real matrices $P$, $P^{-1}$, and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The columns of $P$ are the eigenvectors of $A$, so 
+    $$P = \begin{pmatrix} 2&0\\-3&1 \end{pmatrix}$$
+    The inverse can be computed using the formula for the inverse of a $2\times 2$ matrix
+    $$P^{-1} = \frac12 \begin{pmatrix} 1&0\\3&2 \end{pmatrix}$$
+    And the $D$ matrix is diagonal and its diagonal entries are the eigenvalues of $A$. 
+    $$D = \begin{pmatrix} 1&0\\0&5 \end{pmatrix}$$
+    Don't forget that the entries on the main diagonal of $D$ must correspond to the columns of $P$. 
+    }       
+   \fi    
+\end{parts}
+\fi
+\ifnum \Version=7
+    Consider the system of linear equations $Ax=b$, where $A$ and $b$ are given below. 
+    \begin{align*}
+        A = \begin{pmatrix} 4&0&3&5\\8&0&7&1\\12&0&11&-3\end{pmatrix}, \ b = \begin{pmatrix} -1\\7\\15 \end{pmatrix}
+    \end{align*}
+    \begin{parts}
+        \part Express the system as a $3\times5$ augmented matrix, $\begin{pmatrix} A & b\end{pmatrix}$, and then reduce the augmented matrix to RREF. Please show your work. 
+        \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+        \begin{pmatrix} 4&0&3&5&-1\\8&0&7&1&7\\12&0&11&-3&15\end{pmatrix} 
+        \sim \begin{pmatrix} 4&0&3&5&-1\\0&0&1&-9&9\\0&0&2&-18&18\end{pmatrix} 
+        &\sim \begin{pmatrix} 4&0&0&32&-28\\0&0&1&-9&9\\0&0&0&0&0\end{pmatrix} \\
+        &\sim \begin{pmatrix} 1&0&0&8&-7\\0&0&1&-9&9\\0&0&0&0&0\end{pmatrix} 
+        \end{align}
+        } 
+        \else
+        \vspace{9cm}
+        \fi
+        \part Use your results in part (a) to state a basis for $\Col A$. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\
+        A basis for $\Col A$ is given by the pivotal columns of the original matrix (not the RREF). We can use these vectors for the basis:
+        $$\left\{ \begin{pmatrix} 4\\8\\12\end{pmatrix}, \begin{pmatrix} 3\\7\\11 \end{pmatrix}\right\}$$ Other choices are ok too. Any two independent vectors that are in $\Col A$ should also be a basis.
+        } 
+        \else
+        \vspace{2cm}
+        \fi
+        \part If possible, use your results in part (a) to express the solution set of the linear system $Ax=b$ in parametric vector form. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue}\\
+        By inspection:
+        \begin{align}
+            \vec x = \begin{pmatrix}x_1\\x_2\\x_3\\x_4 \end{pmatrix} 
+            = \begin{pmatrix} -7-8x_4\\x_2\\9+9x_4\\x_4\end{pmatrix} 
+            = \begin{pmatrix} -7\\0\\9\\0\end{pmatrix} 
+            + x_2 \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix} 
+            + x_4\begin{pmatrix} -8\\0\\9\\1\end{pmatrix}
+        \end{align}
+        } 
+        \fi        
+    \end{parts}
+\fi
+
+\ifnum \Version=8
+    Three points in $\mathbb R^2$ with coordinates $(x,y)$ are $(-1,-1)$, $(0,7)$, $(1,3)$. Our goal is to obtain the coefficients $c_0, c_1$, so that the function, $y(x)$, that best fits the given points, where $y = c_0 + c_1x$. 
+    \begin{enumerate}
+    \item[a)] Use the given data to construct an inconsistent linear system of the form $A\vec x=\vec b$, where $\vec x = \begin{pmatrix} c_0 & c_1 \end{pmatrix}^T$. You do not need to show your work (it can be done by inspection). 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The system is $A\vec x = \vec b$, where 
+            \begin{align}
+                A = \begin{pmatrix}1&-1\\1&0\\1&1 \end{pmatrix}, 
+                \quad \vec x = \begin{pmatrix} c_0\\c_1 \end{pmatrix},
+                \quad \vec b = \begin{pmatrix} -1\\7\\3\end{pmatrix}
+            \end{align}
+            The ordering of the entries of $x$ is specified in the question and determines the columns of $A$. In other words the first column of $A$ must be the column of 1's. 
+        } 
+        \else 
+        \vfill
+        \fi
+    \item[b)] Use your results from the previous items to construct the normal equations, that when solved, yield the coefficients $c_0$ and $c_1$. Express the equations as an augmented matrix with two rows. Do not solve your equations. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    The normal equations are $A^TA\vec x = A^T\vec b$, with
+    $$A^TA = \begin{pmatrix} 3&0\\0&2\end{pmatrix}, \quad A^T\vec b = \begin{pmatrix}9\\4\end{pmatrix}$$
+    The augmented matrix is
+    \begin{align}
+        \begin{pmatrix} A^TA & A^T\vec b \end{pmatrix} 
+        = \begin{pmatrix} 3&0&9\\0&2&4\end{pmatrix}
+    \end{align}
+    } 
+    \else 
+    \vfill
+    \fi
+    \item[c)] Use the normal equations and row operations to obtain the solution to the normal equations by reducing your augmented matrix to RREF. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Reducing to RREF yields 
+    $$\begin{pmatrix} 1&0&3\\0&1&2\end{pmatrix}$$
+    } 
+    \else 
+    \vspace{3cm}
+    \fi
+    \item[d)] Use the values you found for the coefficients to express $y$ in the form $y = c_0 + c_1x$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    $$y = 3 + 2x$$
+    } 
+    \else 
+    \vspace{3cm}
+    \fi
+\end{enumerate}
+\fi 
+
+
+\ifnum \Version=9
+    Consider the matrix below. 
+    \begin{align}
+        A = \begin{pmatrix} 4&4\\0&2\\2&0 \end{pmatrix}
+    \end{align}
+    The singular values of $A$ are $\sigma_1=6$ and $\sigma_2=2$.
+    \begin{parts}
+        \part Calculate $A^TA$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The product $A^TA$ is
+        \begin{align}
+            A^TA = \begin{pmatrix} 4&0&2\\4&2&0 \end{pmatrix}\begin{pmatrix} 4&4\\0&2\\2&0 \end{pmatrix}= \begin{pmatrix} 20&16\\16&20\end{pmatrix}
+        \end{align}
+        } 
+        \else 
+        \vspace{3cm}
+        \fi
+        \part Determine the first right singular vector of $A$, $\vec v_1$. Please show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The right singular vectors are the unit eigenvectors of $A^TA$. The first right singular vector is a unit eigenvector that corresponds to $\sigma_1$, which is the positive square root of the largest eigenvalue of $A^TA$. 
+        \begin{align}
+            A^TA  - \lambda_1 I = A^TA  - \sigma_1^2 I = \begin{pmatrix} 20&16\\16&20 \end{pmatrix} - \begin{pmatrix} 36&0\\0&36 \end{pmatrix} = 16 \begin{pmatrix} -1&1\\1&-1 \end{pmatrix}
+        \end{align}
+        A unit vector in the null space of this matrix is the vector 
+        \begin{align}
+            \vec v_1 = \frac{1}{\sqrt 2}\begin{pmatrix} 1\\1\end{pmatrix}
+        \end{align}
+        It is ok to use the negative of this vector:
+        \begin{align}
+            -\frac{1}{\sqrt 2}\begin{pmatrix} 1\\1\end{pmatrix}
+        \end{align}
+        Note that the SVD is not unique. 
+        } 
+        \else 
+        \vfill
+        \fi
+        \part Determine the first left singular vectors of $A$, $\vec u_1$. Please show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The first left singular vector can be found using the usual formula
+        $$\vec u_1 = \frac{1}{\sigma_1} A\vec v_1$$
+        Using our values for $\vec v_1$, $\sigma_1$ and $A$, we obtain
+        \begin{align}
+            \vec u_1 = \frac{1}{6}\begin{pmatrix} 4&4\\0&2\\2&0 \end{pmatrix} \begin{pmatrix} 1/\sqrt{2}\\1/\sqrt2\end{pmatrix} = \frac16 \begin{pmatrix} 8/\sqrt2\\2/\sqrt2\\2/\sqrt2\end{pmatrix} = \frac{1}{3\sqrt2}\begin{pmatrix}4\\1\\1 \end{pmatrix}
+        \end{align}
+        } 
+        \else 
+        \vfill
+        \fi
+    \end{parts}
+\fi 
+\ifnum \Version=10
+    Suppose $A = \begin{pmatrix} 4&2\\2&1 \end{pmatrix}$. 
+    \begin{parts}
+    \part Calculate the eigenvalues of $A$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    It isn't necessary to use the characteristic poly here. $A$ is singular, so we can tell by inspection that one eigenvalue is zero. And the other eigenvalue will have to be the trace of the matrix, which is $4+1 = 5$. 
+    } 
+   \else
+      \vspace{3cm}
+   \fi
+    \part Determine the eigenvectors of $A$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $\lambda_1 = 0 $: $$A-\lambda_1I = A$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 1\\-2\end{pmatrix}$.
+
+    $\lambda_2 = 5$: $$A-\lambda_2 I = \begin{pmatrix} -1&2\\2&1\end{pmatrix}$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 2\\1\end{pmatrix}$.
+} 
+   \else
+      \vspace{7cm}
+   \fi    
+    \part If possible, construct real matrices $P$, and $D$ such that $A = PDP^{T}$, where $D$ is a diagonal matrix and $P$ is an orthogonal matrix.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The columns of $P$ are the unit eigenvectors of $A$, so 
+    $$P = \frac{1}{\sqrt5} \begin{pmatrix} 1&2\\-2&1 \end{pmatrix}$$
+    And the $D$ matrix is diagonal and its diagonal entries are the eigenvalues of $A$. 
+    $$D = \begin{pmatrix} 0&0\\0&5 \end{pmatrix}$$
+    Don't forget that the entries on the main diagonal of $D$ must correspond to the columns of $P$. And that because we need $P$ to be orthogonal that its columns need to have unit length. 
+    }       
+   \fi    
+   \end{parts}
+\fi 
+
+\ifnum \Version=11
+        Consider the system of linear equations $Ax=b$, where $A$ and $b$ are given below. 
+    \begin{align*}
+        A = \begin{pmatrix} 1&0&3&-2\\3&0&10&-8\\2&0&7&-6\end{pmatrix}, \ b = \begin{pmatrix} 4\\13\\9 \end{pmatrix}
+    \end{align*}
+    \begin{parts}
+        \part Express the system as a $3\times5$ augmented matrix, $\begin{pmatrix} A & b\end{pmatrix}$, and then reduce the augmented matrix to RREF. Please show your work. 
+        \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+        \begin{pmatrix} A & b \end{pmatrix} 
+        = \begin{pmatrix} 1&0&3&-2&4\\3&0&10&-8&13\\2&0&7&-6&9\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&3&-2&4\\0&0&1&-2&1\\0&0&1&-2&1\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&0&4 &1 \\0&0&1&-2&1\\0&0&0&0&0\end{pmatrix} 
+        \end{align}
+        
+        } 
+        \else
+        \vspace{9cm}
+        \fi
+        \part Use your results in part (a) to state a basis for $\Col A$. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\
+        A basis for $\Col A$ is given by the pivotal columns of the original matrix (not the RREF). 
+        $$\left\{ \begin{pmatrix} 1\\3\\2\end{pmatrix}, \begin{pmatrix} 3\\10\\7 \end{pmatrix}\right\}$$
+        } 
+        \else
+        \vspace{2cm}
+        \fi
+        \part If possible, use your results in part (a) to express the solution set of the linear system $Ax=b$ in parametric vector form. You do not need to show your work.
+        \ifnum \Solutions=1 {\color{DarkBlue}\\
+        By inspection:
+        \begin{align}
+            \vec x = \begin{pmatrix}x_1\\x_2\\x_3\\x_4 \end{pmatrix} 
+            = \begin{pmatrix} 1-4x_4\\x_2\\1 + 2x_4 \\x_4\end{pmatrix} 
+            = \begin{pmatrix} 1\\0\\1\\0\end{pmatrix} 
+            + x_2 \begin{pmatrix} 0\\1\\0\\0 \end{pmatrix} 
+            + x_4\begin{pmatrix} -4\\0\\2\\1\end{pmatrix}
+        \end{align}
+        } 
+        \fi        
+    \end{parts}
+\fi 
+
+\ifnum \Version=12
+    Consider the quadratic form $Q = \vec x ^T A \vec x = 6x_1^2 - 4x_2^2 + 6x_3^2 + 6x_1x_3$, where $\vec x = \begin{pmatrix} x_1 & x_2 & x_3 \end{pmatrix}^T$, and $A = A^T$. The eigenvalues of symmetric matrix $A$ are $\lambda_1 = 9$, $\lambda_2 = 3$, and $\lambda_3 = -4$. 
+    \begin{parts}
+        \part Construct matrix $A$. For this part you can state the matrix, you do not need to show work for this part because it can be done by inspection. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            The matrix is $$A = \begin{pmatrix} 6&0&3\\0&-4&0\\3&0&6\end{pmatrix}$$
+        } 
+        \else 
+        \vspace{3cm}
+        \fi
+        \part Determine the locations where $Q$ is maximized subject to the constraint that $\|\vec x \| = 1$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The eigenvector corresponding to the largest eigenvalue is in the null space of 
+        \begin{align}
+            A - \lambda_1 I = \begin{pmatrix} 6&0&3\\0&-4&0\\3&0&6\end{pmatrix} - \begin{pmatrix} 9&0&0\\0&9&0\\0&0&9\end{pmatrix} = \begin{pmatrix} -3&0&3\\0&-13&0\\3&0&-3\end{pmatrix}
+        \end{align}
+        A vector in the null space is
+        \begin{align}
+            \vec v_1 = \begin{pmatrix} 1\\0\\1\end{pmatrix}
+        \end{align}
+        The maximum values of $Q$ are obtained at two locations: 
+        \begin{align}
+            \pm \frac{1}{\sqrt 2} \vec v_1 = \pm \frac{1}{\sqrt 2}  \begin{pmatrix} 1\\0\\1\end{pmatrix}
+        \end{align}
+        } 
+        \else 
+        \vfill
+        \fi        
+        \part Determine the locations where $Q$ is minimized subject to the constraint that $\|\vec x \| = 1$.
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        The eigenvector corresponding to the smallest eigenvalue is in the null space of 
+        \begin{align}
+            A - \lambda_3 I = \begin{pmatrix} 6&0&3\\0&-4&0\\3&0&6\end{pmatrix} + \begin{pmatrix} 4&0&0\\0&4&0\\0&0&4\end{pmatrix} = \begin{pmatrix} 10&0&3\\0&0&0\\3&0&10\end{pmatrix}
+        \end{align}
+        A vector in the null space is
+        \begin{align}
+            \vec v_3 = \begin{pmatrix} 0\\1\\0\end{pmatrix}
+        \end{align}
+        The minimum values of $Q$ are obtained at two locations: 
+        \begin{align}
+            \pm \vec v_3 = \pm \begin{pmatrix} 0 \\1\\0\end{pmatrix}
+        \end{align}     
+        } 
+        \else 
+        \vfill
+        \fi        
+        \end{parts}
+\fi 
+\ifnum \Version=13 % 
+    Consider the quadratic form
+    $
+        Q = \vec x ^T A \vec x = 6x_1^2 - 4x_2^2 + 6x_3^2 + 6x_1x_3
+    $
+    where $A = A^T$ and $\vec x = \begin{pmatrix} x_1 & x_2 & x_3 \end{pmatrix}^T$.
+    The eigenvalues of symmetric matrix $A$ are $\lambda_1 = 9$, $\lambda_2 = 3$, and $\lambda_3 = -4$. 
+
+\begin{parts}
+    \part Construct matrix $A$. For this part you can state the matrix, you do not need to show work for this part because it can be done by inspection. \vspace{3cm}
+    \part Determine all locations where $Q$ is maximized subject to the constraint $\|\vec x \| = 1$. Show your work. \vfill
+    \part Determine all locations where $Q$ is minimized subject to the constraint $\|\vec x \| = 1$. Show your work.\vfill
+\end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=14 % 
+    Suppose $A = \begin{pmatrix} 4&2\\3&3 \end{pmatrix}$. 
+    \begin{parts}
+    \part Calculate the eigenvalues of $A$.  Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    We can rely on the characteristic polynomial: $$\det(A- \lambda I) = (4-\lambda)(3 - \lambda) - 6 = \lambda^2 - 7 \lambda - 6 = (\lambda -1)(\lambda - 6)$$ Thus the eigenvalues can be $\lambda_1 = 1$ and $\lambda_2 = 6$. 
+    } 
+   \else
+      \vspace{4cm}
+   \fi
+    \part Determine the eigenvectors of $A$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $\lambda_1 = 1$: $$A-\lambda_1I = \begin{pmatrix} 3&2\\3&2\end{pmatrix}$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 2\\-3\end{pmatrix}$.
+
+    $\lambda_2 = 6$: $$A-\lambda_2 I = \begin{pmatrix} -2&2\\3&-3\end{pmatrix}$$ A vector in the nullspace is $\vec v_1 = \begin{pmatrix} 1\\1\end{pmatrix}$.
+} 
+   \else
+      \vspace{8cm}
+   \fi    
+    \part If possible, construct real matrices $P$, $P^{-1}$, and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The columns of $P$ are the eigenvectors of $A$, so 
+    $$P = \begin{pmatrix} 2&1\\-3&1 \end{pmatrix}$$
+    The inverse can be computed using the formula for the inverse of a $2\times 2$ matrix
+    $$P^{-1} = \frac15 \begin{pmatrix} 1&-1\\3&2 \end{pmatrix}$$
+    And the $D$ matrix is diagonal and its diagonal entries are the eigenvalues of $A$. 
+    $$D = \begin{pmatrix} 1&0\\0&6 \end{pmatrix}$$
+    Don't forget that the entries on the main diagonal of $D$ must correspond to the columns of $P$. 
+    }       
+   \fi    
+\end{parts}
+\fi 
+
+
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    OPEN RESPONSE ON UNIT 4 or UNIT 5 (eg - Gram Schmidt, SVD, Symmetric matrices, Least Squares, etc)
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    OPEN RESPONSE ON UNIT 1, UNIT 2, OR UNIT 3 (eg - BASIS FOR A SUBSPACE, DIAGONALIZE A MATRIX, LU FACTORIZATION, INVERSE OF A 3x3, etc)
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    OPEN RESPONSE ON UNIT 4 or UNIT 5 (eg - Gram Schmidt, SVD, Symmetric matrices, Least Squares, etc)
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    OPEN RESPONSE ON UNIT 1, UNIT 2, OR UNIT 3 (eg - BASIS FOR A SUBSPACE, DIAGONALIZE A MATRIX, LU FACTORIZATION, INVERSE OF A 3x3, etc)
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=19 % shouldn't need this version for fall 2023
+    OPEN RESPONSE ON UNIT 4 or UNIT 5 (eg - Gram Schmidt, SVD, Symmetric matrices, Least Squares, etc)
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 

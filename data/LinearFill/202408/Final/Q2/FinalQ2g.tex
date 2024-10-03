@@ -1,0 +1,71 @@
+% ORTHOG COMPLEMENTS
+\ifnum \Version=1         
+    If $A$ is $3\times4$, then $(\Col A)^{\perp}$ is a subspace of $\mathbb R^3$.   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The columns have three entries so $\Col A$ is a subspace of $\mathbb R^3$, and the set of vectors orthogonal to $\Col A$ must also be vectors in $\mathbb R^3$. } \fi
+\fi
+\ifnum \Version=2      
+    If $ V$ is a subspace spanned by $ \vec v_1$ and $ \vec v_2$, and $ \vec x \cdot \vec v_1 = \vec x \cdot \vec v_2 =0$, then $ \vec x \in V ^{\perp}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. We know that $\vec v_1$ and $\vec v_2$ span the subspace $V$. We are also given that $x$ is orthogonal to those two vectors, which means that $x$ is orthogonal to any vector in $V$. So $x$ is in $V^{\perp}$. } \fi
+\fi    
+\ifnum \Version=3  
+    If $S$ is an $n$-dimensional subspace of $\mathbb R^n$, then $\dim(S^{\perp}) = n$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. In general, if $S$ is an $n$-dimensional subspace of $\mathbb R^n$, then $n = \dim(S) + \dim(S^{\perp})$. } \fi
+\fi    
+\ifnum \Version=4    
+    If $\vec y$ is in subspace $W$, and $\vec y \in W^{\perp}$, then $\vec y= \vec 0$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The only vector that satisfies this property is the zero vector. } \fi
+\fi   
+\ifnum \Version=5    
+    The orthogonal complement of the subspace $V = \{ \vec x \in \mathbb R^3 \, | \, x_1 = x_3 \}$ is a line. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. $V$ is a subspace of $\mathbb R^3$, so $3 = \dim V + \dim(V^{\perp})$. And $\dim V = 2$, so $\dim( V^{\perp})=1$, meaning that the subspace is a line. } \fi
+\fi    
+\ifnum \Version=6      
+    If $ V$ is a subspace spanned by vectors $ \vec v_1$ and $ \vec v_2$, and $ \vec x \cdot \vec v_1 = \vec x \cdot \vec v_2 =0$, then $ \vec x$ spans $V ^{\perp}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. We know that $\vec x$ is in $V^{\perp}$ but we don't know whether $\vec x$ spans $V^{\perp}$. It would if the vectors we in $\mathbb R^3$, but we don't know if that is the case. } \fi
+\fi        
+\ifnum \Version=7 
+   If $V = \{ \vec x \in \mathbb R^4 \, | \, x_1 = x_3 \}$, then the dimension of $V^{\perp}$ is 2. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. $V$ is a subspace of $\mathbb R^4$, so $4 = \dim V + \dim(V^{\perp})$. And $\dim V = 3$, so $\dim( V^{\perp})=1$, meaning that the subspace is  one dimensional. } 
+  \fi
+\fi     
+\ifnum \Version=8
+     If $A$ is $3\times4$, then $(\Row A)^{\perp}$ is a subspace of $\mathbb R^3$.   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The rows have four entries so $\Row A$ is a subspace of $\mathbb R^4$, and the set of vectors orthogonal to $\Row A$ must also be vectors in $\mathbb R^4$.}  \fi
+\fi     
+\ifnum \Version=9
+  If $S$ is an $4$-dimensional subspace of $\mathbb R^9$, then $\dim(S^{\perp}) = 1$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The dimension of $S$ and $S^\perp$ must add up to $9$.  } \fi
+\fi     
+\ifnum \Version=10
+    If $A$ is $3\times5$, then $(\Col A)^{\perp}$ is a subspace of $\mathbb R^3$.   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The columns have three entries so $\Col A$ is a subspace of $\mathbb R^3$, and the set of vectors orthogonal to $\Col A$ must also be vectors in $\mathbb R^3$. } \fi
+\fi     
+\ifnum \Version=11
+    If $S = \{\vec x\in \mathbb R^3 \colon x_1+x_2+x_3 =0\}$, then $\dim (S^{\perp}) = 2$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The dimension of $S$ is 2, so the dimension of its compliment is 1.    } \fi
+\fi     
+\ifnum \Version=12
+    If $x$ in the Null space of $A$, then $x$ is orthogonal to each row of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.  } \fi
+\fi   
+\ifnum \Version=13
+    If $ \vec v_1$ is in subspace $V$, and $\vec v_1 \cdot \vec v_2 =0$, then $ \vec v_2 \in V ^{\perp}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. For example take $V$ to be the plane spanned by $\vec v_1$ and $\vec v_2$, for any $ \vec v_1$ and $ \vec v_1$ so that $\vec v_1 \cdot \vec v_2 =0$. An example could be $$\vec v_1 = \begin{pmatrix} 1\\0\\0\end{pmatrix}, \vec v_2 = \begin{pmatrix} 0\\1\\0\end{pmatrix} , V = \text{Span}\{\vec v_1, \vec v_2\}$$ }  \fi
+\fi   
+\ifnum \Version=14
+    If $S$ is a two-dimensional subspace of $\mathbb R^{30}$, then the dimension of  $S^{\perp}$ is 32.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False.  } \fi
+\fi   
+\ifnum \Version=15
+    The orthogonal complement of the subspace $V = \{ \vec x \in \mathbb R^4 \, | \, x_1 = x_3 \}$ has dimension 1. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. $V$ is a subspace of $\mathbb R^4$, so $4 = \dim V + \dim(V^{\perp})$. And $\dim V = 2$, so $\dim( V^{\perp})=2$, meaning that the subspace is  two dimensional.} \fi
+\fi   
+\ifnum \Version=16
+    TRUE FALSE ON ORTHOG COMPLEMENTS 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.  } \fi
+\fi   
+\ifnum \Version=17
+    TRUE FALSE ON ORTHOG COMPLEMENTS 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.  } \fi
+\fi   
+& $\bigcirc$  & $\bigcirc$ \\   

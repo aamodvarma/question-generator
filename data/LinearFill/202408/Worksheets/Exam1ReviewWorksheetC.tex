@@ -1,0 +1,190 @@
+\documentclass[12pt]{exam}
+
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+\usepackage{spalign}
+
+\let\mat\spalignmat
+\let\vector\spalignvec
+
+\addpoints
+
+\usepackage{tikz}
+\usetikzlibrary{automata, arrows.meta}
+
+\tikzset{
+  vector/.style={thick, -{Stealth[length=3mm]}},
+  }
+  
+% Initials
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{2pt}}
+
+% Joe Rabinoff's matrix package
+\usepackage{spalign} 
+
+% Do not need to show
+\newcommand{\JustDoIt}{\textit{You do not need to justify your reasoning for questions on this page.}}
+
+% FANCY HEADERS - MAKE EMPTY
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{{ }}
+
+% \node[anchor=north east,scale=0.25] at ([shift={(8in,-1cm)}]current page.north west) {\includegraphics[width=0.4\textwidth]{images/GT-Logo.png} };   
+
+% ADJUST MARGINS
+\usepackage[tmargin=1.0in,bmargin=1.0in]{geometry}
+\geometry{margin=0.8in}
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.1,0.2,0.5} % 
+\definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+\definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+\definecolor{LightBlue}{rgb}{0.0,0.5,1.0} % 
+\definecolor{Orange}{rgb}{1.0,0.5,0.0} % 
+\definecolor{LightGray}{rgb}{0.8,0.8,0.8} % 
+\definecolor{LightGreen}{rgb}{0.3,0.9,0.3} % 
+
+
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+
+% FONT FORMAT
+% \renewcommand*\rmdefault{ppl} % change font to Palatino
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 1554}
+\newcommand{\Semester}{Fall}
+
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+
+% SUBSPACES AND ORTHOGONALITY
+\newcommand{\Perp}{^{\perp}}
+\newcommand{\Row}{\text{Row}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\Nul}{\text{Null}}
+\newcommand{\Null}{\text{Null}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Rank}{\text{rank}}
+\newcommand{\Dim}{\text{dim}}
+
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Exam Review Worksheet C, Modules 1 and 2}
+\begin{document}
+    
+\begin{center}
+{\Large \TestName} %, \Semester \ \Year}
+\end{center}
+
+
+\begin{questions}
+\question[1] Fill in the blanks with a dark pen or pencil. 
+Using capital letters only, print your first name: \framebox{\strut\hspace{5cm}}, last name: \framebox{\strut\hspace{5cm}}, the \\[2pt] remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}, and the High School that you attend: \\[2pt]\framebox{\strut\hspace{6cm}}.
+
+\question[5] Indicate \textbf{true} if the statement is true, otherwise, indicate \textbf{false}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.20cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{.15cm} p{13.6cm} p{.6cm} p{.6cm} }
+        
+        & & true &  false  \\[2pt] \hline 
+
+        a) & The set $S=\{\vec x \in \mathbb R^3 \, | \, x_1  x_2 x_3 = 0 \}$ is a subspace. & $\bigcirc$  & $\bigcirc$ \\
+
+        b) & If every vector in the range of the transform $T_A(\vec  x) = A \vec x$ is also in the co-domain of $T_A(\vec x)$, then the transform must be onto. & $\bigcirc$  & $\bigcirc$ \\ 
+
+        c) & If $A$ is $m\times n$, then the set of solutions to $A\vec x = \vec 0$, where $\vec 0$ is the zero vector in $\mathbb R^m$, is a subspace. & $\bigcirc$  & $\bigcirc$ \\       
+
+
+        d) & If the set of vectors $\{\vec x, \vec y\}$ is a basis for subspace $S$, then the set $\{\vec x + \vec y, 2\vec x + 2 \vec y\}$ is also a basis for $S$.  & $\bigcirc$  & $\bigcirc$ \\ 
+
+        e) & If vectors $\vec u$, $\vec v$, and $\vec w$ are a linearly independent of vectors, then $\vec u$ and $\vec v$ are also linearly independent.  & $\bigcirc$  & $\bigcirc$ \\
+        
+        \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+
+    \question[2] Indicate whether the situations are \textbf{possible} or \textbf{impossible}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.20cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{12cm} p{1.4cm} p{1.75cm} }
+        
+        & & possible &  impossible  \\[2pt] \hline 
+        
+        a) & $T_A(x) = Ax$ is a linear transform that is one-to-one, but there are vectors in the co-domain of $T_A$ that are not in the range of $T_A$. & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        b) & $S$ is a set of vectors that are a basis for subspace $U$, but one of the vectors in $S$ is the zero vector. & $\bigcirc$  & $\bigcirc$ \\[8pt] 
+        
+        \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+    \vspace{-6pt} 
+
+    \question[4] Fill in the blanks. You do not need to justify your reasoning. 
+    
+    \begin{parts}
+
+        \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first projects points in $\mathbb R^2$ onto the line $x_1 = 0$ and then rotates them by $\pi/2$ radians counterclockwise about the origin. Then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+        \part Suppose $A$ is a $2\times 2$ matrix such that $\Nul A$ is the line $x_1-3x_2=0$, and $\Col A$ is the line $x_2=4x_1$. Then if $A=\begin{pmatrix}1 & c_1 \\ c_2 & c_3 \end{pmatrix} $, then $c_1= \framebox{\strut\hspace{1cm}}$, $c_2 =  \framebox{\strut\hspace{1cm}}$, and $c_3 =  \framebox{\strut\hspace{1cm}}$.
+
+        \part The dimension of the subspace $\{\vec x \in \mathbb R^{9} \, | \, x_1 + x_2 +x_3 = 0 \}$ is \framebox{\strut\hspace{1.25cm}} .
+        
+        \part If the LU factorization is $A=LU$, where $U$ is obtained by applying one row operation to $A$, and $A = \begin{pmatrix} 1&2&1\\8&20&50\end{pmatrix}$. Then $L = \begin{pmatrix} 1& 0\\l_1 & 1 \end{pmatrix} $ and $U= \begin{pmatrix} 1&2 & 4\\u_1 & u_2 & u_3 \end{pmatrix}$, where $l_1 = \framebox{\strut\hspace{1.25cm}}$, $u_1 = \framebox{\strut\hspace{1.25cm}}$, $u_2 = \framebox{\strut\hspace{1.25cm}}$ and $u_3 = \framebox{\strut\hspace{1.25cm}}$.
+
+    \end{parts}
+
+\end{questions}
+
+\newpage
+{\color{DarkBlue} \textit{Solutions} 
+\begin{enumerate}
+    \item Note that your facilitator should know your GTID, but you can also obtain it from the GT website: https://registrar.gatech.edu/info/gtid-lookup
+    \item True or False. 
+    \begin{enumerate}
+        \item False.
+        \item False. The statement is false because every vector in the range of a linear transform is in the co-domain, but not every vector in the co-domain is necessarily in the range. In the special case that the co-domain and the range are the same, then the transform will be onto. For example if $$T_A(x) = Ax, \quad A = \begin{pmatrix} 1&0\\0&0 \end{pmatrix}$$ then the co-domain is $\mathbb R^2$ and any vector of the form $\begin{pmatrix} k\\0 \end{pmatrix}$, $k \in \mathbb R$, is in the range of the transform. Every vector in the range is in the co-domain, but the transform is not onto. Note that $\begin{pmatrix} 1\\1 \end{pmatrix}$ is in the co-domain and not in the range, and that the transform is not onto.
+        \item True.
+        \item False. 
+        \item True.
+    \end{enumerate}
+    \item Possible/impossible. 
+    \begin{enumerate}
+        \item Possible. 
+        \item Impossible.
+    \end{enumerate}
+    \item Fill in the blank. 
+    \begin{enumerate}
+        \item $A = \begin{pmatrix} 0&-1\\0&0 \end{pmatrix}$, so $a_1 = a_3 = a_4 = 0$ and $a_2 = -1$.
+        \item We can use the matrix $\begin{pmatrix}1 & -3\\4&-12 \end{pmatrix}$, then $c_1 = -3, c_2 = 4, c_3 = -12$
+        \item 8
+        \item $l_1 = 8, u_1 = 0, u_2 = 4, u_3 = 42$
+    \end{enumerate}
+\end{enumerate}
+
+} 
+\end{document}

@@ -1,0 +1,223 @@
+% E) UNIT 3
+\part 
+\ifnum \Version=1
+    An eigenvector of $A = \begin{pmatrix} 5&-1\\2&2\end{pmatrix}$ corresponding to eigenvalue $\lambda=3$ is $v = \begin{pmatrix} 1\\k\end{pmatrix}$, where $k = \framebox{\strut\hspace{0.75cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $k=2$ because a vector in the null space of $A-3I = \begin{pmatrix} 2&-1\\2&-1\end{pmatrix}$ is $v = \begin{pmatrix}1\\2 \end{pmatrix}$.  } \fi        
+\fi 
+\ifnum \Version=2
+    The steady-state vector of $P=\dfrac15\begin{pmatrix} 3&1\\2&4\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \begin{pmatrix} 3/5-1&1/5\\2/5&4/5-1 \end{pmatrix} \sim \begin{pmatrix} -2&1\\2&-1\end{pmatrix}$$ Then $\begin{pmatrix} 1\\2\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac13 \begin{pmatrix} 1\\2\end{pmatrix}$. So $c_1 = 1/3, \ c_2 = 2/3$. } \fi        
+\fi 
+\ifnum \Version=3
+    If $A$ is a $2\times 2$ real matrix with eigenvalues $\lambda_1=2$ and $\lambda_2=0$, with corresponding eigenvectors $\vec v_1 = \begin{pmatrix} 1\\1 \end{pmatrix}$ and $\vec v_2 = \begin{pmatrix} 1\\-1\end{pmatrix}$, then $A = \begin{pmatrix}  a_1&a_2\\a_3&a_4\end{pmatrix}$, where $a_1 = \framebox{\strut\hspace{1cm}}$ and $a_2 = \framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  diagonalize $A$ to obtain \begin{align*}A=PDP^{-1} 
+    &= \begin{pmatrix} 1&1\\1&-1\end{pmatrix}\begin{pmatrix} 2&0\\0&0\end{pmatrix}\left( \frac{1}{\det P} \begin{pmatrix} -1&-1\\-1&1\end{pmatrix}\right) \\ 
+    &= \begin{pmatrix} 2&0\\\ast & \ast \end{pmatrix} \begin{pmatrix} 1/2 &1/2\\\ast & \ast \end{pmatrix}\\
+    &=\begin{pmatrix} 1&1\\\ast & \ast \end{pmatrix}
+    \end{align*}
+    So $a_1=a_2=1$. Note that $\ast$ means that the entry wasn't needed. 
+    } \fi     
+\fi 
+\ifnum \Version=4
+    The area of the parallelogram with vertices at $(0,0)$, $(6,4)$, $(5,2)$, $(11,6)$ is \framebox{\strut\hspace{1cm}}. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} area is $\left| \det \begin{pmatrix} 6&5\\4&2\end{pmatrix} \right| = \left| 6\cdot2 - 5\cdot4 \right| = | 12 - 20| = 20 - 12 = 8$. No credit for writing $-8$, as area cannot be negative. } \newpage \fi    
+\fi 
+\ifnum \Version=5 
+    $\lambda_1=-4$ is an eigenvalue of $A$ with corresponding eigenvector $\vec v_1 = \begin{pmatrix} 3\\k\end{pmatrix}$. If $A\vec v_1 = \begin{pmatrix} h\\8\end{pmatrix}$, then $h = \framebox{\strut\hspace{1cm}}$ and $k = \framebox{\strut\hspace{1cm}}.$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Since $\lambda_1$ is an eigenvalue of $A$, we must have that $$A\vec v_1 = \lambda_1 \vec v_1$$ Substituting the given information gives us $$\begin{pmatrix} h\\8\end{pmatrix} = \lambda_1 \begin{pmatrix} 3\\k\end{pmatrix}$$ 
+    But $\lambda_1 =-4$, so we have the equations \begin{align}
+        h &= -4\cdot 3 \quad \Rightarrow \quad h = -12\\
+        8 &=-4\cdot k \quad \Rightarrow \quad k = -2
+    \end{align}.   } \fi    
+\fi 
+\ifnum \Version=6
+    $G$ is the Google Matrix for the set of four web pages that link to each other according to the diagram below. If the damping factor is $p=0.5$, fill in the missing entries of matrix $G$. 
+    \vspace{4pt}
+    
+    \begin{tikzpicture}
+        \begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.45cm,thick, main node/.style={circle,fill=gray!05,draw}]
+        \node[main node] (1) {A};
+        \node[main node] (2) [right of=1] {B};
+        \node[main node] (3) [below of=2] {D};
+        \node[main node] (4) [right of=2] {C};
+        \path[every node/.style={font=\sffamily\small}]
+        (4) edge node[below] {} (2)
+        (2) edge node [above] {} (1)
+        edge [left] node {}  (3) 
+        edge [left] node {}  (4) 
+        (3) edge node {} (1)
+        edge node[right] {} (2);
+        %edge node[right] {} (5)
+        %(4) edge node [above] {} (5)
+        %(4) edge node [above] {} (5);
+        \end{scope}
+        \node[left] at (-2, -0.65) {$G = p\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix} + (1-p)\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix}.$};
+    \end{tikzpicture}  
+    \ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solution:} The Google matrix is 
+    $$G = p \begin{pmatrix} 
+    1/4&1/3&0&1/2
+    \\1/4&0&1&1/2
+    \\1/4&1/3&0&0
+    \\1/4&1/3&0&0 
+    \end{pmatrix} + 
+    (1-p)\begin{pmatrix}
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4 
+    \end{pmatrix}$$ 
+    Note that we did not need to use the given value of $p$, which is ok. Also we could have written the answer (a bit) more neatly as: 
+    $$G = p \begin{pmatrix} 
+    1/4&1/3&0&1/2
+    \\1/4&0&1&1/2
+    \\1/4&1/3&0&0
+    \\1/4&1/3&0&0 
+    \end{pmatrix} + 
+    \frac{(1-p)}{4}\begin{pmatrix}
+    1&1&1&1\\
+    1&1&1&1\\
+    1&1&1&1\\
+    1&1&1&1
+    \end{pmatrix}$$     
+    } \fi  
+\fi 
+\ifnum \Version=7 
+    The steady-state probability vector for the Markov chain $\vec x_{k+1} = P\vec x_k$, where $k = 0,1,2,\ldots$ and $P=\dfrac15\begin{pmatrix} 3&1\\2&4\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \begin{pmatrix} 3/5-1&1/5\\2/5&4/5-1 \end{pmatrix} \sim \begin{pmatrix} -2&1\\2&-1\end{pmatrix}$$ Then $\vec v = \begin{pmatrix} 1 & 2\end{pmatrix}^T$ is in the null space. But we need a probability vector. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac13 \begin{pmatrix} 1 & 2\end{pmatrix}^T$. So $c_1 = 1/3$, $c_2 = 2/3$. } \fi      
+\fi 
+\ifnum \Version=8
+    $\lambda_1=3$ is an eigenvalue of $A$ with corresponding eigenvector $\vec v_1 = \begin{pmatrix} 5\\4\end{pmatrix}$. If $A\vec v_1 = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, then $c_1 = \framebox{\strut\hspace{1cm}}$ and an eigenvalue of $A^2$ is \framebox{\strut\hspace{1cm}}. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Since $\lambda_1$ is an eigenvalue of $A$, we must have that $$A\vec v_1 = \lambda_1 \vec v_1$$ Substituting the given information gives us $$A\vec v_1 = \lambda_1 \vec v_1 = 3 \begin{pmatrix} 5\\4 \end{pmatrix} = \begin{pmatrix} 15 \\ 12\end{pmatrix}$$  So $c_1 = 15$ and $c_2 = 12$. Moreover an eigenvalue of $A^2$ is 9. This is because we know that $A\vec v_1 = \lambda_1 \vec v_1$, so \begin{align}
+        A\vec v_1 &= \lambda_1 \vec v_1 \\
+        A(A\vec v_1) &= A(\lambda_1 \vec v_1) \\
+        A^2\vec v_1 &= \lambda_1 A\vec v_1 \\
+        A^2\vec v_1 &= \lambda_1^2 \vec v_1 
+    \end{align}  } \fi    
+\fi 
+\ifnum \Version=9
+    The area of the parallelogram with vertices at $(1,1)$, $(2,4)$, $(5,2)$, $(6,5)$ is \framebox{\strut\hspace{1cm}}. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} area is $\left| \det \begin{pmatrix} 1&4\\3&1\end{pmatrix} \right| = \left| 1\cdot1 - 3\cdot4 \right| = | 1 - 12 | = 12 - 1 = 11$. No credit for writing $-11$, as area cannot be negative. } \fi  
+\fi 
+\ifnum \Version=10
+    If  $k$ is a  real number,  $A = \begin{pmatrix} 5&4\\k&k\end{pmatrix}$, $ B = \begin{pmatrix}15& k\\12 & k  \end{pmatrix}$, and $ \det A = 4$, then $\det B =  \framebox{\strut\hspace{1.2cm}}$ and $k= \framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} matrix $B$ can be obtained from $A$ taking a transpose,  and multiplying a column by $3$. A transpose does not change the determinant.  Multiplying a column by $3$ multiplies the determinant by $3$. So $\det B = 12$. And if $\det A =4$, then \begin{align}
+        \det A & = 4 \\
+        \begin{vmatrix}
+            5&4\\k&k 
+        \end{vmatrix} &= 4 \\
+        5k - 4k &= 4 \\
+        k = 4
+    \end{align}} \fi 
+\fi 
+\ifnum \Version=11
+    $G$ is the Google Matrix for the set of four web pages that link to each other according to the diagram below. If the damping factor is $p=0.75$, fill in the missing entries of matrix $G$. 
+    \vspace{4pt}
+    
+    \begin{tikzpicture}
+        \begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.5cm,thick, main node/.style={circle,fill=gray!05,draw}]
+        \node[main node] (1) {A};
+        \node[main node] (2) [right of=1] {B};
+        \node[main node] (3) [right of=2] {C};
+        \node[main node] (4) [right of=3] {D};
+        \path[every node/.style={font=\sffamily\small}]
+        (2) edge node [above] {} (1)
+        edge [left] node {}  (3) 
+        (3) edge node {} (2)
+        edge node[right] {} (4);
+        \end{scope}
+        \node[left] at (-2, -0.65) {$G = p\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix} + (1-p)\begin{pmatrix} &&&&&\\&\ &&&&\\&\ &&&&&\\&\ &&&&&\end{pmatrix}.$};
+    \end{tikzpicture}  
+    \ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solution:} The Google matrix is 
+    $$G = p \begin{pmatrix} 
+    1/4&1/2&0&1/4\\
+    1/4&0&1/2&1/4\\
+    1/4&1/2&0&1/4\\
+    1/4&0&1/2&1/4 
+    \end{pmatrix} + 
+    (1-p)\begin{pmatrix}
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4\\
+    1/4&1/4&1/4&1/4 
+    \end{pmatrix}$$ 
+    Note that we did not need to use the given value of $p$, which is ok. Also we could have written the answer (a bit) more neatly as: 
+    $$G = \frac p4 \begin{pmatrix} 
+    1&2&0&1\\
+    1&0&2&1\\
+    1&2&0&1\\
+    1&0&2&1 
+    \end{pmatrix} + 
+    \frac{(1-p)}{4}\begin{pmatrix}
+    1&1&1&1\\
+    1&1&1&1\\
+    1&1&1&1\\
+    1&1&1&1
+    \end{pmatrix}$$     
+    } \fi  
+\fi 
+\ifnum \Version=12
+        Suppose that a $2\times 2$ matrix $A$ has eigenvalues $\lambda = 2$ and $\lambda= 3$. Then $\det(A^2) =  \framebox{\strut\hspace{1cm}}$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Using properties of determinants:
+        \begin{align}
+            \det(A^2) &= (\det A)^2 \\
+            &= (\det (PDP^{-1}))^2 \\
+            &= (\det P \det D \det P^{-1})^2\\
+            &= (\det P  \det P^{-1} \det D)^2\\
+            &= (\det (P P^{-1}) \det D)^4\\
+            &= (\det (I) \det D)^2\\
+            &= (\det D)^2
+        \end{align}
+        But $D$ is diagonal and its eigenvalues are 2 and 3, so $D$ is either 
+        \begin{align}
+            \begin{pmatrix} 3&0\\0&2\end{pmatrix} \quad \text{or} \quad \begin{pmatrix} 2&0\\0&3\end{pmatrix}
+        \end{align}        
+        Either way, $\det D = 3 \cdot 2 = 6$. So 
+        \begin{align}
+            \det(A^2) 
+            &= (\det D)^2 = 6^2 = 36
+        \end{align}        
+        } \fi    
+\fi 
+\ifnum \Version=13 % 
+    Let $S$ be an ellipse in whose area is 12. Then the area of $T(S)$, where $T(x) = Ax$, and $A = \begin{pmatrix} 2&4\\0&8\end{pmatrix}$ is \framebox{\strut\hspace{1cm}}.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The area of 
+ is the area of the original ellipse 
+, times the absolute value of the determinant of 
+. We have
+so area of 
+ is   } \fi    
+\fi 
+\ifnum \Version=14 % 
+    The steady-state vector of $P=\dfrac15\begin{pmatrix} 4&3\\1&2\end{pmatrix}$ is $\vec q = \begin{pmatrix} c_1 \\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$.
+        
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the steady state is a probability vector in the null space of $P-I$, and $$P-I = \begin{pmatrix} 4/5-1&3/5\\1/5&2/5-1 \end{pmatrix} \sim \begin{pmatrix} -1&3\\1&-3\end{pmatrix}$$ Then $\begin{pmatrix} 3\\1\end{pmatrix}$ is in the null space. Dividing by the sum of the entries gives us the steady-state, $\vec q = \frac14 \begin{pmatrix} 3\\1\end{pmatrix}$. So $c_1 = 3/4, \ c_2 = 1/4$. } \fi   
+\fi 
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 3
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 3
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 3
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 3
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+
+
+
+
+% \part Suppose $A$ is a $2\times 2$ matrix such that $\Nul A$ is the line $x_1-8x_2=0$, and a vector in $\Col A$ is $\vec u=\begin{pmatrix} 2\\4 \end{pmatrix}$. Then if $A=\begin{pmatrix}1 & c_1 \\ c_2 & c_3 \end{pmatrix} $, then $c_1= \framebox{\strut\hspace{1cm}}$, $c_2 =  \framebox{\strut\hspace{1cm}}$, and $c_3 =  \framebox{\strut\hspace{1cm}}$.
+
+% \part If the LU factorization is $A=LU$, where $U$ is obtained by applying one row operation to $A$, and $A = \begin{pmatrix} 1&2&4\\3&2&12\end{pmatrix}$. Then $L = \begin{pmatrix} 1& 0\\l_1 & 1 \end{pmatrix} $ and $U= \begin{pmatrix} 1&2 & 4\\u_1 & u_2 & u_3 \end{pmatrix}$, where $l_1 = \framebox{\strut\hspace{1.25cm}}$, $u_1 = \framebox{\strut\hspace{1.25cm}}$, $u_2 = \framebox{\strut\hspace{1.25cm}}$ and $u_3 = \framebox{\strut\hspace{1.25cm}}$.
+

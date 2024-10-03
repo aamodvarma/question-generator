@@ -65,12 +65,3 @@ with open(f"generated_files/review/{content_folder}/review.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(x)
 
-
-
-
-
-
-
-
-
-

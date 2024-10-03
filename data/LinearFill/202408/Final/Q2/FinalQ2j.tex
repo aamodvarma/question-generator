@@ -1,0 +1,81 @@
+% QUAD FORMS OR SYMMETRIC MATRICES
+\ifnum \Version=1         
+    If the quadratic form $Q = x^TAx$ is indefinite, where $A=A^T$, $A$ is $n\times n$, and $x \in \mathbb R^n$, then $A$ is not invertible.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Indefinite just means that at least one of the eigenvalues of $A$ is positive, and at least one of the eigenvalues is negative.  } \fi
+\fi
+\ifnum \Version=2      
+    If $A$ is $n\times n$ and $A=A^T$, then for any $\vec x \in \mathbb R^n$  and $\vec y \in \mathbb R^n$, $ (A\vec x) \cdot \vec y = \vec x \cdot (A \vec y)$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. We are given that $A$ is symmetric. So  $ (A\vec x) \cdot \vec y = (A\vec x)^T \vec y = \vec x ^T A^T \vec y = \vec x ^T (A\vec y) = \vec x \cdot A\vec y$.  } \fi
+\fi    
+\ifnum \Version=3  
+    If every coefficient in a quadratic form is positive, then the form is positive definite. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Take for example the form $Q=x^2+4xy+y^2 = \vec x\, ^T A \vec x$, where \setlength{\extrarowheight}{0.0cm}
+$A=\begin{pmatrix} 1&2\\2&1\end{pmatrix}$. The eigenvalues are $-1$ and $3$, so the form is not positive definite. } \fi
+\fi    
+\ifnum \Version=4    
+    The SVD of any $m\times n$ matrix $A$ always exists and is unique. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Every matrix does have an SVD but the SVD of a matrix is never unique.} \fi
+\fi   
+\ifnum \Version=5    
+    If $A$ is $n\times n$ and symmetric then $A^2$ is also $n\times n$ and  symmetric. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Because if $A$ is symmetric then $A^2 = AA = A^TA^T = (AA)^T= (A^2)^T$. So $A^2$ is also symmetric.  } \fi
+\fi    
+\ifnum \Version=6      
+    If $\vec x_1$ maximizes a quadratic form, $Q(\vec x)$, subject to the constraint $||\vec x|| = 1$, then so does $-\vec x_1$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Because if $Q$ is a quadratic form, $Q(\vec x) = Q(-\vec x)$. Take for example $Q(\vec x) = x_1^2 + 2x_1x_2 + 4x_2^2$. Then $Q(-\vec x) = (-x_1)^2 + 2(-x_1)(-x_2) + 4(-x_2)^2 = Q(
+    vec x)$ because all the negative signs cancel. } \fi
+\fi     
+\ifnum \Version=7 
+    If the $n\times n$ matrix $A$ is singular, then the quadratic form $Q = x^TAx =0$ for some $x\in \mathbb R^n$.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. 
+    Take $x$ in the null space of $A$.} \fi
+\fi     
+\ifnum \Version=8
+    If the $n\times n$ matrix $A$ is non-singular and $x\in \mathbb R^n$, then the quadratic form $Q = x^TAx $  is positive definite. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. 
+    $A$ nonsingular just means that the eigenvalues are not zero. They can still be positive or negative.}  \fi
+\fi     
+\ifnum \Version=9
+       If a quadratic form is positive definite, then every coefficient in the quadratic form is positive. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }
+    False. Take $Q(x,y) = (x+y)^2 + 3 (x-y)^2$ for instance. } \fi
+\fi        
+\ifnum \Version=10
+    If $A$ is an $n\times n$ symmetric matrix then the eigenvalues of $A$ are non-negative. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A counter-example would be $\begin{pmatrix} 2&0\\0&-1\end{pmatrix}$.   } \fi
+\fi
+\ifnum \Version=11
+    If $A$ is a real $m\times n$ matrix, $A^TA$ is symmetric. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. 
+    $(A^TA)^T = A^T (A^T)^T = A^TA$.} \fi
+\fi  
+\ifnum \Version=12
+    If $A$ is an $n\times n$ symmetric matrix, then an orthogonal basis for $\mathbb R^n$ can be made using the eigenvectors of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Symmetric matrices can be diagonalized. Meaning that there is an invertible matrix $P$ so that $A=PDP^{-1}$ where $P$ is $n\times n$ and contains the eigenvectors of $A$. But if $P$ is invertible then its columns must also be a basis for $\mathbb R^n$.} \fi
+\fi   
+\ifnum \Version=13 % 
+    If $A$ is a symmetric matrix, then $A$ can be diagonalized and all of the eigenvalues of $A$ are real. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. } \fi
+\fi   
+\ifnum \Version=14 % 
+    Suppose $A$ is a $2\times 2$ symmetric matrix with eigenvalues $\lambda_1$ and $\lambda_2$. If $v_1$ and $v_2$ are the corresponding eigenvectors, and $\lambda_1 \ne \lambda_2$, then $v_1^T v_2 = 1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. We would instead have that $v_1^T v_2 = v_1 \cdot v_2 = 0$. in this case.  } \fi
+\fi 
+\ifnum \Version=15 % 
+     A $n\times n$ matrix $A$ with all positive eigenvalues is symmetric. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. 
+    Take $A = \begin{pmatrix} 1&1 \\ 0 & 1 \end{pmatrix}$.} \fi
+\fi   
+\ifnum \Version=16
+    An example of a quadratic form is $Q(x,y) = 3x^4 - 4 x^2y^2  y^4+1$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. It is a quadratic form in $x^2$ and $y^2$.  } \fi
+\fi   
+\ifnum \Version=17 % 
+    QUAD FORMS OR SYMMETRIC MATRICES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+\ifnum \Version=18 % 
+    QUAD FORMS OR SYMMETRIC MATRICES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi 
+& $\bigcirc$  & $\bigcirc$ \\[4pt]     \hline

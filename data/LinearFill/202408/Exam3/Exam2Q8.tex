@@ -1,0 +1,298 @@
+\ifnum \Version=0
+    \question[3] $A = \begin{pmatrix}-1&1&-1\\1&-1&1\\1&-1&1 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = -1$ and $\lambda_2 = 0$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = -1$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 0$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] $$A - (-1) I = \begin{pmatrix} 0&1&-1\\1&0&1\\1&-1&2\end{pmatrix}\sim\begin{pmatrix} 0&1&-1\\1&0&1\\0&0&0\end{pmatrix}$$ A vector in the null space is $$v_1 = \begin{pmatrix}1\\-1\\-1 \end{pmatrix}$$ 
+        \item[b)] $$A - (0) I = \begin{pmatrix} -1&1&-1\\1&-1&1\\1&-1&1\end{pmatrix}\sim\begin{pmatrix} -1&1&-1\\0&0&0\\0&0&0\end{pmatrix}$$ The first row gives us the equation $-x_1+x_2-x_3 =0$, or $x_1 = x_2 - x_3$. Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} 1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} 1\\0\\-1\end{pmatrix}$$ 
+        Two vectors that form a basis for the eigenspace are $$v_2 = \begin{pmatrix} 1\\1\\0\end{pmatrix}, \quad v_3 = \begin{pmatrix} 1\\0\\-1\end{pmatrix}$$ 
+        \item[c)] $$P = \begin{pmatrix} 1&1&1\\-1&1&0\\-1&0&-1\end{pmatrix}, \quad D = \begin{pmatrix} -1&0&0\\0&0&0\\0&0&0\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 
+
+
+\ifnum \Version=1
+\question[3] Suppose $A = \begin{pmatrix} 5&-2\\1&3 \end{pmatrix}$. 
+    \begin{parts} 
+        \part Determine the eigenvalues of $A$. Show your work. 
+        \ifnum \Solutions = 0 
+            \vspace{4cm}
+        \else
+            {\color{DarkBlue} 
+            $$ 0 = \det(A-\lambda I) = (5-\lambda)(3-\lambda) + 2 = \lambda^2 - 8 \lambda + 17 \ \Rightarrow \ \lambda = \frac82 \pm \frac12\sqrt{64 - 68} = 4 \pm i$$ For clarity we could set: $$\lambda_1 = 4-i, \quad \lambda_2 = 4+i$$
+            }
+        \fi     
+        \part Determine the eigenvectors of $A$. Show your work.
+        
+        \ifnum \Solutions = 0 
+            \vspace{2cm}
+        \else
+            {\color{DarkBlue} Using the symbol $\ast$ to denote a value that is not needed:
+            $$(A-\lambda I) = \begin{pmatrix} 5-\lambda & -2 \\ \ast & \ast\end{pmatrix} \ \Rightarrow \ (5-\lambda)x_1 - 2x_2 = 0$$
+            We covered why the second row was not needed in lecture. But as a quick reminder: the matrix $A - \lambda I$ is singular, so there can only be one pivot, so each row must be a multiple of each other (otherwise there would be two pivots and the matrix would not be singular). Then if we set $x_2 = 5 - \lambda$ we have some convenient cancellation that allows us to obtain $x_1$ quickly. 
+            \begin{align}
+                0 
+                &= (5-\lambda)x_1 - 2x_2 \\ 
+                &= (5-\lambda)x_1 - 2(5 - \lambda) \\ 
+                &= x_1 - 2 \\ 
+                x_1 &= 2
+            \end{align}
+            Then the eigenvectors have the form $\vec v = \begin{pmatrix} 2\\5 - \lambda \end{pmatrix}$. And we found that $\lambda = 4 \pm  i$, so the eigenvectors and their corresponding eigenvalues are as follows.  
+            \begin{align}
+                \lambda_1 &= 4-i \ \Rightarrow \vec v_1 = \begin{pmatrix} 2\\5 - \lambda_1 \end{pmatrix} = \begin{pmatrix} 2\\1+i \end{pmatrix} \\
+                \lambda_2 &= 4+i \ \Rightarrow \vec v_2 = \begin{pmatrix} 2\\5-\lambda_2 \end{pmatrix} = \begin{pmatrix} 2\\1-i\end{pmatrix}
+            \end{align}
+            
+            \textbf{Solution Notes} 
+            \begin{itemize}
+            \item Complex eigenvalues and eigenvectors come in conjugate pairs. So we should find that $\vec v_1$ is the conjugate of $\vec v_2$. 
+            \item As you are working similar problems while preparing for an exam or completing homework, note that WolframAlpha and MATLAB are great tools for checking your work. They can give eigenvalues and eigenvectors very quickly. 
+            \begin{itemize}
+                \item The WolframAlpha syntax you would use to obtain the eigenvectors and eigenvalues is: \{\{5,-2\},\{1,3\}\}. Entering the matrix by itself returns the eigenvalues and eigenvectors, in addition to other information. 
+                \item The MATLAB (or OCTAVE) syntax that you would use to obtain the eigenvectors and eigenvalues is: 
+                [V,D] = eig([5 -2;1 3]).
+            \end{itemize}
+            \item You may find that your eigenvectors look very different from what the solutions present. It could be because your work is correct and your eigenvectors are a multiple of the eigenvectors that are in the solutions, and the multiple is a complex number. You can also check your work by using MATLAB or OCTAVE to compute $A\vec v - \lambda \vec v$ and see if you get the zero vector. For example, the MATLAB synatx for checking whether these calculations are correct could be (performed in one line):
+            \begin{center}
+                A=[5 -2;1 3], v=[2;1+i], A*v - (4-i)*v
+            \end{center}
+            \item Those of you going on to take a differential equations course may use these sort of calculations to construct solutions to systems of differential equations that involve complex eigenvalues. The solutions to a system of differential equations can involve calculations with complex eigenvalues. 
+            \end{itemize}
+            }
+        \fi                  
+        
+    \end{parts}
+\fi 
+
+
+\ifnum \Version=2
+    \question[3] $A = \begin{pmatrix}2&1&1\\-1&0&-1\\1&1&2 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 1$ and $\lambda_2 = 2$.   
+    \begin{parts} 
+        \part Construct an eigenbasis for eigenvalue $\lambda_1 = 1$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct an eigenbasis for eigenvalue $\lambda_2 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 1$, 
+        $$A - (1) I = \begin{pmatrix} 1&1&1\\-1&-1&-1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 2$, 
+        $$A - (2) I = \begin{pmatrix} 0&1&1\\-1&-2&-1\\1&1&0\end{pmatrix}\sim\begin{pmatrix} 1&1&0\\0&1&1\\0&0&0\end{pmatrix}\sim\begin{pmatrix} 1&0&-1\\0&1&1\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\-x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&-1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 1&0&0\\0&1&0\\0&0&2\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 
+
+
+\ifnum \Version=3
+    \question[3] $A = \begin{pmatrix}3&1&1\\-1&1&-1\\1&1&3 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 2$ and $\lambda_2 = 3$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 3$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 2$, 
+        $$A - (2) I = \begin{pmatrix} 1&1&1\\-1&-1&-1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 3$, 
+        $$A - (3) I = \begin{pmatrix} 0&1&1\\-1&-2&-1\\1&1&0\end{pmatrix}\sim\begin{pmatrix} 1&1&0\\0&1&1\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\-x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&-1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 2&0&0\\0&2&0\\0&0&3\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 
+
+\ifnum \Version=4
+    \question[3] $A = \begin{pmatrix}3&1&1\\-1&1&-1\\1&1&3 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 2$ and $\lambda_2 = 3$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 3$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 2$, 
+        $$A - (2) I = \begin{pmatrix} 1&1&1\\-1&-1&-1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 3$, 
+        $$A - (3) I = \begin{pmatrix} 0&1&1\\-1&-2&-1\\1&1&0\end{pmatrix}\sim\begin{pmatrix} 1&1&0\\0&1&1\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\-x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&-1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 2&0&0\\0&2&0\\0&0&3\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 
+
+\ifnum \Version=5
+    \question[3] $A = \begin{pmatrix}3&1&1\\-1&1&-1\\1&1&3 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 2$ and $\lambda_2 = 3$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 3$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 2$, 
+        $$A - (2) I = \begin{pmatrix} 1&1&1\\-1&-1&-1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 3$, 
+        $$A - (3) I = \begin{pmatrix} 0&1&1\\-1&-2&-1\\1&1&0\end{pmatrix}\sim\begin{pmatrix} 1&1&0\\0&1&1\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\-x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} -1\\-1\\1\end{pmatrix}$$ But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&-1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 2&0&0\\0&2&0\\0&0&3\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 
+
+\ifnum \Version=6
+ \question[3] 
+$A = \begin{pmatrix}-1&1&1\\2&0&2\\1&1&-1 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = -2$ and $\lambda_2 = 2$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = -2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = -2$, 
+        $$A + 2I = \begin{pmatrix} 1&1&1\\2&2&2\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 2$, 
+        \begin{align*}
+            A - 2 I 
+        &= \begin{pmatrix} -3&1&1\\2&-2&2\\1&1&-3\end{pmatrix}
+        \sim\begin{pmatrix} -3&1&1\\1&-1&1\\1&1&-3\end{pmatrix}
+        \sim\begin{pmatrix} -3&1&1\\1&-1&1\\0&2&-4\end{pmatrix}
+        \sim\begin{pmatrix} -3&0&3\\1&0&-1\\0&1&-2\end{pmatrix} 
+        \end{align*}
+        We could reduce further if we like. But we can see at this point that vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\2x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\2\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\2\\1\end{pmatrix}$$ But any non-zero multiple of this vector would also be ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&2\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} -2&0&0\\0&-2&0\\0&0&2\end{pmatrix}$$
+    \end{enumerate}
+    } \fi
+\fi    
+\ifnum \Version=7
+\ifnum \Solutions=1 \newpage \fi
+ \question[3] 
+$A = \begin{pmatrix}-3&1&1\\4&0&4\\1&1&-3 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = -4$ and $\lambda_2 = 2$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = -4$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = -4$, 
+        $$A + 2I = \begin{pmatrix} 1&1&1\\4&4&4\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 2$, 
+        $$A - 2 I = \begin{pmatrix} -5&1&1\\4&-2&4\\1&1&-5\end{pmatrix}\sim\begin{pmatrix} 0&6&-24\\0&-6&24\\1&1&-5\end{pmatrix}\sim\begin{pmatrix} 0&1&-4\\0&0&0\\1&1&-5\end{pmatrix}\sim\begin{pmatrix} 1&0&-1\\0&1&-4\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix} x_3\\ 4 x_3\\ x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\ 4\\1
+        \end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $v_3 = \begin{pmatrix} 1&4&1\end{pmatrix}^T$. But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&4\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} -4&0&0\\0&-4&0\\0&0&2\end{pmatrix}$$
+    \end{enumerate}
+    } \fi
+\fi    
+\ifnum \Version=8
+   \question[3] 
+$A = \begin{pmatrix}3&1&1\\1&3&1\\1&1&3 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 2$ and $\lambda_2 = 5$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 5$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 2$, 
+        $$A - 2I = \begin{pmatrix} 1&1&1\\1&1&1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 5$, 
+        $$A - 5 I = \begin{pmatrix} -2&1&1\\1&-2&1\\1&1&-2\end{pmatrix}\sim\begin{pmatrix} -2&1&1\\0&-3/2&3/2\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix} x_1\\ x_1\\x_1 \end{pmatrix} = x_3 \begin{pmatrix} 1\\ 1\\1
+        \end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\1\\1\end{pmatrix}$$ But any non-zero multiple is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 2&0&0\\0&2&0\\0&0&5\end{pmatrix}$$
+    \end{enumerate}
+    } \fi
+\fi    
+
+
+
+\begin{comment}
+311 
+464
+113 
+
+has eigenvalues 8 2 2 .  
+\end{comment}
+
+
+
+\ifnum \Version=9
+    \question[3] $A = \begin{pmatrix}2&1&1\\-1&0&-1\\1&1&2 \end{pmatrix}$ has only two distinct eigenvalues, $\lambda_1 = 1$ and $\lambda_2 = 2$.   
+    \begin{parts} 
+        \part Construct the eigenbasis for eigenvalue $\lambda_1 = 1$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part Construct the eigenbasis for eigenvalue $\lambda_2 = 2$. Please show your work.
+        \ifnum \Solutions = 0  \vspace{6cm} \fi
+        
+        \part If possible, construct real matrices $P$ and $D$ such that $A = PDP^{-1}$, where $D$ is a diagonal matrix. 
+    \end{parts}
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    \begin{enumerate}
+        \item[a)] For $\lambda_1 = 1$, 
+        $$A - (1) I = \begin{pmatrix} 1&1&1\\-1&-1&-1\\1&1&1\end{pmatrix}\sim\begin{pmatrix} 1&1&1\\0&0&0\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}-x_2-x_3\\x_2\\x_3 \end{pmatrix} = x_2\begin{pmatrix} -1\\1\\0\end{pmatrix} + x_3 \begin{pmatrix} -1\\0\\1\end{pmatrix}$$ 
+        \item[b)] For $\lambda_2 = 2$, 
+        $$A - (2) I = \begin{pmatrix} 0&1&1\\-1&-2&-1\\1&1&0\end{pmatrix}\sim\begin{pmatrix} 1&1&0\\0&1&1\\0&0&0\end{pmatrix}\sim\begin{pmatrix} 1&0&-1\\0&1&1\\0&0&0\end{pmatrix}$$ Vectors in the null space have the form $$x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix} = \begin{pmatrix}x_3\\-x_3\\x_3 \end{pmatrix} = x_3 \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ 
+        A vector that is a basis for the eigenspace is $$v_3 = \begin{pmatrix} 1\\-1\\1\end{pmatrix}$$ But any non-zero multiple of this vector is also ok. 
+        \item[c)] $$P = \begin{pmatrix} -1&-1&1\\1&0&-1\\0&1&1\end{pmatrix}, \quad D = \begin{pmatrix} 1&0&0\\0&1&0\\0&0&2\end{pmatrix}$$
+    \end{enumerate}
+    } 
+   \fi
+\fi 

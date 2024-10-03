@@ -1,0 +1,394 @@
+{
+    "chapter": {
+        "Vectors, Lines, Planes, Quadrics, Vector-Valued Functions": [
+            {
+                "question": " True or False:  If $\\bu$ and $\\bv$ are vectors in $\\R^3$, then $\\bu\\times \\bv=\\bv\\times \\bu$.\n\t\t \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  If $\\bT(t)$ is the unit tangent to $\\br(t)$ and $\\bN(t)$ is the principal normal vector, then $\\bT(t)\\cdot\\bN(t)=0$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False:  A smooth curve in the plane that never crosses itself can have two distinct tangent lines at a given point. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  If a spaceship is in orbit around the Moon with a constant speed of 3750 miles per hour, then it is the case that the acceleration of the spaceship is zero.  \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  The sphere $x^2+(y-2)^2+(z+1)^2=6$ has center $(0,-2,1)$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $\\bv$ and $\\bw$ are vectors in $\\mathbb{R}^3$, then $(\\bw\\times \\bv)\\cdot \\bw=0$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If a vector-valued function $\\br(t)$ is differentiable at $t=2$ then a direction vector for the line tangent to  $\\br(t)$ at $t=2$ is $\\br'(2)$. \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The curvature of a line is $0$ at every point on the line. \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If $\\bu$ and $\\bv$ are two vectors in $\\R^3$, then $\\bu\\cdot\\bv$ is a vector orthogonal to both $\\bu$ and $\\bv$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: There is exactly one possible parameterization for any line in space.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $\\bu$ and $\\bv$ are orthogonal unit vectors in $\\R^3$, then $|\\bu\\times\\bv|=1$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The surface in $\\R^3$ consisting of the points which solve the equation $x^3+y^3-z=27$ is an example of a quadric surface.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: $\\|\\bv\\| = |v_1| + |v_2| + |v_3|$, where $\\bv$ = $v_1 \\bi + v_2 \\bj + v_3\\bk$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If the speed of a particle is zero, its velocity must be zero. \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The points $(1,0,1)$ and $(0,-1,1)$ are the same distance from the origin. \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The point $(2, -1, 3)$ lies on the graph of the sphere $(x - 2)^2 + (y + 1)^2 + (z - 3)^2 = 25.$\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The equation $Ax + By + Cz + D = 0$ represents a line in space. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Any three points in 3 space determine a unique plane.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Any two distinct lines in 3-space determine a unique plane. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If the graph of $z=f(x,y)$ is a plane, then each cross section is a line.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The length of the sum of two vectors is always strictly larger than the sum of the\n\t\tlengths of the two vectors. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: $\\bv$ and $\\bw$ are parallel if $\\bv$ = $\\lambda \\bw$ for some scalar $\\lambda$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Any two parallel vectors point in the same direction.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Any two points determine a unique displacement vector. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: 2$\\bv$ has twice the magnitude as $\\bv$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The vector $\\bv=\\langle \\frac{1}{2}, \\frac{1}{2}\\rangle$ is a unit vector.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  The vector $\\frac{1}{\\sqrt{3}}\\bi -\\frac{1}{\\sqrt{3}}\\bj+\\frac{2}{\\sqrt{3}}\\bk$ is a unit vector.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The vectors $2\\bi-\\bj+\\bk$ and $\\bi-2\\bj+\\bk$ are parallel.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The only way that $\\bv\\cdot\\bw$ = 0 is if $\\bv = \\bzero$ or $\\bw = \\bzero$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The zero vector $\\bzero$ (with magnitude $\\|\\bzero\\|=0$) is perpendicular to all other vectors.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Any plane has only two distinct normal vectors.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Parallel planes share a same normal vector.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Perpendicular planes have perpendicular normal vectors.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: An equation of the plane with normal vector $\\langle 1,1,1\\rangle$ containing the point $(1, 2, 3)$ is $z = x + y$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: For any two vectors $\\bu$ and $\\bv$, $\\bu\\cdot\\bv$ = $\\bv\\cdot\\bu$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: For any vectors $\\bu$ and $\\bv$ in $\\R^3$, $(\\bu \\times \\bv) \u00d7\\times (\\bv \\times \\bu) = (\\bv \\times \\bu) \\times (\\bu \\times \\bv)$.\n\t\t ",
+                "answer": "True"
+            }
+        ],
+        "Functions of Multiple Variables, Partial Derivatives, Optimization": [
+            {
+                "question": " True or False:  Suppose we have a function $f(x,y)$ and $\\bu\\in \\R^2$ is a unit vector. Then $D_{\\bu}f(a,b)$ is a vector.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: In a table of values for a linear function, the columns must have the same slope as the rows.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  If $f(x,y)=(x+y)^{50}$, then all of the $100^{\\text{th}}$ order partial derivatives of $f$ will be 0.  \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False:  The total derivative $Df$ of the function $f(x,y,z,w)=2xyz+3\\ln(w)+\\sin(e^{xw+z})$ is represented by a $1\\times 4$ matrix.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False:  Suppose $\\lim\\limits_{(x,y)\\to(0,0)} f(x,y)=1$ along the $y$-axis, the $x$-axis, and the line $y=x$ and $f(0,0)=1$. Then $f$ must be continuous at $(0,0)$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  The domain of the function $f(x,y)=\\sqrt{x-2}+y$ is the interval $[2,\\infty)$. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:   Suppose $f(x,y)$ is a differentiable function defined on all of $\\R^2$, $f_{xx}(0,-1) = -3$, $f_{xy}(0,-1)=f_{yx}(0,-1)=4$, and $f_{yy}(0,-1)=-6$. Then $(0,-1)$ is the location of a local maximum of $f$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  The domain of the function $f(x,y)=\\ln{(x-2)}+y^2$ is the interval $(2,\\infty)$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The contour lines of the graph of $f(x,y)=2x+3y$ are parallel lines.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Suppose that the price $P$ in dollars to purchase a used car is a function of $C$, its original cost in dollars, and its age $A$ in years, i.e. $P=f(C,A)$.  Then the sign of $\\dfrac{\\partial P}{\\partial C}$ is negative.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Suppose the linear approximation of a function $f(x,y)$ at the point $(2,-1)$ is \\[L(x,y)=4+3(x-2)+5(y+1).\\]  Then an equation of the tangent plane to the graph of $f$ at the point $(2,-1,4)$ is $z=4+3(x-2)+5(y+1)$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The domain of the function $f(x,y,z)=\\frac{1}{x-2}+yz^2$ is $(-\\infty,2)\\cup(2,\\infty)$. \n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: There does not exist a function $f(x,y)$ which is continuous and has continuous partial derivatives such that $f_x(x,y)=x^2+2xy$ and $f_y(x,y)=3xy+y^2$.\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: A function of two variables is differentiable at the point $(a,b)$ if the surface $z=f(x,y)$ has a unique tangent plane at the point $(a,b,f(a,b))$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The two-path test says that if there are two paths through the point $(a,b)$ on which the limit of $f(x,y)$ is $L$, then \\[\\lim_{(x,y)\\to(a,b)}f(x,y)=L.\\]\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f:\\R^2\\to \\R$ is any function of two variables, $f_{xy}=f_{yx}$ at every point $(x,y)$ in the domain of $f$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $z=f(x,y)$ and $x=u(s,t)$, then it must be true that $\\pdev{z}{s}=\\pdev{z}{x}\\pdev{x}{s}$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: A function $f(x, y)$ can be an increasing function of $x$ with $y$ held fixed, and be a\n\t\tdecreasing function of $y$ with $x$\t held fixed.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The graph of the equation $f(x, y) = 2$ is a plane parallel to the $xz$-plane.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The cross section of the function $f(x, y) = x + y^2$ in the plane $y = 1$ is a line.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The graphs of $f(x, y) = x^2 + y^2$ and $g(x, y) = 1 - x^2 - y^2$ intersect in a circle.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The contours of the graph of $f(x, y) = y^2 + (x - 2)^2$ are either circles or a single point.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If all the contours for $f(x, y)$ are parallel lines, then the graph of $f$ is a plane.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: On a weather map, there can be two isotherms (contour lines) which represent the same temperature but do not intersect.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Any surface that is a graph of a 2-variable function $z=f(x,y)$ can be thought of as a\tlevel surface of a function of 3 variables.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Any level surface of a function of 3 variables can be thought of as the graph of a\tfunction $z=f(x,y)$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The level surfaces of the function $f(x, y, z) = x^2 +y^2 +z^2$ are cylinders with axis along the $y$-axis.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $\\pdev{f}{x}=\\pdev{f}{y}$ everywhere, then $f(x, y)$ is constant.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: There exists a function $f(x, y)$ with $f_x = 2y$ and $f_y = 2x$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The differential of a function $f(x, y)$ at the point $(a, b)$ is given by the formula $df = f_x(a, b)dx + f_y(a, b)dy$. The equation of the tangent plane to $z=f(x,y)$ at the point\n\t\t$(a, b)$ can be used to calculate values of $df$ from $dx$ and $dy$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The differential of a function $f(x, y)$ at the point $(a, b)$ is given by the formula $df =f_x(a, b)dx+f_y(a, b)dy$. If $dx$ and $dy$ represent small changes in $x$ and $y$ in moving away from the point $(a, b)$, then $df$ approximates the change in $f$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The function $f(x, y)$ has gradient $\\nabla f$ at the point $(a, b)$. The vector $\\nabla f$ is perpendicular to the level curve $f(x, y) = f(a, b)$.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The function $f(x, y)$ has gradient $\\nabla f$ at the point $(a, b)$. The vector $\\nabla f$ is perpendicular to the surface $z=f(x,y)$ at the point $(a, b, f(a, b))$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: The function $f(x, y)$ has gradient $\\nabla f$ at the point $(a, b)$. The vector $f_x(a, b)\\bi + f_y(a, b)\\bj + \\bk$ is perpendicular to the surface $z=f(x,y)$.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: There exists a function $f$ with continuous second-order partial derivatives such that $f_x(x,y)=x+y^2$ and $f_y(x,y)=x-y^2$.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: $f_{xy}=\\dfrac{\\partial^2 f}{\\partial x \\partial y}$\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: $D_\\bk f(x,y,z)=f_z(x,y,z)$\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If $f(x,y)\\to L$ as $(x,y)\\to (a,b)$ along every straight line through $(a,b)$, then $\\displaystyle \\lim_{(x,y)\\to(a,b)} f(x,y) =L$.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f_x(a,b)$ and $f_y(a,b)$ both exist, then $f$ is differentiable at $(a,b)$\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f$ has a local minimum at $(a,b)$ and $f$ is differentiable at $(a,b)$, then $\\nabla f(a,b)=\\bzero$.\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If $f$ is a function, then \\[\\lim_{(x,y)\\to(2,5)}f(x,y)=f(2,5). \\]\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f(x,y)=\\ln(y)$, then $\\nabla f(x,y)=1/y$.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f(x,y)$ has two local maxima, then $f$ must have a local minimum.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $f(x,y)=\\sin(x)+\\sin(y)$, then $-\\sqrt{2}\\leq D_\\bu f(x,y) \\leq \\sqrt{2}$.\n\t\t",
+                "answer": "True"
+            }
+        ],
+        "Multiple Integration, Polar, Cylindrical, Spherical Coordinates, Change of Variables": [
+            {
+                "question": " True or False:  The cylindrical coordinates of the point with Cartesian coordinates $(4,\\pi,0)$ are $(-4,0,0)$. \n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  The equation $r=2\\sin(\\theta)$ describes a circle. \n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False:  The mass of a region in the plane might be given by $\\displaystyle\\int_0^x\\int_0^y 3\\ dy\\ dx.$\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False:  If $f(x,y)>0$ for all $x,y \\in \\R^2$, \\[\\int_0^1\\int_0^1 f(x,y) \\ dy\\ dx > \\int_0^1\\int_x^1 f(x,y)\\ dy\\ dx. \\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False:  The region $0\\leq \\rho \\leq 4, 0 \\leq \\phi \\leq \\pi, 0\\leq \\theta \\leq \\pi$ describes the bottom half of a sphere of radius 4 centered on the origin.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: \\[ \\int_{-1}^3 \\int_{10}^{353,203} x^2y^3+y^{17}+(2-x)^{362}\\ dx\\ dy = \\int_{10}^{353,203} \\int_{-1}^3 x^2y^3+y^{17}+(2-x)^{362}\\ dy\\ dx \\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: Suppose $f(x,y)$ is a continuous function and $R$ is a region bounded by a smooth curve in the plane.  If $\\iint_R\\ dA = 4$ and the average value of $f$ on $R$ is $3$, then $\\iint_R f(x,y)\\ dA = \\frac{3}{4}$.\n\t\t ",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: \\[\\int_{-2}^{2} \\int_{0}^{\\sqrt{4-x^2}} \\sqrt{x^2+y^2}\\ dy\\ dx = \\int_{0}^{\\pi} \\int_{0}^{2} r\\ dr\\ d\\theta. \\]\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: Let $E$ be an ellipse in $\\R^2$.  If $\\iint_E 1\\ dA=10$ and $\\iint_E f(x,y)\\ dA =20$, then the average value of $f(x,y)$ on $E$ is 2.\n\t\t ",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: \\[ \\int_0^1\\int_0^x\\sqrt{x+y^2}\\ dy\\ dx = \\int_0^x\\int_0^1\\sqrt{x+y^2}\\ dx dy\\]\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: \\[\\int_1^2\\int_3^4 x^2e^y\\ dy\\ dx = \\int_1^2 x^2\\ dx \\int_3^4 e^y\\ dy \\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: \\[\\int_{-1}^1\\int_0^1e^{x^2+y^2}\\sin(y)\\ dx\\ dy=0\\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: If $f:\\R\\to\\R$ is continuous on $[0,1]$, then \\[\\int_0^1\\int_0^1 f(x)f(y)\\ dy\\ dx=\\left( \\int_0^1 f(x)\\ dx \\right)^2 \\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: \\[ \\int_1^4\\int_0^1 (x^2+\\sqrt{y})\\sin(x^2y^2)\\ dx\\ dy \\leq 9 \\]\n\t\t",
+                "answer": "True"
+            },
+            {
+                "question": " True or False: The integral \\[ \\int_0^{2\\pi}\\int_0^2\\int_r^2\\ dz\\ dr\\ d\\theta \\] represents the volume enclosed by the cone $z=\\sqrt{x^2+y^2}$ and the plane $z=2$.\n\t\t",
+                "answer": "False"
+            },
+            {
+                "question": " True or False: If $R$ is the union of the disjoint regions $R_1$ and $R_2$ in $\\R^2$, then \\[\\iint_R f(x,y)\\ dA = \\iint_{R_1} f(x,y)\\ dA - \\iint_{R_2} f(x,y)\\ dA. \\]\n\t\t",
+                "answer": "False"
+            }
+        ]
+    }
+}

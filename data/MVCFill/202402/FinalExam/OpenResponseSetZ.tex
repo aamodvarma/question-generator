@@ -1,0 +1,612 @@
+% READY
+\ifnum \Version=1
+
+    \question[4] Use the Divergence Theorem to evaluate $\iint_S \mathbf F \cdot \mathbf n \, d\sigma$, where $\mathbf F = \langle x^3, x^2y, 4y^2z \rangle$. Surface $S$ includes the unit circle in the $xy$-plane, and the surface of the cone $(z-1)^2=x^2+y^2$ above the $xy$-plane and below the vertex of the cone at $z=1$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} Setting region $D$ to be the closed surface that includes the cone and its base, and using the divergence theorem,
+    \begin{align*}
+        \iint_S \mathbf F \cdot \mathbf n \, d\sigma 
+        &= \iiint_D \text{div } \mathbf F \ dV \\
+        &= \iiint_D \left( \DDX (x^3) + \DDY( x^2y) + \DDZ( 4y^2z) \right) dV\\
+        &= \iint (4x^2 + 4y^2) dV \\
+        &= \int_0^{2\pi} \int_0^1 \int_0^{1-r} (4r^2 ) \, r \, dz \, dr \, d\theta \\
+        &= 2\pi \int_0^1 (1-r) 4r^3 \, dr  \\
+        &= 8\pi \int_0^1 (r^3-r^4) \, dr  \\
+        &= 8\pi  (\frac14 - \frac 15)   \\
+        &= 8\pi  \left(\frac{5}{20} - \frac {4}{20} \right)   \\
+        &= 2\pi/5  
+    \end{align*}
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+
+
+% READY
+\ifnum \Version=2
+
+    \question[4]  Evaluate the counterclockwise circulation of the vector field $\mathbf F (x,y) = -12xy^2\mathbf i + y^3 \mathbf j$ around the boundary of the triangular region with corners $P(0,1)$, $Q(1,0)$, and $R(1,1)$.  Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Using Greens Theorem we find
+    \begin{align*}
+        \oint \mathbf F \cdot \mathbf{T} \;ds 
+        &= \iint_S  \frac{\partial N}{ \partial x} - \frac{\partial M}{\partial y} \;dx dy 
+        \\ 
+        &= \int_0^1\int_{1-y}^{1}  \left( \DDX (y^3) - \DDY(-12xy^2) \right) \;dx \, dy 
+        \\ 
+        &= 24 \int_0^1 \int_{1-y}^{1} ( xy ) \, dx\, dy \\ 
+        &= 12 \int_0^1 ( x^2y )\Big\vert_{x=1-y}^{x=1} \;dy \\ 
+        &= 12 \int_0^1 y - (1-y)^2y \;dy \\ 
+        &= 12 \int_0^1 y - (1-2y+y^2)y \;dy \\ 
+        &= 12 \int_0^1 y - (y-2y^2+y^3) \;dy \\ 
+        &= 12 \int_0^1 2y^2 - y^3 \;dy \\ 
+        &= 12 ( \frac23 - \frac14) \\
+        &= 5
+    \end{align*}
+    It isn't necessary to use Green's Theorem in this case. Without using Green's Theorem we could instead compute the circulation on each of the three line segments using the definition
+    \begin{align}
+        \text{Circulation} &= \int_C \mathbf F \cdot \mathbf T \, ds
+    \end{align}
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+
+
+
+% BASE SOMETHING OFF OF 13.6 #13
+% SIMILAR TO ONE OF THE FITB QUESTIONS SO NEED TO BE SURE THERE ISN'T A DOUBLING UP
+\ifnum \Version=3
+
+    \question[4]{} Compute the surface integral of $G = x + 2y $ over the portion of the plane $2x + 2y + z = 4$ in the first octant. Please show your work.  
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    We can set $f = 2x+2y+z=4$, then
+    \begin{align*}
+        \nabla f & = \langle2,2,1\rangle \\
+        |\nabla f | &= 3 \\
+        \mathbf p &= \mathbf k \\
+        \frac{|\nabla f|}{|\nabla f \cdot \mathbf p|} & = \frac{3}{1} = 3 \\
+        G(x,y,z(x,y)) &= x + 2y  
+    \end{align*}
+    The plane $2x + 2y + z = 4$ cuts the $xy-$plane on the line $y = 2 - x$. Thus
+    \begin{align}
+        \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{2-x} 3 (x+2y) \, dy\, dx \\
+        & = 3 \int_0^2 \left. (xy+y^2) \right|_0^{2-x} \, dx \\
+        & = 3 \int_0^2  (x(2-x)+(2-x)^2) \, dx \\
+        &= 3 \int_0^2 (2x-x^2 +4-4x + x^2 ) \, dx \\
+        &= 3 \int_0^2 (-2x +4  ) \, dx \\
+        &= 3 (-4  + 8 ) \\
+        &= 12
+    \end{align}
+    \textbf{Alternate Solutions}\\
+    There are a few other ways to compute the surface integral. 
+    \begin{itemize}
+    \item We can also use the integration order $dx\,dy$, in which case the integral is
+    \begin{align}
+        \iint_S G(x,y,z) \, d\sigma 
+        &= 3 \int_0^2 \int_0^{2-y}  (x+2y) \, dx\, dy 
+    \end{align}    
+    The remaining calculations are similar to the above. 
+    
+    \item Another way to obtain the surface area element $d\sigma$ is to use $\mathbf r(x,y) = x\mathbf i + y \mathbf j + (2-2x-2y)\mathbf k$, and compute $d\sigma = |\mathbf r_x \times \mathbf r_y| dy\,dx$. Then:
+    \begin{align}
+        \mathbf r &= x\mathbf i + y \mathbf j + (2-2x-2y)\mathbf k \\
+        d\sigma &= |\mathbf r_x \times \mathbf r_y| dy\,dx 
+        = \begin{vmatrix} \mathbf i & \mathbf j & \mathbf k \\ 1 & 0 & -2\\0&1&-2 \end{vmatrix} dy\,dx = \sqrt{2^2 + 2^2 + 1} \, dy\,dx = 3 \, dy\,dx \\
+        \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{2-x} (x+2y)  |\mathbf r_x \times \mathbf r_y| dy\,dx  = \int_0^2 \int_0^{2-x} (x+2y)\, 3 \, dy\, dx 
+    \end{align}
+    The remaining calculations are the same as above. 
+
+
+    \item Another way to obtain $d\sigma$ is to use $f(x,y) = 4-2x-2y$, and compute $$d\sigma = \sqrt{1+f_x^2+f_y^2} \, dy\,dx$$
+    Then:
+        \begin{align}
+            f_x^2 &= (-2)^2 = 4\\
+            f_y^2 &= (-2)^2 = 4 \\
+            d\sigma &= \sqrt{1+f_x^2+f_y^2} \, dy\,dx = \sqrt{1+4+4}\, dy\,dx = 3 \, dy\,dx \\
+            \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{2-x} (x+2y)  \sqrt{1+f_x^2+f_y^2} dy\,dx \\& = \int_0^2 \int_0^{2-x} (x+2y)\, 3 \, dy\, dx 
+        \end{align}    
+
+    \end{itemize}
+    % \textbf{Common Errors}
+    % \begin{itemize}
+    %     \item Some students 
+    % \end{itemize}
+    } 
+   \else
+      
+   \fi
+\fi 
+
+
+
+
+
+
+% DONE
+% READY FOR EXAM
+\ifnum \Version=4
+    \question[4] Suppose that $D$ is the region in the first octant above the $xy-$plane, inside the sphere $x^2+y^2 + z^2 = 16$, and between the planes $y=0$ and $y=x$. Use the Divergence Theorem to compute the outward flux of $\mathbf F = (10yz^2)\mathbf i + (3y)\mathbf j + (5xy^2)\mathbf k$ across the boundary of the region $D$. Please show your work. 
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    The divergence of $\mathbf F$ is 
+    \begin{align}
+        \nabla \cdot \mathbf F 
+        &= \DDX(10yz^2) + \DDY( 3y) + \DDZ (5xy^2) = 3
+    \end{align}
+    The flux is
+    \begin{align}
+        \text{Flux } &= \iiint_D \nabla \cdot \mathbf F \, dV \\
+        &= \iiint_D  3 \, dV \\
+        &= \int_0^{\pi/4} \int_0^{\pi/2} \int_0^4 3 \, \rho^2 \sin\phi \, d\rho \, d\phi \, d\theta \\
+        &=  \int_0^{\pi/4} \int_0^{\pi/2}  4^3 \sin\phi \,  d\phi \, d\theta \\
+        &=  \frac{\pi}{4}\cdot 4^3 \\
+        &= 16\pi
+    \end{align}
+    } 
+   \else
+   \fi
+\fi
+
+
+% DONE
+% READY FOR EXAM
+\ifnum \Version=5
+    \question[4] Find the area of the surface $z = 2x -2y + 10$ that lies above the triangle bounded by the lines $x = 2, y = 0$, and $y = 4x$ in the $xy-$plane. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    This is a simplified version of one of the homework problems from Section 16.5. Set $f = f(x,y,z) = 2x - 2y -z$, then $\nabla f = \langle 2,-2,-1\rangle$, and $|\nabla f| = \sqrt{1+2^2+2^2} = 3$. Also $\mathbf p = \mathbf k$, and $|\nabla f \cdot \mathbf p| = 1$. Then the surface area is
+    \begin{align}
+        \text{Surface Area } &= \iint_R \frac{|\nabla f|}{|\nabla f \cdot \mathbf p| }dA \\
+        &= \int_0^2 \int_0^{4x} \frac{3}{1} \, dy\,dx \\
+        &= 3 \int_0^2 4x \,dx \\
+        &= 3 \left(\, \left. 2x^2 \right|_0^2 \right) \\
+        &= 24
+    \end{align}
+    } 
+   \else
+   \fi
+\fi
+
+
+
+
+
+% READY FOR VERSION 3 TO 6
+\ifnum \Version=6
+
+    \question[4]  Evaluate the counterclockwise circulation of the vector field $\mathbf F (x,y) = -12xy^2\mathbf i + y \mathbf j$ around the boundary of the triangular region in the first quadrant with corners $P(0,0)$, $Q(0,1)$, and $R(1,1)$.  Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Using Greens Theorem we find
+    \begin{align*}
+        \oint \mathbf F \cdot \mathbf{T} \;ds 
+        &= \iint_S  \frac{\partial N}{ \partial x} - \frac{\partial M}{\partial y} \;dx dy 
+        \\ 
+        &= \int_0^1\int_{0}^{y}  \left( \DDX (y) - \DDY(-12xy^2) \right) \;dx \, dy 
+        \\ 
+        &= 24 \int_0^1 \int_{0}^{y} ( xy ) \, dx\, dy \\ 
+        &= 12 \int_0^1 ( x^2y )\Big\vert_{x=0}^{x=y} \;dy \\ 
+        &= 12 \int_0^1 y^3 \;dy \\ 
+        &= 12 \left( \frac14 \right) \\
+        &= 3
+    \end{align*}
+    It isn't necessary to use Green's Theorem in this case. Without using Green's Theorem we could instead compute the circulation on each of the three line segments using the definition
+    \begin{align}
+        \text{Circulation} &= \int_C \mathbf F \cdot \mathbf T \, ds
+    \end{align}
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+% DONE
+% READY FOR EXAM
+\ifnum \Version=7
+    \question[4] Find the area of the surface $z = 4x + 8y + 10$ that lies above the triangle bounded by the lines $y = 2, x = 0$, and $y = x$ in the $xy-$plane. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $f = f(x,y,z) = 4x + 8y -z$, then $\nabla f = \langle 4,8,-1\rangle$, and 
+    $$|\nabla f| = \sqrt{4^2+8^2+ 1 } = \sqrt{81} = 9$$
+    Also $\mathbf p = \mathbf k$, and $|\nabla f \cdot \mathbf p| = 1$. Then the surface area is
+    \begin{align}
+        \text{Surface Area } = \iint_R \frac{|\nabla f|}{|\nabla f \cdot \mathbf p| }dA 
+        &= \int_0^2 \int_x^{2} \frac{9}{1} \, dy\,dx \\
+        &= 9 \int_0^2 2 - x \,dx \\
+        &= 9 \left( \left. 2x - x^2/2 \right) \right|_0^2  \\
+        &= 9  ( 4 - 2)  \\
+        &= 18
+    \end{align}
+    \textbf{Solution Notes}\\
+    A few notes about this problem are listed below. 
+    \begin{itemize}
+        \item Note that we can also use $dx\,dy$. 
+    \begin{align}
+        \text{Surface Area } = \iint_R \frac{|\nabla f|}{|\nabla f \cdot \mathbf p| }dA 
+        &= \int_0^2 \int_0^{y} \frac{9}{1} \, dx\,dy \\
+        &= 9 \int_0^2 y \,dy \\
+        &= 9 \left( \left. y^2/2 \right) \right|_0^2  \\
+        &= 9  ( 2)  \\
+        &= 18
+    \end{align}    
+    \item Some students calculated the volume of the region under the plane $z=4x+8y+10$ and above the triangle. Which is a similar problem but not correct. If we do that, then we get the following. 
+        \begin{align}
+        \text{Volume } = \iint_R z \, dA 
+        &= \int_0^2 \int_0^{y} 4x+8y+10 \, dx\,dy \\
+        &=  \int_0^2 (2x^2+8xy +10x)|_0^y \,dy \\
+        &=  \int_0^2 (2y^2+8y^2 +10y) \,dy \\
+        &=  10\int_0^2 (y^2 +y) \,dy \\
+        &=  10 \left( \left. y^3/3 + \frac{y^2}{2} \right) \right|_0^2  \\
+        &=  10 \left(\frac{8}{3} + 2\right) \\
+        &= \frac{140}{3}
+    \end{align}   
+    \item There are a few other formulas for surface area that we can use. One other formula uses
+    \begin{align}
+        \text{Surface Area } = \iint_R d\sigma, \quad d\sigma = \sqrt{1+(f_x)^2 + (f_y)^2}dA, \quad dA = dx\,dy
+    \end{align}
+    Calculating $d\sigma$ we find
+    \begin{align}
+        d\sigma = \sqrt{1+(f_x)^2 + (f_y)^2} dA= \sqrt{1+4^2+8^2} dA= \sqrt{81} dA= 9\, dA
+    \end{align}
+    \end{itemize}
+    
+    } 
+   \else
+   \fi
+\fi
+
+
+
+% READY
+\ifnum \Version=8
+
+    \question[4] Evaluate the counterclockwise circulation of the vector field $\mathbf F (x,y) = -12y\mathbf i + y^2 \mathbf j$ around the boundary of the triangular region with corners $P(0,2)$, $Q(2,0)$, and $R(2,2)$.  Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Using Greens Theorem we find
+    \begin{align*}
+        \oint \mathbf F \cdot \mathbf{T} \;ds 
+        &= \iint_S  \frac{\partial N}{ \partial x} - \frac{\partial M}{\partial y} \;dx dy 
+        \\ 
+        &= \int_0^2\int_{2-y}^{2}  \left( \DDX (y^2) - \DDY(-12y) \right) \;dx \, dy 
+        \\ 
+        &= 12 \int_0^2 \int_{2-y}^{2}  \, dx\, dy \\ 
+        &= 12 \int_0^2 ( x )\Big\vert_{x=2-y}^{x=2} \;dy \\ 
+        &= 12 \int_0^2 2 - (2-y)\;dy \\ 
+        &= 12 \int_0^2 y \;dy \\ 
+        &= 12 \cdot \left. \frac{y^2}{2} \right|_0^2 \\
+        &= 24
+    \end{align*}
+        \textbf{Solution Notes}
+    \begin{itemize}
+        \item Rather than integrating we can also recognize that the integral represents the area of a triangle times 12. 
+        \begin{align*}
+            \oint \mathbf F \cdot \mathbf{T} \;ds 
+            &= \iint_S  \frac{\partial N}{ \partial x} - \frac{\partial M}{\partial y} \;dx dy 
+            \\ 
+            &= \int_0^2\int_{2-y}^{2}  \left( \DDX (y^2) - \DDY(-12y) \right) \;dx \, dy 
+            \\ 
+            &= 12 \int_0^2 \int_{2-y}^{2}  \, dx\, dy \\ 
+            &= 12 \cdot (\text{area of a triangle with base = 2 and height = 2}) \\ 
+            &= 12 \cdot (\frac12 \cdot 2 \cdot 2) \\ 
+            &= 24
+        \end{align*}        
+        This approach is also ok. 
+        \item It isn't necessary to use Green's Theorem in this case. Without using Green's Theorem we could instead compute the circulation on each of the three line segments using the definition
+    \begin{align}
+        \text{Circulation} &= \int_C \mathbf F \cdot \mathbf T \, ds
+    \end{align}
+        \item A few incorrect integrals and what they evaluate to are listed below. 
+        \begin{align}
+            \int_0^{2} \int_{-y}^2 12 \, dx \, dy &= 72
+        \end{align}
+        None of the integrals listed above are correct, but we list them here in case it helps determine if the integral that was set up was evaluated correctly. 
+    \end{itemize}
+    
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+\ifnum \Version=9
+    \question[4] Suppose that $D$ is the region in the first octant above the $xy-$plane, inside the sphere $x^2+y^2 + z^2 = 4$. Use the Divergence Theorem to compute the outward flux of $\mathbf F = 5x^3\mathbf i + 5y^3\mathbf j + 5z^3\mathbf k$ across the boundary of the region $D$. Please show your work. 
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    The divergence of $\mathbf F$ is 
+    \begin{align}
+        \nabla \cdot \mathbf F 
+        &= \DDX(5x^3) + \DDY( 5y^3) + \DDZ (5z^3) = 15\rho^2
+    \end{align}
+    The flux is
+    \begin{align}
+        \text{Flux } &= \iiint_D \nabla \cdot \mathbf F \, dV \\
+        &= \iiint_D  15\rho^2 \, dV \\
+        &= \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 15 \, \rho^4 \sin\phi \, d\rho \, d\phi \, d\theta \\
+        &=  \int_0^{\pi/2} \int_0^{\pi/2}  \left. 3 \rho^5 \right|_0^2 \sin\phi \,  d\phi \, d\theta \\
+        &=  96\int_0^{\pi/2} \int_0^{\pi/2}  \sin\phi \,  d\phi \, d\theta \\
+        &=  96 \int_0^{\pi/2} \left(-\cos \phi) \right|_0^{\pi/2} d\theta\\
+        &=  96 \int_0^{\pi/2} -(0-1) d\theta\\
+        &=  96 \int_0^{\pi/2} d\theta\\
+        &= 48\pi
+    \end{align}
+        \textbf{Solution Notes}
+    \begin{itemize}
+        \item A few incorrect integrals and what they evaluate to are listed below. 
+        \begin{align}
+            \int_0^{2\pi} \int_0^{\pi/2} \int_0^2 15 \rho^4 \sin\phi \, d\rho \, d\phi \, d\theta &= 192 \pi \\
+            \int_0^{\pi/2} \int_0^{\pi/2} \int_0^2 15 \rho^3 \sin\phi \, d\rho \, d\phi \, d\theta &= 30 \pi 
+        \end{align}
+        None of the integrals listed above are correct, but we list them here in case it helps determine if the integral that was set up was evaluated correctly. 
+    \end{itemize}    
+    } 
+   \else
+   \fi
+\fi
+
+\ifnum \Version=10
+    \question[4] Consider the gradient field $\mathbf{F}= \nabla(2xy)$. Let $C_1$ be the line segment from $(-1,0)$ to $(0,0)$ in the $xy$-plane, and let $C_2$ be the line segment from $(0,0)$ to $(1,1)$ in the $xy$-plane. And let $C$ be the path that consists of $C_1$ followed by $C_2$. 
+    \begin{enumerate}
+        \item[a)] Create parametrizations for the segments $C_1$ and $C_2$, respectively, and then evaluate the integral $\int_C \mathbf{F}\cdot d\mathbf{r}$ using your parameterizations.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} 
+            We begin with the parametrizations:
+            \begin{align}
+                &C_1: \mathbf r_1(t) = \langle -1+t, 0 \rangle, \  0\leqslant t \leqslant 1 \\
+                &C_2: \mathbf r_2(t) = \langle t,t \rangle, \ 0\leqslant t \leqslant 1
+            \end{align}
+            By definition, the vector field is $\mathbf{F} = \langle 2y, 2x \rangle$.
+            From the parametrizations we get the following:
+            \begin{align}
+                \mathbf{F}(\mathbf r_1 (t)) &= \langle 0, 2(t-1) \rangle  = \langle 0, 2t-2 \rangle  \\
+                \frac{d\mathbf r_1}{dt} &= \langle 1, 0\rangle \\
+                \mathbf{F}(\mathbf r_2(t)) &= \langle 2t,2t \rangle \\
+                \frac{d\mathbf r_2}{dt} &= \langle 1,1 \rangle
+            \end{align}
+            Now we are ready to evaluate the integrals:
+            \begin{align}
+                \int_C \mathbf{F}\cdot d\mathbf{r} 
+                &= \int_{C_1} \mathbf{F}\cdot d\mathbf r_1 + \int_{C_2} \mathbf{F}\cdot d\mathbf r_2 \\
+                &= \int_{0}^1 \mathbf{F}(\mathbf r_1(t))\cdot \frac{d\mathbf r_1}{dt} \, dt + \int_{0}^1 \mathbf{F}(\mathbf r_2(t))\cdot \frac{d\mathbf r_2}{dt} \, dt \\
+                &= \int_0^1 0 \, dt + \int_0^1 4t \, dt\\
+                &= 0 + 2\\
+                &= 2
+            \end{align}
+            \textbf{Additional Solution Notes}\\
+            Note the following.
+            \begin{itemize}
+                \item Other parameterizations are possible. We could use: 
+                \begin{align}
+                    C_1: \ r_1(t) = t\mathbf{i}, \quad -1 \le t \le 0
+                \end{align}
+                But any parameterization should represent a straight line that starts and ends at the given points. 
+            \end{itemize}
+            } 
+            \else 
+            \vspace{9cm}
+
+            \fi 
+
+            \item[b)] Use $f(x,y) = 2xy$ as a potential function for $\mathbf{F}$ to evaluate $\int_C \mathbf{F}\cdot d\mathbf{r}$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} 
+            By the fundamental theorem of line integrals, we have
+            \begin{align}
+                \int_C \mathbf{F}\cdot d\mathbf{r}
+                &= \int_{(-1,0)}^{(1,1)} \nabla f\cdot d\mathbf{r} \\
+                &= f(1,1) - f(-1,0) \\
+                &= 2 - 0 \\
+                &= 2
+            \end{align}
+            } 
+            \else 
+            \fi
+
+    \end{enumerate}      
+\fi 
+
+
+
+\ifnum \Version=11
+
+    \question[4]{} Compute the surface integral of $G = 2y $ over the portion of the plane $8x + 4y + z = 16$ in the first octant. Please show your work.  
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    We can set $f = 8x+4y+z=16$, then
+    \begin{align*}
+        \nabla f & = \langle8,4,1\rangle \\
+        |\nabla f | &= 9 \\
+        \mathbf p &= \mathbf k \\
+        \frac{|\nabla f|}{|\nabla f \cdot \mathbf p|} & = \frac{9}{1} = 9 \\
+        G(x,y,z(x,y)) &= 2y  
+    \end{align*}
+    The plane cuts the $xy-$plane on the line $y = 4 - 2x$. Thus
+    \begin{align}
+        \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{4-2x} 9 (2y) \, dy\, dx \\
+        & = 9 \int_0^2 \left. (y^2) \right|_0^{4-2x} \, dx \\
+        & = 9 \int_0^2  ((4-2x)^2) \, dx \\
+        &= 9 \int_0^2 (16-16x + 4x^2 ) \, dx \\
+        &= 9 \left.\left(16x-8x^2 + \frac43x^3 \right) \right|_0^2\\
+        &= 9 \left(32-32+32/3 \right) \\
+        &= 9 \left(32/3 \right) \\
+        &= 96 
+    \end{align}
+    \textbf{Alternate Solutions (needs updating if want to use)}\\
+    There are a few other ways to compute the surface integral. 
+    \begin{itemize}
+    \item We can also use the integration order $dx\,dy$, in which case the integral is
+    \begin{align}
+        \iint_S G(x,y,z) \, d\sigma 
+        &= 3 \int_0^2 \int_0^{2-y}  G(x,y,z) \, dx\, dy 
+    \end{align}    
+    The remaining calculations are similar to the above. 
+    
+    \item Another way to obtain the surface area element $d\sigma$ is to use $\mathbf r(x,y) = x\mathbf i + y \mathbf j + (2-2x-2y)\mathbf k$, and compute $d\sigma = |\mathbf r_x \times \mathbf r_y| dy\,dx$. Then:
+    \begin{align}
+        \mathbf r 
+        &= x\mathbf i + y \mathbf j + (2-2x-2y)\mathbf k \\
+        d\sigma 
+        &= |\mathbf r_x \times \mathbf r_y| dy\,dx \\
+        &= \begin{vmatrix} \mathbf i & \mathbf j & \mathbf k \\ 1 & 0 & -2\\0&1&-2 \end{vmatrix} dy\,dx \\
+        &= \sqrt{2^2 + 2^2 + 1} \, dy\,dx = 3 \, dy\,dx \\
+        \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{4-2x} G(x,y,z)  |\mathbf r_x \times \mathbf r_y| dy\,dx \\
+        &= \int_0^2 \int_0^{4-2x} G(x,y,z) \, 3 \, dy\, dx 
+    \end{align}
+    The remaining calculations are the same as above. 
+
+
+    \item Another way to obtain $d\sigma$ is to use $f(x,y) = 4-2x-2y$, and compute $$d\sigma = \sqrt{1+f_x^2+f_y^2} \, dy\,dx$$
+    Then:
+        \begin{align}
+            f_x^2 &= (-2)^2 = 4\\
+            f_y^2 &= (-2)^2 = 4 \\
+            d\sigma &= \sqrt{1+f_x^2+f_y^2} \, dy\,dx = \sqrt{1+4+4}\, dy\,dx = 3 \, dy\,dx \\
+            \iint_S G(x,y,z) \, d\sigma 
+        &= \int_0^2 \int_0^{4-2x} G(x,y,z)  \sqrt{1+f_x^2+f_y^2} dy\,dx \\
+        & = \int_0^2 \int_0^{4-2x} G(x,y,z)\, 3 \, dy\, dx 
+        \end{align}    
+
+    \end{itemize}
+    % \textbf{Common Errors}
+    % \begin{itemize}
+    %     \item Some students 
+    % \end{itemize}
+    } 
+   \else
+      
+   \fi
+\fi 
+
+
+
+
+
+% 
+\ifnum \Version=12
+    \question[4]{} Consider the field $\mathbf F = (y+z)\mathbf i + (x+z)\mathbf j + (x+y)\mathbf k$. 
+    \begin{enumerate}
+        \item[a)] Determine a potential function $f$ for the field. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        \textbf{Solutions:} 
+        Integrate $y+z$ with respect to $x$:
+        \begin{align}
+            f(x,y,z) = \int y+z \, dx = xy+xz + g(y,z)
+        \end{align}
+        Differentiate with respect to $y$
+        \begin{align}
+            \DFDY = x+\frac{\partial g}{\partial y}
+        \end{align}
+        By comparison, $\frac{\partial g}{\partial y} = z$, so $g = zy$. So
+        \begin{align}
+            f(x,y,z) &= xy + xz + yz
+        \end{align}
+        } 
+        \else 
+        \vspace{4cm}
+        \fi
+        \item[b)] Use your potential function in part (a) to evaluate the line integral below. 
+        $$\int_{(1,2,3)}^{(2,0,1)}(y+z) dx + (x+z) dy + (x+y) dz$$
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        \textbf{Solutions:}
+        $$ f(2,0,1) - f(1,2,3) =  (0+2+0) - (2+3+6) = 2 - 11 = -9$$
+        } 
+        \else 
+        \newpage
+        \fi
+    \end{enumerate}
+    
+\fi
+    
+% 
+\ifnum \Version=13
+    \question[4]{}
+    Use Green's Theorem to determine the outward flux the vector field $\mathbf F(x,y) = y \mathbf i + (x-y)\mathbf j$ across the boundary of the triangular region  with vertices $(0,0)$, $(2,0)$ and $(2,2)$. Please show your work. 
+    
+    
+    %Evaluate the surface integral $\iint_S z \, dS$ where $S$ is the unit circle in the $xy$-plane. \framebox{\strut\hspace{1.5cm}}. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $M=y$ and $N = x-y$. Then
+    \begin{align}
+        \DDX M &= M_x = 0 \\
+        \DDY N &= N_y = -1
+    \end{align}
+    By Green's Theorem, the outward flux is 
+    \begin{align*}
+        \oint_C \mathbf F \cdot \mathbf n \;ds &= 
+        \int\!\int_R  \frac{\partial M}{\partial x} + 
+         \frac{\partial N}{\partial y} \;dx\,dy
+         \\ 
+         &=  \int\!\int_R  (0-1) \;dx\,dy \\          
+         &= - \int\!\int_R  \;dx\,dy \\          
+    & = - \int _0^2 \int_y ^2  \; dx \,dy 
+     \\ 
+    &= -\int_0^2 (2-y) \;dx \\
+    &= - \left(4 - \frac{2^2}{2}\right) \\
+    &= -2
+    \end{align*}
+        %in the $xy$-plane $z=0$ so $\iint_S z \, dS = 0$.
+    } 
+   \else
+      
+   \fi
+\fi 
+
+
+\ifnum \Version=14
+% THIS EXERCISE FROM PAGE 964, EXAMPLE 4 OF 16.5
+% GOOD BUT NOT NEEDED? 
+\question[4]{} Suppose $S$ is the surface parameterized by $\mathbf r(u,v) = (u \cos v)\mathbf i + (u \sin v) \mathbf j + u\mathbf k$, for $0 \le u \le 4$, $0 \le v \le 2$. 
+
+    \begin{parts} 
+    \part Construct an integral that represents its surface area. Please show your work. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} The surface integral has the form
+    $$\int_0^{2} \int_0^4 f(u,v) \, du\,dv$$
+    The parameterization was given and so
+    \begin{align*}
+        \mathbf r _u \times \mathbf r_{v} &= \begin{vmatrix} i&j&k\\\cos v&\sin v&1\\-u\sin v&u\cos v&0\end{vmatrix} = -u\cos v \mathbf i + u\sin v \mathbf j + (u\cos^2 v +u \sin^2v)\mathbf k\\
+        |\mathbf r _u \times \mathbf r_{v} | ^2 &= u^2 \cos^2 v + u^2 \sin^2v + u^2 = 2 u^2 \\
+        |\mathbf r _u \times \mathbf r_{v} |  &= \sqrt 2 u = f(u,v)
+    \end{align*}
+    The surface integral is $$\int_0^{2} \int_0^4 \sqrt 2 \, u \, du\,dv$$
+    Note that this is (a slightly modified version of) Example 4 from section 16.5 from the textbook (Thomas). 
+    }
+    \else 
+        \vspace{8cm}
+    \fi
+    \part Evaluate the integral that you constructed in Part (a). Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Evaluating the surface integral yields: 
+    \begin{align}
+        \int_0^{2} \int_0^4 \sqrt 2 \, u \, du\,dv 
+        &= \sqrt 2 \int_0^{2} \int_0^4 \, u \, du\,dv \\
+        &= \sqrt 2 \int_0^{2}  \, \frac{4^2}{2} \,dv \\
+        &= 8\sqrt 2 \int_0^{2}  \,dv \\
+        &= 16\sqrt 2
+    \end{align}
+    }
+    \else 
+    \fi
+    \end{parts}
+    
+\
+\fi

@@ -1,0 +1,422 @@
+% SECTION 14.2
+
+\ifnum \Version=1
+    % THOMAS 14.1
+    
+    \part Consider the function $\displaystyle f(x,y) =  \frac{4x}{x^2+2x+y^2}$.
+
+    \begin{enumerate}
+        \item[i)] The range of $f(x,y)$ is \framebox{\strut\hspace{2cm}}.
+        \item[ii)] Evaluate the following limit, if possible. If the limit does not exist, write DNE. $$\lim_{(x,y) \to (0,0)} f(x,y) = \framebox{\strut\hspace{1cm}}$$
+        \item[iii)] An example of a point where the function $f(x,y)$ is not continuous is the point $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.         
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+    Solutions for each part are as follows. 
+    \begin{itemize}
+        \item[\textbf{i)}:] Note that on the $x$-axis, $y=0$ and the function is
+        $$f(x,0) = \frac{4x}{x^2+2x+0} = \frac{4}{x+2}$$
+        So $f$ can take on any real value except zero on the $x-$axis. Can $f$ be zero? Note also that $f(x,y)$ is equal to zero for any point $(0,y)$ and $y \ne 0$.  So the range is $\mathbb R$.
+
+        \item[\textbf{ii)}:]  To determine the limit of the function \(f(x, y) = \frac{4x}{x^2 + 2x + y^2}\) as \(x\) and \(y\) approach zero, we can consider the limit along different paths. Let's examine the limit along the \(x\)-axis (\(y = 0\)) and the \(y\)-axis (\(x = 0\)) separately.
+        Along the \(x\)-axis (\(y = 0\)):
+           \[ \lim_{(x,0)\to(0,0)} \frac{4x}{x^2 + 2x + 0^2} = \lim_{x\to0} \frac{4x}{x^2 + 2x} = \lim_{x\to0} \frac{4x}{x(x + 2)} = \lim_{x\to0} \frac{4}{x + 2} = \lim_{x\to0} \frac{4}{x + 2} = 2 \]
+        
+            Along the \(y\)-axis (\(x = 0\)):
+           \[ \lim_{(0,y)\to(0,0)} \frac{4 \cdot 0}{0^2 + 2 \cdot 0 + y^2} = 0 \]
+        
+        Now, since the limit along the \(x\)-axis is different from the limit along the \(y\)-axis, the overall limit as \((x, y)\) approaches \((0, 0)\) does not exist. The limit depends on the direction of approach and gives different results along different paths. The answer is DNE. 
+
+        \item[\textbf{iii)}:] Recall that a function $f(x, y)$ is continuous at the point $P(x_0 , y_0 )$ if all three of the following conditions are met. 
+        \begin{enumerate}
+            \item $f$ is defined at $P$. 
+            \item The limit $\displaystyle \lim_{(x,y) \to (x_0,y_0)}f(x,y)$ exists. 
+            \item $\displaystyle \lim_{(x,y) \to (x_0,y_0)}f(x,y) = f(x_0,y_0)$.  
+        \end{enumerate}
+    
+        Applying this definition, we can identify a point where the function is not continuous in a few different ways. 
+        \begin{itemize}
+            \item We found in the previous part that the limit at the origin does not exist, so we could use $a = b = 0$. 
+            \item We can also identify a point where the function is not continuous by selecting any point where the function is not defined. Our function is not defined when the denominator is zero and the numerator is non-zero. This corresponds to the set of points where     
+        $$x^2+2x+y^2 = 0$$
+        Any point that satisfies this relationship is sufficient. One such point is the origin, $(0,0)$. So we can use $a = b = 0$. But there are many other points we can use. 
+        \end{itemize}
+        
+    \end{itemize}
+
+    
+
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+\ifnum \Version=2
+    % THOMAS 14.1
+    
+    \part Consider the function $f(x,y) = \sqrt{x^2+y^2 - 1}$.
+    \begin{enumerate}
+        \item[i)] Where is $f(x,y)$ continuous? $ \framebox{\strut\hspace{3cm}}$. 
+        \item[ii)] As $(x,y) \to (1,0)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. If the limit does not exist write DNE. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: Recall that a function $f(x, y)$ is continuous at the point $P(x_0 , y_0 )$ if
+
+    \begin{enumerate}
+        \item $f$ is defined at $P$. 
+        \item The limit $\displaystyle \lim_{(x,y) \to (x_0,y_0)}f(x,y)$ exists. 
+        \item $\displaystyle \lim_{(x,y) \to (x_0,y_0)}f(x,y) = f(x_0,y_0)$.  
+    \end{enumerate}
+
+    Also, we say that function is \textbf{continuous} if it is continuous at every point of its domain. \\[6pt] 
+
+    This particular function is continuous everywhere on its domain. Its domain is the set $x^2+y^2 \ge 1$. So we can write the answer as $$x^2+y^2 \ge 1$$
+    
+    \textbf{ii)}: Substituting the limit point into $f(x,y)$ gives 
+    $$\sqrt{1^2+ 0^2 - 1} = 0$$
+    The answer is $0$. \\[6pt]   
+    \textbf{Additional Solution Note:} You might be wondering: the limit point is at the boundary of the domain, so how might that affect the limit? Because of the way a limit is defined, for the limit to exist we only need to obtain the same value along any path \textbf{in the domain }that leads to the limit point. Which it does, because $f$ is continuous. So the limit exists and is zero. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+
+
+
+
+\ifnum \Version=3
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x^2-2xy + y^2}{x-y}$, with $x\ne y$. As $(x,y) \to (1,1)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \cos\left(\frac{x^2+y^2}{x+y+1}\right)$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can factor the numerator to express in another form. 
+    $$f(x,y) = \frac{x^2-2xy + y^2}{x-y} = \frac{(x-y)^2}{x-y} = \frac{x-y}{1}= x-y$$
+    Substituting the limit point now gives us that $f \to 0$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives 
+    $$g(0,0) = \cos\left(\frac{0}{0+1}\right) = \cos\left(0\right) = 1$$
+    }
+    \else
+    
+    \fi
+\fi
+
+
+\ifnum \Version=4
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x^2-y^2}{x-y}$, with $x\ne y$. As $(x,y) \to (1,1)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^2+xy}{xy}$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: Substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can factor the numerator to express in another form. 
+    $$f(x,y) = \frac{x^2-y^2}{x-y} = \frac{(x+y)(x-y)}{x-y} = \frac{x+y}{1}= x+y$$
+    Substituting the limit point now gives us that $f \to 2$. 
+    
+    \textbf{ii)}: Substituting the limit point into $g(x,y)$ gives an indeterminant form $0/0$. But we can consider linear paths that pass through the limit point, $y=kx$, with $k\in \mathbb R$. Our limit becomes
+    $$g(x,y=kx) = \frac{x^2+x(kx)}{x(kx)} = \frac{x^2(1+k)}{kx^2} = \frac{1+k}{k} = \frac1k + 1$$
+    The value of the limit depends on $k$, so the limit does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+\ifnum \Version=5
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE.
+    \begin{enumerate} 
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x+y-9}{\sqrt{x+y}-3}$, with $x\ne y$. As $(x,y) \to (3,6)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^4}{x^4+y^2}$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: Substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can rationalize the denominator to express $f$ in another form. 
+    \begin{align}
+        f(x,y) 
+        &= \frac{x+y-9}{\sqrt{x+y}-3} \\
+        &= \frac{x+y-9}{\sqrt{x+y}-3}\frac{\sqrt{x+y}+3}{\sqrt{x+y}+3}\\
+        &= \frac{x+y-9}{x+y-9}\frac{\sqrt{x+y}+3}{1}\\
+        &= \sqrt{x+y}+3
+    \end{align}
+    
+    Then 
+    \begin{align}
+        \lim_{(x,y) \to (3,6)} f(x,y) = \lim_{(x,y) \to (3,6)} \sqrt{x+y}+3 = 6
+    \end{align}
+    Substituting the limit point now gives us that $f \to 6$. 
+    
+    \textbf{ii)}: To evaluate the limit of the function \( g(x, y) = \frac{x^4}{x^4 + y^2} \) as \((x, y)\) approaches the origin \((0, 0)\), we can consider approaching along different paths. If the limit is the same along all paths, then the limit exists; otherwise, it does not.
+
+    Let's consider two paths: along the x-axis (\(y = 0\)) and along the y-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the x-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4}{x^4 + y^2} = \lim_{{x \to 0}} \frac{x^4}{x^4} = \lim_{{x \to 0}} 1 = 1 \]
+       \item Along the y-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4}{x^4 + y^2} = \lim_{{y \to 0}} \frac{0}{y^2} = 0 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+
+\ifnum \Version=6
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x+y}{x}$. As $(x,y) \to (0,0)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \cos\left(\frac{x^2+y^2}{x+y+1}\right)$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can consider linear paths that pass through the limit point, $y=kx$, with $k\in \mathbb R$. Our limit becomes
+    $$f(x,y=kx) = \frac{x+ (kx)}{x} = \frac{x(1+k)}{x} = 1+k$$
+    The value of the limit depends on $k$, so the limit does not exist. The answer is DNE. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives 
+    $$g(0,0) = \cos\left(\frac{0}{0+1}\right) = \cos\left(0\right) = 1$$
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+
+\ifnum \Version=7
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x^2 + 2xy + y^2}{x+y}$, with $x+y\ne 0$. As $(x,y) \to (0,0)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^2 - 2y}{x-y}$, with $x\ne y$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$.  
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can factor the numerator to express in another form. 
+    $$f(x,y) 
+    = \frac{x^2 + 2xy + y^2}{x+y} 
+    = \frac{(x+y)^2}{x+y}
+    = x+y
+    $$
+    Substituting the limit point now gives us that $f \to 0$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives an indeterminant form. Let's consider two paths: along the $x$-axis (\(y = 0\)) and along the $y$-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the x-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 2y}{x-y} = \lim_{{x \to 0}} \frac{x^2 }{x} = \lim_{{x \to 0}} x = 0 \]
+       \item Along the y-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 2y}{x-y} = \lim_{{y \to 0}} \frac{- 2y}{-y} = 2 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+\ifnum \Version=8
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x^2 - y^2}{x-y}$, with $x-y\ne 0$. As $(x,y) \to (0,0)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^2 - 4y}{x^2-y}$, with $x\ne y$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$.  
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can factor the numerator to express in another form. 
+    $$f(x,y) 
+    = \frac{x^2 - y^2}{x-y} 
+    = \frac{(x+y)(x-y)}{x-y}
+    = x+y
+    $$
+    Substituting the limit point now gives us that $f \to 0$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives an indeterminant form. Let's consider two paths: along the $x$-axis (\(y = 0\)) and along the $y$-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the x-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 4y}{x^2-y} = \lim_{{x \to 0}} \frac{x^2 }{x^2} = \lim_{{x \to 0}} 1 = 1 \]
+       \item Along the y-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 4y}{x^2-y} = \lim_{{y \to 0}} \frac{- 4y}{-y} = 4 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+
+
+
+\ifnum \Version=9
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x+y-4}{\sqrt{x+y}-2}$. As $(x,y) \to (2,2)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^4 - y^2}{x^4+y^2}$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$.  
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can rationalize the denominator to express in another form. 
+    \begin{align}
+        f(x,y) 
+        &= \frac{x+y-4}{\sqrt{x+y}-2} \\
+        &= \frac{x+y-4}{\sqrt{x+y}-2} \cdot \frac{\sqrt{x+y}+2}{\sqrt{x+y}+2} \\
+        &= \frac{x+y-4}{x+y-4} \cdot \frac{\sqrt{x+y}+2}{1} \\
+        &= \sqrt{x+y}+2
+    \end{align}
+    Substituting the limit point now gives us that $f \to 4$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives an indeterminant form. Let's consider two paths: along the $x$-axis (\(y = 0\)) and along the $y$-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the $x$-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4 - y^2}{x^4+y^2} = \lim_{{x \to 0}} \frac{x^4 }{x^4} = \lim_{{x \to 0}} 1 = 1 \]
+       \item Along the $y$-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4 - y^2}{x^4+y^2} = \lim_{{y \to 0}} \frac{ - y^2}{+y^2} = -1 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+\ifnum \Version=10
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x+y-4}{\sqrt{x+y}-2}$. As $(x,y) \to (2,2)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^4 - y^2}{x^4+y^2}$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$.  
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can rationalize the denominator to express in another form. 
+    \begin{align}
+        f(x,y) 
+        &= \frac{x+y-4}{\sqrt{x+y}-2} \\
+        &= \frac{x+y-4}{\sqrt{x+y}-2} \cdot \frac{\sqrt{x+y}+2}{\sqrt{x+y}+2} \\
+        &= \frac{x+y-4}{x+y-4} \cdot \frac{\sqrt{x+y}+2}{1} \\
+        &= \sqrt{x+y}+2
+    \end{align}
+    Substituting the limit point now gives us that $f \to 4$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives an indeterminant form. Let's consider two paths: along the $x$-axis (\(y = 0\)) and along the $y$-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the $x$-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4 - y^2}{x^4+y^2} = \lim_{{x \to 0}} \frac{x^4 }{x^4} = \lim_{{x \to 0}} 1 = 1 \]
+       \item Along the $y$-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^4 - y^2}{x^4+y^2} = \lim_{{y \to 0}} \frac{ - y^2}{+y^2} = -1 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi
+
+
+
+\ifnum \Version=11
+    % THOMAS 14.1
+    
+    \part Evaluate the following limits, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[i)] Let $\displaystyle f(x,y) = \frac{x^2 - y^2}{x-y}$, with $x-y\ne 0$. As $(x,y) \to (0,0)$, $f(x,y) \to \framebox{\strut\hspace{1cm}}$. 
+        \item[ii)] Let $\displaystyle g(x,y) = \frac{x^2 - 4y}{x^2-y}$, with $x\ne y$. As $(x,y) \to (0,0)$, $g(x,y) \to \framebox{\strut\hspace{1cm}}$.  
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    \textbf{i)}: substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can factor the numerator to express in another form. 
+    $$f(x,y) 
+    = \frac{x^2 - y^2}{x-y} 
+    = \frac{(x+y)(x-y)}{x-y}
+    = x+y
+    $$
+    Substituting the limit point now gives us that $f \to 0$. 
+    
+    \textbf{ii)}: substituting the limit point into $g(x,y)$ gives an indeterminant form. Let's consider two paths: along the $x$-axis (\(y = 0\)) and along the $y$-axis (\(x = 0\)).
+    
+    \begin{itemize}
+        \item Along the x-axis (\(y = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 4y}{x^2-y} = \lim_{{x \to 0}} \frac{x^2 }{x^2} = \lim_{{x \to 0}} 1 = 1 \]
+       \item Along the y-axis (\(x = 0\)):
+       \[ \lim_{{(x, y) \to (0, 0)}} \frac{x^2 - 4y}{x^2-y} = \lim_{{y \to 0}} \frac{- 4y}{-y} = 4 \]
+    \end{itemize}
+
+    Since the limits along different paths are not the same, the limit of \( g(x, y) \) as \((x, y)\) approaches the origin does not exist. The answer is DNE. 
+    }
+    \else
+    
+    \fi
+\fi

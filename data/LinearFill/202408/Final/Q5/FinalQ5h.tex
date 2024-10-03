@@ -1,0 +1,111 @@
+% G) UNIT 4 SOMETHING NOT ORTHOG COMP
+\ifnum \Version=1
+    \part If $A$ is a real $n \times n$ orthogonal matrix, $\vec x \in \mathbb R^n$ is a unit vector, then $||A^2 \, \vec x ||$ is equal to \framebox{\strut\hspace{1cm}}.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The answer is $1$. Because if we let $\vec y = A\vec x$, then: $$\|A^2\vec x \| = \|AA\vec x \| = \|A\vec y\| = \|\vec y\| = \|A\vec x\| = \|\vec x\| = 1$$ Note that the question states that $\vec x$ is a unit vector.   } \fi    
+\fi 
+\ifnum \Version=2
+    \part A set of vectors are given to the Gram-Schmidt algorithm, which produces the vectors below. What must $h$ and $k$ be equal to? $h = \framebox{\strut\hspace{1cm}}, k = \framebox{\strut\hspace{1cm}}$ $$u=\begin{pmatrix} 1\\1\\0\\1\end{pmatrix}, \ v = \begin{pmatrix}1\\0\\1\\-1 \end{pmatrix}, \ w = \begin{pmatrix} 1\\2\\h\\k\end{pmatrix}$$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} We need $u\cdot w=0$, so $$ 1+2+k=0$$ or $k=-3$. We also need $v\cdot w=0$, so $$1+h-k=1+h-(-3) = h+4=0$$ so $h=-4$. } \fi     
+\fi 
+\ifnum \Version=3
+    \part If $A = \begin{pmatrix} 6&4\\a_1&a_2 \end{pmatrix}$, $y = \begin{pmatrix} 3\\4\end{pmatrix}$, $\proj_Wy = \begin{pmatrix} 4\\2\end{pmatrix}$, $W = \Col A$, then $a_1 = \framebox{\strut\hspace{0.80cm}}$ and $a_2 = \framebox{\strut\hspace{0.80cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $a_1= 3$, $a_2=2$. Because if $W = \Col(A)$ and $A$ is 2x2, then the columns of $A$ have to be linearly dependent. Otherwise if the columns of $A$ were independent, they would (in this case) span $\mathbb R^2$ and we would get $\text{proj}_Wy = y$. But we are told that $\text{proj}_Wy \ne y$ so the columns of $A$ must be dependent. Also, $\text{proj}_Wy$ is something in $W$. So the vector $\begin{pmatrix}4\\2 \end{pmatrix}$ must be in $W$. And so putting all of these ideas together: if $\begin{pmatrix}4\\2 \end{pmatrix}$ is in $W = \text{Col}A$, and the columns of $A$ are dependent, then set $A = \begin{pmatrix} 6&4\\3&2 \end{pmatrix}$.  } \fi    
+\fi 
+\ifnum \Version=4
+    % No problem needed because Version 4 has a graphing problem 
+\fi 
+\ifnum \Version=5
+  \part $A=\begin{pmatrix} 1 & 0 \\ 2 & -1\\ 2 & 1\end{pmatrix}$ has the QR factorization $A=QR$, where $Q= \begin{pmatrix} 1/3 &q_{12} \\q_{21} & q_{22}\\q_{31}& q_{32}\end{pmatrix}$, $R= \begin{pmatrix} r_{11} & r_{12} \\ r_{21} & r_{22}\end{pmatrix}$, where $q_{12}=\framebox{\strut\hspace{1cm}}$, $q_{22}=\framebox{\strut\hspace{1cm}}$, $q_{31}=\framebox{\strut\hspace{1cm}}$, $r_{11} = \framebox{\strut\hspace{1cm}}$, and $r_{22} = \framebox{\strut\hspace{1cm}}$. 
+  \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The columns of $Q$ form an orthonormal basis for $A$, but $A$ already has orthogonal columns, so we only need to normalize them to obtain $Q$. The columns of $Q$ are 
+    \begin{align}
+        \vec q_1 = \frac{1}{\sqrt{1^2+2^2+2^2}}\begin{pmatrix} 1\\2\\2\end{pmatrix} = \frac{1}{3}\begin{pmatrix} 1\\2\\2\end{pmatrix}, \quad \vec q_2 = \frac{1}{\sqrt{0^2+1^2+1^2}}\begin{pmatrix} 0\\-1\\1\end{pmatrix} = \frac{1}{\sqrt 2}\begin{pmatrix} 0\\-1\\1 \end{pmatrix} \end{align}
+            And $R$ is obtained using \begin{align}
+                R &= Q^TA = \begin{pmatrix} 1/3&2/3&2/3\\0&-1/\sqrt2& 1/\sqrt2\end{pmatrix}\begin{pmatrix} 1 & 0 \\ 2 & -1\\ 2 & 1\end{pmatrix} = \begin{pmatrix} 3&0\\0&2/\sqrt2 \end{pmatrix}
+            \end{align}
+            So $q_{12} = 0, q_{22} = -1/\sqrt2, q_{31} = 2/3$, and $r_{11} = 3, r_{22} = 2/\sqrt2$. 
+    } 
+   \else
+      
+   \fi
+\fi 
+\ifnum \Version=6
+    \part If $D = \{ \vec x \in \mathbb R ^{3} \; | \;  x_1 - 4 x_2 + 5x_3 =0\}$, then an orthogonal basis for $D\Perp$ is  $\left\{ \hbox to 1.5cm{\vbox to 0.7cm{}} \right\}$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} If $$\vec x = \begin{pmatrix}x_1\\x_2\\x_3 \end{pmatrix}$$ is a vector in $D$, then $0 = x_1 - 4x_2 +5x_3$. But we can re-write this using a dot product: 
+            \begin{align*}
+                0 &= x_1 - 4x_2 + 5x_3 = \begin{pmatrix} 1\\-4\\5 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2\\x_3 \end{pmatrix} = \vec y \cdot \vec x, \quad \vec y = \begin{pmatrix} 1\\-4\\5 \end{pmatrix}
+            \end{align*}
+            Thus $\vec y \in D^{\perp}$. Moreover, $\Dim D = 2$, and the vectors in $D$ have three entries, so $\Dim D^{\perp}= 1$. So a basis for $D^{\perp}$ is given by $\vec y$, which we can denote as:
+            $$\left\{ \begin{pmatrix} 1\\-4\\5 \end{pmatrix} \right\}$$
+            Note that only round or square brackets should be used to denote a vector. Curly braces should only be used to denote sets in this course. An \textbf{incorrect} answer would be $$ \begin{Bmatrix} 1\\-4\\5 \end{Bmatrix} $$ } \fi   
+\fi 
+\ifnum \Version=7
+    \part Suppose the least-squares solution to the inconsistent system $Ax=b$ is $\hat x$, where $x \in \mathbb R^2$, and $A$, $b$, and $\hat x$ are defined below. Then $x_1 = \framebox{\strut\hspace{1cm}}$, $x_2 = \framebox{\strut\hspace{1cm}}$.  $$A = \begin{pmatrix} 2&0\\0&5\\0&0\end{pmatrix}, \ b = \begin{pmatrix} 20\\10\\42\end{pmatrix}, \quad \hat x = \begin{pmatrix} x_1 \\ x_2\end{pmatrix}$$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} using the normal equations 
+    \begin{align}
+        A^TA \hat x & = A^T b \\
+        \begin{pmatrix} 2&0&0\\0&5&0 \end{pmatrix} \begin{pmatrix} 2&0\\0&5\\0&0\end{pmatrix} \hat x & = \begin{pmatrix} 2&0&0\\0&5&0 \end{pmatrix} \begin{pmatrix} 20\\10\\42\end{pmatrix} \\
+        \begin{pmatrix} 4&0\\0&25\end{pmatrix} \hat x & = \begin{pmatrix} 40\\50 \end{pmatrix}
+    \end{align}
+    Thus $x_1 = 40/4 = 10$, and $x_2 = 50/25 = 2$. } \fi    
+\fi 
+\ifnum \Version=8
+    \part If $u$ and $v$ are orthogonal vectors in $\mathbb R^n$ and the columns of $A$ are orthonormal, then the dot product $(Au)\cdot(Av) = \framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $(Au)\cdot(Av)=0$. Because  $$(Au)\cdot(Av) = (Au)^T(Av) = u^TA^TAv=u^TIv=u^Tv=0$$ } \fi    
+\fi 
+\ifnum \Version=9
+    \part Suppose that $L$ is the line that passes through the point $(2,-4)$ and the origin. The orthogonal projection of $y = \begin{pmatrix} 7\\1\end{pmatrix}$ onto $L$ is $\hat y = \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} For the given line \(L\) passing through the point \((2, -4)\) and the origin, a vector parallel to the line is $\mathbf{u} = \begin{pmatrix} 2 \\ -4 \end{pmatrix} $. The orthogonal projection of \(\mathbf{v}\) onto \(L\) is then:
+    \[ \text{proj}_L(\mathbf{v}) 
+    = \frac{y \cdot u}{\left\| u \right\|^2} u = \frac{7 \cdot 2 + 1 \cdot (-4)}{2^2 + (-4)^2} \cdot \begin{pmatrix} 2 \\ -4 \end{pmatrix} 
+    = \frac{10}{20} \cdot \begin{pmatrix} 2 \\ -4 \end{pmatrix} 
+    = \begin{pmatrix} 1 \\ -2 \end{pmatrix}. \]
+    Therefore, the orthogonal projection of \(\begin{pmatrix} 7 \\ 1 \end{pmatrix}\) onto the line \(L\) is \(\begin{pmatrix} 1 \\ -2 \end{pmatrix}\). So $c_1 = 1$, $c_2 = -2$.  } \fi    
+\fi 
+\ifnum \Version=10
+    \part Suppose matrix $A$ has the QR factorization $A = QR$, and the least-squares solution to the inconsistent system $Ax=b$ is $\hat x$, where $x \in \mathbb R^2$, and $A$, $b$, and $\hat x$ are defined below. Then $x_1 = \framebox{\strut\hspace{1cm}}$, $x_2 = \framebox{\strut\hspace{1cm}}$. $$Q= \frac15 \begin{pmatrix} 4&-3\\3&4\end{pmatrix}, R = \begin{pmatrix} 1&0\\0&3\end{pmatrix}, \ \ b = \begin{pmatrix} 5\\15\end{pmatrix}, \ \hat x = \begin{pmatrix} x_1 \\ x_2\end{pmatrix}$$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the least-squares solution is given by the solution to $R\hat x = Q^Tb$. And 
+    $$Q^Tb 
+    = \frac15 \begin{pmatrix} 4&3\\-3&4\end{pmatrix} \begin{pmatrix} 5\\15\end{pmatrix} 
+    = \frac15 \begin{pmatrix} 65 \\ 45\end{pmatrix} = \begin{pmatrix} 13\\9\end{pmatrix}$$
+    The system $R\hat x = Q^Tb$ has the augmented matrix below. 
+    $$\begin{pmatrix} 1&0&13\\0&3&9\end{pmatrix}$$
+    Thus $x_1 = 13$, $x_2 = 3$. 
+    } \fi    
+\fi 
+\ifnum \Version=11
+    % no question needed here - will have a graphing question 
+\fi 
+\ifnum \Version=12
+    % no question needed here - will have a graphing question
+\fi 
+\ifnum \Version=13 % make-up
+        % No problem needed because this version has a graphing problem 
+\fi 
+\ifnum \Version=14 % 
+    \part If $x = \begin{pmatrix} 6\\4 \end{pmatrix}$, $v = \begin{pmatrix} 1\\3\end{pmatrix}$, $V = \text{Span}\{v\}$, then $\proj_V x = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{0.75cm}}$ and $c_2 = \framebox{\strut\hspace{0.75cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the projection formula gives us 
+    $$\proj_V x 
+    = \frac{x\cdot v}{v\cdot v} v 
+    = \frac{6+12}{1+9}\begin{pmatrix} 1\\3\end{pmatrix} 
+    = \frac{18}{10}\begin{pmatrix} 1\\3\end{pmatrix} 
+    = \begin{pmatrix} 9/5\\27/5\end{pmatrix} 
+    $$ Therefore $c_1 = 9/5$, and $c_2 = 27/5$.} \fi    
+\fi 
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    \part FILL IN THE BLANK ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    \part FILL IN THE BLANK ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    \part FILL IN THE BLANK ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    \part FILL IN THE BLANK ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 

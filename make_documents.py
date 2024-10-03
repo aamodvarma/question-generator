@@ -2,47 +2,65 @@ import os
 from pylatexenc.latexencode import unicode_to_latex
 import json
 
-questions = []
-with open("./batches/batch_responses/tf_multivar-del-newline.jsonl", "r") as file:
-    for line in file:
-        json_object = json.loads(line)
-        custom_id = json_object['custom_id'].split('|')
-        q = json_object['response']['body']['choices'][0]["message"]["content"]
-        q = q.replace("`", "").replace("json", "").replace("\n", "").replace("\\", "\\\\")
-        q = q[q.find("{"):]
-        q = q.replace(",}", "}")
-        try:
-            json_question = json.loads(q)
-        except:
-            print(q)
-            break
-        json_question['chapter'] = custom_id[0]
-        json_question['section'] = custom_id[1]
-        json_question['number'] = custom_id[2]
-        questions.append(json_question)
+# questions = []
+# with open("./batches/batch_responses/tf_multivar-del-newline.jsonl", "r") as file:
+#     for line in file:
+#         json_object = json.loads(line)
+#         custom_id = json_object['custom_id'].split('|')
+#         q = json_object['response']['body']['choices'][0]["message"]["content"]
+#         q = q.replace("`", "").replace("json", "").replace("\n", "")
+#         q = q[q.find("{"):]
+#         q = q.replace(",}", "}")
+#         try:
+#             json_question = json.loads(q)
+#         except:
+#             print(q)
+#             break
+#         json_question['chapter'] = custom_id[0]
+#         json_question['section'] = custom_id[1]
+#         json_question['number'] = custom_id[2]
+#         questions.append(json_question)
 
-all_questions =  dict()
-for q in questions:
-    chapter = q['chapter']
-    section = q['section']
-    quest = q['question'].replace("\\\\", "\\")
-    try:
-        explanation = q['explanation'].replace("\\\\", "\\")
-    except:
-        continue;
-    generated_question = f"""\\item {quest.replace("True or False:", "").strip()}
+# all_questions =  dict()
+# for q in questions:
+#     chapter = q['chapter']
+#     section = q['section']
+#     quest = q['question'].replace("\\\\", "\\")
+#     try:
+#         explanation = q['explanation'].replace("\\\\", "\\")
+#     except:
+#         continue;
+#     generated_question = f"""\\item {quest.replace("True or False:", "").strip()}
     
-    \\ifnum \\Solutions=1 {{\\color{{EmphBlue}} Answer: {q['answer']} \\\\ Explanation: {explanation}}}
-    \\fi"""
+#     \\ifnum \\Solutions=1 {{\\color{{EmphBlue}} Answer: {q['answer']} \\\\ Explanation: {explanation}}}
+#     \\fi"""
 
-    if (chapter not in all_questions):
-        all_questions[chapter] = dict()
-    if (section not in all_questions[chapter]):
-        all_questions[chapter][section] = []
-    all_questions[chapter][section].append(generated_question)
+#     if (chapter not in all_questions):
+#         all_questions[chapter] = dict()
+#     if (section not in all_questions[chapter]):
+#         all_questions[chapter][section] = []
+#     all_questions[chapter][section].append(generated_question)
         
 
-location = "./generated_files/MultivariableCalculus/"
+
+name = "2551_TF_Q_20240911_2257"
+
+with open(f"./generated_files/{name}.json") as f:
+    all_questions = json.load(f)
+
+for c in all_questions:
+    for s in all_questions[c]:
+        for a in range(len(all_questions[c][s])):
+            q= all_questions[c][s][a]
+            text = f"""\\item {q['question'].replace("True or False:", "").strip()}
+                
+                \\ifnum \\Solutions=1 {{\\color{{EmphBlue}} Answer: {q['answer']} \\\\ Explanation: {q['explanation']}}}
+                \\fi"""
+            all_questions[c][s][a] = text
+
+
+
+location = f"./generated_files/{name}/"
 i = 0;
 for chapter in all_questions:
     i+=1;

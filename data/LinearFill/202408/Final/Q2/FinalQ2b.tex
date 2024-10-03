@@ -1,0 +1,71 @@
+% TRANSFORMS
+\ifnum \Version=1         
+    If $A$ is $2 \times 3$, then the transformation $\vec x \to A\vec x$ cannot be one-to-one.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. For the transform to be one-to-one every column of $A$ would need to be pivotal, which is impossible because there are more columns than rows.  } \fi
+\fi
+\ifnum \Version=2      
+    If $A$ is $m\times n$, $\vec x \in \mathbb R^n$, and there are some vectors $\vec b \in \mathbb R^m$ that are not in the range of the transform $T(\vec x) = A\vec x$, then there cannot be a pivot in every row of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. If there is a pivot in every row of $A$ then the corresponding linear system is always consistent.} \fi
+\fi    
+\ifnum \Version=3  
+    If $A$ is $2 \times 3$, then the transformation $\vec x \to A\vec x$ cannot be onto. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. The transform is onto when there are pivots in every row of the standard matrix $A$, which is possible when $A$ is $2\times 3$. } \fi
+\fi    
+\ifnum \Version=4    
+    If $A$ is the standard matrix for a linear transform that is one-to-one and onto, then $A$ must be square. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. There needs to be pivots in every row and every column and that can only happen when $A$ is square.} \fi
+\fi   
+\ifnum \Version=5    
+    If $A$ is $m\times n$, $\vec x \in \mathbb R^n$, and there are some vectors $\vec b \in \mathbb R^m$ that are not in the range of the transform $T(\vec x) = A\vec x$, then there cannot be a pivot in every column of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A counter-example: \setlength{\extrarowheight}{0.0cm}$A=\begin{pmatrix} 1&0\\0&1\\0&0\end{pmatrix}, b = \begin{pmatrix} 1\\1\\1\end{pmatrix}$. } \fi
+\fi    
+\ifnum \Version=6      
+    If $A$ is $n\times n$ and for every $\vec b \in \mathbb R^n$ there is exactly one $\vec x \in \mathbb R^n$ so that $A \vec x = \vec b$, then $ T_A(\vec x) = A\vec x $ is one-to-one.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. This is the definition of one-to-one. } \fi
+\fi        
+\ifnum \Version=7 
+    If $A$ is a $5 \times 3$ matrix, then the transformation $T (\vec x)=A\vec x$ is not onto. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True.} 
+    The range is at most 3 dimensional in a 5 dimensional space.} \fi
+\fi     
+\ifnum \Version=8
+     If the system $Ax=b$ is inconsistent, then the transform $T(\vec x) = A\vec x$ is not onto. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True.  } 
+    You can't solve $A\vec x = b$. } \fi
+\fi     
+\ifnum \Version=9
+    If the system $Ax=b$ is consistent for every choice of $b$ then the transform $T(\vec x) = A\vec x$ is not onto. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: False.   } 
+     You can solve $T \vec x =b$ for all $b$.}  \fi
+\fi     
+\ifnum \Version=10
+    If $A$ is a $3 \times 5$ matrix, then the transformation $T (\vec x)=A\vec x$ is not one-to-one. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True.} 
+    The columns of $A$ will be dependent, so there is a non-trivial solution to $T \vec x =0$.}\fi
+\fi     
+\ifnum \Version=11
+ If $A$ is $4\times 6$, then the transformation $\vec x \to A\vec x$ cannot be onto. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. The transform is onto when there are pivots in every row of the standard matrix $A$, which is possible when $A$ is $2\times 3$. }  \fi
+\fi     
+\ifnum \Version=12
+    If matrix $A$ has a pivot in every column, then the transformation $T (\vec x) = A\vec x$ is one-to-one.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  
+    True. The columns are linearly independent.} \fi
+\fi   
+\ifnum \Version=13
+    If $A$ is $m\times n$, $\vec x \in \mathbb R^n$, and there are some vectors $\vec b \in \mathbb R^m$ that are not in the range of the transform $T(\vec x) = A\vec x$, then there cannot be a pivot in every column of $A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A counter-example: \setlength{\extrarowheight}{0.0cm}$A=\begin{pmatrix} 1&0\\0&1\\0&0\end{pmatrix}, b = \begin{pmatrix} 1\\1\\1\end{pmatrix}$. } \fi
+\fi   
+\ifnum \Version=14
+    If $A$ is $m\times n$ and for every $\vec b \in \mathbb R^m$ there is at least one $\vec x \in \mathbb R^n$ so that $A \vec x = \vec b$, then every column of $A$ must be pivotal. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  False. Every row would be pivotal.} \fi
+\fi   
+\ifnum \Version=15
+    TRUE FALSE ON LINEAR TRANSFORMS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True. } \fi
+\fi   
+\ifnum \Version=16
+    TRUE FALSE ON LINEAR TRANSFORMS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True. } \fi
+\fi   
+& $\bigcirc$  & $\bigcirc$ \\   

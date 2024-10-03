@@ -1,0 +1,686 @@
+\documentclass{exam}
+
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{multicol}
+\newcommand{\vect}{\overrightharp}
+\DeclareMathOperator{\proj}{proj}
+\newcommand{\proje}[2]{\proj_{\mathbf{#1}} \mathbf{#2}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\pdev}[2]{\dfrac{\partial {#1}}{\partial{#2}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vecf}[3]{#1 \hat{i} #2 \hat{j} #3 \hat{k}}		
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bbf}{\mathbf{f}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bzero}{\mathbf{0}}
+
+\renewcommand{\solutiontitle}{\noindent}
+
+\begin{document}
+	\begin{center}{\Large \textbf{Math 2551 True/False Bank}}
+	\end{center}
+
+	%\printanswers
+	\unframedsolutions
+	
+	Choose whether the following statements are true or false. If the statement is \textit{always} true, pick true. If the statement is \textit{ever} false, pick false.
+	
+	\section{Vectors, Lines, Planes, Quadrics, Vector-Valued Functions}
+	\begin{questions}
+		\question True or False:  If $\bu$ and $\bv$ are vectors in $\R^3$, then $\bu\times \bv=\bv\times \bu$.
+		 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		 
+		\question True or False:  If $\bT(t)$ is the unit tangent to $\br(t)$ and $\bN(t)$ is the principal normal vector, then $\bT(t)\cdot\bN(t)=0$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+
+		\question True or False:  A smooth curve in the plane that never crosses itself can have two distinct tangent lines at a given point. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False:  If a spaceship is in orbit around the Moon with a constant speed of 3750 miles per hour, then it is the case that the acceleration of the spaceship is zero.  
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False:  The sphere $x^2+(y-2)^2+(z+1)^2=6$ has center $(0,-2,1)$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If $\bv$ and $\bw$ are vectors in $\mathbb{R}^3$, then $(\bw\times \bv)\cdot \bw=0$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: If a vector-valued function $\br(t)$ is differentiable at $t=2$ then a direction vector for the line tangent to  $\br(t)$ at $t=2$ is $\br'(2)$. 
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		
+		\question True or False: The curvature of a line is $0$ at every point on the line. 
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: If $\bu$ and $\bv$ are two vectors in $\R^3$, then $\bu\cdot\bv$ is a vector orthogonal to both $\bu$ and $\bv$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: There is exactly one possible parameterization for any line in space.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If $\bu$ and $\bv$ are orthogonal unit vectors in $\R^3$, then $|\bu\times\bv|=1$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The surface in $\R^3$ consisting of the points which solve the equation $x^3+y^3-z=27$ is an example of a quadric surface.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: $\|\bv\| = |v_1| + |v_2| + |v_3|$, where $\bv$ = $v_1 \bi + v_2 \bj + v_3\bk$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If the speed of a particle is zero, its velocity must be zero. 
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The points $(1,0,1)$ and $(0,-1,1)$ are the same distance from the origin. 
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The point $(2, -1, 3)$ lies on the graph of the sphere $(x - 2)^2 + (y + 1)^2 + (z - 3)^2 = 25.$
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: The equation $Ax + By + Cz + D = 0$ represents a line in space. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: Any three points in 3 space determine a unique plane.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: Any two distinct lines in 3-space determine a unique plane. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If the graph of $z=f(x,y)$ is a plane, then each cross section is a line.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The length of the sum of two vectors is always strictly larger than the sum of the
+		lengths of the two vectors. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: $\bv$ and $\bw$ are parallel if $\bv$ = $\lambda \bw$ for some scalar $\lambda$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		 
+		\question True or False: Any two parallel vectors point in the same direction.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		 
+		\question True or False: Any two points determine a unique displacement vector. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: 2$\bv$ has twice the magnitude as $\bv$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		  
+		\question True or False: The vector $\bv=\langle \frac{1}{2}, \frac{1}{2}\rangle$ is a unit vector.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False:  The vector $\frac{1}{\sqrt{3}}\bi -\frac{1}{\sqrt{3}}\bj+\frac{2}{\sqrt{3}}\bk$ is a unit vector.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: The vectors $2\bi-\bj+\bk$ and $\bi-2\bj+\bk$ are parallel.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: The only way that $\bv\cdot\bw$ = 0 is if $\bv = \bzero$ or $\bw = \bzero$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: The zero vector $\bzero$ (with magnitude $\|\bzero\|=0$) is perpendicular to all other vectors.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		  
+		\question True or False: Any plane has only two distinct normal vectors.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: Parallel planes share a same normal vector.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		  
+		\question True or False: Perpendicular planes have perpendicular normal vectors.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		  
+		\question True or False: An equation of the plane with normal vector $\langle 1,1,1\rangle$ containing the point $(1, 2, 3)$ is $z = x + y$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		  
+		\question True or False: For any two vectors $\bu$ and $\bv$, $\bu\cdot\bv$ = $\bv\cdot\bu$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: For any vectors $\bu$ and $\bv$ in $\R^3$, $(\bu \times \bv) ×\times (\bv \times \bu) = (\bv \times \bu) \times (\bu \times \bv)$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		  
+	
+		\section{Functions of Multiple Variables, Partial Derivatives, Optimization}
+		\question True or False:  Suppose we have a function $f(x,y)$ and $\bu\in \R^2$ is a unit vector. Then $D_{\bu}f(a,b)$ is a vector.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+	 
+ 		\question True or False: In a table of values for a linear function, the columns must have the same slope as the rows.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+
+		\question True or False:  If $f(x,y)=(x+y)^{50}$, then all of the $100^{\text{th}}$ order partial derivatives of $f$ will be 0.  
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+
+		\question True or False:  The total derivative $Df$ of the function $f(x,y,z,w)=2xyz+3\ln(w)+\sin(e^{xw+z})$ is represented by a $1\times 4$ matrix.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+
+		\question True or False:  Suppose $\lim\limits_{(x,y)\to(0,0)} f(x,y)=1$ along the $y$-axis, the $x$-axis, and the line $y=x$ and $f(0,0)=1$. Then $f$ must be continuous at $(0,0)$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False:  The domain of the function $f(x,y)=\sqrt{x-2}+y$ is the interval $[2,\infty)$. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False:   Suppose $f(x,y)$ is a differentiable function defined on all of $\R^2$, $f_{xx}(0,-1) = -3$, $f_{xy}(0,-1)=f_{yx}(0,-1)=4$, and $f_{yy}(0,-1)=-6$. Then $(0,-1)$ is the location of a local maximum of $f$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False:  The domain of the function $f(x,y)=\ln{(x-2)}+y^2$ is the interval $(2,\infty)$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: The contour lines of the graph of $f(x,y)=2x+3y$ are parallel lines.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: Suppose that the price $P$ in dollars to purchase a used car is a function of $C$, its original cost in dollars, and its age $A$ in years, i.e. $P=f(C,A)$.  Then the sign of $\dfrac{\partial P}{\partial C}$ is negative.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: Suppose the linear approximation of a function $f(x,y)$ at the point $(2,-1)$ is \[L(x,y)=4+3(x-2)+5(y+1).\]  Then an equation of the tangent plane to the graph of $f$ at the point $(2,-1,4)$ is $z=4+3(x-2)+5(y+1)$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+
+		\question True or False: The domain of the function $f(x,y,z)=\frac{1}{x-2}+yz^2$ is $(-\infty,2)\cup(2,\infty)$. 
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False: There does not exist a function $f(x,y)$ which is continuous and has continuous partial derivatives such that $f_x(x,y)=x^2+2xy$ and $f_y(x,y)=3xy+y^2$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+
+		\question True or False: A function of two variables is differentiable at the point $(a,b)$ if the surface $z=f(x,y)$ has a unique tangent plane at the point $(a,b,f(a,b))$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The two-path test says that if there are two paths through the point $(a,b)$ on which the limit of $f(x,y)$ is $L$, then \[\lim_{(x,y)\to(a,b)}f(x,y)=L.\]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $f:\R^2\to \R$ is any function of two variables, $f_{xy}=f_{yx}$ at every point $(x,y)$ in the domain of $f$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If $z=f(x,y)$ and $x=u(s,t)$, then it must be true that $\pdev{z}{s}=\pdev{z}{x}\pdev{x}{s}$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: A function $f(x, y)$ can be an increasing function of $x$ with $y$ held fixed, and be a
+		decreasing function of $y$ with $x$	 held fixed.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The graph of the equation $f(x, y) = 2$ is a plane parallel to the $xz$-plane.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The cross section of the function $f(x, y) = x + y^2$ in the plane $y = 1$ is a line.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The graphs of $f(x, y) = x^2 + y^2$ and $g(x, y) = 1 - x^2 - y^2$ intersect in a circle.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The contours of the graph of $f(x, y) = y^2 + (x - 2)^2$ are either circles or a single point.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: If all the contours for $f(x, y)$ are parallel lines, then the graph of $f$ is a plane.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: On a weather map, there can be two isotherms (contour lines) which represent the same temperature but do not intersect.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: Any surface that is a graph of a 2-variable function $z=f(x,y)$ can be thought of as a	level surface of a function of 3 variables.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: Any level surface of a function of 3 variables can be thought of as the graph of a	function $z=f(x,y)$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: The level surfaces of the function $f(x, y, z) = x^2 +y^2 +z^2$ are cylinders with axis along the $y$-axis.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If $\pdev{f}{x}=\pdev{f}{y}$ everywhere, then $f(x, y)$ is constant.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: There exists a function $f(x, y)$ with $f_x = 2y$ and $f_y = 2x$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The differential of a function $f(x, y)$ at the point $(a, b)$ is given by the formula $df = f_x(a, b)dx + f_y(a, b)dy$. The equation of the tangent plane to $z=f(x,y)$ at the point
+		$(a, b)$ can be used to calculate values of $df$ from $dx$ and $dy$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The differential of a function $f(x, y)$ at the point $(a, b)$ is given by the formula $df =f_x(a, b)dx+f_y(a, b)dy$. If $dx$ and $dy$ represent small changes in $x$ and $y$ in moving away from the point $(a, b)$, then $df$ approximates the change in $f$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The function $f(x, y)$ has gradient $\nabla f$ at the point $(a, b)$. The vector $\nabla f$ is perpendicular to the level curve $f(x, y) = f(a, b)$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The function $f(x, y)$ has gradient $\nabla f$ at the point $(a, b)$. The vector $\nabla f$ is perpendicular to the surface $z=f(x,y)$ at the point $(a, b, f(a, b))$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: The function $f(x, y)$ has gradient $\nabla f$ at the point $(a, b)$. The vector $f_x(a, b)\bi + f_y(a, b)\bj + \bk$ is perpendicular to the surface $z=f(x,y)$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: There exists a function $f$ with continuous second-order partial derivatives such that $f_x(x,y)=x+y^2$ and $f_y(x,y)=x-y^2$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: $f_{xy}=\dfrac{\partial^2 f}{\partial x \partial y}$
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: $D_\bk f(x,y,z)=f_z(x,y,z)$
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $f(x,y)\to L$ as $(x,y)\to (a,b)$ along every straight line through $(a,b)$, then $\displaystyle \lim_{(x,y)\to(a,b)} f(x,y) =L$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $f_x(a,b)$ and $f_y(a,b)$ both exist, then $f$ is differentiable at $(a,b)$
+		\begin{solution}
+			\textbf{False}
+		\end{solution}	
+		
+		\question True or False: If $f$ has a local minimum at $(a,b)$ and $f$ is differentiable at $(a,b)$, then $\nabla f(a,b)=\bzero$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $f$ is a function, then \[\lim_{(x,y)\to(2,5)}f(x,y)=f(2,5). \]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $f(x,y)=\ln(y)$, then $\nabla f(x,y)=1/y$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $f(x,y)$ has two local maxima, then $f$ must have a local minimum.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $f(x,y)=\sin(x)+\sin(y)$, then $-\sqrt{2}\leq D_\bu f(x,y) \leq \sqrt{2}$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\section{Multiple Integration, Polar, Cylindrical, Spherical Coordinates, Change of Variables}
+		
+		\question True or False:  The cylindrical coordinates of the point with Cartesian coordinates $(4,\pi,0)$ are $(-4,0,0)$. 
+		\begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False:  The equation $r=2\sin(\theta)$ describes a circle. 
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False:  The mass of a region in the plane might be given by $\displaystyle\int_0^x\int_0^y 3\ dy\ dx.$
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False:  If $f(x,y)>0$ for all $x,y \in \R^2$, \[\int_0^1\int_0^1 f(x,y) \ dy\ dx > \int_0^1\int_x^1 f(x,y)\ dy\ dx. \]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+
+		\question True or False:  The region $0\leq \rho \leq 4, 0 \leq \phi \leq \pi, 0\leq \theta \leq \pi$ describes the bottom half of a sphere of radius 4 centered on the origin.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: \[ \int_{-1}^3 \int_{10}^{353,203} x^2y^3+y^{17}+(2-x)^{362}\ dx\ dy = \int_{10}^{353,203} \int_{-1}^3 x^2y^3+y^{17}+(2-x)^{362}\ dy\ dx \]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: Suppose $f(x,y)$ is a continuous function and $R$ is a region bounded by a smooth curve in the plane.  If $\iint_R\ dA = 4$ and the average value of $f$ on $R$ is $3$, then $\iint_R f(x,y)\ dA = \frac{3}{4}$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: \[\int_{-2}^{2} \int_{0}^{\sqrt{4-x^2}} \sqrt{x^2+y^2}\ dy\ dx = \int_{0}^{\pi} \int_{0}^{2} r\ dr\ d\theta. \]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: Let $E$ be an ellipse in $\R^2$.  If $\iint_E 1\ dA=10$ and $\iint_E f(x,y)\ dA =20$, then the average value of $f(x,y)$ on $E$ is 2.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: \[ \int_0^1\int_0^x\sqrt{x+y^2}\ dy\ dx = \int_0^x\int_0^1\sqrt{x+y^2}\ dx dy\]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: \[\int_1^2\int_3^4 x^2e^y\ dy\ dx = \int_1^2 x^2\ dx \int_3^4 e^y\ dy \]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: \[\int_{-1}^1\int_0^1e^{x^2+y^2}\sin(y)\ dx\ dy=0\]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: If $f:\R\to\R$ is continuous on $[0,1]$, then \[\int_0^1\int_0^1 f(x)f(y)\ dy\ dx=\left( \int_0^1 f(x)\ dx \right)^2 \]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: \[ \int_1^4\int_0^1 (x^2+\sqrt{y})\sin(x^2y^2)\ dx\ dy \leq 9 \]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: The integral \[ \int_0^{2\pi}\int_0^2\int_r^2\ dz\ dr\ d\theta \] represents the volume enclosed by the cone $z=\sqrt{x^2+y^2}$ and the plane $z=2$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $R$ is the union of the disjoint regions $R_1$ and $R_2$ in $\R^2$, then \[\iint_R f(x,y)\ dA = \iint_{R_1} f(x,y)\ dA - \iint_{R_2} f(x,y)\ dA. \]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\section{Vector Fields, Line Integrals, Surface Integrals, Conservative Vector Fields, Stokes' Theorem}
+		
+		\question True or False:  Every vector field $\bF(x,y)$ is a gradient vector field, i.e. there is always some $f(x,y)$ so that $\bF=\nabla f$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False:  If $\bF(x,y,z)$ is a velocity field for a fluid flowing in space, then $\nabla \cdot \bF$ is a vector whose direction is the right-hand rule direction of the axis of rotation of the fluid at each point.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+
+		\question True or False:  For any continuously differentiable function $f(x,y,z)$, $\nabla\times(\nabla f) = \mathbf{0}$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+		
+		\question True or False: If $C_1$ and $C_2$ are two smooth paths from $(0,0,0)$ to $(1,0,1)$ and $f(x,y,z)$ is a differentiable function, then we must have
+		\[ \int_{C_1} f(x,y,z)\ ds = \int_{C_2} f(x,y,z)\ ds. \]
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+		
+		\question True or False: If $\bF(x,y)$ is a conservative vector field defined on all of $\mathbb{R}^2$ and $C$ is any closed curve in the plane, then \[\oint_C (\bF\cdot \bT)\ ds = 0.\]
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+
+		\question True or False: Two different curves can be flow lines for the same vector field.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		%\question True or False: If one parameterization of a curve is a flow line for a vector field, then all its parameterizations are flow lines for the vector field. 
+
+		
+		%\question True or False: If $\br(t)$ is a flow line for a vector field $\bF$, then $\br_1(t) = \br(t - 5)$ is a flow line of the same vector field $\bF$.
+
+		
+		%\question True or False: If $\br(t)$ is a flow line for a vector field $\bF$, then $\br_1(t) = \br(2t)$ is a flow line of the vector field $2\bF$.
+
+			
+		%\question True or False: If $\br(t)$ is a flow line for a vector field $\bF$, then $\br_1(t) = 2\br(t)$ is a flow line of the vector field $2\bF$.
+
+		\question True or False: Given two circles centered at the origin, oriented counterclockwise, and any vector field $\bF$, then the line integral of $\bF$ is larger around the circle with larger radius.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If $\bF$ is any vector field and $C$ is a circle, then the integral of $\bF$ around $C$ traversed clockwise is the negative of the integral of $\bF$ around $C$ traversed counterclockwise.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: If all the flow lines of a vector field $\bF$ are parallel straight lines, then $\nabla\cdot\bF = 0.$
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If all the flow lines of a vector field $\bF$ radiate outward along straight lines from the origin, then $\nabla \cdot \bF > 0$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The vector field $\bF$ is defined everywhere in a region $W$ bounded by a surface $S$. If $\nabla \cdot \bF > 0$ at all points of $W$, then the vector field $\bF$ points outward at all points of $S$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: The vector field $\bF$ is defined everywhere in a region $W$ bounded by a surface $S$. If  $\nabla \cdot \bF > 0$ at all points of $W$, then the vector field $\bF$ points outward at some points of $S$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: The vector field $\bF$ is defined everywhere in a region $W$ bounded by a surface $S$. If $\iint_S \bF\cdot\bn\ d\sigma>0$, then  $\nabla \cdot \bF > 0$ at some points of $W$.
+		 \begin{solution}
+		 	\textbf{True}
+		 \end{solution}
+		
+		\question True or False: If all the flow lines of a vector field $\bF$ are straight lines, then $\nabla \times \bF =\bzero$.
+		 \begin{solution}
+		 	\textbf{False}
+		 \end{solution}
+		
+		\question True or False: If all the flow lines of a vector field $\bF$ lie in planes parallel to the $xy$-plane, then the curl of $\bF$ is a multiple of $\bk$ at every point.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $\bF$ is a vector field, then $\nabla \cdot \bF$ is a vector field.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: If $\bF$ is a vector field, then $\nabla \times \bF$ is a vector field.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $f$ has continuous partial derivatives of all orders on $\R^3$, then $\nabla \cdot(\nabla \times (\nabla f))=0$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $f$ has continuous partial derivatives on $\R^3$ and $C$ is any circle, then $\int_C \nabla f \cdot d\br=0$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $\bF = P\bi+Q\bj$ and $P_y=Q_x$ in an open region $D$, then $\bF$ is conservative.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: If $\bF$ and $\bG$ are vector fields and $\nabla \cdot \bF = \nabla \cdot \bG$, then $\bF=\bG$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: The work done by a conservative force field in moving a particle around a closed path is zero.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $\bF$ and $\bG$ are vector fields, then $\nabla \times (\bF+\bG)=\nabla \times \bF + \nabla \times \bG$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: If $\bF$ and $\bG$ are vector fields, then $\nabla \times (\bF\cdot\bG)=(\nabla \times \bF)\cdot(\nabla\times \bG)$
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: If $S$ is a sphere in $\R^3$ and $\bF$ is a constant vector field, then $\iint_S \bF\cdot\bn\  d\sigma =0$.
+		\begin{solution}
+			\textbf{True}
+		\end{solution}
+	
+		\question True or False: There is a vector field $\bF$ such that $\nabla \times \bF = x\bi+y\bj+z\bk$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	
+		\question True or False: Suppose $S$ is a smooth surface in $\R^3$ and $\bF$ is a vector field in $\R^3$.  If $\iint_S \bF\cdot\bn\ d\sigma>0$, then the angle between $\bF$ and $\bn$ is acute at all points on $S$.
+		\begin{solution}
+			\textbf{False}
+		\end{solution}
+	\end{questions}
+	
+\end{document}

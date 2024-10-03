@@ -1,0 +1,475 @@
+\ifnum \Version=1
+\question[6] Suppose $R$ is the point $R(0,1,2)$, $L$ is the line $\mathbf r(t) = \langle t,t,t\rangle $. Please show your work. 
+\begin{parts}
+    \part Construct the equation of the plane that passes through $R$ and contains the line $L$. 
+    
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Two points on the line are $O(0,0,0)$ and $Q(1,1,1)$. So two vectors parallel to the plane are $\mathbf {OR} = \langle 0,1,2\rangle$ and $\mathbf{ OQ} = \langle 1,1,1\rangle$. A normal vector to the plane is $$\mathbf {OR} \times \mathbf {OQ} = \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k\\0&1&2\\1&1&1 \end{vmatrix} = \langle -1, 2, -1\rangle$$The plane has equation 
+    
+    $$-1(x-0) +(2)(y - 1) + (-1)(z-2) = 0$$ 
+    
+    \textit{ Note: The above is sufficient but we could also rearrange this equation to obtain, for example, $-x+2y-z = 0$. Note also that \textbf{it is not sufficient} to leave the answer as $-1(x-0) +(2)(y - 1) + (-1)(z-2)$, because this is not an equation. The question asked for an equation, not an expression. We need to have an equals sign somewhere in our answer. 
+}
+    } 
+   \else
+      \vspace{9cm}
+   \fi
+   \part Calculate the distance between the point $R$ and the line $L$.
+   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A point on the line that corresponds to where $t=0$ is $O(0,0,0)$. The line has direction vector $\mathbf v = \langle 1,1,1\rangle$. The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{OR}\times \mathbf v|}{|\mathbf v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{OR} &= \langle 0,1,2 \rangle \\
+        \mathbf{OR} \times \mathbf v &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 0&1&2 \\ 1&1&1\end{vmatrix} = \langle -1,2,-1\rangle\\
+        |\mathbf{OR}\times \mathbf v| &= \sqrt{1+4+1} = \sqrt{6}\\
+        |\mathbf v| &= \sqrt{1+1+1} = \sqrt{3}\\
+        d &= \frac{|\mathbf{OR}\times \mathbf v|}{|\mathbf v|} = \sqrt{ 2 }
+    \end{align}
+    } 
+    \else
+    \vspace{4cm}
+    \fi       
+\end{parts}
+
+\fi    
+
+
+
+
+
+
+
+\ifnum \Version=2
+
+\question[6] Consider the point $S(4,1,1)$ and the line $L$ whose parametric equations are $x=2+t$, $y=1-3t$, $z=t$. Please show your work for the following. \\
+
+\begin{parts}
+    \part Calculate the distance between $S$ and $L$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A point on the line that corresponds to where $t=0$ is $P(2,1,0)$. The line has direction vector $v = \langle 1,-3,1\rangle$. The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{PS}\times v|}{|v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{PS} &= \langle4,1,1\rangle - \langle 2,1,0\rangle = \langle 2,0,1 \rangle \\
+        \mathbf{PS} \times v &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 2&0&1 \\ 1&-3&1\end{vmatrix} = \langle 3, -1,-6\rangle\\
+        |\mathbf{PS}\times v| &= \sqrt{9+1+36} = \sqrt{46}\\
+        |v| &= \sqrt{1+9+1} = \sqrt{11}\\
+        d &= \frac{|\mathbf{PS}\times v|}{|v|} = \sqrt{ \frac{46}{11} }
+    \end{align}
+    } 
+    \else
+    \vspace{4cm}
+    \fi        
+
+    \part Determine the point $P$ where $L$ intersects the plane $x+y+4z=1$. Your answer should be expressed as a point in $\mathbb R^3$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}
+    \textbf{Solutions:} The line will intersect the plane when it satisfies $x+y+4z=1$. Substituting the parametric equations for the line into the plane equation we obtain
+    \begin{align}
+        (2+t) + (1-3t) + 4(t) & = 1\\
+        3 +2t & = 1 \\
+        t&= -1
+    \end{align}
+    With $t=-1$, the parametric equations give us 
+    \begin{align}
+        x&= 2 - 1 = 1 \\
+        y&= 1 -3(-1) = 4 \\
+        z&= -1 
+    \end{align}
+    The point is $P(1,4,-1)$. 
+    } 
+    \else 
+    \newpage
+    \fi    
+\end{parts}
+
+\fi    
+
+
+
+
+
+
+\ifnum \Version=3
+
+\question[6] A particle is located at the point $P(1, 2, 1)$ at time $t = 0$. It travels in a straight line to the point $Q(5, 6, 8)$, has speed 18 at $t=0$, and acceleration $\mathbf a = 4\mathbf i + 4\mathbf{j} + 7\mathbf{k} $. Determine the velocity of the particle, $\mathbf  v(t)$.  Please show your work.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $\langle 4t+8,4t+8,7t+14 \rangle$ \\[12pt] \textit{Solutions:} The velocity $\mathbf v$ is given by the integral of the acceleration, so
+    \begin{align}
+        \mathbf v = \int \mathbf a(t) \, dt = \langle 4t, 4t, 7t\rangle + \mathbf c_1
+    \end{align}
+    The speed at $t=0$ is 18 and the particle is moving in the direction of $\langle 4,4,7\rangle$, so 
+    \begin{align}
+        \mathbf v(0) = \frac{18}{\sqrt{16+16+49}} \langle 4,4,7 \rangle = \frac{18}{\sqrt{81}} \langle 4,4,7 \rangle = \mathbf c_1 \\
+        \langle 8,8,14\rangle = \mathbf c_1
+    \end{align}
+    Thus
+    \begin{align}
+        \mathbf v = \langle 4t,4t,7t\rangle + \langle 8,8,14\rangle = \langle 4t+8,4t+8,7t+14 \rangle
+    \end{align}
+}
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=4
+        
+\question[6] Consider the two planes $P_1$ and $P_2$. 
+\begin{align}
+    P_1: & \quad 2x+3y+6z=2  \\
+    P_2: & \quad 4x+6y+12z=6
+\end{align}
+Please show your work for the following.
+\begin{parts}
+    \part Calculate the distance between planes $P_1$ and $P_2$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The planes are parallel because their normal vectors are parallel. A point on the first plane is $P(1,0,0)$, a point on the other plane is $S(0,1,0)$, then $\mathbf {PS} = \langle -1,1,0 \rangle $, and a normal vector to both planes is $\mathbf n = \langle 2,3,6\rangle$. The distance between that point and the other plane is the length of the projection of vector $\mathbf {PS}$ onto $\mathbf n$. 
+    \begin{align} 
+    d = \left| \text{proj}_{\mathbf n} \mathbf {PS} \right| 
+    &= \left | \frac{ \mathbf {PS} \cdot \mathbf n}{\mathbf n \cdot \mathbf n} \mathbf n \right| \\
+    &= \left| \frac{\langle -1,1,0\rangle \cdot \langle 2,3,6\rangle }{2^2+3^3+6^2}  \mathbf n  \right| \\
+    &= \left| \frac{1}{49} \mathbf n  \right | \\
+    &= \frac{1}{\sqrt{49}} \sqrt{4+9+36} \\
+    &= \frac{1}{\sqrt{49}} \sqrt{49}\\
+    &= 1
+    \end{align}
+    The distance between the two planes is $1$.\\[12pt]
+    \textbf{Additional Solution Notes}\\
+    Note that there are other formulas for the distance between a point and a plane that can be used. One such formula, which is in the textbook, is 
+    \begin{align}
+        d =  \frac{\left| \mathbf{PS} \cdot \mathbf n \right|}{|\mathbf n|}
+    \end{align}
+    Yet another formula for the distance between parallel planes $ax+by+cz+d_1=0$ and $ax+by+cz+d_2=0$ is
+    \begin{align}
+        d =  \frac{\left| d_1 - d_2 \right|}{\sqrt{a^2+b^2+c^2}}
+    \end{align}
+    Also note that a good way to check your work is to consider other points for P and Q and see if you get the same result for the distance. 
+    }
+    \else
+        \vspace{5cm}
+    
+    \fi    
+    \part Determine the parametric equations for the line of intersection between plane $P_1$ and the plane $P_3$, which is given by $2x+4y+8z=4$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \textbf{Solutions:} the set of points that are common to $P_1$ and $P_3$ satisfy the linear system whose augmented matrix is
+    \begin{align}
+        \begin{pmatrix} 2&3&6&2\\2&4&8&4\end{pmatrix} 
+        \sim \begin{pmatrix} 2&3&6&2\\0&1&2&2\end{pmatrix} 
+        \sim \begin{pmatrix} 2&0&0&-4\\0&1&2&2\end{pmatrix} 
+        \sim \begin{pmatrix} 1&0&0&-2\\0&1&2&2\end{pmatrix} 
+    \end{align}
+    So if the variable vector $\mathbf x = \langle x,y,z \rangle$ represents the line of intersection, then:
+    \begin{align}
+        \mathbf x &= \begin{pmatrix}x\\y\\z \end{pmatrix} = \begin{pmatrix} -2 \\2-2z \\z  \end{pmatrix}
+    \end{align}
+    Letting $z=t$, we have the parametric equations
+    \begin{align}
+        x&=-2 \\
+        y&= 2-2t \\
+        z&= t
+    \end{align}
+    } 
+    \else 
+    \newpage
+    \fi
+
+    
+\end{parts}
+
+\fi    
+
+
+\ifnum \Version=5
+
+\question[6] A particle is located at the point $P(1, 2, 5)$ at time $t = 0$. It travels in a straight line to the point $Q(2, 4, 7)$, has speed 12 at $t=0$, and acceleration $\mathbf a = \mathbf i + 2\mathbf{j} + 2\mathbf{k} $. Determine the velocity of the particle, $\mathbf  v(t)$.  Please show your work.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $\langle t+4, 2t+8, 2t+8 \rangle$ \\[12pt] \textit{Solutions:} The velocity $\mathbf v$ is given by the integral of the acceleration, so
+    \begin{align}
+        \mathbf v = \int \mathbf a(t) \, dt = \langle t, 2t, 2t\rangle + \mathbf c_1
+    \end{align}
+    The speed at $t=0$ is 12 and the particle is moving in the direction of $\langle 1,2,2\rangle$, so 
+    \begin{align}
+        \mathbf v(0) = \frac{12}{\sqrt{1+4+4}} \langle 1,2,2 \rangle = \mathbf c_1 \\
+        \langle 4,8,8\rangle = \mathbf c_1
+    \end{align}
+    Thus
+    \begin{align}
+        \mathbf v = \langle t, 2t, 2t\rangle + \langle 4,8,8\rangle = \langle t+4, 2t+8, 2t+8 \rangle
+    \end{align}
+}
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=6
+
+\question[6] Consider the point $S(4,1,1)$ and the $L_1$ whose parametric equations are $x=2+t$, $y=1-t$, $z=t$. Please show your work for the following. \\
+\begin{parts}
+    \part Calculate the distance between the point and line $L_1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+A point on the line that corresponds to where $t=0$ is $P(2,1,0)$. The line has direction vector $v = \langle 1,-1,1\rangle$. The distance $d$ can be obtained with the formula 
+\begin{align}
+    d &= \frac{|\mathbf{PS}\times v|}{|v|}
+\end{align}
+And 
+\begin{align}
+    \mathbf{PS} &= \langle4,1,1\rangle - \langle 2,1,0\rangle = \langle 2,0,1 \rangle \\
+    \mathbf{PS} \times v &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 2&0&1 \\ 1&-1&1\end{vmatrix} = \langle 1, -1, -2\rangle\\
+    |\mathbf{PS}\times v| &= \sqrt{1+1+4} = \sqrt{6}\\
+    |v| &= \sqrt{1+1+1} = \sqrt{3}\\
+    d &= \frac{|\mathbf{PS}\times v|}{|v|} = \sqrt{ \frac{6}{3} }=\sqrt2
+\end{align}
+} 
+\else
+\vspace{9cm}
+\fi    
+\part Construct the component equation of the plane that contains $L_1$ and the line $L_2$ whose parametric equations are $x=2+2t$, $y=1+4t$, $z=3t$. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+\textbf{Solutions:} Direction vectors for the lines are: 
+\begin{align}
+    L_1: \quad \mathbf v  &= \langle 1,-1,1\rangle \\
+    L_2: \quad \mathbf u &= \langle 2,4,3 \rangle
+\end{align}
+The plane contains the direction vectors of both lines, and a vector perpendicular to them is
+\begin{align}
+    \mathbf n &= \mathbf v \times \mathbf u = \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 1&-1&1 \\ 2&4&3\end{vmatrix} = \langle -7 , -1, 6 \rangle
+\end{align}
+A point in both lines is $P(2,1,0)$. The plane has component equation 
+\begin{align}
+    -7(x - 2) - (y - 1) + 6z = 0
+\end{align}
+It is not necessary to simplify further. 
+} 
+\else 
+\fi
+\end{parts}
+
+\fi    
+
+
+
+
+\ifnum \Version=7
+
+\question[6] Consider the point $S(4,3,1)$ and the $L_1$ whose parametric equations are $x=2+t$, $y=1-2t$, $z=2t$. Please show your work for the following. \\
+\begin{parts}
+    \part Calculate the distance between the point and line $L_1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A point on the line that corresponds to where $t=0$ is $P(2,1,0)$. The line has direction vector $\mathbf v = \langle 1,-2,2\rangle$. The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{PS}\times \mathbf v|}{|\mathbf v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{PS} &= \langle 4,3,1 \rangle - \langle 2,1,0 \rangle 
+        = \langle 2,2,1 \rangle \\
+        \mathbf{PS} \times \mathbf v 
+        &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 2&2&1 \\ 1&-2&2\end{vmatrix} 
+        = \langle 6, -3, -6\rangle\\
+        |\mathbf{PS}\times \mathbf v| &= \sqrt{36+36+9} = \sqrt{81} = 9 \\
+        |\mathbf v| &= \sqrt{1+4+4} = \sqrt{9} = 3\\
+        d &= \frac{|\mathbf{PS}\times \mathbf v|}{|\mathbf v|} =  \frac{9}{3} = 3
+    \end{align}
+    } 
+    \else
+    \vspace{9cm}
+\fi    
+\part Construct the component equation of the plane that contains $L_1$ and the line $L_2$. The line $L_2$ has the parametric equations $x=2+2t$, $y=1$, $z=-3t$. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+\textbf{Solutions:} Direction vectors for the lines are: 
+\begin{align}
+    L_1: \quad \mathbf v  &= \langle 1,-2,2\rangle \\
+    L_2: \quad \mathbf u &= \langle 2,0,3 \rangle
+\end{align}
+The plane contains the direction vectors of both lines, and a vector perpendicular to them is
+\begin{align}
+    \mathbf n &= \mathbf v \times \mathbf u = \begin{vmatrix} \mathbf i & \mathbf j & \mathbf k \\ 1&-2&2 \\ 2&0&-3\end{vmatrix} = \langle 6 - 0 , -(-3-4), 0-4 \rangle = \langle 6, 7, 4 \rangle 
+\end{align} 
+A point in both lines is $P(2,1,0)$. The plane has component equation 
+\begin{align}
+    6(x - 2) + 7(y - 1) + 4z = 0
+\end{align}
+A few notes about the solution to part (b). 
+\begin{itemize}
+    \item It is not necessary to simplify further. But we could, for example, write the equation of the plane as
+$$6x+7y+4z = 19$$
+    \item Note that we can use other points instead of $P$, but the point that is used must be in the plane. 
+    \item Likewise we can use any two vectors that are parallel to the plane and are not parallel to each other. So instead of using $\mathbf u$ and $\mathbf v$, we can use other vectors. But regardless of which vectors we use, their cross product would need to be some multiple of $\mathbf n = \langle 6,7,4\rangle$. 
+\end{itemize}
+
+} 
+\else 
+\fi
+\end{parts}
+
+\fi    
+
+
+
+
+
+
+\ifnum \Version=8
+\question[6] Suppose $R$ is the point $R(0,1,2)$, $L$ is the line $\mathbf r(t) = \langle 3t,2,4t\rangle $. Please show your work. 
+\begin{parts}
+    \part Construct the equation of the plane that passes through $R$ and contains the line $L$. 
+    
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Two points on the line are $P(0,2,0)$ and $Q(3,2,4)$. So two vectors parallel to the plane are $\mathbf{PR}$ and $\mathbf{QR}$, where 
+\begin{align*}
+    \mathbf{PR} &= R - P = \langle0,1,2\rangle - \langle 0,2,0\rangle = \langle 0,-1,2\rangle \\
+    \mathbf{QR} &= R - Q = \langle0,1,2\rangle - \langle 3,2,4\rangle = \langle -3,-1,-2\rangle 
+\end{align*}
+
+A normal vector to the plane is $$\mathbf {PR} \times \mathbf {QR} = \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k\\0&-1&2\\-3&-1&-2 \end{vmatrix} = \langle 4,-6,-3\rangle$$The plane has equation 
+    
+    $$4(x-0) +(-6)(y - 1) + (-3)(z-2) = 0$$ 
+    
+    \textit{ Note: The above is sufficient but we could also rearrange this equation to obtain, for example, $$4x-6y-3z+12=0$$
+}
+    } 
+   \else
+      \vspace{9cm}
+   \fi
+   \part Calculate the distance between the point $R$ and the line $L$.
+   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A point on the line that corresponds to where $t=0$ is $P(0,2,0)$. The line has direction vector 
+    $$\mathbf v = \langle 3,0,4\rangle$$
+    The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{PR}\times \mathbf v|}{|\mathbf v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{PR} &= R - P = \langle 0,1,2 \rangle  - \langle 0,2,0\rangle= \langle 0,-1,2 \rangle \\
+        \mathbf{PR} \times \mathbf v 
+        &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 0&-1&2 \\ 3&0&4\end{vmatrix} 
+        = \langle -4,6,3\rangle\\
+        |\mathbf{PR}\times \mathbf v| &= \sqrt{4^2+6^2+3^2} = \sqrt{16+36+9} = \sqrt{61}\\
+        |\mathbf v| &= \sqrt{3^2+4^2} = \sqrt{25} = 5\\
+        d &= \frac{|\mathbf{OR}\times \mathbf v|}{|\mathbf v|} = \sqrt{ 61 }/5
+    \end{align}
+    Unsimplified answers are acceptable. It is ok to leave the answer as $\sqrt{61/25}$.
+    } 
+    \else
+    \vspace{4cm}
+    \fi       
+\end{parts}
+
+\fi    
+
+
+
+
+\ifnum \Version=9
+
+\question[6] Consider the point $S(6,5,2)$ and the $L_1$ whose parametric equations are $x=2+t$, $y=1-2t$, $z=2t$. Please show your work for the following. \\
+\begin{parts}
+    \part Calculate the distance between the point and line $L_1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A point on the line that corresponds to where $t=0$ is $P(2,1,0)$. The line has direction vector $\mathbf v = \langle 1,-2,2\rangle$. The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{PS}\times \mathbf v|}{|\mathbf v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{PS} &= \langle 6,5,2 \rangle - \langle 2,1,0 \rangle 
+        = \langle 4,4,2 \rangle \\
+        \mathbf{PS} \times \mathbf v 
+        &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 4&4&2 \\ 1&-2&2\end{vmatrix} 
+        = \langle 12, -6, -12 \rangle\\
+        |\mathbf{PS}\times \mathbf v| &= \sqrt{144+36+144} = \sqrt{324} = 18 \\
+        |\mathbf v| &= \sqrt{1+4+4} = \sqrt{9} = 3\\
+        d &= \frac{|\mathbf{PS}\times \mathbf v|}{|\mathbf v|} =  \frac{18}{3} = 6
+    \end{align}
+    For full credit the cross product and the lengths should be calculated, but unsimplified answers are ok. For example it is ok to leave the answer as $$\frac{\sqrt{324}}{\sqrt{9}}$$
+    } 
+    \else
+    \vspace{9cm}
+\fi    
+\part Construct the component equation of the plane that contains $L_1$ and the line $L_2$. The line $L_2$ has the parametric equations $x=2+2t$, $y=1$, $z=-3t$. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+\textbf{Solutions:} Direction vectors for the lines are: 
+\begin{align}
+    L_1: \quad \mathbf v  &= \langle 1,-2,2\rangle \\
+    L_2: \quad \mathbf u &= \langle 2,0,-3 \rangle
+\end{align}
+The plane contains the direction vectors of both lines, and a vector perpendicular to them is
+\begin{align}
+    \mathbf n &= \mathbf v \times \mathbf u = \begin{vmatrix} \mathbf i & \mathbf j & \mathbf k \\ 1&-2&2 \\ 2&0&-3\end{vmatrix} = \langle 6 , 7, 4 \rangle 
+\end{align} 
+A point in both lines is $P(2,1,0)$. The plane has component equation 
+\begin{align}
+    6(x - 2) + 7(y - 1) + 4z = 0
+\end{align}
+It is not necessary to simplify further. 
+} 
+\else 
+\fi
+\end{parts}
+
+\fi    
+
+
+
+
+
+\ifnum \Version=10
+\question[6] Suppose $R$ is the point $R(0,1,2)$, $L$ is the line $\mathbf r(t) = \langle 3t,2,4t\rangle $. Please show your work. 
+\begin{parts}
+    \part Construct the equation of the plane that passes through $R$ and contains the line $L$. 
+    
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Two points on the line are $P(0,2,0)$ and $Q(3,2,4)$. So two vectors parallel to the plane are $\mathbf{PR}$ and $\mathbf{QR}$, where 
+\begin{align*}
+    \mathbf{PR} &= R - P = \langle0,1,2\rangle - \langle 0,2,0\rangle = \langle 0,-1,2\rangle \\
+    \mathbf{QR} &= R - Q = \langle0,1,2\rangle - \langle 3,2,4\rangle = \langle -3,-1,-2\rangle 
+\end{align*}
+
+A normal vector to the plane is $$\mathbf {PR} \times \mathbf {QR} = \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k\\0&-1&2\\-3&-1&-2 \end{vmatrix} = \langle 4,-6,-3\rangle$$The plane has equation 
+    
+    $$4(x-0) +(-6)(y - 1) + (-3)(z-2) = 0$$ 
+    
+    \textit{ Note: The above is sufficient but we could also rearrange this equation to obtain, for example, $$4x-6y-3z+12=0$$
+}
+    } 
+   \else
+      \vspace{9cm}
+   \fi
+   \part Calculate the distance between the point $R$ and the line $L$.
+   
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    The line has direction vector 
+    $$\mathbf v = \langle 3,0,4\rangle$$
+    The distance $d$ can be obtained with the formula 
+    \begin{align}
+        d &= \frac{|\mathbf{PR}\times \mathbf v|}{|\mathbf v|}
+    \end{align}
+    And 
+    \begin{align}
+        \mathbf{PR} &= \langle 0,-1,2 \rangle \\
+        \mathbf{PR} \times \mathbf v 
+        &= \begin{vmatrix} \mathbf i&\mathbf j&\mathbf k \\ 0&-1&2 \\ 3&0&4\end{vmatrix} 
+        = \langle -4,6,3\rangle\\
+        |\mathbf{PR}\times \mathbf v| &= \sqrt{16+36+9} = \sqrt{61}\\
+        |\mathbf v| &= \sqrt{9+16} = \sqrt{25}\\
+        d &= \frac{|\mathbf{OR}\times \mathbf v|}{|\mathbf v|} = \sqrt{ 61 }/\sqrt{25} = \sqrt{61}/5
+    \end{align}
+        Unsimplified answers are acceptable. It is ok to leave the answer in the form $\sqrt{61/25}$.
+    } 
+    \else
+    \vspace{4cm}
+    \fi       
+\end{parts}
+
+\fi    

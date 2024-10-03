@@ -1,0 +1,246 @@
+% 13.3 and 13.4
+% unit tangent vectors
+% arc length
+% curvature
+% osculating circle
+% unit normal
+
+\ifnum \Version=1
+
+\part The unit tangent vector for a curve $\mathbf r(t)$ is $\mathbf T(t) = \langle 0, \cos t, \sin t \rangle$. The unit normal vector is $\mathbf  N = \langle f(t), g(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The normal vector is
+
+\begin{align}
+    \mathbf N &= \frac{d\mathbf T/dt}{|d\mathbf T/dt|} 
+\end{align}
+And
+\begin{align}
+    \mathbf T'(t) &= \langle 0,-\sin t, \cos t \rangle \\
+    |\mathbf T'(t) | &= \sqrt{ 0 +(-\sin t)^2 + (\cos t)^2} =1\\
+    \mathbf N &= \frac{d\mathbf T/dt}{|d\mathbf T/dt|} = \langle 0, - \sin(t),  \cos(t) \rangle
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+\ifnum \Version=2
+
+\part The velocity vector of an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle 4\cos (2t), 4\sin (2t) , 3 \rangle$ for $t>0$. The speed of the object for $t>0$ is $s(t) = |\mathbf v | = \framebox{\strut\hspace{1cm}}$. The unit tangent vector for $t>0$ is $\mathbf T = \langle f(t), g(t) , h(t) \rangle$, where $f(t) = \framebox{\strut\hspace{1.5cm}}$, $g(t) = \framebox{\strut\hspace{1.5cm}}$, $h = \framebox{\strut\hspace{1cm}}$. The curvature is $\kappa = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the given velocity vector and is
+\begin{align}
+    s &= |\mathbf v | =  \sqrt{(4\cos2t)^2 + (4\sin2t)^2 + 3^2 } = \sqrt{4^2 (\cos ^2 2 t + \sin^2 2t) + 3^2} = \sqrt{16 + 9} = 5
+\end{align}
+The unit tangent vector is 
+\begin{align}
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v|} = \langle \frac{4}{5}\cos(2 t) , \frac 45 \sin (2t), \frac35 \rangle
+\end{align}
+For curvature we also need
+\begin{align}
+    \frac{d\mathbf T}{dt } &= \langle -\frac85 \sin 2t, \frac85 \cos 2t,0 \rangle \\
+    \left | \frac{d\mathbf T}{dt } \right| &= \sqrt{ \left(-\frac85\sin 2t\right)^2 +   \left(\frac85 \cos 2 t\right)^2 } = \frac85
+\end{align}
+The curvature is
+\begin{align}
+    \kappa = \frac{1}{|\mathbf v |}\left| \frac{d\mathbf T}{dt}\right| = \frac{1}{5} \cdot \frac{8}{5} = \frac{8}{25}
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+
+\ifnum \Version=3
+
+\part A plane curve $\mathbf r(t)$ has curvature $\kappa = \frac{1}{8}$ at $\mathbf r(t_0) = \langle 15, 2 \rangle$, and the unit normal vector at $t=t_0$ is $\mathbf  N = \mathbf j = \langle 0, 1 \rangle$. The equation of the osculating circle at $t=t_0$ is \framebox{\strut\hspace{3.5cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} Recall that The circle of curvature, or osculating circle, at a point $P$ on a plane curve where $\kappa \ne 0$ is the circle in the plane of the curve that
+
+\begin{enumerate}
+    \item is tangent to the curve at P (has the same tangent line the curve has)
+    \item has the same curvature the curve has at P
+    \item lies toward the concave or inner side of the curve
+\end{enumerate}
+The \textbf{radius of curvature} of the curve at P is the radius of the circle of curvature, which is $\frac{1}{\kappa}$. So to obtain the radius, we calculate $\kappa$ and take the reciprocal. The \textbf{center} of the osculating circle of the curve at P lies on the inner side of the curve, and the unit normal points in the direction of the inner side of the planar curve. 
+
+So for this problem we have a circle with radius $1/\kappa = 8$, and whose centre is 8 units away from the point $(15,2)$ in the direction of $\mathbf N$. The circle has equation
+$$(x-15)^2 + (y-10)^2 = 8^2$$
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+
+\ifnum \Version=4
+
+\part The velocity vector for an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle t\cos t, t\sin t \rangle$. The speed of the object for $t>0$ is $s(t) = \framebox{\strut\hspace{1cm}}$. The unit tangent vector for $t>0$ is $\mathbf T = \langle f(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the velocity vector and is
+\begin{align}
+    s &= |\mathbf v | = \sqrt{(t\cos t)^2 + (t\sin t)^2 } = \sqrt{t^2 (\cos ^2 t + \sin^2 t)} = |t|
+\end{align}
+But we are told that $t>0$ so we can use $|t| = t$. The unit tangent vector is 
+\begin{align}
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v|} = \langle \cos t, \sin t \rangle
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+\ifnum \Version=5
+
+\part A plane curve $\mathbf r(t)$ has curvature $\kappa = \frac{1}{4}$ at the point $\mathbf r(t_0) = 3\mathbf i + 5\mathbf j$, and the unit normal vector at $t_0$ is $\mathbf  N = \mathbf i = \langle1,0\rangle$. The equation of the osculating circle at $t=t_0$ is \framebox{\strut\hspace{3.5cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} Recall that The circle of curvature, or osculating circle, at a point $P$ on a plane curve where $\kappa \ne 0$ is the circle in the plane of the curve that
+
+\begin{enumerate}
+    \item is tangent to the curve at P (has the same tangent line the curve has)
+    \item has the same curvature the curve has at P
+    \item lies toward the concave or inner side of the curve
+\end{enumerate}
+The \textbf{radius of curvature} of the curve at P is the radius of the circle of curvature, which is $\frac{1}{\kappa}$. So to obtain the radius, we calculate $\kappa$ and take the reciprocal. The \textbf{center} of the osculating circle of the curve at P lies on the inner side of the curve, and the unit normal points in the direction of the inner side of the planar curve. 
+
+So for this problem we have a circle with radius $1/\kappa = 4$, and whose centre is 4 units away from the point $(3,5)$ in the direction of $\mathbf N$. The circle has equation
+$$(x-7)^2 + (y-5)^2 = 4^2$$
+} 
+\else
+  
+\fi        
+\fi
+
+
+\ifnum \Version=6
+
+\part The velocity vector for an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle 4t\cos t, 4t\sin t \rangle$ for $t>0$. The speed of the object for $t>0$ is $s(t)  = |\mathbf v | = \framebox{\strut\hspace{1cm}}$. The unit tangent vector for $t>0$ is $\mathbf T = \langle f(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{1.5cm}}$, $g(t) = \framebox{\strut\hspace{1.5cm}}$. The curvature is $\kappa = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the given velocity vector and is
+\begin{align}
+    s &= |\mathbf v | =  \sqrt{(4t\cos t)^2 + (4t\sin t)^2 } = \sqrt{4^2t^2 (\cos ^2 t + \sin^2 t)} = 4|t|
+\end{align}
+But we are told that $t>0$ so we can assume $|t| = t$. The unit tangent vector is 
+\begin{align}
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v|} = \langle \cos t, \sin t \rangle
+\end{align}
+We need
+\begin{align}
+    \frac{d\mathbf T}{dt } &= \langle -\sin t, \cos t \rangle \\
+    \left | \frac{d\mathbf T}{dt } \right| &= \sqrt{ (-\sin t)^2 +   \cos^2 t } = 1
+\end{align}
+The curvature is
+\begin{align}
+    \kappa = \frac{1}{|\mathbf v |}\left| \frac{d\mathbf T}{dt}\right| = \frac{1}{4t} 
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+
+
+\ifnum \Version=7
+
+\part The velocity vector of an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle 3\cos (2t), 3\sin (2t) \rangle$ for $t>0$. The speed of the object for $t>0$ is $s(t) = |\mathbf v | = \framebox{\strut\hspace{1.5cm}}$. The unit tangent vector for $t>0$ is $\mathbf T = \langle f(t), g(t)  \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, and $g(t) = \framebox{\strut\hspace{2cm}}$.  The curvature for $t>0$ is \framebox{\strut\hspace{1.5cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the given velocity vector and is
+\begin{align}
+    s &= |\mathbf v | =  \sqrt{(3\cos t)^2 + (3\sin t)^2  } = \sqrt{3^2 (\cos ^2 t + \sin^2 t) + 3^2} = \sqrt{ 9} = 3
+\end{align}
+The unit tangent vector is 
+\begin{align}
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v|} 
+    = \langle \frac{3}{3}\cos(2 t) , \frac 33 \sin (2t) \rangle 
+    = \langle \cos(2 t) ,  \sin (2t) \rangle
+\end{align}
+For curvature we also need
+\begin{align}
+    \frac{d\mathbf T}{dt } &= \langle -2 \sin 2t, 2 \cos 2t\rangle \\
+    \left | \frac{d\mathbf T}{dt } \right| &= \sqrt{ \left(-2\sin 2t\right)^2 +   \left(2 \cos 2 t\right)^2 } = 2
+\end{align}
+The curvature is
+\begin{align}
+    \kappa = \frac{1}{|\mathbf v |}\left| \frac{d\mathbf T}{dt}\right| = \frac{1}{3} \cdot 2 = \frac{2}{3}
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+
+\ifnum \Version=8
+
+\part A plane curve $\mathbf r(t)$ has curvature $\kappa = \frac{1}{4}$ at $\mathbf r(t_0) = \langle 5, 3 \rangle$, and the unit normal vector at $t=t_0$ is $\mathbf  N = \mathbf j = \langle 0, 1 \rangle$. The equation of the osculating circle at $t=t_0$ is \framebox{\strut\hspace{3.5cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} Recall that The circle of curvature, or osculating circle, at a point $P$ on a plane curve where $\kappa \ne 0$ is the circle in the plane of the curve that
+
+\begin{enumerate}
+    \item is tangent to the curve at P (has the same tangent line the curve has)
+    \item has the same curvature the curve has at P
+    \item lies toward the concave or inner side of the curve
+\end{enumerate}
+The \textbf{radius of curvature} of the curve at P is the radius of the circle of curvature, which is $\frac{1}{\kappa}$. So to obtain the radius, we calculate $\kappa$ and take the reciprocal. The \textbf{center} of the osculating circle of the curve at P lies on the inner side of the curve, and the unit normal points in the direction of the inner side of the planar curve. 
+
+So for this problem we have a circle with radius $1/\kappa = 4$, and whose centre is 4 units away from the point $(5,3)$ in the direction of $\mathbf N$. The circle has equation
+$$(x-5)^2 + (y-7)^2 = 4^2$$
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+
+
+
+\ifnum \Version=9
+
+\part The velocity vector of an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle t, 3 \rangle$ for $t>0$. The speed of the object at $t=2$ is $s(2) = |\mathbf v(2) | = \framebox{\strut\hspace{1.75cm}}$. The unit tangent vector at $t=2$ is $\mathbf T(2) = \langle c_1 ,c_2  \rangle$, where $c_1 = \framebox{\strut\hspace{1.75cm}}$, $c_2 = \framebox{\strut\hspace{1.75cm}}$. The curvature is $\framebox{\strut\hspace{1.75cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the given velocity vector and is
+\begin{align}
+    s &= |\mathbf v | =  \sqrt{( t)^2 + (3)^2  } = \sqrt{t^2+9}\\
+    s(2) &= \sqrt{2^2+9} = \sqrt{13}
+\end{align}
+We also need the unit tangent vector at $t=2$. 
+\begin{align}
+    \mathbf T (t) &= \frac{\mathbf v}{|\mathbf v|} = \frac{t\mathbf i + 3\mathbf j}{\sqrt{t^2+9}} \\
+    \mathbf T (2) &= \frac{2\mathbf i + 3\mathbf j}{\sqrt{2^2+9}}  
+    = \langle \frac{2}{\sqrt{13}} , \frac {3}{\sqrt{13}}  \rangle \\
+    c_1 &= \frac{2}{\sqrt{13}}\\
+    c_2 &= \frac{3}{\sqrt{13}}
+\end{align}
+The curvature is zero because the motion is along a straight line. 
+\begin{align}
+    \kappa = 0
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+\ifnum \Version=10
+
+\part A plane curve $\mathbf r(t)$ has curvature $\kappa = \frac{1}{10}$ at $\mathbf r(t_0) = \langle 5, 0 \rangle$, and the unit normal vector at $t=t_0$ is $\mathbf  N = \mathbf j = \langle 0, 1 \rangle$. The equation of the osculating circle at $t=t_0$ is \framebox{\strut\hspace{3.5cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} Recall that The circle of curvature, or osculating circle, at a point $P$ on a plane curve where $\kappa \ne 0$ is the circle in the plane of the curve that
+
+\begin{enumerate}
+    \item is tangent to the curve at P (has the same tangent line the curve has)
+    \item has the same curvature the curve has at P
+    \item lies toward the concave or inner side of the curve
+\end{enumerate}
+The \textbf{radius of curvature} of the curve at P is the radius of the circle of curvature, which is $\frac{1}{\kappa}$. So to obtain the radius, we calculate $\kappa$ and take the reciprocal. The \textbf{center} of the osculating circle of the curve at P lies on the inner side of the curve, and the unit normal points in the direction of the inner side of the planar curve. 
+
+So for this problem we have a circle with radius $1/\kappa = 10$, and whose centre is 10 units away from the point $(5,0)$ in the direction of $\mathbf N$. The circle has equation
+$$(x-5)^2 + (y-10)^2 = 10^2$$
+} 
+\else
+  
+\fi        
+\fi

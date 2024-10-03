@@ -1,0 +1,92 @@
+% UNIT 4: ORTHOGONALITY
+d) &  
+\ifnum \Version=1         
+    $\vec u \in \mathbb R^2$ and $\vec u \cdot \vec u \cdot \vec u = 1$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. The expression is undefined. For example if \setlength{\extrarowheight}{0.00cm} $\vec u = \begin{pmatrix} 1 & 0 \end{pmatrix}^T$, then $$
+        \vec u \cdot \vec u \cdot \vec u = (\vec u \cdot \vec u) \cdot \vec u = (1 + 0^2) \cdot \vec u = 1 \cdot \vec u$$ But the dot product is only defined for two vectors that have the same number of entries. So $1 \cdot \vec u$ is undefined. Hence $\vec u \cdot \vec u \cdot \vec u$ is also undefined. } \fi
+\fi
+\ifnum \Version=2      
+    $A$ is $n\times n$, $ A \vec x = A \vec y$ for some $ \vec x \neq \vec y$, $\vec x$ and $\vec y$ are vectors in $\mathbb R ^{n}$, and $\Dim( (\Row A)^{\perp}) \ne 0$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. The statement $ A \vec x = A \vec y$ for some $ \vec x \neq \vec y$, $\vec x$ and $\vec y$ are vectors in $\mathbb R ^{n}$ is telling us that $A$ is not one-to-one.  If $A$ is not one-to-one, not all columns are pivotal, so $A$ has a non-trivial nullspace. And the statement $\Dim( (\Row A)^{\perp}) \ne 0$ is telling us that the dimension of the null space is at least 1. An example of this situation would be \setlength{\extrarowheight}{0.0cm} $$A = \begin{pmatrix} 0&0\\0&0\end{pmatrix}, x = \begin{pmatrix} 1\\0\end{pmatrix}, y = \begin{pmatrix} 2\\0\end{pmatrix}$$} \fi
+\fi    
+\ifnum \Version=3  
+    $A$ is $n\times n$, $\lambda \in \mathbb R$ is an eigenvalue of $A$, and $\Dim((\Col(A - \lambda I))^{\perp}) = 2$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. Take for example $A = I$, with $I$ being the $2\times 2$ identity matrix. } \fi
+\fi    
+\ifnum \Version=4    
+    $A$ is $m\times n$ and has linearly dependent columns, $\vec x \in \mathbb R^n$ and $\vec b \in \mathbb R^m$. The system $A\vec x = \vec b$ has no solutions but does have an infinite number of least-squares solutions.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. This is a result of a uniqueness theorem covered in the section on least-squares. Take any $m\times n$ matrix $A$ that has linearly dependent columns, and $b$ to be any vector in $\mathbb R^m$ that is not in the span of the columns of the matrix. The system $Ax=b$ will have no solutions, but there will be an infinite number of least-squares solutions. } \fi
+\fi   
+\ifnum \Version=5    
+    proj$_{\vec v} \vec u = \text{proj}_{\vec u} \vec v$, $\vec v \ne \vec u$, and $\vec u\ne \vec 0$, $\vec v \ne \vec 0$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. Take $\vec u$ and $\vec v$ to be non-zero orthogonal vectors.  } \fi
+\fi    
+\ifnum \Version=6      
+    $\vec u$ and $\vec v$ are non-zero vectors in $\mathbb R^n$, and $\vec u - \proj_{\vec v} \vec u = \vec 0$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. Take $\vec u$ to be any vector in the span of $\vec v$. } \fi
+\fi        
+\ifnum \Version=7  
+     $A$ is $m\times n$ and has linearly dependent columns, $\vec x \in \mathbb R^n$ and $\vec b \in \mathbb R^m$. The system $A\vec x = \vec b$ has no solutions but does have an infinite number of least-squares solutions.
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution: Possible. Linearly dependent columns implies  an infinite number of least-squares solution. } \fi
+\fi      
+\ifnum \Version=8
+    $\vec u$ is a vector in $\mathbb R^3$, and $\vec u \,\vec u^T$ is a $3 \times 3$ matrix whose rank is 1.
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Possible. It is a $3\times 3$ matrix of rank 1 because each column will be a multiple of $(1 \ 1 \ 1)^T$.  
+    } \fi
+\fi      
+\ifnum \Version=9
+    \setlength{\extrarowheight}{0.00cm} 
+      proj$_{\vec v} \vec u = \text{proj}_{\vec u} \vec v$, $\vec v \ne \vec u$, and $\vec u\ne \vec 0$, $\vec v \ne \vec 0$.
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  possible. Take $\vec u$ and $\vec v$ to be any two non-zero vectors that are orthogonal to each other. 
+    } \fi
+\fi      
+\ifnum \Version=10
+    \setlength{\extrarowheight}{0.00cm} 
+    $\vec x \in \mathbb R^2$ is a non-zero vector and $\|\vec x\| = 0$.     \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. The only vector whose length is zero is the zero vector. 
+    } \fi
+\fi      
+\ifnum \Version=11
+    \setlength{\extrarowheight}{0.00cm}  
+    There are two non-zero vectors $\vec x \not= \vec y\in \mathbb R^2$, with 
+    $ \text{proj}_{\vec x} \vec y = - \vec x$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Possible. Take $\vec y= - \vec x$.
+    } \fi
+\fi      
+\ifnum \Version=12
+    \setlength{\extrarowheight}{0.00cm} 
+      Vectors $\vec x$ and $\vec y$ are  in $\mathbb R^2$, $\vec x \not= \vec y$, and $ \text{proj}_{\vec x} \vec y = 2\vec y$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. Projections never increase the length of a vector. Another way to think about it is that if the projection of $\vec y$ onto $\vec x$ is some vector in the span of $\vec y$, then $\vec y$ is in the span of $\vec x$ and so the projection would be $\vec y$, not $2\vec y$.  
+    } \fi
+\fi    
+\ifnum \Version=13 % 
+    \setlength{\extrarowheight}{0.00cm} $x$ is a vector in $\mathbb R^n$, and $U$ is a subspace of $\mathbb R^n$, and $\proj_U x = x$.
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Possible. Vector $x$ could be in $U$. 
+    } \fi
+\fi    
+\ifnum \Version=14 % 
+    \setlength{\extrarowheight}{0.00cm}  Vectors $\vec v_1$ and $\vec v_2$ are non-zero orthogonal vectors in $\mathbb R^n$ that are linearly dependent. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. If they are non-zero orthogonal then they must also be independent. 
+    } \fi
+\fi    
+\ifnum \Version=15
+    \setlength{\extrarowheight}{0.00cm} 
+    $S$ is a 3 dimensional subspace of $\mathbb R^5$, and $\vec x \in \mathbb R^5$ is a non-zero vector in $S$ and $\vec x$ is also in $S^\perp$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. The zero vector is the only vector in $S$ and $S^\perp$.  
+    } \fi
+\fi     
+\ifnum \Version=16 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+    } \fi
+\fi    
+\ifnum \Version=17 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+    } \fi
+\fi    
+\ifnum \Version=18 % shouldn't need this version for fall 2023
+    \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 4
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+    } \fi
+\fi    
+& $\bigcirc$  & $\bigcirc$ \\     

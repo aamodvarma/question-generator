@@ -11,7 +11,9 @@ generated_files/
 batches/
 
 #ignore data
-data/
+data/LinearAlgebraSlides/
+
+data/reviewed/
 
 .ipynb_checkpoints/
 

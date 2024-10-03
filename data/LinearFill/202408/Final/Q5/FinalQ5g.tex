@@ -1,0 +1,169 @@
+% C) U2
+
+\ifnum \Version=1
+    \part The LU factorization of $A = \begin{pmatrix} 2&5\\4&12\end{pmatrix}$ is $A=LU$, where $U$ is obtained by applying only one row operation to $A$. Then $U=\begin{pmatrix} 2&5\\u_1&u_2\end{pmatrix}$ and $L=\begin{pmatrix} l_1& 0\\l_2&l_3 \end{pmatrix}$, where 
+    $u_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $u_2 = \framebox{\strut\hspace{1.00cm}}$, 
+    $l_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $l_2 = \framebox{\strut\hspace{1.00cm}}$, and
+    $l_3 = \framebox{\strut\hspace{1.00cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the only correct answer is $U=\begin{pmatrix} 2&5\\0&2 \end{pmatrix}$ and $L=\begin{pmatrix} 1&0\\2&1\end{pmatrix}$. } \fi 
+\fi 
+
+\ifnum \Version=2
+    \part Suppose that we want reflect points in $\mathbb R^2$ across the line $x_1 = 4$. Using homogeneous coordinates we can use a transform of the form $T(\vec x) = A\vec x$, where $\vec x \in \mathbb R^3$ and $A$ is $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$ Then $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $b_1 = \framebox{\strut\hspace{1.0cm}}$, $b_2 = \framebox{\strut\hspace{1.0cm}}$, $c_1 = \framebox{\strut\hspace{1.0cm}}$, $c_2 = \framebox{\strut\hspace{1.0cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The matrices we need are
+    $$A = \begin{pmatrix} 1&0&4\\0&1&0\\0&0&1\end{pmatrix}\begin{pmatrix}-1&0&0\\0&1&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&-4\\0&1&0\\0&0&1 \end{pmatrix}$$    
+    So $a_1 = 4, a_2 = 0, b_1 = -1, b_2 = 0, c_1 = -4, c_2 = 0$. 
+    } 
+    \fi    
+\fi 
+\ifnum \Version=3
+    \part If $A = \begin{pmatrix} 1& 0 & 2 \\4&1&0\\0&0&1\end{pmatrix}$, then $A^{-1} = \begin{pmatrix} 1&0&c_1\\c_2&1&c_3\\0&0&1\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{.75cm}}$, $ c_2 = \framebox{\strut\hspace{.75cm}}$, $c_3 = \framebox{\strut\hspace{.75cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        There are a few ways to determine the values of the $c$'s. Here are a few methods. 
+        \begin{itemize}
+            \item Forming the augmented matrix $\begin{pmatrix}A \ | \ I\end{pmatrix}$ and reducing yields:
+        \begin{align*}
+            \begin{pmatrix}A \ | \ I\end{pmatrix} 
+            = \begin{pmatrix} 1& 0 & 2 &1&0&0\\4&1&0&0&1&0\\0&0&1&0&0&1\end{pmatrix} 
+            &\sim \begin{pmatrix} 1& 0 & 2 &1&0&0\\0&1&-8&-4&1&0\\0&0&1&0&0&1\end{pmatrix}\\
+            &\sim \begin{pmatrix} 1& 0 & 2 &1&0&0\\0&1&0&-4&1&8\\0&0&1&0&0&1\end{pmatrix} \\
+            &\sim \begin{pmatrix} 1& 0 & 0 &1&0&-2\\0&1&0&-4&1&8\\0&0&1&0&0&1\end{pmatrix}  = \begin{pmatrix}I \ | \ A^{-1}\end{pmatrix} 
+        \end{align*}
+        So $A^{-1} = \begin{pmatrix} 1&0&-2\\-4&1&8\\0&0&1\end{pmatrix}$ and $c_1 = -2, c_2 = -4, c_3 = 8$. 
+        \item We could also set $AA^{-1} = I$ and solve for the unknowns. 
+        \begin{align}
+            AA^{-1} = \begin{pmatrix} 1& 0 & 2 \\4&1&0\\0&0&1\end{pmatrix}\begin{pmatrix} 1&0&c_1\\c_2&1&c_3\\0&0&1\end{pmatrix}
+            &= \begin{pmatrix} 1&0&c_1+2\\4+c_2&1&4c_1+c_3\\0&0&1\end{pmatrix}
+        \end{align}
+        But $AA^{-1} = I$, so we have the equations
+        \begin{align}
+            c_1+2 &=0 \\
+            4+c_2 &=0 \\
+            4c_1 +c_3 &= 0
+        \end{align}
+        Solving these equations also gives us $c_1 = -2, c_2 = -4, c_3 = 8$.
+        \end{itemize}
+    } 
+    \fi
+\fi 
+\ifnum \Version=4
+    % Version 4 has a graphing question so skip 
+\fi 
+\ifnum \Version=5
+    \part Suppose $A$, $B$, $C$ and $D$ are invertible $n\times n$ matrices, and $X= \begin{pmatrix} A & B\end{pmatrix}$, and $Y = \begin{pmatrix} C & D\end{pmatrix}$. If $XY^T=2AC^T$, then $D = \framebox{\strut\hspace{2cm}}$
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  \begin{align}
+        XY^T = \begin{pmatrix} A & B\end{pmatrix}\begin{pmatrix} C^T \\ D^T \end{pmatrix} & = 2AC^T\\
+        AC^T + BD^T &= 2AC^T \\
+        BD^T &= AC^T \\
+        D^T &= B^{-1} AC^T \\
+        D &= (B^{-1} AC^T)^T
+    \end{align} It would also be ok to leave the answer as $D = CA^T(B^{-1})^T$.} \fi    
+\fi 
+\ifnum \Version=6
+    \part If $A$ has LU factorization $A=LU$, where $U = \begin{pmatrix} 2&1\\0&3\end{pmatrix}$, and the solution to $L\vec y = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec y = \begin{pmatrix} 2\\24 \end{pmatrix}$, then the solution to $A\vec x = \begin{pmatrix}6\\12 \end{pmatrix}$ is $\vec x = \begin{pmatrix} x_1\\x_2\end{pmatrix}$, where $x_1 = \framebox{\strut\hspace{1.0cm}}$, $x_2 = \framebox{\strut\hspace{1.0cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    If $A\vec x = LU\vec x = \begin{pmatrix} 6\\12 \end{pmatrix}$, and $L\vec y = \begin{pmatrix} 6\\12 \end{pmatrix}$ then $U\vec x = \vec y$. But we are given $\vec y$, so \begin{align} U\vec x = \begin{pmatrix} 2\\24 \end{pmatrix}\end{align} Expressing this as an augmented matrix we obtain 
+    $$\begin{pmatrix} 2&1 & 2\\0&3&24 \end{pmatrix} \sim \begin{pmatrix} 2&1&2\\0&1&8\end{pmatrix} \sim \begin{pmatrix} 1&0&-3\\0&1&8\end{pmatrix}$$
+    Thus $x_1 = -3$, $x_2= 8$. }
+\fi
+\fi 
+\ifnum \Version=7
+    \part The LU factorization of $A = \begin{pmatrix} 2&5\\4&12\end{pmatrix}$ is $A=LU$, where $U$ is obtained by applying only one row operation to $A$. Then $U=\begin{pmatrix} 2&5\\u_1&u_2\end{pmatrix}$ and $L=\begin{pmatrix} l_1& 0\\l_2&l_3 \end{pmatrix}$, where 
+    $u_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $u_2 = \framebox{\strut\hspace{1.00cm}}$, 
+    $l_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $l_2 = \framebox{\strut\hspace{1.00cm}}$, and
+    $l_3 = \framebox{\strut\hspace{1.00cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the only correct answer is $U=\begin{pmatrix} 2&5\\0&2 \end{pmatrix}$ and $L=\begin{pmatrix} 1&0\\2&1\end{pmatrix}$. } \fi  
+\fi 
+\ifnum \Version=8
+    \part If $A = \begin{pmatrix} 1& 0 & 3 \\4&1&0\\0&0&1\end{pmatrix}$, then $A^{-1} = \begin{pmatrix} 1&0&c_1\\c_2&1&c_3\\0&0&1\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{.75cm}}$, $ c_2 = \framebox{\strut\hspace{.75cm}}$, $c_3 = \framebox{\strut\hspace{.75cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        There are a few ways to determine the values of the $c$'s. Here are a few methods. 
+        \begin{itemize}
+            \item Forming the augmented matrix $\begin{pmatrix}A \ | \ I\end{pmatrix}$ and reducing yields:
+        \begin{align*}
+            \begin{pmatrix}A \ | \ I\end{pmatrix} 
+            = \begin{pmatrix} 1& 0 & 3 &1&0&0\\4&1&0&0&1&0\\0&0&1&0&0&1\end{pmatrix} 
+            &\sim \begin{pmatrix} 1& 0 & 3 &1&0&0\\0&1&-12&-4&1&0\\0&0&1&0&0&1\end{pmatrix}\\
+            &\sim \begin{pmatrix} 1& 0 & 3 &1&0&0\\0&1&0&-4&1&12\\0&0&1&0&0&1\end{pmatrix} \\
+            &\sim \begin{pmatrix} 1& 0 & 0 &1&0&-3\\0&1&0&-4&1&12j\\0&0&1&0&0&1\end{pmatrix}  = \begin{pmatrix}I \ | \ A^{-1}\end{pmatrix} 
+        \end{align*}
+        So $A^{-1} = \begin{pmatrix} 1&0&-3\\-4&1&8\\0&0&1\end{pmatrix}$ and $c_1 = -3, c_2 = -4, c_3 = 12$. 
+        \item We could also set $AA^{-1} = I$ (or $A^{-1}A = I$), then multiply the matrices together, and then solve for the unknowns. The process should give the same values. 
+        \end{itemize}
+    } 
+    \fi
+\fi 
+\ifnum \Version=9
+    \part Determine all possible values of $k$ so that $AB=BA$, where $A = \begin{pmatrix} 2&k\\0&1\end{pmatrix}$ and $B = \begin{pmatrix} 1&-3\\0&2\end{pmatrix}$. $k = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} To determine all possible values of \(k\) such that \(AB = BA\) we can compute the products \(AB\) and \(BA\) and then set them equal to each other.
+    \[ AB = \begin{pmatrix} 2 & k \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & -3 \\ 0 & 2 \end{pmatrix} =  \begin{pmatrix} 2 & -6 + 2k \\ 0 & 2 \end{pmatrix}.\]
+
+    The product \(BA\) is:
+    \[ BA = \begin{pmatrix} 1 & -3 \\ 0 & 2 \end{pmatrix} \begin{pmatrix} 2 & k \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 2 & k - 3 \\ 0 & 2 \end{pmatrix}.\]
+    Now, we set \(AB = BA\) and compare the corresponding entries:
+    \[ \begin{pmatrix} 2 & -6 + 2k \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 2 & k - 3 \\ 0 & 2 \end{pmatrix}.\]
+    This leads to the following:
+    \begin{align*}
+    -6 + 2k &= k - 3, \\
+    k & = 3
+    \end{align*} 
+     The only possible value of \(k\) is \(\boxed{3}\).
+    } \fi    
+\fi 
+\ifnum \Version=10
+    \part Suppose that we want reflect points in $\mathbb R^2$ across the line $x_2 = -3$. Using homogeneous coordinates we can use a transform of the form $T(\vec x) = A\vec x$, where $\vec x \in \mathbb R^3$ and $A$ is the matrix $$A = \begin{pmatrix} 1&0&a_1\\0&1&a_2\\0&0&a_3\end{pmatrix}\begin{pmatrix}b_1&b_2&0\\b_3&b_4&0\\0&0&1 \end{pmatrix}\begin{pmatrix} 1&0&c_1\\0&1&c_2\\0&0&c_3 \end{pmatrix}$$ Then 
+    $a_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $a_2 = \framebox{\strut\hspace{1.00cm}}$, 
+    $b_1 = \framebox{\strut\hspace{1.00cm}}$, 
+    $b_2 = \framebox{\strut\hspace{1.00cm}}$, 
+    $c_1 = \framebox{\strut\hspace{1.00cm}}$, and 
+    $c_2 = \framebox{\strut\hspace{1.00cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The matrices we need are
+    $$A = 
+    \begin{pmatrix} 1&0&0\\0&1&-3\\0&0&1\end{pmatrix}
+    \begin{pmatrix}1&0&0\\0&-1&0\\0&0&1 \end{pmatrix}
+    \begin{pmatrix} 1&0&0\\0&1&3\\0&0&1 \end{pmatrix}$$    
+    So $a_1 = 0, a_2 = -3, b_1 = 1, b_2 = 0, c_1 = 0, c_2 = 3$. 
+    } 
+    \fi       
+\fi 
+\ifnum \Version=11
+    % no question needed here - will have a question 6
+\fi 
+\ifnum \Version=12
+    % no question needed here - will have a question 6
+\fi 
+\ifnum \Version=13 % make-up
+        % No problem needed because this version has a graphing problem 
+\fi 
+\ifnum \Version=14 % 
+    \ifnum \Solutions=1 \newpage \fi
+    \part If $A = \begin{pmatrix} 1& 0 & 0 \\4&1&0\\0&5&1\end{pmatrix}$, then $A^{-1} = \begin{pmatrix} 1&0&0\\c_1&1&0\\c_2&c_3&1\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{.75cm}}$, $ c_2 = \framebox{\strut\hspace{.75cm}}$, $c_3 = \framebox{\strut\hspace{.75cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        There are a few ways to determine the values of the $c$'s. Here are a few methods. 
+        \begin{itemize}
+            \item Forming the augmented matrix $\begin{pmatrix}A \ | \ I\end{pmatrix}$ and reducing yields:
+        \begin{align*}
+            \begin{pmatrix}A \ | \ I\end{pmatrix} 
+            &= \begin{pmatrix} 1& 0 & 0 &1&0&0\\4&1&0&0&1&0\\0&5&1&0&0&1\end{pmatrix} \\
+            &\sim \begin{pmatrix} 1& 0 & 0 &1&0&0\\0&1&0&-4&1&0\\0&5&1&0&0&1\end{pmatrix} \\
+            &\sim \begin{pmatrix} 1& 0 & 0 &1&0&0\\0&1&0&-4&1&0\\0&5&1&20&-5&1\end{pmatrix} 
+            = \begin{pmatrix}I \ | \ A^{-1}\end{pmatrix} 
+        \end{align*}
+        So $A^{-1} = \begin{pmatrix} 1&0&0\\-4&1&0\\20&-5&1\end{pmatrix}$ and $c_1 = -4, c_2 = 20, c_3 = -5$. 
+        \item We could also set $AA^{-1} = I$ and solve for the unknowns. This approach should give the same result. 
+        \end{itemize}
+    } 
+    \fi
+\fi 
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    \part FILL IN THE BLANK ON UNIT 2
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 

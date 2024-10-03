@@ -1,0 +1,945 @@
+% 15.8 JACOBIAN OR CHANGE OF VARIABLE
+
+
+
+\ifnum \Version=1
+    \part Consider the transform $u=x+y$ and $v=y-2x$. Then $x = u/3 - v/3$, and $ y = 2u/3+v/3$. Using the transform, $\displaystyle \int_0^1\int_0^{1-x} \sqrt{x+y}( y-2x) \, dy \,dx =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, and $g(u,v) = \framebox{\strut\hspace{2cm}}$. Hint: the Jacobian of the transform is $1/3$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration, and we need to transform $\sqrt{x+y}(y-2x) \, dy \,dx$. 
+    \textbf{Transform the Integrand and Differentials}\\
+    The integrand becomes
+    \begin{align}
+        \sqrt{x+y} (y -2x) = \sqrt{u}\, v = v\sqrt u
+    \end{align}
+    Therefore, 
+    \begin{align}
+        \sqrt{x+y} (y -2x) \, dy\,dx = \sqrt{u}\, v = v\sqrt u \, \left| \frac{1}{3} \right| \, dv \, du = \frac{v\sqrt u}{3} \, dv \, du
+    \end{align}    
+    So $$g(u,v) = \frac{v\sqrt u}{3}$$
+    \textbf{Limits of integration}\\ 
+    The region in the $xy-$plane, $R$, is the set 
+    $$R = \{(x,y) \in \mathbb R \, | \, 0 \le x \le 1, \ 0 \le y \le 1-x \}$$
+    The triangular region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-0.8, xmax=1.75,
+        ymin=-0.8, ymax=1.75,
+        xtick={0,1},
+        xticklabels={0,1},  
+        ytick={0,1},
+        yticklabels={0,1},    
+        ]
+        % Plot 1
+        \addplot [name path = A,
+        -,
+        domain = 0:1, ultra thick,DarkBlue,
+        samples = 100] {1-x} 
+        node [right=2pt] {};
+        \node[text=DarkBlue] (t) at (1,.75) {$y=1-x$};
+        \node[text=DarkBlue] (left) at (-0.35,.5) {$x=0$};
+        \node[text=DarkBlue] (bottom) at (0.5,-.25) {$y=0$};
+        \node (l) at (.25,.25) {$R$};
+        \addplot[ultra thick, samples=50, smooth,domain=0:1,DarkBlue] coordinates {(0,0)(0,1)};        
+        \addplot [name path = B,
+        -,
+        domain = 0:1, ultra thick,DarkBlue,
+        samples = 100] {0} 
+        node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=0:1}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Left boundary}: using $x = u/3 - v/3$, the line $x=0$ becomes $u=v$. 
+        \item \textbf{Lower boundary}: using $y = 2u/3+v/3$, the line $y=0$ becomes $v=-2u$. 
+        \item \textbf{Upper boundary}: line $y=1-x$ becomes 
+        \begin{align}
+            y&= 1- x \\
+            2u/3+v/3 &= 1 - (u/3 - v/3) \\
+            2u+v &= 3- u +v \\
+            u &= 1
+        \end{align}
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is 
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, 0 \le u \le 1, \ -2u \le v \le u \}$$
+
+    \textbf{Putting Everything Together}\\
+    Therefore, 
+    \begin{align}
+        a & = 0 \\
+        b &= 1 \\
+        c &= -2u \\
+        d &= u \\
+        g &= \frac{v\sqrt u}{3}
+    \end{align}
+    
+    \textbf{Additional Notes}\\
+    Two additional notes about this question. 
+    \begin{itemize}
+        \item Note that we did not need to obtain $x$ and $y$ in terms of $u,v$, because we were given $x(u,v)$ and $y(u,v)$. But if we needed to express $x$ and $y$ in terms of $u$ and $v$, we could use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+    \begin{align}
+        \begin{pmatrix} 1 & 1 & u \\-2 & 1 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & 3 & v + 2u\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & 1 & 2u/3 + v/3\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & u/3-v/3 \\0 & 1 & 2u/3 + v/3\end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &= u/3 - v/3\\
+        y &= 2u/3+v/3
+    \end{align}
+    \item Also it isn't necessary to sketch the region in the $uv-$plane, but it can help when determining the limits of integration in the transformed integral. The region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-0.1, xmax=2.75,
+        ymin=-2.75, ymax=1.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={-2,-1,0,1},
+        yticklabels={-2,-1,0,1},    
+        ]
+        % Plot 1
+        \addplot [name path = A,
+        -,
+        domain = 0:1, ultra thick,DarkBlue,
+        samples = 100] {x} 
+        node [right=2pt] {};
+        \node[text=DarkBlue] (t) at (.6,.95) {$u=v$};
+        \node[text=DarkBlue] (left) at (1.3,.5) {$u=1$};
+        \node[text=DarkBlue] (bottom) at (0.4,-1.75) {$v=-2u$};
+        \node (l) at (.65,-.5) {$G$};
+        \addplot[ultra thick, samples=50, smooth,domain=0:1,DarkBlue] coordinates {(1,-2)(1,1)};    
+        % Plot 2
+        \addplot [name path = B, -,
+        domain = 0:1, ultra thick,DarkBlue, samples = 100] {-2*x} node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=0:1}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    \end{itemize}
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+
+
+\ifnum \Version=2
+    \part Consider the transform $u=x+y$ and $v=x-y$. Then $x = (u+v)/2$, and $y = (u-v)/2$. Using this transform, $\displaystyle \int_0^2\int_{-y}^{y} f(x,y) \, dx \,dy =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We only need to transform the limits of integration. The region in the $xy-$plane, $R$, is the set 
+    $$R = \{(x,y) \in \mathbb R \ | \ 0 \le y \le 2, \ -y \le x \le y \}$$
+    The triangular region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-2.75, xmax=2.75,
+        ymin=-0.8, ymax=2.75,
+        xtick={-2,-1,0,1,2},
+        xticklabels={-2,-1,0,1,2},  
+        ytick={0,1,2},
+        yticklabels={0,1,2},    
+        ]
+        % Plot Right
+        \addplot [name path = R, -, domain = 0:2, ultra thick,DarkBlue, samples = 100] {x} node [right=2pt] {};
+        % Plot Left
+        \addplot [name path = L, -, domain = -2:0, ultra thick,DarkBlue, samples = 100] {-x} node [right=2pt] {};
+        \node[text=DarkBlue] (right) at (1.35,.75) {$y=x$};
+        \node[text=DarkBlue] (left) at (-1.45,.75) {$y=-x$};
+        \node[text=DarkBlue] (bottom) at (0.75,2.25) {$y=2$};
+        \node (l) at (0.35,1.35) {$R$};
+        \addplot [name path = T,-, domain = -2:2, ultra thick,DarkBlue,samples = 100] {2} node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = L and T, soft clip={domain=-2:0}];
+        \addplot [black!30, opacity=0.2] fill between [of = R and T, soft clip={domain=0:+2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Left boundary}: using $u=x+y$, the line $y=-x$ becomes $u=0$. 
+        \item \textbf{Right boundary}: using $v=x-y$, the line $y=x$ becomes $v=0$. 
+        \item \textbf{Top boundary}: using $y=(u-v)/2$, the line $y=2$ becomes 
+        \begin{align}
+            2 &= (u-v)/2 \\
+            4 &= u - v \\
+            v &= u - 4
+        \end{align}
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is 
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, 0 \le u \le 4, \ u-4 \le v \le 0 \}$$
+    \textbf{Putting Everything Together}\\
+    Therefore, 
+    \begin{align}
+        a & = 0 \\
+        b &= 4 \\
+        c &= u-4 \\
+        d &= 0 
+    \end{align}
+    
+    \textbf{Additional Notes}\\
+    Two additional notes about this question. 
+    \begin{itemize}
+        \item Note that we did not need to obtain $x$ and $y$ in terms of $u,v$, because we were given $x(u,v)$ and $y(u,v)$. But if we needed to express $x$ and $y$ in terms of $u$ and $v$, we could use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+    \begin{align}
+        \begin{pmatrix} 1 & 1 & u \\1 & -1 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & -2 & v - u\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & 1 & (u - v)/2\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & (u + v)/2 \\0 & 1 & (u - v)/2\end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &=  (u + v)/2\\
+        y &= (u - v)/2
+    \end{align}
+    \item Also it isn't necessary to sketch the region in the $uv-$plane, but it can help when determining the limits of integration in the transformed integral. The region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-1.1, xmax=4.75,
+        ymin=-4.75, ymax=2.75,
+        xtick={0,2,4},
+        xticklabels={0,2,4},  
+        ytick={-4,-2,0,2},
+        yticklabels={-4,-2,0,2},    
+        ]
+        % Plot 1
+        \addplot [name path = B, -,domain = 0:4, ultra thick,DarkBlue, samples = 100] {x-4} node [right=2pt] {};
+        \node[text=DarkBlue] (t) at (2,-3) {$v = u-4$};
+        \node[text=DarkBlue] (left) at (1.3,.5) {$v=0$};
+        \node[text=DarkBlue] (bottom) at (-0.6,-1) {$u=0$};
+        \node (l) at (.85,-1) {$G$};
+        \addplot[ultra thick, samples=50, smooth,domain=0:1,DarkBlue] coordinates {(0,-4)(0,0)};    
+        % Plot 2
+        \addplot [name path = T, -,
+        domain = 0:4, ultra thick,DarkBlue, samples = 100] {0} node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = B and T, soft clip={domain=0:4}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    \end{itemize}
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+\ifnum \Version=3
+    \part Consider the transform $u=x-1$ and $v=x+y/2$. Then $x = u+1$, and $y = 2v-2u-2$. Using this information, $\displaystyle \int_0^2\int_{4-2x}^{8-2x} \sqrt{x+y/2} \, dy \,dx =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, and the Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration and determine the Jacobian. The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} 1 & 0 \\ -2 & 2 \end{vmatrix} 
+        = 2
+    \end{align}   
+    To work out the limits of integration, we can start by determining the boundaries of the region in the $xy-$plane. The region in the $xy-$plane, $R$, is the set 
+    $$R = \{(x,y) \in \mathbb R \, | \, 0 \le x \le 2, \ 4-2x \le y \le 8 - 2x \}$$
+    The region in the $xy-$plane is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1.25]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-2, xmax=2.95,
+        ymin=-2.95, ymax=9.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,2,4,6,8},
+        yticklabels={0,2,4,6,8}
+        ]
+        % Plot Top
+        \addplot [name path = T,-,domain = 0:2, ultra thick,DarkBlue,samples = 100] {8-2*x} node [right=2pt] {};
+        % Plot Bottom        
+        \addplot [name path = B,-,domain = 0:2, ultra thick,DarkBlue, samples = 100] {4-2*x} node [very near end, right=4pt] {}; 
+        % Plot Left
+        \addplot[ultra thick, samples=10, smooth,domain=0:1,DarkBlue] coordinates {(0,4)(0,8)}; 
+        % Plot Right
+        \addplot[ultra thick, samples=10, smooth,domain=0:1,DarkBlue] coordinates {(2,0)(2,4)};         
+        % Labels
+        \node[text=DarkBlue] (top) at (1.8,6.5) {$y=8-2x$};
+        \node[text=DarkBlue] (top) at (0.7,1) {$y=4-2x$};
+        \node[text=DarkBlue] (left) at (-0.65,7) {$x=0$};
+        \node[text=DarkBlue] (right) at (2.5,2) {$x=2$};
+        \node (l) at (1,4) {$R$};
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and B, soft clip={domain=0:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Left boundary}: using $u = x -1$, the line $x=0$ becomes $u=-1$. 
+        \item \textbf{Right boundary}: using $u = x -1$, the line $x=2$ becomes $u=+1$. 
+        \item \textbf{Lower boundary}: using $v = x+y/2$, the line $y = 4-2x$ becomes:
+        \begin{align}
+            y &= 4 - 2x \\
+            2x + y & = 4 \\
+            x + y/2 &= 2 \\
+            v &= 2
+        \end{align}
+        \item \textbf{Upper boundary}: using $v = x+y/2$, the line $y = 8-2x$ becomes:
+        \begin{align}
+            y &= 8 - 2x \\
+            2x + y & = 8 \\
+            x + y/2 &= 4 \\
+            v &= 4
+        \end{align}
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is 
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, -1 \le u \le 1, \ 2 \le v \le 4 \}$$
+    Putting everything together, 
+    \begin{align}
+        a & = -1 \\
+        b &= 1 \\
+        c &= 2 \\
+        d &= 4 \\
+        J &= 2
+    \end{align}
+    
+    \textbf{Additional Notes}\\
+    Two additional notes about this question. 
+    \begin{itemize}
+        \item We were not asked for the integrand $g(u,v)$, but we could work out what it is. First note that 
+    \begin{align}
+        \sqrt{x+y/2} =  \sqrt v
+    \end{align}    
+    Thus,
+    \begin{align}
+        \sqrt{x+y/2} \, dy\,dx = 2\sqrt{v} \,dv \, du \quad \Rightarrow \quad g(u,v) = 2 \sqrt v
+    \end{align}
+        \item Note that we did not need to obtain $x$ and $y$ in terms of $u,v$, because we were given $x(u,v)$ and $y(u,v)$. But if we needed to express $x$ and $y$ in terms of $u$ and $v$, we could use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+    \begin{align}
+        \begin{pmatrix} 1 & 0 & u+1 \\1 & 1/2 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & u+1 \\0 & 1 & 2v-2u-2\end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &= u+1 \\
+        y &= 2v-2u-2
+    \end{align}
+    
+    \end{itemize}
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+\ifnum \Version=4
+    \part A change of variables of the form $u=x+y, \ v = x - y$, defines a transform from the $xy-$plane to the $uv-$plane. The Jacobian of the transform from the $uv$-plane to the $xy-$plane is $J(u,v) = \partial (x,y)/\partial (u,v) = \framebox{\strut\hspace{1.5cm}}$, where $x(u,v) = \framebox{\strut\hspace{1.5cm}}$ and $y(u,v) = \framebox{\strut\hspace{1.5cm}}$.
+    \ifnum \Solutions=1 \\[12pt]
+    {\color{DarkBlue} In the context of the given coordinate transformation, we consider a transformation from a set of coordinates $(u, v)$ to the set of coordinates $(x, y)$. The Jacobian matrix for this transformation is defined as
+
+    $$ \displaystyle  J = \begin{pmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{pmatrix} $$
+    
+    We do not have $x$ and $y$ in terms of $u$ and $v$. Solving for $x$ and $y$ using an augmented matrix,
+    \begin{align}
+        \begin{pmatrix} 1 & 1 & u \\1 & -1 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & -2 & v - u\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & 1 & u/2-v/2\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & u/2+v/2 \\0 & 1 & u/2-v/2\end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &= u/2+v/2\\
+        y &= u/2-v/2
+    \end{align}
+    And
+    \begin{align}
+        J(u,v) & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} = \begin{vmatrix} \frac12 & \frac12 \\ \frac12 & -\frac12 \end{vmatrix} = -\frac14-\frac14 = - 1/2
+    \end{align}
+    Note that the Jacobian of a transform can be negative. When using the Jacobian in an integral we use the absolute value of the Jacobian. 
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+\ifnum \Version=5
+    \part Consider the transform $u = \sqrt{xy}$ and $v=\sqrt{y/x}$. It can be shown that $x = u/v$ and $y=uv$. Using this information, $\displaystyle \iint_R \sqrt{xy} \, dx \,dy =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $R = \{(x,y) \in \mathbb R \, | \, 1 \le y \le 2, \ 1/y \le x \le y \}$, and $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, $g(u,v) = \framebox{\strut\hspace{2cm}}$, and the Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration and determine the Jacobian. The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} 1/v & -u/v^2 \\ v & u \end{vmatrix} 
+        = u/v + u/v = 2u/v
+    \end{align}  
+    The integrand $g(u,v)$ also needs to be determined. 
+    $$\iint_R \sqrt{xy} \, dx \, dy = \iint_G u |J| \, dv \, du = \iint_G 2u^2/v \, dv \, du$$
+    Thus,
+    \begin{align}
+        g(u,v) &= 2u^2/v
+    \end{align}
+    To work out the limits of integration, we can determine the boundaries of the region in the $xy-$plane. Based on the given region $R$, the region in the $xy-$plane is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-0.5, xmax=3.5,
+        ymin=-0.95, ymax=2.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,1,2},
+        yticklabels={0,1,2}
+        ]
+        % Plot Top
+        \addplot [name path = T,-,domain = 0.5:2, ultra thick,DarkBlue,samples = 100] {2} node [right=2pt] {};  
+        % Plot Bottom        
+        % Plot Left
+        \addplot [name path = g,-,domain = 0.25:3, ultra thick,gray,samples = 100] {1/x} node [right=2pt] {};
+        \addplot [name path = L,-,domain = 0.5:1, ultra thick,DarkBlue,samples = 100] {1/x} node [right=2pt] {};
+        % Plot Right
+        \addplot [name path = R,-,domain = -0.1:2.6, ultra thick,gray, samples = 100] {x} node [very near end, right=4pt] {}; 
+        \addplot [name path = R,-,domain = 1:2, ultra thick,DarkBlue, samples = 100] {x} node [very near end, right=4pt] {}; 
+        % Labels
+        \node[text=gray] (right) at (2.75,2.2) {$y=x$};
+        \node[text=gray] (left) at (2.1,0.8) {$xy=1$};
+        \node[text=DarkBlue] (l) at (1,1.5) {$R$};
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and L, soft clip={domain=0.5:1}];
+        \addplot [black!30, opacity=0.2] fill between [of = T and R, soft clip={domain=1:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Left boundary}: if $u = \sqrt{xy}$, the curve $xy=1$ becomes $u=1$. 
+        \item \textbf{Right boundary}: if $v = \sqrt{y/x}$, the line $y=x$ becomes $v = 1$. 
+        \item \textbf{Upper boundary}: if $y=uv$, then $y=2$ becomes $v = 2/u$. 
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-0.1, xmax=3.5,
+        ymin=-0.1, ymax=2.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,1,2},
+        yticklabels={0,1,2}
+        ]
+        % Plot Bottom
+        \addplot [name path = B,-,domain = 0:2.9, ultra thick,gray,samples = 100] {1} node [right=2pt] {};  
+        \addplot [name path = B,-,domain = 1:2, ultra thick,DarkBlue,samples = 100] {1} node [right=2pt] {};  
+        % Plot Top
+        \addplot [name path = t,-,domain = 0.25:3, ultra thick,gray,samples = 100] {2/x} node [right=2pt] {};
+        \addplot [name path = T,-,domain = 1:2, ultra thick,DarkBlue,samples = 100] {2/x} node [right=2pt] {};
+        % Plot Left
+        \addplot[ultra thick, samples=10, smooth,domain=0:1,gray] coordinates {(1,0)(1,3)};            
+        \addplot[ultra thick, samples=10, smooth,domain=0:1,DarkBlue] coordinates {(1,1)(1,2)};            
+        % Labels
+        \node[text=gray] (right) at (1.95,1.6) {$v = 2/u$};
+        \node[text=DarkBlue] (l) at (1.2,1.2) {$G$};
+        
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and B, soft clip={domain=1:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+
+    The region $G$ is
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, 1 \le u \le 2, \ 1 \le v \le 2/u \}$$
+    Putting everything together, 
+    \begin{align}
+        a & = 1 \\
+        b &= 2 \\
+        c &= 1 \\
+        d &= 2/u \\
+        J &= 2u/v \\
+        g(u,v) &= 2u^2/v
+    \end{align}
+    
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+
+
+
+
+
+\ifnum \Version=6
+    \part Consider the transform $u = \sqrt{xy}$ and $v=\sqrt{x/y}$. It can be shown that $x = uv$ and $y=u/v$. Using this information, $\displaystyle \iint_R \sqrt{xy} \, dy \,dx =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $R = \{(x,y) \in \mathbb R \, | \, 1 \le x \le 2, \ 1/x \le y \le x \}$, and $a=\framebox{\strut\hspace{1.2cm}}$, $b=\framebox{\strut\hspace{1.2cm}}$, $c=\framebox{\strut\hspace{3cm}}$, $d=\framebox{\strut\hspace{3cm}}$, and the Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{3cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration and determine the Jacobian. The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} v & u \\ 1/v & -u/v^2 \end{vmatrix} 
+        = -u/v - u/v = - 2u/v
+    \end{align}  
+    The integrand $g(u,v)$ also needs to be determined. 
+    $$\iint_R \sqrt{xy} \, dx \, dy = \iint_G u |J| \, dv \, du = \iint_G 2u^2/v \, dv \, du$$
+    Thus,
+    \begin{align}
+        g(u,v) &= 2u^2/v
+    \end{align}
+    To work out the limits of integration, we can determine the boundaries of the region in the $xy-$plane. Based on the given region $R$, the region in the $xy-$plane is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-0.5, xmax=3.5,
+        ymin=-0.95, ymax=2.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,1,2},
+        yticklabels={0,1,2}
+        ]
+        % Vertical line
+        \addplot[name path = L,line width=0.8mm,samples=4, smooth,domain=0:1,DarkBlue, name path=three] coordinates {(2,1/2)(2,2)};
+        % Plot Bottom
+        \addplot [name path = g,-,domain = 0.3:3, ultra thick,gray,samples = 100] {1/x} node [right=2pt] {};
+        \addplot [name path = B,-,domain = 1:2, line width=0.8mm,DarkBlue,samples = 100] {1/x} node [right=2pt] {};
+        % Plot Top
+        \addplot [name path = g,-,domain = -0.1:2.6, ultra thick,gray, samples = 4] {x} node [very near end, right=4pt] {}; 
+        \addplot [name path = T,-,domain = 1:2, line width=0.8mm,DarkBlue, samples = 4] {x} node [very near end, right=4pt] {}; 
+        % Labels
+        \node[text=gray] (right) at (2.75,2.2) {$y=x$};
+        \node[text=gray] (left) at (3.1,0.6) {$xy=1$};
+        \node[text=DarkBlue] (l) at (1.67,1.1) {$R$};
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and B, soft clip={domain=1:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Left boundary}: if $u = \sqrt{xy}$, the curve $xy=1$ becomes $u=1$. 
+        \item \textbf{Right boundary}: if $v = \sqrt{x/y}$, the line $y=x$ becomes $v=1$. 
+        \item \textbf{Upper boundary}: if $x=uv$, then $x=2$ becomes $v = 2/u$. 
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-0.1, xmax=3.5,
+        ymin=-0.1, ymax=2.75,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,1,2},
+        yticklabels={0,1,2}
+        ]
+        % Plot Bottom
+        \addplot [name path = b,-,domain = 0:2.9, ultra thick,gray,samples = 100] {1} node [right=2pt] {};  
+        \addplot [name path = B,-,domain = 1:2, line width=0.8mm,DarkBlue,samples = 100] {1} node [right=2pt] {};  
+        % Plot Top
+        \addplot [name path = t,-,domain = 0.25:3, ultra thick,gray,samples = 100] {2/x} node [right=2pt] {};
+        \addplot [name path = T,-,domain = 1:2, line width=0.8mm,DarkBlue,samples = 100] {2/x} node [right=2pt] {};
+        % Plot Left
+        \addplot[ultra thick, samples=10, smooth,domain=0:1,gray] coordinates {(1,0)(1,3)};            
+        \addplot[line width=0.8mm, samples=10, smooth,domain=0:1,DarkBlue] coordinates {(1,1)(1,2)};            
+        % Labels
+        \node[text=gray] (right) at (1.95,1.6) {$v = 2/u$};
+        \node[text=DarkBlue] (l) at (1.2,1.2) {$G$};
+        
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and B, soft clip={domain=1:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+
+    The region $G$ is
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, 1 \le u \le 2, \ 1 \le v \le 2/u \}$$
+    Putting everything together, 
+    \begin{align}
+        a & = 1 \\
+        b &= 2 \\
+        c &= 1 \\
+        d &= 2/u \\
+        J &= -2u/v \\
+        g(u,v) &= 2u^2/v
+    \end{align}
+    
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+
+\ifnum \Version=7
+    \part Consider the transform $u=x+y$ and $v=x-y$. Then $x = (u+v)/2$, and $y = (u-v)/2$, and $\displaystyle \int_0^2\int_{y-2}^{2-y}  \, dx \,dy =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $a=\framebox{\strut\hspace{2.5cm}}$, $b=\framebox{\strut\hspace{2.5cm}}$, $c=\framebox{\strut\hspace{3.5cm}}$, $d=\framebox{\strut\hspace{3.5cm}}$. The Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{3cm}}$.
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration. The region in the $xy-$plane, $R$, is the set 
+    $$R = \{(x,y) \in \mathbb R \ | \ 0 \le y \le 2, \ y-2 \le x \le 2-y \}$$
+    The triangular region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-2.5, xmax=2.5,
+        ymin=-0.8, ymax=3.2,
+        xtick={-2,-1,0,1,2},
+        xticklabels={-2,-1,0,1,2},  
+        ytick={0,1,2,3},
+        yticklabels={0,1,2},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed    
+        ]
+        % Plot Right
+        \addplot [name path = R, -, domain = -2:0, line width=0.8mm,DarkBlue, samples = 100] {2+x} node [right=2pt] {};
+        % Plot Left
+        \addplot [name path = L, -, domain = 0:2, line width=0.8mm,DarkBlue, samples = 100] {2-x} node [right=2pt] {};
+        \node (l) at (0.6,0.55) {$R$};
+        \addplot [name path = T,-, domain = -2:2, line width=0.8mm,DarkBlue,samples = 100] {0} node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = R and T, soft clip={domain=-2:0}];
+        \addplot [black!30, opacity=0.2] fill between [of = L and T, soft clip={domain=0:+2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Right boundary}: using $u=x+y$, the line $x=2-y$ becomes $u=2$. 
+        \item \textbf{Left boundary}: using $v=x-y$, the line $x=y-2$ becomes $v=-2$. 
+        \item \textbf{Bottom boundary}: using $y=(u-v)/2$, the line $y=0$ becomes $u=v$.
+    \end{itemize}
+    It isn't necessary to sketch the region in the $uv-$plane, but it can help when determining the limits of integration in the transformed integral. The region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-2.75, xmax=2.75,
+        ymin=-2.75, ymax=2.75,
+        xtick={-3,-2,-1,0,1,2,3},
+        xticklabels={-3,-2,-1,0,1,2,3},  
+        ytick={-2,-1,0,1,2},
+        yticklabels={-2,-1,0,1,2},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed      
+        ]
+        \node (l) at (.85,-1) {$G$};
+                % Plot 1
+        \addplot [name path = T, -,domain = -2:2, ultra thick,DarkBlue, samples = 4] {x} node [right=2pt] {};
+        \addplot[name path = R, ultra thick, samples=4, smooth,domain=0:1,DarkBlue] coordinates {(2,-2)(2,2)};    
+        \addplot[name path = B, ultra thick, samples=4, smooth,domain=0:1,DarkBlue] coordinates {(-2,-2)(2,-2)};    
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = B and T, soft clip={domain=-2:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}         
+    The region in the $uv-$plane, $G$, is 
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, -2 \le u \le 2, \ -2 \le v \le u \}$$
+    
+    \textbf{Jacobian and $g(u,v)$ }\\
+    The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} 1/2 & 1/2 \\ 1/2 & -1/2 \end{vmatrix} 
+        = -1/4 - 1/4 = - 1/2
+    \end{align}      
+    The function $g(u,v)$ is $|J| = 1/2$.    
+    \vspace{12pt}
+    
+    \textbf{Putting Everything Together}\\
+    Therefore, 
+    \begin{align}
+        a & = -2 \\
+        b &= 2 \\
+        c &= -2 \\
+        d &= u \\
+        J &= -1/2
+    \end{align}
+
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+
+\ifnum \Version=8
+    \part Consider the transform $u = \sqrt{xy}$ and $v=\sqrt{x/y}$. It can be shown that $x = uv$ and $y=u/v$. Using this information, $\displaystyle \iint_R \sqrt{xy} \, dy \,dx =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $R = \{(x,y) \in \mathbb R \, | \, 1 \le x \le 2, \ 1/2 \le y \le 1/x \}$, and $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, and the Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration and determine the Jacobian. The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} v & u \\ 1/v & -u/v^2 \end{vmatrix} 
+        = -u/v - u/v = - 2u/v
+    \end{align}  
+    The integrand $g(u,v)$ also needs to be determined. 
+    $$\iint_R \sqrt{xy} \, dx \, dy = \iint_G u |J| \, dv \, du = \iint_G 2u^2/v \, dv \, du$$
+    Thus,
+    \begin{align}
+        g(u,v) &= 2u^2/v
+    \end{align}
+    To work out the limits of integration, we can determine the boundaries of the region in the $xy-$plane. Based on the given region $R$, the region in the $xy-$plane is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-0.5, xmax=2.5,
+        ymin=-0.25, ymax=1.5,
+        xtick={0,1,2},
+        xticklabels={0,1,2},  
+        ytick={0,1/2,1},
+        yticklabels={0,1/2,1},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed
+        ]
+        % lines
+        \addplot[name path = L1,line width=0.8mm,samples=4, smooth,domain=0:1,DarkBlue, name path=three] coordinates {(1,0.5)(1,1)};
+        \addplot[name path = L3,line width=0.8mm,samples=4, smooth,domain=0:1,DarkBlue, name path=three] coordinates {(2,0.5)(1,0.5)};
+        % Plot Top
+        \addplot [name path = g,-,domain = 0.3:3, ultra thick,gray,samples = 50] {1/x} node [right=2pt] {};
+        \addplot [name path = T,-,domain = 1:2, line width=0.8mm,DarkBlue,samples = 100] {1/x} node [right=2pt] {};
+        % Labels
+        \node[text=gray] (left) at (3.1,0.6) {$xy=1$};
+        \node[text=DarkBlue] (l) at (1.3,0.6) {$R$};
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and L3, soft clip={domain=1:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Upper boundary}: if $u = \sqrt{xy}$, the curve $xy=1$ becomes $u=1$. 
+        \item \textbf{Lower boundary}: if $y = u/v$, the line $y=1/2$ becomes $v=2u$. 
+        \item \textbf{Left boundary}: if $x=uv$, then $x=1$ becomes $v = 1/u$. 
+    \end{itemize}
+    The region in the $uv-$plane, $G$, is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-0.1, xmax=1.5,
+        ymin=-0.1, ymax=2.75,
+        xtick={0,0.5,1},
+        xticklabels={0,0.5,1},  
+        ytick={0,1,2,3},
+        yticklabels={0,1,2,3},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed        
+        ]
+        % Plot Bottom
+        \addplot [name path = T,-,domain = 0.7:1, line width=0.8mm,DarkBlue,samples = 100] {2*x} node [right=2pt] {};  
+        % Plot Top
+        \addplot [name path = B,-,domain = 0.7:1, line width=0.8mm,DarkBlue,samples = 100] {1/x} node [right=2pt] {};
+        % Plot Line
+        \addplot[line width=0.8mm, samples=10, smooth,domain=0:1,DarkBlue] coordinates {(1,1)(1,2)};            
+        % Labels
+        \node[text=gray] (right) at (1.95,1.6) {$v = 2/u$};
+        \node[text=DarkBlue] (l) at (0.9,1.4) {$G$};
+        
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = T and B, soft clip={domain=0.7:1}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    The lines $v=2u$ and $v=1/u$ intersect at the point $(1/\sqrt2,2/\sqrt2)$. The region $G$ is
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, \frac{1}{\sqrt2} \le u \le 1, \ 1/u \le v \le 2u \}$$
+    
+    Putting everything together, 
+    \begin{align}
+        a & = 1/\sqrt2 \\
+        b &= 1 \\
+        c &= 1/u \\
+        d &= 2u \\
+        J(u,v) &= -2u/v
+    \end{align}
+    
+    
+    
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+% SAME AS VERSION 7
+\ifnum \Version=9
+    \part Consider the transform $u=x+y$ and $v=x-y$. Then $x = (u+v)/2$, and $y = (u-v)/2$, and $\displaystyle \int_0^2\int_{y-2}^{2-y}  \, dx \,dy =  \int_a^b \int_c^d g(u,v) \, dv \, du$,  where $a=\framebox{\strut\hspace{2cm}}$, $b=\framebox{\strut\hspace{2cm}}$, $c=\framebox{\strut\hspace{3cm}}$, $d=\framebox{\strut\hspace{3cm}}$, and the Jacobian of the transform is $J(u,v) = \framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} 
+    We need to transform the limits of integration. The region in the $xy-$plane, $R$, is the set 
+    $$R = \{(x,y) \in \mathbb R \ | \ 0 \le y \le 2, \ y-2 \le x \le 2-y \}$$
+    The triangular region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$x$},
+        ylabel = {$y$},
+        xmin=-2.5, xmax=2.5,
+        ymin=-0.8, ymax=3.2,
+        xtick={-2,-1,0,1,2},
+        xticklabels={-2,-1,0,1,2},  
+        ytick={0,1,2,3},
+        yticklabels={0,1,2},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed    
+        ]
+        % Plot Right
+        \addplot [name path = R, -, domain = -2:0, line width=0.8mm,DarkBlue, samples = 100] {2+x} node [right=2pt] {};
+        % Plot Left
+        \addplot [name path = L, -, domain = 0:2, line width=0.8mm,DarkBlue, samples = 100] {2-x} node [right=2pt] {};
+        \node (l) at (0.6,0.55) {$R$};
+        \addplot [name path = T,-, domain = -2:2, line width=0.8mm,DarkBlue,samples = 100] {0} node [very near end, right=4pt] {}; 
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = R and T, soft clip={domain=-2:0}];
+        \addplot [black!30, opacity=0.2] fill between [of = L and T, soft clip={domain=0:+2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}     
+    
+    To determine the boundaries in the $uv-$plane we transform each of the boundaries individually. 
+    \begin{itemize}
+        \item \textbf{Right boundary}: using $u=x+y$, the line $x=2-y$ becomes $u=2$. 
+        \item \textbf{Left boundary}: using $v=x-y$, the line $x=y-2$ becomes $v=-2$. 
+        \item \textbf{Bottom boundary}: using $y=(u-v)/2$, the line $y=0$ becomes $u=v$.
+    \end{itemize}
+    It isn't necessary to sketch the region in the $uv-$plane, but it can help when determining the limits of integration in the transformed integral. The region is shown below. 
+    \begin{center}     
+    \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+        axis lines = middle, very thick,
+        xlabel = {$u$},
+        ylabel = {$v$},
+        xmin=-2.75, xmax=2.75,
+        ymin=-2.75, ymax=2.75,
+        xtick={-3,-2,-1,0,1,2,3},
+        xticklabels={-3,-2,-1,0,1,2,3},  
+        ytick={-2,-1,0,1,2},
+        yticklabels={-2,-1,0,1,2},
+        ymajorgrids=true,
+        xmajorgrids=true,
+        grid style=dashed      
+        ]
+        \node (l) at (.85,-1) {$G$};
+                % Plot 1
+        \addplot [name path = T, -,domain = -2:2, ultra thick,DarkBlue, samples = 4] {x} node [right=2pt] {};
+        \addplot[name path = R, ultra thick, samples=4, smooth,domain=0:1,DarkBlue] coordinates {(2,-2)(2,2)};    
+        \addplot[name path = B, ultra thick, samples=4, smooth,domain=0:1,DarkBlue] coordinates {(-2,-2)(2,-2)};    
+        % Fill area between paths
+        \addplot [black!30, opacity=0.2] fill between [of = B and T, soft clip={domain=-2:2}];
+        \end{axis}
+    \end{tikzpicture}    
+    \end{center}         
+    The region in the $uv-$plane, $G$, is 
+    $$G = \{(u,v) \in \mathbb R^2 \, | \, -2 \le u \le 2, \ -2 \le v \le u \}$$
+    
+    \textbf{Jacobian and $g(u,v)$ }\\
+    The Jacobian is
+    \begin{align}
+        J(u,v) 
+        & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} 
+        = \begin{vmatrix} 1/2 & 1/2 \\ 1/2 & -1/2 \end{vmatrix} 
+        = -1/4 - 1/4 = - 1/2
+    \end{align}      
+    The function $g(u,v)$ is $|J| = 1/2$.    
+    \vspace{12pt}
+    
+    \textbf{Putting Everything Together}\\
+    Therefore, 
+    \begin{align}
+        a & = -2 \\
+        b &= 2 \\
+        c &= -2 \\
+        d &= u \\
+        J &= -1/2
+    \end{align}
+
+    }
+   \else
+
+   \fi
+\fi 
+
+

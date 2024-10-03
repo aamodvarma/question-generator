@@ -1,0 +1,128 @@
+\ifnum \Version=1
+    \part The dimension of the subspace $\{\vec x \in \mathbb R^4 \, | \, x_1-x_3 = 0\}$ is $\framebox{\strut\hspace{1.0cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The dimension is $3$. 
+    } 
+   \fi
+\fi
+    
+\ifnum \Version=2
+    \part The dimension of the column space of $A=\begin{pmatrix} 1&0&1\\0&1&1\\1&1&2\end{pmatrix}$ is $\framebox{\strut\hspace{1.0cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    By inspection the third column is the sum of the first two, and the first two columns are independent. So $A$ has two pivots, and the number of pivots is the rank, so $\Rank A = 2$. Alternatively we could also row reduce the matrix and find that there are only two pivots, and so the rank must be two. 
+    } 
+   \else
+      
+   \fi    
+\fi
+    
+\ifnum \Version=3
+    \part The dimension of the subspace $\{\vec x \in \mathbb R^6 \, | \, x_1-x_3 = 0, \, x_2-x_4=0\}$ is $\framebox{\strut\hspace{1.0cm}}$.    
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The dimension is $4$. Note we are told that 
+    $$x_1 - x_3 = 0, \ x_2-x_4 =0$$
+    But these conditions can be written as
+    $$x_1 = x_3 , \ x_2 = x_4 $$
+    So vectors in the space have the form 
+    $$ x 
+    = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \end{pmatrix} 
+    = \begin{pmatrix} x_3 \\ x_4 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \end{pmatrix}
+    = x_3\begin{pmatrix} 1 \\ 0 \\ 1 \\ 0\\ 0 \\ 0 \end{pmatrix} 
+    + x_4\begin{pmatrix}  0 \\ 1 \\ 0\\ 1 \\ 0 \\ 0 \end{pmatrix}
+    + x_5\begin{pmatrix}  0 \\ 0 \\ 0\\ 0 \\ 1 \\ 0 \end{pmatrix}
+    + x_6\begin{pmatrix}  0 \\ 0 \\ 0\\ 0 \\ 0 \\ 1 \end{pmatrix}
+    $$
+    From our parametric vector form we see that the following set of vectors are in the subspace and are independent. 
+    $$
+    \left\{
+    \begin{pmatrix} 1 \\ 0 \\ 1 \\ 0\\ 0 \\ 0 \end{pmatrix},
+    \begin{pmatrix}  0 \\ 1 \\ 0\\ 1 \\ 0 \\ 0 \end{pmatrix},
+    \begin{pmatrix}  0 \\ 0 \\ 0\\ 0 \\ 1 \\ 0 \end{pmatrix},
+    \begin{pmatrix}  0 \\ 0 \\ 0\\ 0 \\ 0 \\ 1 \end{pmatrix}
+    \right\}
+    $$
+    Note that each vector satisfies the given conditions because 
+    \begin{itemize}
+        \item each vector is in $\mathbb R^6$
+        \item each vector satisfies $x_1 - x_3 = 0$
+        \item each vector satisfies $x_2-x_4 =0$
+    \end{itemize}
+    There are four vectors in this set, they are independent, and they span the set. The dimension of a space is the number of vectors needed to form a basis for it, so the dimension is 4. 
+    } 
+   \fi
+\fi
+    
+\ifnum \Version=4
+\part How many vectors are needed to form a basis for the subspace $\{\vec x \in \mathbb R^4 \, | \, x_1+x_2 = 0\}$? $\framebox{\strut\hspace{1.0cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $3$. 
+    } 
+   \else
+   \fi
+\fi
+    
+\ifnum \Version=5
+    \part The dimension of the column space of $A=\begin{pmatrix} 1&0&1\\0&1&1\\1&1&2\end{pmatrix}$ is $\framebox{\strut\hspace{1.0cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    By inspection the third column is the sum of the first two, and the first two columns are independent. So $A$ has two pivots, and the number of pivots is the rank, so $\Rank A = 2$. 
+    } 
+   \else
+      
+   \fi    
+\fi
+    
+\ifnum \Version=6
+    \part How many vectors are needed to form a basis for the subspace $\{\vec x \in \mathbb R^5 \, | \, x_1+x_2 = 0\}$? $\framebox{\strut\hspace{1.0cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $4$. Vectors in the subspace have the general form 
+    $$x 
+    = \begin{pmatrix} x_1\\x_2\\x_3\\x_4\\x_5\end{pmatrix} 
+    = \begin{pmatrix} -x_2\\x_2\\x_3\\x_4\\x_5\end{pmatrix}
+    =x_2\begin{pmatrix} -1\\1\\0\\0\\0\end{pmatrix}
+    +x_3\begin{pmatrix} 0\\0\\1\\0\\0\end{pmatrix}
+    +x_4\begin{pmatrix} 0\\0\\0\\1\\0\end{pmatrix}
+    +x_5\begin{pmatrix} 0\\0\\0\\0\\1\end{pmatrix}
+    $$
+    There are 4 independent vectors in the basis for this subspace. 
+    } 
+   \else
+   \fi    
+\fi
+
+
+\ifnum \Version=7
+\part Suppose $S$ is the subspace $S=\{\vec x \in \mathbb R^5 \, | \, x_1+x_2 = 0, x_3+x_4 = 0\}$. How many vectors are needed to form a basis for $S$? $\framebox{\strut\hspace{1.0cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    $S$ is determined by two linear conditions and vectors in $S$ live in $\mathbb R^5$.  Hence, $S$ is three dimensional.  $x_1$ is free, but not $x_2$. $x_3$ is free, but not $x_4$, and then $x_5$ is free.  A general vector in $S$ is 
+    \begin{equation}
+        \begin{pmatrix}
+            x_1 \\ - x_1 \\ x_3 \\ - x_3 \\ x_5 
+        \end{pmatrix} = x_1 \begin{pmatrix}1\\-1\\0\\0\\0 \end{pmatrix}+x_3\begin{pmatrix}0\\0\\1\\-1\\0 \end{pmatrix}+ x_5\begin{pmatrix} 0 \\0\\0\\0\\1 \end{pmatrix}
+    \end{equation}
+    There are 3 independent vectors in the basis for this subspace.     
+    } 
+   \else
+   \fi
+\fi        
+
+\ifnum \Version=8
+\part Suppose $S$ is the subspace $S=\{\vec x \in \mathbb R^6 \, | \, x_1+x_2 = 0, x_3+2x_4 = 0\}$. How many vectors are needed to form a basis for $S$? $\framebox{\strut\hspace{1.0cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    Vectors in $S$ have 6 entries and $S$ is determined by two linear conditions.  Hence, $S$ is four dimensional.  $x_1$ is free, but not $x_2$. $x_3$ is free, but not $x_4$, and then $x_5$ and $x_6$ are  free.  A general vector in $S$ is 
+    \begin{equation}
+        \begin{pmatrix}
+            x_1 \\ - x_1 \\ x_3 \\ - x_3/2 \\ x_5 \\ x_6 
+        \end{pmatrix}
+    \end{equation}
+    The correct answer to this question is $4$. 
+    } 
+   \else
+   \fi
+\fi        

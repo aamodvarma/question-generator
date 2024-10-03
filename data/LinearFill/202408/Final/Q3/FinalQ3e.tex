@@ -1,0 +1,87 @@
+% UNIT 5 SOMETHING
+e) &  
+\ifnum \Version=1         
+    Matrix $A$ is $m\times n$ and does not have a singular value decomposition. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. Every matrix has an SVD. } \fi
+\fi
+\ifnum \Version=2      
+   $A$ is a $3\times4$ matrix whose singular values are $\sigma_1=4$, $\sigma_2=0$, $\sigma_3=-1$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. Singular values cannot be negative. } \fi
+\fi    
+\ifnum \Version=3  
+    $ D $ is an $n\times n$ diagonal matrix, $P$ is invertible and $n\times n$, and $A= P D P ^{T}$ is not symmetric.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. If $A= P D P ^{T}$, then $A^T = (P D P ^{T})^T = A$, so $A$ is symmetric. } \fi
+\fi    
+\ifnum \Version=4    
+     Matrix $A$ is $n\times n$, $A=A^T$, and $A$ cannot be diagonalized. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. All symmetric matrices can be diagonalized. This is a result of the spectral theorem.} \fi
+\fi   
+\ifnum \Version=5    
+    Every coefficient in a quadratic form is positive and the form is indefinite.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. Take for example \setlength{\extrarowheight}{0.0cm}
+    $$Q = x^2 + 4xy + y^2 = \begin{pmatrix} x & y\end{pmatrix}\begin{pmatrix} 1&2\\2&1\end{pmatrix}\begin{pmatrix} x\\y\end{pmatrix}$$ Then $A = \begin{pmatrix} 1&2\\2&1\end{pmatrix}$ has eigenvalues $\lambda_1 = -1$ and $\lambda_2=3$, so the form is indefinite. } \fi
+\fi    
+\ifnum \Version=6      
+    $A$ is an $n\times n$ matrix, $A=A^T$, $\lambda$ is an eigenvalue of $A$, and the algebraic multiplicity of $\lambda$ is not equal to the geometric multiplicity of $\lambda$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. If $A=A^T$, then $A$ is symmetric, and symmetric matrices can always be diagonalized.  } \fi
+\fi        
+\ifnum \Version=7  
+    Matrix $A$ is $m\times n$ and does not have a unique singular value decomposition. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution: Possible. The SVD of a matrix is never unique. }  \fi
+\fi      
+\ifnum \Version=8
+     $A$ is an $n\times n$ matrix, and $A=A^T$ has eigenvalue $-1$. 
+    \ifnum \Solutions=1  \setlength{\extrarowheight}{0.0cm} \fi     
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Possible. Take for example the matrix $\begin{pmatrix} -1&0\\0&0 \end{pmatrix}$. } \fi
+\fi      
+\ifnum \Version=9
+    \setlength{\extrarowheight}{0.00cm} 
+    $A$ is an $n\times n$ matrix that cannot be diagonalized, and $A$ is symmetric. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  impossible. By the spectral theorem all symmetric matrices can be diagonalized. 
+    } \fi
+\fi      
+\ifnum \Version=10
+    \setlength{\extrarowheight}{0.00cm} 
+    $A$ is a $5\times 2$ matrix with orthogonal columns and $A^TA$ is not diagonal. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution:  Impossible. $A^TA$ is diagonal.  
+    } \fi
+\fi      
+\ifnum \Version=11
+    $A$ is a $2\times 2$ matrix and $A=A^T$. The eigenvalues of $A$ are $\lambda_1$ and $\lambda_2$ with corresponding eigenvectors $v_1$ and $v_2$. The eigenvectors are linearly independent, $v_1 \cdot v_2 \ne 0$, and $\lambda_1 \ne \lambda_2$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Impossible. If $A=A^T$, then $A$ is symmetric, and eigenvectors of symmetric matrices that correspond to different eigenvalues are orthogonal.  } \fi
+\fi      
+\ifnum \Version=12
+    Every coefficient in a quadratic form is negative and the form is indefinite.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. Take for example \setlength{\extrarowheight}{0.0cm}
+     $$Q = -x^2 - 4xy - y^2 = \begin{pmatrix} x & y\end{pmatrix}\begin{pmatrix} -1&-2\\-2&-1\end{pmatrix}\begin{pmatrix} x\\y\end{pmatrix}$$ Then $A = \begin{pmatrix} -1&-2\\-2&-1\end{pmatrix}$ has eigenvalues $\lambda_1 = 1$ and $\lambda_2=-3$, so the form is indefinite. }\fi
+\fi    
+\ifnum \Version=13 % 
+     Matrix $A$ is $n\times n$, $A=A^T$, $A$ does not have $n$ distinct eigenvalues, but $A$ can be diagonalized. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } Possible. A square zero matrix is symmetric, does not have distinct eigenvalues, but can be diagonalized. This is a result of the spectral theorem.} \fi
+\fi    
+\ifnum \Version=14 % 
+    \setlength{\extrarowheight}{0.00cm} Matrix $A$ is $2\times 2$ and symmetric, and the minimum value of the quadratic form $Q = x^TAx$ subject to the constraint that $\|x\|=1$ is not unique. 
+    \ifnum \Solutions=1 {\color{DarkBlue} Solution: possible. This can happen when the eigenvalues are repeated. 
+    } \fi
+\fi    
+% \ifnum \Version=15 % shouldn't need this version for fall 2023
+%     \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 5
+%     \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+%     } \fi
+% \fi    
+% \ifnum \Version=16 % shouldn't need this version for fall 2023
+%     \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 5
+%     \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+%     } \fi
+% \fi    
+% \ifnum \Version=17 % shouldn't need this version for fall 2023
+%     \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 5
+%     \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+%     } \fi
+% \fi    
+% \ifnum \Version=18 % shouldn't need this version for fall 2023
+%     \setlength{\extrarowheight}{0.00cm} ADD QUESTION HERE ON UNIT 5
+%     \ifnum \Solutions=1 {\color{DarkBlue} Solution:  
+%     } \fi
+% \fi    
+& $\bigcirc$ & $\bigcirc$ \\[4pt] \hline

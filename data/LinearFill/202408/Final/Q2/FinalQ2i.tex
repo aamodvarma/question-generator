@@ -1,0 +1,80 @@
+% SVD, SINGULAR VALUES
+\ifnum \Version=1         
+    Suppose A is a $20 \times 20$ matrix, $\rank(A)=4$, and $A$ has the SVD $A = U\Sigma V^T$. Then the first $4$ columns of $U$ are an orthonormal basis for $\Col A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. This is a part of one of the theorems covered at the end of the course in the section on the SVD.} \fi
+\fi
+\ifnum \Version=2      
+    The singular values of any $m\times n$ real matrix $A$ are the eigenvalues of $A^TA$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. They are defined as the square roots of the eigenvalues of $A^TA$.} \fi
+\fi    
+\ifnum \Version=3  
+    Suppose $A$ is a $20 \times 20$ matrix, $\rank(A)=10$, and $A$ has the SVD $A = U\Sigma V^T$. Then the first 10 columns of $V$ are an orthonormal basis for $\Col A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. They form a basis for $\text{Row} A$, not $\Col A$. } \fi
+\fi    
+\ifnum \Version=4    
+    If $x \in \mathbb R^n$ and $A$ is $n\times n$, then the maximum value of $\|Ax\|$ subject to the constraint $\|x\|=1$ is the largest eigenvalue of $A^TA$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The maximum value of $\|Ax\|$, subject to the constraint $\|x\|=1$, is the square root of the largest eigenvalue of $A^TA$. } \fi
+\fi   
+\ifnum \Version=5    
+    If $A$ is an $m\times n$ real matrix then the eigenvalues of $A^TA$ are real and non-negative. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. $A^TA$ is symmetric and symmetric matrices have real eigenvalues. And the eigenvalues of $A^TA$ are non-negative because eigenvalue $\lambda_i$ is $\lambda_i = \|A\vec v_i\|^2$ for some unit vector $\vec v_i$. And $\|A\vec v\|^2$  is non-negative.   } \fi
+\fi    
+\ifnum \Version=6      
+    If $A$ has linearly independent columns and $A$ has the SVD $A = U\Sigma V^T$, then the columns of $V$ form an orthonormal basis for $\Col A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. When $A$ has independent columns, the columns of $U$ form the orthonormal basis for $\Col A$, the columns of $V$ form an orthonormal basis for $\Row A$.   } \fi
+\fi     
+\ifnum \Version=7 
+ If $A$ has linearly independent columns and $A$ has the SVD $A = U\Sigma V^T$, then the columns of $U$ form an orthonormal basis for $\Row A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. When $A$ has independent columns, the columns of $U$ form the orthonormal basis for $\Col A$, the columns of $V$ form an orthonormal basis for $\Row A$.   }\fi
+\fi     
+\ifnum \Version=8
+    If $A$ is $n\times n$ and has linearly independent columns and has the SVD $A = U\Sigma V^T$, then the columns of $U$ form an orthonormal basis for $\Col A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. When $A$ is square and has independent columns, the columns of $U$ form the orthonormal basis for $\Col A$, the columns of $V$ form an orthonormal basis for $\Row A$. Note that when $A$ is $m\times n$ and $m>n$ ($A$ has more columns than rows) that only the first $n$ columns of $U$ will be a basis for the column space.  }\fi
+\fi     
+\ifnum \Version=9
+  If $R$ is a $2\times2$ matrix with orthonormal columns then $R$ has singular values $\sigma_1 = 1$ and $\sigma_2 = 1$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. We verify this by computing $R^TR$ for orthogonal $R$, which gives us $R^TR = I_2$.  } \fi
+\fi     
+\ifnum \Version=10
+   If $\vec x \in \mathbb R^n$ and $A$ is $n\times n$, and the largest eigenvalue  of $A^TA$ is 9, then $\|A\vec x\|$ is never more than $3 \|\vec x\|$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. 
+    The largest singular value is 3, and that represents the largest amount that $\| Ax \|$ can be subject to $\| x\|=1$.} \fi
+\fi     
+\ifnum \Version=11
+    If $A$ is an $m\times n$ real matrix then the eigenvalues of $A^TA$ are real and non-negative.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} True. $A^TA$ is symmetric and symmetric matrices have real eigenvalues. And the eigenvalues of $A^TA$ are non-negative because eigenvalue $\lambda_i$ is $\lambda_i = \|A\vec v_i\|^2$ for some unit vector $\vec v_i$. And $\|A\vec v\|^2$  is non-negative.   } \fi
+\fi     
+\ifnum \Version=12
+       Suppose $A$ is a $20 \times 20$ matrix, $\rank(A)=10$, and $A$ has the SVD $A = U\Sigma V^T$. Then the first 10 columns of $V$ are an orthonormal basis for $\Row A$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. They form a basis for $\text{Row} A$. } \fi
+\fi   
+\ifnum \Version=13 % 
+    Suppose A is a $10 \times 8$ matrix, $\rank(A)=4$, and $A$ has the SVD $A = U\Sigma V^T$. Then the last $4$ columns of $U$ are an orthonormal basis for $(\Col A)^{\perp}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. This is a part of one of the theorems covered at the end of the course in the section on the SVD.} \fi
+\fi     
+\ifnum \Version=14 % 
+    The condition number of an $n\times n$ invertible matrix cannot be negative, but it could be zero. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } false, because if the matrix is invertible, none of the singular values are zero, so the ratio of the largest and smallest singular values is positive. } \fi
+\fi     
+\ifnum \Version=15 % 
+    The SVD of a $m\times n$ matrix is unique. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. It is  not unique, since you can always multiply the orthogonal bases by choices of signs. } \fi
+\fi   
+\ifnum \Version=16 % 
+    SVD OR SINGULAR VALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi     
+\ifnum \Version=17 % 
+    SVD OR SINGULAR VALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+\ifnum \Version=18 
+    % I LIKE THIS ONE BUT I CAN'T GET THE CODE TO COMPILE BECAUSE LATEX DOESN'T LIKE MATRICES IN A TABLE
+    % The $2\times 2$ rotation matrix $R = \begin{bmatrix} \cos \theta & -\sin\theta \\\sin\theta & \cos\theta \end{bmatrix}$ has singular values $\sigma_1 = 1$ and $\sigma_2 = 1$.
+    %   \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. We verify this by computing $A^TA$ for the general rotation matrix $R = \begin{pmatrix} c & -s\\s & c\end{pmatrix}$ with $c=\cos\theta$ and $s= \sin\theta$. Or can verify this by noting that the singular values are the extreme values of $\|Ax\|$ for unit vector $x$ and that rotations don't change the length of the input vector. In other words, rotation matrix $R$ is orthogonal, so $\| Rx \| = \|x\|$. } \fi
+\fi     
+\ifnum \Version=19 % 
+    SVD OR SINGULAR VALUES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi   
+& $\bigcirc$  & $\bigcirc$ \\   

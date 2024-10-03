@@ -1,0 +1,236 @@
+% ANYTHING FROM 15.1 
+
+% 15.1 EASY INTEGRATION
+\ifnum \Version=1  
+    \part The volume of the region bounded above by $z = 10 - 4x 
+ - 2y$ and below by the rectangle $0\le x \le 1$, $0\le y \le 2$ is $\framebox{\strut\hspace{0.8cm}}$.
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    \begin{align}
+        \int_0^1\int_0^2 10 - 4x - 2y \ dy \, dx 
+        &= \int_0^1 \left. (10y - 4xy -y^2 )\right|_0^2 \, dx \\ 
+        &= \int_0^1  (20 - 8x - 4 ) \, dx \\ 
+        &= \left. (20x - 4x^2 - 4x)\right|_0^1 \\
+        &= 20 - 4 -4\\
+        &= 12
+    \end{align}
+    }
+   \else
+
+   \fi
+\fi 
+
+
+% 15.1 EASY INTEGRATION
+\ifnum \Version=2
+    \part If $R$ is the rectangle $0\le x \le 1$, $0\le y \le 3$, then $\iint_R (1+8xy) dA = \framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    \begin{align}
+        \int_0^1\int_0^3 (1+8xy) \ dy \, dx 
+        &= \int_0^1 \left. (y+4xy^2)\right|_0^3 \, dx  \\ 
+        &= \int_0^1 (3+36x) \, dx  \\ 
+        &= \left. (3x+18x^2)\right|_0^1 \\
+        &= 3+18\\
+        &= 21
+    \end{align}
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+
+
+% 15.1 EASY INTEGRATION
+% READY TO BE USED
+\ifnum \Version=3
+    \part The volume of the region bounded above by $z = 10 - 3x^2 +2y$ and below by the rectangular region in the $xy$-plane $0\le x \le 1$, $0\le y \le 2$ is $ \int_0^{a}\int_{0}^{b} f(x,y) \, dy \, dx$ where $a=\framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$, $f(x,y) = \framebox{\strut\hspace{2cm}}$, and the volume of the region is $\framebox{\strut\hspace{0.8cm}}$.
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    \begin{align}
+        \int_0^1\int_0^2 10 - 3x^2 +2y \ dy \, dx 
+        &= \int_0^1 \left. (10y - 3x^2y + y^2 )\right|_0^2 \, dx \\ 
+        &= \int_0^1  (24 - 6x^2 ) \, dx \\ 
+        &= \left. (24x - 2x^3 )\right|_0^1 \\
+        &= 24 - 2 \\
+        &= 22
+    \end{align}
+    Thus
+    \begin{align}
+        a &= 1 \\
+        b &= 2 \\
+        f&= 10 - 3x^2 +2y \\
+        \text{volume} &= 22
+    \end{align}   
+    }
+   \else
+
+   \fi
+\fi 
+
+
+% 15.1 EASY INTEGRATION
+\ifnum \Version=4
+    \part The volume of the region bounded above by $z = 10 + 6x + 2y$ and below by the plane $z=0$ over the region $0\le x \le 3$, $0\le y \le 2$ is $ \int_0^{a}\int_{0}^{b} f(x,y) \, dy \, dx$ where $a=\framebox{\strut\hspace{0.8cm}}$, and $b=\framebox{\strut\hspace{0.8cm}}$, $f(x,y) = \framebox{\strut\hspace{2cm}}$, and the volume of the region is $\framebox{\strut\hspace{0.8cm}}$.
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    \begin{align}
+        \int_0^3\int_0^2 10 + 6x + 2y \ dy \, dx 
+        &= \int_0^3 \left. (10y + 6xy + y^2 )\right|_{y=0}^{y=2} \, dx \\ 
+        &= \int_0^3  (20 + 12x + 4 ) \, dx \\ 
+        &= \left. (20x + 6x^2 + 4x)\right|_0^3 \\
+        &= 60 + 54 + 12\\
+        &= 126
+    \end{align}
+    Thus
+    \begin{align}
+        a &= 3 \\
+        b &= 2 \\
+        f&= 10 + 6x + 2y \\        
+        \text{volume} &= 126
+    \end{align}
+    }
+   \else
+   \fi
+\fi 
+
+% 15.1 EASY INTEGRATION
+\ifnum \Version=5
+    \part The volume of the region bounded above by $z = 2 + 3x^2 +6y^2$ and below by the rectangular region in the $xy$-plane $0\le x \le 2$, $0\le y \le 1$ is $ \int_0^{a}\int_{0}^{b} f(x,y) \, dy \, dx$ where $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$, $f(x,y) = \framebox{\strut\hspace{2cm}}$, and the volume of the region is $\framebox{\strut\hspace{1.5cm}}$. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    \begin{align}
+        \int_0^2\int_0^1 2 + 3x^2 +6y^2 \ dy \, dx 
+        &= \int_0^2 \left. (2y +3x^2y + 2y^3 )\right|_0^1 \, dx \\ 
+        &= \int_0^2  (4 + 3x^2 ) \, dx \\ 
+        &= \left. (4x + x^3 )\right|_0^2 \\
+        &= 16
+    \end{align}
+    Thus
+    \begin{align}
+        a &= 2 \\
+        b &= 1 \\
+        f &= 2 + 3x^2 +6y^2 \\ 
+        \text{volume} &= 16
+    \end{align}    
+    }
+   \else
+   \fi
+\fi 
+
+
+
+
+% 15.1 EASY INTEGRATION
+\ifnum \Version=6
+    \part The volume of the region bounded above by $z = 3x^2 + 9y^2$ and below by the region in the $xy$-plane $0\le x \le 1$, $0\le y \le 2$ is $ \int_0^{a}\int_{0}^{b} 3x^2 +9y^2  \, dx \, dy$ where $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The values of $a$, $b$, and $f$ are: 
+    \begin{align}
+        a &= 2 \\
+        b &= 1 \\
+        f &= 3x^2 +9y^2 
+    \end{align}       
+    We did not need to work out the volume of the region. But if we did this is what we would find. 
+    \begin{align}
+        \int_0^1\int_0^2 3x^2 + 9y^2 \ dy \, dx 
+        &= \int_0^1 \left. (3x^2y + 3y^3 )\right|_0^2 \, dx \\ 
+        &= \int_0^1  (6x^2 + 24 ) \, dx \\ 
+        &= \left. (2x^3 + 24x )\right|_0^1 \\
+        &= 26
+    \end{align}
+ 
+    }
+   \else
+   \fi
+\fi 
+
+
+
+
+\ifnum \Version=7
+    \part The volume of the region bounded above by $z = 8xy+1$ and below by the region in the $xy$-plane $0\le x \le 4$, $0\le y \le 1$ is $ \int_0^{a}\int_{0}^{b} 8xy+1 \, dx \, dy$ where $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The values of $a$, $b$ are: 
+    \begin{align}
+        a &= 1 \\
+        b &= 4 
+    \end{align}        
+    We did not need to work out the volume of the region. But if we did this is what we would find.    
+    \begin{align}
+        \int_0^1\int_0^4 8xy+1 \ dx \, dy
+        &= \int_0^1 \left. (4x^2y+x )\right|_0^2 \, dy \\ 
+        &= \int_0^1  (16y+2 ) \, dx \\ 
+        &= \left. (8y^2+2y )\right|_0^1 \\
+        &= 10
+    \end{align}
+    }
+   \else
+   \fi
+\fi 
+
+
+\ifnum \Version=8
+    \part The volume of the region bounded above by $z = 2x+4xy$ and below by the region in the $xy$-plane $0\le x \le 2$, $0\le y \le 1$ is $ \int_0^{a}\int_{0}^{b} 2x+4xy \, dx \, dy$ where $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The values of $a$, $b$, and $f$ are: 
+    \begin{align}
+        a &= 1 \\
+        b &= 2 
+    \end{align}    
+    We did not need to work out the volume of the region. But if we did this is what we would find.
+    \begin{align}
+        \int_0^1\int_0^2 2x+4xy \ dx \, dy
+        &= \int_0^1 \left. (2x+4xy )\right|_0^2 \, dy \\ 
+        &= \int_0^1  (4 + 8y ) \, dx \\ 
+        &= \left. (4y + 4y^2 )\right|_0^1 \\
+        &= 8
+    \end{align}
+    }
+   \else
+   \fi
+\fi 
+
+\ifnum \Version=9
+    \part The volume of the region bounded above by $z = 4y\cos(x)$ and below by the region in the $xy$-plane $0\le x \le \pi/2$, $0\le y \le 3$ is $ \int_0^{a}\int_{0}^{b} 4y\cos(x) \, dx \, dy$ where $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The values of $a$, $b$ are:     
+    \begin{align}
+        a &= 3 \\
+        b &= \pi/2
+    \end{align}        
+    We did not need to work out the volume of the region. But if we did this is what we would find.
+    \begin{align}
+        \int_0^3\int_0^{\pi/2} 4y\cos(x) \ dx \, dy
+        &= \int_0^3 \left. (4y\sin x )\right|_0^{\pi/2} \, dy \\ 
+        &= \int_0^3  (4y ) \, dx \\ 
+        &= \left. (2y^2 )\right|_0^3 \\
+        &= 18
+    \end{align}
+
+    }
+   \else
+   \fi
+\fi 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

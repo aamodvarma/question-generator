@@ -1,0 +1,41 @@
+\ifnum \Version=1 
+   \part  If the linear transform $T_A(\vec x) = A\vec x$, where $T_A \ : \ \mathbb R^8 \to \mathbb R^4$, is onto, then $A$ has exactly $\framebox{\strut\hspace{1.25cm}}$ pivots, the domain of $T_A$ is \framebox{\strut\hspace{1.25cm}}, the co-domain of $T_A$ is $\framebox{\strut\hspace{1.25cm}}$, and the range of $T_A$ is $\framebox{\strut\hspace{1.25cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+    The standard matrix of the transform must be $4\times8$. If the transform is onto, every row must be pivotal. So there are 4 pivots, the domain is $\mathbb R^8$, the co-domain is $\mathbb R^4$, and the range is also $\mathbb R^4$.
+    } 
+   \fi
+\fi       
+
+
+
+
+
+\ifnum \Version=2
+    \part Suppose $T(\vec x)$ is a linear transform such that $T \, : \, \mathbb R^c \to \mathbb R^d$. If $T(\vec x) = A\vec x$, and $A$ is $12\times 3$, then $c =\framebox{\strut\hspace{1.25cm}}$, $d = \framebox{\strut\hspace{1.25cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} Since $T(\vec x) = A\vec x$ and $A$ is $12\times 3$, then $\vec x$ must have 3 entries, and the output must have 12 entries. So $c=3$, $d=12$. 
+    } 
+   \fi
+\fi 
+
+
+\ifnum \Version=3
+    \part If the linear mapping $T_A(\vec x) = A\vec x$, where $T_A \ : \ \mathbb R^4 \to \mathbb R^{12}$, is one-to-one, then $A$ has exactly $\framebox{\strut\hspace{1.25cm}}$ pivots, the domain of $T_A$ is \framebox{\strut\hspace{1.25cm}}, and the co-domain of $T_A$ is $\framebox{\strut\hspace{1.25cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    
+    The standard matrix of the transform must be $12\times4$. If the transform is one-to-one, every column must be pivotal. So there are 4 pivots, the domain is $\mathbb R^4$, and the co-domain is $\mathbb R^{12}$. No credit awarded for writing that the domain is 4, because 4 is a single number and $\mathbb R^4$ is a set of vectors. Likewise no credit awarded for writing 12 for the co-domain. 
+    } 
+   \fi
+\fi 
+
+\ifnum \Version=4
+    \part $T(\vec x)$ is a linear transform $T \, : \, \mathbb R^2 \to \mathbb R^2$. If $T$ maps $\vec u \in \mathbb R^2$ into $\begin{pmatrix} 3\\4\end{pmatrix}$, and $T$ maps $v \in \mathbb R^2$ into $\begin{pmatrix} 2\\9\end{pmatrix}$ then the image under $T$ of $3\vec u + 2\vec v$ is $\begin{pmatrix}c_1\\c_2 \end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$, $c_2 = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Compute $T(3\vec u + 2\vec v)$:
+    \begin{align}
+        T(3\vec u + 2\vec v) = 3T(\vec u) + 2T(\vec v) = 3\begin{pmatrix} 3\\4\end{pmatrix} + 2\begin{pmatrix} 2\\9\end{pmatrix} = \begin{pmatrix} 13\\30\end{pmatrix}
+    \end{align}
+    } 
+   \fi
+\fi 
+

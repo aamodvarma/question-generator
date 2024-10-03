@@ -1,0 +1,105 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\Solutions}{1} 
+\newcommand{\SetNumber}{1} % can set this variable to zero here it gets updated automatically later
+\newcommand{\Version}{2} 
+\newcommand{\TestName}{}
+\newcommand{\TB}{Exam 2}
+\newcommand{\Exam}{2}
+
+\input{ExamStyle}
+
+% --------------------------------------------------------------------
+\begin{document}
+\input{Cover/CoverPage}
+\foreach \i in {1,...,8} {
+\renewcommand{\Version}{\i} 
+
+\ifnum \Version=0 \renewcommand{\TestName}{Version 0} \fi
+\ifnum \Version=1 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample A} \fi
+\ifnum \Version=2 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample B} \fi
+\ifnum \Version=3 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample C} \fi
+\ifnum \Version=4 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample D} \fi
+\ifnum \Version=5 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample E} \fi
+\ifnum \Version=6 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample F} \fi
+\ifnum \Version=7 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample G} \fi
+\ifnum \Version=8 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample H} \fi
+\ifnum \Version=20 \renewcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample I} \fi
+
+
+% TITLE
+\begin{center}
+\ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{Solutions}}\\[6pt]}\fi
+\ifnum \Solutions=1 
+    {\color{DarkBlue} Answers below each question.\\ Don't hesitate to ask questions on the course forum and/or office hours about any of the solutions.\\[12pt] }
+\fi
+{\Large \TestName}
+\end{center}
+
+    \input{202408/Exam2/Q}
+\newpage
+
+
+% \ifnum \SetNumber=1
+%     % \ifnum \Solutions=1 \newpage \fi
+%     % \question[2] Fill in the blanks. You do not need to show your work. 
+%     % \begin{parts}
+%     %     \input{202408/Exam2/Q4a}
+%     %     \input{202408/Exam2/Q4b}
+%     % \end{parts}    
+% \fi 
+% \ifnum \SetNumber=2
+%     \question[2] Fill in the blanks. You do not need to show your work. 
+%     \begin{parts}
+%         \input{202408/Exam2/Q4a}
+%         \input{202408/Exam2/Q4b}
+%     \end{parts}
+%     \input{202408/Exam2/Q3}
+%     \input{202408/Exam2/Q2}
+% \fi 
+
+
+
+% \newpage
+% \question[0.25] \ID
+
+% \ifnum \SetNumber=1
+%     \question[8] Fill in the blanks. You do not need to show your work. 
+%     \begin{parts}
+%         \input{202408/Exam2/Q6a} % 2
+%         \input{202408/Exam2/Q6b} % 2
+%         \input{202408/Exam2/Q6c} % 2
+%         \input{202408/Exam2/Q6d} % 2
+%         \input{202408/Exam2/Q6e} % 1
+%         \input{202408/Exam2/Q6f} % 1
+%         \input{202408/Exam2/Q6g} % 1
+%         \input{202408/Exam2/Q6h} % 1 or 2
+%         \input{202408/Exam2/Q6i} % 1 or 2, not in all versions
+%     \end{parts}    
+%     \input{202408/Exam2/Q7}
+% \fi 
+
+% \ifnum \SetNumber=2
+%     \input{202408/Exam2/Q7}
+%     \question[8] Fill in the blanks. You do not need to show your work. 
+%     \begin{parts}
+%         \input{202408/Exam2/Q6a} % 2
+%         \input{202408/Exam2/Q6b} % 2
+%         \input{202408/Exam2/Q6c} % 2
+%         \input{202408/Exam2/Q6d} % 2
+%         \input{202408/Exam2/Q6e} % 1
+%         \input{202408/Exam2/Q6f} % 1
+%         \input{202408/Exam2/Q6g} % 1
+%         \input{202408/Exam2/Q6h} % 1 or 2
+%         \input{202408/Exam2/Q6i} % 1 or 2, not in all versions
+%     \end{parts}    
+% \fi 
+
+% \newpage 
+% \question[0.25] \ID    
+% \input{202408/Exam2/Q9}
+
+\end{questions}
+}
+
+\end{document}

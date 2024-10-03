@@ -1,0 +1,63 @@
+% QUESTIOONS FOR THOMAS SECTION 14.9 & 14.10
+
+\ifnum \Version=1
+\part If $w=xyz$ and $2x+z+y=4$, compute $\left(\frac{\partial w}{\partial x}\right)_y$ at $(x,y,z) = (1,1,1)$. \framebox{\strut\hspace{1cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $-1$ \\[12pt] \textit{Solutions.} 
+
+$2x+z+y=4$ implies $z=4-2x-y$, so $w=xy(4-2x-y) = 4xy - 2x^2y-xy^2$. So $\left(\frac{\partial w}{\partial x}\right)_y = 4y-4xy-y^2$, so at the given point $\left(\frac{\partial w}{\partial x}\right)_y = 4-4-1 = -1$.
+} 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=3
+\part If $w=xz+y$ and $2x+y+z=8$, then $\displaystyle \left(\frac{\partial w}{\partial x}\right)_y =  \framebox{\strut\hspace{3cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $8-4x-y$ \\[12pt] \textit{Solutions:} 
+$2x+y+z=4$ implies $z=8-2x-y$, so $w=x(8-2x-y) + y = 8x-2x^2-xy+y$. So 
+\begin{align}
+    \left(\frac{\partial w}{\partial x}\right)_y = 8-4x-y
+\end{align}
+} 
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=4
+\part If $w=xz+y$ and $x+y+z=4$, then $\displaystyle \left(\frac{\partial w}{\partial x}\right)_z =  \framebox{\strut\hspace{3cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $z-1$ \\[12pt] \textit{Solutions:} 
+$x+y+z=4$ implies $y=4-x-z$, so $w=xz +4-x-z$. So 
+\begin{align}
+    \left(\frac{\partial w}{\partial x}\right)_z = z-1 
+\end{align}
+} 
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=5
+\part If $w=xz+y$ and $2x+y+z=4$, then $\displaystyle \left(\frac{\partial w}{\partial x}\right)_y =  \framebox{\strut\hspace{3cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $4-4x-y$ \\[12pt] \textit{Solutions:} 
+$2x+y+z=4$ implies $z=4-2x-y$, so $w=x(4-2x-y) + y = 4x-2x^2-xy+y$. So 
+\begin{align}
+    \left(\frac{\partial w}{\partial x}\right)_y = 4-4x-y
+\end{align}
+Note that we can also express this derivative in other ways. With some further algebraic manipulation we could also write the derivative as follows.
+\begin{align}
+    \left(\frac{\partial w}{\partial x}\right)_y & = 4-4x-y = -2x + (4 - 2x - y) = z - 2x  = z - 2x = \frac{w-y}{x} -2x
+\end{align}
+} 
+\else
+  
+\fi
+\fi
+
+
+

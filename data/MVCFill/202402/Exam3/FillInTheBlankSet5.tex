@@ -1,0 +1,384 @@
+% TRIPLE INTEGRALS IN RECTANGULAR
+% THOMAS 15.5
+
+% VERBATIM THOMAS - CAN EASILY CREATE MORE VERSIONS IF NEEDED
+\ifnum \Version=1
+
+    \part $\displaystyle \int_{-1}^1 \int_{x^2}^1 \int_0^{1-y} dz \, dy \, dx = \int_a^b \int_c^d \int_h^k  \, dx \, dz \,dy$, where 
+    $a=\framebox{\strut\hspace{1.0cm}}$, $b=\framebox{\strut\hspace{1.0cm}}$, $c=\framebox{\strut\hspace{1.4cm}}$, $d=\framebox{\strut\hspace{1.4cm}}$, $h=\framebox{\strut\hspace{2.0cm}}$,
+    $k=\framebox{\strut\hspace{2.0cm}}$.
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} We are given
+    \begin{align}
+        -1 \le \, &x \le 1 \\
+        x^2 \le \, &y \le 1 \\
+        0 \le \, &z \le 1-y 
+    \end{align}
+    Thus,
+    \begin{align}
+        0 \le \, &y \le 1 \\
+        0 \le \, &z \le 1-y \\
+        -\sqrt{y} \le \, &x \le \sqrt{y}
+    \end{align}
+    The triple integral becomes
+    \begin{align}
+        \int_{-1}^1 \int_{x^2}^1 \int_0^{1-y} dz \, dy \, dx = \int_a^b \int_c^d \int_h^k  \, dx \, dz \,dy
+    \end{align}
+    }
+   \else
+
+   \fi
+    
+\fi
+
+
+\ifnum \Version=2
+
+    \part The volume of the tetrahedron cut from the first octant by the plane $6x+3y+z=6$ is $\displaystyle \int_a^b \int_c^d \int_0^k  \, dz \, dy\,dx$, where $a=\framebox{\strut\hspace{1.2cm}}$, $b=\framebox{\strut\hspace{1.2cm}}$, $c=\framebox{\strut\hspace{2.2cm}}$, $d=\framebox{\strut\hspace{2.2cm}}$, and $k=\framebox{\strut\hspace{2.6cm}}$.
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    When $y=z=0$, the plane cuts the $x$-axis at $x=1$. So every point in the solid has $x$-coordinates between $x=0$ and $x=1$. 
+    When $z=0$, the plane cuts the $xy$-plane along the line \begin{align}
+        6x+3y+0 &= 6 \\
+        y &= 2-2x
+    \end{align}
+    So every point in the solid has $y$-coordinates between $y=0$ and $y=2-2x$. 
+    The solid is bounded below by the $xy-$plane and above by the plane $6x+3y+z=6$, or 
+    \begin{align}
+        0 \le z \le 6-6x-3y
+    \end{align}
+    The triple integral is
+    $$\displaystyle \int_{0}^{1}\int_{0}^{2-2x} \int_0^{6-6x-3y} \, dz \, dy \, dx$$
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+
+
+
+
+\ifnum \Version=3
+% VERBATUM 2022
+
+    \part $\displaystyle \int_{0}^{1}\int_{\sqrt x}^{1} \int_0^{1-y} f(x,y,z) \, dz \, dy \, dx = \int_a^b \int_c^d \int_0^k f(x,y,z) \, dz \, dx\,dy$, where $a=\framebox{\strut\hspace{1.2cm}}$, $b=\framebox{\strut\hspace{1.2cm}}$, $c=\framebox{\strut\hspace{1.2cm}}$, $d=\framebox{\strut\hspace{1.2cm}}$, $k=\framebox{\strut\hspace{1.2cm}}$.
+
+    % stewart 13.7 # 31
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    $$\displaystyle \int_{0}^{1}\int_{\sqrt x}^{1} \int_0^{1-y} f(x,y,z) \, dz \, dy \, dx = \int_0^1 \int_0^{y^2} \int_0^{1-y} f(x,y,z) \, dz \, dx \,dy$$
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+\ifnum \Version=4
+
+    \part $\displaystyle \int_{0}^{1}\int_{\sqrt x}^{1} \int_0^{1-y} f(x,y,z) \, dz \, dy \, dx = \int_a^b \int_c^d \int_0^k f(x,y,z) \, dx \, dz\,dy$, where $a=\framebox{\strut\hspace{1.6cm}}$, \\ $b=\framebox{\strut\hspace{1.6cm}}$, $c=\framebox{\strut\hspace{1.4cm}}$, $d=\framebox{\strut\hspace{1.4cm}}$, $k=\framebox{\strut\hspace{1.4cm}}$.
+
+    % stewart 13.7 # 31
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    $$\displaystyle \int_{0}^{1}\int_{\sqrt x}^{1} \int_0^{1-y} f(x,y,z) \, dz \, dy \, dx = \int_0^1 \int_0^{1-y} \int_0^{y^2} f(x,y,z) \, dx \, dz \,dy$$
+    }
+    \else
+
+    \fi
+    
+\fi
+
+\ifnum \Version=5
+
+    \part The volume of the tetrahedron cut from the first octant by the plane $4x+y+z=12$ is $\displaystyle \int_0^a \int_0^b \int_c^d  \, dy \, dz\,dx$, where $a=\framebox{\strut\hspace{2.2cm}}$, $b=\framebox{\strut\hspace{2.2cm}}$, $c=\framebox{\strut\hspace{2.2cm}}$, and $d=\framebox{\strut\hspace{3cm}}$.
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    Consider each of the three variables separately. 
+    \begin{itemize}
+        \item When $y=z=0$, the plane cuts the $x$-axis at $x=12/4=3$. So every point in the solid has $x$-coordinates between $x=0$ and $x=3$. 
+        \item When $y=0$, the plane cuts the $xz$-plane along the line \begin{align}
+        4x+z+0 &= 12 \\
+        z &= 12 -4x
+    \end{align}
+    So every point in the solid has $z$-coordinates between $z=0$ and $z=12-4x$. 
+    \item The solid is bounded by the $xz-$plane and to the right by the plane $4x+y+z=12$, or 
+    \begin{align}
+        0 \le y \le 12 -4x-z
+    \end{align}
+    \end{itemize}
+    The region is the set 
+    \begin{align}
+        V = \{(x,y,z) \in \mathbb R^3 \, | \, 0\le x\le 3, 0 \le z \le 12 - 4x, 0 \le y \le 12 - 4x - z \}
+    \end{align}
+    The triple integral is
+    $$\displaystyle \int_{0}^{3}\int_{0}^{12-4x} \int_0^{12-4x-z} \, dy \, dz \, dx$$
+    Thus:
+    \begin{align}
+        a&=3 \\
+        b&= 12-4x \\
+        c &= 0 \\
+        d &= 12-4x-z
+    \end{align}
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+
+% THOMAS 
+% 12e, 15.5 #21
+% HALF CIRCULAR CYLINDER BOUNDED ABOVE BY SURFACE
+\ifnum \Version=6
+
+    \part $E$ is a solid that lies above the $xy-$plane, and is bounded by $x^2+y^2=1$, and also the plane $z=-y$. The volume of region $E$ is $\displaystyle V = \int_{A}^B \int_{C}^D \int_0^K dz \, dy \, dx$, where 
+    $A=\framebox{\strut\hspace{1.0cm}}$, $B=\framebox{\strut\hspace{1.0cm}}$, $C=\framebox{\strut\hspace{3cm}}$, $D=\framebox{\strut\hspace{3cm}}$,    $K=\framebox{\strut\hspace{3cm}}$.
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} We consider each of the variables individually, starting with the outermost integral and working our way to the innermost integral. 
+    \begin{itemize}
+        \item \textbf{Outermost integral}: For the region to lie in the cylinder $x^2+y^2=1$ we must have that 
+        \begin{align}
+            -1 \le \, &x \le 1 
+        \end{align}
+        \item \textbf{Middle integral}: because the region is bounded above by $z = -y$ and below by $z=0$, the $y-$values must be negative. The portion of the cylinder that corresponds to negative $y-$values are the lower portion of the unit circle in the $xy-$plane shown below.
+        \begin{center}     
+        \begin{tikzpicture}[scale=1.25]
+            \begin{axis}[
+            axis lines = middle, very thick,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            xmin=-3, xmax=3,
+            ymin=-3, ymax=3,
+            xtick={-2,-1,0,1,2},
+            xticklabels={-2,-1,0,1,2},  
+            ytick={-2,-1,0,1,2},
+            yticklabels={-2,-1,0,1,2},    
+            ]
+            % Plot 1
+            \addplot [name path = A,-,domain = -1:1, ultra thick,DarkBlue, samples = 100] {-sqrt(1-x^2} node [right=2pt] {};
+            \node (l) at (1.5,-1) {$x^2+y^2 = 1$};
+            \addplot [name path = B,-,domain = -1:1, ultra thick,DarkBlue, samples = 4] {0} node [very near end, right=4pt] {}; 
+            % Fill area between paths
+            \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=-1:1}];
+            \end{axis}
+        \end{tikzpicture}    
+        \end{center}         
+        \item \textbf{Innermost Integral}: for any given $x$ and $z$ in the solid, points in the solid will have a $z-$coordinate between $0$ and $z=-y$. 
+        \begin{align}
+            0 \le z \le -y
+        \end{align}
+    \end{itemize}
+
+    The triple integral is
+    $$\displaystyle \iiint_E dV = \int_{-1}^{1}\int_{-\sqrt{1-x^2}}^{0} \int_0^{-y} \, dy \, dz \, dx$$
+    Therefore,
+    \begin{align}
+        A &= -1 \\
+        B &= 1 \\
+        C & = -\sqrt{1-x^2}\\
+        D &= 0 \\
+        K &= - y
+    \end{align}
+
+    }
+   \else
+
+   \fi
+    
+\fi
+
+
+
+
+
+% TETRAHEDRON IN FIRST QUADRANT
+\ifnum \Version=7
+
+    \part The volume of the tetrahedron cut from the first octant by the plane $6x+y+3z=12$ is $\displaystyle \int_A^B \int_0^D \int_0^K   \, dy\, dz \,dx$, where $A=\framebox{\strut\hspace{1.2cm}}$, $B=\framebox{\strut\hspace{1.2cm}}$, $D=\framebox{\strut\hspace{3cm}}$, and $K=\framebox{\strut\hspace{3cm}}$.
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    We consider each of the variables individually, starting with the outermost integral and working our way to the innermost integral. 
+    \begin{itemize}
+        \item \textbf{Outermost integral}: When $y=z=0$, the plane cuts the $x$-axis at the point where $$6x + 0 + 3\cdot 0 = 12$$ Or where $x=2$. So every point in the solid has $x$-coordinates between $x=0$ and $x=2$. 
+        \item \textbf{Middle integral}: When $y=0$, the plane cuts the $xz$-plane along the line 
+        \begin{align}
+            6x+3\cdot 0 + 3z &= 12 \\
+            z &= 4-2x
+        \end{align}
+        So every point in the solid has $z$-coordinates between $z=0$ and $z=4-2x$. 
+        \item \textbf{Innermost Integral}: for any given $x$ and $z$ in the solid, points in the solid will have a $y-$coordinate between $0$ and $y=12-3z-6x$. 
+        \begin{align}
+            0 \le y \le 12 - 6x-3z
+        \end{align}
+    \end{itemize}
+
+    The triple integral is
+    $$\displaystyle \int_{0}^{2}\int_{0}^{4-2x} \int_0^{12-6x-3z} \, dy \, dz \, dx$$
+    Therefore,
+    \begin{align}
+        A &= 0 \\
+        B &= 2 \\
+        D & = 4-2x\\
+        K &= 12-6x-3z
+    \end{align}
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+% THOMAS 
+% 12e, 15.5 #21
+% HALF CIRCULAR CYLINDER BOUNDED ABOVE BY SURFACE
+\ifnum \Version=8
+
+    \part Region $E$ lies above the $xy-$plane, and is bounded by $x^2+y^2=1$ and the plane $z=-x$. The volume of region $E$ is $\displaystyle V = \int_{A}^B \int_{C}^D \int_0^K dz \, dx \, dy$, where 
+    $A=\framebox{\strut\hspace{1.0cm}}$, $B=\framebox{\strut\hspace{1.0cm}}$, $C=\framebox{\strut\hspace{3cm}}$, $D=\framebox{\strut\hspace{3cm}}$,    $K=\framebox{\strut\hspace{3cm}}$.
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} We consider each of the variables individually, starting with the outermost integral and working our way to the innermost integral. 
+    \begin{itemize}
+        \item \textbf{Outermost integral}: For the region to lie in the cylinder $x^2+y^2=1$ we must have that 
+        \begin{align}
+            -1 \le \, y \le 1 
+        \end{align}
+        \item \textbf{Middle integral}: because the region is bounded above by $z = -x$ and below by $z=0$, the $z-$coordinates within $E$ must be positive and the $x-$coordinates within $D$ must be negative. The portion of the cylinder that corresponds to negative $x-$values are the \textbf{left portion} of the unit circle in the $xy-$plane shown below. 
+        \begin{center}     
+        \begin{tikzpicture}[scale=1.25]
+            \begin{axis}[
+            axis lines = middle, very thick,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            xmin=-3, xmax=3,
+            ymin=-3, ymax=3,
+            xtick={-2,-1,0,1,2},
+            xticklabels={-2,-1,0,1,2},  
+            ytick={-2,-1,0,1,2},
+            yticklabels={-2,-1,0,1,2},    
+            ]
+            % Plot 1
+            \addplot [name path = A,-,domain = -1:0, ultra thick,DarkBlue, samples = 25] {-sqrt(1-x^2} node [right=2pt] {};
+            \node (l) at (-1.65,0.8) {$x^2+y^2 = 1$};
+            % Plot 2
+            \addplot [name path = B,-,domain = -1:0, ultra thick,DarkBlue, samples = 25] {+sqrt(1-x^2} node [right=2pt] {};
+            % Fill area between paths
+            \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=-1:0}];
+            \end{axis}
+        \end{tikzpicture}    
+        \end{center}         
+        The $x-$coordinates are 
+        \begin{align}
+            -\sqrt{1-y^2} \le x \le \sqrt{1-y^2}
+        \end{align}
+        \item \textbf{Innermost Integral}: for any given $x$ and $y$ in the solid, points in the solid will have a $z-$coordinate between $0$ and $z=-x$. 
+        \begin{align}
+            0 \le z \le -x
+        \end{align}
+    \end{itemize}
+
+    The triple integral is
+    $$\displaystyle \iiint_E dV =\int_{-1}^{1}\int_{-\sqrt{1-y^2}}^{\sqrt{1-y^2}} \int_0^{-x} \, dz \, dx \, dy$$
+    Therefore,
+    \begin{align}
+        A &= -1 \\
+        B &= 1 \\
+        C & = -\sqrt{1-y^2}\\
+        D &= \sqrt{1-y^2} \\
+        K &= - x
+    \end{align}
+
+    }
+   \else
+
+   \fi
+    
+\fi
+
+
+
+
+
+% THOMAS 
+% 12e, 15.5 #21
+% PARBOLA IN TWO QUADRANTS AND BELOW Z = 10 - Y
+\ifnum \Version=9
+
+    \part The solid $E$ lies above the $xy-$plane, below the surface $z=10-y$, and is bounded by the surface $y=4-x^2$ and the plane $y=0$. The volume of region $E$ is $\displaystyle V = \int_{A}^B \int_{C}^D \int_0^K dz \, dy \, dx$, where 
+    $A=\framebox{\strut\hspace{1.0cm}}$, $B=\framebox{\strut\hspace{1.0cm}}$, $C=\framebox{\strut\hspace{3cm}}$, $D=\framebox{\strut\hspace{3cm}}$,    $K=\framebox{\strut\hspace{3cm}}$.
+
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} Because the region is bounded above by $z = 10-y$, below by $z=0$, and on the sides by $y=0$ and $y=4-x^2$, the $y-$coordinates within $E$ must be positive. The projection of all the points, in the solid, onto the $xy-$plane are shown below. 
+        \begin{center}  
+        \begin{tikzpicture}[scale=1.25]
+            \begin{axis}[
+            axis lines = middle, very thick,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            xmin=-5, xmax=5.75,
+            ymin=-3, ymax=5.75,
+            xtick={-4,-2,0,2,4},
+            xticklabels={-4,-2,0,2,4},
+            ytick={-2,0,2,4},
+            yticklabels={-2,0,2,4}        
+            ]
+            % Plot 1
+            \addplot [name path = A,-,domain = -2:2, line width=0.8mm,DarkBlue,samples = 30] {4-x^2} ;
+            % Vertical line
+            \addplot[name path = B,line width=0.8mm,samples=4, smooth,domain=0:6,DarkBlue, name path=three] coordinates {(-2,0)(2,0)};
+            % Fill area between paths
+            \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=-2:2}];
+            \end{axis}
+        \end{tikzpicture}    
+        \end{center}   
+        We consider each of the variables individually, starting with the outermost integral and working our way to the innermost integral. 
+    \begin{itemize}
+        \item \textbf{Outermost integral}: For the region to lie in the cylinder $y=4-x^2$, and also have positive $y-$coordinates, we must have that 
+        \begin{align}
+            -2 \le \, x \le 2
+        \end{align}
+        \item \textbf{Middle integral}: 
+        For any given $x$, the $y-$values range from $x=0$ to $y=4-x^2$. The $y-$coordinates are 
+        \begin{align}
+            0 \le y \le 4-x^2
+        \end{align}
+        \item \textbf{Innermost Integral}: for any given $x$ and $y$ in the solid, points in the solid will have a $z-$coordinate between $0$ and $z=10-y$. 
+        \begin{align}
+            0 \le z \le 10-y
+        \end{align}
+    \end{itemize}
+    The triple integral is
+    $$\displaystyle \int_{-2}^{2}\int_{0}^{4-x^2} \int_0^{10-y} \, dz \, dy \, dx$$
+    Therefore,
+    \begin{align}
+        A &= -2 \\
+        B &= 2 \\
+        C &= 0\\
+        D &= 4-x^2 \\
+        K &= 10-y
+    \end{align}
+
+    }
+   \else
+
+   \fi
+    
+\fi

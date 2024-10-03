@@ -1,0 +1,553 @@
+% CHANGE OF VARIABLE (15.8)
+% OR APPLICATION (15.6)
+% OR TRIPLE CARTESIAN (15.5) 
+
+\ifnum \Version=1
+% CENTROID
+% BASED ON THOMAS EXERCISES, 15.6 #1
+% SUFFICIENT FOR A PRACTICE EXAM
+\question[6] A thin plate of density $\delta(x,y) = 12x$ is bounded by the lines $x = 0, y = x$, and the parabola $y = x^2-6$ in the first quadrant. 
+\begin{parts} 
+    \part Determine the mass of the plate, $M$. Please show your work. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    Curves intersect when $$x = x^2-6 \quad \Rightarrow \quad 0 = x^2 - x - 6 = (x-3)(x+2)$$
+    Or $x=3, -2$. We can ignore $x=-2$ because the region is the first quadrant. Curves intersect at the point $(3,3)$, and 
+    \begin{align}
+        0 \le y \le 3, \quad y \le x \le \sqrt{y+6}
+    \end{align}
+    The mass is
+    \begin{align}
+        M &= \int_0^3 \int_y^{\sqrt{y+6}} \delta \, dx \, dy \\
+        &= \int_0^3 \int_y^{\sqrt{y+6}} 12x \, dx \, dy \\
+        &= \int_0^3  \left. 6x^2 \right|_{x=y}^{x=\sqrt{y+6}} \, dy \\
+        &= \int_0^3 6(y + 6 - y^2) \, dy \\
+        &= \int_0^3 6y + 36 - 6y^2 \, dy \\
+        &= \left. (3y^2 + 36y - 2y^3 ) \right|_0^3 \, dy \\
+        &= 27 + 108 - 54 \\
+        &= 81
+    \end{align}
+    }
+    \else 
+    \vspace{16cm}
+    \fi
+    \part Use your results from the previous part to set up an integral that can be used to determine the $x-$coordinate of the center of mass of the plate. You do not need to evaluate your integral. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $x-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar x &= \frac{M_y}{M} = \frac{1}{81} \int_0^3 \int_y^{\sqrt{y+6}} 12x^2 \, dx \, dy 
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+\fi
+    
+
+
+
+
+
+\ifnum \Version=2
+% LONGISH CHANGE OF VARIABLE
+% VERBATUM FROM SPRING 2022 QUIZ
+% hand written solution only
+% SUFFICIENT FOR A PRACTICE EXAM
+\question[6] Consider the double integral
+
+$$I=\iint_R \frac{x+2y}{2y-x} dA$$
+
+where $R$ is the parallelogram with vertices $(-3,1), (-1,0), (-1,2), (1,1)$. Our goal is to determine the area of the parallelogram using the transform below. 
+$$u=x+2y, \qquad v = -x +2y$$ 
+Please show your work for the following. 
+\begin{parts} 
+    \part Use the given transform to calculate the Jacobian of the transform, $J = \partial x(u,v)/\partial y(u,v)$. 
+    \ifnum \Solutions=1 
+    \else 
+    \vspace{8 cm}
+    \fi
+    \part Use your results from Part (a) and the given transform to transform the double integral. You do not need to evaluate your integral. 
+\end{parts} 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the integral after the transform is $$\displaystyle \frac14 \int_1^5\int_{-1}^3 \frac uv \, du \, dv$$
+A screen capture of a hand-written solution from a previous offer of MATH 2551 is below. 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{202302/Exam3/Images/ImgE3.OR.06.png}
+    \end{figure}  
+    
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+\ifnum \Version=3
+% CENTROID
+% BASED ON THOMAS EXERCISES, 15.6 #1
+% SUFFICIENT FOR A PRACTICE EXAM
+\question[6] A thin plate with density $\delta(x,y) = 24y$ is bounded by the lines $x = 0, x=2y$, and the parabola $x=y^2$ in the first quadrant. 
+\begin{parts} 
+    \part Determine the mass of the plate, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    Curves intersect when $$2y = y^2 \quad \Rightarrow \quad 0 = y^2-2y = y(y-2)$$
+    Or $y=0,2$. Curves intersect at the points $(0,0)$, $(4,2)$. 
+    The mass is
+    \begin{align}
+        M = \int_0^4 \int_{x/2}^{\sqrt{x}} \delta \, dy \, dx 
+        &= \int_0^4 \int_{x/2}^{\sqrt{x}} 24y \, dy \, dx \\
+        &= \int_0^4  \left. 12y^2 \right|_{y=x/2}^{y=\sqrt{x}} \, dx \\
+        &= 12 \int_0^4 (x-\frac{x^2}{4}) \, dx \\
+        &= 12 \left. (\frac{x^2}{2} - \frac{x^3}{12} ) \right|_0^4 \, dy \\
+        &= 12 (\frac{16}{2} - \frac{64}{12}) \\
+        &= 96 - 64\\
+        &= 32
+    \end{align}
+    \textbf{An Alternate Solution}\\
+    Another way to approach this problem is to use the integration order $dx\,dy$. In this case the double integral becomes
+    \begin{align}
+        M = \int_0^2 \int_{y^2}^{2y} \delta \, dx \, dy
+        &= \int_0^2 \int_{y^2}^{2y} 24y \, dx \, dy \\
+        &= 24\int_0^2  \left. yx \right|_{x=y^2}^{x=2y} \, dy \\
+        &= 24 \int_0^2 (2y^2 - y^3) \, dy \\
+        &= 24 \left. (\frac{2y^3}{3} - \frac{y^4}{4} ) \right|_0^2 \, dy \\
+        &= 24 (\frac{16}{3} - \frac{16}{4}) \\
+        &= \frac{24\cdot16}{3} - 24\cdot 4 \\
+        &= 8\cdot16 - 96 \\
+        &= 128 - 96 \\
+        &= 32
+    \end{align}    
+    }
+    \else 
+    \vspace{14cm}
+    \fi
+    \part Use your results from the previous part to set up an integral that can be used to determine the $x-$coordinate of the center of mass of the plate. You do not need to evaluate your integral. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $x-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar x &= \frac{M_y}{M} = \frac{1}{32} \int_0^4 \int_{x/2}^{\sqrt{x}} 24xy \, dy \, dx
+    \end{align}
+    \textbf{An Alternate Solution}\\    
+    It is also ok to use the integration order $dx\,dy$. In this case the double integral becomes
+    \begin{align}
+    \bar x &= \frac{M_y}{M} = \frac{1}{32} \int_0^2 \int_{y^2}^{2y} 24xy \, dx \, dy 
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+\fi
+
+\ifnum \Version=4
+% VERSION B
+% LONG CHANGE OF VARIABLE
+% BASED ON AN EXAMPLE FROM THOMAS
+% SECTION 15.8 FROM THOMAS
+\question[6] Consider the double integral
+
+$$I= 9 \iint_R (y-2x)^2 \sqrt{x+y} \, dA$$
+
+where $R$ is the region in the first quadrant bounded by the lines $x=0$, $y=0$, and $y=1-x$. Our goal is to determine the area of $R$ using the transform below. 
+$$u=x+y, \qquad v = y-2x$$ 
+Please show your work for the following. 
+\begin{parts} 
+    \part Use the given transform to calculate the Jacobian of the transform, $J = \partial x(u,v)/\partial y(u,v)$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Solving for $x$ and $y$ using an augmented matrix,
+    \begin{align}
+        \begin{pmatrix} 1 & 1 & u \\-2 & 1 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 1 & u \\0 & 3 & 2u+v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & u/3 - v/3 \\0 & 1 & 2u/3+v/3 \end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &= \frac13(u-v), \ y = \frac13(2u+v) \\
+        J(u,v) & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} = \begin{vmatrix} 1/3 & -1/3 \\ 2/3 & 1/3 \end{vmatrix} = 1/9 + 2/9 = 1/3
+    \end{align}
+    }
+    \else 
+    \vspace{8 cm}
+    \fi
+    \part Use the given transform and your results from Part (a) to convert the double integral into a double integral over a region in the $uv-$plane. You do not need to evaluate your integral. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Converting each of the boundaries in the $xy-$plane into the $uv-$plane we obtain
+        \begin{align}
+            x+y &= 1 \quad \Rightarrow \quad \frac13(u-v) + \frac13(2u+v) = 1 &&\Rightarrow \quad u = 1\\
+            x&=0 \quad \Rightarrow \quad \frac13(u-v) = 0 &&\Rightarrow \quad v = u\\
+            y&= 0 \quad \Rightarrow \quad \frac13(2u+v) = 0 &&\Rightarrow \quad v = -2u
+        \end{align}
+        The region is described by either of the following relations:
+        \begin{align}
+            S_1: & \quad 0 \le u \le 1, \quad -2u \le v \le u \\
+            S_2: & \quad -2 \le v \le 0, \quad -v/2 \le u \le 1, \ \text{and } 0 \le v \le 1, \quad v \le u \le 1
+        \end{align}
+        The first set of inequalities requires only a single double integral, but it is ok to set up two double integrals. If using $S_1$, we use $dv\,du$ and obtain
+        \begin{align}
+            I= 9 \iint_R (y-2x)^2 \sqrt{x+y} \, dA = 9 \int_0^1 \int_{-2u}^u v^2u^{1/2} \frac13 \,dv\,du
+        \end{align}
+        If using $S_2$, we use $du\,dv$ and obtain
+        \begin{align}
+            I= 9 \iint_R (y-2x)^2 \sqrt{x+y} \, dA 
+            = 9 \int_{-2}^0 \int_{-v/2}^1 v^2u^{1/2} \frac13 \,du\,dv
+            + 9 \int_{0}^1 \int_{v}^1 v^2u^{1/2} \frac13 \,du\,dv
+        \end{align}        
+        } 
+       \else
+          
+       \fi
+    \end{parts} 
+
+    \fi
+
+
+
+\ifnum \Version=5
+    % USE FOR VERSION B
+    % LONG CYLINDRICAL WITH APPLICATION TO MASS WITH VARYING DENSITY
+    % FROM 15.8
+    \question[6] An object $D$ lying in the first octant is bounded below by the $xy-$plane, above by the plane $z=3+4y$, and by the cylinder $x^2+y^2 = 4$. The density of the object at any point in $D$ is equal to the distance from the point to the $z$-axis.  Please show your work for the following.
+    
+    \begin{parts} 
+    \part Use cylindrical coordinates to calculate the total of mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} The object is only in the first octant so $$0 \le \theta \le \pi/2$$ Using $\delta = \sqrt{x^2+y^2} = r$, the $z-$coordinate of the center of mass is computed using 
+    \begin{align}
+        M &= \iiint_D  \delta \, dV \\
+        &= \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\sin\theta}  \delta(r,\theta) \, r\, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\sin\theta}   r^2 \, dz\,dr\,d\theta\\
+        &= \int_0^{\pi/2} \int_0^2    r^2 \, (3+4r\sin\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^2     \, (3r^2+4r^3\sin\theta) \,dr\,d\theta \\
+        &= \int_0^{\pi/2}  \left. \, (r^3+r^4\sin\theta) \right|_{r=0}^{r=2} d\theta \\
+        &= \int_0^{\pi/2}  (8 + 16\sin\theta) d\theta \\
+        &=  \left. (8\theta - 16\cos\theta) \right|_0^{\pi/2} \\
+        &=  (4\pi - 0) - (0 - 16) \\
+        &= 4\pi + 16
+    \end{align}
+    
+    } 
+    \else
+        \vspace{14cm}
+    \fi
+    
+    \part Use your results from the previous part to set up a triple integral in cylindrical coordinates that can be used to determine the $z-$coordinate of the center of mass of the object. You do not need to evaluate your integral. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the $z-$coordinate of the center of mass, $\bar x$, is
+    \begin{align}
+    \bar z &= \frac{M_{xy}}{M} = \frac{1}{16\pi+16} \int_0^{\pi/2} \int_0^2 \int_0^{3+4r\sin\theta}  z \, \delta(r,\theta) \, r\, dz\,dr\,d\theta
+    \end{align}
+    } 
+    \else
+      
+    \fi
+    \end{parts} 
+\fi
+
+
+% TRANSFORM: SOLVE FOR X & Y, BOUNDARIES, EVALUATE, TRIANGLES
+% VERSION A
+\ifnum \Version=6
+    \question[6] Consider the transform $u=x+y$ and $v=4x+5y$, and the integral $\displaystyle I = \iint_{R}  \,dxdy$. Region $R$ is the triangle in the $xy$-plane bounded by $x+y=0$, $4x+5y=0$, $6x+7y=4$. The transform maps $R$ to region $G$ in the $uv-$plane.  Please show your work for the following.
+
+    \begin{enumerate}
+        \item[a)] Solve the system, $u=x+y$ and $v=4x+5y$, for $x$ and $y$ in terms of $u$ and $v$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            We can use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+            \begin{align}
+                \begin{pmatrix} 1 & 1 & u \\ 4 & 5 & v\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 1 & u \\0 & 1 & v - 4u \end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 0 & 5u - v \\ 0 & 1 & v - 4u \end{pmatrix} 
+            \end{align}
+            Thus $x = 5u - v$, and $y = v - 4u$. 
+            } 
+            \else 
+            \vspace{5cm}
+            \fi
+        \item[b)] Transform the boundaries of $R$ to the $uv-$plane. In other words, determine the boundaries of $G$ in terms of $u$ and $v$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} the three lines are transformed below. 
+            \begin{itemize}
+                \item The line $x+y=0$ becomes $u=0$. 
+                \item The line $4x+5y=0$ becomes $v=0$. 
+                \item The line $6x+7y=4$ is: 
+                \begin{align}
+                    6x+7y &=4 \\
+                    6\cdot(5u-v) + 7\cdot(v-4u) &= 4\\
+                    30u -28u -6v+7v &=4 \\
+                    v &= 4 -2u
+                \end{align}
+            \end{itemize}
+            } 
+        \else 
+        \vspace{5cm}
+        \fi        
+            
+        \item[c)] Use the given transformation and your results from parts (a) and (b) to set up a double integral that in the $uv-$plane that is equal to $I$. Do not evaluate the integral. You also do not need to calculate the Jacobian and may use that the Jacobian of the transform is $J(u,v) = 1$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            \begin{align}
+                \iint_{R} \,dx\,dy
+                &= \iint_{G}  \left| J(u,v) \right| \,dv\,du 
+                = \int_0^2\int_{0}^{4-2u}  \left| 1 \right| \,dv\,du 
+                = \int_0^2\int_{0}^{4-2u} \,dv\,du
+            \end{align}
+            Note the following.
+            \begin{itemize}
+                \item We did not need to compute the Jacobian but it is computed as follows. 
+                $$J 
+                = \begin{vmatrix} x_u & x_v \\ y_u & y_v \end{vmatrix} 
+                = \begin{vmatrix} 5 & -1 \\ -4 & 1\end{vmatrix} 
+                = 5 - 4
+                = 1$$
+                \item             We did not need to evaluate the integral but if we did:
+            \begin{align}
+                I = \int_0^2\int_{0}^{4-2u}  \left| 1 \right| \,dv\,du
+                = 1 \int_0^2 (4-2u) \,du
+                =  \left. 4u - u^2 \right|_0^2 
+                = 4
+            \end{align}
+            \item It is also ok to use the other integration order: $I = \int_0^4\int_0^{2-v/2} \, du \, dv$.
+            \end{itemize}
+            } 
+            \else 
+            \fi        
+    \end{enumerate}
+ 
+\fi 
+
+
+
+% TRANSFORM: SOLVE FOR X & Y, BOUNDARIES, EVALUATE, PARALLELOGRAM
+% VERSION A
+\ifnum \Version=7
+    \question[6] Consider the integral $\displaystyle I = 2\iint_{R} x-4y \,dx\,dy$, where $R$ is the parallelogram in the $xy$-plane bounded by $x-4y=2$, $x-4y=1$, $3y-x=3$, $3y-x=6$. Suppose the transform $u=x-4y$ and $v=3y-x$, maps region $R$ to region $G$ in the $uv-$plane.  Please show your work for the following.
+
+    \begin{enumerate}
+        \item[a)] Solve the system, $u=x-4y$ and $v=3y-x$, for $x$ and $y$ in terms of $u$ and $v$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            We can use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+            \begin{align}
+                \begin{pmatrix} 1 & -4 & u \\ -1 & 3 & v\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & -4 & u \\0 & -1 & v + u\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 0 & -3u-4v\\0 & 1 & -u-v\end{pmatrix} 
+            \end{align}
+            Thus
+            \begin{align}
+                x &=  -3u-4v\\
+                y &= -u-v
+            \end{align}
+
+            } 
+            \else 
+            \vspace{5cm}
+            \fi
+        \item[b)] Transform the boundaries of $R$ to the $uv-$plane. In other words, determine the boundaries of $G$ in terms of $u$ and $v$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} the four lines are transformed below. 
+            \begin{itemize}
+                \item The line $x-4y=2$ becomes $u=2$. 
+                \item The line $x-4y=1$ becomes $u=1$. 
+                \item The line $3y-x=3$ becomes $v=3$. 
+                \item The line $3y-x=6$ becomes $v=6$. 
+            \end{itemize}
+            } 
+        \else 
+        \vspace{5cm}
+        \fi        
+            
+        \item[c)] Use the given transformation and your results from parts (a) and (b) to set up a double integral that in the $uv-$plane that is equal to $I$. Do not evaluate the integral. You also do not need to calculate the Jacobian and may use that the Jacobian of the transform is  $J(u,v) = -1$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            \begin{align}
+                \iint_{R} 2x-8y \,dx\,dy
+                = \iint_{G} 2u \left| J(u,v) \right| \,du\,dv
+                = \int_3^6\int_{1}^2 2u \left| -1 \right| \,du\,dv
+                = \int_3^6\int_{1}^2 2u \,du\,dv
+            \end{align}
+            Note the following.
+            \begin{itemize}
+                \item We did not need to evaluate the integral, but if we did: 
+                \begin{align}
+                \iint_{R} 2x-8y \,dx\,dy
+                &= \iint_{G} 2u \left| J(u,v) \right| \,du\,dv\\
+                &= \int_3^6\int_{1}^2 2u \left| -1 \right| \,du\,dv\\
+                &= \int_3^6\left. u^2 \right|_{1}^2 \,dv\\
+                &= \int_3^6 3 \,dv\\
+                &= 3 \cdot(6 -3) \\
+                &= 9
+            \end{align}
+            \end{itemize}
+            } 
+            \else 
+            \fi        
+    \end{enumerate}
+ 
+\fi 
+
+
+
+
+% TRANSFORM: SOLVE FOR X & Y, BOUNDARIES, EVALUATE
+% VERSION B
+\ifnum \Version=8
+    \question[6] Consider the transform $u=x-y$ and $v=4y-2x$, and the integral $\displaystyle I = \iint_{R} \,dxdy$, where $R$ denotes the triangle in the $xy$-plane bounded by $x-y=2$, $4y-2x=0$, $3y=2x$. The transform maps region $R$ to region $G$ in the $uv-$plane.  Please show your work for the following.
+
+    \begin{enumerate}
+        \item[a)] Solve the system, $u=x-y$ and $v=4y-2x$, for $x$ and $y$ in terms of $u$ and $v$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            We can use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+            \begin{align}
+                \begin{pmatrix} 1 & -1 & u \\ -2 & 4 & v\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & -1 & u \\0 & 2 & v + 2u\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & -1 & u\\0 & 1 & u+v/2\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 0 & 2u+v/2\\0 & 1 & u+v/2\end{pmatrix} 
+            \end{align}
+            Thus $x = 2u+v/2$, and $y = u + \frac{v}{2}$. 
+            } 
+            \else 
+            \vspace{5cm}
+            \fi
+        \item[b)] Transform the boundaries of $R$ to the $uv-$plane. In other words, determine the boundaries of $G$ in terms of $u$ and $v$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} the three lines are transformed below. 
+            \begin{itemize}
+                \item The line $x-y=2$ becomes $u=2$. 
+                \item The line $4x-2y=0$ becomes $v=0$. 
+                \item The line $3y=2x$ is: 
+                \begin{align}
+                    3\cdot \left(u+\frac{v}{2}\right) &= 2\cdot \left( 2u+v/2 \right) \\
+                    3u + 3v/2 &= 4u + v \\
+                    v/2 &= u \\
+                    v &= 2u 
+                \end{align}
+            \end{itemize}
+            } 
+        \else 
+        \vspace{5cm}
+        \fi        
+            
+        \item[c)] Use the given transformation and your results from parts (a) and (b) to set up a double integral that in the $uv-$plane that is equal to $I$. Do not evaluate the integral. You also do not need to calculate the Jacobian and may use that the Jacobian of the transform is  $J(u,v) = \frac12$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} the region is
+            $$G = \{ (u,v) \in \mathbb R^2 \, | \, 0\le u \le 2, \ 0 \le v \le 2u\}$$
+            or we can use
+            $$G = \{ (u,v) \in \mathbb R^2 \, | \, 0\le v \le 4, \ v/2 \le u \le 4\}$$ 
+            We can write the double integral as:
+            \begin{align}
+                \iint_{R} \,dx\,dy
+                = \iint_{G}  \left| J(u,v) \right| \,dv\,du 
+                = \int_0^2\int_{0}^{2u}  \left| \frac12 \right| \,dv\,du
+                = \frac12 \int_0^2\int_{0}^{2u} \,dv\,du
+            \end{align}
+            Note the following.
+            \begin{itemize}
+                \item We did not need to compute the Jacobian but it is computed as follows. 
+                $$J = \begin{vmatrix} x_u & x_v \\ y_u & y_v \end{vmatrix} = \begin{vmatrix} 2 & 1/2 \\ 1 & 1/2\end{vmatrix} = 1 - 1/2 = \frac12$$
+                \item We didn't need to evaluate the integral but if we did: 
+                \begin{align}
+                \iint_{R} \,dx\,dy
+                    &= \iint_{G}  \left| J(u,v) \right| \,dv\,du\\
+                    &= \int_0^2\int_{0}^{2u}  \left| \frac12 \right| \,dv\,du\\
+                    &= \frac12 \int_0^2\left.  v \right|_{v=0}^{v=2u} \,du\\
+                    &= \frac12 \int_0^2 2u \,du\\
+                    &=  \int_0^2 u \,du\\
+                    &= \frac12 \left. u^2\right|_0^2 \\
+                    &= 2
+            \end{align}                
+            \end{itemize}
+            } 
+            \else 
+            \fi        
+    \end{enumerate}
+ 
+\fi 
+
+
+
+
+
+
+
+
+
+% TRANSFORM: SOLVE FOR X & Y, BOUNDARIES, EVALUATE
+% VERSION D 
+\ifnum \Version=9
+    \question[6] Consider the transform $u=x+y$ and $v=3x+4y$, and the integral $\displaystyle I = \iint_{R} x+y \,dxdy$, where $R$ denotes the triangle in the $xy$-plane bounded by $x+y=0$, $3x+4y=2$, and $2x+3y=0$. The transform maps region $R$ to region $G$ in the $uv-$plane. Please show your work for the following.
+
+    \begin{enumerate}
+        \item[a)] Solve the system, $u=x+y$ and $v=3x+4y$, for $x$ and $y$ in terms of $u$ and $v$.
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            We can use the expressions for $u$ and $v$ as an augmented matrix and row reduce. 
+            \begin{align}
+                \begin{pmatrix} 1 & 1 & u \\ 3 & 4 & v\end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 1 & u \\0 & 1 & v - 3u \end{pmatrix} 
+                \sim \begin{pmatrix} 1 & 0 & 4u - v \\ 0 & 1 & v - 3u \end{pmatrix} 
+            \end{align}
+            Thus $x = 4u - v$, and $y = v - 3u$. 
+            } 
+            \else 
+            \vspace{5cm}
+            \fi
+        \item[b)] Transform the boundaries of $R$ to the $uv-$plane. In other words, determine the boundaries of $G$ in terms of $u$ and $v$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:} the three lines are transformed below. 
+            \begin{itemize}
+                \item The line $x+y=0$ becomes $u=0$. 
+                \item The line $3x+4y=2$ becomes $v=2$. 
+                \item The line $2x+3y$ is: 
+                \begin{align}
+                    2x+3y &=0 \\
+                    2\cdot(4u-v) + 3\cdot(v-3u) &= 0\\
+                    8u -9u  - 2v+3v &=0 \\
+                    v &= u
+                \end{align}
+            \end{itemize}
+            } 
+        \else 
+        \vspace{5cm}
+        \fi        
+            
+        \item[c)] Use the given transformation and your results from parts (a) and (b) to set up a double integral that in the $uv-$plane that is equal to $I$. Do not evaluate the integral. You also do not need to calculate the Jacobian and may use that the Jacobian of the transform is $J(u,v) = 1$. 
+            \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+            \textbf{Solutions:}
+            \begin{align}
+                \iint_{R} x+y \,dx\,dy
+                &= \iint_{G} u \left| J(u,v) \right| \,dv\,du\\
+                &= \int_0^2\int_{u}^{2} u \left| 1 \right| \,dv\,du\\
+                &= \int_0^2\int_{u}^{2} u  \,dv\,du
+            \end{align}
+            Note the following.
+            \begin{itemize}
+                \item We could also instead use
+                \begin{align}
+                    \iint_{R} x+y \,dx\,dy &= \int_0^2\int_{0}^{v} u  \,du\,dv
+                \end{align}
+                \item We did not need to compute the Jacobian but it is computed as follows. 
+                $$J 
+                = \begin{vmatrix} x_u & x_v \\ y_u & y_v \end{vmatrix} 
+                = \begin{vmatrix} 4 & -1 \\ -3 & 1\end{vmatrix} 
+                = 4 - (-1)(-3)
+                = 1$$
+                \item It wasn't necessary to compute the integral but: 
+                \begin{align}
+                    \iint_{R} x+y \,dx\,dy
+                    &= \iint_{G} u \left| J(u,v) \right| \,dv\,du\\
+                    &= \int_0^2\int_{u}^{2} u \left| 1 \right| \,dv\,du\\
+                    &= \int_0^2 2u - u^2 \,du\\
+                    &= \left. \left( u^2 - \frac{u^3}{3} \right)\right|_0^2 \\
+                    &= 4 - 8/3\\
+                    &= 4/3
+                \end{align}                
+            \end{itemize}
+            } 
+            \else 
+            \fi        
+    \end{enumerate}
+ 
+\fi 
+

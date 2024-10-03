@@ -1,0 +1,320 @@
+% CHAPTER 14
+
+\ifnum \Version=1
+\part  An equation of the tangent plane to $z = f(x,y) = x^3+y^4-12x-4y$ at the point $P(0,2,8)$ is \framebox{\strut\hspace{3cm}}, and the critical points of $f(x,y)$ are located at $\framebox{\strut\hspace{4cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the gradient at the given point is 
+\begin{align}
+    \nabla f(x,y) &= \langle 3x^2-12, 4y^3-4\rangle \\
+    \nabla f(0,2) &= \langle -12, 28 \rangle  
+\end{align}
+The tangent plane at $P$ is given by 
+\begin{align*}
+    0 &=f_x(x_0,y_0) (x-x_0) + f_y(x_0,y_0) (y-y_0) - (z-z_0) & \\ 
+    &= -12(x-0) + 28(y-2) - (z - 8)
+\end{align*}
+The work shown above is sufficient, but we can simplify further if we prefer.
+\begin{align*}
+    0&= -12(x-0) + 28(y-2) - (z - 8)\\
+    &= -12x + 28y - z -56+8 \\
+    z &= -12x + 28y - 48
+\end{align*}
+The critical points are found by solving $\nabla f = \mathbf 0$, or
+\begin{align}
+    \langle 3x^2-12, 4y^3-4\rangle &= \langle 0, 0 \rangle \\
+    \langle x^2-4, y^3-1\rangle &= \langle 0, 0 \rangle     \\
+    \langle x^2, y^3\rangle &= \langle 4, 1 \rangle     
+\end{align}
+This implies that there are only two critical points at the points $(2,1)$ and at $(-2,1)$. 
+} 
+\else
+\fi 
+\fi
+
+% READY FOR EXAMS
+\ifnum \Version=2
+\part  An equation of the tangent plane to $z = f(x,y) = x^2+y^3-12y$ at the point $P(0,2,-16)$ is \framebox{\strut\hspace{3cm}}, and how many critical points does $f(x,y)$ have? \framebox{\strut\hspace{1cm}}
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} the gradient at the given point is 
+\begin{align}
+    \nabla f(x,y) &= \langle 2x, 3y^2-12\rangle \\
+    \nabla f(1,2) &= \langle 2\cdot0, 3(2)^2-12\rangle  = \langle 0, 0 \rangle
+\end{align}
+At the given point the gradient is the zero vector because $(0,2)$ is a critical point. Geometrically this means that the tangent plane is horizontal and has the form 
+$z = \text{constant}$. So the tangent plane at $P$ is given by $$z(0,2) = 0^2 + (2)^3 -12\cdot2  = 1+8-24 = -16 \quad \Rightarrow \quad z = -16$$
+We were given that $z=-16$, so this calculation wasn't necessary. Either way the tangent plane is $z=-16$. 
+The critical points are found by solving $\nabla f = \mathbf 0$, or
+\begin{align}
+    \nabla f(x,y) &= \langle 2x, 3y^2-12\rangle = \langle 0, 0 \rangle 
+\end{align}
+Thus $x=0$ and $y = \pm 2$. There are only two critical points. 
+} 
+\else
+\fi 
+\fi
+
+
+% READY
+\ifnum \Version=3
+% INTERPRET DERIVATIVE
+% LINEARIZATION
+\part Consider the surface $f(x,y) = x^2+3y + 3$ and the point $P(2,1)$. The slope of the tangent line in the plane $y=1$ and intersects the surface at $P$ is $\framebox{\strut\hspace{1cm}}$. The linearization of $f(x,y)$ at $P$ is $L(x,y) = ax+by+c$, where $a = \framebox{\strut\hspace{1cm}}$. $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} The tangent line for any $x$ and constant $y$ has slope
+$$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x}\left( x^2 + 3y + 3 \right) = 2x$$
+At the point $(2,1)$ the tangent line has slope $2\cdot 2 = 4$.  The linearization is 
+\begin{align}
+    L(x,y) = f(2,1) + f_x(2,1)(x-2) + f_y(2,1)(y-1) = 10+4(x-2)+3(y-1)
+\end{align}
+Further simplification isn't necessary but we could also write $L = 4x+3y -1$. 
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+%
+\ifnum \Version=4
+\part The domain of $z = f(x,y) = \sqrt{2-x^2-y^2}$ is \framebox{\strut\hspace{2cm}}, and the rate of change of $f(x,y)$ at $P(1,0)$ in the direction of $\mathbf u = \langle 1,0 \rangle$ is \framebox{\strut\hspace{2cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} The domain is the set $x^2+y^2 \le 2$. We are not asked for the range, but if we were, the range is $0 \le z \le \sqrt 2$, or $z\in [0,\sqrt 2]$. The gradient is 
+\begin{align}
+    \nabla f &= - \frac{x}{\sqrt{2-x^2-y^2}} \mathbf i - \frac{y}{\sqrt{2-x^2-y^2}} \mathbf j
+\end{align}
+The rate of change of $f(x,y)$ at $P(1,0)$ in the direction $\mathbf u = \langle  1 ,0 \rangle$ is 
+\begin{align}
+    D_u (1,0) &= \nabla f(1,0) \cdot \mathbf u = \langle -1, 0 \rangle \cdot \langle 1,0\rangle = -1
+\end{align}
+} 
+\else
+\fi 
+\fi
+
+
+\ifnum \Version=5
+\part If $z(x,y) = x^3 + 3y^2 - 2y$, then the slope of the line tangent to $z$ that is in the plane $x=1$ and intersects $z$ at the point $P(1,2,9)$ is $\framebox{\strut\hspace{2cm}}$. The linearization of $z(x,y)$ at $P$ is $L(x,y) = ax+by+c$, where $a = \framebox{\strut\hspace{1cm}}$. $b=\framebox{\strut\hspace{1cm}}$, $c=\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} The tangent line for any $y$ and constant $x$ has slope
+$$\frac{\partial f}{\partial y} = \frac{\partial}{\partial y}\left( x^3 + 3y^2 - 2y \right) = 0 +6y-2$$
+At the point $(1,2,9)$ the tangent line has slope $6\cdot 2-2 = 10$. The linearization is 
+\begin{align*}
+    L(x,y) &= z(1,2) + z_x(1,2)(x-1) + z_y(1,2)(y-2) \\
+    &= 9+3(x-2)+10(y-2) \\
+    &= 3x+10y - 14
+\end{align*}
+So $a=3$, $b=10$, $c=-14$.
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+
+% READY FOR EXAMS
+\ifnum \Version=6
+\part The tangent plane to $f(x,y) = z(x,y) = 1 + x - 2y$ at the point $P(1,3)$ is \framebox{\strut\hspace{2.5cm}}, and the rate of change of $f(x,y)$ at $P$ in the direction of $\mathbf u = \langle 3/5,4/5 \rangle$ is \framebox{\strut\hspace{2cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The surface is a plane, so the tangent plane is the surface. In other words the tangent plane is $z = 1 + x -2y$. No need for any computation. The gradient of the surface is
+\begin{align}
+    \nabla f = \langle 1,-2 \rangle
+\end{align}
+The gradient is a constant vector because the surface is a plane. The rate of change of $f(x,y)$ at $P(1,3)$ in the direction $\mathbf u = \langle  3/5 ,4/5 \rangle$ is 
+\begin{align}
+    D_u (1,3) &= \nabla f(1,3) \cdot \mathbf u = \langle 1, -2 \rangle \cdot \langle 3/5,4/5\rangle = 3/5 - 8/5 = -5/5 = -1
+\end{align}
+} 
+\else
+\fi 
+\fi
+
+
+
+\ifnum \Version=7
+% THOMAS 14.8
+\part The maximum value of $f(x,y) = 4x+2y$ subject to $x^2+y^2=5$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{2cm}}$, $b = \framebox{\strut\hspace{2cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-10 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 4,2\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 2/\lambda, \ y = 1/\lambda 
+    \end{align*}
+    Substitute into constraint.
+    \begin{align*}          
+        5 &=x^2+y^2 \\
+        5 &= (2/\lambda)^2 + (1/\lambda)^2 \\
+        5\lambda^2 &= 4 + 1 = 5 \\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 2, \ y = \pm 1
+    \end{align*}
+    Maximum occurs at $(2,1)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=8
+\part If $z(x,y) = x^3 + 4y^2 - 2y$, then the slope of the line tangent to $z$ that is in the plane $x=2$ and intersects $z$ at the point $P(2,1,10)$ is $\framebox{\strut\hspace{2cm}}$. The linearization of $z(x,y)$ at $P$ is $L(x,y) = ax+by+c$, where $a = \framebox{\strut\hspace{2cm}}$. $b=\framebox{\strut\hspace{2cm}}$, $c=\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} There are two parts. 
+\begin{itemize}
+    \item The tangent line for any $y$ and constant $x$ has slope
+    $$\frac{\partial z}{\partial y} = \frac{\partial}{\partial y}\left( x^3 + 4y^2 - 2y \right) = 0 + 4\cdot2\cdot y-2=8y-2$$
+    At point $P$, $y=1$, so the tangent line has slope $8\cdot 1-2 = 6$. 
+    \item We need $\displaystyle \frac{\partial z}{\partial x}(2,1)$. 
+    $$\frac{\partial z}{\partial x} = \frac{\partial}{\partial x}\left( x^3 + 4y^2 - 2y \right) = 3x^2 + 0, \quad \Rightarrow \quad \frac{\partial z}{\partial x}(2,1) = 12$$    
+    The linearization at $P$ is 
+    \begin{align*}
+        L(x,y) &= z(2,1) + z_x(2,1)(x-1) + z_y(2,1)(y-2) \\
+        &= 10+12(x-2)+6(y-1) \\
+        &= 12x + 6y + 10 - 24 - 6 \\
+        &= 12x + 6y - 20
+    \end{align*}
+\end{itemize}
+So the slope is $8$, and $a=12$, $b=6$, $c=-20$.
+}
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=9
+% THOMAS 14.1
+
+\part If $\displaystyle f(x,y) = \sqrt{x^4+y-4}$, then the domain of $f(x,y)$ is \framebox{\strut\hspace{3cm}} and the equation of the level curve that passes through the point $(0,13)$ is \framebox{\strut\hspace{3cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+
+\textit{Solutions:} 
+
+\textbf{Domain}: the argument of a square root function must be greater or equal to zero, so the domain is $x^4+y-4 \ge 0$. But we could also express the domain in other ways. The statement $y \ge 4 - x^4$ is also sufficient, or we could use set builder notation, with $\{ (x,y) \in \mathbb R^2 \, | \,y \ge 4 - x^4 \}$. 
+
+\textbf{Level Curve}: $f(0,13) = +3$, so the level curve is $$3 = \sqrt{x^4+y-4}$$ Further simplification not necessary. 
+} 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=10
+    % THOMAS 14.1
+    
+    \part Evaluate the following limit, if possible. If the limit does not exist, write DNE. 
+    \begin{enumerate}
+        \item[]  Let $\displaystyle f(x,y) = \frac{x^2+xy}{xy}$. As $(x,y) \to (0,0)$, $f(x,y) \to \framebox{\strut\hspace{2cm}}$. 
+    \end{enumerate}
+    \ifnum \Solutions=1 
+    
+    {\color{DarkBlue} 
+        
+    Substituting the limit point into $f(x,y)$ gives an indeterminant form $0/0$. But we can consider linear paths that pass through the limit point, $y=kx$, with $k\in \mathbb R$. Our limit becomes
+    $$f(x,y=kx) = \frac{x^2+x(kx)}{x(kx)} = \frac{x^2(1+k)}{kx^2} = \frac{1+k}{k} = \frac1k + 1$$
+    The value of the limit depends on $k$, so the limit does not exist. The answer is DNE. 
+    
+    }
+    \else
+    
+    \fi
+\fi
+
+\ifnum \Version=11
+% THOMAS 14.5
+\part The rate of change of $f(x,y)=x^2+4y^2$ at the point $P(5,10)$ in the direction of $\mathbf u=\langle 3/5, 4/5 \rangle$ is equal to \framebox{\strut\hspace{2cm}}. And $\displaystyle \DFDY$ at the point $Q(3,5)$ is equal to \framebox{\strut\hspace{2cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} There are two parts. 
+
+\begin{itemize}
+    \item For the rate of change in the direction of $\mathbf u$, we apply the formula for the directional derivative, $D_{\mathbf u} f = \nabla f \cdot \mathbf u$. 
+\begin{align}
+    (\nabla f \cdot \mathbf u )\big|_P 
+    &= (\langle 2x,8y\rangle \cdot \langle 3/5, 4/5 \rangle ) \big|_P \\
+    &= (6x/5 + 32y/5 ) \big|_P \\
+    &= 6(5)/5 + 32(10)/5  \\
+    &= 6(5)/5 + 32(10)/5  \\
+    &= 6 + 32\cdot 2 \\
+    &= 6 + 64 \\
+    &= 70
+\end{align}
+    \item For the partial derivative at $Q$,  
+$$\DFDY  = 8y, \qquad f_y(3,5) = 40$$
+\end{itemize}
+
+} 
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=12
+% THOMAS 14.7
+\part Let $f(x,y) = 6xy - 3x^2 - 2y^3 $. If possible, use the second derivative test to classify the critical point at the point $(1,1)$ \framebox{\strut\hspace{3cm}}, and at the point $(0,0)$ \framebox{\strut\hspace{3cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+\begin{align*}
+    \DFDX &=  6y - 6x  \quad \rightarrow \quad f_{xx}  = -6 \\
+    \DFDY &= 6x - 6y^2  \quad \rightarrow \quad f_{yy} = -12y \\
+    f_{xy} &= 6 \\
+    D(x,y) &= f_{xx}f_{yy} - f_{xy}^2 = 6\cdot12y - (6)^2 = 72y - 36 
+\end{align*}
+    At the given points
+\begin{align*} 
+    D (1,1 )& > 0 , \quad  f_{xx} < 0 \ \Rightarrow \ \text{maximum} \\
+    D (0,0)& <0 \ \Rightarrow \ \text{saddle} 
+\end{align*}
+} 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=13
+% THOMAS 14.7
+% FROM 2022
+\part Use the Second Derivative test to classify the critical point of $f(x,y) = x^3-27x+y^2-4y+1$ at the point $(-3,2)$. \framebox{\strut\hspace{3cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} saddle. \\[12pt] \textit{Solutions.} 
+\begin{align*}
+    \nabla f &= \langle 3x^2 - 27, 2y-4\rangle \\
+    f_{xx} & = 6x \\
+    f_{yy} &= 2 \\
+    f_{xy} &= 0 \\
+    D (-3,2)&= f_{xx}f_{yy} - f_{xy}^2 = 6 \cdot (-3)\cdot 2 = -36 < 0 \ \Rightarrow \ \text{saddle}
+\end{align*}} 
+\else
+  
+\fi
+\fi
+
+%
+\ifnum \Version=14
+\part A unit vector that points in the direction in which $f(x,y)=3y-2x^2$ decreases most rapidly at $P(1,1)$ is \framebox{\strut\hspace{2cm}}.
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} the gradient points in the direction the function increases most rapidly. 
+\begin{align}
+    \nabla f &= \langle -4x, 3 \rangle
+\end{align}
+The direction in which the function decreases most rapidly is in the direction of $-\nabla f$. At point $P$, we have $- (\nabla f  )\big|_P = - (\langle -4x,3\rangle  ) \big|_P= \langle 4,-3\rangle$. A unit vector pointing in the same direction is
+\begin{align}
+    \frac{4}{5}\mathbf i - \frac35\mathbf j
+\end{align}
+Can express the answer in other ways. Also ok to write that the vector is $\langle 4/5, 3/5 \rangle$. 
+
+} 
+\else
+  
+\fi
+\fi

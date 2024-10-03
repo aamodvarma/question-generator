@@ -1,0 +1,503 @@
+% QUESTIONS FROM MODULES 2 AND 3
+% USE MOD 2 FOR ODD VERSION
+% USE MOD 3 FOR EVEN VERSION
+
+% MODULE 2
+\ifnum \Version=1
+
+    \question[4]{} Use the Second Derivative Test to identify and classify the critical points of $f(x,y) = 2x^2+y^2-xy^2$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Setting $\nabla f = \mathbf 0$ yields: $
+    \nabla f =
+    \begin{pmatrix} 4x-y^2 \\ 2y-2xy \end{pmatrix} = \begin{pmatrix} 4x-y^2 \\ 2y(1-x) \end{pmatrix} = \begin{pmatrix} 0\\0\end{pmatrix}
+    $. For $f_y=0$ we need $x=1$ or $y=0$. Substituting into $4x=y^2$ gives us the critical points at $(0,0)$, $(1,2)$, $(1,-2)$. We need the second partials for the derivative test: 
+    $$f_{xx} = 4, \ f_{yy} = 2-2x, \ f_{xy} = -2y$$
+    The second derivative test $D(x,y) = f_{xx}f_{yy}-(f_{xy})^2$ yields:
+    \begin{align*}
+        D(x,y) &= f_{xx}f_{yy}-(f_{xy})^2 = 4\cdot(2-2x) - 4y^2\\
+        (0,0): \ D(0,0) &= 4\cdot (2) - 0 = 8 > 0, \ f_{xx}>0, \quad \Rightarrow \ \textbf{minimum} \\
+        (1,2): \ D(1,2) &= 4\cdot 0 - (2)^2 =-4 < 0  \quad \Rightarrow \ \textbf{saddle} \\
+        (1,-2): \ D(1,-2) &= 4\cdot 0 - (-2)^2 = -4 < 0  \quad \Rightarrow \ \textbf{saddle} 
+    \end{align*}
+    In case it helps, the Second Derivative Test is below. 
+        \begin{center}\begin{tikzpicture} \node [mybox](box){\begin{minipage}{0.75\textwidth}\vspace{4pt}
+    Let \( f(x, y) \) be a function of two variables with continuous second partial derivatives in a neighborhood of a point \( (a, b) \), and $f_x(a,b) = f_y(a,b) = 0$. Suppose also that $D$ is the \textbf{discriminant} $$D = f_{xx}(a, b) \cdot f_{yy}(a, b) - [f_{xy}(a, b)]^2 $$
+    Then we can classify the critical point $(a,b)$ as follows. 
+    \vspace{4pt}
+    \begin{itemize}
+        \item If \( D > 0 \) and \( f_{xx}(a, b) > 0 \), then \( f \) has a local minimum at \( (a, b) \).
+        \item If \( D > 0 \) and \( f_{xx}(a, b) < 0 \), then \( f \) has a local maximum at \( (a, b) \).
+        \item If \( D < 0 \), then \( f \) has a saddle point at \( (a, b) \).
+        \item If \( D = 0 \), the test is inconclusive.
+    \end{itemize}    
+    \vspace{2pt}
+    \end{minipage}};
+    \node[fancytitle, right=10pt] at (box.north west) {Second Derivative Test};
+    \end{tikzpicture} \end{center} 
+}
+\else 
+      \vspace{5cm}
+\fi
+    
+\fi
+
+
+
+% MODULE 3
+\ifnum \Version=2
+
+    \question[4] Suppose $\delta(x,y) = 2kx+ky$ represents the population density of a planar region $R$ on Earth. Variables $x$ and $y$ are measured in km, $\delta$ is measured in people per square km, $k$ is a constant, and $R$ is bounded by $y=0$, $y=x$, and $y=4-x$. Use integration to determine the total population in $R$. Please show your work. 
+
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} 
+    
+    The lines $y=x$ and $y=4-x$ intersect at $P(2,2)$, and $R$ is either one of the sets
+    \begin{align}
+        \{(x,y) \, | \, 0 \le x \le 2, 0 \le y \le x \} \ 
+        &\text{and} \ 
+        \{(x,y) \, | \, 2 \le x \le 4, 0 \le y \le 4-x \}\\
+        \{(x,y) \, &| \, 0 \le y \le 2, y \le x \le 4-y \} 
+    \end{align}
+    The second set is easier to work with but either is ok. The first would require two integrals. Using the second set the total population is 
+        \begin{align*}
+            \int_0^2\int_{y}^{4-y} (2kx+ky) \, dx \, dy 
+            &=  k\left. \int_0^4 (x^2+xy) \right|_{y}^{4-y} \, dy \\
+            &= k\int_0^2 \left((4-y)^2 + (4-y)y\right) - \left( y^2 +y^2 \right)  dy \\
+            &= k\int_0^2 \left((16 - 8y +y^2+4y- y^2) - 2y^2\right)   \, dy \\
+            &= k\int_0^2 \left( 16 -4y -2y^2 \right)\, dy \\
+            &= k\left. \left( 16y- 2y^2 -\frac23 y^3\right) \right|_0^2  \\
+            &= k\left( 32- 8 - \frac{16}{3} \right) \\
+            &= k\left( \frac{72}{3}- \frac{16}{3} \right) \\
+            &= \frac{56k}{3} 
+        \end{align*}   
+    It is also ok to use $dy\,dx$, but this would be more work as it would require two double integrals. 
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+
+
+% MODULE 2
+% TOO LONG???
+\ifnum \Version=3
+
+    \question[4] Identify and classify the critical points of $f(x,y) = x^2+2y^2-x^2y+1$ using the Second Derivative Test. Please show your work. 
+
+    \ifnum \Solutions=1 \newpage {\color{DarkBlue} \textit{Solutions:} Set $\nabla f = \mathbf 0$. 
+    \begin{align*}
+    \nabla f =
+    \begin{pmatrix} 2x-2xy \\4y-x^2 \end{pmatrix} = \begin{pmatrix} 2x(1-y) \\4y-x^2 \end{pmatrix} = \begin{pmatrix} 0\\0 \end{pmatrix}
+    \end{align*}
+    Critical points are at $(0,0)$, $(2,1)$, $(-2,1)$. The Second Derivative Test uses $D(x,y) = f_{xx}f_{yy}-(f_{xy})^2$ and gives us two saddles and a minimum:
+    \begin{align*}
+        f_{xx} &= 2-2y \\
+        f_{yy} &= 4 \\
+        f_{xy} &= -2x \\
+        D(x,y) &= f_{xx}f_{yy}-(f_{xy})^2 \\
+        &= 4(2-2y) - (-2x)^2 \\
+        &= 8-8y - 4x^2\\
+        (0,0): \ D(0,0) &= 8 - 0 - 0 = 8 > 0 , \quad f_{xx} > 0 \quad \Rightarrow \ \textbf{min} \\
+        (2,1): \ D(2,1) &= 8 - 8 - 4\cdot2^2 < 0  \quad \Rightarrow \ \textbf{saddle} \\
+        (-2,1): \ D(-2,1) &= 8 - 8 - 4\cdot(-2)^2 < 0  \quad \Rightarrow \ \textbf{saddle} 
+    \end{align*}
+    The Second Derivative Test is below. 
+        \begin{center}\begin{tikzpicture} \node [mybox](box){\begin{minipage}{0.75\textwidth}\vspace{4pt}
+    Let \( f(x, y) \) be a function of two variables with continuous second partial derivatives in a neighborhood of a point \( (a, b) \), and $f_x(a,b) = f_y(a,b) = 0$. Suppose also that $D$ is the \textbf{discriminant} $$D = f_{xx}(a, b) \cdot f_{yy}(a, b) - [f_{xy}(a, b)]^2 $$
+    Then we can classify the critical point $(a,b)$ as follows. 
+    \vspace{4pt}
+    \begin{itemize}
+        \item If \( D > 0 \) and \( f_{xx}(a, b) > 0 \), then \( f \) has a local minimum at \( (a, b) \).
+        \item If \( D > 0 \) and \( f_{xx}(a, b) < 0 \), then \( f \) has a local maximum at \( (a, b) \).
+        \item If \( D < 0 \), then \( f \) has a saddle point at \( (a, b) \).
+        \item If \( D = 0 \), the test is inconclusive.
+    \end{itemize}    
+    \vspace{2pt}
+    \end{minipage}};
+    \node[fancytitle, right=10pt] at (box.north west) {Second Derivative Test};
+    \end{tikzpicture} \end{center} 
+    Note that the discriminant \( D \) helps determine the \textbf{concavity} of the function at the critical point. If \( D > 0 \), it indicates that the graph is either concave up or concave down. The sign of \( f_{xx}(a, b) \) then determines whether the critical point is a local minimum or local maximum. And it is important to note that the second derivative test only provides information about local extrema; it does not reveal information about global extrema or points where the function may not have a derivative.    
+}
+\else 
+      \vspace{5cm}
+\fi
+    
+\fi
+
+% 
+\ifnum \Version=4
+\question[4] An object $D$ lying in the first octant is bounded by the planes $x=0, y=0, z=0$, and the sphere $x^2+y^2 + z^2 = 16$. The density of the object at any point in $D$ is equal to the distance from the point to the origin. Use spherical coordinates to calculate the mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Using $\delta = \sqrt{x^2+y^2+z^2} = \rho$, the mass is computed using 
+    \begin{align}
+        M &= \int_0^{\pi/2} \int_0^{\pi/2} \int_0^4 \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^{\pi/2} \int_0^4 \rho^3\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{\pi/2} \int_0^{\pi/2} \left. \frac14 \rho^4\sin\phi \right|_0^4 \, d\phi\,d\theta \\
+        &= 64 \int_0^{\pi/2} \int_0^{\pi/2} \sin\phi \, d\phi\,d\theta \\
+        &= 64 \int_0^{\pi/2} \left. -\cos\phi \right|_0^{\pi/2} \, d\theta \\
+        &= 64 \int_0^{\pi/2}  \, d\theta \\
+        &= 32\pi
+    \end{align}
+    
+    } 
+   \else
+      \vspace{14cm}
+   \fi    
+
+\fi 
+
+
+% READY 
+% DO NOT USE FOR VERSION 3 - A BIT LONG? 
+\ifnum \Version=5
+    
+    \question[4] Use Lagrange Multipliers to identify the largest value of $f(x,y)=2x^2-3y^2$ subject to the constraint $\displaystyle g(x,y) = 2x^2 + y^2 - 8 = 0$, and identify the locations where the maximum value is obtained. Show your work. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Use $\nabla f = \lambda \nabla g $, then 
+    \begin{align*}
+    \nabla f &= \lambda \nabla g \quad \Rightarrow \quad 
+    \begin{pmatrix} 4x\\-6y\end{pmatrix} = \lambda \begin{pmatrix} 4x\\2y\end{pmatrix} \quad \Rightarrow \quad x = \lambda x
+    \end{align*}
+    Either $x=0$ or $\lambda = 1$. 
+    \begin{itemize}
+        \item If $\lambda = 1$ then $-6y=\lambda2y$ implies $y=0$. Substitute into constraint to get $x$:
+    \begin{align*}
+        0&= 2x^2 + (0)^2 - 8, \quad \Rightarrow \quad x= \pm 2 \quad \Rightarrow \quad \text{critical points at } (\pm2,0)
+    \end{align*}
+    \item If $x=0$ then from constraint $y=\pm \sqrt{8} = \pm 2\sqrt2, \quad \Rightarrow \quad \text{critical points at } (0, \pm2\sqrt2)$. 
+    \end{itemize}
+    Test critical points to determine largest value of $f(x,y)$. 
+    \begin{align}
+        f(\pm 2, 0) & = 2(\pm2)^2 - 0 = 8 \\
+        f(0,\pm 2\sqrt2) &= 0 -3 (2\sqrt2)^2 = - 24
+    \end{align}
+    The maximum value of $f$ is $f(\pm2,0) = 8$. 
+}
+\else 
+      \vspace{6cm}
+\fi
+    
+\fi
+
+
+% READY 
+\ifnum \Version=6
+    \question[4] Use a triple integral to calculate the mass of the solid cut from the first octant by the plane $x+y+z=2$. The density of the solid is $\delta = 6$. Please use the integration order $dz\,dx\,dy$ and show your work. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} The mass is
+    \begin{align}
+        \text{mass}=\int_{0}^{2}\int_{0}^{2 - y} \int_0^{2 - x - y} \delta \, dz \, dx \, dy  
+        &= 6 \int_{0}^{2}\int_{0}^{2 - y} (2-x-y ) \, dx \, dy \\ 
+        &=6\int_{0}^{2} ( 2(2-y)  - \frac12(2-y)^2 -y(2-y) ) \, dy \\ 
+        &=6\int_{0}^{2} 2 - 2y  - \frac12(2^2-4y+y^2) - 2y+y^2  \, dy \\ 
+        &=6\int_{0}^{2} 2 - 2y + \frac12 y^2  \, dy \\ 
+        &= 6 \cdot( 4 - 4 + \frac16 2^3 ) \\
+        &= 8
+    \end{align}
+    \textbf{Solution Notes}
+    \begin{itemize}
+        \item Some students used
+            \begin{align}
+        \text{mass}=\int_{0}^{2}\int_{0}^{2 - y} \int_0^{2 - x } \delta \, dz \, dx \, dy  
+    \end{align}
+    This is not correct, but if we were to evaluate the above integral we would find that 
+    $$\text{mass} = 16$$
+    \end{itemize}
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+% READY
+\ifnum \Version=7
+
+    \question[4] Identify and classify the critical points of $f(x,y) = 2x^2+y^2+xy^2+1$ using the Second Derivative Test. Please show your work. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Set $\nabla f = \mathbf 0$. 
+    \begin{align*}
+    \nabla f =
+    \begin{pmatrix} 4x+y^2 \\ 2y+2xy \end{pmatrix} = \begin{pmatrix} 4x+y^2 \\ 2y(1+x) \end{pmatrix}
+    \end{align*}
+    Critical points are at $(0,0)$, $(-1,\pm2)$. Using the second derivative test:
+    \begin{align*}
+        f_{xx} &= 4 \\
+        f_{yy} &= 2+2x \\
+        f_{xy} &= 2y \\
+        D &= f_{xx}f_{yy}-(f_{xy})^2 = 8 + 8x - 4y^2 \\
+        (0,0): \ D(0,0) &=  4\cdot 2  - 0 = 8 >0 , \quad f_{xx} > 0 \Rightarrow \ \textbf{min} \\
+        (-1,2): \ D(-1,2) &=  4 \cdot 0 - (2)^2 =-4 < 0  \quad \Rightarrow \ \textbf{saddle} \\
+        (-1,-2): \ D(-1,-2) &= 4 \cdot 0 - (-2)^2 = -4 < 0  \quad \Rightarrow \ \textbf{saddle} 
+    \end{align*}
+    The Second Derivative Test is below. 
+    \begin{center}\begin{tikzpicture} \node [mybox](box){\begin{minipage}{0.75\textwidth}\vspace{4pt}
+    Let \( f(x, y) \) be a function of two variables with continuous second partial derivatives in a neighborhood around a point \( (a, b) \), and $f_x(a,b) = f_y(a,b) = 0$. Suppose also that $D$ is the \textbf{discriminant} $$D = f_{xx}(a, b) \cdot f_{yy}(a, b) - [f_{xy}(a, b)]^2 $$
+    Then we can classify the critical point $(a,b)$ as follows. 
+    \vspace{4pt}
+    \begin{itemize} \setlength\itemsep{0em}
+        \item If \( D > 0 \) and \( f_{xx}(a, b) > 0 \), then \( f \) has a local minimum at \( (a, b) \).
+        \item If \( D > 0 \) and \( f_{xx}(a, b) < 0 \), then \( f \) has a local maximum at \( (a, b) \).
+        \item If \( D < 0 \), then \( f \) has a saddle point at \( (a, b) \).
+        \item If \( D = 0 \), the test is inconclusive.
+    \end{itemize}    
+    \vspace{2pt}
+    \end{minipage}};
+    \node[fancytitle, right=10pt] at (box.north west) {Second Derivative Test};
+    \end{tikzpicture} \end{center}     
+}
+\else 
+      \vspace{5cm}
+\fi
+    
+\fi
+
+
+
+% READY 
+\ifnum \Version=8
+
+    \question[4] Use cylindrical coordinates to determine the volume of the region that lies below the paraboloid $z =4 -x^2 - y^2$ and above the $xy-$plane. Please use the integration order $dz \, dr \, d\theta $ and please show your work. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    The volume is
+    \begin{align}
+        \text{volume}=\int_{0}^{2\pi}\int_{0}^{2} \int_0^{4 - r^2} r \, dz \, dr \, d\theta 
+        &= \int_{0}^{2\pi}\int_{0}^{2} 4r - r^3  \, dr \, d\theta \\
+        &= \int_{0}^{2\pi} \left. 2r^2 - \frac14r^4 \right|_0^2 \, d\theta \\
+        &= \int_{0}^{2\pi} 4 \, d\theta \\
+        &= 8\pi 
+    \end{align}
+    \textbf{Solution Notes}
+    \begin{itemize}
+        \item A few incorrect integrals and what they evaluate to are listed below. 
+        \begin{align}
+            \int_0^{2\pi} \int_0^2 \int_0^{4-r^2} zr \, dz dr d\theta &= \frac{32\pi}{3} \\
+            \int_0^{2\pi} \int_0^2 \int_0^{4-r^2} (4-r^2) r \, dz dr d\theta &= \frac{64\pi}{3} \\
+            \int_0^{2\pi} \int_0^2 \int_0^{4-r} r \, dz dr d\theta &= \frac{32\pi}{3} \\
+            \int_0^{2\pi} \int_0^2 \int_0^{4-r^2} dz dr d\theta &= \frac{32\pi}{3} \\
+            \int_0^{2\pi} \int_0^2 \int_0^{4-r} dz dr d\theta &= 12\pi \\
+            \int_0^{2\pi} \int_0^4 \int_0^{4-r} r \, dz dr d\theta &= \frac{64\pi}{3} \\
+            \int_0^{2\pi} \int_0^2 \int_0^{1-r^2} r \, dz dr d\theta &= -4\pi \\
+            \int_0^{2\pi} \int_0^2 \int_0^{1-r} r \, dz dr d\theta &= - \frac{4\pi}{3} \\
+            \int_0^{2\pi} \int_{-2}^2 \int_0^{4-r^2} r \, dz dr d\theta &= 0 
+        \end{align}
+        None of the integrals listed above are correct, but we list them here in case it helps determine if the integral that was set up was evaluated correctly. 
+    \end{itemize}
+    
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+%READY GOOD FOR VERSION 1 OR 2 
+
+\ifnum \Version=9
+
+    \question[4] Use Lagrange Multipliers to identify the largest value of $f(x,y)=xy$ subject to the constraint $\displaystyle g(x,y) = (x^2)/8 + (y^2)/2 - 1 = 0$, and identify the locations where the maximum value is obtained. Please show your work. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} there are two parts to this problem. 
+    \begin{itemize}
+        \item Set $\nabla f = \langle y,x \rangle$ and $\nabla g = \langle x/4, y \rangle$, then 
+    \begin{align*}
+    \nabla f = \lambda \nabla g \quad \Rightarrow & \quad 
+    \begin{pmatrix} y\\x\end{pmatrix} = \lambda \begin{pmatrix} x/4\\y\end{pmatrix} \\  \Rightarrow & \quad y = \frac{\lambda}{4}x = \frac{\lambda}{4} (\lambda y) = \frac{\lambda^2}{4} y 
+    \end{align*}
+    Either $\lambda = \pm 2$, or $y=\lambda = 0$. 
+    \begin{itemize}
+        \item If $\lambda = \pm 2$ then $x=\pm2y$. Substitute into constraint to get $y$:
+    \begin{align*}
+        0&=\frac{ (\pm 2y)^2}{8} + \frac{y^2}{2} -1 \\
+        & \Rightarrow \quad y= \pm 1 \\
+        & \Rightarrow \quad \text{critical points at } (2,1), (2,-1), (-2,1), (-2,-1).
+    \end{align*}
+    \item If $y=\lambda =0$ then from $x=\lambda y$, we have $x=0$. So there is a critical point at the origin $(0,0)$. But this point doesn't satisfy the constraint condition, so it doesn't need to be considered. See note below.
+    \end{itemize}
+    
+    \item Test critical points to determine largest value of $f(x,y)$. 
+    \begin{align}
+        f(2,1) & = f(-2,-1) = 2 \\
+        f(-2,1) &= f(2,-1) = -2
+    \end{align}
+    The maximum value of $f$ is $f(1,2)=f(-1,-2) = 2$. 
+    \end{itemize}
+    
+    
+    \textbf{Solution Notes}
+    \begin{itemize}
+        \item The origin is not a critical point that satisfies the constraint equation, so it is ok if it wasn't considered. The origin is a critical point, of $f(x,y)$, but we didn't need to list all critical points. So if a student doesn't list the origin as a critical point then we don't need to deduct points. 
+        \item Likewise if a student does consider the point $(0,0)$ then there doesn't need to be a point deduction unless they determine that it corresponds to the absolute max. 
+        \item There are critical points at $(2,-1)$ or at $(-2,1)$. They correspond to the minimum values on the ellipse. 
+        \item The points $(\pm 2\sqrt2,0)$ are not critical points. They are on the ellipse but do not satisfy the gradient equation. 
+        \item The points $(0,\pm \sqrt2)$ are not critical points. They are on the ellipse but do not satisfy the gradient equation. 
+    \end{itemize}    
+}
+\else 
+      \vspace{11cm}
+\fi
+    
+\fi
+
+
+% TOO EASY? 
+\ifnum \Version=10
+\question[4] A thin plate with density $\delta(x,y)$ lies entirely in the first quadrant of the $xy-$plane and is bounded by the circle $x^2+y^2=4$. The density of the object at any point is equal to the distance between the point and the origin. Determine the mass of the plate, $M$. Please show your work. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    The mass is
+    \begin{align}
+        M &= \int_0^{\pi/2} \int_{0}^{2} \delta \, r dr \, d\theta \\
+        &= \int_0^{\pi/2} \int_{0}^{2} r^2 dr \, d\theta \\
+        &= \int_0^{\pi/2} \frac83  \, d\theta \\
+        &= \frac{4\pi}{3}
+    \end{align}
+    }
+\fi 
+\fi
+
+
+\ifnum \Version=11
+% THOMAS 14.8
+\question[4] Identify the minimum value of $f(x,y) = 2x+6y$ subject to $x^2+y^2=10$ and where the minimum value is located. Please show your work. 
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-10 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 2,6\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 1/\lambda, \ y = 3/\lambda 
+    \end{align*}
+    Substitute into constraint.
+    \begin{align*}          
+        10 &=x^2+y^2 \\
+        10 &= (1/\lambda)^2 + (3/\lambda)^2 \\
+        10\lambda^2 &= 1 + 9 = 10 \\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 1, \ y = \pm 3
+    \end{align*}
+    Minimum occurs at $(-1,-3)$. The minimum value is $f(-1,-3) = -2-18 = -20$. 
+    } 
+\else
+  
+\fi
+\fi
+
+% READY 
+\ifnum \Version=12
+
+    \question[4] Use polar coordinates to determine the area of the region in the $xy-$plane enclosed by the curve $r = 1 + \cos\theta$. You can use the identity $2\cos^2\theta = 1+\cos(2\theta)$. Please show your work. 
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:}
+    The area is
+    \begin{align}
+        \text{area}=\int_{0}^{2\pi}\int_{0}^{1+\cos\theta}  r  \, dr \, d\theta 
+        &= \int_{0}^{2\pi }\left. \frac12r^2 \right|_0^{1+\cos\theta}   \, d\theta \\
+        &= \frac12 \int_{0}^{2\pi} \left( (1+\cos\theta)^2 - (0) \right)   \, d\theta \\
+        &= \frac12\int_{0}^{2\pi } \left( 1+2\cos\theta + \cos^2\theta  \right)   \, d\theta \\
+        &= \frac12\int_{0}^{2\pi } \left( 1+2\cos\theta + (\frac12 + \frac12\cos(2\theta))  \right)   \, d\theta \\
+        &= \frac12 \int_{0}^{2\pi }  \left( \frac32+2\cos\theta  + \frac12 \cos(2\theta)  \right)   \, d\theta \\
+        &= \frac12 \left( 3\pi +0 +0  \right|_{0}^{2\pi } \\
+        &= \frac{3\pi}{2}
+    \end{align}
+    }
+    \else
+
+    \fi
+    
+\fi
+
+
+
+
+\ifnum \Version=13
+    \question[4]{} Consider the transform given by the system $u=x-y$, $v=x-2y$. Solve this system for $x$ and $y$ in terms of $u$ and $v$ and compute the Jacobian $\partial x(u,v)/\partial y(u,v)$.
+    \ifnum \Solutions=1 \\[12pt]
+    {\color{DarkBlue}
+    Solving for $x$ and $y$ using an augmented matrix,
+    \begin{align}
+        \begin{pmatrix} 1 & -1 & u \\1 & -2 & v\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & -1 & u \\0 & -1 & v-u\end{pmatrix} 
+        \sim \begin{pmatrix} 1 & 0 & 2u-v \\0 & 1 & u-v\end{pmatrix} 
+    \end{align}
+    Thus
+    \begin{align}
+        x &= 2u-v\\
+        y &= u-v
+    \end{align}
+    And
+    \begin{align}
+        J(u,v) & = \begin{vmatrix} \DXDU & \DXDV \\[8pt] \DYDU & \DYDV \end{vmatrix} = \begin{vmatrix} 2 & -1 \\ 1 & -1 \end{vmatrix} = -2 +1 = -1
+    \end{align}
+    }
+   \else
+
+   \fi
+\fi 
+
+
+
+% READY 
+\ifnum \Version=14
+    \question[4] Use a triple integral to calculate the mass of the solid cut from the first octant by the plane $x+y+z=3$. The density of the solid is $\delta = 2$. Please use the integration order $dz\,dx\,dy$ and show your work. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue} The mass is
+    \begin{align}
+        \text{mass}=\int_{0}^{3}\int_{0}^{3 - y} \int_0^{3 - x - y} \delta \, dz \, dx \, dy  
+        &= 2 \int_{0}^{3}\int_{0}^{3 - y} (3-x-y ) \, dx \, dy \\ 
+        &=2\int_{0}^{3} ( 3(3-y)  - \frac12(3-y)^2 -y(3-y) ) \, dy \\ 
+        &=2\int_{0}^{3} 9 - 3y  - \frac12(3^2-6y+y^2) - 3y+y^2  \, dy \\ 
+        &=2\int_{0}^{3} 9 - \frac92 - 3y + \frac12 y^2  \, dy \\ 
+        &= 2 \cdot( 27- \frac{27}{2} - 3\frac {3^2}2 - \frac16\cdot3^3 ) \\
+        &= 2 \cdot( \frac{27}{2} - \frac {27}2 - \frac{3^3}6 ) \\
+        &= 2 \cdot \frac{9}{2}
+        = 9
+    \end{align}
+    % \textbf{Solution Notes}
+    % \begin{itemize}
+    %     \item Some students used
+    %         \begin{align}
+    %     \text{mass}=\int_{0}^{2}\int_{0}^{2 - y} \int_0^{2 - x } \delta \, dz \, dx \, dy  
+    % \end{align}
+    % This is not correct, but if we were to evaluate the above integral we would find that 
+    % $$\text{mass} = 16$$
+    % \end{itemize}
+    }
+    \else
+
+    \fi
+\fi
+
+
+\ifnum \Version=16
+
+\question[4] Object $D$ lies above the $xy-$plane and below the upper half of the sphere $\rho^2 = 16$. The density of the object at any point in $D$ is equal to the distance from the point to the origin. Use spherical coordinates to calculate the mass of the object, $M$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Using $\delta = \sqrt{x^2+y^2+z^2} = \rho$, the mass is computed using 
+    \begin{align}
+        M &= \int_0^{2\pi} \int_0^{\pi/2} \int_0^4 \delta \, \rho^2\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/2} \int_0^4 \rho^3\sin\phi \, d\rho\,d\phi\,d\theta \\
+        &= \int_0^{2\pi} \int_0^{\pi/2} \left. \frac14 \rho^4\sin\phi \right|_0^4 \, d\phi\,d\theta \\
+        &= 4^3 \int_0^{2\pi} \int_0^{\pi/2} \sin\phi \, d\phi\,d\theta \\
+        &= 4^3 \int_0^{2\pi} \left. -\cos\phi \right|_0^{\pi/2} \, d\theta \\
+        &= 4^3 \int_0^{2\pi}  \, d\theta \\
+        &= 128\pi
+    \end{align}
+    
+    } 
+   \else
+      \vspace{1cm}
+   \fi    
+\fi

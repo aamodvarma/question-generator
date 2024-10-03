@@ -1,0 +1,223 @@
+% 13.2
+
+\ifnum \Version=1
+\part The velocity of a particle at time $t$ is given by $\mathbf v(t) = \langle 4t,\sin(t),2e^{2t} \rangle$ and the position of the object when $t=0$ is $\mathbf r = \langle 1,1,1\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $\langle 2t^2 + 1, -\cos(t) + 2, e^{2t} \rangle$ \\[12pt] \textit{Solutions:} $\mathbf r = \int \mathbf v(t) \, dt = \langle 2t^2 + c_1, -\cos(t) + c_2, e^{2t} +c_3\rangle$. And $\mathbf r(0) = \langle c_1, c_2-1,1+c_3\rangle = \langle 1,1,1\rangle $. Therefore: $\mathbf r = \langle 2t^2 + 1, -\cos(t) + 2, e^{2t} \rangle$.
+
+} 
+\else
+  
+\fi        
+\fi
+
+
+\ifnum \Version=2
+
+\part A projectile is launched from the ground with an initial speed of 120 m/sec, at an angle of elevation of $\theta$, where $\sin \theta = \frac12$. If we use $g = 10$ m/s$^2$ as the acceleration due to gravity, the object will reach its maximum height when  $t = \framebox{\strut\hspace{1cm}}$ seconds. 
+
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf a(t) = -g\mathbf j$ yields:
+\begin{align}
+    \mathbf a(t) = -g\mathbf j \ \Rightarrow  \  
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 
+\end{align}
+The initial velocity is 
+$$\mathbf v_0 = 120\cos\theta\mathbf i + 120\sin\theta\mathbf j$$
+The object is at its maximum height when the $\mathbf j$ component of $\mathbf v$ is zero. Setting the $\mathbf j$ component to zero, with $\sin\theta = 1/2$ and $g = 10$, we find that
+\begin{align}
+    -g t + 120\sin\theta &= 0 \\ 
+    -10 t + \frac{120}{2} &=0 \\
+    10 t &= 60 \\
+    t &= 6
+\end{align}
+So the object reaches its maximum height when $t = 6$ seconds. 
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+
+
+\ifnum \Version=3
+
+
+\part If the velocity of an object at time $t$ is $\mathbf v(t) = \langle 6t^2,\cos(t),4e^{2t} \rangle$ and its position at $t=0$ is $\mathbf r = \langle 1,2,0\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf r(t)$: 
+\begin{align}
+    \mathbf r = \int \mathbf v(t) \, dt = \langle 2t^3 + c_1, \sin(t) + c_2, 2e^{2t} +c_3\rangle
+\end{align}
+And $\mathbf r(0) = \langle c_1, c_2,2+c_3\rangle = \langle 1,2,1\rangle $. Therefore, $\mathbf r = \langle 2t^3 + 1, 2+\sin(t), 2e^{2t} -2\rangle$.
+
+} 
+\else
+  
+\fi        
+\fi
+
+\ifnum \Version=4
+
+
+\part Consider the initial value problem (IVP): $  \mathbf r ' = 32t\mathbf i + 6t^2\mathbf j + 4\mathbf k$, $\mathbf r(0) = 3\mathbf i + 5\mathbf j + 8\mathbf k$. The solution to the IVP is $\mathbf r = \langle f(t), g(t), h(t) \rangle$, where $f(t) = \framebox{\strut\hspace{1.3cm}}$, $g(t) = \framebox{\strut\hspace{1.3cm}}$, $h(t) = \framebox{\strut\hspace{1.1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+
+\begin{align}
+    f(t) &= \int 32 t \, dt = 16t^2 +c_1 \\
+    g(t) &= \int 6t^2 \, dt = 2t^3 +c_2 \\
+    h(t) &= \int 4 \, dt = 4t +c_3 
+\end{align}
+Then using $\mathbf r(0)$, we find $c_1= 3$, $c_2 = 5$, $c_3 = 8$. So
+\begin{align}
+    f(t) &= 16t^2 + 3 \\
+    g(t) &= 2t^3 + 5 \\
+    h(t) &= 4t + 8 
+\end{align}
+} 
+\else
+  
+\fi        
+\fi
+
+
+\ifnum \Version=5
+
+\part If the velocity of an object at time $t$ is $\mathbf v(t) = \langle 6t^2,\cos(t),4e^{2t} \rangle$ and its position at $t=0$ is $\mathbf r = \langle 1,2,1\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf r(t)$: 
+\begin{align}
+    \mathbf r = \int \mathbf v(t) \, dt = \langle 2t^3 + c_1, \sin(t) + c_2, 2e^{2t} +c_3\rangle
+\end{align}
+And $\mathbf r(0) = \langle c_1, c_2,2+c_3\rangle = \langle 1,2,1\rangle $. Therefore, $\mathbf r = \langle 2t^3 + 1, 2+\sin(t), 2e^{2t} -1\rangle$.
+
+} 
+\else
+  
+\fi        
+\fi
+
+\ifnum \Version=6
+
+\part A projectile is launched from the ground with an initial speed of 500 m/sec at an angle of elevation of $\theta$, where $\sin \theta = \frac12$. If we use $g = 10$ m/s$^2$ as the acceleration due to gravity, the object will return to the ground when  $t = \framebox{\strut\hspace{1cm}}$ seconds. 
+
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf a(t) = -g\mathbf j$ yields:
+\begin{align}
+    \mathbf a(t) = -g\mathbf j \ \Rightarrow  \  
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 \\
+    \mathbf r &= -\frac12gt^2\mathbf j + \mathbf v_0 t + \mathbf r_0
+\end{align}
+But the initial position is $\mathbf r_0 = \mathbf 0$, and the initial velocity is 
+$$\mathbf v_0 = 500\cos\theta\mathbf i + 500\sin\theta\mathbf j$$
+The object is on the ground when the $\mathbf j$ component of $\mathbf r$ is zero. Setting the $\mathbf j$ component to zero and using $\sin\theta = 1/2$ and $g = 10$ gives us
+\begin{align}
+    -\frac12 g t^2 + 500\sin\theta t&= 0 \\ 
+    (-\frac{gt}{2} + 500\sin\theta ) t & = 0 \\
+    (-\frac{10t}{2} + \frac{500}{2}) t & = 0 \\
+    (-5t + 250) t & = 0 \\
+    (-t + 50) t & = 0 
+\end{align}
+So the object reaches the ground when $t = 50$ seconds. 
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+\ifnum \Version=7
+
+\part A projectile is launched from the ground with an initial speed of 80 m/sec, at an angle of elevation of $\theta$, where $\sin \theta = \frac14$. If we use $g = 10$ m/s$^2$ as the acceleration due to gravity, the object will reach its maximum height when  $t = \framebox{\strut\hspace{1cm}}$ seconds. 
+
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf a(t) = -g\mathbf j$ yields:
+\begin{align}
+    \mathbf a(t) = -g\mathbf j \ \Rightarrow  \  
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 
+\end{align}
+The initial velocity is 
+$$\mathbf v_0 = 80\cos\theta\mathbf i + 80\sin\theta\mathbf j$$
+The object is at its maximum height when the $\mathbf j$ component of $\mathbf v$ is zero. Setting the $\mathbf j$ component to zero, with $\sin\theta = 1/4$ and $g = 10$, we find that
+\begin{align}
+    -g t + 80\sin\theta &= 0 \\ 
+    -10 t + \frac{80}{4} &=0 \\
+    10 t &= 20 \\
+    t &= 2
+\end{align}
+So the object reaches its maximum height when $t = 2$ seconds. 
+} 
+\else
+  
+\fi        
+\fi
+
+
+\ifnum \Version=8
+
+\part If the velocity of an object at time $t$ is $\mathbf v(t) = \langle 4t^3,\cos(t),4e^{2t} \rangle$ and its position at $t=0$ is $\mathbf r = \langle 3,5,14\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf r(t)$: 
+\begin{align}
+    \mathbf r = \int \mathbf v(t) \, dt = \langle t^4 + c_1, \sin(t) + c_2, 2e^{2t} +c_3\rangle
+\end{align}
+And $\mathbf r(0) = \langle c_1, c_2,2+c_3\rangle = \langle 3,5,14\rangle $. Therefore, $\mathbf r = \langle t^4 + 3, \sin(t) + 5 , 2e^{2t}+12\rangle$.
+
+} 
+\else
+  
+\fi        
+\fi
+
+
+\ifnum \Version=9
+
+\part Consider the initial value problem (IVP): $  \mathbf r ' = 32t\mathbf i + 6t^2\mathbf j + 4e^{2t}\mathbf k$, $\mathbf r(0) = 3\mathbf i + 5\mathbf j + 8\mathbf k$. The solution to the IVP is $\mathbf r = \langle f(t), g(t), h(t) \rangle$, where $f(t) = \framebox{\strut\hspace{1.75cm}}$, $g(t) = \framebox{\strut\hspace{1.75cm}}$, and $h(t) = \framebox{\strut\hspace{1.75cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+
+\begin{align}
+    f(t) &= \int 32 t \, dt = 16t^2 +c_1 \\
+    g(t) &= \int 6t^2 \, dt = 2t^3 +c_2 \\
+    h(t) &= \int 4 \, dt = 4t +c_3 
+\end{align}
+Then using $\mathbf r(0)$, we find $c_1= 3$, $c_2 = 5$, $c_3 = 8$. So
+\begin{align}
+    f(t) &= 16t^2 + 3 \\
+    g(t) &= 2t^3 + 5 \\
+    h(t) &= 4t + 8 
+\end{align}
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+\ifnum \Version=10
+
+\part Consider the initial value problem (IVP): $  \mathbf r ' = 32t\mathbf i + 6t^2\mathbf j + 4e^{2t}\mathbf k$, $\mathbf r(0) = 3\mathbf i + 5\mathbf j + 8\mathbf k$. The solution to the IVP is $\mathbf r = \langle f(t), g(t), h(t) \rangle$, where $f(t) = \framebox{\strut\hspace{1.75cm}}$, $g(t) = \framebox{\strut\hspace{1.75cm}}$, and $h(t) = \framebox{\strut\hspace{1.75cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+
+\begin{align}
+    f(t) &= \int 32 t \, dt = 16t^2 +c_1 \\
+    g(t) &= \int 6t^2 \, dt = 2t^3 +c_2 \\
+    h(t) &= \int 4 \, dt = 2e^{2t} 
+\end{align}
+Then using $\mathbf r(0)$, we find $c_1= 3$, $c_2 = 5$, $c_3 = 8$. So
+\begin{align}
+    f(t) &= 16t^2 + 3 \\
+    g(t) &= 2t^3 + 5 \\
+    h(t) &= 2e^{2t} + 6
+\end{align}
+} 
+\else
+  
+\fi        
+\fi

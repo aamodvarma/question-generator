@@ -1,0 +1,109 @@
+% H) UNIT 5
+\part
+\ifnum \Version=1
+    If $x \in \mathbb R^2$ and $A = \begin{pmatrix} 4&1\\1&4 \end{pmatrix}$, then the maximum value of $Q = x^TAx$, subject to the constraint $\|x\|=1$ is $Q = \framebox{\strut\hspace{1cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The eigenvalues of $A$ (by inspection) are $\lambda_1 = 3$ and $\lambda_2=5$. So the maximum value of $Q$ subject to the constraint is $\lambda_2 = 5$.   } \fi    
+\fi 
+\ifnum \Version=2
+
+    If $x \in \mathbb R^2$ and $A = \begin{pmatrix} -2&1\\1&-2 \end{pmatrix}$, then the minimum value of $Q = x^TAx$, subject to the constraint $\|x\|=1$ is $Q = \framebox{\strut\hspace{1cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The eigenvalues of $A$ (by inspection) are $\lambda_1 = -3$ and $\lambda_2=-1$. So the minimum value of $Q$ subject to the constraint is $\lambda_2 = -3$.   } \fi        
+\fi 
+\ifnum \Version=3
+    Suppose $A$ is a $2\times 2$ matrix with distinct eigenvalues, $A=A^T$, and $A$ has eigenvector $v_1$ corresponding to eigenvalue $\lambda_1$, where $v_1 = \begin{pmatrix} 1\\7 \end{pmatrix}$. If another eigenvector of $A$ is $v_2 = \begin{pmatrix} 21\\k\end{pmatrix}$, and $v_2$ corresponds to eigenvalue $\lambda_2$, where $\lambda_1 \ne \lambda_2$, then $k = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $k=-3$.   } \fi    
+\fi 
+\ifnum \Version=4
+    Suppose $A$ is an $2\times 2$ matrix and $A=A^T$. Suppose also that $x$ and $y$ are vectors in $\mathbb R^2$, and $Ax = 5x$ and $Ay = -y$. If $x=\begin{pmatrix} 3\\1\end{pmatrix}$, and $y=\begin{pmatrix} 4\\k\end{pmatrix}$, then $k=\framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $k=-12$.  } \fi    
+\fi 
+\ifnum \Version=5
+    The condition number of the matrix $A=\begin{pmatrix}-2&0\\0&6 \end{pmatrix}$ is 
+        \framebox{\strut\hspace{1cm}}.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A^TA = \begin{pmatrix} 4&0\\0&36\end{pmatrix}$, so $\sigma_1 = 6$, $\sigma_2 = 2$, and the condition number is $\kappa  = \frac{\sigma_1}{\sigma_2} = \frac 62 = 3$.   } \fi    
+\fi 
+\ifnum \Version=6
+    If $A^TA = \begin{pmatrix} 3&1\\1&3 \end{pmatrix}$ then the maximum of $\|A\vec x\|$ subject to the constraint $\|\vec x\|=1$ is $\framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:}  The maximum of $\|A\vec x\|$ is the largest singular value of $A$, which are the square roots of the eigenvalues of $A^TA$. We could use the roots of the characteristic polynomial to obtain the eigenvalues, but it is faster to look for values of $\lambda$ that force $A - \lambda I$ to be singular (ie - dependent columns). By inspection the eigenvalues of $A^TA$ are $\lambda_1=4$ and $\lambda_2 = 2$. So $\sigma_1 = 2$, $\sigma_2 = \sqrt 2$. The largest singular value is 2, so the answer is 2. } \fi    
+\fi 
+\ifnum \Version=7
+    If $A = \begin{pmatrix} 1&k\\k&0\end{pmatrix}$ and $\vec x = \begin{pmatrix} x_1\\x_2\end{pmatrix}$, then the quadratic form $Q = \vec x ^T A \vec x$ is positive semi-definite when $k = \framebox{\strut\hspace{1cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the form is positive semi-definite when all of the eigenvalues are non-negative. Note that:
+    \begin{itemize}
+        \item By inspection we can see that when $k=0$ that the form will be positive semi-definite because the matrix will be triangular with non-negative entries on the main diagonal. But are there any other values of $k$ that would work? 
+        \item We can look at the eigenvalues of the matrix \(A = \begin{pmatrix} 1 & k \\ k & 0 \end{pmatrix}\). We solve the characteristic equation, which is given by
+    \[ \text{det}\begin{pmatrix} 1-\lambda & k \\ k & -\lambda \end{pmatrix} = (1-\lambda)(-\lambda) - k^2 = \lambda^2 - \lambda - k^2 = 0 \]
+    The solutions to this quadratic equation are the eigenvalues of matrix \(A\). They are
+    $$\lambda = \frac12 \left( 1 \pm \sqrt{1 + 4 k^2}\right)$$ So when $k=0$ the eigenvalues are $1,0$. For all other values of $k$ there are two eigenvalues with opposite signs. When the eigenvalues have opposite signs the form is not positive semi-definite (it is indefinite). 
+    \item The only value of $k$ that makes the form positive semi-definite is $k=0$. 
+    \end{itemize}
+    } \fi    
+\fi 
+\ifnum \Version=8
+    If matrix $A$ has the SVD $A=U\Sigma V^T$, where $\Sigma = \begin{pmatrix} 3&0\\0&1\end{pmatrix}$, then the condition number of $A$ is $\kappa = \framebox{\strut\hspace{1cm}}$ and the dimension of $\Row A$ is $\framebox{\strut\hspace{1cm}}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the condition number is the ratio of the largest and smallest singular values, so $\kappa = 3/1 = 3$. The dimension of the row space is the number of pivot rows, which is 2. } \fi    
+\fi 
+\ifnum \Version=9
+    The singular values of $A=\begin{pmatrix} 3&8\\-4&6\end{pmatrix}$ are $\sigma_1 = \framebox{\strut\hspace{1cm}}$ and $\sigma_2 = \framebox{\strut\hspace{1cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Singular values are the square roots of the eigenvalues of $A^TA$. So we can first compute \(A^TA\):
+    \begin{align}
+        A^TA = \begin{pmatrix} 3 & -4 \\ 8 & 6 \end{pmatrix} \begin{pmatrix} 3 & 8 \\ -4 & 6 \end{pmatrix} 
+        = \begin{pmatrix} 9 + 16 & 24 - 24 \\ 24 - 24 & 64+36 \end{pmatrix}
+        = \begin{pmatrix} 25 & 0 \\ 0 & 100 \end{pmatrix}
+    \end{align} 
+    
+    The eigenvalues of \(A^TA\) could be obtained by solving the characteristic equation. But $A^TA$ happens to be triangular, so we can obtain the eigenvalues by inspection as $\lambda_1 = 100$ and $\lambda_2 = 25$. The singular values are the square roots of these numbers, so $\sigma_1 = 10$ and $\sigma_2 = 5$. Singular values are ordered from largest to smallest, so this is the only acceptable answer. } \fi    
+\fi 
+\ifnum \Version=10
+    Suppose $A$ is an $2\times 2$ matrix and $A=A^T$. Suppose also that $x$ and $y$ are vectors in $\mathbb R^2$, and $Ax = 5x$ and $Ay = 3y$. If $x=\begin{pmatrix} 5\\-2\end{pmatrix}$, and $y=\begin{pmatrix} 12\\k\end{pmatrix}$, then $k=\framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} Given that \(A = A^T\), \(A\) is a symmetric matrix. The fact that \(Ax = 5x\) and \(Ay = 3y\) implies that \(x\) and \(y\) are eigenvectors of \(A\) with eigenvalues \(5\) and \(3\) respectively. The eigenvalues are distinct, Now, since \(A\) is symmetric, its eigenvectors are orthogonal. Therefore, \(v_1\) and \(v_2\) are orthogonal. If \(x\) and \(y\) are orthogonal vectors, their dot product is zero. The dot product of two vectors \(v\) and \(u\) is given by:
+    \[ v \cdot u = v^T u \]
+    In this case, if \(x\) and \(y\) are orthogonal, then:
+    \[ x^T y = \begin{pmatrix} 5 & -2 \end{pmatrix} \begin{pmatrix} 12 \\ k \end{pmatrix} = 5 \cdot 12 + (-2) \cdot k = 60 - 2k = 0 \]
+    Solving for \(k\):
+    \begin{align*}
+        60 - 2k &= 0 \\ 
+        2k &= 60 \\
+        k &= 30 
+    \end{align*}
+    Therefore, \(k\) must be \(30\). } \fi      
+\fi 
+\ifnum \Version=11
+    The condition number of the matrix $A=\begin{pmatrix}-4&0\\0&8\end{pmatrix}$ is 
+        \framebox{\strut\hspace{1cm}}.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A^TA = \begin{pmatrix} 16&0\\0&64\end{pmatrix}$, so $\sigma_1 = \sqrt{64} = 8$, $\sigma_2 = \sqrt{16} = 4$, and the condition number is $\kappa  = \frac{\sigma_1}{\sigma_2} = \frac 84 = 2$.   } \fi      
+\fi 
+\ifnum \Version=12
+    If $A$ is a real $2\times2$ matrix and $A^TA = \begin{pmatrix} 16&0\\0&1 \end{pmatrix}$, then the first right singular vector of $A$ is $\vec v_1 = \begin{pmatrix} c_1\\c_2\end{pmatrix}$, where $c_1 = \framebox{\strut\hspace{1cm}}$ and $c_2 = \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} The right singular vectors are the unit eigenvectors of $A^TA$. The eigenvalues are $\lambda_1=16$ and $\lambda_2=1$. The first right singular vector will correspond to $\lambda_1 = 16$, and the vector will be a unit vector in the null space of $A^TA - \lambda_1I$. 
+    \begin{align}
+        A^TA - 16 I &= \begin{pmatrix} 0&0\\0&-15\end{pmatrix} 
+    \end{align} So we can use $\vec v_1 = \begin{pmatrix} \pm 1 & 0\end{pmatrix}^T$. Thus $c_1$ can be either $+1$ or $-1$, but $c_2=0$.   } \fi    
+\fi 
+\ifnum \Version=13
+    The condition number of the matrix $A=\begin{pmatrix}-2&0\\0&8 \end{pmatrix}$ is 
+        \framebox{\strut\hspace{1cm}}.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} $A^TA = \begin{pmatrix} 4&0\\0&64\end{pmatrix}$, so $\sigma_1 = 8$, $\sigma_2 = 2$, and the condition number is $\kappa  = \frac{\sigma_1}{\sigma_2} = \frac 82 = 4$.   } \fi    
+\fi 
+\ifnum \Version=14 % 
+    Suppose $Q$ is the quadratic form \(Q = x^TAx\), where \(A\) is the symmetric matrix \(A = \begin{pmatrix} k & 4 \\ 4 & k \end{pmatrix}\) and $x = \begin{pmatrix} x_1\\x_2 \end{pmatrix}$. The quadratic form \(Q\) is positive definite when $k > \framebox{\strut\hspace{1cm}}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} the characteristic polynomial is 
+    $$p(\lambda) 
+    = \det(A - \lambda I) 
+    = (k-\lambda)^2 - 4^2 
+    = \lambda^2 -2k\lambda + k^2 - 16$$
+    Then the roots are
+    $$\lambda  = \frac{2k}{2} \pm \frac12 \sqrt{(2k)^2 - 4( k^2 - 16)} = k \pm \frac12 \sqrt{4\cdot 16} = k \pm 4$$
+    The form is positive definite when the eigenvalues are all positive, which happens when $k > 4$.  } \fi    
+\fi 
+\ifnum \Version=15 % shouldn't need this version for fall 2023
+    FILL IN THE BLANK ON UNIT 5
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:} SOLUTION HERE  } \fi    
+\fi 
+
+
+

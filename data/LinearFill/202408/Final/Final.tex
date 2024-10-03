@@ -1,0 +1,126 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\Version}{11}
+\newcommand{\Solutions}{1} 
+\newcommand{\SetNumber}{0} % can set this variable to zero here it gets updated automatically later
+\newcommand{\TwoPartPageTwo}{0} % some versions have two questions on teh second page
+
+
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+
+% TIKZ DIAGRAMS (IF NEEDED)
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% SUBSPACES AND ORTHOGONALITY
+\newcommand{\Perp}{^{\perp}}
+\newcommand{\Row}{\text{Row}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\Nul}{\text{Null}}
+\newcommand{\Null}{\text{Null}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Rank}{\text{rank}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\Dim}{\text{dim}}
+
+% ADJUST MARGINS
+\usepackage[tmargin=2.0in,bmargin=1.75in]{geometry}
+\geometry{margin=0.76in}
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.0,0.2,0.4} % 
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+\headheight 42pt % distance from top of page to top of header
+\headsep 12pt % space between header and top of body
+
+\newcommand{\ID}{Fill in the blanks with a dark pen or pencil. 
+Using only capital letters print your \\ first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, the remaining digits \\[2pt] of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}, the High School you attend: \framebox{\strut\hspace{5.2cm}}.}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+\begin{document}
+    
+% TEST SPECIFIC INFORMATION
+
+\ifnum \Version=1 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample A} \fi % A FALL 2022 EXAM
+\ifnum \Version=2 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample B} \fi % A FALL 2022 EXAM
+\ifnum \Version=3 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample C} \fi % A FALL 2022 EXAM
+\ifnum \Version=4 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample D} \fi % A FALL 2022 EXAM
+\ifnum \Version=5 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample E} \fi % A FALL 2022 EXAM
+\ifnum \Version=6 \newcommand{\TestName}{Year 1 MATH 1554 Final Exam Sample F} \fi % A FALL 2022 EXAM
+
+\ifnum \Version=7 \newcommand{\TestName}{Year 1 Final Exam Version Dec 7 A1} \fi % A FALL 2023 EXAM
+\ifnum \Version=8 \newcommand{\TestName}{Year 1 Final Exam Version Dec 7 A2} \fi % A FALL 2023 EXAM
+\ifnum \Version=9 \newcommand{\TestName}{Year 1 Final Exam Version Dec 8 B1} \fi % A FALL 2023 EXAM
+\ifnum \Version=10 \newcommand{\TestName}{Year 1 Final Exam Version Dec 8 B2} \fi % A FALL 2023 EXAM
+\ifnum \Version=11 \newcommand{\TestName}{Year 1 Final Exam Version C1} \fi % A FALL 2023 EXAM
+\ifnum \Version=12 \newcommand{\TestName}{Year 1 Final Exam Version C2} \fi % A FALL 2023 EXAM
+\ifnum \Version=13 \newcommand{\TestName}{Year 1 Final Exam Version D1} \fi % A FALL 2023 EXAM
+\ifnum \Version=14 \newcommand{\TestName}{Year 1 Final Exam Version D2} \fi % A FALL 2023 EXAM
+
+% UPDATE SET NUMBER FOR ADDITIONAL RANDOMIZATION
+\ifnum \Version=1 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=2 \renewcommand{\SetNumber}{2} \fi
+\ifnum \Version=3 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=4 \renewcommand{\SetNumber}{2} \fi
+\ifnum \Version=5 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=6 \renewcommand{\SetNumber}{2} \fi
+\ifnum \Version=7 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=8 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=9 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=10 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=11 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=12 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=13 \renewcommand{\SetNumber}{1} \fi
+\ifnum \Version=14 \renewcommand{\SetNumber}{1} \fi
+
+% TITLE
+\begin{center}
+\ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{Solutions}}\\[6pt]}\fi
+{\Large \TestName}
+\end{center}
+
+\textit{Work done on scratch paper will not be graded. You do not need to show your work on pages 1 and 2. }
+
+\begin{questions}
+\question[0.5] \ID
+
+\ifnum \SetNumber = 1
+    \input{202308/Final/Q2/FinalQ2}
+    \input{202308/Final/Q3/FinalQ3}
+\fi 
+\ifnum \SetNumber = 2
+    \input{202308/Final/Q3/FinalQ3}
+    \input{202308/Final/Q2/FinalQ2}    
+\fi 
+
+\newpage
+\question[0.25] \ID
+
+\input{202308/Final/Q5/FinalQ5} % 6 or 8 points depending on the version
+\input{202308/Final/Q6/FinalQ6} % some versions have a 2-point question
+
+\newpage
+\question[0.25] \ID
+\input{202308/Final/Q7/FinalQ7}
+
+\end{questions}
+
+\end{document}

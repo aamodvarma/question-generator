@@ -1,0 +1,365 @@
+% SOMETHING FROM 16.1 TO 16.5
+
+% READY
+\ifnum \Version=1
+    \part The circulation of $\displaystyle\mathbf F=(1-y) \mathbf i +x \, \mathbf j$ on the circle $\mathbf r(t) = (\cos t )\mathbf i + (\sin t )\mathbf j$,  $0\le t \le 2\pi$ is $I = \int_a^b f(t) \, dt$, where $a=\framebox{\strut\hspace{1cm}}$, $b=\framebox{\strut\hspace{1cm}}$, $f(t)=\framebox{\strut\hspace{2cm}}$, $I =\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=\cos t$, $y=\sin t$, and
+    \begin{align}
+        a &= 0 \\
+        b &= 2\pi \\
+        f(t) &= \mathbf F(t) \cdot \mathbf r'(t) = \langle 1 - \sin t, \cos t\rangle \cdot \langle -\sin t, \cos t \rangle = 1 - \sin t
+    \end{align}
+    Then
+    \begin{align}
+        I &= \int_0^{2\pi} 1 - \sin t \, dt = 2\pi - 0 = 2\pi
+    \end{align}
+    Parameterizations are not unique, so we could make other choices for $a$, $b$, and $f$, but regardless of what we choose we should get $I=2\pi$. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+% THIS COMES FROM 16.3
+\ifnum \Version=2
+    \part A potential function for the conservative field $\mathbf F = 2y\mathbf i + 2x\mathbf j$ is $f(x,y) = \framebox{\strut\hspace{1.5cm}}$. If $C$ is any smooth curve joining the points $(1,0)$ to $(1,1)$, then $\int_C \mathbf F\cdot d\mathbf r = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} By inspection, if $f = 2xy + C$ then 
+    \begin{align*}
+         \nabla f &= 2y\mathbf i + 2x\mathbf j = \mathbf F
+    \end{align*}
+    So a potential function is $f = 2xy + C$, but the question only asks for a potential function, so we could also use $f=2xy$. The $+C$ is optional. Don't forget a potential function for a field $\mathbf F$ is defined as \textbf{any} scalar function $f$ so that $\nabla f = \mathbf F$. Then the line integral is
+    \begin{align}
+        \int_C \mathbf F\cdot d\mathbf r = f(1,1) - f(1,0) = 2 - 0 = 2
+    \end{align}
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+% READY FOR PRACTICE EXAM
+% FROM 16.2
+\ifnum \Version=3
+    \part If $C$ is the curve $x = t, y = 3t + 1$ for $0\le t \le 3$, then $I = \int_C (x +y) dx = \int_a^b f(t) dt$, where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$, $f(t) = \framebox{\strut\hspace{2cm}}$. Evaluating this integral we obtain $I = \framebox{\strut\hspace{1cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=t$, $y= 3t+1$, $0\le t \le 3$, so $dx = dt$, and 
+    \begin{align}
+        I = \int_C (x +y) dx = \int_0^3 (t + (3t+1)) dt = \int_0^3 4t+1 \, dt = 2\cdot 3^2 + 3 = 21
+    \end{align}
+    So we obtain
+    \begin{align}
+        a &= 0 \\
+        b &= 3 \\
+        f(t) &= 4t+1 \\
+        I &= 21
+    \end{align}
+    Parameterizations are not unique, so we could make other choices for $a$, $b$, and $f$, but regardless of what we choose we should get $I=21$. 
+    } 
+   \else
+   \fi
+\fi 
+    
+    
+
+
+
+\ifnum \Version=4
+    \part Using Green's theorem, the outward flux of $\mathbf F(x,y) = x\mathbf i + y^2\mathbf j$ across the boundary of the region enclosed by $x=0$, $x = 1$ and $y=0$, and $y = 2$ is $\displaystyle I = \int_0^b\int_0^d g(x,y) \, dy\, dx$, where $b=\framebox{\strut\hspace{1cm}}$, $d = \framebox{\strut\hspace{1cm}}$, $g(x,y) = \framebox{\strut\hspace{2cm}}$. Evaluating the integral we obtain $I = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} We are given an field of the form
+    \begin{align}
+        \mathbf F(x,y) = M\mathbf i + N\mathbf j, \quad M = x, \ N = y^2
+    \end{align}
+    Using Green's theorem for outward flux,
+    \begin{align*}
+         \text{outward flux} = \oint \mathbf F \cdot \mathbf n \, ds &=
+         \iint_R \left(
+         \frac{\partial M}{\partial x} + 
+         \frac{\partial N}{\partial y} 
+         \right) dA \\
+         &=
+         \int_0^1\int_0^2 \left(
+         1 + 2y
+         \right) dy \, dx \\   
+         &=
+         \int_0^1 (y + y^2)\large|_0^2 \ dx \\        
+         &= 6
+    \end{align*}
+    Thus, 
+    \begin{align}
+        b &= 1 \\
+        d &= 2 \\
+        g &= 1+2y \\
+        I &= 6
+    \end{align}
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+
+
+% FROM 16.1
+% SET TO VERSION 3
+\ifnum \Version=5
+    \part If $C$ is the straight line segment from the point $P(0,0,0)$ to the point $Q(1,2,2)$, then $I = \int_C (x + y) ds = \int_0^1 f(t) dt$, where $f(t) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=t$, $y=z=2t$, $0\le t \le 1$, so
+    \begin{align}
+        \mathbf r(t) &= \langle t,2t,2t \rangle\\
+        \left| \mathbf r'(t) \right| &= \sqrt{1^2+(2)^2+2^2} = 3 \\
+        I &= \int_C (x+ y) ds = \int_0^1 (t+2t) \, 3 \, dt = \int_0^1 9t \, dt 
+    \end{align}
+    So $f(t) = 9t$. This answer should be unique. 
+    } 
+   \else
+   \fi
+\fi 
+
+\ifnum \Version=6
+   \part $R$ is the region bounded below by $y=0$ and bounded above $y=\sin x$ for $0\leq x\leq \pi$. If curve $C$ is the boundary of $R$ traversed counterclockwise,  then $\displaystyle \oint_C 2 y \, dx + 4x \,dy = \framebox{\strut\hspace{1cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    we can approach this problem a few different ways. Using Green's theorem for circulation we would use 
+    \begin{align}
+       \oint_C 2 y \, dx + 4x \,dy  
+       & = \oint_C M\, dx + N \,dy  \\
+       M&= 2y \\
+       N&= 4x \\
+       \frac{\partial N}{\partial x} &= 4 \\
+       \frac{\partial M}{\partial y} &= 2
+    \end{align}   
+    The region is bounded below by $y=0$ and above by $\sin x$. By Green's Theorem the integral becomes:
+    \begin{align}
+       \oint_C 2 y \, dx + 4x \,dy 
+       & = \iint_R N_x - M_y \, dy\,dx \\
+       &= \iint_R  4 - (2) \;dy\,dx \\
+       &=  \int_0^{\pi}\int_0^{\sin x} 2\;dy\,dx \\
+       &= -2\cos x \Big\vert_0^\pi \\
+       &= -2(0-1) \\
+       &= 2  
+    \end{align}
+    There are a few other ways of approaching this, we could for example use the flux form of Green's Theorem, which gives us
+    \begin{align}
+       \oint_C 2 y \, dx + 4x \,dy  = \oint_C \mathbf F \cdot \mathbf n \, ds 
+       & = \oint_C M\, dy - N \,dx  \\
+       M&= 4x \\
+       N&= -2y \\
+       \frac{\partial M}{\partial x} &= 4 \\
+       \frac{\partial N}{\partial y} &= -2 \\
+       \oint_C 2 y \, dx + 4x \,dy 
+       & = \iint_R M_x + N_y \, dy\,dx \\
+       &= \iint_R  4 - 2 \;dy\,dx \\
+       &=  \int_0^{\pi}\int_0^{\sin x} 2\;dy\,dx \\
+       &= -2\cos x \Big\vert_0^\pi \\
+       &= -2(0-1) \\
+       &= 2         
+    \end{align}    
+    Yet another way would be to parameterize the two boundaries, compute the integrals over each boundary, and add the two results together. 
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+% FROM 16.2
+\ifnum \Version=7
+    \part The line integral of $\mathbf F=4x\mathbf i+y\mathbf j+z\mathbf k$ from $P(0,0,0)$ to $Q(1,2,2)$ over the curve $\mathbf r(t) = t\mathbf i + 2t\mathbf j + 2t\mathbf k$ is $\int_C \mathbf F\cdot d\mathbf r = \int_0^1 f(t) dt$, where $f(t) = \framebox{\strut\hspace{2cm}}$.  
+
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=t$, $y=2t$, and $z=2t$, $0\le t \le 1$, so
+    \begin{align}
+        \mathbf r(t) &= t\mathbf i + 2t\mathbf j + 2t\mathbf k\\
+         \mathbf r'(t) &= \mathbf i + 2\mathbf j + 2\mathbf k \\
+         \mathbf F (\mathbf r(t)) &= 4t\mathbf i +2t\mathbf j +2t\mathbf k\\
+        \int_0^1 \mathbf F(\mathbf r(t)) \cdot \mathbf r'(t) dt &= \int_0^1 (4t + 4t + 4t) \, dt = \int_0^1 12t \, dt 
+    \end{align}
+    So $f(t) = 12t$. This answer should be unique. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+% GOOD BUT NOT NEEDED
+\ifnum \Version=8
+    \part Evaluate $\int_C (y+1+x^2)\,dx + (3x+1-y^2)\,dy$ where $C$ is the circle $x^2+y^2=4$. \framebox{\strut\hspace{1.5cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} we can approach this problem a few different ways. Using Green's theorem for circulation we would use
+    \begin{align*}
+        \int_C (3y+1+x^2)\,dx + (4x+1-y^2)\,dy 
+        &= \int_C M \, dx + N \, dy, \ M = 3y+1+x^2, \ N = 4x+1-y^2 \\
+        &= \iint \left( \frac{\partial}{\partial x} (3x+1-y^2)\right) - \left( \frac{\partial}{\partial y} (y+1+x^2)\right) dA \\
+        &= \iint (3- 1) dA \\
+        &= 2\cdot (\text{area of circle radius 2}) \\
+        &= 8\pi
+    \end{align*}
+    } 
+   \else
+      
+   \fi
+\fi 
+
+
+
+% FROM 16.1
+\ifnum \Version=9
+    \part If $C$ is the straight line segment from the point $P(0,0)$ to the point $Q(4,3)$, then $I = \int_C (x +y) ds = \int_0^1 f(t) dt$, where $f(t) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=4t$, $y= 3t$, $0\le t \le 1$, so
+    \begin{align}
+        \mathbf r(t) &= \langle4t,3t\rangle\\
+        \left| \mathbf r'(t) \right| &= \sqrt{4^2+3^2} = 5 \\
+        I &= \int_C (x+ y) ds = \int_0^1 (4t+3t) \, 5 \, dt = \int_0^1 35t \, dt 
+    \end{align}
+    So $f(t) = 35t$. This answer should be unique. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+
+\ifnum \Version=10
+    \part Using Green's Theorem, the counterclockwise circulation of the field $\mathbf F(x,y) = y\mathbf i + 2xy\mathbf j$ around the boundary of the region in the first quadrant enclosed by the lines $y=0$, $x = 1$ and $y=x$, is $\int_a^b\int_c^d f(x,y) \, dy\,dx$, where $b=\framebox{\strut\hspace{1.5cm}}, d=\framebox{\strut\hspace{1.5cm}}, f(x,y)=\framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} using Green's theorem,
+    \begin{align*}
+         \text{circulation} &= 
+         \iint_R \left(
+         \frac{\partial N}{\partial x} - 
+         \frac{\partial M}{\partial y} 
+         \right) dA =
+         \int_0^1\int_0^x \left(
+         2y - 
+         1
+         \right) dy \, dx 
+    \end{align*}
+    So $b=1, d=x, f(x,y) = 2y-1$. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+
+% BASED ON 16.2 #29
+\ifnum \Version=11
+    \part $C$ is the circle $\mathbf r(t) = (\cos t )\mathbf i + (\sin t )\mathbf j$, $0\le t \le 2\pi$. The flux of $\displaystyle\mathbf F=  \mathbf i + 2\mathbf j$ across $C$ is $I = \int_C \mathbf F\cdot \mathbf n \, ds$. After evaluating the integral we calculate the flux to be $I =\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} The flux is
+    \begin{align}
+        \oint M\, dy - N\, dx
+    \end{align}
+    Set $x=\cos t$, $y=\sin t$, and
+    \begin{align}
+        M &= 1\\
+        N &= 2 \\
+        dy &= \cos t \, dt \\
+        dx &= -\sin t \, dt \\
+        \oint M\, dy - N\, dx & = \int_0^{2\pi} \cos t  - ( -2 \sin t )\, dt 
+         = \int_0^{2\pi}  \cos t + 2\sin t \, dt 
+        = 0
+    \end{align}
+    Calculations are not necessary if we consider that the field is constant. The flux of a constant field across any closed curve will have to be zero. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+
+% THIS COMES FROM 16.3
+\ifnum \Version=12
+    \part A potential function for the conservative field $\mathbf F = 2xy\mathbf i + x^2\mathbf j + \mathbf k$ is $f(x,y,z) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} By inspection, if $f = x^2y + z+ C$ then 
+    \begin{align*}
+         \nabla f &= 2y\mathbf i + 2x\mathbf j + z \mathbf k = \mathbf F
+    \end{align*}
+    So a potential function is $f = x^2y + z+ C$, but the question only asks for a potential function, so we could also use $f = x^2y + z$. The $+C$ is optional because our textbook defines a potential function for a field $\mathbf F$ is defined as \textbf{any} scalar function $f$ so that $\nabla f = \mathbf F$. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+
+
+% FROM 16.1
+\ifnum \Version=13
+    \part If $C$ is the straight line segment from the point $P(0,0)$ to the point $Q(6,8)$, then $I = \int_C (x +y) ds = \int_0^1 f(t) dt$, where $f(t) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    Set $x=6t$, $y= 8t$, $0\le t \le 1$, so
+    \begin{align}
+        \mathbf r(t) &= \langle6t,8t\rangle\\
+        \left| \mathbf r'(t) \right| &= \sqrt{6^2+8^2} = \sqrt{100}=10 \\
+        I &= \int_C (x+ y) ds = \int_0^1 (6t+8t) \, 10 \, dt = \int_0^1 140t \, dt 
+    \end{align}
+    So $f(t) = 140t$. This answer should be unique. 
+    } 
+   \else
+   \fi
+\fi 
+
+% THIS COMES FROM 16.3
+\ifnum \Version=14
+    \part A potential function for the conservative field $\mathbf F = 4x^3z\mathbf i + \mathbf j + x^4\mathbf k$ is $f(x,y,z) = \framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} By inspection, if $f = x^4z + y + C$ then 
+    \begin{align*}
+         \nabla f &= 4x^3z\mathbf i + \mathbf j + x^4 \mathbf k = \mathbf F
+    \end{align*}
+    So a potential function is $f = f = x^4z + y + C$, but the question only asks for a potential function, so we could also use $f = x^4z + y $. The $+C$ is optional because our textbook defines a potential function for a field $\mathbf F$ is defined as \textbf{any} scalar function $f$ so that $\nabla f = \mathbf F$. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+% BASED ON 16.2 #29
+\ifnum \Version=15
+    \part $C$ is the circle $\mathbf r(t) = (\cos t )\mathbf i + (\sin t )\mathbf j$, $0\le t \le 2\pi$. The circulation of $\displaystyle\mathbf F=  \mathbf i + 2\mathbf j$ across $C$ is $I = \int_C \mathbf F\cdot \mathbf T \, ds$. After evaluating the integral we calculate the circulation to be $I =\framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}  Set $x=\cos t$, $y=\sin t$. The flow over the closed path is
+    \begin{align}
+        \oint_C \mathbf F\cdot \mathbf T \, ds 
+        &= \int_0^{2\pi} \mathbf F(t) \cdot \mathbf r'(t) \, dt \\
+        &= \int_0^{2\pi} (\mathbf i +2\mathbf j)\cdot (-\sin t\mathbf i + \cos t \mathbf j) \, dt \\
+        &= \int_0^{2\pi} -\sin t + 2\cos t \, dt \\       
+        &= 0
+    \end{align}
+    Calculations are not necessary if we consider that the field is constant. The circulation of a constant field across any closed curve will have to be zero. 
+    } 
+   \else
+   \fi
+\fi 
+
+
+% THIS COMES FROM 16.3
+\ifnum \Version=16
+    \part A potential function for the conservative field $\mathbf F$ is $f(x,y) = 4+2x+y.$ If $C$ is any smooth curve joining the points $(1,0)$ to $(1,3)$, then $\int_C \mathbf F\cdot d\mathbf r = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} The line integral is
+    \begin{align}
+        \int_C \mathbf F\cdot d\mathbf r = f(1,3) - f(1,0) = 9 - 6 = 3
+    \end{align}
+    } 
+   \else
+   \fi
+\fi 

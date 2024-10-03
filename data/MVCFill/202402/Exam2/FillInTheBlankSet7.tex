@@ -1,0 +1,304 @@
+
+\ifnum \Version=1
+% THOMAS 14.8
+\part The maximum value of $z(x,y) = 4x+8y$ subject to $x^2+2y^2=12$ is located at a point where $x = \framebox{\strut\hspace{1cm}}$, and $y =  \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+2y^2-12 =0$, and set $\nabla z = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 4,8\rangle &= \lambda \langle 2x,4y\rangle \\
+        x&= y = 2/\lambda 
+    \end{align*}
+    Substitute into constraint:
+    \begin{align*}
+        12&=x^2+2y^2 = (2/\lambda)^2 + 2(2/\lambda)^2 \\
+        12\lambda^2 &= 2^2 + 2\cdot 2^2 \\ 
+        3\lambda^2 &= 1 + 2\cdot 1 \\ 
+        \lambda &= \pm 1
+    \end{align*}
+    Substitute into $x=y=2/\lambda$ gives us 
+    $$x=y = \pm 2$$
+    There are two critical points at $(2,2)$ and at $(-2,-2)$. There are no critical points at points where $x$ and $y$ have opposite signs because we found that $x$ and $y$ are equal. 
+    
+    Also we don't need to evaluate $z$ at both of them and use the maximum value. Because $z = 4x+8y$, we know the maximum will occur when both $x$ and $y$ are positive. The maximum occurs at $$x=y=2$$
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=2
+\part The point on the plane $4x+2y+8z=50$ that is closest to the point $(0,0,1)$ is $P(a,b,c)$, where $a = \framebox{\strut\hspace{.75cm}}$, $b = \framebox{\strut\hspace{.75cm}}$, $c = \framebox{\strut\hspace{.75cm}}$. Hint: use Lagrange Multipliers with $f=x^2+y^2+(z-1)^2$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Set $f=x^2+y^2+(z-1)^2$ and $g = 4x+2y+8z-50=0$. Then $\nabla f = \langle 2x, 2y, 2z-2 \rangle$ and $\nabla g = \langle4,2,8 \rangle$. Then \begin{align*}
+    \nabla f &= \lambda \nabla g \quad \Rightarrow \quad 
+    \begin{pmatrix} 2x\\2y\\2z-2\end{pmatrix} = \lambda \begin{pmatrix} 4\\2\\8\end{pmatrix}
+\end{align*}
+Thus $x=2\lambda, \ y = \lambda, \ z = 4\lambda +1$. Substitute into constraint:
+\begin{align*}
+    0&=4(2\lambda)+2(\lambda)+8(4\lambda +1)-50\\
+    50&=8\lambda +2\lambda + 32\lambda + 8\\
+    42&=42\lambda \\
+    \lambda&=1
+\end{align*}
+Thus the point is $(2,1,5)$.
+
+
+    } 
+   \else
+      
+   \fi
+\fi
+
+
+
+
+
+\ifnum \Version=3
+\part The point on the plane $4x+2y+8z=58$ that is closest to the point $(0,0,2)$ is $P(a,b,c)$. where $a = \framebox{\strut\hspace{.75cm}}$, $b = \framebox{\strut\hspace{.75cm}}$, $c = \framebox{\strut\hspace{.75cm}}$. Hint: use Lagrange Multipliers with $f=x^2+y^2+(z-2)^2$. 
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} Set $f=x^2+y^2+(z-2)^2$ and $g = 4x+2y+8z-58=0$. Then $\nabla f = \langle 2x, 2y, 2z-4 \rangle$ and $\nabla g = \langle4,2,8 \rangle$. Then 
+    \begin{align*}
+    \nabla f &= \lambda \nabla g \\ 
+    \begin{pmatrix} 2x\\2y\\2z-4\end{pmatrix}&= \lambda \begin{pmatrix} 4\\2\\8\end{pmatrix}
+    \end{align*}
+    Thus $x=2\lambda, \ y = \lambda, \ z = 4\lambda +2$. Substitute into constraint to find
+    \begin{align*}
+        0&=4(2\lambda)+2(\lambda)+8(4\lambda +2)-58\\
+        58&=8\lambda +2\lambda + 32\lambda + 16\\
+        42&=42\lambda \\
+        \lambda&=1
+    \end{align*}
+    Thus the point is $(2,1,6)$.
+    } 
+   \else
+      
+   \fi
+\fi
+
+
+\ifnum \Version=4
+% THOMAS 14.8
+\part The point on the graph of $z = x^2+ y^2+10$ nearest the plane $4x + 2y - z = 0$ is located at $P(a,b,c)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$, $c = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} we want the point on $z$ where the tangent plane is parallel to the plane $4x + 2y - z = 0$. The surface $f = z - x^2 - y^2 - 10 = 0$ has a tangent plane whose normal vector is
+    \begin{align*}
+        \nabla f &= -2x \mathbf i - 2y \mathbf j + \mathbf k = \begin{pmatrix} -2x\\-2y \\ 1\end{pmatrix}
+    \end{align*}
+    The plane has normal vector $\mathbf n$, where
+    \begin{align}
+        \mathbf n = 4\mathbf i + 2\mathbf k - \mathbf k = \begin{pmatrix} 4\\2\\-1\end{pmatrix}
+    \end{align}
+    The two vectors are parallel when $\nabla f$ is some scalar multiple of $\mathbf n$. If the scalar multiple is $k$, that happens when 
+    \begin{align}
+        \nabla f &= k \mathbf n \\
+        \begin{pmatrix} -2x\\-2y \\ 1\end{pmatrix} &= k \begin{pmatrix} 4\\2\\-1\end{pmatrix}
+    \end{align}
+    Comparing each component of these vectors individually, we need $k=-1$, $x=2$, and $y=1$. To obtain the $z$ coordinate of $P$ we substitute $x=2$ and $y=1$ into the expression for $z$ to obtain
+    $$z(2,1) = (2)^2 + (1)^2 + 10 = 15$$
+    So the point is $P(2,1,15)$, and $a = 1$, $b = 2$, $c=15$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=5
+% THOMAS 14.8
+\part The minimum value of $z(x,y) = 4x+2y$ subject to $2x^2+y^2=1$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$. 
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = 2x^2+y^2-1 =0$, and set $\nabla z = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 4,2\rangle &= \lambda \langle 4x,2y\rangle \\
+        x&= y = 1/\lambda 
+    \end{align*}
+    Substitute into constraint:
+    \begin{align*}        
+        1&=2x^2+y^2 = 2(1/\lambda)^2 + (1/\lambda)^2 \\
+        \lambda^2 &= 3 \\ 
+        \lambda &= \pm \sqrt3 \\
+        x&= y = \pm 1/\sqrt3 
+    \end{align*}
+    There are only two critical points, and they are located at
+    $$\left( \frac{1}{\sqrt3} ,\frac{1}{\sqrt3} \right), \ \left( \frac{-1}{\sqrt3} ,\frac{-1}{\sqrt3} \right)$$
+    There are two critical points but we don't need to evaluate $z$ at all of them and use the minimum value. Because $z = 4x+2y$, we know the minimum will occur when both $x$ and $y$ are negative. The minimum occurs at $$\left(\frac{-1}{\sqrt 3} , \frac{-1}{\sqrt 3}\right)$$
+    So $$a = b = - \frac{1}{\sqrt3}$$
+    If you prefer, we can express these values in other ways. Don't forget that 
+    $$\frac{1}{\sqrt 3} = \frac{\sqrt3}{3}$$
+    } 
+\else
+  
+\fi
+\fi
+
+
+\ifnum \Version=6
+% THOMAS 14.8
+\part The maximum value of $f(x,y) = 8x+6y$ subject to $x^2+y^2=1$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-1 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 8,6\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 4/\lambda, \ y = 3/\lambda \\ 
+        1&=x^2+y^2 = (4/\lambda)^2 + (3/\lambda)^2 \\
+        \lambda^2 &= 4^2 + 3^2 \\ 
+        \lambda &= \pm 5 \\
+        x&= \pm 4/5, \ y = \pm 3/5
+    \end{align*}
+    Maximum occurs at $(4/5, 3/5)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+
+
+\ifnum \Version=7
+% THOMAS 14.8
+\part The maximum value of $f(x,y) = 4x+2y$ subject to $x^2+y^2=5$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-5 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 4,2\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 2/\lambda, \ y = 1/\lambda 
+\end{align*}
+    Substitute into constraint.
+\begin{align*}         
+        5&=x^2+y^2 = (2/\lambda)^2 + (1/\lambda)^2 \\
+        5\lambda^2 &= 2^2 + 1^2 \\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 2, \ y = \pm 1
+    \end{align*}
+    Maximum occurs at $(2,1)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+\ifnum \Version=8
+% THOMAS 14.8
+\part The minimum value of $f(x,y) = 4x+2y$ subject to $x^2+y^2=5$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-5 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 4,2\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 2/\lambda, \ y = 1/\lambda 
+    \end{align*}
+        Substitute into constraint.
+    \begin{align*}          
+        5&=x^2+y^2 \\
+        5&= (2/\lambda)^2 + (1/\lambda)^2 \\
+        5\lambda^2 &= 2^2 + 1^2 = 5\\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 2, \ y = \pm 1
+    \end{align*}
+    Minimum occurs at $(-2,-1)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=9
+% THOMAS 14.8
+\part The minimum value of $f(x,y) = 2x+6y$ subject to $x^2+y^2=10$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-10 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 2,6\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 1/\lambda, \ y = 3/\lambda 
+    \end{align*}
+    Substitute into constraint.
+    \begin{align*}          
+        10 &=x^2+y^2 \\
+        10 &= (1/\lambda)^2 + (3/\lambda)^2 \\
+        10\lambda^2 &= 1 + 9 = 10 \\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 1, \ y = \pm 3
+    \end{align*}
+    Minimum occurs at $(-1,-3)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=10
+% THOMAS 14.8
+\part The maximum value of $f(x,y) = 2x+6y$ subject to $x^2+y^2=10$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-10 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 2,6\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 1/\lambda, \ y = 3/\lambda 
+    \end{align*}
+    Substitute into constraint.
+    \begin{align*}          
+        10 &=x^2+y^2 \\
+        10 &= (1/\lambda)^2 + (3/\lambda)^2 \\
+        10\lambda^2 &= 1 + 9 = 10 \\ 
+        \lambda &= \pm 1 
+    \end{align*}
+    Determine values of $x$ and $y$: 
+    \begin{align}
+        \lambda = +1: \quad x&= 1/\lambda = 1, \ y= 3/\lambda = 3 \ \Rightarrow \ (1,3)\\
+        \lambda = -1: \quad x&= 1/\lambda = -1, \ y= 3/\lambda = -3 \ \Rightarrow \ (-1,-3)
+    \end{align}
+    Evaluate $f$ at critical points: 
+    \begin{align}
+        f(1,3) &= 2\cdot1 + 6\cdot3 = 20 \\
+        f(-1,-3) &= 2\cdot(-1) + 6\cdot (-3) = -20
+    \end{align}
+    Maximum occurs at $(1,3)$. 
+    } 
+\else
+  
+\fi
+\fi
+
+
+
+
+\ifnum \Version=11
+% THOMAS 14.8
+\part The minimum value of $f(x,y) = 2x+6y$ subject to $x^2+y^2=10$ is located at $P(a,b)$ where $a = \framebox{\strut\hspace{1cm}}$, $b = \framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 
+    {\color{DarkBlue} \textit{Solutions:} set $g = x^2+y^2-10 =0$, and set $\nabla f = \lambda \nabla g$. Then
+    \begin{align*}
+        \langle 2,6\rangle &= \lambda \langle 2x,2y\rangle \\
+        x&= 1/\lambda, \ y = 3/\lambda 
+    \end{align*}
+    Substitute into constraint.
+    \begin{align*}          
+        10 &=x^2+y^2 \\
+        10 &= (1/\lambda)^2 + (3/\lambda)^2 \\
+        10\lambda^2 &= 1 + 9 = 10 \\ 
+        \lambda &= \pm 1 \\
+        x&= \pm 1, \ y = \pm 3
+    \end{align*}
+    Minimum occurs at $(-1,-3)$. 
+    } 
+\else
+  
+\fi
+\fi

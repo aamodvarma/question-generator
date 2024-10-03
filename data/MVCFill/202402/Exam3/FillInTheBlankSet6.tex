@@ -1,0 +1,451 @@
+% APPLICATIONS or CYLINDRICAL or SPHERICAL (THOMAS 15.6 OR 15.7)
+
+
+\ifnum \Version=1
+% SHORT SPHERICAL AND CYLINDRICAL EXERCISE
+% VERBATUM FROM SPRING 2022 QUIZ
+% hand written solution only
+\part Point $P$ has rectangular (Cartesian) coordinates $(x,y,z) = (0,-3,4)$ in $\mathbb R^3$. In cylindrical coordinates, the point is $(r,\theta,z)$, and in spherical coordinates the point is $(\rho, \phi, \theta)$. Where $r=\framebox{\strut\hspace{1cm}}$, $\theta=\framebox{\strut\hspace{1cm}}$, $z=\framebox{\strut\hspace{1cm}}$, $\rho=\framebox{\strut\hspace{1.5cm}}$, and $\phi=\framebox{\strut\hspace{3cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} To convert to cylindrical we can use the equation $r^2 = x^2 + y^2$. 
+    \begin{align}
+        r^2 &= x^2 + y^2 = 0^2 + (-3)^2 = 9 \ \Rightarrow \ r = 3 
+    \end{align}
+    To determine $\theta$ we notice that $P$ lies on the $y-$axis and has a negative $y$ value. So $\theta = 3\pi/2$.
+    $$\displaystyle (r,\theta,z) = (3,\frac{3\pi}2,4)$$
+    In spherical, we can start by obtaining $\rho$. 
+    \begin{align}
+        \rho^2 &= x^2+y^2+z^2\\
+        \rho^2 &= 0^2 + (-3)^2 + 4^2 = 25 \\
+        \rho &= 5 
+    \end{align}
+    To obtain $\phi$ we can use the equation that relates $y$ to spherical. Using the expression for $y$, and the values that we already have for $y$, $\rho$ and $\theta$:
+    \begin{align}
+        y &= \rho \sin\phi \sin\theta \\
+        -3 &= 5\sin\phi \sin(3\pi/2) \\
+        3 &= 5\sin\phi \\
+        \sin\phi &= 3/5 \\
+        \phi &= \arcsin (3/5)
+    \end{align}
+    Our coordinates in spherical are
+    \begin{align}
+        \rho &= 5\\
+        \phi &= \arcsin (3/5)\\
+        \theta &= \frac{3\pi}2  
+    \end{align}
+    Note the following.
+    \begin{itemize}
+        \item Note that we could also obtain $\phi$ using a right-angle triangle in the $yz-$plane. 
+        \item Other similar approaches can lead to other equivalent expressions for $\phi$, such as $\phi = \arctan(3/4)$.
+        \item Our particular textbook uses the convention $(\rho, \phi, \theta)$, not $(\rho, \theta,\phi)$.
+    \end{itemize}
+    } 
+    \else
+      
+    \fi
+    
+\fi
+
+% 15.6
+% BASED ON  THOMAS, 15.6 #3
+% GOOD PROBLEM FOR #4, EASY
+\ifnum \Version=2
+    \part A thin plate of density $\delta(x,y)=2$ is bounded by $y=x-1$ and $y=5-x^2$. The plate has mass $M$, and the $y-$coordinate of the center of mass is $\bar y = M_x/M$, where $M_x = \int_a^b \int_c^d f(x,y) \, dy \, dx$,  and $b=\framebox{\strut\hspace{1.0cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, and $f(x,y) = \framebox{\strut\hspace{2cm}}$. 
+
+    \ifnum \Solutions=1
+    {\color{DarkBlue}
+    The region is bounded by 
+    $$x-1 \le y \le 5-x^2$$
+    The given curves intersect when 
+    \begin{align}
+        x-1 &= 5-x^2 \\
+        0 &= x^2 +x -6 \\
+        &= (x+3)(x-2)
+    \end{align}
+    Thus
+    \begin{align}
+        \bar y &= \frac{M_x}M = \frac1M \int_{-3}^{2}\int_{x-1}^{5-x^2} 2y \, dy \, dx
+    \end{align} 
+    The density of the plate is $\delta = 2$. Thus
+    \begin{align}
+        a &= -3 \\
+        b &= 2 \\
+        c&= x-1 \\
+        d&= 5-x^2 \\
+        f(x,y) &= \delta y = 2y
+    \end{align}
+    }
+   \else
+   \fi
+    
+\fi
+
+
+
+
+
+
+% 15.6
+% BASED ON  THOMAS, 15.6 Example 2
+% GOOD PROBLEM FOR #3, EASY
+\ifnum \Version=3
+    \part $R$ is the region in the $xy-$plane bounded by $y=4x$ and the curve $y=x^2$. Then $R$ has area $M$, and the $x-$coordinate of the centroid is $\bar x = M_y/M$, where $M_y = \int_a^b \int_c^d f(x,y) \, dy \, dx$,  and $a=\framebox{\strut\hspace{1.0cm}}$, $b=\framebox{\strut\hspace{1.0cm}}$, $c=\framebox{\strut\hspace{2cm}}$, $d=\framebox{\strut\hspace{2cm}}$, and $f(x,y) = \framebox{\strut\hspace{2cm}}$. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The region is bounded by 
+    $$x^2 \le y \le 4x$$
+    The curves $y=x^2$ and $y=4x$ intersect at $x=0$ and $x=4$. 
+    Thus
+    \begin{align}
+        \bar x &= \frac1M \int_{0}^{4}\int_{x^2}^{4x} x \, dy \, dx
+    \end{align} 
+    Thus,
+    \begin{align}
+        a &= 0 \\
+        b &= 4 \\
+        c&= x^2 \\
+        d&= 4x \\
+        f(x,y) &= x
+    \end{align}
+    }
+    \newpage
+   \else
+
+   \fi
+    
+\fi
+
+
+
+% 15.6
+% BASED ON  THOMAS, 15.6 #3
+% GOOD PROBLEM FOR #4, EASY
+\ifnum \Version=4
+    \part A thin plate with density $\delta=4$ is bounded in the $xy-$plane by $x=2-y$ and $x=y^2$. The plate has mass $M$, and the $y-$coordinate of the center of mass is $\bar y = M_x/M$, where $M_x = \int_a^b \int_c^d f(x,y) \, dx \, dy$,  and $a=\framebox{\strut\hspace{0.8cm}}$, $b=\framebox{\strut\hspace{0.8cm}}$, $c=\framebox{\strut\hspace{1.0cm}}$, $d=\framebox{\strut\hspace{1.0cm}}$, $f(x,y) = \framebox{\strut\hspace{1.0cm}}$. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The region is bounded by 
+    $$y^2 \le x \le 2-y$$
+    The given curves intersect when 
+    \begin{align}
+        y^2 &= 2-y \\
+        0 &= y^2 +y -2 \\
+        &= (y-1)(y+2)
+    \end{align}
+    Thus
+    \begin{align}
+        \bar y &= \frac{M_x}M = \frac1M \int_{-2}^{1}\int_{y^2}^{2-y} 4y \, dx \, dy
+    \end{align} 
+    Thus
+    \begin{align}
+        a &= -2 \\
+        b &= 1 \\
+        c&= y^2 \\
+        d&= 2-y \\
+        f(x,y) &= \delta y = 4y
+    \end{align}
+    }
+   \else
+
+   \fi
+    
+\fi
+
+
+
+\ifnum \Version=5
+% SHORT SPHERICAL AND CYLINDRICAL EXERCISE
+\part Point $P$ has rectangular (Cartesian) coordinates $(x,y,z) = (2,2,1)$ in $\mathbb R^3$. In cylindrical coordinates, the point is $(r,\theta,z)$, and in spherical coordinates the point is $(\rho, \phi, \theta)$. Where $r=\framebox{\strut\hspace{1cm}}$, $\theta=\framebox{\strut\hspace{2cm}}$, $z=\framebox{\strut\hspace{1cm}}$, $\rho=\framebox{\strut\hspace{2cm}}$, and $\phi=\framebox{\strut\hspace{3cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} To convert to cylindrical we can use the equation $r^2 = x^2 + y^2$. 
+    \begin{align}
+        r^2 &= x^2 + y^2 = 2^2 + 2^2 = 8 \ \Rightarrow \ r = 2\sqrt2
+    \end{align}
+    To determine $\theta$ we can use $\tan\theta = y/x$. 
+    \begin{align}
+        \tan \theta &= \frac{y}{x} = \frac{2}{2} = 1  \\
+        \theta &= \arctan 1 = \pi/4
+    \end{align} 
+    The point in cylindrical is: 
+    \begin{align}
+        (r,\theta,z) &= (2\sqrt2,\pi/4,1) \\
+        r &= 2\sqrt2 \\
+        \theta &= \pi/4 \\
+        z &= 1
+    \end{align}
+    In spherical, we can start by obtaining $\rho$. 
+    \begin{align}
+        \rho^2 &= x^2+y^2+z^2\\
+        \rho^2 &= 2^2 + 2^2 + 1^2 = 9 \\
+        \rho &= 3
+    \end{align}
+    To obtain $\phi$ we can use the equation that relates $y$ to spherical. Using the expression for $y$, and the values that we already have for $y$, $\rho$ and $\theta$:
+    \begin{align}
+        y &= \rho \sin\phi \sin\theta \\
+        2 &= 3\sin\phi \sin(\pi/4) \\
+        \sin\phi &= \frac{2}{3 \sin(\pi/4)}  = \frac{2\sqrt2}{3}\\
+        \phi &= \arcsin (2\sqrt2/3)
+    \end{align}
+    Our coordinates in spherical are
+    \begin{align}
+        \rho &= 3\\
+        \phi &= \arcsin (2\sqrt2/3)\\
+        \theta &= \pi/4
+    \end{align}
+    Note the following.
+    \begin{itemize}
+        \item Note that we could also obtain $\phi$ using the equation $x = \rho \sin\phi \cos\theta$ but we would obtain the same answer with just as much work. 
+        \item We can, for this exercise, leave un-evaluated trig functions in the answer, because the question didn't specify that you should simplify your answer as much as possible. So it would be ok to leave your answer for $\theta$ as $\arctan 1$ or $\tan^{-1} 1$. 
+        \item Our particular textbook uses the convention $(\rho, \phi, \theta)$, not $(\rho, \theta,\phi)$.
+    \end{itemize}
+    } 
+    \else
+      
+    \fi
+    
+\fi
+
+
+
+% 15.6
+% BASED ON  THOMAS, 15.6 #3
+% EASY? NOT SURE? 
+\ifnum \Version=6
+    \part A thin plate with density $\delta=12$ is bounded in the $xy-$plane by $y=x-2$ and $x=y^2$. The plate has mass $M$, and the $y-$coordinate of the center of mass is $\bar y = M_x/M$, where $M_x = \int_a^b \int_c^d f(x,y) \, dx \, dy$,  and $a=\framebox{\strut\hspace{1.5cm}}$, $b=\framebox{\strut\hspace{1.5cm}}$, $c=\framebox{\strut\hspace{3.0cm}}$, $d=\framebox{\strut\hspace{3.0cm}}$, and $f(x,y) = \framebox{\strut\hspace{2.0cm}}$. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The region is bounded by 
+    $$y^2 \le x \le y+2$$
+    The given curves intersect when 
+    \begin{align}
+        y^2 &= y+2 \\
+        0 &= y^2 - y -2 \\
+        &= (y-2)(y+1)
+    \end{align}
+    The curves intersect at $y=-1,2$. Using $x=y^2$, the intersection points are $(1,-1)$ and $(4,2)$. The region is shown below. 
+    \begin{center}  
+        \begin{tikzpicture}[scale=1.25]
+            \begin{axis}[
+            axis lines = middle, very thick,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            xmin=-5, xmax=5.75,
+            ymin=-3.5, ymax=5.75,
+            xtick={-4,-2,0,2,4},
+            xticklabels={-4,-2,0,2,4},
+            ytick={-2,0,2,4},
+            yticklabels={-2,0,2,4}        
+            ]
+            % Curves
+            \addplot [name path = A,-,domain = 0:5, line width=0.8mm,DarkBlue,samples = 30] {sqrt(x)} ;
+            \addplot [name path = B,-,domain = 0:5, line width=0.8mm,DarkBlue,samples = 30] {-sqrt(x)} ;
+            \addplot [name path = C, line width=0.8mm, samples=4, smooth,domain=0:5, DarkBlue] coordinates {(-1,-3)(5,3)};
+            % Fill area between paths
+            \addplot [black!30, opacity=0.2] fill between [of = A and B, soft clip={domain=0:1}];
+            \addplot [black!30, opacity=0.2] fill between [of = A and C, soft clip={domain=1:4}];
+            \end{axis}
+        \end{tikzpicture}    
+    \end{center}   
+        
+    Thus
+    \begin{align}
+        \bar y &= \frac{M_x}M = \frac1M \int_{-1}^{2}\int_{y^2}^{y+2} 12y \, dx \, dy
+    \end{align} 
+    Thus
+    \begin{align}
+        a &= -1 \\
+        b &= 2 \\
+        c&= y^2 \\
+        d&= y+2 \\
+        f(x,y) &= \delta y = 12y
+    \end{align}
+    }
+   \else
+
+   \fi
+    
+\fi
+
+\ifnum \Version=7
+% SHORT SPHERICAL AND CYLINDRICAL EXERCISE
+\part Point $P$ has rectangular (Cartesian) coordinates $(x,y,z) = (-6,0,8)$ in $\mathbb R^3$. In cylindrical coordinates, the point is $(r,\theta,z)$, and in spherical coordinates the point is $(\rho, \phi, \theta)$. Where $r=\framebox{\strut\hspace{1cm}}$, $\theta=\framebox{\strut\hspace{2cm}}$, $z=\framebox{\strut\hspace{1cm}}$, $\rho=\framebox{\strut\hspace{2cm}}$, and $\phi=\framebox{\strut\hspace{3cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} To convert to cylindrical we can use the equation $r^2 = x^2 + y^2$. 
+    \begin{align}
+        r^2 &= x^2 + y^2 = (-6)^2 + 0^2 = 36 \ \Rightarrow \ r = 6
+    \end{align}
+    To determine $\theta$ we can use $\tan\theta = y/x$. 
+    \begin{align}
+        \tan \theta &= \frac{y}{x} = \frac{0}{-6} = 0  \\
+        \theta &= \arctan 0 
+    \end{align} 
+    The point in cylindrical is: 
+    \begin{align}
+        (r,\theta,z) &= (6,\pi,8) \\
+        r &= 6 \\
+        \theta &= \pi \\
+        z &= 8
+    \end{align}
+    In spherical, we can start by obtaining $\rho$. 
+    \begin{align}
+        \rho^2 &= x^2+y^2+z^2\\
+        \rho^2 &= (-6)^2 + 0^2 + 8^2 = 36+64 = 100 \\
+        \rho &= 10
+    \end{align}
+    To obtain $\phi$ we can use the equation that relates $x$ to spherical. Using the expression for $x$, and the values that we already have for $x$, $\rho$ and $\theta$:
+    \begin{align}
+        x &= \rho \sin\phi \cos\theta \\
+        -6 &= 10\sin\phi \cos(\pi) \\
+        \sin\phi &= \frac{-6}{10 \cos(\pi)}  = \frac{6}{10}\\
+        \phi &= \arcsin (6/10)
+    \end{align}
+    Our coordinates in spherical are
+    \begin{align}
+        \rho &= 10\\
+        \phi &= \arcsin (6/10)\\
+        \theta &= \pi
+    \end{align}
+    Note the following.
+    \begin{itemize}
+        \item We can, for this exercise, leave un-evaluated trig functions in the answer, because the question didn't specify that you should simplify your answer as much as possible. So it would be ok to leave your answer for $\theta$ as $\arctan 0$ or $\tan^{-1} 0$. 
+        \item Our particular textbook uses the convention $(\rho, \phi, \theta)$, not $(\rho, \theta,\phi)$.
+    \end{itemize}
+    } 
+    \else
+      
+    \fi
+    
+\fi
+
+
+
+
+
+\ifnum \Version=8
+% SHORT SPHERICAL AND CYLINDRICAL EXERCISE
+\part Point $P$ has rectangular (Cartesian) coordinates $(x,y,z) = (4,4,7)$ in $\mathbb R^3$. In cylindrical coordinates, the point is $(r,\theta,z)$, and in spherical coordinates the point is $(\rho, \phi, \theta)$. Where $r=\framebox{\strut\hspace{1cm}}$, $\theta=\framebox{\strut\hspace{2cm}}$, $z=\framebox{\strut\hspace{1cm}}$, $\rho=\framebox{\strut\hspace{2cm}}$, and $\phi=\framebox{\strut\hspace{3cm}}$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} To convert to cylindrical we can use the equation $r^2 = x^2 + y^2$. 
+    \begin{align}
+        r^2 &= x^2 + y^2 = (4)^2 + 4^2 = 32 \ \Rightarrow \ r = \sqrt{32} = 4\sqrt2
+    \end{align}
+    It isn't necesssary to simplify to $4\sqrt2$. Then to determine $\theta$ we can use $\tan\theta = y/x$. 
+    \begin{align}
+        \tan \theta &= \frac{y}{x} = \frac{4}{4} = 1  \\
+        \theta &= \arctan \pi/4
+    \end{align} 
+    The point in cylindrical is: 
+    \begin{align}
+        (r,\theta,z) &= (4\sqrt2,\pi/4,7) \\
+        r &= 4\sqrt2 \\
+        \theta &= \pi/4 \\
+        z &= 7
+    \end{align}
+    In spherical, we can start by obtaining $\rho$. 
+    \begin{align}
+        \rho^2 &= x^2+y^2+z^2\\
+        \rho^2 &= (4)^2 + 4^2 + 7^2 = 16+16+49 = 32+49 = 81 \\
+        \rho &= 9
+    \end{align}
+    To obtain $\phi$ we can use the equation that relates $x$ to spherical. Using the expression for $x$, and the values that we already have for $x$, $\rho$ and $\theta$:
+    \begin{align}
+        x &= \rho \sin\phi \cos\theta \\
+        4 &= 9\sin\phi \cos(\pi/4) \\
+        \sin\phi &= \frac{4}{9 \cos(\pi/4)}  = \frac{4\sqrt2}{9}\\
+        \phi &= \arcsin \left(\frac{4\sqrt2}{9}\right)
+    \end{align}
+    Note for $\phi$ we can also use:
+    \begin{align}
+        y &= \rho \sin\phi \sin\theta \\
+        4 &= 9\sin\phi \sin(\pi/4) \\
+        \sin\phi &= \frac{4}{9 \sin(\pi/4)}  = \frac{4\sqrt2}{9}\\
+        \phi &= \arcsin \left(\frac{4\sqrt2}{9}\right)
+    \end{align}    
+    And we can also use:
+    \begin{align}
+        z &= \rho \cos\phi  \\
+        7 &= 9\cos\phi  \\
+        \sin\phi &= \frac{4}{9 \sin(\pi/4)}  = \frac{4\sqrt2}{9}\\
+        \phi &= \arccos \left(\frac{7}{9}\right)
+    \end{align}      
+    Our coordinates in spherical are
+    \begin{align}
+        \rho &= 9\\
+        \phi &= \arcsin \left(\frac{4\sqrt2}{9}\right), \ \textbf{or} \ \phi = \arccos(7/9)\\
+        \theta &= \pi/4
+    \end{align}
+    Note the following.
+    \begin{itemize}
+        \item We can, for this exercise, leave un-evaluated trig functions in the answer, because the question didn't specify that you should simplify your answer as much as possible. So it would be ok to leave your answer for $\theta$ as $\arctan 1$ or $\tan^{-1} 1$. 
+        \item Our particular textbook uses the convention $(\rho, \phi, \theta)$, not $(\rho, \theta,\phi)$.
+    \end{itemize}
+    } 
+    \else
+      
+    \fi
+    
+\fi
+
+
+
+
+
+% 15.6
+% CENTROID Y-COORDINATE PARABOLA AND LINE
+\ifnum \Version=9
+    \part A thin plate with density $\delta=12$ is bounded in the $xy-$plane by $y=3-x^2$ and $y=1-x$. The plate has mass $M$. The $y-$coordinate of the centroid is $\bar y = M_x/M$, where $\displaystyle M_x = \int_A^B \int_C^D f(x,y) \, dy \, dx$,  and $A=\framebox{\strut\hspace{1cm}}$, $B=\framebox{\strut\hspace{1cm}}$, $C=\framebox{\strut\hspace{3cm}}$, $D=\framebox{\strut\hspace{3cm}}$, and $f(x,y) = \framebox{\strut\hspace{3cm}}$. 
+    
+    \ifnum \Solutions=1 
+    {\color{DarkBlue}
+    The region is bounded by 
+    $$1-x \le y \le 3-x^2$$
+    The given curves intersect when 
+    \begin{align}
+        1-x &= 3-x^2\\
+        0 &= x^2-x-2 \\
+        &= (x-2)(x+1)
+    \end{align}
+    The curves intersect at $x=-1,2$. Using $y=1-x$, the intersection points are $(-1,2)$ and $(2,-1)$. The region is shown below. 
+    \begin{center}  
+        \begin{tikzpicture}[scale=1.25]
+            \begin{axis}[
+            axis lines = middle, very thick,
+            xlabel = {$x$},
+            ylabel = {$y$},
+            xmin=-5, xmax=5.75,
+            ymin=-3.5, ymax=5.75,
+            xtick={-4,-2,0,2,4},
+            xticklabels={-4,-2,0,2,4},
+            ytick={-2,0,2,4},
+            yticklabels={-2,0,2,4}        
+            ]
+            % Curves
+            \addplot [name path = A,-,domain = -2.2:2.5, line width=0.8mm,DarkBlue,samples = 30] {3-x^2} ;
+            \addplot [name path = C,-,domain = -2.2:2.5, line width=0.8mm,DarkBlue,samples = 4] {1-x} ;
+            % Fill area between paths
+            \addplot [black!30, opacity=0.2] fill between [of = A and C, soft clip={domain=-1:2}];
+            \end{axis}
+        \end{tikzpicture}    
+    \end{center}   
+        
+    Thus
+    \begin{align}
+        \bar y &= \frac{M_x}M = \frac1M \int_{-1}^{2}\int_{1-x}^{3-x^2} 12y \, dy \, dx
+    \end{align} 
+    Thus
+    \begin{align}
+        A &= -1 \\
+        B &= 2 \\
+        C&= 1-x \\
+        D&= 3-x^2 \\
+        f(x,y) &= \delta y = 12y
+    \end{align}
+    }
+   \else
+
+   \fi
+    
+\fi

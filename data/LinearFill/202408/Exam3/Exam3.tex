@@ -1,0 +1,87 @@
+\documentclass[12pt]{exam}
+\newcommand{\Solutions}{1} 
+\newcommand{\SetNumber}{0} % can set this variable to zero here it gets updated automatically later
+
+
+
+\begin{document}
+
+    \foreach \i in {0,...,9} {
+    \newcommand{\Version}{\i}
+
+    % TEST SPECIFIC INFORMATION
+    \ifnum \Version=0 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample A} \fi % already in Canvas
+    \ifnum \Version=1 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample B} \fi
+    \ifnum \Version=2 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample C} \fi
+    \ifnum \Version=3 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample D} \fi
+    \ifnum \Version=4 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Sample E} \fi
+    
+    \ifnum \Version=6 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Version A1} \fi 
+    \ifnum \Version=7 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Version B} \fi 
+    \ifnum \Version=8 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Version C} \fi 
+    \ifnum \Version=5 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Version D} \fi % revised fall 2022 exam 
+    \ifnum \Version=20 \newcommand{\TestName}{Year 1 MATH 1554 Exam 2 Version A2} \fi 
+    
+    
+    % UPDATE SET NUMBER FOR ADDITIONAL RANDOMIZATION
+    \ifnum \Version=0 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=1 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=2 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=3 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=4 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=5 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=6 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=7 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=8 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=9 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=20 \renewcommand{\SetNumber}{2} \fi
+    
+    \newpage % ensures each exam is on its own page
+
+    % MAKE VERSION A2 = C
+    \ifnum \Version = 20
+        \renewcommand{\Version}{8}
+    \fi
+
+    
+    % TITLE
+    \begin{center}
+    \ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{Solutions}}\\[6pt]}\fi
+    {\Large \TestName}
+    \end{center}
+    
+    \textit{Work done on scratch paper will not be graded. You do not need to show your work on page 1. }
+    
+    \begin{questions}
+    
+    \ifnum \SetNumber=1    
+        \question[0.5] \ID
+        \input{202408/Exam2/Exam2Q2}
+        \ifnum \Solutions=1 \newpage \fi
+        \input{202408/Exam2/Exam2Q3} 
+        \newpage
+        \question[0.25] \ID
+        \input{202408/Exam2/Exam2Q5}
+        \input{202408/Exam2/Exam2Q6}
+        \ifnum \Solutions=0 \newpage \fi
+        \question[0.25] \ID
+        \input{202408/Exam2/Exam2Q8}
+    \fi 
+
+
+    \ifnum \SetNumber=2
+        \question[0.5] \ID
+        \input{202408/Exam2/Exam2Q3}
+        \ifnum \Solutions=1 \newpage \fi
+        \input{202408/Exam2/Exam2Q2} 
+        \newpage
+        \question[0.25] \ID
+        \input{202408/Exam2/Exam2Q6}
+        \input{202408/Exam2/Exam2Q5}
+        \ifnum \Solutions=0 \newpage \fi
+        \question[0.25] \ID
+        \input{202408/Exam2/Exam2Q8}
+    \fi    
+    \end{questions}
+}
+\end{document}

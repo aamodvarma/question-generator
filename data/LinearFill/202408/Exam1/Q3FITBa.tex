@@ -1,0 +1,207 @@
+\ifnum \Version=1
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first reflects points in $\mathbb R^2$ through the line $x_1 + x_2 = 0$ and then projects them onto the $x_2$-axis then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, the first standard vector $e_1$ is transformed as follows.
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix} 0\\-1 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} 
+    \end{align}
+    In other words, the reflection maps $e_1 = \begin{pmatrix}1\\0 \end{pmatrix}$ to $\begin{pmatrix} 0\\-1 \end{pmatrix}$, and the projection does not affect the vector because it is already on the $x_2$-axis. 
+
+    The second standard vector $e_2$ is transformed as follows. 
+    \begin{align}
+        e_2 &= \begin{pmatrix} 0\\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix} \to \begin{pmatrix}0\\0 \end{pmatrix} 
+    \end{align}
+    In other words, the reflection maps $e_2 = \begin{pmatrix}0\\1 \end{pmatrix}$ to $\begin{pmatrix} -1\\0 \end{pmatrix}$, and the projection collapses vector onto the $x_2$-axis, turning it into a zero vector. 
+
+    Putting everything together we have
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} = T(e_1)\\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 0\\0 \end{pmatrix} = T(e_2)
+    \end{align}        
+    Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 0\\-1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=0$, $a_3=-1$, $a_4=0$. 
+    } 
+   \else
+   \fi
+\fi
+
+
+\ifnum \Version=2
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points in $\mathbb R^2$ counter-clockwise about the origin by $\pi/2$ radians and then reflects them through the line $x_1 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+        \begin{align}
+            e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+            e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix}
+        \end{align}
+        Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    } 
+   \fi
+\fi 
+
+
+
+\ifnum \Version=3
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points in $\mathbb R^2$ clockwise about the origin by $\pi/2$ radians and then reflects them through the line $x_2 = x_1$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.25cm}}$, $a_2 = \framebox{\strut\hspace{1.25cm}}$, $a_3 = \framebox{\strut\hspace{1.25cm}}$ and $a_4 = \framebox{\strut\hspace{1.25cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+        Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+        \begin{align}
+            e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to 
+            \begin{pmatrix} 0\\-1 \end{pmatrix} \to 
+               \begin{pmatrix}-1\\0 \end{pmatrix} \\
+            e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix}
+            \to \begin{pmatrix} 0\\1 \end{pmatrix} 
+        \end{align}
+        Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix}-1 & 0\\ 0 & 1\end{pmatrix}$. So $a_1=-1$, $a_2=0$, $a_3=0$, $a_4=1$. 
+    } 
+   \fi
+\fi 
+
+
+\ifnum \Version=4
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points clockwise in $\mathbb R^2$ about the origin by $\pi/2$ radians and then reflects them through the line $x_2 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix} = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    } 
+   \else
+   \fi
+\fi 
+
+\ifnum \Version=5
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points in $\mathbb R^2$ clockwise about the origin by $3\pi/2$ radians and then reflects them through the line $x_1 = x_2$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix}\to \begin{pmatrix}1\\0 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix}\to \begin{pmatrix}0\\-1 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 1 & 0\\0 & -1 \end{pmatrix}$, so $a_1=1$, $a_2=0$, $a_3=0$, $a_4=-1$. 
+    } 
+   \else
+   \fi
+\fi     
+
+
+
+\ifnum \Version=6
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first reflects points in $\mathbb R^2$ through the line $x_1 + x_2 = 0$, and then projects them onto the $x_1$-axis, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} \to \begin{pmatrix}0\\0 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 0 & -1\\0 & 0\end{pmatrix}$, so $a_1=0$, $a_2=-1$, $a_3=0$, $a_4=0$. 
+    } 
+   \else
+   \fi
+\fi     
+
+
+
+\ifnum \Version=7
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first reflects points in $\mathbb R^2$ through the line $x_1 + x_2 = 0$, and then projects them onto the $x_2$-axis, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} \to \begin{pmatrix}0\\-1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix} \to \begin{pmatrix} 0\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 0 & 0\\-1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=0$, $a_3=-1$, $a_4=0$. 
+    } 
+   \else
+   \fi
+\fi     
+
+
+
+
+\ifnum \Version=8
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first projects points in $\mathbb R^2$ onto the $x_2$-axis, then rotates them by $\pi/2$ radians counterclockwise about the origin, $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\0 \end{pmatrix} \to \begin{pmatrix}0\\0 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \to \begin{pmatrix} -1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 0 & -1\\0 & 0\end{pmatrix}$, so $a_1=0$, $a_2=-1$, $a_3=0$, $a_4=0$. 
+    } 
+   \else
+   \fi
+\fi     
+
+
+
+\ifnum \Version=9
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first reflects points in $\mathbb R^2$ through the line $x_1 = 0$, and then rotates them by $\pi/2$ radians clockwise about the origin, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}-1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 0 & 1\\1 & 0\end{pmatrix}$, so $a_1=0$, $a_2=1$, $a_3=1$, $a_4=0$. 
+    
+    } 
+   \else
+   \fi
+\fi 
+\ifnum \Version=10
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first rotates points in $\mathbb R^2$ clockwise about the origin by $3\pi/2$ radians and then reflects them through the line $x_1 = 0$, then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \textit{Solutions.} 
+     Track the path of the standard basis elements. 
+     \begin{align}
+         e_1 &\to  \begin{pmatrix} -1 \\ 0 \end{pmatrix}  \to 
+         \begin{pmatrix} 0 \\ 1  \end{pmatrix}
+         \\ 
+         e_2 &\to \begin{pmatrix} 1 \\ 0 \end{pmatrix} 
+         \to \begin{pmatrix} 1 \\ 0 \end{pmatrix} 
+     \end{align}
+    So the matrix $A = \begin{pmatrix}
+        0 & 1 \\ 1 & 0 
+    \end{pmatrix}$
+        } 
+   \else
+   \fi
+\fi        
+
+
+\ifnum \Version=11
+    \part If $A$ is $2 \times 2$ and $T_A(\vec x)=A\vec x$ is a linear transform that first  reflects them through the line $x_1 = x_2$, and then rotates points in $\mathbb R^2$ clockwise about the origin by $\pi$ radians,then $A=\begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix} $ where $a_1 = \framebox{\strut\hspace{1.0cm}}$, $a_2 = \framebox{\strut\hspace{1.0cm}}$, $a_3 = \framebox{\strut\hspace{1.0cm}}$ and $a_4 = \framebox{\strut\hspace{1.0cm}}$.
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions.} 
+
+    Using $A = \begin{pmatrix} T(e_1) & T(e_2) \end{pmatrix}$, we obtain
+    \begin{align}
+        e_1 &= \begin{pmatrix} 1\\0 \end{pmatrix} \to \begin{pmatrix}0\\1 \end{pmatrix}\to \begin{pmatrix}0\\-1 \end{pmatrix} 
+        \\
+        e_2 &= \begin{pmatrix} 0 \\1 \end{pmatrix} \to \begin{pmatrix} 1\\0 \end{pmatrix}\to \begin{pmatrix}-1\\0 \end{pmatrix}
+    \end{align}
+    Thus $A = \begin{pmatrix} 0 & -1\\-1 & 0 \end{pmatrix}$, so $a_1=0$, $a_2=-1$, $a_3=-1$, $a_4=0$.  
+    } 
+   \else
+   \fi
+\fi     
+

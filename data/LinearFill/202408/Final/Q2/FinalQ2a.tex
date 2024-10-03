@@ -1,0 +1,83 @@
+\ifnum \Version=1         
+    If there are non-trivial solutions to the linear system $A\vec x = \vec 0$, the columns of $A$ must be linearly independent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. There would need to be non-pivotal columns, which means that the columns are dependent. } \fi
+\fi
+\ifnum \Version=2      
+    If a linear system is consistent, then the solution set of the system either contains a unique solution when there are no free variables, or infinitely many solutions when there is at least one free variable.         
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True.  } \fi
+\fi    
+\ifnum \Version=3  
+    If there are non-trivial solutions to the linear system $A\vec x = \vec 0$, the columns of $A$ must be linearly dependent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. Non-trivial solutions implies that there are free variables. Free variables implies that some columns are not pivotal, which implies that the columns are dependent. } \fi
+\fi    
+\ifnum \Version=4    
+    If the linear system $Ax=b$ is inconsistent, then $b$ cannot be in the span of the columns of $A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The product $Ax$ is a linear combination of the columns of $A$ weighted by the entries of $x$. So if $Ax=b$ is inconsistent, there is no $x$ so that $Ax=b$, which is another way of saying that there is no linear combination of the columns that produces $b$. The span is the set of all possible linear combinations. } \fi
+\fi   
+\ifnum \Version=5    
+    If the columns of a $5\times4$ matrix are linearly dependent, then the first 3 columns of the matrix are also a linearly dependent set of vectors. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A counter-example would be \setlength{\extrarowheight}{0.00cm}$A=\begin{pmatrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&0\\0&0&0&0\end{pmatrix}$. } \fi
+\fi    
+\ifnum \Version=6      
+    If $\vec x_1$ is a solution to the inhomogeneous system $A\vec x = \vec b$, then any vector in Span\{$\vec x_1$\} is also a solution to $A\vec x = \vec b$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A vector in the span of $\vec v_1$ is the zero vector and the zero vector is not necessarily a solution to the system. } \fi
+\fi           
+\ifnum \Version=7 
+     If $ \vec x_1$ and $\vec x_2$ solve the inhomogenous system $A\vec x = \vec b$, then $\vec x_1 - \vec x_2$ solves $A \vec x = 0$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True.} 
+    This is due to linearity.} \fi
+\fi     
+\ifnum \Version=8
+    If the linear system $Ax=b$ is consistent, then $b$ must be in the span of the columns of matrix $A$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. The product $Ax$ is a linear combination of the columns of $A$ weighted by the entries of $x$. So if $Ax=b$ is consistent, there is an $x$ so that $Ax=b$, which is another way of saying that there is a linear combination of the columns that produces $b$. The span is the set of all possible linear combinations. } \fi
+\fi     
+\ifnum \Version=9
+  The span of two linearly independent vectors $\{\vec v_1, \vec v_2\} $ in $\mathbb R^4$ 
+  is equal to the span of $\{\vec v_1 + \vec v_2, \vec v_1 - \vec v_2 \}$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution}: True. Let $S = \Span \{\vec v_1 , \vec v_2 \}$, $ x = \vec v_1 + \vec v_2$ and $y = \vec v_1 - \vec v_2$. Then $x$ and $y$ are in $S$, they are not multiples of each other so they must be independent. And $x, y$ will span $S$ because $\dim S = 2$ and they are independent and in $S$.  
+    } \fi
+\fi     
+\ifnum \Version=10
+    If $\{\vec x,\vec y,\vec z\}$ is a linearly dependent set of vectors, then the set $\{\vec x, \vec y\}$ is also linearly dependent.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution}: False. A counterexample would be $$\vec x = \begin{pmatrix}1\\0\\0 \end{pmatrix}, \quad \vec y = \begin{pmatrix} 0\\1\\0 \end{pmatrix}, \quad \vec z = \begin{pmatrix} 1\\1\\0\end{pmatrix}$$
+    } \fi
+\fi     
+\ifnum \Version=11
+    The span of two linearly independent vectors $\{\vec v_1, \vec v_2\} $ in $\mathbb R^4$ is equal to the span of $\{\vec v_1 + \vec v_2, 2\vec v_1 +2\vec v_2 \}$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } false. Because if $S = \{\vec v_1 , \vec v_2 \}$ then $\dim(S) = 2$. But if the second set is $U = \{\vec v_1 + \vec v_2, 2\vec v_1 +2\vec v_2 \}$ then $\dim U = 1$ because the two vectors in the set are dependent.  } \fi
+\fi     
+\ifnum \Version=12
+   If there are at least two distinct solutions to $A\vec x = \vec b$, then the columns of $A$ are linearly dependent. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True. }  
+    $\vec x_1 - \vec x_2$ is a non-trival solution to $A x=0$.} \fi
+\fi     
+\ifnum \Version=13
+    The span of two linearly independent vectors $\{\vec v_1, \vec v_2\} $ in $\mathbb R^4$  is equal to the span of the set $\{\vec v_1 + \vec v_2, \vec v_1 - \vec v_2 \}$
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True.} 
+    } \fi
+\fi     
+\ifnum \Version=14
+    If $\vec x_1$ is a solution to the inhomogeneous system $A\vec x = \vec b$, then any vector in Span\{$\vec x_1$\} is also a solution to $A\vec x = \vec b$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. A vector in the span of $\vec v_1$ is the zero vector and the zero vector is not necessarily a solution to the system. } \fi
+\fi     
+\ifnum \Version=15
+     If $ \vec x_1$ and $\vec x_2$ solve the inhomogenous system $A\vec x = \vec b$, then $\vec x_1 + \vec x_2$ solves $A \vec x = \vec b$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: False.} 
+    $A(\vec x_1 + \vec x_2)=2\vec b $, which is not $\vec b$, since $\vec b$ is not zero. } \fi
+\fi     
+\ifnum \Version=16
+    TRUE FALSE ON LINEAR INDEPENDENCE OR SPAN OR LINEAR COMBINATIONS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True. }  
+    } \fi
+\fi     
+\ifnum \Version=17
+    TRUE FALSE ON LINEAR INDEPENDENCE OR SPAN OR LINEAR COMBINATIONS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True. }  
+    } \fi
+\fi     
+\ifnum \Version=18
+    TRUE FALSE ON LINEAR INDEPENDENCE OR SPAN OR LINEAR COMBINATIONS
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: True. }  
+    } \fi
+\fi     
+& $\bigcirc$  & $\bigcirc$ \\ 

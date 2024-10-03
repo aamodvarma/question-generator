@@ -1,0 +1,199 @@
+\documentclass[12pt]{exam}
+
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+\usepackage{spalign}
+
+\let\mat\spalignmat
+\let\vector\spalignvec
+
+\addpoints
+
+\usepackage{tikz}
+\usetikzlibrary{automata, arrows.meta}
+
+\tikzset{
+  vector/.style={thick, -{Stealth[length=3mm]}},
+  }
+  
+% Initials
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{2pt}}
+
+% Joe Rabinoff's matrix package
+\usepackage{spalign} 
+
+% Do not need to show
+\newcommand{\JustDoIt}{\textit{You do not need to justify your reasoning for questions on this page.}}
+
+% FANCY HEADERS - MAKE EMPTY
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{\TestName}}{}{{ }}
+
+% \node[anchor=north east,scale=0.25] at ([shift={(8in,-1cm)}]current page.north west) {\includegraphics[width=0.4\textwidth]{images/GT-Logo.png} };   
+
+% ADJUST MARGINS
+\usepackage[tmargin=1.0in,bmargin=1.0in]{geometry}
+\geometry{margin=0.8in}
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows, automata} 
+\usetikzlibrary{calc} 
+
+% COLORS FOR DIAGRAMS IN SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.1,0.2,0.5} % 
+\definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+\definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+\definecolor{LightBlue}{rgb}{0.0,0.5,1.0} % 
+\definecolor{Orange}{rgb}{1.0,0.5,0.0} % 
+\definecolor{LightGray}{rgb}{0.8,0.8,0.8} % 
+\definecolor{LightGreen}{rgb}{0.3,0.9,0.3} % 
+
+
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+
+% FONT FORMAT
+% \renewcommand*\rmdefault{ppl} % change font to Palatino
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 1554}
+\newcommand{\Semester}{Fall}
+
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+
+% SUBSPACES AND ORTHOGONALITY
+\newcommand{\Perp}{^{\perp}}
+\newcommand{\Row}{\text{Row}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\Nul}{\text{Null}}
+\newcommand{\Null}{\text{Null}}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\Span}{\text{Span}}
+\newcommand{\Rank}{\text{rank}}
+\newcommand{\Dim}{\text{dim}}
+
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Exam Review Worksheet B, Modules 1 and 2}
+\begin{document}
+    
+\begin{center}
+{\Large \TestName} %, \Semester \ \Year}
+\end{center}
+
+
+\begin{questions}
+\question[1] Fill in the blanks with a dark pen or pencil. 
+Using capital letters only, print your first name: \framebox{\strut\hspace{5cm}}, last name: \framebox{\strut\hspace{5cm}}, the \\[2pt] remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}\framebox{\strut\hspace{0.2cm}}, and the High School that you attend: \\[2pt]\framebox{\strut\hspace{6cm}}.
+
+\question[5] Indicate \textbf{true} if the statement is true, otherwise, indicate \textbf{false}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.25cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{.15cm} p{14cm} p{.6cm} p{.6cm} }
+        
+        & & true &  false  \\[2pt] \hline 
+
+        a) & If $A$ is $m \times n$, and $m>n$, then the transformation $\vec x \to A\vec x$ cannot be one-to-one.  & $\bigcirc$  & $\bigcirc$ \\ 
+
+        b) & If a linear system has fewer equations than variables then there cannot be a unique solution to the system.  & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        c) & If the vectors $\vec v_1$ and $\vec v_2$ are linearly dependent then the vector equation $c_1\vec v_1 + c_2\vec v_2 = \vec 0$ is only satisfied when $c_1=c_2=0$.  & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        d) & If $A$ and $B$ are $n\times n$ matrices and $AB=I$, then $BA=I$. & $\bigcirc$  & $\bigcirc$ \\
+        
+        e) & The set $S=\{x \in \mathbb R^3 \, | \, x_1 - x_2=1\}$ is a subspace. & $\bigcirc$  & $\bigcirc$ \\ \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+
+\question[2] Indicate whether the situations are \textbf{possible} or \textbf{impossible}.
+
+    \vspace{-0.8cm}
+    \setlength{\extrarowheight}{0.25cm}
+    \begin{center}
+    \hspace{-.9cm}\begin{tabular}{ p{0.25cm} p{10cm} p{1.4cm} p{1.75cm} }
+        
+        & & possible &  impossible  \\[2pt] \hline 
+        
+        % UNIT ONE THINGS
+        
+        a) & $A$ is an $m \times n$ matrix with linearly independent columns and $Ax=0$ has non-trivial solutions for some vector $x \in \mathbb R^n$. & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        % TRANSFORMS AND INVERTIBLE MATRICES 
+
+        b) & $A$ is $m\times n$, $T_A(x)=Ax$ is a one-to-one linear transform, and $ y \in \mathbb R^m$ is not in the range of $T_A(x)$. & $\bigcirc$  & $\bigcirc$ \\[5pt]
+        
+        % c) & . & $\bigcirc$  & $\bigcirc$ \\ 
+        
+        \hline
+        
+    \end{tabular}
+    \end{center}
+    \setlength{\extrarowheight}{0.0cm}
+    \vspace{-6pt} 
+
+    \question[4] Fill in the blanks. You do not need to justify your reasoning. 
+    \begin{parts}
+
+        \part If $A$ is $2 \times 2$ and $x\to A x$ is a linear transform that first rotates points clockwise about the point $(1,2)$ by $\pi/2$ radians and then reflects through the line $x_1=x_2$, then $\begin{pmatrix} 1\\1\end{pmatrix} \to \left( \hbox to .4cm{\vbox to 0.800cm{}} \right) $.
+
+        \part A non-zero vector the subspace $\{\vec x \in \mathbb R^3 \, | \, x_1 = x_2 +x_3\}$ is $\left( \hbox to .4cm{\vbox to 0.800cm{}} \right) $.
+
+        \part If $A$ is $3\times 3$ and in RREF and a basis for $\Col A$ is $\left\{\begin{pmatrix} 2\\0\\0\end{pmatrix},\begin{pmatrix} 2\\1\\0 \end{pmatrix}\right\}$ then  $A= \begin{pmatrix} \ 1& & & & \\& & & & \\& & & &  \end{pmatrix} $.
+        
+        \part If $A, B, C$ are invertible $n\times n$ matrices and $AB+AC=CA^{-1}$ then an explicit expression for $B$ is $B = \framebox{\strut\hspace{2.5cm}} .$
+        
+    \end{parts}
+
+\end{questions}
+
+\newpage
+{\color{DarkBlue} \textit{Solutions} 
+\begin{enumerate}
+    \item Note that your facilitator should know your GTID, but you can also obtain it from the GT website: https://registrar.gatech.edu/info/gtid-lookup
+    \item True or False. 
+    \begin{enumerate}
+        \item False. 
+        \item True.
+        \item False. 
+        \item True.
+        \item False. The set does not include the zero vector so it is not closed under scalar multiplication. 
+    \end{enumerate}
+    \item Possible/impossible. 
+    \begin{enumerate}
+        \item Impossible. 
+        \item Possible. For example $A = \begin{pmatrix} 1\\0\end{pmatrix}$, and $y = \begin{pmatrix}1\\1 \end{pmatrix}$.
+    \end{enumerate}
+    \item Fill in the blanks. 
+    \begin{enumerate}
+        \item (2,0)
+        \item Any vector of the form $\begin{pmatrix} a+b\\a\\b \end{pmatrix}$ is ok. For example $\begin{pmatrix}2\\1\\1 \end{pmatrix}$.
+        \item $\begin{pmatrix} 1&0&0\\0&1&0\\0&0&0 \end{pmatrix}$. Don't forget that bases are not unique. 
+        \item $AB+AC=CA^{-1}$ implies
+        \begin{align*}
+            AB &= CA^{-1} -AC\\
+            B & = A^{-1}CA^{-1} -A^{-1}AC
+        \end{align*}
+        If you like you can simplify to $B = A^{-1}CA^{-1} - C$.
+    \end{enumerate}
+\end{enumerate}
+
+} 
+
+
+\end{document}

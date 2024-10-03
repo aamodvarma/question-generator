@@ -1,0 +1,392 @@
+% QUESTIONS FROM MODULES 1 AND 2
+% ODD IS MODULE 1
+% EVEN IS MODULE 2
+
+% MODULE 1
+\ifnum \Version=1
+\question[4] Determine the length of the curve $\mathbf r(t) =  \langle 2t^2+3, \,  \frac32t^2-7 , \, 4 \rangle$ from $t=0$ to $t=4$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+\begin{align*}
+    L &= \int_0^4 \sqrt{(x'(t))^2+(y'(t))^2+(z'(t))^2} \, dt \\
+    &= \int_0^4 \sqrt{(4t)^2 + 0 + (3t)^2} \, dt \\
+    &= \int_0^4 \sqrt{16t^2 + 9t^2} \, dt \\
+    &= \int_0^4 \sqrt{25t^2} \, dt \\
+    &= \int_0^4 5t \, dt \\
+    &= \frac52 \ t^2 \, \big|_{t=0}^{t=4} \\
+    &= \frac52 (4^2 - 0) \\
+    &= 40
+\end{align*}
+}
+\else
+\vspace{9cm}
+\fi
+\fi
+
+
+% MODULE 2
+\ifnum \Version=2
+
+\question[4] Show that the limit does not exist: $\displaystyle \lim_{(x,y) \rightarrow (0,0)} \frac{x^2}{x^2 + y^4}$.  Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} Along the curve $x = ky^2$, where $k$ is any real number, we have
+    \begin{align*}
+        \lim_{(x,y) \rightarrow (0,0)} \frac{x^2}{x^2 + y^4} = 
+        \lim_{y \rightarrow 0} \frac{(ky^2)^2}{(ky^2)^2 + y^4}  
+        = \lim_{y \rightarrow 0} \frac{k^2}{k^2 + 1}   
+        =  \frac{k^2}{k^2 + 1}
+    \end{align*}
+    The limit depends on the value of $k$, so the limit does not exist. 
+    \textit{Other approaches are acceptable: finding two different values for any to different paths is sufficient. But students must choose paths that approach the limit point, $(0,0)$.  }
+    } 
+   \else
+      \vspace{5cm}
+   \fi
+    
+\fi
+
+
+
+% MODULE 1
+\ifnum \Version=3
+\question[4] An object is moving along the curve $\mathbf r(t) =  \langle t^2+3, \, 3t, \, \frac32t^2-1 \rangle$ for $t\ge 0$. Determine the equation of the tangent line to the curve at the point where $t=2$. Please show your work. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    A vector tangent to the curve for $t=2$ is
+        \begin{align}
+            \mathbf r'(t) &= \langle 2t, 3, 3t \rangle  \\
+            \mathbf r'(2) &= \langle 4, 3, 6 \rangle      
+        \end{align}
+    The line that is tangent to the curve at the given $t$ passes through the point specified by the vector $\mathbf r(2)$, and \begin{align}
+        \mathbf r(2) &= \langle (2)^2 + 3, 3(2), \frac32 (2)^2 -1 \rangle = \langle 7, 6, 5 \rangle
+    \end{align} 
+    The line has the equations
+    \begin{align}
+        x(t) &= 7+4t, \qquad y(t) = 6+3t, \qquad z(t) = 5+6t
+    \end{align}
+    Note that it is ok to use other representations for the line. The symmetric equations, for example, give us $$\frac{x-7}{4} = \frac{y-6}{3} = \frac{z-5}{6}$$
+    }
+    \else
+    \vspace{9cm}
+    \fi     
+\fi 
+
+% MODULE 2
+\ifnum \Version=4
+% DIFFERENTIALS AND GRADIENTS
+\question[4] Suppose $f(x,y,z) = 2x^3+5y^3+10z$. 
+
+    Use the differential $df$ to estimate how much $f(x,y,z)$ will change if the point $P(x,y,z)$ moves from $P_0(2,2,1)$ a distance of $ds = 0.1$ in the direction of $\mathbf v = \langle 0,4,3 \rangle$. Please show your work. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solutions:} 
+    The gradient of $f$ at $P_0$ is
+    \begin{align}
+        \nabla f &= \begin{pmatrix} 6x^2\\15y^2\\10\end{pmatrix} 
+        \quad \Rightarrow \quad 
+        \nabla f(2,2,1) = \begin{pmatrix} 24\\60\\10\end{pmatrix} 
+    \end{align}
+    A unit vector in the direction of $\mathbf v$ is
+    \begin{align}
+        \mathbf u = \frac{\mathbf v}{|\mathbf v|} = \begin{pmatrix} 0\\4/5\\3/5 \end{pmatrix}
+    \end{align}
+    The differential $df$ at $P_0$ is
+    \begin{align}
+        df = \nabla f \cdot \mathbf u \, ds 
+        &= \begin{pmatrix} 24\\60\\10\end{pmatrix} \cdot \begin{pmatrix} 0\\4/5\\3/5 \end{pmatrix} ds 
+        = (24\cdot 0 + 60 \cdot 4/5 + 10 \cdot 3/5) ds = (48+6)ds
+    \end{align}
+    If $ds = 1/10$ then $df = 5.4$ or $df = \frac{54}{10}=\frac{27}{5}$.
+    }
+    \else
+    \vspace{7cm}
+    \fi
+\fi
+
+% MODULE 1
+\ifnum \Version=5
+\question[4] Determine the curvature of $\mathbf r(t) = t\mathbf i + \sqrt2t^2\mathbf j$ at $t=1$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Set $f=\sqrt2x^2$. 
+\begin{align*}
+    f'(x) &= 2\sqrt2 x \\
+    f''(x) &= 2\sqrt2 \\
+    \kappa(x) &= \frac{|f''|}{(1+(f')^2)^{3/2}} 
+    = \frac{2\sqrt2}{(1 + (2\sqrt2x)^2)^{3/2}} \\
+    \kappa(1) 
+    &= \frac{2\sqrt2}{(1+8)^{3/2}} 
+    = \frac{2\sqrt2}{9^{3/2}} 
+    = \frac{2\sqrt2}{3^3} 
+    = \frac{2\sqrt2}{27} 
+\end{align*}
+\textbf{Solution Notes} \\
+There are several other ways to compute curvature. The unit tangent vector formula requires more work but is doable. The formula is
+\begin{align}
+    \kappa = \frac{1}{|\mathbf v|}\left| \frac{d\mathbf T}{dt}\right|
+\end{align}
+The first few steps of this approach are below. 
+\begin{align}
+    \mathbf v &= \mathbf i +2\sqrt2 \, t \mathbf j \\
+    \mathbf v(1) &= \mathbf i +2\sqrt2  \mathbf j \\
+    |\mathbf v(t) | &= \sqrt{1+ 8t^2} = 3\\
+    |\mathbf v(1) | &= \sqrt{1+ 8} = 3\\
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v |} = \frac{1}{\sqrt{1+8t^2}} \left( \mathbf i + \frac{2\sqrt2 t}{3}\mathbf j \right)\\
+    \frac{d\mathbf T}{dt } &= \frac{d}{dt} \left( \frac{1}{\sqrt{1+8t^2}} \left( \mathbf i + \frac{2\sqrt2 t}{3}\mathbf j \right)\right) = \frac{d}{dt} \left( \frac{1}{\sqrt{1+8t^2}} \right)  \mathbf i + \frac{d}{dt} \left(\frac{2\sqrt2 t}{3\sqrt{1+8t^2}}  \right) \mathbf j
+\end{align}
+Further work would be needed to obtain the unit tangent vector at $t=1$. Certainly more work than using the other method above, but not impossible. 
+}
+\else
+\vspace{9cm}
+\fi
+\fi
+
+% MODULE 2
+\ifnum \Version=6
+% THOMAS 14.6
+% FROM 2022
+\question[4] If $z(x,y) = 2xy + x$, then determine an expression for the differential $dz$ and the equation of the tangent plane to $z$ at the point $P(1,0,1)$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} there are two parts. \begin{itemize}
+    \item Applying the formula for the differential of $z=f(x,y)$ we obtain $$dz = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy =  (2y + 1) \, dx + 2x \, dy$$ 
+    \item Use the formula for the equation to a tangent plane, at a point $P(x_0,y_0)$, to a surface of the form $z =f(x,y)$.
+\begin{align*}
+    f_x(x_0,y_0) (x-x_0) + f_y(x_0,y_0) (y-y_0) - (z-z_0) &= 0 \\ 
+    (2y+1)\big|_P(x-1) + 2x\big|_P(y-0) - (z-1) &=0\\
+    (x-1) + 2y - z+1&=0\\
+    x+2y-z&=0
+\end{align*}
+Simplification not necessary. There are many other equivalent ways of expressing the plane. 
+\end{itemize}
+} 
+\else
+          \vspace{7cm}
+\fi     
+\fi
+
+
+
+% MODULE 1
+\ifnum \Version=7
+    \question[4] Determine the length of the curve $\mathbf r(t) = \langle 4t, \, \frac{4\sqrt2}{3} \, t^{3/2}, \, \frac12t^2\rangle$ from $t=2$ to $t=4$. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    \begin{align*}
+        \int_2^4 | \mathbf r '(t) | dt 
+        &= \int_2^4 \sqrt{4^2+(2\sqrt2 \, \sqrt t \,)^2 + (t)^2} \, dt  \\ 
+        &= \int_2^4 \sqrt{16+8t+t^2} \, dt  \\
+        &= \int_2^4 \sqrt{(t+4)^2} \, dt  \\
+        &= \int_2^4 (t+4) \, dt = \left(\frac{t^2}{2} +4t \right)\bigg|_2^4 \\ 
+        &= (8 + 16) - (2+8) \\
+        &= 14 
+    \end{align*}
+    } 
+    \else
+        \vspace{9cm}
+    \fi        
+\fi  
+
+
+% MODULE 2
+\ifnum \Version=8
+% THOMAS 14.5
+\question[4] Suppose the rate of change of $z=x^2-2xy$ at $P(1,1)$ in the direction of unit vector $\mathbf u=\langle a,b \rangle$ is equal to $0$. Determine all possible values of $a$ and $b$.  
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+There are two parts to this problem. 
+\begin{enumerate}
+    \item Calculate gradient, or at least the first partial derivatives. 
+    \item Set up $\nabla z \cdot \mathbf u = 0$, solve, and restrict $a$ and $b$ so that $\mathbf u$ is a unit vector. 
+\end{enumerate}
+Calculate the gradient of $z(x,y)$ at $P$. 
+\begin{align}
+    \nabla z &= \langle 2x-2y, -2x\rangle \\
+     \nabla z(1,1) &= \langle 0,-2\rangle 
+\end{align}
+The unit vector $\mathbf u$ must point in the direction perpendicular to $\nabla z$. That is, 
+\begin{align}
+    \nabla z \cdot \mathbf u & = 0 \\
+    \begin{pmatrix} 0\\-2 \end{pmatrix} \cdot \begin{pmatrix} a\\b\end{pmatrix} & = 0 \\
+    0\cdot a -2b & = 0 \\
+    b &=0 \\
+    \mathbf u &= \begin{pmatrix} a\\0\end{pmatrix}
+\end{align}
+But $\mathbf u$ must be a unit vector, so $$a = \pm 1$$
+So $a=\pm1$ and $b=0$. Note that it was given that $\mathbf u$ is a unit vector, so we need $|\mathbf u| = 1$. 
+}
+\else
+          \vspace{6cm}
+\fi
+\fi
+
+
+% MODULE 1
+\ifnum \Version=10
+    \question[4] Construct the equation of the plane that passes through $P(0,2,3)$ and contains the line $\mathbf r(t) = \langle t,t+1,t+4\rangle $. Please show your work. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    
+    Two points on the line are $O(0,1,4)$ and $Q(1,2,5)$. So two vectors parallel to the plane are $$\mathbf{OP} = \langle 0,1,-1\rangle, \quad \mathbf {OQ} = \langle 1,1,1\rangle$$
+    A normal vector to the plane is 
+    $$\mathbf {OP}\times \mathbf {OQ} = \begin{vmatrix} i&j&k\\0&1&-1\\1&1&1 \end{vmatrix}
+     = \langle 2, -1, -1\rangle$$
+    Using the point $P(0,2,3)$, the plane has equation $$2(x-0) -(y - 2)  -(z-3) = 0$$
+\textbf{Solution Notes}
+    \begin{itemize}
+        \item The above is sufficient but we could also rearrange the equation to obtain other equivalent expressions. For example, $2x-y-z +5 = 0$.
+        \item A common error might be to use $\mathbf r'(t)$ as a vector normal to the plane, and then not use a cross product to create a normal to the plane. This constitutes two errors. 
+        \item Another common error might be to leave the answer as something like $$2(x-0) -(y - 2)  -(z-3)$$ Or something like 
+        $$ n = 2(x-0) -(y - 2)  -(z-3) = 2x-y-z + 5$$
+        However, these expressions are not equations of planes. We need to set $2(x-0) -(y - 2)  -(z-3)$ equal to zero. 
+    \end{itemize}    
+    
+    \newpage
+    } 
+   \else
+      \vspace{9cm}
+   \fi
+\fi    
+
+
+
+% MODULE 2
+\ifnum \Version=9
+
+\question[4] Show that the limit does not exist: $\displaystyle \lim_{(x,y) \rightarrow (0,0)} \frac{x^2}{x^2 + y^4}$.  Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} Along the curve $x = ky^2$, where $k$ is any real number, we have
+    \begin{align*}
+        \lim_{(x,y) \rightarrow (0,0)} \frac{x^2}{x^2 + y^4} = 
+        \lim_{y \rightarrow 0} \frac{(ky^2)^2}{(ky^2)^2 + y^4}  
+        = \lim_{y \rightarrow 0} \frac{k^2}{k^2 + 1}   
+        =  \frac{k^2}{k^2 + 1}
+    \end{align*}
+    The limit depends on the value of $k$, so the limit does not exist. 
+    \textit{Other approaches are acceptable: finding two different values for any to different paths is sufficient. But students must choose paths that approach the limit point, $(0,0)$.  }
+    } 
+   \else
+      \vspace{6cm}
+   \fi
+    
+\fi
+
+
+
+
+
+
+\ifnum \Version=11
+
+\question[4] Determine the curvature of $\mathbf r(t) = t\mathbf i + (t^2+1)\mathbf j$ at $t=2$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Set $f=x^2+1$. 
+\begin{align*}
+    \kappa(x) &= \frac{|f''|}{(1+(f')^2)^{3/2}} 
+    = \frac{2}{(1 + (2x)^2)^{3/2}} \\
+    \kappa(2) &= \frac{2}{(1+4^2)^{3/2}} 
+    = \frac{2}{17^{3/2}} 
+\end{align*}
+There are several other ways to compute curvature. 
+}
+\else
+\vspace{9cm}
+\fi
+\fi
+
+
+
+
+
+% SECTION 14.7 
+\ifnum \Version=12
+% VERBATUM FROM SPRING 2022
+\question[4] Identify the locations of all of the critical points of $f(x,y) = 3xy - x^3- y^3$ and classify the critical points using the second derivative test. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Setting $\nabla f = \langle 3y - 3x^2, 3x - 3y^2 \rangle = \mathbf 0 = \langle 0,0\rangle$. Rearranging:
+\begin{align}
+    \begin{pmatrix} y\\x\end{pmatrix} &= \begin{pmatrix} x^2\\y^2\end{pmatrix}
+\end{align}
+The two parabolas only intersect at $(0,0)$ and at $(1,1)$. The second derivatives of $f$ are
+$$f_{xx} = -6x, \quad f_{yy} = -6y, \quad f_{xy} = 3$$
+The function we need for the second derivative test is 
+$$D(x,y) = (-6x)(-6y) - (3)^2 = 36xy - 9$$
+At $(1,1)$, $D>0$, and $f_{xx}<0$, so the point is a \textbf{maximum}.  \\
+At $(0,0)$, $D<0$, so the point is a \textbf{saddle}.  
+} 
+\else
+\vspace{9cm}
+\fi    
+\fi
+
+% READY
+\ifnum \Version=13
+\question[4] Determine the length of the curve $\mathbf r(t) = \langle 2t^2+1, \, \frac12t^2, \, 4t^2+8 \rangle$ from $t=0$ to $t=2$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+\begin{align*}
+    L &= \int_0^2 \sqrt{(x'(t))^2+(y'(t))^2+(z'(t))^2} \, dt \\
+    &= \int_0^2 \sqrt{(4t)^2 + t^2+(8t)^2} \, dt \\
+    &= \int_0^2 \sqrt{16t^2 + t^2+64t^2} \, dt \\
+    &= \int_0^2 \sqrt{81t^2} \, dt \\
+    &= \int_0^2 9t \, dt \\
+    &= 9(t^2/2)\big|_0^2\\ 
+    &= 18
+\end{align*}
+\newpage
+}
+\else
+\vspace{9cm}
+\fi
+\fi
+
+
+\ifnum \Version=14
+% FOR 14.2
+\question[4] Show that the function does not have a limit as $(x,y) \to (0,2)$.  
+    \begin{align*}
+        f(x,y) = \frac{x(y-2)^2}{x^2 +(y-2)^4}
+    \end{align*}
+\ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solutions:} 
+    The path $(y-2)^2=kx$ passes through the point $(0,2)$. The path is also
+    $$y=\pm\sqrt{kx}+2$$
+    We can evaluate the limit along this path. 
+    \begin{align}
+        f(x,y) = \frac{x(y-2)^2}{x^2 +(y-2)^4}\\
+        f(x,y=\pm\sqrt{kx}+2)
+        &= \frac{x(\pm\sqrt{kx}+2-2)^2}{x^2 +(\pm\sqrt{kx}+2-2)^4} \\
+        &= \frac{x(\pm\sqrt{kx})^2}{x^2 +(\pm\sqrt{kx})^4} \\
+        &= \frac{kx^2}{x^2 +k^2x^2}  \\
+        &= \frac{k}{1 +k^2}  
+    \end{align}
+    The result depends on $k$ and therefore the limit does not exist. 
+    } 
+   \else
+    \vspace{6cm}
+      
+   \fi
+    
+\fi
+
+
+
+
+% READY
+\ifnum \Version=15
+\question[4] Determine the length of the curve $\mathbf r(t) = \langle t^2+1, \, \frac32t^2, \, 3t^2 \rangle$ from $t=0$ to $t=4$. Please show your work. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+\begin{align*}
+    L &= \int_0^4 \sqrt{(x'(t))^2+(y'(t))^2+(z'(t))^2} \, dt \\
+    &= \int_0^4 \sqrt{(2t)^2 + (3t)^2+(6t)^2} \, dt \\
+    &= \int_0^4 \sqrt{4t^2 + 9t^2+36t^2} \, dt \\
+    &= \int_0^4 \sqrt{49t^2} \, dt \\
+    &= \int_0^4 7t \, dt \\
+    &= 7(t^2/2)\big|_0^4\\ 
+    &= 56
+\end{align*}
+\newpage
+}
+\else
+\vspace{9cm}
+\fi
+\fi
+
+
+
+
+

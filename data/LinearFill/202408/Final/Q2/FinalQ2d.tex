@@ -1,0 +1,76 @@
+% SUBSPACES
+\ifnum \Version=1         
+    $V=\{ \vec x \in \mathbb R^4 \ | \ x_1 = 0, \ x_2-2x_3 = x_4 \}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } True. The set meets all the criteria for being a subspace.} \fi
+\fi
+\ifnum \Version=2      
+    If matrix $A$ is $4\times3$ and $\vec b$ is a vector in $\mathbb R^4$, then the set of solutions to $A\vec x = \vec b$ is a subspace of $\mathbb R^3$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The solution set might not include the zero vector. All subspaces include the zero vector. } \fi
+\fi    
+\ifnum \Version=3
+    If matrix $A$ is $4\times3$ and $\vec 0$ is the zero vector in $\mathbb R^4$, then the set of solutions to $A\vec x = \vec 0$ is a subspace of $\mathbb R^4$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. It is a subspace of $\mathbb R^3$, not $\mathbb R^4$. } \fi
+\fi       
+\ifnum \Version=4
+    The set of all probability vectors in $\mathbb R^4$ is a subspace. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The set does not satisfy any of the conditions required for it to be a subspace. For example, if $v_1$ and $v_2$ are probability vectors, then $v_1+v_2$ is not a probability vector, because its sum would not be equal to 1.  } \fi
+\fi    
+\ifnum \Version=5    
+    $V=\{ \vec x \in \mathbb R^4 \ | \ x_1  x_2 x_3 x_4 = 0\}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Vectors $u_1$ and $u_2$ are in $V$, where \setlength{\extrarowheight}{0.0cm} $u_1 = \begin{pmatrix} 1&1&1&0 \end{pmatrix}^T, u_2 = \begin{pmatrix} 0&0&0&1\end{pmatrix}^T$ but $u_1+u_2$ is not in $V$.  } \fi
+\fi    
+\ifnum \Version=6      
+    If matrix $A$ is row reduced to echelon form to produce matrix $E$, then the column spaces of $A$ and $E$ are the same.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Row reductions can change the column space of a matrix. For example consider \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix} 1&1\\1&1\end{pmatrix} \sim \begin{pmatrix} 1&1\\0&0\end{pmatrix} = E$. } \fi
+\fi        
+\ifnum \Version=7 
+    If matrix $A$ is $4\times3$, then the set of solutions to $A\vec x = 0$ is a subspace of $\mathbb R^3$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True. It is the Null space of $A$.   } \fi
+\fi     
+\ifnum \Version=8
+    If matrix $A$ is row reduced to produce matrix $B$, and 
+    $A\vec x =0 $, then $B \vec x =0$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  True. This is why we do row reduction.  } \fi
+\fi     
+\ifnum \Version=9
+    $V=\{ \vec x \in \mathbb R^4 \ | \ x_3 = 1, x_2=2x_1\}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } False. The zero vector is not in the set.} \fi
+\fi     
+\ifnum \Version=10
+    The set in $\mathbb R^4$ of the form  $V=\{ \vec x \in \mathbb R^4 \ | \ x_1 + x_2 + x_3 =1\}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } False. 
+    The zero vector is not in the set.} 
+    \fi
+\fi     
+\ifnum \Version=11
+    $V=\{ \vec x \in \mathbb R^4 \ | \ x_1 - x_2 = 0, \ x_2-2x_3 = x_4 \}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } True. The set meets all the criteria for being a subspace.}  \fi
+\fi     
+\ifnum \Version=12
+    The set of all unit vectors in $\mathbb R^2$ is a subspace. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. The set does not satisfy any of the conditions required for it to be a subspace. For example, if $v_1$ and $v_2$ are unit vectors, then $v_1+v_2$ is not a unit vector, because its sum would not be equal to 1.  } \fi
+\fi    
+\ifnum \Version=13
+    The set in $\mathbb R^3$ of the form  $V=\{ \vec x \in \mathbb R^3 \ | \ x_1 x_2 x_3 =0\}$ is a subspace.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution: } False. 
+    The set is not closed under vector addition.} 
+    \fi
+\fi    
+\ifnum \Version=14
+    If matrix $A$ is row reduced to its echelon form $E$, then the column spaces of $A$ and $E$ are the same.  
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } False. Row reductions can change the column space of a matrix. For example consider \setlength{\extrarowheight}{0.0cm} $A = \begin{pmatrix} 1&1\\1&1\end{pmatrix} \sim \begin{pmatrix} 1&1\\0&0\end{pmatrix} = E$. } \fi
+\fi    
+\ifnum \Version=15
+   If $\Null(A^T)$ includes only the zero vector then $x\to Ax$ is an onto linear transform.
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  } True, because if $\Null(A^T)$ includes only the zero vector then there are pivots in every column of $A^T$. Which means there are pivots in every row of $A$, which means that $x\to Ax$ is an onto linear transform. } \fi
+\fi    
+\ifnum \Version=16
+   TRUE FALSE ON SUBSPACES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+\ifnum \Version=17
+   TRUE FALSE ON SUBSPACES
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution:  }  } \fi
+\fi    
+& $\bigcirc$  & $\bigcirc$ \\   
+   

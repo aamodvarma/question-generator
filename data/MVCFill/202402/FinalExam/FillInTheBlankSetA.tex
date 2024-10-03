@@ -1,0 +1,326 @@
+% READY
+\ifnum \Version=1
+\part A plane that passes through the points $P(0,0,1)$, $Q(2,0,0)$, and $R(0,3,0)$ is \framebox{\strut\hspace{3cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} a normal vector to the plane is
+$$ \mathbf n=  PQ\times PR  = \begin{vmatrix} \mathbf i &\mathbf j &\mathbf k \\ 2&0&-1\\0&3&-1\end{vmatrix} = \langle 3,2,6 \rangle$$
+Using point $P$ the plane has equation $$3(x-0)+2(y-0)+6(z-1)=0$$ Of course other points could have been used, and the equation could also be rearranged/simplified. For example we could instead write the plane as $3x+2y+6z = 6$.
+} 
+\fi
+\fi
+   
+   
+
+
+%READY TO GO
+\ifnum \Version=2
+
+\part If the unit tangent vector for a curve is $ \mathbf T(t) = \langle \frac35 , \frac45 \cos t, \frac45 \sin t \rangle$, then the unit normal vector is $\mathbf  N = \langle f(t), g(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The normal vector for the curve is
+\begin{align}
+    \mathbf N &= \frac{d\mathbf T/dt}{|d\mathbf T/dt|} 
+\end{align}
+And
+\begin{align}
+    \mathbf T'(t) &= \langle 0,-\frac45 \sin t, \frac45 \cos t \rangle \\
+    |\mathbf T'(t) | &= \sqrt{ 0 +(-\frac45 \sin t)^2 + (\frac45 \cos t)^2} = \frac45 \\
+    \mathbf N &= \frac{d\mathbf T/dt}{|d\mathbf T/dt|} = \langle 0, - \sin(t),  \cos(t) \rangle
+\end{align}
+Thus,
+\begin{align}
+    f&= 0 \\
+    g&= -\sin t \\
+    h&= \cos t
+\end{align}
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+
+
+
+
+
+
+\ifnum \Version=3
+
+\part A projectile is launched from the ground with an initial speed of 80 m/sec, at an angle of elevation of $\theta$, where $\sin \theta = \frac14$. If we use $g = 10$ m/s$^2$ as the acceleration due to gravity, the object will reach its maximum height when  $t = \framebox{\strut\hspace{1cm}}$ seconds. 
+
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf a(t) = -g\mathbf j$ yields:
+\begin{align}
+    \mathbf a(t) = -g\mathbf j \ \Rightarrow  \  
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 
+\end{align}
+The initial velocity is 
+$$\mathbf v_0 = 80\cos\theta\mathbf i + 80\sin\theta\mathbf j$$
+The object is at its maximum height when the $\mathbf j$ component of $\mathbf v$ is zero. Setting the $\mathbf j$ component to zero, with $\sin\theta = 1/4$ and $g = 10$, we find that
+\begin{align}
+    -g t + 80\sin\theta &= 0 \\ 
+    -10 t + \frac{80}{4} &=0 \\
+    10 t &= 20 \\
+    t &= 2
+\end{align}
+So the object reaches its maximum height when $t = 2$ seconds. 
+} 
+\else
+  
+\fi        
+\fi
+
+% READY TO GO
+\ifnum \Version=4
+    \part The velocity of a particle at time $t$ is given by $\mathbf v(t) = \langle 6t,1+\sin(t),4e^{2t} \rangle$ and the position of the object when $t=0$ is $\mathbf r = \langle 1,1,1\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} Integrating the velocity gives us \begin{align}
+        \mathbf r &= \int \mathbf v(t) \, dt = \langle 3t^2 + c_1, t-\cos(t) + c_2, 2e^{2t} +c_3\rangle
+    \end{align}
+    And when $t = 0$ we are given that  $\mathbf r = \langle 1,1,1\rangle$, so 
+    \begin{align}
+        \mathbf r(0) &= \langle 0+c_1, 0-1 + c_2,2+c_3\rangle = \langle 1,1,1\rangle \\
+        c_1 &= 1 \\
+        c_2 &= 2 \\
+        c_3 &= -1
+    \end{align}
+    Therefore, 
+    \begin{align}
+        \mathbf r &= \langle 3t^2 + 1, t-\cos(t) + 2, 2e^{2t} - 1 \rangle
+    \end{align}
+    } 
+    \else
+      
+    \fi        
+\fi
+
+% READY TO GO ANYWHERE
+\ifnum \Version=5
+    \part The tangent line to $\mathbf r(t) = \langle 3-2t,2t^2,t\rangle$ at the point where $t=1$ is $\mathbf{L} = \langle f(t), g(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    The tangent line is parallel to $r'(t)$.
+    \begin{align}
+        \mathbf r(t) &= \langle 3-2t,2t^2,t\rangle \\
+        \mathbf r'(t) &= \langle -2,4t,1\rangle \\
+        \mathbf r'(1) &= \langle -2,4,1\rangle 
+    \end{align}
+    And $\mathbf r(1) = \langle 1,2,1\rangle$. Therefore, $\mathbf L(t) = \langle 1-2t, 2+4t, 1+t\rangle$, and 
+    \begin{align}
+        f&=1-2t \\
+        g&=2+4t \\
+        h&= 1+t
+    \end{align}
+    } 
+    \else
+    \fi        
+\fi
+
+
+% READY
+\ifnum \Version=6
+    \part Given the points $P(2,1,1), Q(3,1,2), R(2,4,1)$, the area of triangle $PQR$ is \framebox{\strut\hspace{1.5cm}}. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} 
+    $$\text{area} = \frac12 | PQ\times PR | = \frac12 \left| \begin{vmatrix} \mathbf i &\mathbf j &\mathbf k \\ 1&0&1\\0&3&0\end{vmatrix}\right| = \frac{\sqrt{(-3)^2+3^2}}{2} = \frac{\sqrt{18}}{2} = \frac{3\sqrt2}{2}$$
+    } 
+    \fi
+\fi
+
+
+
+
+\ifnum \Version=7
+
+\part A projectile is launched from the ground with an initial speed of $20\sqrt2$ m/sec, at an angle of elevation of $\theta$, where $\cos\theta = \sin \theta = \sqrt{2}/2$. If we use $g = 10$ m/s$^2$ as the acceleration due to gravity, the object will reach its maximum height when  $t = \framebox{\strut\hspace{2cm}}$ seconds and will return to the ground when $t = \framebox{\strut\hspace{2cm}}$ seconds. 
+
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} Integrating $\mathbf a(t) = -g\mathbf j$ yields:
+\begin{align}
+    \mathbf a(t) = -g\mathbf j \ \Rightarrow  \  
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 
+\end{align}
+The initial velocity is 
+$$\mathbf v_0 = 20\sqrt2\cos\theta\mathbf i + 20\sqrt2\sin\theta\mathbf j$$
+The object is at its maximum height when the $\mathbf j$ component of $\mathbf v$ is zero. Setting the $\mathbf j$ component to zero, with $\sin\theta = \sqrt2 / 2$ and $g = 10$, we find that
+\begin{align}
+    -g t + 20\sqrt 2 \sin\theta &= 0 \\ 
+    -10 t + 20\sqrt 2 \cdot \sqrt2/2 &=0 \\
+    10 t &= 20 \\
+    t &= 2
+\end{align}
+So the object reaches its maximum height when $t = 2$ seconds. Because the time it takes for the object to reach its maximum height is half the time when the object hits the ground, the object hits the ground when $t=4$ seconds. With a bit of work we can verify this algebraically. 
+\begin{align}
+    \mathbf v &= -g t\mathbf j + \mathbf v_0 \\
+    \mathbf r &= -gt^2/2 \mathbf j + \mathbf v_0 t = -gt^2/2 \mathbf j + 20\sqrt2t \cos\theta\mathbf i + 20\sqrt2 t \sin\theta\mathbf j \\
+     0 & = -gt^2/2 + 20\sqrt2 t \sin\theta \\
+     0 & = t ( -10 t/2 + 20\sqrt2  \sqrt2/2 ) \\
+     0 & = t ( -10 t + 20\cdot 2 ) \\
+     0 & = t ( 4 - t  ) 
+\end{align}
+Thus $t=0,4$, but we only need $t=4$. 
+} 
+\else
+  
+\fi        
+\fi
+
+
+
+% VERBATUM FROM AN EXAM 1 PROBLEM
+\ifnum \Version=8
+
+\part The parallelogram determined by vectors $\mathbf a$ and $\mathbf b$ has area $6$. If $\mathbf a = \mathbf b+ \mathbf c$, and $\mathbf c$ makes an angle of $\frac{\pi}{2}$ with $\mathbf b$, and $|\mathbf c| = 2$, then $|\mathbf b | = $ \framebox{\strut\hspace{1cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue}   \textit{Solutions:} 
+\begin{align*}
+    6&=|a\times b|\\
+    &= |(b+c)\times b| \\
+    &= |b\times b + c\times b| \\
+    &= |c\times b|\\
+    &= |c| \, |b| \sin\theta \\
+    &= 2\, |b| 1\\
+    6&=2|b| \\
+    |b| &= 3
+\end{align*}
+}
+\else
+  
+\fi
+\fi
+
+
+
+
+
+
+\ifnum \Version=9
+
+\part The velocity of an object moving on the curve $\mathbf r(t)$ is $\mathbf v(t) = \langle 3\cos (2t), 3\sin (2t) \rangle$ for $t>0$. The speed of the object for $t>0$ is $s(t) = |\mathbf v | = \framebox{\strut\hspace{1.5cm}}$. The unit tangent vector for $t>0$ is $\mathbf T = \langle f(t), g(t)  \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$. % The curvature for $t>0$ is \framebox{\strut\hspace{1.5cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} \textit{Solutions:} The speed is the magnitude of the given velocity vector and is
+\begin{align}
+    s &= |\mathbf v | =  \sqrt{(3\cos t)^2 + (3\sin t)^2  } = \sqrt{3^2 (\cos ^2 t + \sin^2 t) + 3^2} = \sqrt{ 9} = 3
+\end{align}
+The unit tangent vector is 
+\begin{align}
+    \mathbf T &= \frac{\mathbf v}{|\mathbf v|} 
+    = \langle \frac{3}{3}\cos(2 t) , \frac 33 \sin (2t) \rangle 
+    = \langle \cos(2 t) ,  \sin (2t) \rangle
+\end{align}
+Thus:
+$$s = 3, \quad f(t) = \cos 2t$$
+\textbf{Solution Note}\\
+We weren't asked for curvature, but if we were, then for curvature we also need
+\begin{align}
+    \frac{d\mathbf T}{dt } &= \langle -2 \sin 2t, 2 \cos 2t\rangle \\
+    \left | \frac{d\mathbf T}{dt } \right| &= \sqrt{ \left(-2\sin 2t\right)^2 +   \left(2 \cos 2 t\right)^2 } = 2
+\end{align}
+The curvature is
+\begin{align}
+    \kappa = \frac{1}{|\mathbf v |}\left| \frac{d\mathbf T}{dt}\right| = \frac{1}{3} \cdot 2 = \frac{2}{3}
+\end{align}
+} 
+\else
+\fi        
+\fi
+
+
+\ifnum \Version=10
+\part The distance between the plane $2x+4y+4z=2$ and the point $S(8,4,0)$ is \framebox{\strut\hspace{2cm}}. The distance between $S$ and the $xz$-plane is $\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The question has two parts. 
+    \begin{itemize}
+        \item A normal to the plane is $\mathbf n = \langle 1,2,2\rangle$, and $|\mathbf{n}| = \sqrt{1^2+2^2+2^2} = \sqrt{9}=3$. A point on the plane can be found by setting $y=z=0$ and solving for $x$. Doing so gives us the point $P(1,0,0)$. Then $\mathbf{PS} = \langle7,4,0\rangle$. 
+    \begin{align}
+        d 
+        = \left| \mathbf{PS} \cdot \frac{\mathbf n}{|\mathbf{n}|} \right| 
+        = \frac{1}{3}\langle7,4,0\rangle \cdot \langle 1,2,2\rangle = \frac{15}{3} = 5
+    \end{align}
+    So $d= 5$. 
+    \item The point $S$ is 4 units away from the $xz$-plane because the point has coordinates $(8,4,0)$. So the distance between $S$ and the $xz$-plane is 4. 
+\end{itemize}
+}
+
+\else
+
+\fi
+\fi
+
+\ifnum \Version=11
+
+\part The plane that passes through $P(1,3,2)$ and contains the line $x=1+t$, $y=2+3t$, $z=2+2t$ is \framebox{\strut\hspace{4cm}}. The distance between the point $P$ and the $x$-axis is \framebox{\strut\hspace{1cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} The plane is parallel to direction vector of given line, $\mathbf  v = \langle 1,3,2\rangle$. Line contains $Q(1,2,2)$, so the plane is also parallel to the vector $\mathbf{PQ} = \langle 1,2,2 \rangle - \langle 1,3,2 \rangle = \langle 0,-1,0 \rangle$. It would also be ok to use any scalar multiple of this. \\[12pt]
+A normal to the plane is $$\mathbf n = \mathbf  v \times \mathbf {PQ} = \begin{vmatrix} i & j & k \\ 1&3&2 \\ 0&-1&0\end{vmatrix} = \langle 2,0,-1\rangle = 2\mathbf i-\mathbf k$$ So using point $P(1,3,2)$ and $\mathbf n$, the plane has equation \begin{align}
+    (2)(x-1)+(0)(y-3) + (-1)(z-2) = 0 
+\end{align}which could be simplified to other forms, such as $$2x-z=0$$ But it isn't necessary to simplify the equation. The distance between the point and the $x$-axis is $\sqrt{3^2+2^2} = \sqrt{13}$.
+}
+\else
+  
+\fi
+\fi
+
+
+
+\ifnum \Version=12
+    \part The tangent line to $\mathbf r(t) =\langle 1-t,t^2,3t\rangle$ at the point where $t=1$ has equation $\mathbf{L} = \langle f(t), g(t), g(t) \rangle$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$.
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solutions:} 
+    The tangent line is parallel to $r'(t)$.
+    \begin{align}
+        \mathbf r'(t) &= \langle -1,2t,3\rangle \\
+        \mathbf r'(1) &= \langle -1,2,3\rangle 
+    \end{align}
+    And $\mathbf r(1) = \langle 0,1,3\rangle$. Therefore, $\mathbf L(t) = \langle 0-t, 1 +2t, 3+3t\rangle$.
+    } 
+    \else
+      
+    \fi        
+\fi
+
+
+\ifnum \Version=13
+\part The velocity of a particle at time $t$ is given by $\mathbf v(t) = \langle 4t,\sin(t),2e^{2t} \rangle$ and the position of the object when $t=0$ is $\mathbf r = \langle 1,1,1\rangle$, then $\mathbf r(t) = f(t)\mathbf i + g(t) \mathbf j + h(t) \mathbf k$, where $f(t) = \framebox{\strut\hspace{2cm}}$, $g(t) = \framebox{\strut\hspace{2cm}}$, $h(t) =\framebox{\strut\hspace{2cm}}$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $\langle 2t^2 + 1, -\cos(t) + 2, e^{2t} \rangle$ \\[12pt] \textit{Solutions:} $\mathbf r = \int \mathbf v(t) \, dt = \langle 2t^2 + c_1, -\cos(t) + c_2, e^{2t} +c_3\rangle$. And $\mathbf r(0) = \langle c_1, c_2-1,1+c_3\rangle = \langle 1,1,1\rangle $. Therefore: $\mathbf r = \langle 2t^2 + 1, -\cos(t) + 2, e^{2t} \rangle$.
+
+} 
+\else
+  
+\fi        
+\fi
+
+
+% VERBATUM FROM 2023 EXAM 1
+\ifnum \Version=14
+\part The point on the sphere $(x-2)^2+(y-4)^2+(z-7)^2=4$ nearest to the $xy-$plane is $P=(a,b,c)$, where $a=\framebox{\strut\hspace{1cm}}, b=\framebox{\strut\hspace{1cm}}, c=\framebox{\strut\hspace{1cm}}$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $a=2$, $b=4$, $c=5$. \\[12pt] \textit{Solutions:} The sphere has center $(2,4,7)$ and radius $2$. Because the radius is 2 and the center has $z$--coordinate $z=7$, the sphere lies above the $xy$-plane. The point on the bottom of the sphere closest to the $xy$-plane will be 2 units directly below the center. The coordinate is $(2,4,5)$, so $a=2$, $b=4$, $c=5$. 
+
+
+
+} 
+\else
+  
+\fi
+\fi
+
+
+
+
+
+\ifnum \Version=15
+
+\part The length of the curve $\mathbf r(t) = \langle 2t, \, 2t, \, t \rangle$ from $t=1$ to $t=3$ is \framebox{\strut\hspace{3cm}}. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} \textit{Answer:} $6$ \\[12pt] \textit{Solutions:} 
+$$L = \int_1^3 \sqrt{2^2+2^2+1} \, dt = \int_1^3 3 \, dt = 6$$
+
+\textit{Note: The curve is a straight line, so we could also compute length using the distance between the endpoints of the path on the line.}}
+\else
+\fi
+\fi

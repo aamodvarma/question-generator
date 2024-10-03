@@ -1,0 +1,94 @@
+\ifnum \Version=1
+\question[4] Use Taylor's formula to construct a quadratic approximation to $f(x,y) = ye^x$ near the origin. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solutions:} The partials we need are: 
+\begin{align*}
+    f_x(0,0) &= ye^x\big|_{(0,0)} = 0 \\
+    f_y(0,0) &= e^x \big|_{(0,0)} = 1 \\
+    f_{xx}(0,0) &= ye^x\big|_{(0,0)} = 0 \\
+    f_{xy}(0,0) &= e^x \big|_{(0,0)} = 1 \\    
+    f_{yy}(0,0) &= 0 \big|_{(0,0)} = 0 
+\end{align*}
+The approximation is
+\begin{align*}
+    f(x,y) &\approx f(0,0) + (xf_x + yf_y) + \frac12(x^2f_{xx} + 2xyf_{xy} + y^2f_{yy}) \\ &= 0 + (0+y) + \frac12 (0+2xy+0) \\ &= y+xy 
+\end{align*}
+
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+\ifnum \Version=3
+\question[4] Use Taylor's formula to construct a quadratic approximation to $f(x,y) = x + e^y$ near the origin. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\ \textit{Solutions:} The partials we need are: 
+\begin{align*}
+    f_x(0,0) &= 1\big|_{(0,0)} = 1 \\
+    f_y(0,0) &= e^y \big|_{(0,0)} = 1 \\
+    f_{xx}(0,0) &= 0\big|_{(0,0)} = 0 \\
+    f_{xy}(0,0) &= 0 \big|_{(0,0)} = 0 \\    
+    f_{yy}(0,0) &= e^y \big|_{(0,0)} = 1
+\end{align*}
+The approximation is
+\begin{align*}
+    f(x,y) &\approx f(0,0) + (xf_x + yf_y) + \frac12(x^2f_{xx} + 2xyf_{xy} + y^2f_{yy}) 
+    \\ &= 1 + (x+y) + \frac12 (0+2xy\cdot 0 +y^2) \\ &= 1 + x + y +y^2/2
+\end{align*}
+
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+\ifnum \Version=4
+% VERBATUM FROM SPRING 2022 and that's ok
+\question[4] Use Taylor's formula to construct a quadratic approximation to $f(x,y) = xe^y$ near the origin. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} The partials we need are: 
+\begin{align*}
+    f_x(0,0) &= e^y\big|_{(0,0)} = 1 \\
+    f_y(0,0) &= xe^y \big|_{(0,0)} = 0 \\
+    f_{xx}(0,0) &= 0\big|_{(0,0)} = 0 \\
+    f_{xy}(0,0) &= e^y \big|_{(0,0)} = 1 \\    
+    f_{yy}(0,0) &= 0 \big|_{(0,0)} = 0 
+\end{align*}
+The approximation is
+\begin{align*}
+    f(x,y) &\approx f(0,0) + (xf_x + yf_y) + \frac12(x^2f_{xx} + 2xyf_{xy} + y^2f_{yy}) \\ &= 0 + (1\cdot x+0\cdot y) + \frac12 (0+2xy+0) \\ &= 0 + x+xy \\&=x+xy 
+\end{align*}
+
+    } 
+   \else
+      
+   \fi
+    
+\fi
+
+
+
+\ifnum \Version=7
+% VERBATUM FROM SPRING 2022
+\question[4] Use Taylor's formula to construct a quadratic approximation to $f(x,y) = y+ xe^y$ near the origin. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue}  \textit{Solutions:} The partials we need are: 
+\begin{align*}
+    f_x(0,0) &= e^y\big|_{(0,0)} = 1 \\
+    f_y(0,0) &= 1 + xe^y \big|_{(0,0)} = 1 \\
+    f_{xx}(0,0) &= 0\big|_{(0,0)} = 0 \\
+    f_{xy}(0,0) &= e^y \big|_{(0,0)} = 1 \\    
+    f_{yy}(0,0) &= 0 \big|_{(0,0)} = 0 \\    
+\end{align*}
+The approximation is
+\begin{align*}
+    f(x,y) &\approx f(0,0) + (xf_x + yf_y) + \frac12(x^2f_{xx} + 2xyf_{xy} + y^2f_{yy}) \\ &= 0 + (1\cdot x+1\cdot y) + \frac12 (0+2xy+0) \\ &= x+ y+xy
+\end{align*}
+
+    } 
+   \else
+      
+   \fi
+    
+\fi

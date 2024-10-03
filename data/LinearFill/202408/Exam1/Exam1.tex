@@ -1,0 +1,68 @@
+\documentclass[12pt]{exam} 
+
+\newcommand{\Solutions}{1} 
+\newcommand{\SetNumber}{1} % can set this variable to zero here it gets updated automatically later
+\newcommand{\Version}{1} 
+\newcommand{\TestName}{}
+\newcommand{\TB}{Exam 1}
+\newcommand{\Exam}{1}
+
+\input{ExamStyle}
+
+\begin{document}
+
+\foreach \s in {0,1} {
+\renewcommand{\Solutions}{\s}
+\ifnum \Solutions = 0 
+\section{Exams}
+\else
+% \newpage
+\section{Solutions}
+\fi
+\foreach \i in {1,...,5} { 
+    \renewcommand{\Version}{\i} 
+    % \newpage
+
+    % TEST SPECIFIC INFORMATION
+    \ifnum \Version=1 \renewcommand{\TestName}{Linear Algebra Practice Exam 1A} \fi
+    \ifnum \Version=2 \renewcommand{\TestName}{Linear Algebra Practice Exam 1B} \fi
+    \ifnum \Version=3 \renewcommand{\TestName}{Linear Algebra Practice Exam 1C} \fi
+    \ifnum \Version=4 \renewcommand{\TestName}{Linear Algebra Practice Exam 1D} \fi
+    \ifnum \Version=5 \renewcommand{\TestName}{Linear Algebra Practice Exam 1E} \fi
+    \ifnum \Version=6 \renewcommand{\TestName}{Linear Algebra Practice Exam 1F} \fi
+
+    % UPDATE SET NUMBER FOR ADDITIONAL RANDOMIZATION
+    \ifnum \Version=0 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=1 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=2 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=3 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=4 \renewcommand{\SetNumber}{2} \fi
+    \ifnum \Version=5 \renewcommand{\SetNumber}{1} \fi
+    \ifnum \Version=6 \renewcommand{\SetNumber}{2} \fi
+
+    
+    % TITLE
+    \begin{center}
+    \ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{Solutions}}\\[6pt]}\fi
+    {\Large {\TestName}} \\
+    {\small \textit{Work done on scratch paper will not be graded. You don't need to show your work on pages 1 and 2. }}    
+    \end{center}
+        
+    \begin{questions}
+        
+        % \ifnum \Solutions=1 \newpage \fi    
+        \question[7] Fill in the blanks. You do not need to justify your reasoning. 
+        \begin{parts}
+            \input{202408/Exam1/Q3FITBa}
+            \input{202408/Exam1/Q3FITBb}
+            \input{202408/Exam1/Q3FITBc}
+            \input{202408/Exam1/Q3FITBd}
+            \input{202408/Exam1/Q3FITBe}
+            \input{202408/Exam1/Q3FITBf}
+            \input{202408/Exam1/Q3FITBg}
+        \end{parts}
+        
+\end{questions}
+}
+}
+\end{document}
