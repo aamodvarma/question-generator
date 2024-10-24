@@ -1,4 +1,5 @@
 import os
+import argparse
 import re
 from pylatexenc.latexencode import unicode_to_latex
 import json
@@ -41,12 +42,11 @@ import json
 #     all_questions[chapter][section].append(generated_question)
         
 
-def book():
-    name = "2551_TF_Q_20240911_2257"
-
-    with open(f"./generated_files/{name}.json") as f:
+def book(file):
+    with open(file) as f:
         all_questions = json.load(f)
 
+    name = file.split('/')[-1].split(".")[0]
     for c in all_questions:
         for s in all_questions[c]:
             for a in range(len(all_questions[c][s])):
@@ -56,8 +56,6 @@ def book():
                     \\ifnum \\Solutions=1 {{\\color{{EmphBlue}} Answer: {q['answer']} \\\\ Explanation: {q['explanation']}}}
                     \\fi"""
                 all_questions[c][s][a] = text
-
-
 
     location = f"./generated_files/{name}/"
     i = 0;
@@ -87,10 +85,10 @@ def book():
 
 
 
-def exam():
+def exam(name):
     latex_commands = ['nabla', 'noindent', 'newline', 'norm', 'nonumber', 'neq', 'nexists']
     latex_commands = [x[1:] for x in latex_commands]
-    name = "./generated_files/LinearFill_20240919_1028.json"
+    # name = "./generated_files/LinearFill_20240919_1028.json"
     with open(name, "r") as f:
         questions = json.load(f)
 
@@ -106,14 +104,17 @@ def exam():
                     pattern_standalone = r'(?<!\\)\n(?!' + '|'.join(latex_commands) + r')'  
                     ques = re.sub(pattern, r'\\ ', q["question"])
                     # ques = re.sub(pattern_standalone, r'\\\\', ques)
-
-
                     ans = re.sub(pattern, r'\\ ', q["answer"])
                     # ans = re.sub(pattern_standalone, r'\\\\ ', ans)
 
+                    # replace "char\\char" with "char\char"
                     pattern = r'(?<=[a-zA-Z])\\\\|\\\\(?=[a-zA-Z])'
-
                     ques = re.sub(pattern, r'\\', ques)
+                    ans = re.sub(pattern, r'\\', ans)
+
+                    # replace numbner/number with number // number
+                    ques = re.sub(r'(\d+)\\(\d+)', r'\1 \\\\ \2', ques)
+                    ans = re.sub(r'(\d+)\\(\d+)', r'\1 \\\\ \2', ans)
 
                     q_tex = fr"""
     \ifnum \Version={count}
@@ -127,12 +128,10 @@ def exam():
         \else
         \fi        
     \fi"""
-                        
                     count+=1;
                     print(q_tex)
                     q_list.append(q_tex)
                 except:
-                    print('E')
                     continue
             with open(location+number, "w") as f:
 
@@ -143,4 +142,13 @@ def exam():
 
 
 if __name__ == "__main__":
-    exam()
+    parser = argparse.ArgumentParser(
+                    prog='Batch Generator',
+                    description='Generates Questoins')
+    parser.add_argument('--type', type=str, required=True, choices=["book", "exam"], help="The type of generation")
+    args = parser.parse_args()
+    if (args.type == "book"):
+        book(args.file);
+    elif(args.type == "exam"):
+        exam(args.file)
+

@@ -1,4 +1,5 @@
 import pathlib
+import argparse
 import json
 import re
 import textwrap
@@ -64,7 +65,7 @@ def extract_openstax():
             count+= len(y)
     print(count)
 
-def linear_exam():
+def LinearExam():
     all_questions = {}
     folder = "./data/LinearFill/202408/"
     exams = [x for x in os.listdir(folder) if x[0:4] == "Exam"]
@@ -132,4 +133,20 @@ def MVCExam():
         json.dump(all_questions, f, indent=4)
 
 if __name__ == "__main__":
-    MVCExam()
+    parser = argparse.ArgumentParser(
+                    prog='Extract Questions',
+                    description='Extracts Questoins')
+    
+    parser.add_argument('--type', type=str, required=True, choices=["openstax", "exam"], help="The type of generation")
+    parser.add_argument('--subject', type=str, required=True, choices=["linear", "multi"], help="The type of generation")
+
+    args = parser.parse_args()
+
+    if args.type == "openstax":
+        extract_openstax()
+
+    elif args.type == "exam":
+        if (args.subject == "linear"):
+            LinearExam()
+        else:
+            MVCExam()
