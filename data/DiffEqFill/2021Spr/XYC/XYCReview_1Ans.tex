@@ -1,0 +1,406 @@
+%\vfill\rightline{(See the next page for the answers)}
+
+
+\item 
+(a) $y(t)= -{2\over 5}e^{3t^5} +2t^5 e^{3t^5} +Ce^{-2t^5}$ where $C$ is a free parameter
+
+(b) $y(t)= -{2\over 5}e^{3t^5} +2t^5 e^{3t^5} -{3\over 5}e^{-2t^5}$
+
+\item
+$\displaystyle x(t)=6/(3e^{-2t} -1)$
+
+\item
+(a) $\displaystyle \frac{dQ}{dt}=2-\frac{1}{20}Q,\ Q(0)=10$ (lb) 
+
+(b)$Q(t)=40-30e^{-0.05 t}$ (lb) 
+
+(c) $\displaystyle \lim_{t\to\infty} Q(t)=40$ (lb)
+
+
+\item 
+(a)
+$\displaystyle \frac{dP}{dt}=0.02P, P(0)=12$ (millions)
+
+(b)
+$P(t)=12e^{0.02t}$ (millions)
+
+(c)
+$t=50\ln 2\approx 34.7$ years
+ 
+
+\item
+(a)
+$\displaystyle \frac{dT}{dt}=-k(T-375), T(0)=50$
+
+
+(b)
+$T(t)=375-325e^{-kt}$
+\hfill
+(c)
+$\displaystyle t=\frac{75\ln(13/9)}{\ln(13/10)}\approx 105$~minutes
+ 
+
+
+
+
+\item
+$\displaystyle
+\mbox{(a)}\quad 
+\frac{dv}{dt}=9.8\left( -1-\frac{v^2}{1600}\right).
+$
+\raisebox{-0.5\height}{
+\includegraphics*[width=0.15\textwidth]{testpr-ball-up.eps}
+}
+
+
+$\displaystyle
+\mbox{(b)}\quad 
+\frac{dv}{dt}=9.8\left( -1+\frac{v^2}{1600}\right).
+$
+\raisebox{-0.5\height}{
+\includegraphics*[width=0.15\textwidth]{testpr-ball-down.eps}
+} 
+
+  
+
+\item
+	\begin{enumerate}
+	\item
+The equilibrium solutions are $y=-2,-1,0,2$.
+	\item
+\raisebox{-.5\height}{
+\includegraphics*[width=0.5\textwidth]{test1pr-4-phase.eps}
+}
+	\item
+Equilibria $y=-2$ and $y=2$ are asymptotically stable.\\
+Equilibria $y=-1$ and $y=0$ are unstable.
+	\end{enumerate}
+
+
+
+
+\def\ans_one_dim_lin_approx{
+\item
+	\begin{enumerate}
+	\item The equilibria are: $y=-2,-1,0,2,3$.
+	\item \begin{description}
+		\item{$\bullet$} 
+		Near $y=-2$: the linear approximating equation is 
+		$(**) \    y'=10(y+2)$. \\
+		The equilibrium $y=-2$ is unstable with respect to the lin approx eq $(**)$.
+	         \item{$\bullet$} 
+	        Near $y=-1$: the linear approximating equation is 
+		$(**)\    y'=0$. \\
+		The equilibrium $y=-1$ is stable but not asymptotically stable, with respect to the lin approx eq $(**)$.
+		\item{$\bullet$} 
+		Near $y=0$: the linear approximating equation is 
+		$(**) \    y'=\frac{3}{2}y$. \\
+		The equilibrium $y=0$ is unstable with respect to the lin approx eq $(**)$.
+		\item{$\bullet$} 
+		Near $y=2$: the linear approximating equation is 
+		$(**)\    y'=0$. \\
+		The equilibrium $y=2$ is stable but not asymptotically stable, with respect to the lin approx eq $(**)$.
+		\item{$\bullet$} 
+		Near $y=3$: the linear approximating equation is 
+		$(**) \    y'=-60(y-3)$. \\
+		The equilibrium $y=3$ is asymptotically stable w.r.t. the lin approx eq $(**)$.
+		\end{description}
+	\item \begin{description}
+	         \item{$\bullet$} 
+	         The linear approximations are sufficient to determine the nonlinear dynamics near $y=-2$, near $y=0$, and near $y=3$ on the qualitatively level.
+		
+		The equilibria $y=-2$ and $y=0$ are unstable with respect to the nonlin eq $(*)$.
+		
+		The equilibrium $y=3$ is asymptotically stable w.r.t. the nonlin eq $(*)$.
+		
+		\item{$\bullet$}
+		On the other hand, the linear approximating equation near $y=-1$ is degenerate.
+		The linear approximation is insufficient to determine the nonlinear dynamics near $y=-1$.
+		\item{$\bullet$}
+		Similarly, the linear approximating equation near $y=2$ is degenerate.
+		The linear approximation is insufficient to determine the nonlinear dynamics near $y=2$.
+		\end{description}
+	\item For $y=-1$ and $y=2$, the stability/instability w.r.t. the nonlinear equation $(*)$ can be determined by studying the sign changes of the nonlinear term $f(y)= \frac{1}{16} (y+1)^3 (y-2)^2 (-y^3+y^2+6y)$.
+	         
+	         {\em Answer}: 
+The equilibrium $y=-1$ is asymptotically stable w.r.t. the nonlin eq $(*)$.\\
+The equilibrium $y=2$ is unstable w.r.t. the nonlin eq $(*)$.
+	\item
+\includegraphics*[width=0.5\textwidth]{test1pr-5-phase.eps}
+	\end{enumerate}
+}
+
+
+\item
+	\begin{enumerate}
+	\item
+The matrix-vector form:
+$\displaystyle \frac{d\vec{\bf x}}{dt}=\bmatrix{-4 & -2\cr 3 & -11} \vec{\bf x}$.
+\\
+The general solutions:
+$\bmatrix{x_1(t)\cr x_2(t)}
+=C_1 e^{-5t}\bmatrix{2\cr 1} +C_2 e^{-10t}\bmatrix{1\cr 3},$
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-2e^{-5t}+e^{-10t}\cr -e^{-5t}+3e^{-10t}}$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ is an attractive improper node (or, also called a nodal sink).
+The equilibrium $(0,0)$ is asymptotically stable.
+
+\begin{minipage}{0.50\textwidth}
+{\color{red}\small\em Notes:}
+\\[1ex]
+	{\small \color{blue}
+It's unrealistic to expect a hand-drawn figure to be 
+as nice as computer graphics.
+However, the phase portrait
+should demonstrate the following elements:
+\begin{description}
+\item{$\bullet$}
+The correct eigenspaces.
+The trajectories on the eigenspaces are straight half-lines.
+\item{$\bullet$}
+Trajectories that are not on the eigenspaces are curved and converge to the equilibrium, which is the origin.
+\item{$\bullet$} 
+At the equilibrium, all the curved trajectories are tangent 
+to the eigenspace of $\lambda_1=-5$.
+\item{$\bullet$}
+And needless to say, the correct directions of arrows
+on all solution trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-attractive-improper-node.eps}}
+\end{minipage}
+
+
+	\item
+The matrix-vector form:
+$\displaystyle \frac{d\vec{\bf x}}{dt}=\bmatrix{6 & 14\cr 21 & -1} \vec{\bf x}$.
+\\
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=C_1 e^{-15t}\bmatrix{-2/3\cr 1} +C_2 e^{20t}\bmatrix{1\cr 1},$
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$ \bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-{6\over 5}e^{-15t} +{1\over 5}e^{20t}\cr 
+          {9\over 5}e^{-15t} +{1\over 5}e^{20t}}.$\\
+The equilibrium $(x_1,x_2)=(0,0)$ is a saddle.
+The equilibrium $(0,0)$ is unstable.
+
+\begin{minipage}{0.50\textwidth}
+{\color{red}\small\em Notes:}
+{\small \color{blue}
+The phase portrait
+should demonstrate the following elements:
+\begin{description}
+\item{$\bullet$}
+The correct eigenspaces.
+The trajectories on the eigenspaces are straight half-lines.
+\item{$\bullet$}
+Trajectories that are not on the eigenspaces are curved and transit from
+the eigenspace of $\lambda_2=-15$ to the eigenspace of $\lambda_1=20$.
+\item{$\bullet$}
+And needless to say, the correct directions of arrows
+on all solution trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-saddle.eps}}
+\end{minipage}
+
+\newpage
+
+	\item
+The matrix-vector form:
+$\displaystyle \frac{d\vec{\bf x}}{dt}=\bmatrix{7 & -4\cr -2 & 5} \vec{\bf x}$.
+\\
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=C_1 e^{3t}\bmatrix{1\cr 1} +C_2 e^{9t}\bmatrix{-2\cr 1},$
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$ \bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{e^{3t}-2e^{9t}\cr 
+          e^{3t}+e^{9t}}.$\\
+The equilibrium $(x_1,x_2)=(0,0)$ is a repulsive improper node 
+(or, also called a nodal source).
+The equilibrium $(0,0)$ is unstable.
+
+\begin{minipage}{0.50\textwidth}
+{\color{red}\small\em Notes:}
+{\small \color{blue}
+The phase portrait
+should demonstrate the following elements:
+\begin{description}
+\item{$\bullet$}
+The solution trajectories on the eigenspaces are straight half-lines.
+\item{$\bullet$}
+Trajectories that are not on the eigenspaces are curved 
+and emanate from the origin. How do they curve?
+E.g., in this problem, the curved trajectories should be tangent to the 
+eigenspace of $\lambda_2=3$ near the origin.
+\item{$\bullet$}
+Needless to say, the figure should give
+the correct arrows on all solution trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-repulsive-improper-node.eps}}
+\end{minipage}
+
+	\end{enumerate}
+
+
+\item
+	\begin{enumerate}
+	\item	
+$\displaystyle \frac{d}{dt}\bmatrix{x\cr y\cr z}=
+\bmatrix{
+2 & 3 & -3 \cr
+4 & 2 & -4 \cr
+4 & 3 & -5  } \bmatrix{x\cr y\cr z}, \quad
+\bmatrix{x(0)\cr y(0)\cr z(0)}=\bmatrix{-1\cr 1\cr 2}$
+	\item
+$x(t)=e^{-t}           -2e^{2t},\ 
+y(t)=        3e^{-2t} -2e^{2t},\ 
+z(t)= e^{-t} +3e^{-2t} -2e^{2t}$
+	\end{enumerate}
+\def\AlternativeExpression{
+${\bf x}(t)=
+e^{-t}\bmatrix{1\cr 0\cr 1} 
++3e^{-2t}\bmatrix{0\cr 1\cr 1}
+-2e^{2t}\bmatrix{1\cr 1\cr 1}$
+or, equivalently,
+${\bf x}(t)=
+\bmatrix{
+e^{-t}           -2e^{2t}  \cr
+        3e^{-2t} -2e^{2t} \cr
+e^{-t} +3e^{-2t} -2e^{2t} }$
+}
+
+
+\item
+	\begin{enumerate}
+	\item  ${ }$
+\vspace*{-2.2em}
+
+\begin{minipage}{0.65\textwidth}
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}=\\
+\hspace*{-5.5em}
+C_1 e^{t}\left( \cos(2t)\bmatrix{-3\cr 1} -\sin(2t)\bmatrix{2\cr 0} \right)
++C_2 e^{t}\left( \sin(2t)\bmatrix{-3\cr 1} +\cos(2t)\bmatrix{2\cr 0} \right)$,\\
+where $C_1,C_2$ are free parameters. 
+\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-e^t \cos(2t) -{23\over 2}e^t \sin(2t)\cr 2e^t \cos(2t) +{5\over 2}e^t \sin(2t)}$.
+\\
+The equilibrium $(x_1,x_2)=(0,0)$ is a repulsive focus and is unstable.
+\end{minipage} 
+\begin{minipage}{0.3\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-repulsive-focus.eps}}
+\end{minipage}
+
+
+	\item  ${ }$
+\vspace*{-2em}
+
+\begin{minipage}{0.65\textwidth}
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}=\\
+C_1 \left( \cos t\bmatrix{1\cr -1} -\sin t\bmatrix{0\cr 1} \right)
++C_2 \left( \sin t\bmatrix{1\cr -1} +\cos t\bmatrix{0\cr 1} \right)$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-\cos t +\sin t\cr 2\cos t}$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ is a center.
+It is stable, but not asymptotically stable.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-center-clockwise.eps}}
+\end{minipage}
+
+
+${ }$
+\\[-0.3em]
+\begin{minipage}{0.65\textwidth}
+\item
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\\
+C_1 e^{-t/2}\left( \cos(4t)\bmatrix{1\cr 1/2} -\sin(4t)\bmatrix{0\cr -1} \right)\\
++C_2 e^{-t/2}\left( \sin(4t)\bmatrix{1\cr 1/2} +\cos(4t)\bmatrix{0\cr -1} \right)$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-e^{-t/2} \cos(4t) -{5\over 2}e^{-t/2} \sin(4t)\cr 
+         +2e^{-t/2} \cos(4t) -{9\over 4}e^{-t/2} \sin(4t)}$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ is an attractive focus and is asymptotically stable.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-attractive-focus.eps}}
+\end{minipage}
+
+	\end{enumerate}
+{\color{red}\small\em Remark 1:}
+%\\[1ex]
+	{\small \color{blue}
+It's unrealistic to expect a hand-drawn figure to be as nice as computer graphics.
+However, the phase portrait should show 
+whether the trajectories are closed curves, spirals converging to the origin, 
+or spirals leaving the origin \& go to infinity. 
+Moreover, it should show correctly 
+whether the spinning is clockwise or counterclockwise.
+	}
+
+{\color{red}\small\em Remark 2:}
+%\\[1ex]
+	{\small \color{blue}
+One can choose a different eigenvector. The resulting general solutions formula
+may appear different from the ones given above, but they indeed are equivalent. 
+For example, in Problem [10] Part (a), 
+eigenvectors for $\lambda_1=1+2i$ satisfy
+$$
+\hspace*{-2em}
+(A-(1+2i)I){\bf x}={\bf 0}
+\Leftrightarrow
+\bmatrix{-3-2i&-13\cr 1& 3-2i}\bmatrix{x_1\cr x_2}=\bmatrix{0\cr 0}
+\Leftrightarrow
+(-3-2i)x_1-13 x_2=0
+\Leftrightarrow
+x_2=\frac{-3-2i}{13}x_1
+$$
+$$
+\Leftrightarrow
+\bmatrix{x_1\cr x_2}=\bmatrix{x_1\cr \frac{-3-2i}{13}x_1}=x_1\bmatrix{1\cr \frac{-3-2i}{13}}
+\Rightarrow
+\mbox{an eigenvector }
+{\bf u}_1=13\bmatrix{1\cr \frac{-3-2i}{13}}=\bmatrix{13\cr -3-2i}=\bmatrix{13\cr -3}+i\bmatrix{0\cr -2}
+$$
+Using this eigenvector, one obtains the following general solutions formula:
+$$
+\bmatrix{x_1(t)\cr x_2(t)}=
+  C_1 e^{t}\left\{ \cos(2t)\bmatrix{13\cr -3} -\sin(2t)\bmatrix{0\cr -2} \right\}
+ +C_2 e^{t}\left\{ \sin(2t)\bmatrix{13\cr -3} +\cos(2t)\bmatrix{0\cr -2} \right\}.
+$$
+	}
+
+
+\item
+$C_1 e^{-t} \bmatrix{1 \cr -1 \cr 1}
++C_2 e^{2t} \left(
+\cos(3t) \bmatrix{1 \cr 0 \cr 1} -\sin(3t) \bmatrix{3 \cr 1 \cr 0}
+\right)
++C_3 e^{2t} \left(
+\sin(3t) \bmatrix{1 \cr 0 \cr 1} +\cos(3t) \bmatrix{3 \cr 1 \cr 0}
+\right)
+$
+
+ 

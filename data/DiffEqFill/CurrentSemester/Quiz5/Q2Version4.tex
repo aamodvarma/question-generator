@@ -1,0 +1,60 @@
+\question[6] The non-linear system below has critical points at $(0,0)$, $(4,0)$, and $(0,1)$. 
+\begin{align*}
+    \dxdt &= y^2+2xy - y , \qquad \dydt = xy+x^2-4x
+\end{align*}
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+            F &= x', \quad G = y', \quad J 
+            = \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} 
+            = \begin{pmatrix} 2y&2y+2x-1\\y+2x-4&x\end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vspace{3cm}
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(0,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,0)$, $J = \begin{pmatrix} 0&-1\\-4&0\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (0-\lambda)(0-\lambda)-4 = \lambda^2 -4 
+        \end{align}
+        Thus $\lambda = \pm 2$. The eigenvalues are real and have opposite signs. The CP is an unstable saddle. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(4,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(4,0)$, $J = \begin{pmatrix} 0&7\\4&4\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (0-\lambda)(4-\lambda)-28 = \lambda^2- 4\lambda - 28
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = 2\pm \frac12 \sqrt{16 + 4\cdot 28}
+        \end{align}     
+        The eigenvalues are real and have opposite signs. The CP is an unstable saddle. 
+        If you prefer you can simplify the expression for the eigenvalues a bit further but it isn't necessary to do so in order to see that they have opposite signs. 
+        \begin{align}
+            \lambda = 2\pm \frac12 \sqrt{16 + 4\cdot 28} = 2 \pm \frac12 \sqrt{4^2\cdot 8 } = 2 \pm 4 \sqrt2
+        \end{align}    
+    } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(0,1)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,1)$, $J = \begin{pmatrix} 2&1\\-3&0\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (2-\lambda)(0-\lambda)+3 = \lambda^2- 2\lambda + 3 
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = 1 \pm \frac12 \sqrt{4 - 4\cdot 3} = 1 \pm \sqrt{2}i
+        \end{align}     
+        The $\lambda$'s are complex and have positive real parts. The CP is an unstable spiral. 
+    } 
+    \else 
+    \vfill
+    \fi    
+\end{parts}
+

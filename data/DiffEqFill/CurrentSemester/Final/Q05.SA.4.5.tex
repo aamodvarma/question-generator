@@ -1,0 +1,149 @@
+\ifnum \Version=1
+\question[4] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y''+4y = t^2+t\cos2t$, $y_h = c_1\cos 2t + c_2 \sin 2t$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\ The form we need is
+    $$y_p = A_1t^2+A_2t+A_3 + t(B_1t+B_2)\cos(2t) + t(C_1t+C_2)\sin(2t)$$
+    If you are wondering how this result was obtained: note that the right-hand-side of the DE is $t^2+t\cos2t$. There are two parts to this: $t^2$ and $t\cos2t$. 
+    \begin{itemize}
+        \item For the $t^2$ term we need to use a general 2nd order polynomial. So we try $$A_1t^2+A_2t+A_3$$ 
+        \item For the $t\cos2t$ term we might use something of the form $$(B_1t+B_0)\cos(2t) + (C_1t+C_2)\sin(2t)$$ Except when we expand this out we have $$B_1t\cos(2t)+B_0\cos(2t) + C_1t\sin2t +C_2\sin(2t)$$ Unfortunately $B_0\cos(2t)$ is a solution to the homogeneous problem, so we won't be able to determine $B_0$. Likewise $C_2\sin(2t)$ is a solution to the homogeneous problem so we won't be able to determine the value of $C_2$ either. When this happens we multiply by $t^s$ where $s$ is the smallest integer so that none of the terms are a solution to the homogeneous problem. In this case it is sufficient to use $s=1$. So instead of trying 
+        $$(B_1t+B_0)\cos(2t) + (C_1t+C_2)\sin(2t)$$ 
+        we instead try
+        $$t(B_1t+B_0)\cos(2t) + t(C_1t+C_2)\sin(2t)$$ 
+        None of the terms are solutions to the homogeneous problem, so we are able to use this form. 
+    \end{itemize}
+    Putting everything together, the form we need is
+    $$A_1t^2+A_2t+A_3 + t(B_1t+B_0)\cos(2t) + t (C_1t+C_2)\sin(2t)$$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi
+    \item[b)] $y'' - 5y' + 6y =  e^{2t} (t^2 + 4) \sin(2t)$, $y_h = c_1e^{2t} + c_2 e^{3t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\ The right-hand-side is an exponential times a second order polynomial times a trig function. For such a form, based on the table of forms for undetermined coefficients, we use:
+    $$y_p = (A_1t^2+A_2t + A_3)e^{2t}\cos(2t) + (B_1t^2+B_2t + B_3)e^{2t}\sin(2t)$$
+    Note that none of the terms are a solution to the homogeneous problem so we do not need to multiply any part of this by $t^s$.
+    } 
+    \else 
+    \vspace{2cm}
+    \fi        
+\end{enumerate}
+\fi
+
+
+\ifnum \Version=2
+\question[4] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y''+5y'+6y = t^2+e^{-2t}$, $y_h = c_1e^{-2t} + c_2 e^{-3t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p = A_1t^2+A_2t+A_3 + Bte^{-2t}$$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi
+    \item[b)] $y'' - 2y' + 5y =  te^t\cos(t)$, $y_h = c_1e^{t}\cos(2t) + c_2 e^{t}\sin(2t)$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p =  (A_1t+A_2)e^{t}\cos(t) +  (B_1t+B_2)e^{t}\sin(t) $$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi        
+\end{enumerate}
+\fi
+
+
+
+\ifnum \Version=3
+\question[4] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y''+5y'+6y = t^2+e^{-2t}$, $y_h = c_1e^{-2t} + c_2 e^{-3t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p = A_1t^2+A_2t+A_3 + Bte^{-2t}$$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi
+    \item[b)] $y'' - 2y' + 5y =  te^t\cos(t)$, $y_h = c_1e^{t}\cos(2t) + c_2 e^{t}\sin(2t)$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p =  (A_1t+A_2)e^{t}\cos(t) +  (B_1t+B_2)e^{t}\sin(t) $$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi        
+\end{enumerate}
+\fi
+
+
+
+\ifnum \Version=4
+\question[3] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y'' - 2y' + 5y =  te^t\cos(t)$, $y_h = c_1e^{t}\cos(2t) + c_2 e^{t}\sin(2t)$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p =  (A_1t+A_2)e^{t}\cos(t) +  (B_1t+B_2)e^{t}\sin(t) $$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi       
+    \item[b)] $y''+6y'+8y = t^2+e^{-2t}$, $y_h = c_1e^{-2t} + c_2 e^{-4t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p = A_1t^2+A_2t+A_3 + Bte^{-2t}$$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi    
+\end{enumerate}
+\fi
+
+
+
+
+
+\ifnum \Version=6
+\question[3] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. You do not need to solve the DE. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y''+y = t\cos t$, $y_h = c_1\cos t + c_2 \sin t$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p =  t(A_1t+A_2)\cos(t) +  t(B_1t+B_2)\sin(t) $$
+    } 
+    \else 
+    \vspace{6cm}
+    \fi       
+    \item[b)] $y'' - 5y' + 6y =  e^{2t} (3t + 4) \sin(2t)$, $y_h = c_1e^{2t} + c_2 e^{3t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p = (A_1t+A_2)\cos(2t)e^{2t} + (B_1t+B_2)\sin(2t)e^{2t}$$
+    } 
+    \else 
+    \vspace{6cm}
+    \fi    
+\end{enumerate}
+\fi
+
+
+\ifnum \Version=7
+\question[3] 
+Determine a suitable form for the particular solution $y_p(t)$ if the method of undetermined coeﬃcients is to be used. You do not need to show your work for this question. You do not need to solve the DE. The homogeneous solution is given. 
+\begin{enumerate}
+    \item[a)] $y''+y = t\sin t$, $y_h = c_1\cos t + c_2 \sin t$.
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p =  t(A_1t+A_2)\cos(t) +  t(B_1t+B_2)\sin(t) $$
+    } 
+    \else 
+    \vspace{6cm}
+    \fi       
+    \item[b)] $y'' - 5y' + 6y = e^t \cos(2t)$, $y_h = c_1e^{2t} + c_2 e^{3t}$. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    $$y_p = A\cos(2t)e^{t} + B\sin(2t)e^{t}$$
+    } 
+    \else 
+    \vspace{6cm}
+    \fi    
+\end{enumerate}
+\fi
+
+

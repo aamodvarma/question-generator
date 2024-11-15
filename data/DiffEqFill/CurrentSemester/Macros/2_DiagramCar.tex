@@ -1,0 +1,38 @@
+\hspace{1cm}\begin{tikzpicture}
+\tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.3cm,post length=0.3cm,segment length=6}]
+\tikzstyle{damper}=[thick,decoration={markings,  
+  mark connection node=dmp,
+  mark=at position 0.5 with 
+  {
+    \node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum width=15pt,minimum height=3pt,draw=none] {};
+    \draw [thick] ($(dmp.north east)+(2pt,0)$) -- (dmp.south east) -- (dmp.south west) -- ($(dmp.north west)+(2pt,0)$);
+    \draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+  }
+}, decorate]
+
+% WALL PATTERN
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.5cm,minimum height=0.3cm,inner sep=0pt,outer sep=0pt]
+
+% CART
+\node [style={draw,outer sep=0pt,very thick}] (M) [minimum width=1cm, minimum height=1.0cm] {$m$};
+% WHEELS
+\draw [very thick] (M.south west) ++ (0.2cm,-0.125cm) circle (0.125cm)  (M.south east) ++ (-0.2cm,-0.125cm) circle (0.125cm);
+
+% BOTTOM GROUND
+\node (ground) [ground,anchor=north,yshift=-0.25cm,minimum width=5.6cm,xshift=-0.03cm] at (M.south) {};
+\draw (ground.north east) -- (ground.north west);
+\draw (ground.south east) -- (ground.south west);
+\draw (ground.north east) -- (ground.south east);
+
+% WEST WALL
+\node (wall) [ground, rotate=-90, minimum width=3cm,xshift=-0.42cm,yshift=-3cm] {};
+\draw (wall.north east) -- (wall.north west);
+\draw (wall.north west) -- (wall.south west);
+\draw (wall.south west) -- (wall.south east);
+\draw (wall.south east) -- (wall.north east);
+
+% DAMPER AND SPRING
+\draw [spring] (wall.20) -- ($(M.north west)!(wall.20)!(M.south west)$);
+% \node (y) at (wall.130) [yshift = 0.02cm,xshift=1.2cm] {$k$};
+
+\end{tikzpicture}

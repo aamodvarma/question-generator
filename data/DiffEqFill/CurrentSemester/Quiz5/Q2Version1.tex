@@ -1,0 +1,48 @@
+\newpage 
+\question[8] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= y , \qquad \dydt = y-x^2+1
+\end{align*}
+The critical points are located at $(\pm1,0)$. 
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+            F &= y\\
+            G &= y-x^2+1 \\
+            J &= \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} = \begin{pmatrix} 0&1\\-2x&1\end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vfill
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(1,0)$, $J = \begin{pmatrix} 0&1\\-2&1\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (0-\lambda)(1-\lambda)+2 = \lambda^2 -\lambda + 2 
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = 1 \pm \frac12 \sqrt{1-8} = 1 \pm \frac{\sqrt{7}}{2}i
+        \end{align}
+        $\lambda \in \mathbb C$, and the real part is positive. The critical point is an unstable spiral. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(-1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(-1,0)$, $J = \begin{pmatrix} 0&1\\2&1\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (0-\lambda)(1-\lambda)-2 = \lambda^2 -\lambda - 2 
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = 1 \pm \frac12 \sqrt{1+8} = 1 \pm 3
+        \end{align}
+        $\lambda \in \mathbb R$, one eigenvalue is positive and the other is negative. The critical point is an unstable saddle.         
+    } 
+    \else 
+    \vfill
+\fi
+\end{parts}
+

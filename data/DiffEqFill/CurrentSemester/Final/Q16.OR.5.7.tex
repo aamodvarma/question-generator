@@ -1,0 +1,221 @@
+\ifnum \Version=1
+\newpage 
+\question[5] Use the Laplace transform to solve the following IVP. Please show your work. $$y''-y=2\delta(t-3),\ y(0)=4,\ y'(0)=4$$
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    
+    \textit{Solution.} 
+    \begin{align}
+    (s^2Y(s)-4s-4)-Y(s)&=20e^{-3s} \\
+    Y(s)&=\frac{4s+4}{s^2-1}+\frac{2e^{-3s}}{s^2-1} \\
+    Y(s)&=\frac{4(s+1)}{(s+1)(s-1)}+\frac{2e^{-3s}}{s^2-1} \\
+    Y(s)&=\frac{4}{s-1}+\frac{2e^{-3s}}{s^2-1} 
+    \end{align}
+    Partial fractions on second term:
+    \begin{align}
+        \frac{1}{s^2-1} &= \frac{1}{(s+1)(s-1)} = \frac{A}{s+1} + \frac{B}{s-1} \\
+        1 &= A(s-1) + B(s+1)
+    \end{align}
+    Setting $s=+1$ yields $B=1/2$, setting $s=-1$ yields $A=-1/2$. Then,
+    \begin{align}
+    Y(s) &= \frac{4}{s-1} + e^{-3s}\left(\frac{1}{s-1}-\frac{1}{s+1}\right) 
+    \end{align}   
+    Taking the inverse transform yields:
+    \begin{align}
+    y(t)&=4e^{t}+ (e^{t-3}-e^{-(t-3)})u_3(t) 
+    \end{align}    
+    
+    } 
+    \else
+    \vfill
+    \fi
+
+\fi
+
+
+
+
+\ifnum \Version=2
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Use the Laplace transform to solve the following IVP. Please show your work. 
+
+    $$ y''+ 5y' + 4 y =  6\delta(t - 1) + 3\delta(t - 2), \quad y(0) = y'(0) = 0$$  
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $Y (s) = \mathcal L[y]$, and apply the Laplace transform to the differential equation. We obtain
+    $$\left(s^2 Y (s) - sy(0) - y' (0) \right)+ 5(sY-y(0)) + 4Y  = 6e^{-s} + 3e^{-2 s}$$
+    Applying the initial conditions, we get
+    \begin{align}(s^2 + 5s + 4)Y(s) &= 6e^{-s} + 3e^{-2s} \\
+        Y(s) &=  \frac{ 6e^{- s} + 3e^{-2 s}}{s^2 + 5s + 4} \\
+        &=  \frac{6e^{- s} +3e^{-2 s}}{(s+1)(s+4)} 
+    \end{align}
+    But 
+    \begin{align}
+        \frac{1}{(s+1)(s+4)} &= A/(s+1) + B/(s+4) \\
+        1 &= A(s+4) + B(s+1) 
+    \end{align}
+    From $s=-1$, $A=1/3$, and using $s=-4$ we get $B=-1/3$. 
+    \begin{align}
+        Y(s) = \frac{ 6e^{- s} + 3e^{-2 s}}{(s+1)(s+4)} 
+        &= \frac13 \left( 6e^{- s} + 3e^{-2 s}\right) \left( \frac{1}{s+1} - \frac{1}{s+4} \right) \\
+        &=  \frac{2e^{- s}}{s+1} - \frac{2e^{- s}}{s+4} +  \frac{e^{-2 s}}{s+1} - \frac{e^{-2 s}}{s+4}     
+    \end{align}    
+    This implies that
+    
+    $$y(t) = 2e^{-(t-1)}u_1 - 2e^{-4(t-1)}u_1 + e^{-(t-2)}u_2 - e^{-4(t-2)}u_2$$ 
+    
+    } 
+    \else 
+    \fi
+\fi
+
+
+\ifnum \Version=3
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Use the Laplace transform to solve the following IVP. Please show your work. 
+
+    $$ y''+ y' =  2\delta(t - 3), \quad y(0) = 4, \quad y'(0) = 0$$  
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $Y (s) = \mathcal L[y]$, and apply the Laplace transform to the differential equation. We obtain
+    $$s^2 Y (s) - sy(0) - y' (0) + sY (s) - y(0) = 2e^{-3s} $$
+    Applying the initial conditions, we get
+    \begin{align}
+    (s^2 + s)Y(s) &= 4s+4 + 2e^{-3 s} \\
+        Y(s) 
+        &=  \frac{4s+4 + 2e^{-3 s} }{s(s+1)} \\ 
+        &=  \frac{4(s+1) }{s(s+1)} + \frac{2e^{-3 s} }{s(s+1)} \\ 
+        &=  \frac{4 }{s} + \frac{2e^{-3 s} }{s(s+1)} 
+    \end{align}
+    But 
+    \begin{align}
+        \frac{1}{s(s+1)} &= A/s + B/(s+1) \\
+        1 &= A(s+1) + Bs \\
+        1 &= (A+B)s + A
+    \end{align}
+    Thus $A=1$ and $B=-A=-1$. 
+    \begin{align}
+        Y(s) 
+        =  \frac{4 }{s} + \frac{2e^{-3 s} }{s(s+1)} 
+        &=  \frac{4 }{s} + \left(\frac{1}{s} - \frac{1}{s+1}\right)2e^{-3 s} \\ 
+        &=  \frac{4 }{s} + \frac{2e^{-3s}}{s} - \frac{2e^{-3 s}}{s+1} 
+    \end{align}    
+    The inverse transform implies that
+    $$y(t) = 4 + 2u_{3}-2e^{-(t-3)}u_3 = 4 + 2u_{3}-2e^{3-t}u_3$$ 
+    
+    } 
+    \else 
+    \fi
+\fi
+
+
+
+
+\ifnum \Version=4
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Use the Laplace transform to solve the following IVP. Please show your work. 
+
+    $$ y' + 4y =  12e^{-2t} + 2\delta(t - 3), \quad y(0) = 0$$  
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $Y (s) = \mathcal L[y]$, and apply the Laplace transform to the differential equation. We obtain
+    $$sY- y(0) + 4Y= \frac{12}{s+2} + 2e^{-3s} $$
+    Applying the initial condition, we get
+    \begin{align}
+    (s + 4)Y(s) &= \frac{12}{s+2} + 2e^{-3 s} \\
+        Y(s) 
+        &=  \frac{12}{(s+4)(s+2)} + \frac{2e^{-3 s}}{s+4}
+    \end{align}
+    But 
+    \begin{align}
+        \frac{12}{(s+2)(s+4)} &= A/(s+2) + B/(s+4) \\
+        12 &= A(s+4) + B(s+2) 
+    \end{align}
+    When $s=-2$, $A=6$. When $s=-4$, $B=-6$. 
+    \begin{align}
+        Y(s) 
+        =  \frac{12}{(s+4)(s+2)} + \frac{2e^{-3 s}}{s+4} 
+        &= \frac{6}{s+2} - \frac{6}{s+4} + \frac{2e^{-3 s}}{s+4}
+    \end{align}    
+    The inverse transform implies that
+    $$y(t) = 6e^{-2t} - 6 e^{-4t} + 2e^{-4(t-3)}u_3$$
+    
+    } 
+    \else 
+    \fi
+\fi
+
+
+\ifnum \Version=6
+\ifnum \Solutions=0 \newpage \fi
+\question[4] Suppose that a hot cup of coffee has temperature $40^{\circ}$C at time $t = 0$. After about 4 minutes you add a small amount of cream to the cup that decreases the temperature of the drink. If we model the coffee temperature with Newton's Law of Cooling and a Delta function we would obtain
+\begin{align}
+    \dydt = -k(y - T_0) - A_0\delta(t-4), \quad y(0) = 40
+\end{align}
+Assume the ambient temperature is $T_0 = 20^{\circ}$C and that $A_0$ is an unknown constant. Determine an expression for the temperature of the coffee for $t \ge 0$. Your expression will be in terms of constants $k$ and $A_0$. 
+
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $Y (s) = \mathcal L[y]$, and apply the Laplace transform to the differential equation. We obtain
+    \begin{align}
+        y' + ky &= kT_0 - A_0 \delta(t-4) \\ 
+        sY + kY &= y(0) + \frac{T_0k}{s} - A_0e^{-4s} \\
+        Y &= \frac{1}{s+k} \left( 40 + \frac{20k}{s} - A_0e^{-4s} \right) \\ 
+        Y &= \frac{40}{s+k} + \frac{20k}{s(s+k)} - \frac{A_0}{s+k} e^{-4s} 
+    \end{align}
+    But 
+    \begin{align}
+        \frac{1}{s(s+k)} &= A/s + B/(s+k) \\
+        1 &= A(s+k) + Bs
+    \end{align}
+    From $s=0$, $A=1/k$. From $s=-k$, $B = -1/k.$
+    \begin{align}
+            Y &= \frac{40}{s+k} + \frac{20}{s} - \frac{20}{s+k} - \frac{A_0}{s+k} e^{-4s} \\
+            y &= 40 e^{-kt} + 20 - 20e^{-kt} - A_0e^{-k(t-4)}u_4
+    \end{align}    
+    It isn't necessary to simplify but you can also write this as:
+    \begin{align}
+        y &= 20 e^{-kt} + 20  - A_0e^{-k(t-4)}u_4
+    \end{align}      
+    } 
+    \else 
+    \fi
+\fi
+
+
+\ifnum \Version=7
+\ifnum \Solutions=0 \newpage \fi
+\question[4] Suppose that a hot cup of coffee has temperature $45^{\circ}$C at time $t = 0$. After about 3 minutes you add a small amount of cream to the cup that decreases the temperature of the drink. If we model the coffee temperature with Newton's Law of Cooling and a Delta function we would obtain
+\begin{align}
+    \dydt &= -k(y - T_0) - A_0\delta(t-4), \quad y(0) = 40\\
+    \dydt &= -k(y - T_0) - A_0\delta(t-3), \quad y(0) = 45
+\end{align}
+Assume the ambient temperature is $T_0 = 10^{\circ}$C and that $A_0$ is an unknown constant. Determine an expression for the temperature of the coffee for $t \ge 0$. Your expression will be in terms of constants $k$ and $A_0$. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $Y (s) = \mathcal L[y]$, and apply the Laplace transform to the differential equation. We obtain
+    \begin{align}
+        y' + ky &= kT_0 - A_0 \delta(t-4) \\     
+        sY + kY &= y(0) + \frac{T_0k}{s} - A_0e^{-4s} \\
+        Y &= \frac{1}{s+k} \left( 45 + \frac{10k}{s} - A_0e^{-4s} \right) \\ 
+        Y &= \frac{45}{s+k} - \frac{10k}{s(s+k)} - \frac{A_0}{s+k} e^{-4s} 
+    \end{align}
+    But 
+    \begin{align}
+        \frac{1}{s(s+k)} &= A/s + B/(s+k) \\
+        1 &= A(s+k) + Bs
+    \end{align}
+    From $s=0$, $A=1/k$. From $s=-k$, $B = -1/k.$
+    \begin{align}
+            Y &= \frac{45}{s+k} + \frac{10}{s} - \frac{10}{s+k} - \frac{A_0}{s+k} e^{-3s} \\
+            y &= 45 e^{-kt} + 10 - 10e^{-kt} - A_0e^{-k(t-3)}u_3
+    \end{align}    
+    It isn't necessary to simplify but you can also write this as:
+    \begin{align}
+        y &= 45 e^{-kt} + 10 - 10e^{-kt} - A_0e^{-k(t-3)}u_3
+    \end{align}     
+    } 
+    \else 
+    \fi
+\fi
+
+
+

@@ -1,0 +1,117 @@
+\ifnum \Version=1
+\question[2] State a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve  $y'' + 7y' + 12y=t^2e^{-3t}$. Please show your work for this question. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation is $y'' + 7y' + 12y=0$, which has the characteristic equation $\lambda^2 + 7\lambda +12 = (\lambda+3)(\lambda+4)=0$. The fundamental solutions are $y_1 = e^{-3t}$ and $y_2 = e^{-4t}$. 
+
+The inhomogeneous term is $g = t^2e^{-3t}$, so we use the form $$y_p = t (At^2+Bt + C)e^{-3t}$$ We multiplied the result by $t$ so that no terms in the particular solution were a solution to the homogeneous equation. 
+} 
+\else 
+\vspace{3cm}
+\fi
+\fi 
+
+
+
+\ifnum \Version=2
+\question[2] State a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve  $y'' - 2y' + 2y=\cos(t) e^t$. Please show your work for this question. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation is $y'' - 2y' + 2y=0$, which has the characteristic equation $\lambda^2 - 2\lambda + 2 = 0$. The roots are $\lambda = 1 \pm i$. The fundamental solutions are $y_1 = \cos(t) e^{t}$ and $y_2 = \sin(t)e^t$. 
+
+The inhomogeneous term is $g = \cos(t)e^t$, so we use the form $$y_p = t (A\cos t + B \sin t)e^{t}$$ We multiplied the result by $t$ so that no terms in the particular solution were a solution to the homogeneous equation. 
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+\ifnum \Version=3
+\question[2] State a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve  $y'' - 4y' + 4y=e^{2t}$. Please show your work for this question. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation $\lambda^2 - 4\lambda + 4 = (\lambda -2)^2$. The root is $\lambda = 2$. The fundamental solutions are $y_1 = e^{2t}$ and $y_2 = te^{2t}$. 
+
+The inhomogeneous term is $g = e^{2t}$, so we use the form $$y_p = At^2e^{2t}$$ We multiplied the result by $t^2$ so that no terms in the particular solution were a solution to the homogeneous equation. Note that it is ok to include other terms in some cases. For example it would be ok to use something like
+$$y_p = (At^2+Bt+C)e^{2t}$$
+because in that case we would find that $B=C=0$. 
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+
+\ifnum \Version=4
+\question[2] State a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve  $y'' + 3y' + 2y=e^{-2t}$. Please show your work for this question. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation $\lambda^2 + 3\lambda + 2 = (\lambda + 2)(\lambda+1)$. The roots are $\lambda = -2, -1$. The fundamental solutions are $y_1 = e^{-2t}$ and $y_2 = e^{-t}$. 
+
+The inhomogeneous term is $g = e^{-2t}$, so we use the form $$y_p = Ate^{-2t}$$ We multiplied the result by $t$ so that no terms in the particular solution were a solution to the homogeneous equation. Note that it is ok to include other terms in some cases. For example it would be ok to use something like
+$$y_p = (At+B)e^{2t}$$
+because in that case we would find that $B=0$. We could also use something like 
+$$y_p = (At^2+Bt+C)e^{2t}$$
+Because we would find that $A=C=0$. 
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+\ifnum \Version=5
+\question[2] State a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve  $y'' - 4y' + 4y=e^{2t}$. Please show your work for this question. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation $\lambda^2 - 4\lambda + 4 = (\lambda -2)^2$. The root is $\lambda = 2$. The fundamental solutions are $y_1 = e^{2t}$ and $y_2 = te^{2t}$. 
+
+The inhomogeneous term is $g = e^{2t}$, so we use the form $$y_p = At^2e^{2t}$$ We multiplied the result by $t^2$ so that no terms in the particular solution were a solution to the homogeneous equation. Note that it is ok to include other terms in some cases. For example it would be ok to use something like
+$$y_p = (At^2+Bt+C)e^{2t}$$
+because in that case we would find that $B=C=0$. 
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+
+
+\ifnum \Version=6
+\question[3] Consider the DE $y'' - 8y' + 16y=e^{4t} + 1$. Solve the corresponding homogeneous equation and determine a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve the DE. Please show your work for this question. You do not need to solve the DE. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation $\lambda^2 - 8\lambda + 16 = (\lambda -4)^2$. The root is $\lambda = 4$. The fundamental solutions are $y_1 = e^{4t}$ and $y_2 = te^{4t}$. 
+
+The inhomogeneous term is $g = e^{4t}+1$, so we use the form 
+\begin{align}\label{Eq:UCPSA}
+    y_p = At^2e^{2t}+B
+\end{align}
+We multiplied the first term by $t^2$ so that no terms in the particular solution were a solution to the homogeneous equation. Note that it is ok to include additional terms in some cases. For example it would be ok to use something like
+\begin{align}
+    y_p = (A_1t^2+A_2t+A_3)e^{2t} + B
+\end{align}
+because in that case we would find that $A_2=A_3=0$. As long as the form is sufficient then the work is correct. In other words, the form must include the terms in Equation (\ref{Eq:UCPSA}).
+} 
+\else 
+\vspace{8cm}
+\fi
+\fi 
+
+
+
+\ifnum \Version=7
+\question[3] Consider the DE $y'' + 3y' + 2y=e^{-2t}+4$. Solve the corresponding homogeneous equation and determine a suitable form for the particular solution if the method of undetermined coefficients is to be used to solve the DE. Please show your work for this question. You do not need to solve the DE. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation $\lambda^2 + 3\lambda + 2 = (\lambda + 2)(\lambda+1)$. The roots are $\lambda = -2, -1$. The fundamental solutions are $y_1 = e^{-2t}$ and $y_2 = e^{-t}$. The homogeneous solution is
+\begin{align}
+    y_h &= c_1 e^{-2t} + c_2 e^{-t}
+\end{align}
+
+The inhomogeneous term is $g = e^{-2t}+4$, so we use the form 
+\begin{align} \label{Eq:UCPSB}
+    y_p = Ate^{-2t}+B
+\end{align} 
+We multiplied the first term by $t$ so that no terms in the particular solution were a solution to the homogeneous equation. Note that it is ok to include other terms in some cases. For example it would be ok to use something like
+$$y_p = (A_1t+A_2)e^{2t}+B$$
+because in that case we would find that $A_2=0$. We could also use something like 
+$$y_p = (A_1t^2+A_2t+A_3)e^{2t}+B_1 + B_2t$$
+We would find that the additional coefficients are zero. As long as the form is sufficient then the work is correct. In other words, the form must include the terms in Equation (\ref{Eq:UCPSB}).
+} 
+\else 
+\vspace{8cm}
+\fi
+\fi 

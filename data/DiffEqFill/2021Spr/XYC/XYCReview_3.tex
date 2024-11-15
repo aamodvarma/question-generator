@@ -1,0 +1,195 @@
+ 
+
+%%%%% Problems %%%%%
+
+
+%%%\input{testpr-LaplaceTransform}
+
+\item
+Find the Laplace transform of 
+$f(t)=\left\{\begin{array}{ll}
+t^2\qquad & t<3,\\
+2t-8\qquad & 3\le t<5,\\
+2\qquad & 5\le t<6,\\
+te^{-2t}\qquad & t\ge 6.
+\end{array}\right.$
+
+\item
+Find the inverse Laplace transform of 
+$G(s)=e^{-3s} (-5s^{-1} +s^{-2}) -2e^{-7s}s/(s^2+\pi^2)$.
+
+
+\def\LaplacePeriodic{
+\item
+A periodic function $y(t)$ is defined by
+$$
+y(t)=\left\{\begin{array}{ll}
+\sin(2t)\quad & 0\le t<\pi/2,\\
+1\quad & \pi/2\le t<\pi,
+\end{array} \right.
+\quad
+\mbox{\rm   and $y(t)$ has period $\pi$.}
+$$
+Find the Laplace transform of $y(t)$. 
+}
+
+\LaplacePeriodic
+
+
+\item
+Solve $y''(t)+9y(t)=f(t),y(0)=0,y'(0)=-1,$
+where $f(t)=\left\{\begin{array}{ll}
+0\quad & 0\le t<\pi,\\
+9t\quad & \pi\le t<2\pi,\\
+0\qquad & t\ge 2\pi.
+\end{array} \right.$
+
+
+\def\LaplaceConvolution{
+\item 
+Find the Laplace transform of 
+$\displaystyle \frac{1}{240} \int_0^t (t-\tau)^6 \sin 4\tau d\tau$.
+}
+
+\LaplaceConvolution
+
+
+\def\LaplaceImpulse{
+\item
+	\begin{enumerate}
+	\item
+Solve $h''+4h'+3h=\delta(t), h(0)=0,h'(0)=0$.
+	\item
+Express the forced response of 
+$y''+4y'+3y=f(t), y(0)=0,y'(0)=0$, 
+using a convolution integral.
+	\item
+Use the result in (a)(b) to solve
+$y''+4y'+3y=\frac{1}{1+e^t}, y(0)=0,y'(0)=0.$
+	\end{enumerate}
+}
+
+\LaplaceImpulse
+
+
+% \input ../../review_problems/exp_tA.tex
+% \input ../../review_problems/repeated_eigenvalues.tex
+
+
+
+
+
+\def\OneDimLinearize{
+\item
+Consider the equation 
+$\displaystyle (*)\  {dy \over dt}= \frac{1}{16} (y+1)^3 (y-2)^2 (-y^3+y^2+6y).$
+	\begin{enumerate}
+	\item
+Find all equilibrium solutions.
+	\item
+For each equilibrium point, write down the linear approximating equation near the equilibrium and determine whether the equilibrium is stable, asymptotically stable or unstable with respect to the linear approximating equation.
+	\item 
+Try to use the linear stability/instability obtained in (b) to determine whether each of the equilibria is stable, asymptotically stable or unstable with respect to the nonlinear equation $(*)$.
+	\item
+If the linear approximation obtained in (b) was not enough to determine the stability of an equilibrium with respect to the nonlinear equation $(*)$, use other methods to determine whether the equilibrium is stable, asymptotically stable or unstable with respect to the nonlinear equation $(*)$
+	\item
+Sketch the phase portrait for the nonlinear equation $(*)$.
+	\end{enumerate}
+}
+
+\OneDimLinearize
+
+
+\item
+Find all equilibria of the given nonlinear system of differential equations, 
+construct the linear approximating system near each equilibrium, 
+identify the type of each equilibrium, and 
+determine whether each equilibrium
+is stable, asymptotically stable, or unstable with respect to
+the nonlinear system.
+
+(a) $\displaystyle {dx_1\over dt}=(4-x_1-x_2)x_1, \quad {dx_2\over dt}=(-2+x_1)x_2$
+
+(b) $\displaystyle {dx_1\over dt}= -x_1^2 +x_2^2 +3, \quad {dx_2\over dt}= -x_1 +2x_2$
+
+\item
+Consider
+$$\begin{cases}
+dx/dt =   -2x-2y, \\
+dy/dt =  -2x-y+xz, \\
+dz/dt = -4xy-4z. 
+\end{cases}
+\eqno{(*)}
+$$
+    \begin{enumerate}
+    \item
+Find all equilibrium solutions of the system $(*)$.
+    \item
+For each equilibrium point,
+\begin{description}
+\item{$\bullet$}
+give the linear approximating system near the equilibrium;
+\item{$\bullet$}
+determine whether the equilibrium is 
+stable, asymptotically stable, or unstable
+with respect to the nonlinear system $(*)$.
+\end{description}
+    \end{enumerate}
+
+
+\item 
+Each of the following problems can be interpreted as
+describing the interaction of two competing species with populations
+$x_1(t)$ and $x_2(t)$.
+In each of these problems, 
+find the equilibrium of co-existence,
+give the linear approximating system near this equilibrium,
+and determine whether this equilibrium
+is stable, asymptotically stable, or unstable with respect to
+the nonlinear system.
+
+(a) 
+$\left\{\begin{array}{l}
+x_1' =x_1 (6-x_1-4x_2) \\
+x_2' =x_2 (9-2x_1-5x_2)
+\end{array}\right.$
+\qquad
+(b) 
+$\left\{\begin{array}{l}
+x_1' =x_1 (6-4x_1-x_2) \\
+x_2' =x_2 (9-5x_1-2x_2)
+\end{array}\right.$
+
+
+\item
+In the predator-prey system
+$$\left\{ \begin{array}{rcl}
+x' &=& x(1-2y),\\
+y' &=& y(-1+x),
+\end{array}\right.$$
+sketch the phase portrait in the first quadrant $\{x\ge 0,y\ge 0\}$,
+and determine wheter each equilibrium is stable, asymptotically stable, or unstable.
+
+
+
+\item
+Consider $y'=1-2t+3y, y(0)=0.5$.
+Find approximate values of the solution at $t=0.1,\ 0.2,\ 0.3$.
+	\begin{enumerate}
+	\item
+Use Euler's method with $h=0.1$.
+	\item
+Use the improved Euler's method with $h=0.1$.
+	\item
+Use the Runge-Kutta method with $h=0.1$.
+	\end{enumerate}
+
+
+
+
+
+
+
+
+
+

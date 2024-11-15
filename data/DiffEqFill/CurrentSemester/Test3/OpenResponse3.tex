@@ -1,0 +1,141 @@
+\ifnum \Solutions=0
+\newpage 
+\fi
+\ifnum \Version=1    
+    \question[6] Use the Laplace transform to solve the following IVP. Do not leave your answer in terms of an integral. Please show your work.
+    % $$\displaystyle y''-4y'+4y=0,\qquad y(0)=1,\quad y'(0)=1$$ %Q,A HW 5.4#4
+    % $$\displaystyle y''-2y'+4y=0,\qquad y(0)=2,\quad y'(0)=0$$ %M HW 5.4#5
+    $$ y'' -6y'+13y = 0, \quad y(0) = 0, \quad y'(0) = -3$$. % A TRIM P301 #27
+    % $$ y''+ 2y'+y = 0, \quad y(0) = 1, \quad y'(0) = 1$$. % B TRIM P301 #23
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Take the transform of the DE and solve for $Y(s) = \mathcal{L}[y(t)]$.
+\begin{align}
+    0
+    &= s^2Y-sy(0) - y'(0) - 6(sY-y(0)) + 13Y \\
+    &= s^2Y-0 +3 - 6(sY-0) + 13Y \\
+    -3 &= s^2Y - 6sY + 13Y \\
+    -3 &= (s^2 - 6s + 13)Y \\
+    Y &= \frac{-3}{s^2- 6s+13} 
+\end{align}    
+Complete the square:
+\begin{align}
+    Y &= \frac{-3}{s^2- 6s+9-9+13} = \frac{-3}{ (s-3)^2+4}=\frac{-3}{2}\cdot \frac{2}{ (s-3)^2+4}
+\end{align}    
+Inverse transform:
+\begin{align}
+    y(t) &= \frac{-3}{2}\sin(2t)e^{3t}
+\end{align}
+} 
+\else 
+\vspace{3cm}
+\fi
+\fi 
+
+
+
+\ifnum \Version=2
+    \question[6] Consider the IVP: $y''+4y'+3y = 4e^{-2t}$, $y(0)=0, y'(0) = 0$. 
+        \begin{parts}
+        \part Use the Laplace Transform to obtain an explicit expression for $Y(s) = \mathcal{L}[y]$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        Taking the transform of the IVP yields
+        \begin{align}
+            s^2Y-sy(0) - y'(0) +4(sY-y(0)) +3 Y &= \frac{4}{s+2} \\
+            (s^2 +4s+3)Y &= \frac{4}{s+2} \\
+            Y&= \frac{1}{s+2} \frac{4}{s^2 +4s+3} \\
+            &= \frac{4}{(s+1)(s+2)(s+3)}
+        \end{align}
+        } 
+        \else 
+        \vfill
+        \fi
+        \part Use the inverse Laplace Transform to solve the IVP. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        Partial fractions: 
+        \begin{align}
+            \frac{4}{(s+2)(s+1)(s+3)} & = \frac{A}{s+1} + \frac{B}{s+2} + \frac{C}{s+3} \\
+            4 & = A(s+2)(s+3) + B(s+1)(s+3) + C(s+1)(s+2) 
+        \end{align}
+        Selecting values of $s$ yields
+        \begin{align}
+            s=-1: \quad 4 & = 2A + 0 + 0 \quad \Rightarrow \quad A = 2 \\
+            s=-2: \quad 4 & = 0 - B + 0 \quad \Rightarrow \quad B = -4 \\
+            s=-3: \quad 4 & = 0 + 0 + 2C \quad \Rightarrow \quad C = 2
+        \end{align}
+        Thus
+       \begin{align}
+            Y (s) = \frac{4}{(s+1)(s+2)(s+3)} 
+            &= \frac{A}{s+1} + \frac{B}{s+2} + \frac{C}{s+3} \\
+            &= \frac{2}{s+1} + \frac{-4}{s+2} + \frac{2}{s+3} 
+        \end{align}        
+        With the inverse transform this becomes 
+        \begin{align}
+            y(t) &= 2e^{-t} -4 e^{-2t} +2 e^{-3t}
+        \end{align}
+        } 
+        \else 
+        \vfill
+        \fi
+    \end{parts}
+\fi 
+
+
+
+
+\ifnum \Version>5
+    \question[4] Consider the IVP: $y''+4y = 8e^{-2t}$, $y(0)=0, y'(0) = 0$. 
+        \begin{parts}
+        \part Use the Laplace Transform to obtain an explicit expression for $Y(s) = \mathcal{L}[y]$. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        Taking the transform of the IVP yields
+        \begin{align}
+            s^2Y-sy(0) - y'(0) + 4 Y &= \frac{8}{s+2} \\
+            (s^2 + 4)Y &= \frac{8}{s+2} \\
+            Y&= \frac{8}{s+2} \frac{1}{s^2 + 4} \\
+            &= \frac{8}{(s^2+4)(s+2)}
+        \end{align}
+        } 
+        \else 
+        \vfill
+        \fi
+        \part Use the inverse Laplace Transform to solve the IVP. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        Partial fractions: 
+        \begin{align}
+            \frac{8}{(s^2+4)(s+2)} & = \frac{As+B}{s^2+4} + \frac{C}{s+2} \\
+            8 & = (As+B)(s+2) + C(s^2+4) \\
+            8 &= (A+C)s^2 +(2A+B)s+(2B+4C)
+        \end{align}
+        Selecting $s = -2$ yields
+        \begin{align}
+            s=-2: \quad 8 & = 0 + C((-2)^2+4) \quad \Rightarrow \quad C = 1 
+        \end{align}
+        The quadratic terms give us 
+        \begin{align}
+            A+C = 0 \Rightarrow \quad A = - 1 
+        \end{align}
+        The linear terms give us 
+        \begin{align}
+            2A+B = 0 \Rightarrow \quad B = 2
+        \end{align}        
+        Thus
+       \begin{align}
+            Y (s) = \frac{8}{(s^2+4)(s+2)} 
+            &= \frac{As+B}{s^2+4} + \frac{C}{s+2} \\
+            &= \frac{-s+2}{s^2+4} + \frac{1}{s+2} \\
+            &= -\frac{s}{s^2+4} + \frac{2}{s^2+4} + \frac{1}{s+2} \\
+        \end{align}        
+        With the inverse transform this becomes 
+        \begin{align}
+            y(t) &= \sin(2t) - \cos(2t) + e^{-2t}
+        \end{align}
+        \textbf{Additional Notes}\\
+        Some students made an error in taking the transform that resulted in the expression
+        $$Y = \frac{8}{s(s+4)(s+2)} = \frac1s+\frac{1}{s+4}- \frac{2}{s+2}$$
+        } 
+        \else 
+        \vfill
+        \fi
+    \end{parts}
+\fi 
+

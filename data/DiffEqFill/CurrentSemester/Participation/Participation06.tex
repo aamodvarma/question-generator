@@ -1,0 +1,84 @@
+\documentclass[12pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{MATH 2552 Participation Activity 6: Test 2 Review} \fi
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% % ADJUST MARGINS
+% \usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+% \geometry{margin=0.76in}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\vspace{6pt}
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\subsection*{Test 2 Review}
+\begin{questions}
+
+\question[1] Solve the following Cauchy-Euler equation. $t^2y'' + 3ty' + 5y = 0, \quad t > 0$. You may find the following table of formulas for the solutions to Cauchy-Euler equations to be helpful. 
+
+\begin{center}
+    \begin{tabular}{ p{6.2cm} p{6cm} }
+        roots &  general solution 
+        \\[2pt] \hline 
+        real distinct, $m_1 \ne m_2$ &  $c_1 t^{m_1} + c_2 t^{m_2}$\\       
+        real repeated, $m = m_1 = m_2$ & $c_1 t^{m} + c_2 t^m \ln(t)$\\
+        complex, $m_1 = \alpha + i \beta$ & $c_1t^{\alpha}\cos(\beta \ln(t)) + c_2t^{\alpha}\sin(\beta \ln (t))$\\[2pt] \hline
+    \end{tabular}    
+\end{center}
+
+\vspace{5cm}
+
+\question[1] Use the method of reduction of order to find a second solution, $y_2$, to the DE so that $\{y_1,y_2\}$ forms a fundamental set. $$t^2 y'' - 3t y' + 4y = 0, \quad t>0, \quad y_1(t) = t^2$$
+
+
+
+\newpage 
+\question[2] Determine the homogeneous solution and then state a suitable form for the particular solution if the method of undetermined coefficients is to be used to identify the particular solution. 
+\begin{parts}
+    \part $y''+6y'+18y=\cos(3t)e^{-3t}$
+    \vfill
+    \part $y''+4y'+13y=t^2\cos(t)$
+\end{parts}
+    \vfill
+    
+% \question[1] Solve the DE $y'' + 2y' =25te^{-t}$, where $y=y(t)$.
+% \vfill
+\end{questions}
+
+\end{document}
+
+
+
+

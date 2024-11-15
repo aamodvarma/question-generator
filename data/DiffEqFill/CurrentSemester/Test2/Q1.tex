@@ -1,0 +1,82 @@
+\ifnum \Version=1
+\question[2] Consider the three functions $y_1 = 1$, $y_2 = t$, $y_3 = t^2$. For what values of $t$ is their Wronskian nonzero? Please show your work in the space below. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is $$W = \begin{vmatrix} 1&t&t^2\\0&1&2t\\0&0&2 \end{vmatrix} = 2$$ The Wronskin is non-zero for all $t$. In other words, the three functions are linearly independent for all values of $t$.
+
+} 
+\else 
+\vfill
+\fi
+\fi
+
+
+\ifnum \Version=2
+\question[2] Consider the three functions $y_1 = 1$, $y_2 = t-1$, $y_3 = t+1$. For what values of $t$ is their Wronskian equal to zero? Please show your work in the space below. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is $$W = \begin{vmatrix} 1&t&t^2\\0&1&2t\\0&0&2 \end{vmatrix} = 2$$ The Wronskin is non-zero for all $t$. In other words, the three functions are linearly independent for all values of $t$.
+
+} 
+\else 
+\vfill
+\fi
+\fi
+
+\ifnum \Version=3
+\question[2] Please show your work in the space below. The Wronskian of the following vector functions is equal to zero for what values of $t$?  
+$$y_1 = \begin{pmatrix} t\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 2\\1\\t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\2\\t^2+2t-9 \end{pmatrix}$$
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is $$W = \begin{vmatrix} t&2&t\\0&1&2\\0&t&t^2+2t+9\end{vmatrix} = t(t^2+2t-9)-2t) = t(t^2-9) = t(t+3)(t-3)$$  The Wronskin is zero for $t =0,3,-3$. 
+} 
+\else 
+\vfill
+\fi
+\fi
+
+
+\ifnum \Version=4
+\question[2] Consider the three functions $y_1 = 1$, $y_2 = t^2-1$, $y_3 = t^2$. For what values of $t$ is their Wronskian equal to zero? Please show your work in the space below. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is $$W = \begin{vmatrix} 1&t^2-1&t^2\\0&2t&2t\\0&2&2 \end{vmatrix} = 1(4t - 4t) =0$$ The Wronskin is zero for all $t$. In other words, the three functions are linearly dependent for all values of $t$.
+} 
+\else 
+\vfill
+\fi
+\fi
+
+\ifnum \Version=5
+\question[2] Please show your work in the space below. The Wronskian of the following vector functions is equal to zero for what values of $t$?  
+$$y_1 = \begin{pmatrix} t-1\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 0\\1\\2t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\3\\t^2+6t-25 \end{pmatrix}$$
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is zero for values of $t$ where the columns are dependent. This happens when there are two pivots instead of three. 
+\begin{align}
+    \begin{pmatrix} t-1&0&t\\0&1&3\\0&2t&t^2+6t-25\end{pmatrix} 
+    &\sim \begin{pmatrix} t-1&0&t\\0&1&3\\0&0&t^2-25\end{pmatrix} 
+    &\sim \begin{pmatrix} t-1&0&t\\0&1&3\\0&0&(t+5)(t-5)\end{pmatrix} 
+\end{align} The Wronskin is zero for $t =1,5,-5$. 
+} 
+\else 
+\vfill
+\fi
+\fi
+
+
+
+\ifnum \Version=6
+\question[3] Please show your work in the space below. Determine all values of $t$ so that the Wronskian of the following vector functions is equal to zero.  
+$$y_1 = \begin{pmatrix} t-1\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 0\\1\\-2t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\3\\t^2+5 \end{pmatrix}$$
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is zero for values of $t$ where the columns are dependent. This happens when there are two pivots instead of three. 
+\begin{align}
+    \begin{pmatrix} t-1&0&t\\0&1&3\\0&-2t&t^2+5\end{pmatrix} 
+    &\sim \begin{pmatrix} t-1&0&t\\0&1&3\\0&0&t^2+6t+5\end{pmatrix} 
+    &\sim \begin{pmatrix} t-1&0&t\\0&1&3\\0&0&(t+5)(t+1)\end{pmatrix} 
+\end{align} The Wronskian is zero for $t =\pm1,-5$. 
+} 
+\else 
+\vfill
+\fi
+\fi
+
+
+\ifnum \Version=7
+\question[3] Consider the three functions $y_1 = 1$, $y_2 = t^2-1$, $y_3 = t^3+1$. For what values of $t$ (if any) is their Wronskian equal to zero? Please show your work in the space below. 
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] The Wronskian is $$W = \begin{vmatrix} 1&t^2-1&t^3+1\\0&2t&3t^2\\0&2&6t \end{vmatrix} = 1\cdot (12t^2 - 6t^2) =6t^2=0$$ The Wronskian is only zero for $t=0$. 
+} 
+\else 
+\vfill
+\fi
+\fi

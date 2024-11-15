@@ -1,0 +1,69 @@
+\documentclass[12pt]{exam}
+
+\input{2021Sum/preamble}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Quiz 5}
+\newcommand{\TestDate}{}
+\newcommand{\DueDate}{the due date indicated in the syllabus}
+\newcommand{\TestTime}{8:15 pm to 9:15 pm}
+
+\begin{document}
+    
+\input{2021Sum/coverpage}
+
+\newpage
+
+\begin{questions}
+
+\question[8] Use the Laplace Transform to solve the IVP. Show your work. % Judson 350
+$$\dydtt + 2\dydt + 26y = \delta(t-4), \quad y(0) = 1, \quad y'(0) = 0\quad $$
+
+\newpage 
+\question[7] Use the Laplace Transform to solve the IVP. Show your work. % Judson 344
+$$\dydt + 8y = u(t-3), \quad y(0) = 2\quad $$
+
+    
+\newpage
+
+    \question[3] Compute the inverse Laplace transform of the given function using the convolution theorem. You can leave your answer in terms of an integral. 
+    
+    $$F(s) = \frac{4s}{(s^2+9)^2}$$ % 5.8 #12
+    
+
+
+\newpage
+
+    \question[1] Compute the Laplace transform of the given function using the convolution theorem. 
+    
+    $$f(t) = \int_0^t (t - \tau)^2 \cos 4\tau \, d\tau$$ % 5.8 \# 4
+    
+\newpage     
+
+\question[1] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{parts}
+        % \item your scan is under 5 MB in file size
+        \part your work is legible in the scan
+        \part questions are answered in the order in which they were given
+        \part during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{parts}
+    Ensuring that these criteria are met helps ensure that your work is graded efficiently and accurately. 
+
+\end{questions}
+\vspace{2cm}
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+
+\end{document}

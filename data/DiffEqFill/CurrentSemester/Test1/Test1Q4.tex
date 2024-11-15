@@ -1,0 +1,36 @@
+
+\ifnum \Version>5
+\question[3] A tank originally contains 50 L of water with 6 kg of salt. Water containing $\frac{1}{20}$ kg of salt per litre is entering at a rate of 4 L/hour, and the well-stirred solution in the tank is leaving at 1 L/hour. 
+
+\begin{parts}
+    \part Write down an IVP for $V(t)$, which is the amount of fluid in the tank at time $t$. You do not need to solve your IVP. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+        The volume of fluid in the tank is
+        $$V = 50 + 3t$$
+        By differentiating, the IVP for $V(t)$ is
+        $$\frac{dV}{dt} = 3, \quad V(0) = 50$$
+        }
+    \else
+    \vspace{6cm}
+    \fi
+    
+    \part Write down an IVP for $Q(t)$, for the amount of salt in the tank. You do not need to solve the IVP. 
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+        The DE is
+        \begin{align}
+            \frac{dQ}{dt} &= \left( \text{rate salt coming in} \right) - \left( \text{rate of salt going out} \right) \\
+            \frac{dQ}{dt} &= 4\cdot \frac{1}{20} - \frac{Q}{V}
+        \end{align}
+        The IVP is
+        \begin{align}
+            \frac{dQ}{dt} &= \frac{1}{5} - \frac{Q}{50+3t}, \quad Q(0) = 6
+        \end{align}        
+        }
+        \fi
+    \fi
+    
+\end{parts}
+
+

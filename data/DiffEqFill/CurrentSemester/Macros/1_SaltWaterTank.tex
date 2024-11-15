@@ -1,0 +1,28 @@
+% Command for a salt water tank problem
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% COULDNT GET TO WORK, DIDNT HAVE THE TIME
+
+\newcounter{flowin}  %  root of the characteristic
+\newcounter{flowout}  %  root of the characteristic
+\newcounter{Qinitial}  %  coefficioent of the DE
+\newcounter{Vinitial}  %  coefficioent of the DE
+
+
+
+\newcommand{\SaltWaterTank}[4]{
+\setcounter{flowin}{#1}
+\setcounter{flowout}{#2}
+\setcounter{Qinitial}{#3} 
+\setcounter{Vinitial}{#4} 
+
+\question[3] A tank originally contains % \Vinitial %L of water with \Qinitial kg of salt. Water containing $\frac{1}{20}$ kg of salt per litre is entering at a rate of \flowin L/hour, and the well-stirred solution in the tank is leaving at \flowout L/hour. Write down the IVP for $Q(t)$, the amount of salt in the tank.
+        
+% \ifnum \Solutions=1 {\color{DarkBlue} 
+%     The volume of fluid in the tank is
+%     $$V = 40 - 2t$$
+%     The IVP is
+%     $$\frac{dQ}{dt} = \frac{1}{5} - \frac{Q}{V}, Q(0) = 4$$
+%     }
+%     \fi
+% \fi
+}

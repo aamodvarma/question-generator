@@ -1,0 +1,54 @@
+% TEST SPECIFIC INFORMATION
+% SAMPLE
+\ifnum \Version=1 \renewcommand{\TestName}{Sample Test 1} \fi
+% 2023 VERSIONS
+\ifnum \Version=2 \renewcommand{\TestName}{Test 1 Version A} \fi
+\ifnum \Version=3 \renewcommand{\TestName}{Test 1 Version B} \fi
+\ifnum \Version=4 \renewcommand{\TestName}{Test 1 Version C} \fi
+\ifnum \Version=5 \renewcommand{\TestName}{Test 1 Version D} \fi
+% 2024 VERSIONS
+\ifnum \Version=6 \renewcommand{\TestName}{Test 1 Version A} \fi
+\ifnum \Version=7 \renewcommand{\TestName}{Test 1 Version B} \fi
+\ifnum \Version=8 \renewcommand{\TestName}{Test 1 Version C} \fi
+\ifnum \Version=9 \renewcommand{\TestName}{Test 1 Version D} \fi
+\ifnum \Version=10 \renewcommand{\TestName}{Test 1 Make-Up} \fi
+
+    % COLORED BOX FORMATTING
+    % These boxes are used for definitions and theorems 
+    % This code has to appear after begin{document}
+    \tikzstyle{mybox} = [draw=black, fill=black!2, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+    \tikzstyle{fancytitle} =[draw=black, very thick, fill=black!6, text=black, rounded corners]
+
+    
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+% \runningfooter{}{}{}
+\runningfooter{}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+\runningheader{\textit{Please write your last name: \framebox{\strut\hspace{5cm}} }}{}{\textit{\TestName} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName, \Course}
+\end{center}
+\renewcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\begin{center}
+    \setlength{\extrarowheight}{0.25cm}
+    {\Large Helpful Formulas} \\
+    \vspace{12pt}
+    \textbf{Complex Solutions to 2D First Order Systems}
+    \begin{align*}
+        \lambda &= \alpha + i \beta, \ \beta \ne 0 , \ \vec v = \vec a + i \vec b \\
+        \vec x_1 &= e^{\alpha t} (\vec a \cos \beta t - \vec b \sin \beta t), \quad 
+        \vec x_{2} = e^{\alpha t} (\vec a \sin \beta t + \vec b \cos \beta t)
+    \end{align*}
+    \textbf{Repeated Eigenvalues in First Order 2D Systems}
+    \begin{align*}
+        (A-\lambda I) \vec w &= \vec v, \quad \vec w = t\vec v + \vec c
+    \end{align*}    
+\end{center}

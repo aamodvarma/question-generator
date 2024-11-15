@@ -1,0 +1,119 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{../preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 2A}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{3 hours }
+\newcommand{\Points}{}
+\newcommand{\DueDate}{12:30 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+\input{../CoverCovid.tex} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+    
+
+    \question[5] Determine all values of $\alpha$, if any, for which all solutions tend to zero as $t\to\infty$. $$y'' - (2\alpha - 1) y' + (\alpha^2-\alpha+1) y = 0, \quad \alpha \in \mathbb R$$ \vspace{10cm}  % 4.3.47
+    
+    \question[4]  Determine a suitable form for the particular solution, $Y(t)$, to the differential equations if the method of undetermined coefficients is to be used. Do not determine the values of the coefficients or solve the differential equation.
+        $$y'' + 4y = t^2 + \sin(2t)$$
+        % \part $y'' +2y' - 3y = 3te^t\sin t$
+    
+    \newpage    \InitialsLeft
+    
+        \question[10] Consider the system of equations. 
+
+        $$
+        x_1 ' = 3x_1 -2x_2 + 4x_3, \qquad x_2 ' = -2x_1 + 6x_2 + 2x_3 , \qquad x_3 ' = 4x_1 + 2x_2 + 3x_3 
+        $$
+        \begin{enumerate} 
+
+            \item[a)] Express the system of equations in the form $\vec x \, ' = A \vec x$, where $A$ is a $3\times3$ matrix. \vspace{3cm} 
+
+            \item[b)] Determine the eigenvectors of $A$ and use them to write down the general solution. You may use that the only eigenvalues of $A$ are $7$ and $-2$. \textit{Show your work when computing the eigenvectors: it is ok to check your work with software, but you should show that you can compute eigenvectors by hand. }
+                
+        \end{enumerate}
+        
+
+    \newpage \InitialsLeft
+    
+    \question[11] A 9 kg mass stretches a spring 0.1 meters. The mass is then pushed upward, contracting the spring a distance of 0.1 meters from its equilibrium position, and then set in motion with an initial downward velocity of 2 m/s. There is no damping. 
+    \begin{parts} \part[4] Construct an IVP for this situation. \vspace{3cm} \part[4] Solve your IVP. You may use that the acceleration due to gravity is $g = 10$ m/s$^2$. \textit{Note: the solution to the DE can be found by inspection, it is ok to just write the answer for solving the DE, but if you want to show work you can.} \vspace{9cm} \part[3] Sketch the trajectory of the object in the phase plane that corresponds to the IVP. \textit{Do not forget to label your axes and indicate the directions of motion.}  \end{parts} 
+
+    \newpage \InitialsLeft
+
+    \question[8] Use variation of parameters to identify the general solution to $$y'' - \frac{t+2}{t}y' + \frac{t+2}{t^2}y = 5t, \quad t > 0$$ Solutions to the corresponding homogeneous equation are $y_1(t) = t$, $y_2(t) = te^t$. 
+    
+    
+    \newpage \InitialsLeft
+    
+    \question[3] Determine whether $\vec x_1$, $\vec x_2$, and $\vec x_3$ form a fundamental set of solutions for $\vec x' = A\vec x$. The only eigenvalues of $A$ are $-1$ and $5$.
+    
+    $$A = \spalignmat{1 2 2;2 1 2;2 2 1}, \quad \vec x_1 = e^{-t}\spalignmat{1;0;-1}, \quad \vec x_2 = e^{-t}\spalignmat{0;2;1}, \quad \vec x_3 = e^{5t}\spalignmat{1;1;2} $$
+    
+    \vspace{5cm}
+    
+    \newpage \InitialsLeft
+    
+    \question[7] Use the method of reduction of order to ﬁnd a second solution $y_2$ of the given diﬀerential equation such that $\{ y_1 , y_2 \}$ is a fundamental set of solutions on the given interval.
+    
+    $$t^2y'' - 3ty' + 3y = 0, \quad t > 0, \quad y_1(t) = t$$
+    
+    \newpage \InitialsLeft
+    
+
+    \question[2] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    \vspace{2pt}
+    
+    \textbf{Georgia Tech Honor Code}:\ \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}
+

@@ -1,0 +1,88 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Sample Midterm 2A}
+\newcommand{\TestDate}{May 2019}
+\newcommand{\TestTime}{10:05 am to 11:20 am}
+\newcommand{\Duration}{75 \ }
+\newcommand{\Points}{50ish \ }
+
+
+\begin{document}
+    
+\input{../CMCoverPage}
+
+\newpage
+
+% \textit{On your midterm, each question below would be given one page.} 
+
+\begin{questions}
+
+
+    \question[10]  Solve the differential equation. $$y''+y = \sec x$$
+    You may find the formula $$\int \tan x \, dx = \ln |\cos x|$$ helpful. 
+    \newpage
+    \question[10] Solve the initial value problem. 
+    $$\vec x \, ' = \frac 1 2 \spalignmat{-2 -1;1 0} \vec x, \quad \vec x (0) = \spalignmat{-1 ;0}$$
+
+    \newpage
+    
+    \question[8] Solve the differential equation using the method of undetermined \\coefficients. $$y'' + 4y = 3 \sin(2t)$$
+    
+
+    \newpage 
+    
+
+    \vspace{4cm} 
+    
+    \question[8] The position of a moving object, $y(t)$, satisfies the IVP $$y''+2y'+5y=0, \quad y(0) = 0, \quad y'(0) = 4$$ The solution is $y(t)= 2e^{-t}\sin(2t)$. 
+    
+    \begin{parts} 
+        \part Give a rough sketch of the solution, $y(t)$ for $t>0$. Label your axes.\vspace{4cm}
+        \part For $t \ge 0$, sketch the trajectory of the object in the phase plane. Indicate the location corresponding to $t=0$, the direction of motion, and label your axes.  
+        
+    \end{parts}
+    
+    \newpage
+    \question[4]  Construct an initial value problem for the following situation. 
+
+    \begin{itemize}
+        \item[] A spring is stretched 0.5 m by a force of 0.25 newtons (N). A mass weighing 2 kg is attached to a spring that is also attached to a viscous damper that applies a force of 10 N when the velocity of the mass is 5 m/s. The mass is pulled down 2 m below its equilibrium position and given an initial upward velocity of 4 m/s. 
+    \end{itemize}
+    
+    \vspace{4cm} 
+    
+    \question[3] If $W[f, g]$ is the Wronskian of $f$ and $g$, and if $u=2f - g, \ v=f +2g$, find the Wronskian $W[u,v]$ of $u$ and $v$ in terms of $W [ f , g]$.
+
+    \vspace{6cm} 
+    
+    \newpage
+    
+    \question[7] Use the method of reduction of order to find a second solution $y_2$ of the given differential equation such that $\{y_1, y_2\}$ is a fundamental set of solutions on the given interval. $$t^2y'' - t(t+2)y' + (t+2)y=0, \quad t > 0 , \quad y_1(t) = t$$
+    
+        
+\end{questions}
+
+
+
+\newpage
+
+\large{Answers}
+
+\begin{enumerate}
+
+\item[5)] Using $mg = kL$, $0.25 = \frac 12 k$, so $k = 1/2$. Damping: \begin{align*}F_d &= \gamma v \\ 10&=5 \gamma  \\
+\gamma &= 2\end{align*}
+DE and conditions give the IVP: 
+$$2y'' +2y' + \frac 12 y = 0, \quad y(0) = 2, \quad y'(0) = -4$$ 
+\item[6)] This is 4.2 \# 20. $W(f,g) = fg' - f'g$. Also, $W(u,v) = W(2f - g,f + 2g) $. Then, $W(u,v) =(2f-g)(f+2g)'
+ - (2f- g)'(f+2g)= 5fg' - 5f'g = 5W(f,g)$. 
+
+\item[7)] This is 4.2 \# 32. Let $y_2(t) = tv(t)$. Substituting $y$ into the differential equation, we obtain $v'' - v' = 0$. Thus $v'(t) = ce^t$ and, therefore, $v(t) = c_1 e^t + c_2$. Therefore, $y_2(t) = c_1te^t + c_2t$. Since we already have $y_1(t) = t$, we set $c_1 = 1$ and $c_2 = 0$. Therefore, we get the solution $y_2(t) = te^t$.
+\end{enumerate} 
+
+
+\end{document}
+

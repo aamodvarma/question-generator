@@ -1,0 +1,85 @@
+\ifnum \Version=1
+\question[10] Consider the first order, constant coefficient, linear initial value problem $\vec x \, ' = A\vec x, \ \vec x (0) = \vec x_0$, where $\vec x \, ' = A\vec x$ and $\vec x = \vec x(t)$. The vector $\vec x_0$, and the eigenvalues and eigenvectors of $A$ are as follows. 
+$$\lambda_1 = -3, \ \vec v_1 = \begin{pmatrix}1\\0\\0 \end{pmatrix} , \quad \lambda_2 = -4, \ \vec v_2 = \begin{pmatrix} 0\\1\\2 \end{pmatrix}, \quad \lambda_3 = -4, \ \vec v_3 = \begin{pmatrix} 0\\0\\1\end{pmatrix}, \quad \vec x_0 = \begin{pmatrix} 2\\4\\6\end{pmatrix}$$
+\begin{parts}
+    \part Write down the general solution to the system of differential equations in terms of real-valued functions. 
+    \vspace{4cm}
+    \part Solve the initial value problem. Please state the solution to the initial value problem clearly and please show your work. 
+\end{parts}
+\fi
+
+
+
+
+
+
+\ifnum \Version=6
+\newpage
+\question[4] Consider the first order, constant coefficient, linear IVP $\vec x \, ' = A\vec x, \ \vec x (0) = \vec x_0$, where $\vec x \, ' = A\vec x$ and $\vec x = \vec x(t)$. The eigenvalues and eigenvectors of $A$, and $\vec x_0$, are below. 
+$$\lambda_1 = -4, \  v_1 = \begin{pmatrix}1\\0\\0 \end{pmatrix} , \quad \lambda_2 = -2+3i, \  v_2 = \begin{pmatrix} 0\\2\\i \end{pmatrix}, \quad \lambda_3 = \bar{\lambda_2}, \ v_3 = \bar{v_2}, \quad \vec x_0 = \begin{pmatrix} 9\\2\\0\end{pmatrix}$$
+\begin{parts}
+    \part Write down the general solution to the system of differential equations $\vec x \, ' = A \vec x$ in terms of real-valued functions. 
+    \ifnum \Solutions=0 \vspace{8cm} \fi
+    \part Solve the initial value problem. Please state the solution to the initial value problem clearly and please show your work. 
+    \ifnum \Solutions=0 \vfill \fi
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} the general solution is
+\begin{align*}
+    \vec x = c_1 e^{-4t}\begin{pmatrix} 1\\0\\0\end{pmatrix} 
+    + c_2e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \cos(3t) - \begin{pmatrix} 0\\0\\1  \end{pmatrix} \sin(3t) \right) 
+    + c_3e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \sin(3t) + \begin{pmatrix} 0\\0\\1  \end{pmatrix} \cos(3t) \right) 
+\end{align*}
+When $t=0$ this reduces to
+\begin{align*}
+    \vec x(0) = \begin{pmatrix} 9\\2\\0\end{pmatrix} = c_1 \begin{pmatrix} 1\\0\\0\end{pmatrix} 
+    + c_2 \begin{pmatrix} 0\\2\\0\end{pmatrix} 
+    + c_3  \begin{pmatrix} 0\\0\\1  \end{pmatrix}  
+\end{align*}
+Thus $c_1= 9$, $c_2=1$, $c_3= 0$.
+\begin{align*}
+    \vec x = 9 e^{-4t}\begin{pmatrix} 1\\0\\0\end{pmatrix} 
+    + e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \cos(3t) - \begin{pmatrix} 0\\0\\1  \end{pmatrix} \sin(3t) \right) \end{align*}
+} 
+\else 
+\newpage
+\fi
+\fi
+
+
+\ifnum \Version=7
+\newpage
+\question[4] Consider the first order, constant coefficient, linear IVP $\vec x \, ' = A\vec x, \ \vec x (0) = \vec x_0$, where $\vec x \, ' = A\vec x$ and $\vec x = \vec x(t)$. The eigenvalues and eigenvectors of $A$, and $\vec x_0$, are below. 
+$$\lambda_1 = -4, \  v_1 = \begin{pmatrix}1\\0\\0 \end{pmatrix} , \quad \lambda_2 = -2+3i, \  v_2 = \begin{pmatrix} 0\\2\\9i \end{pmatrix}, \quad \lambda_3 = \bar{\lambda_2}, \ v_3 = \bar{v_2}, \quad \vec x_0 = \begin{pmatrix} 5\\0\\36\end{pmatrix}$$
+\begin{parts}
+    \part Write down the general solution to the system of differential equations $\vec x \, ' = A \vec x$ in terms of real-valued functions. 
+    \ifnum \Solutions=0 \vspace{8cm} \fi
+    \part Solve the initial value problem. Please state the solution to the initial value problem clearly and please show your work. 
+    \ifnum \Solutions=0 \vfill \fi
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} the general solution is
+\begin{align*}
+    \vec x = c_1 e^{-4t}\begin{pmatrix} 1\\0\\0\end{pmatrix} 
+    + c_2e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \cos(3t) - \begin{pmatrix} 0\\0\\9  \end{pmatrix} \sin(3t) \right) 
+    + c_3e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \sin(3t) + \begin{pmatrix} 0\\0\\9  \end{pmatrix} \cos(3t) \right) 
+\end{align*}
+When $t=0$ this reduces to
+\begin{align*}
+    \vec x(0) = \begin{pmatrix} 5\\0\\36\end{pmatrix} = c_1 \begin{pmatrix} 1\\0\\0\end{pmatrix} 
+    + c_2 \begin{pmatrix} 0\\2\\0\end{pmatrix} 
+    + c_3  \begin{pmatrix} 0\\0\\9  \end{pmatrix}  
+\end{align*}
+Thus $c_1= 5$, $c_2=0$, $c_3= 4$.
+\begin{align*}
+    \vec x = 5 e^{-4t}\begin{pmatrix} 1\\0\\0\end{pmatrix} 
+        + 4e^{-2t}\left(\begin{pmatrix} 0\\2\\0\end{pmatrix} \sin(3t) + \begin{pmatrix} 0\\0\\9  \end{pmatrix} \cos(3t) \right) 
+\end{align*}
+} 
+\else 
+\newpage
+\fi
+\fi
+
+
+

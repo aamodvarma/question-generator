@@ -1,0 +1,163 @@
+\newpage 
+\ifnum \Version=1
+\question[6] Consider the differential equation
+
+$$y'' + 2y' + y = 6e^{-t}, \quad y=y(t)$$    
+
+Solutions to the homogeneous problem are $y_1 = e^{-t}$ and $y_2 = te^{-t}$. 
+
+\begin{parts}
+    \part Determine a particular solution to the differential equation using variation of parameters. Do not use undetermined coefficients. \ifnum \Solutions=0 
+    \vspace{16cm}
+    \fi
+    \part State the general solution to the differential equation.
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} Solution written below. 
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{Images/ImgTest2VoP.jpg}
+    \end{figure}  
+} 
+\else 
+\vspace{3cm}
+\fi
+\fi
+
+
+\ifnum \Version=2
+\question[6] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 60t^3, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = 1$ and $y_2 = t^2$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \input{2023Summer/Test2/SolPage2t3}
+    } 
+    \else 
+    \fi    
+\fi
+
+\ifnum \Version=3
+\question[6] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 60e^{-4t}, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = e^t$ and $y_2 = 1$. 
+    
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue}  
+    \input{2023Summer/Test2/SolPage24t}
+    } 
+    \else 
+    \fi        
+\fi
+
+
+\ifnum \Version=4
+\question[6] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 60t^3, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = 1$ and $y_2 = t^2$. 
+    
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue}  
+    \input{2023Summer/Test2/SolPage2t3}
+    } 
+    \else 
+    \fi
+\fi
+
+\ifnum \Version=5
+\question[6] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 60e^{-4t}, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = e^t$ and $y_2 = 1$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue}  
+    \input{2023Summer/Test2/SolPage24t}
+    } 
+    \else 
+    \fi    
+\fi
+
+
+
+\ifnum \Version>5
+\question[4] Consider the first order system \[\vec{x} \, ' = \left( \begin{array}{rr} 2 & 4 \\ 4 & 2 \end{array} \right) \vec{x}  + \begin{pmatrix} 24\\0\end{pmatrix}  \]
+    
+    Solutions to the corresponding homogeneous problem are $\vec x_1 = e^{-2t}\begin{pmatrix} 1\\-1\end{pmatrix}$ and $\vec x_2 = e^{6t}\begin{pmatrix} 1\\1\end{pmatrix}$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+\ifnum \Solutions=0 \vspace{17cm}\fi
+        \part State the general solution to the system of differential equations. 
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue}   
+    
+    \begin{itemize}
+        \item \textbf{Fundamental Matrix}\\
+        The fundamental matrix \(X(t)\) is constructed by placing the solutions \(\vec{x}_1\) and \(\vec{x}_2\) as columns in a matrix. Thus,
+        
+        \[
+        X(t) = \begin{pmatrix} \vec{x}_1 & \vec{x}_2 \end{pmatrix} = \begin{pmatrix} e^{-2t} & e^{6t} \\ -e^{-2t} & e^{6t} \end{pmatrix}
+        \]
+        \item \textbf{Inverse}\\
+        \begin{align*}
+            \det(X(t)) &= e^{-2t} \cdot e^{6t} - e^{6t} \cdot (-e^{-2t}) = e^{4t} + e^{4t} = 2e^{4t}\\
+            X^{-1} &= \frac{1}{2e^{4t}} \begin{pmatrix} e^{6t} & -e^{6t} \\ e^{-2t} & e^{-2t} \end{pmatrix}
+        = \frac{1}{2} \begin{pmatrix} e^{2t} & -e^{2t} \\ e^{-6t} & e^{-6t} \end{pmatrix}
+        \end{align*}
+        
+        \item \textbf{Particular}\\
+        \begin{align}
+            \vec x_p &= X \int X^{-1} g \, dt \\
+            &= X \int \frac{1}{2} \begin{pmatrix} e^{2t} & -e^{2t} \\ e^{-6t} & e^{-6t} \end{pmatrix} \begin{pmatrix} 24 \\ 0 \end{pmatrix} \, dt \\
+            & = X \int \begin{pmatrix} 12e^{2t} \\ 12e^{-6t} \end{pmatrix} \, dt \\
+            &= \begin{pmatrix} e^{-2t} & e^{6t} \\ -e^{-2t} & e^{6t} \end{pmatrix} \begin{pmatrix} 6e^{2t} + C_1 \\ -2e^{-6t} + C_2 \end{pmatrix} \\
+            &=  \begin{pmatrix} 4 + C_1 e^{-2t} + C_2 e^{6t} \\ -8 - C_1 e^{-2t} + C_2 e^{6t} \end{pmatrix}
+        \end{align}  
+        It is not necessary to keep the $C_1$ and $C_2$ terms, they can be ignored. 
+        \item \textbf{General Solution}
+        \begin{align}
+            \vec x = \vec x_h + \vec x_p = c_1 e^{-2t}\begin{pmatrix} 1\\-1\end{pmatrix} + c_2 e^{6t}\begin{pmatrix} 1\\1\end{pmatrix} + \begin{pmatrix} 4\\-8\end{pmatrix}
+        \end{align}
+
+    \end{itemize}
+
+
+
+
+    } 
+    \else 
+    \fi    
+\fi
+

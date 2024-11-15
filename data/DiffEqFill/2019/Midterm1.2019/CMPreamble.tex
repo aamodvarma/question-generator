@@ -1,0 +1,142 @@
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+\usepackage{graphicx} % if images are needed
+
+\addpoints
+
+% Initials
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+\newcommand{\InitialsLeft}{\noindent \hspace{-18pt}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+\newcommand{\InitialsRight}{\begin{flushright}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}\end{flushright}}
+
+
+% INSTRUCTIONS FOR DISTANCE LEARNING COURSES: PROCTORS/FACILITATORS
+\newcommand{\InstructionsDistanceProctors}{\begin{itemize}
+
+    \item A proctor/facilitator is required to be present while the student is taking this test.
+    
+    \item A proctor/facilitator must connect with the on-campus class during this test.   
+        
+    \item For any connection help: gtonlinesupport@pe.gatech.edu
+    
+    \item No communication is allowed among students taking the exam.
+
+\end{itemize}}
+
+
+% INSTRUCTIONS FOR DISTANCE LEARNING COURSES: STUDENTS
+\newcommand{\InstructionsDistanceStudents}{\begin{itemize} \setlength\itemsep{.15em}
+    
+    % \item If there are questions during the exam, students can call/text \InstructorContact, at \InstructorNumber, under supervision of their proctor/facilitator.     
+        
+    \item {\bf Show your work} and justify your answers for all questions unless stated otherwise.
+
+    \item You will have \Duration continuous minutes (no breaks) to take the exam. 
+    
+    \item There are \Points total points possible.
+
+    \item Calculators, notes, cell phones, books are not allowed.
+    
+    \item Please write your answers neatly and show all of your work. 
+    \item Use dark and clear writing: your exam will be scanned into a digital system.
+    
+    \item Exam pages are double sided. Be sure to complete both sides. 
+    
+    \item Leave a 1 inch border around the edges of exams.
+    
+    \item Check that every page has the same booklet number.
+
+\end{itemize}}
+
+
+% INSTRUCTIONS FOR DISTANCE LEARNING COURSES: STUDENTS
+\newcommand{\InstructionsCovid}{\begin{itemize} \setlength\itemsep{.15em}
+    
+    \item If there are questions during the exam, students can email their instructor or message them through Canvas. 
+    
+    % \InstructorContact, at \InstructorNumber, under supervision of their proctor/facilitator.     
+        
+    \item {\bf Show your work} and justify your answers for all questions unless stated otherwise.
+
+    \item You will have \Duration continuous minutes (no breaks) to take the exam. 
+    
+    \item There are \Points total points possible.
+    
+    \item Your work must be your own. Please do not communicate with anyone other than the instructor during the exam. Otherwise, students can use any resources available to them the answer the questions that are given. 
+    
+    \item Students can take this exam at home.
+    
+    \item Please write your answers neatly and show all of your work. 
+    
+    \item Students should scan their work and submit it through Canvas. There should be an \textbf{assignment} in Canvas for this exam. The process for submitting your work will be similar to what you have used for homework. 
+    
+    \item Work must be submitted today by 12:30 ET. 
+    
+    \item Please use dark and clear writing so that the scan is easy to read. 
+    
+    \item Please write your name or initials at the top of every page and solve the questions in the exam in the order they are given. 
+    
+    \item There is no need to print the exam at home. As long as you solve problems in the order they are given (just like the written homework sets), you can write out your work on your own paper. But of course, you can print the exam out if you prefer and write your answers on the printed copy. 
+    
+    \item Please upload your work as a single PDF file. If this is not possible you can email your work to your instructor. 
+
+
+    
+\end{itemize}}
+
+% FANCY HEADERS - MAKE EMPTY
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+
+
+% ADJUST MARGINS FOR DISTANCE LEARNING REQUIREMENTS
+\usepackage[tmargin=1.7in,bmargin=1.05in,left=1in,right=1in]{geometry}
+
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows} 
+\usetikzlibrary{calc} 
+
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+\newcommand{\Semester}{Spring}
+\newcommand{\Year}{2020}
+\newcommand{\Instructors}{Dr. Greg Mayer}
+
+% WHO TO CONTACT DURING EXAM IF QUESTIONS
+\newcommand{\InstructorContact}{Dr. Greg Mayer}
+
+
+\usepackage{spalign} % Joe Rabinoff's matrix package
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+\newcommand{\Scratch}{\begin{center}\textit{This page may be used for scratch work for the previous question. Your proctor should scan this page whether it is used or not. }\end{center}   }
+
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+

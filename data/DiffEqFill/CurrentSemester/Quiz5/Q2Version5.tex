@@ -1,0 +1,41 @@
+\newpage 
+\question[6] The non-linear system below has critical points at $(0,0)$, $(1,0)$, and $(0,4)$. 
+\begin{align*}
+    \dxdt &= xy+2x^2-2x , \qquad \dydt = y^2+2xy-4y
+\end{align*}
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+            F &= x', \quad G = y', \quad J 
+            = \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} 
+            = \begin{pmatrix} y + 4x - 2 & x \\ 2y & 2y+ 2x - 4\end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vspace{3cm}
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(0,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,0)$, $J = \begin{pmatrix} -2&0\\0&-4\end{pmatrix}$. Thus $\lambda =- 2, -4$. The eigenvalues are real and negative. The CP is a stable node. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(1,0)$, $J = \begin{pmatrix} 2&1\\0&-2\end{pmatrix}$. The eigenvalues are 
+        real and opposite signs. The CP is an unstable saddle. 
+    } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(0,4)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,4)$, $J = \begin{pmatrix} 2&0\\8&4\end{pmatrix}$. The eigenvalues are real and have the same signs. The CP is an unstable node. 
+    } 
+    \else 
+    \vfill
+    \fi    
+\end{parts}
+

@@ -1,0 +1,158 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 3 MakeUp}
+\newcommand{\TestDate}{Apr 2 at 8:00 am}
+\newcommand{\TestTime}{120 minutes}
+\newcommand{\Duration}{120  }
+\newcommand{\Points}{35 }
+
+
+\begin{document}
+    
+    
+\input{../CoverCovid}
+
+\vspace{1cm}
+\begin{center}
+    A TABLE OF LAPLACE TRANSFORMS IS ON THE LAST PAGE
+\end{center}
+
+\newpage \InitialsRight
+
+
+\begin{questions}
+    % \question[3] % WW HW14 FOR AQM
+    %     Consider the equations describing the interactions of robins $r$ and worms $w$.
+    %     $$\frac{dw}{dt} = 2w - 3wr, \quad \text{and} \quad \frac{dr}{dt} = - 3r+rw$$
+    %     \begin{parts}
+    %         \part What are the non-zero nullclines for this system? \vspace{3cm} 
+    %         \part 
+    %         % When $r=w=1000$, is the population of worms increasing or decreasing? % A
+    %         % When $r=w=1000$, is the population of robins increasing or decreasing? % Q
+    %         When $r=1000$ and $w=2000$, is the population of worms increasing or decreasing? % M
+    %         \vspace{2cm} 
+    %     \end{parts}
+        
+        
+        
+        
+    \question[5] Compute the inverse Laplace Transform of  
+    
+    % $\displaystyle Y = \frac{2s+1}{s^2-2s+2}$. % Q 5.3#15
+    
+    % $\displaystyle Y = \frac{2s+1}{s^2-2s+2}$. % M 5.3#15
+    
+    $\displaystyle Y = \frac{5s+25}{s^2+10s+74}$. % A 5.3#13
+    
+
+    
+%     % 
+        
+\newpage % \InitialsLeft 
+    
+    % \question[6] % WW HW13 FOR AQM 
+    % Consider the following integral equation, where the unknown dependent variable, \(y(t)\), appears within an integral:
+    % \[\int_0^t \sin\Large(4 (t-w)\Large)\, y(w) \ dw = 9 t^2.\] This equation is defined for \(t \geq 0\).  
+    % \begin{parts}
+    % \part Use convolution and the Laplace transforms to determine an explicit expression for the Laplace transform of $y(t)$.
+    % \vspace{5cm} 
+    % \part Obtain an expression for \(y(t)\).
+    % \end{parts}
+    
+    
+
+\newpage \InitialsRight
+    \question[10] 
+    Consider the system 
+    
+    % $\displaystyle dx/dt = x(1-x-y), \quad dy/dt = y(1.5-y-x)$. % Q HW7.3#5    
+    
+    $\displaystyle dx/dt = x-y, \quad dy/dt = x-3y+xy - 3$. % M HW7.2#3
+
+    
+    % $\displaystyle dx/dt = x+y^2, \quad dy/dt = x + 2y$. % A HW7.2#3
+    
+
+    
+    \begin{parts} 
+        \part Identify all critical points of the system.
+        \vspace{7cm}
+        \part For each critical point, use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}
+
+% \newpage \InitialsLeft \\ \Scratch 
+
+% \newpage \InitialsRight
+    
+    % \question[5] Calculate the Laplace transform of $g(t)$. 
+    
+    % $$g(t) = (t-4)u_3(t)  - (t - 2)u_4(t) $$ %A HW 5.5#11
+    % $$g(t) = (t-5)u_3(t)  - (t - 2)u_4(t) $$ %Q HW 5.5#11
+    % $$g(t) = (t-6)u_3(t)  - (t - 2)u_4(t) $$ %M HW 5.5#11
+
+\newpage \InitialsLeft
+
+    \question[10] Use the Laplace transform to solve the following IVP.
+
+    $$\displaystyle y''-4y'+4y=0,\qquad y(0)=1,\quad y'(0)=1$$ %Q,A HW 5.4#4
+    % $$\displaystyle y''-2y'+4y=0,\qquad y(0)=2,\quad y'(0)=0$$ %M HW 5.4#5
+    
+
+\newpage \InitialsRight
+
+    \question[10] Use the Laplace transform to solve the following IVP.
+
+    % $$\displaystyle y''-y=10\delta(t-4)\qquad y(0)=3,\quad y'(0)=3 $$ %A WORKSHEET 5.7#1
+    $$\displaystyle y''+4y=10\delta(t-4\pi)\qquad y(0)=\frac12,\quad y'(0)=0 $$ %Q 5.7#6
+    % $$\displaystyle y''+2y'+2y=10\delta(t-\pi)\qquad y(0)=0,\quad y'(0)=1 $$ %M 5.7#1
+
+
+
+    
+\end{questions}
+
+\newpage \InitialsLeft \\ \LastPage
+
+
+\newpage \InitialsRight
+
+\newcounter{NumberInTable}
+\newcommand{\LTNUM}{\stepcounter{NumberInTable}{\theNumberInTable.}}
+
+\vspace{-0ex}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{center}
+    \subsection*{Elementary Laplace Transforms}
+    \vspace{.5cm}
+    
+    \begin{tabular}{ p{1cm} p{6cm} p{8cm} }
+        & $f(t)$ & $\mathcal  L\{f(t)\}  =F(s)$ \\ \hline
+        \LTNUM & $1$ & $\displaystyle \frac{1}{s}$  \\ 
+        \LTNUM & $e^{at}$	& $\displaystyle \frac{1}{s-a}$ \\ 
+        \LTNUM & $t^n$, $n$ positive integer	& $\displaystyle \frac{n!}{s^{n+1}}$  \\ 
+        \LTNUM & $t^p$, $p > -1$	& $\displaystyle \frac{\Gamma(p+1)}{s^{p+1}}$  \\ 
+        \LTNUM &$\sin at$ 	& $\displaystyle \dfrac{a}{s^2+a^2}$ \\ 
+        \LTNUM &$\cos at$ 	& $\displaystyle \dfrac{s}{s^2+a^2}$ \\ 
+        \LTNUM &$\sinh at$	& $\displaystyle \dfrac{a}{s^2-a^2}$ \\ 
+        \LTNUM &$\cosh at$	& $\displaystyle \dfrac{s}{s^2-a^2}$ \\ 
+        \LTNUM &$e^{at}\sin bt$	& $\displaystyle \dfrac{b}{(s-a)^2+b^2}$   \\ 
+        \LTNUM &$e^{at}\cos bt$	& $\displaystyle \dfrac{s-a}{(s-a)^2+b^2}$  \\ 
+        \LTNUM &$t^ne^{at}$, $n$ positive integer	& $\displaystyle \dfrac{n!}{(s-a)^{n+1}}$  \\ 
+        \LTNUM &$u_c(t)$	& $\displaystyle \dfrac{e^{-cs}}{s}$  \\ 
+        \LTNUM &$u_c(t)f(t-c)$& $\displaystyle e^{-cs}F(s)$  \\ 
+        \LTNUM &$e^{ct}f(t)$& $\displaystyle F(s-c)$  \\ 
+        \LTNUM &$\int_0^t f(t - \tau) g(\tau) d\tau$& $\displaystyle F(s)G(s)$  \\ 
+        \LTNUM &$\delta(t-c)$& $e^{-cs}$  \\ 
+        \LTNUM &$f^{(n)}(t)$& $\displaystyle s^nF(s)-s^{(n-1)}f(0) - \ldots -f^{(n-1)}(0)$  \\ 
+        \LTNUM & $t^n f(t)$& $\displaystyle (-1)^nF^{(n)}(s)$  \\ 
+    \end{tabular}
+    \renewcommand{\arraystretch}{.5}
+
+\end{center}
+
+
+\end{document}
+

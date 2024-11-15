@@ -1,0 +1,112 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 2 M}
+\newcommand{\TestDate}{June 2019}
+\newcommand{\TestTime}{75 min} % QUP
+% \newcommand{\TestTime}{10:05 am to 11:20 am}
+\newcommand{\Duration}{75  }
+\newcommand{\Points}{50 }
+
+
+\begin{document}
+    
+\input{../CMCoverPage}
+
+\newpage \InitialsRight
+
+% QUP EXAM
+\begin{questions}
+
+
+    
+    \question[2] Determine all values of $\alpha$, if any, for which all solutions tend to infinity as $t\to\infty$. $$y'' - (2\alpha - 1) y' + (\alpha^2-\alpha+1) y = 0, \quad \alpha \in \mathbb R$$ \vspace{5cm}  % 4.3.47
+    
+    
+    \question[2] % 6.3.4
+    State the largest possible interval on which solutions to the IVP are certain to exist. $$(t-2)y'''+ty''+5t^2y'+2t^3y = \ln (t+1), \quad y(1) = 1$$.
+    \vspace{3cm}
+    
+
+    \newpage \InitialsLeft
+    \question[7]  Determine a suitable form for the particular solution, $Y(t)$, to the differential equations if the method of undetermined coefficients is to be used. Do not determine the values of the coefficients or solve the differential equations. 
+    \begin{parts}
+        \part $y'' - 2y' - 3y = (t^2 + 1)e^{-t}$ \vspace{8cm}
+        \part $y'' +2y' - 3y = 3t^2e^t\sin t$
+    \end{parts}
+    
+
+
+    \newpage \InitialsRight
+    \question[10] Use the variation of parameters method to identify the general solution to \[\vec{x} \, ' = \left( \begin{array}{rr} 2 & 3 \\ 3 & 2 \end{array} \right) \vec{x}  + \left( \begin{array}{r}  4\\ 0\end{array} \right)  \]
+
+    \newpage \InitialsLeft
+    \Scratch 
+        
+    \newpage \InitialsRight
+    \question[10] 
+    Matrix $A = \frac 12 \spalignmat{4 3;-3 -2} = \spalignmat{2 \frac32;-\frac32 -1}$ has one eigenvalue $\lambda = 1/2$ with algebraic multiplicity 2. % A3.5.9
+
+    \begin{parts} 
+    
+        \part Determine the eigenvectors of $A$. 
+        \vspace{4cm}
+        \part Express the general solution of the system $\vec x \, ' = A \vec x$ in terms of real valued functions. 
+        \vspace{8cm} 
+        \part Sketch the phase portrait of the system. Do not forget to label your axes.      
+        \vspace{2cm} 
+    \end{parts}
+    
+    \newpage    \InitialsLeft
+    
+        \question[9] Consider a lattice with $3$ lattice points, as in the figure below. 
+    
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{scope}[<->,>=stealth',shorten >=1pt,auto,node distance=1.75cm,thick, main node/.style={circle,fill=gray!10,draw}]
+                \node[main node] (1) {$x_1$};
+                \node[main node] (2) [right of=1] {$x_2$};
+                \node[main node] (3) [right of=2] {$x_3$};
+                \path[every node/.style={font=\sffamily\small}]
+                (1) edge node[below] {} (2)
+                (2) edge node [above] {} (3);
+                \end{scope}
+            \end{tikzpicture}  
+        \end{center}  
+        
+        Let $x_j(t)$ be the number of particles residing at the $j$th lattice point at time $t \ge 0$. Assume that $x_j$ satisfies the following rate equations.
+        \begin{align*} 
+            \frac{dx_1(t)}{dt} = x_2 - x_1 , \qquad 
+            \frac{dx_2(t)}{dt} = x_3 - 2 x_2 + x_1 , \qquad \frac{dx_3(t)}{dt} = x_2 - x_3
+        \end{align*} 
+        % Answer the following questions.
+        \begin{enumerate} 
+            \item[a)] Express the system of equations in the form $\vec x \, ' = A \vec x$. 
+                \vspace{2cm}
+
+                \item[b)] Determine the eigenvectors of $A$ and write down the general solution. You may use that the eigenvalues of $A$ are $0, -1$ and $-3$. 
+                \vspace{10cm} 
+                \item[c)] What does the solution converge to as $t \to \infty$? 
+        \end{enumerate}
+        
+    \newpage \InitialsRight
+    \Scratch 
+        
+        
+    \newpage \InitialsLeft
+        
+    \question[10] The position of an undamped spring-mass system satisfies the IVP $$y'' + 5y = 0, \quad y(0) = -1, \quad y'(0) = 0$$ \begin{parts} \part Solve the IVP. \vspace{5cm} \part Sketch the component plot for $y(t)$. \vspace{3cm} \part Sketch the phase portrait for this system. Include the trajectory, $\vec r(t)$, that corresponds to the initial conditions. Clearly label this trajectory and do not forget to label your axes.  \end{parts} 
+        
+    
+\end{questions}
+    
+\newpage \InitialsRight
+\Scratch
+
+\newpage \InitialsLeft \\ \LastPage 
+\newpage \InitialsRight \\ \LastPage 
+
+\end{document}
+

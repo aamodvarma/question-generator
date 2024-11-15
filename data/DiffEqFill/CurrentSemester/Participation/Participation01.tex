@@ -1,0 +1,59 @@
+\documentclass[12pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{MATH 2552 Participation Activity 1: Fish Harvesting} \fi
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{Please write your last name: \framebox{\strut\hspace{5cm}} }}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\begin{questions}
+
+    \question[4] A scientist hired by a fish hatchery has been using \begin{align}
+        \frac{dP}{dt}=2P\left(1-\frac{P}{4}\right)
+    \end{align} as a model for predicting the number of fish that the hatchery can expect to find in one of their lakes, where $P(t)$ is the population of fish in the lake at time $t$, where $P$ is in hundreds and $t$ is in years. But the hatchery was just bought out by fish.net! The new owners want to let the public catch fish at the lake. This means that the previous DE used to predict future fish populations needs to be modified. The scientist decides to use 
+\begin{align}
+    \frac{dP}{dt}=2P\left(1-\frac{P}{4}\right) - kP, \quad k  \ge 0. \label{Eq:II}
+\end{align}
+Plot the following. 
+\begin{enumerate}[label=\alph*)]
+        \item Plot a graph that gives the location of the critical points of Equation (\ref{Eq:II}) as a function of $k$. Your plot should have $k$ on the horizontal axis and $P$ on the vertical axis.
+        \item Plot phase lines for $k=0$, $k=1$, and $k=2$. Classify the critical points. 
+        \item Using your graphs in the previous two parts, describe what the differential equation predicts for the fish populations in one or two sentences. 
+    \end{enumerate}
+
+\vfill 
+
+\end{questions}
+
+\end{document}
+
+

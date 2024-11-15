@@ -1,0 +1,145 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{../preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 1B}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{3 hours }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{9:00 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+\input{../CoverCovid.tex} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+    
+    \question[15] %2.5.11 verbatim 
+    Consider the differential equation $\displaystyle \dydt = ky - y^3$, where $y$ is a real function of $t$, and $t \ge 0$, and $k>0$. 
+    \begin{parts}
+        \part State the critical points of the differential equation.  \vspace{0.75cm} 
+        \part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable. 
+        \vspace{5cm} 
+        \part Determine where $y$ is concave up and concave down for $y \ge 0$. 
+        \vspace{6cm}
+        \part Using results from parts (a) and (b), sketch several solution curves in the $ty$-plane for $y \ge 0$ and $t \ge 0$.
+    \end{parts}
+    
+    
+    \newpage \InitialsLeft
+    \question[6] Solve the following initial value problem. Solve for $y$ in terms of $t$. 
+    $$\displaystyle \frac14 \, \dydt - y = te^{5t}, \quad y(0) = 2$$
+    
+    % \vspace{12cm}
+    % \question[3] Solve the differential equation. You may leave your answer as an implicit relation in $y$ and $t$. 
+    
+    \newpage \InitialsRight
+    
+    \question[10] Consider the system $$x'(t) = x+2y, \quad y'(t) = 4x+3y$$ where $x=x(t)$ and $y=y(t)$. 
+ 	
+    \begin{parts} 
+        \part[1] Express the system in the form $\displaystyle \frac{d\vec x}{dt} = A\vec x$, where $\vec x = \spalignmat{x;y}$. \vspace{2cm}
+        \part[4] Determine the eigenvectors of $A$. 
+        \vspace{5cm}
+        \part[2] Express the general solution of the system $\frac{d\vec x}{dt} = A \vec x$ in terms of real valued functions. 
+        \vspace{3cm} 
+        \part[3] Sketch the phase portrait of the system. Please include the eigenspaces in your sketch and do not forget to label your axes.      
+        \vspace{4cm} 
+    \end{parts}
+    
+    \newpage \InitialsRight
+    
+    \question[10] Consider the system $$\frac{d\vec x}{dt} = A \vec x = \spalignmat{-6 5;-5 4}\vec x$$
+ 	
+    \begin{parts} 
+
+        \part[4] Determine the eigenvalues of $A$. 
+        \vspace{5cm}
+        \part[6] Express the general solution of the system $\displaystyle \frac{d\vec x}{dt} = A \vec x$ in terms of real valued functions. 
+
+    \end{parts}    
+    
+
+
+    
+    \newpage \InitialsRight
+    
+
+    
+    \question[5] % 3.4 13
+    Consider the homogeneous system $$\displaystyle \vec x \, ' = A \vec x = \spalignmat{0 1;-2 \alpha}\vec x$$ where $\alpha$ is a real number, and $\alpha \ge 0$.
+    \begin{parts}
+        \part Determine the eigenvalues of $A$ in terms of $\alpha$. 
+        \vspace{5cm} 
+        
+        \part Identify the values of $\alpha$ (if any) where the qualitative nature of phase portrait for system changes. 
+        \vspace{4cm} 
+        
+        \part For one value of $\alpha$ that you listed in part (b), sketch the phase portrait for a value of $\alpha$ that is slightly less than the value(s) that you identified. Indicate the value of $\alpha$ that you selected and do not forget to label your axes. 
+    \end{parts}
+    
+
+    \newpage \InitialsLeft
+    
+    \question[2] %2.4.2 based on
+    State the largest possible interval on which solutions to the IVP are certain to exist. $$t(t-3) \dydt + t y = \frac{1}{\cos t}, \quad y(2) = 1$$.
+    \vspace{5cm}
+    
+
+    
+
+    \question[2] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}
+

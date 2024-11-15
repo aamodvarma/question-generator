@@ -1,0 +1,41 @@
+\newpage 
+\question[8] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= x^2+y^2+2x-3 , \qquad \dydt = y+x-1
+\end{align*}
+The critical points are located at $(-1,2)$ and $(1,0)$. 
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+            F &= x'\\
+            G &= y' \\
+            J &= \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} = \begin{pmatrix} 2x+2&2y\\1&1\end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vfill
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(-1,2)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(-1,2)$, $J = \begin{pmatrix} 0&4\\1&1\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (0-\lambda)(1-\lambda)-4 = \lambda^2 -\lambda -4 
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = \frac12 \pm \frac12 \sqrt{1-4\cdot(-4)} = 1 \pm \frac{\sqrt{17}}{2}
+        \end{align}
+        $\lambda \in \mathbb R$, and the eigenvalues have opposite signs. The critical point is an unstable saddle. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(1,0)$, $J = \begin{pmatrix} 4&0\\1&1\end{pmatrix}$. The eigenvalues are $\lambda = 1,4$. So $\lambda \in \mathbb R$, both eigenvalues are positive. The critical point is an unstable node.         
+    } 
+    \else 
+    \vfill
+\fi
+\end{parts}
+

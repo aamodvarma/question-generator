@@ -1,0 +1,660 @@
+%\vfill\rightline{(See the next page for the answers)}
+
+\newpage
+
+\item
+	 
+	\begin{enumerate}
+	\item
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=
+C_1 e^{3t} \bmatrix{2\cr 1}  
++C_2 e^{3t} \left(  \bmatrix{-1\cr 0} + t\bmatrix{2\cr 1} \right)$.
+\\
+% where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-e^{3t}+10te^{3t} \cr 2e^{3t}+5te^{3t}}$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ 
+is a repulsive degenerate node and is unstable.
+\medskip
+
+\begin{minipage}{0.68\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+the correct eigenspace in the direction of 
+$\bmatrix{2\cr 1}$;
+\item{$\bullet$}
+trajectories that are not on
+the eigenspace are U-turn shaped curves,
+emanating from the origin;
+\item{$\bullet$} 
+at the equilibrium, all the curved trajectories are tangent 
+to the eigenspace;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\includegraphics*[width=\textwidth]{testpr-repulsive-degenerate-node.eps}
+\end{minipage}
+
+	\item
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=C_1 e^{-3t} \bmatrix{-1/2\cr 1}  
++C_2 e^{-3t} \left(  \bmatrix{1/4\cr 0} + t\bmatrix{-1/2\cr 1} \right)$.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-e^{-3t}  \cr 2e^{-3t} }$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ 
+is an attractive degenerate node
+and is asymptotically stable.
+\medskip
+
+\begin{minipage}{0.68\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+the correct eigenspace in the direction of 
+$\bmatrix{-1/2\cr 1}$;
+\item{$\bullet$}
+trajectories that are not on 
+the eigenspace are U-turn shaped curves,
+converging to the origin;
+\item{$\bullet$} 
+at the equilibrium, all the curved trajectories are tangent 
+to the eigenspace;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\includegraphics*[width=\textwidth]{testpr-attractive-degenerate-node.eps}
+\end{minipage}
+
+\medskip
+
+% ${ }$
+% \\[-1.em]
+\begin{minipage}{0.68\textwidth}
+	\item
+The general solutions: 
+$\bmatrix{x_1(t)\cr x_2(t)}
+=C_1 e^{-2t} \bmatrix{1\cr 0}  
++C_2 e^{-2t} \bmatrix{0\cr 1} $.\\
+The solution satisfying $x_1(0)=-1,x_2(0)=2$ is
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{-e^{-2t}  \cr 2e^{-2t}}$.\\
+The equilibrium $(x_1,x_2)=(0,0)$ 
+is an attractive proper node
+and is asymptotically stable.
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\includegraphics*[width=\textwidth]{testpr-attractive-proper-node.eps}
+\end{minipage}
+
+	\end{enumerate} 
+
+%% \newpage
+%\item
+ 
+${ }$
+\\[-1.em]
+\begin{minipage}{0.68\textwidth}
+\item
+(a) Only one equilbrium: $(1,-2)$
+\\
+The general solutions:\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{1\cr -2} 
++C_1 e^{-2t}\left( \cos(5t)\bmatrix{-1\cr 1} -\sin(5t)\bmatrix{-1\cr 0} \right)\\
++C_2 e^{-2t}\left( \sin(5t)\bmatrix{-1\cr 1} +\cos(5t)\bmatrix{-1\cr 0} \right)$,\\
+where $C_1,C_2$ are free parameters.\\
+The sol satisfying $x_1(0)=2$, $x_2(0)=1$ is\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{1  +e^{-2t} \cos(5t) +7e^{-2t} \sin(5t)\cr 
+          -2+3e^{-2t} \cos(5t) -4e^{-2t} \sin(5t)}$.\\
+The equilibrium $(x_1,x_2)=(1,-2)$ 
+is an attractive focus and is asymptotically stable.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\includegraphics*[width=\textwidth]{testpr-shifted-attractive-focus.eps}
+\end{minipage}
+
+ 
+\begin{minipage}{0.68\textwidth}
+(b) Only one equilbrium: $(1,1)$
+\\
+The general solutions:
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{1\cr 1} + 
+C_1 e^{3t} \bmatrix{2\cr 1} +C_2 e^{-3t} \bmatrix{-1\cr 1}$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $x_1(0)=2,x_2(0)=1$ is\\
+$\bmatrix{x_1(t)\cr x_2(t)}
+=\bmatrix{1\cr 1}
+ +\frac{1}{3}e^{3t}\bmatrix{2\cr 1} -\frac{1}{3} e^{-3t} \bmatrix{-1\cr 1}$.\\
+The equilibrium $(x_1,x_2)=(1,1)$ is a saddle and is unstable.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\rightline{\includegraphics*[width=\textwidth]{testpr-shifted-saddle.eps}}
+\end{minipage}
+	 
+
+
+%%% A tank system with two distinct negative eigenvalues
+
+\item
+	\begin{enumerate}
+	\item
+$x_1'=-\frac{1}{20}x_1,\ 
+x_2'=\frac{1}{20}x_1-\frac{1}{10}x_2,\ 
+x_1(0)=10\mbox{\rm ~lb},\ x_2(0)=0$
+	\item
+$x_1(t)=10e^{-t/20}\mbox{\rm ~lb},
+x_2(t)=10e^{-t/20} -10e^{-t/10} \mbox{\rm ~lb}$
+	\item
+$\displaystyle \max_{t\ge 0} x_2(t)=x_2(20\ln 2)=2.5 \mbox{\rm ~lb}$
+	\end{enumerate}
+
+
+%%% A tank system with repeated eigenvalues
+\def\TANKSREPEATEDANS{
+\item
+(a) $x_1(t)=10e^{-t/20}\mbox{\rm ~lb},
+x_2(t)={1\over 2}te^{-t/20}\mbox{\rm ~lb}$
+\\ 
+(b) $\displaystyle \max_{t\ge 0} x_2(t)=x_2(20)=10/e \mbox{\rm ~lb}$
+(that's $ \approx 3.68 \mbox{\rm ~lb})$
+}
+ 
+
+
+
+\item
+	\begin{enumerate}
+	\item
+Substitute $y_1$ and $y_2$ in $(*)$ and simplify.
+Details skipped here.
+	\item
+$y(t)=C_1(1+t^2)+C_2 e^{-t}$ where $C_1$ and $C_2$ are free parameters.
+	\item
+$y(t)=3(1+t^2) -2 e^{-t}$
+	\item
+Set $x_1=y,x_2=y'$. The equivalent system is:
+$$
+\bmatrix{x_1'\cr x_2'}=
+\bmatrix{ 
+0 & 1 \cr
+\frac{2}{1+t} & \frac{1-t}{1+t}
+}
+\bmatrix{x_1\cr x_2}.
+$$
+The general solutions of this system are
+$\bmatrix{x_1(t)\cr x_2(t)} =
+\bmatrix{ C_1(1+t^2)+C_2 e^{-t} \cr 2C_1 t -C_2 e^{-t}}$.
+Or, equivalently,
+$\bmatrix{x_1(t)\cr x_2(t)} =
+C_1 \bmatrix{1+t^2 \cr 2t} +C_2\bmatrix{e^{-t}\cr -e^{-t}}$.
+	\item
+Substitute $y_0$ in $(**)$ and simplify.
+Details skipped here.	
+	\item
+$y(t)=e^{2t}+ C_1(1+t^2)+C_2 e^{-t}$ where $C_1$ and $C_2$ are free parameters.
+	\item
+$y(t)=e^{2t}+ 9(1+t^2) -3 e^{-t}$
+	\item
+Set $x_1=y,x_2=y'$. The equivalent system is:
+$$
+\bmatrix{x_1'\cr x_2'}=
+\bmatrix{ 
+0 & 1 \cr
+\frac{2}{1+t} & \frac{1-t}{1+t}
+}
+\bmatrix{x_1\cr x_2} 
++\bmatrix{ 0\cr \frac{6te^{2t}}{1+t} }.
+$$
+The general solutions of this system are
+$\bmatrix{x_1(t)\cr x_2(t)} =
+\bmatrix{ e^{2t}+ C_1(1+t^2)+C_2 e^{-t} \cr 
+2e^{2t}+ 2C_1 t -C_2 e^{-t}}$.
+Or, equivalently,
+$\bmatrix{x_1(t)\cr x_2(t)} =\bmatrix{ e^{2t} \cr 2e^{2t}}+
+C_1 \bmatrix{1+t^2 \cr 2t} +C_2\bmatrix{ e^{-t}\cr -e^{-t}}$.
+	\end{enumerate}
+
+
+\item
+	\begin{enumerate}
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1 e^{-4t} +C_2 e^{-t/2}$,
+where $C_1,C_2$ are free parameters.\\[1ex]
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)=-{3\over 7} e^{-4t} -{4\over 7} e^{-t/2}$.\\[1ex]
+The equilibrium $(y,y')=(0,0)$ is an attractive improper node
+and is asymptotically stable.
+\medskip
+
+\begin{minipage}{0.65\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+correct eigenspaces in the directions of 
+$\bmatrix{1\cr -4}$ and $\bmatrix{1\cr -1/2}$;
+\item{$\bullet$}
+curved trajectories for solutions that are not on the eigenspaces;
+\item{$\bullet$} 
+at the equilibrium, all the curved trajectories are tangent 
+to the eigenspace of $\lambda_2=-1/2$;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+ \includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-attr-node.eps}
+\end{minipage}
+\medskip
+  
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1 e^{2t} +C_2 e^{-4t}$, 
+where $C_1,C_2$ are free parameters.\\[1ex]
+The solution satisfying $y(0)=-1,y'(0)=2$ is 
+$y(t)=-{1\over 3} e^{2t} -{2\over 3} e^{-4t}$.\\[1ex]
+The equilibrium $(y,y')=(0,0)$ is a saddle
+and is unstable.
+\medskip
+
+\begin{minipage}{0.65\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+the correct eigenspaces in the directions of 
+$\bmatrix{1\cr 2}$ and $\bmatrix{1\cr -4}$;
+\item{$\bullet$}
+trajectories that are not on the eigenspaces are curved and transit from
+the eigenspace of $\lambda_2=-4$ to the eigenspace of $\lambda_1=2$;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-saddle.eps}
+\end{minipage}
+\medskip
+  
+\newpage
+
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1 e^{t/2} +C_2 e^{5t/2}$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)= -{9\over 4} e^{t/2} +{5\over 4} e^{5t/2}$.\\
+The equilibrium $(y,y')=(0,0)$ is a repulsive improper node
+and is unstable.
+\medskip
+
+\begin{minipage}{0.65\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+The correct eigenspaces in the directions of 
+$\bmatrix{1\cr 1/2}$ and $\bmatrix{1\cr 5/2}$.
+\item{$\bullet$}
+Trajectories that are not on the eigenspaces are curved.
+How do they curve?
+E.g., in this problem, the curved trajectories should be tangent to the 
+eigenspace of $\lambda_1=1/2$ near the origin.
+\item{$\bullet$}
+Needless to say, the figure should give
+the correct correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centerline{\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-repul-node.eps} }
+\end{minipage}
+\medskip
+
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1   +C_2 e^{3t/2}$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)=-{7\over 3}   +{4\over 3} e^{3t/2}$.\\
+The system has a repulsive line of equilibria.
+Each equilibium $(y,y')=(c,0)$ is unstable.
+\medskip
+
+\begin{minipage}{0.65\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+the correct eigenspaces in the directions of 
+$\bmatrix{1\cr 0}$ and $\bmatrix{1\cr 3/2}$;
+\item{$\bullet$}
+each nonequilibrium trajectory is a straight half-line
+parallel to the eigenspace of $\lambda_2=3/2$
+and emanates from an equilibrium on the eigenspace of $\lambda_1=0$;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centerline{\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-repul-line.eps} }
+\end{minipage}
+\medskip
+
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1 e^t\cos(2t)   +C_2 e^t\sin(2t)$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)= -e^t\cos(2t)   +{3\over 2} e^t\sin(2t)$.\\
+The equilibrium $(y,y')=(0,0)$ is a repulsive focus
+and is unstable.
+\medskip
+
+\begin{minipage}{0.6\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+It's unrealistic to expect a hand-drawn figure 
+to be as nice as computer graphics.
+However, the phase portrait should show 
+whether the trajectories are closed curves, 
+spirals converging to the origin, 
+or spirals leaving the origin \& go to infinity. 
+Moreover, it should show correctly 
+whether the spinning is clockwise or counterclockwise.}
+\end{minipage}
+\hfil
+\begin{minipage}{0.3\textwidth}
+\centerline{\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-repul-focus.eps} }
+\end{minipage}
+\medskip
+ 
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1  \cos(3t/2)   +C_2 \sin(3t/2)$.\\
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)= -\cos(3t/2) +\frac{4}{3}\sin(3t/2)$.\\
+The origin $(y,y')=(0,0)$ is a center
+and is stable but not asymptotically stable.
+\medskip
+
+\begin{minipage}{0.55\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+It's unrealistic to expect a hand-drawn figure 
+to be as nice as computer graphics.
+However, the phase portrait should show the symmetric axes in 
+the $x_1$ and $x_2$ directions. 
+Moreover, the aspect ratio of the ellipses is given by:
+$$\frac{(\mbox{the radius in the $x_1$ direction})}
+{(\mbox{the radius in the $x_2$ direction})}
+=\frac{1}{3/2}=\frac{2}{3}.$$
+	}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centerline{\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-center.eps} }
+\end{minipage}
+\medskip
+  
+	\item  
+The general solutions: 
+$\displaystyle y(t)=C_1 e^{-t/3}   +C_2 te^{-t/3}$,
+where $C_1,C_2$ are free parameters.\\
+The solution satisfying $y(0)=-1,y'(0)=2$ is
+$y(t)= - e^{-t/3}   +\frac{5}{3} te^{-t/3}$.\\
+The origin $(y,y')=(0,0)$ is an attractive degenerate node
+and is asymptotically stable.
+\medskip
+
+\begin{minipage}{0.65\textwidth}
+{\color{red}\small\em Notes:}
+	{\small \color{blue}
+The phase portrait
+should show the following elements:
+\begin{description}
+\item{$\bullet$}
+the correct eigenspace in the direction of 
+$\bmatrix{1\cr -1/3}$;
+\item{$\bullet$}
+trajectories that are not on the eigenspace
+are U-turn shaped curves,
+converging to the origin;
+\item{$\bullet$} 
+at the equilibrium, all the curved trajectories are tangent 
+to the eigenspace;
+\item{$\bullet$}
+and needless to say, the correct arrows
+on all trajectories.
+\end{description}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centerline{\includegraphics*[width=\textwidth]{testpr-2nd-ord-eq-attr-degen-node.eps} }
+\end{minipage}
+
+	\end{enumerate}
+
+
+\item
+	\begin{enumerate}
+	\item
+$\displaystyle
+{\bf x}(t) = \left[ \matrix{
+\displaystyle ({1\over 2}t+{1\over 8}) e^{3t} -{1\over 8}e^{-t}\cr
+\cr
+\displaystyle ({1\over 4}t-{1\over 16}) e^{3t} +{1\over 16}e^{-t}  }
+\right]
+$
+	\item
+$\displaystyle y(t)=3-4t+2t^2  -{3\over 10} \cos 4t +{ 2\over 5}\sin 4t
++{1\over 2} t^2 e^{-2t}
+                        -{37 \over 10} e^{-2t} -3 t e^{-2t}$
+	\item
+$\displaystyle y(t)= -4 +8e^{-t/2}\ln\left( 2+e^{t/2} \right) 
++te^{t/2} -2e^{t/2}\ln\left( 2+e^{t/2} \right) 
++C_1 e^{t/2} +C_2 e^{-t/2} $
+	\end{enumerate}
+
+
+
+
+\item
+${\bf x}(t)=\bmatrix{
+e^{2t}\ln(1+e^t) \cr
+te^{-2t}-e^{-2t}\ln(1+e^t) +e^{2t}\ln(1+e^t)  \cr
+te^{-2t}-e^{-2t}\ln(1+e^t) +e^{2t}\ln(1+e^t) }
++C_1e^{-t}\bmatrix{1\cr 0\cr 1}
++C_2e^{-2t}\bmatrix{0\cr 1\cr 1}
++C_3e^{2t}\bmatrix{1\cr 1\cr 1}$
+
+\item
+$y(t)=
+\frac{5}{16}\ln|\sin(2t)|
++\frac{5}{16}\cos(2t)\ln|\csc(2t)+\cot(2t)|
+-\frac{5}{16}
++C_1+C_2\cos(2t)+C_3\sin(2t)$
+% or, equivalently, 
+% $y(t)=
+% \frac{5}{16}\ln|\sin(2t)|
+% -\frac{5}{16}\cos(2t)\ln|\tan t|
+% -\frac{5}{16}
+% +C_1+C_2\cos(2t)+C_3\sin(2t)$
+%%%%%%%%%%%%
+%%% another version: $y(t)=\frac{2}{27}\ln|\sin(3t)|  +\frac{2}{27}\cos(3t)\ln|\csc(3t)+\cot(3t)|  -\frac{2}{27}  +C_1+C_2\cos(3t)+C_3\sin(3t)$
+
+\newpage 
+
+\item
+	\begin{enumerate}
+	\item
+${\bf x}'
+=\bmatrix{ 0&0&1&0 \cr 0&0&0&1\cr 0&-1&0&0\cr -1&0&0&0}{\bf x}
++\bmatrix{ 0\cr 0\cr \cos t \cr \cos t}$
+	\item
+$M(t)=\bmatrix{
+e^t  &  e^{-t} &  \cos t &  \sin t \cr
+-e^t & -e^{-t} &  \cos t &  \sin t \cr
+ e^t & -e^{-t} & -\sin t &  \cos t \cr
+-e^t &  e^{-t} & -\sin t &  \cos t }$
+	\item
+${\bf u}'(t)=\bmatrix{0\cr 0\cr -\sin t \cos t \cr \cos^2 t}$
+	\item
+${\bf u}_p(t)=
+\bmatrix{0\cr 0\cr
+\frac{1}{4}\cos(2t) \cr \frac{1}{2}t +\frac{1}{4}\sin(2t) }$,
+\quad
+${\bf x}_p(t)=
+\bmatrix{
+\frac{1}{4}\cos t +\frac{1}{2} t\sin t \cr
+\frac{1}{4}\cos t +\frac{1}{2} t\sin t \cr
+\frac{1}{4}\sin t +\frac{1}{2} t\cos t \cr
+\frac{1}{4}\sin t +\frac{1}{2} t\cos t }$
+	\item
+${\bf x}(t)=
+\bmatrix{
+\frac{1}{4}\cos t +\frac{1}{2} t\sin t \cr
+\frac{1}{4}\cos t +\frac{1}{2} t\sin t \cr
+\frac{1}{4}\sin t +\frac{1}{2} t\cos t \cr
+\frac{1}{4}\sin t +\frac{1}{2} t\cos t }
++C_1 e^t   \bmatrix{1\cr -1\cr  1\cr -1}
++C_2 e^{-t}\bmatrix{1\cr -1\cr -1\cr  1}
++C_3 \bmatrix{ \cos t \cr \cos t \cr -\sin t \cr -\sin t}
++C_4 \bmatrix{ \sin t \cr \sin t \cr \cos t \cr \cos t}$
+	\item
+$y(t)=\frac{1}{4}\cos t +\frac{1}{2} t\sin t
++C_1 e^t +C_2 e^{-t}+C_3 \cos t +C_4 \sin t$,\\
+$z(t)=\frac{1}{4}\cos t +\frac{1}{2} t\sin t
+-C_1 e^t -C_2 e^{-t}+C_3 \cos t +C_4 \sin t$
+	\end{enumerate}
+
+
+
+
+
+
+
+\item
+	\begin{enumerate}
+	\item
+The initial value problem is: 
+$\displaystyle \frac{60}{32} y'' +120 y=0,\ 
+y(0)=-1,\ y'(0)=2.$
+
+The solution is $y(t)= -\cos(8 t) +{1 \over 4} \sin(8t)$~ft.
+
+The amplitude $A={1\over 4}\sqrt{17}$~ft, the frequency $\omega=8$~rad/s,
+and the period $T={\pi\over 4}$~s.
+	\item
+$\displaystyle {30g\over \pi^2}\approx 97.27$~lb
+	\end{enumerate}
+ 
+
+\item
+	\begin{enumerate} 
+	\item
+The displacement from the equilibrium position is
+$0.1e^{-t}\cos t+0.1e^{-t}\sin t$ (meters).
+	\item
+The displacement from the equilibrium position is
+$0.2e^{-t} -0.1e^{-2t}$ (meters).
+ 	\end{enumerate}
+
+\item
+$y(t)=6t\sin(2t)$~in,
+or, equivalently,
+$y(t)={1\over 2}t\sin(2t)$~ft
+
+
+\item
+(a) $50y''+50y'+100y=10\cos(\omega t)$ \qquad
+(b) $\frac{1}{10}\cos t +\frac{1}{10}\sin t$~meters
+
+(c) Increases.\qquad
+(d) $ -\frac{1}{20}\cos (2t) +\frac{1}{20}\sin (2t)$~meters \qquad
+(e) Decreases.
+
+
+
+
+\item
+$\displaystyle \frac{ e^{-3s+12} - e^{-7s+28}  }{ s-4 }$
+ 
+(Hint: You may use the definition of the Laplace transform \& carry out the integration directly. 
+Or you may use the method of Section 5.5.)
+
+\newpage
+
+\item
+$\displaystyle F(s)=\frac{360}{s^6}-\frac{14}{s^3}+\frac{9}{s}
++\frac{2}{s+3}+\frac{6}{(s-2)^4}
++\frac{4s}{s^2+36} -\frac{30}{s^2+36}$
+
+
+\item
+$\displaystyle \frac{s+1}{(s+1)^2 +9} +\frac{6s}{(s^2+9)^2} -\frac{42(s+2)}{[(s+2)^2 +9]^2}$
+
+
+\item
+$\displaystyle -5 +\frac{1}{40}t^5 +\frac{1}{2}e^{5t} t^2 +2e^{2t} -7e^{4t} +e^{-t}
++2\cos(\pi t) +\frac{1}{\pi}\sin(\pi t) 
+-4e^{-3t}\cos(5t) +\frac{12}{5}e^{-3t}\sin(5t)$
+
+
+\item
+(a) $ sY(s)-7+2Y(s)=\frac{6}{s-3}$\qquad
+(b) $ Y(s)=\frac{7}{s+2}+\frac{6}{(s+2)(s-3)}$\qquad
+(c) $ y(t)=\frac{29}{5}e^{-2t} +\frac{6}{5}e^{3t}$
+
+\item
+(a) $ [s^2Y(s)+3s-2] +2[sY(s)+3] +Y(s)=\frac{8}{s-3}$\\
+(b) $ Y(s)=-\frac{3s+4}{(s+1)^2}+\frac{8}{(s+1)^2(s-3)}$\\
+(c) $ y(t)=-3te^{-t} -\frac{7}{2}e^{-t} +\frac{1}{2}e^{3t}$
+
+\item
+(a) $s^2 X(s)-s+2=-6X(s)+4Y(s),\quad sY(s)-4=5X(s)$\\
+(b) $X(s)=\frac{s^2-2s+16}{s^3+6s-20}, Y(s)=\frac{4s^2+5s+14}{s^3+6s-20}$\\
+(c) $x(t)=\frac{8}{9}e^{2t}+\frac{1}{9}e^{-t}\cos(3t)-\frac{11}{9}e^{-t}\sin(3t),
+     y(t)=\frac{20}{9}e^{2t}+\frac{16}{9}e^{-t}\cos(3t)+\frac{7}{9}e^{-t}\sin(3t)$
+
+
+

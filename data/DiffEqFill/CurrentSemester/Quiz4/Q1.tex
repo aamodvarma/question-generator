@@ -1,0 +1,139 @@
+\ifnum \Version=1
+
+\question[2] A spring is hung from a horizontal surface as in the figure below. A mass of $m=0.2$ kg stretches the spring 0.04 m. Frictional forces also exert a force on the mass while it is moving that is proportional to the velocity of the mass. The proportionality constant for these frictional forces is 2 N s/m. The mass is then pulled down an additional 0.03 m and then released from rest. Assume that position of the mass, $y$, increases as the mass moves down. Write down an IVP based on this physical description that describes the position of the mass $y(t)$, as a function of time, $t$. You do not need to solve your IVP. \\[4pt]
+\input{2023Summer/Quiz4/DiagramSpringMass}
+\vspace{2cm}
+\fi 
+
+
+\ifnum \Version=2
+\question[2] A small car with mass $m = 0.2$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $4$ N when it is extended a distance of $0.8$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.6$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 0.5t$ N. The car is released from rest after it is moved 0.01 m to the right of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+\fi 
+
+\ifnum \Version=3
+\question[2] A small car with mass $m = 0.1$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $2$ N when it is extended a distance of $0.1$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.3$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 0.1$ N. The car is released from rest after it is moved 0.01 m to the left of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+\fi 
+
+\ifnum \Version=4
+\question[2] A small car with mass $m = 0.2$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $4$ N when it is extended a distance of $0.8$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.6$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 0.5t$ N. The car is released from rest after it is moved 0.05 m to the left of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+\fi 
+
+
+\ifnum \Version=5
+\question[2] A small car with mass $m = 0.2$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $8$ N when it is extended a distance of $0.2$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.3$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 2t$ N. The car is released from rest after it is moved 0.01 m to the left of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+\fi 
+
+
+
+\ifnum \Version=6
+
+\question[6] Solve the following Cauchy-Euler equation. 
+$$t^2y'' - 6ty' + 6y = 0, \quad t > 0$$
+
+You may find the following table of formulas to be helpful. 
+
+\begin{center}
+    \begin{tabular}{ p{6.2cm} p{6cm} }
+        roots &  general solution 
+        \\[2pt] \hline 
+        real distinct, $m_1 \ne m_2$ &  $c_1 t^{m_1} + c_2 t^{m_2}$\\       
+        real repeated, $m = m_1 = m_2$ & $c_1 t^{m} + c_2 t^m \ln(t)$\\
+        complex, $m_1 = \alpha + i \beta$ & $c_1t^{\alpha}\cos(\beta \ln(t)) + c_2t^{\alpha}\sin(\beta \ln (t))$\\[2pt] \hline
+    \end{tabular}    
+\end{center}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+
+To solve the differential equation \( t^2 y'' - 6t y' + 6y = 0 \), we recognize it as a Cauchy-Euler equation. The solution to a Cauchy-Euler equation can be found by assuming a solution of the form \( y = t^r \). 
+
+\begin{enumerate}
+    \item First, we substitute \( y = t^r \) into the differential equation. We need the first and second derivatives of \( y \):
+   \[ y = t^r \]
+   \[ y' = r t^{r-1} \]
+   \[ y'' = r (r-1) t^{r-2} \]
+
+    \item Substitute these into the differential equation:
+   \[ t^2 (r (r-1) t^{r-2}) - 6t (r t^{r-1}) + 6 t^r = 0 \]
+   \[ r (r-1) t^r - 6r t^r + 6 t^r = 0 \]
+   \[ (r (r-1) - 6r + 6) t^r = 0 \]
+   \[ (r^2 - r - 6r + 6) t^r = 0 \]
+   \[ (r^2 - 7r + 6) t^r = 0 \]
+
+    \item Since \( t^r \neq 0 \) for \( t \neq 0 \), we set the characteristic polynomial to zero:
+   \[ r^2 - 7r + 6 = 0 \]
+   \[ (r - 1)(r - 6) = 0 \]
+   So \( r = 1 \) and \( r = 6 \).
+
+    \item Therefore, the general solution to the differential equation is:
+   \[ y(t) = C_1 t^1 + C_2 t^6 \]
+   \[ y(t) = C_1 t + C_2 t^6 \]
+
+where \( C_1 \) and \( C_2 \) are arbitrary constants.
+\end{enumerate}
+
+
+} 
+\else 
+\newpage
+\fi
+\fi 
+
+
+\ifnum \Version=7
+\question[6] Solve the following Cauchy-Euler equation. 
+$$t^2y'' - 5ty' + 5y = 0, \quad t > 0$$
+
+You may find the following table of formulas to be helpful. 
+
+\begin{center}
+    \begin{tabular}{ p{6.2cm} p{6cm} }
+        roots &  general solution 
+        \\[2pt] \hline 
+        real distinct, $m_1 \ne m_2$ &  $c_1 t^{m_1} + c_2 t^{m_2}$\\       
+        real repeated, $m = m_1 = m_2$ & $c_1 t^{m} + c_2 t^m \ln(t)$\\
+        complex, $m_1 = \alpha + i \beta$ & $c_1t^{\alpha}\cos(\beta \ln(t)) + c_2t^{\alpha}\sin(\beta \ln (t))$\\[2pt] \hline
+    \end{tabular}    
+\end{center}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+To solve the differential equation \( t^2 y'' - 5t y' + 5y = 0 \), we recognize it as a Cauchy-Euler equation. The solution to a Cauchy-Euler equation can be found by assuming a solution of the form \( y = t^r \). 
+
+\begin{enumerate}
+    \item First, we substitute \( y = t^r \) into the differential equation. We need the first and second derivatives of \( y \):
+   \[ y = t^r \]
+   \[ y' = r t^{r-1} \]
+   \[ y'' = r (r-1) t^{r-2} \]
+
+    \item Substitute these into the differential equation and combine like terms:
+   \[ t^2 (r (r-1) t^{r-2}) - 5t (r t^{r-1}) + 5 t^r = 0 \]
+   \[ r (r-1) t^r - 5r t^r + 5 t^r = 0 \]
+   \[ (r (r-1) - 5r + 5) t^r = 0 \]
+   \[ (r^2 - r - 5r + 5) t^r = 0 \]
+   \[ (r^2 - 6r + 5) t^r = 0 \]
+
+    \item Since \( t^r \neq 0 \) for \( t \neq 0 \), we set the characteristic polynomial to zero:
+   \[ r^2 - 6r + 5 = 0 \]
+
+    \item Solve the characteristic polynomial:
+   \[ r^2 - 6r + 5 = 0 \quad \Rightarrow \quad (r - 1)(r - 5) = 0 \]
+   So \( r = 1 \) and \( r = 5 \).
+
+    \item Therefore, the general solution to the differential equation is:
+   \[ y(t) = C_1 t^1 + C_2 t^5 \]
+   \[ y(t) = C_1 t + C_2 t^5 \]
+
+where \( C_1 \) and \( C_2 \) are arbitrary constants.
+\end{enumerate}
+
+
+} 
+\else 
+\newpage
+\fi
+\fi 

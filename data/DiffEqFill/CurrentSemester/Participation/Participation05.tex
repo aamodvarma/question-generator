@@ -1,0 +1,65 @@
+\documentclass[12pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{MATH 2552 Participation Activity 5: Undetermined Coefficients} \fi
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% % ADJUST MARGINS
+% \usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+% \geometry{margin=0.76in}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\vspace{6pt}
+{\small \textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. }
+\subsection*{Undetermined Coefficients}
+\begin{questions}
+
+\question[1] Consider $\displaystyle y'' +3y' +2y = 40e^{3t}$. Determine whether $y_2 = Ae^{3t}$, for $A\in \mathbb R$ is a solution. If it is a solution, what is $A$? \vfill
+
+
+\question[1] Consider $\displaystyle y'' +y'+ 2y = 40\cos t$. Determine whether $y_2 = A\cos t + B\sin t$ is a solution, for real numbers $A$ and $B$. If so, what are $A$ and $B$? \vfill
+
+\newpage  
+       \question[2]{} $\displaystyle y'' -6y' + 9y = e^{3t}$
+       \begin{parts}
+           \part Determine whether $y = Ae^{3t}$, for $A\in \mathbb R$, is a solution.\vfill 
+           \part In one or two sentences, explain why $y = Ae^{3t}$ did or didn't work. 
+           \vfill 
+       \end{parts}        
+\end{questions}
+
+\end{document}
+
+

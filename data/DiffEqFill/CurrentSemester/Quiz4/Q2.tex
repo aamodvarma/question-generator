@@ -1,0 +1,78 @@
+\ifnum \Version=1
+\question[1] Give an example of a second order constant coefficient homogeneous DE whose solution is $y = c_1e^{-3t} + c_2e^{-4t}$. \vspace{2cm}
+\fi 
+
+\ifnum \Version=2
+\question[1] Give an example of a second order constant coefficient homogeneous DE whose solution is $y = c_1e^{-t} + c_2e^{-2t}$. \vspace{2cm}
+\fi
+
+\ifnum \Version=3
+\question[1] Give an example of a second order constant coefficient homogeneous DE whose solution is $y = c_1e^{t} + c_2e^{-2t}$. \vspace{2cm}
+\fi 
+
+\ifnum \Version=4
+\question[1] Give an example of a second order constant coefficient homogeneous DE whose solution is $y = c_1e^{2t} + c_2e^{-3t}$. \vspace{2cm}
+\fi 
+
+\ifnum \Version=5
+\question[1] Give an example of a second order constant coefficient homogeneous DE whose solution is $y = c_1e^{3t} + c_2e^{-5t}$. \vspace{2cm}
+\fi 
+
+
+
+
+\ifnum \Version > 5
+\question[6] Use the method of reduction of order to determine a second solution, $y_2$, to the DE so that $\{y_1,y_2\}$ forms a fundamental set.
+$$t^2y'' + ty' - y = 0, \quad t > 0, \quad y_1 = t$$
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+
+To use the reduction of order method, we assume a solution of the form \( y = v(t) t \), where \( v(t) \) is a function to be determined. Compute the first and second derivatives of \( y \) and substitute into DE. 
+   \[ y = v(t) t \]
+   \[ y' = v'(t) t + v(t) \]
+   \[ y'' = v''(t) t + 2 v'(t) \]
+   \[ t^2 (v''(t) t + 2 v'(t)) + t (v'(t) t + v(t)) - v(t) t = 0 \]
+
+Simplify:
+   \[ t^3 v''(t) + 2 t^2 v'(t) + t^2 v'(t) + t v(t) - t v(t) = 0 \]
+   \[ t^3 v''(t) + 3 t^2 v'(t) = 0 \]
+   \[ t^2 (t v''(t) + 3 v'(t)) = 0 \]
+
+For \( t > 0 \), divide through by \( t^2 \):
+   \[ t v''(t) + 3 v'(t) = 0 \]
+   \[ v''(t) + \frac{3}{t} v'(t) = 0 \]
+
+This is a first-order linear differential equation in \( v'(t) \). Let \( u = v'(t) \), so \( u' = v''(t) \):
+   \[ u' + \frac{3}{t} u = 0 \]
+
+This is a first-order linear differential equation. To solve it, we find the integrating factor:
+   \[ \mu(t) = e^{\int \frac{3}{t} dt} = e^{3 \ln t} = t^3 \]
+
+Multiply both sides of the equation by the integrating factor:
+   \[ t^3 u' + 3 t^2 u = 0 \]
+   \[ \frac{d}{dt} (t^3 u) = 0 \]
+   \[ t^3 u = C \]
+   \[ u = \frac{C}{t^3} \]
+   \[ v'(t) = \frac{C}{t^3} \]
+   \[ v(t) = \int \frac{C}{t^3} dt = -\frac{C}{2t^2} + C_1 \]
+
+Now, substituting back \( y_2 = v(t) t \):
+   \[ y_2 = \left( -\frac{C}{2t^2} + C_1 \right) t = -\frac{C}{2t} + C_1 t \]
+   The above is sufficient, but can also write this as $y_2 = t^{-1}$. 
+
+
+
+} 
+\else 
+\newpage
+\fi
+\fi 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+\ifnum \Version=1    
+\question[2] You do not need to show your work for this question. The following vector functions are linearly dependent when $t = \framebox{\strut\hspace{3cm}}$. 
+$$y_1 = \begin{pmatrix} t\\0\\2t+1\end{pmatrix}, \ y_2 = \begin{pmatrix} 0\\1\\0\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\2\\t-4 \end{pmatrix}$$
+\fi
+
+
+
+\ifnum \Version=2
+\question[2] You do not need to show your work for this question. The Wronskian of the following vector functions is equal to zero when $t = \framebox{\strut\hspace{3cm}}$. 
+$$y_1 = \begin{pmatrix} t\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 2\\1\\t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\2\\t^2+2t-9 \end{pmatrix}$$
+\fi
+
+
+
+\ifnum \Version=3
+\question[2] You do not need to show your work for this question. The Wronskian of the following vector functions is equal to zero when $t = \framebox{\strut\hspace{3cm}}$. 
+$$y_1 = \begin{pmatrix} t\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 2t\\1\\4t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\2\\t^2+8t-16 \end{pmatrix}$$
+\fi
+
+
+
+\ifnum \Version=6
+\question[2] You do not need to show your work for this question. Identify all possible values of $t$ so that the Wronskian of the following vector functions is equal to zero. $t = \framebox{\strut\hspace{3cm}}$. 
+$$y_1 = \begin{pmatrix} t-1\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 0\\1\\2t\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\3\\t^2+6t-25 \end{pmatrix}$$
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} the Wronskian is
+\begin{align}
+    W &= \begin{vmatrix} t-1&0&t\\0&1&3\\0&2t&t^2+6t-25 \end{vmatrix} \\
+    &= (t-1)\left( t^2+6t- 25 - 6t\right) \\
+    &= (t-1)\left( t^2-25\right) \\
+    &= (t-1)(t+5)(t-5) \\
+\end{align}
+The values of $t$ that make $W=0$ are $t = 1,\pm 5$.
+} 
+\else 
+\fi
+\fi
+
+\ifnum \Version=7
+\question[2] You do not need to show your work for this question. Identify all possible values of $t$ so that the Wronskian of the following vector functions is equal to zero. $t = \framebox{\strut\hspace{3cm}}$. 
+$$y_1 = \begin{pmatrix} t-2\\0\\0\end{pmatrix}, \ y_2 = \begin{pmatrix} 0\\1\\2\end{pmatrix}, \ y_3 = \begin{pmatrix} t\\2t\\t^2+4t-9 \end{pmatrix}$$
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} the Wronskian is
+\begin{align}
+    W &= \begin{vmatrix} t-2&0&t\\0&1&2t\\0&2&t^2+4t-9 \end{vmatrix} \\
+    &= (t-2)\left( t^2+4t-9 - 4t\right) \\
+    &= (t-2)\left( t^2-9\right) \\
+    &= (t-2)(t+3)(t-3) \\
+\end{align}
+The values of $t$ that make $W=0$ are $t = 2,\pm 3$.
+} 
+\else 
+\fi
+\fi
+

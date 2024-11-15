@@ -1,0 +1,110 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{1} %solution =1 or 0
+
+\input{../preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Sample Final B}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{4.5 hours }
+\newcommand{\Points}{}
+\newcommand{\DueDate}{12:30 PM ET}
+
+
+\begin{document}
+    
+\input{../CoverCovid.tex} % cover page for unproctored exam
+
+\newpage
+    
+    \begin{center}
+    {\Large \TestName, \Course}
+    \end{center}
+    
+% \vspace{1cm} 
+
+\textit{On the actual exam, each page would only have one or two questions. Point values are approximate.} 
+\begin{questions}
+
+    \question[5] % 2.2 19
+    Solve the IVP, $t^3 y' + 4t^2 y = e^{-t}, \quad y(-1) = 0 , \quad t<0$.
+    
+    % \question[10] % 2.6 7
+    % Solve the differential equation. 
+    % $$e^x \sin y - 2y \sin x) + (e^x \cos y + 2\cos x) y' = 0$$
+
+    % \question[5] % 2.7 3
+    % Solve the differential equation. 
+    % $$\frac{3x^3 - xy^2}{3x^2y + y^3} \, \dydx = 1$$
+    
+    \question[10] % 3.3 13
+    Determine the solution to the initial value problem. Also draw a direction field and a phase portrait. Describe the behavior of the solutions as $t \to \infty$.
+    $$ \vec x \, ' = A \vec x = \spalignmat{-1 -4 ;1 -1}\vec x, \quad \vec x(0) = \spalignmat{4;-3}$$
+    
+    
+    \question[10] % 3.4 7
+    Determine the solution to the initial value problem. Also draw a direction field and a phase portrait. Describe the behavior of the solutions as $t \to \infty$.
+    $$ \vec x \, ' = A \vec x = \spalignmat{1 -2;3 -4}\vec x, \quad \vec x(0) = \spalignmat{3;1}$$
+    
+    
+    \question[10] % 4.2 29
+    Use the method of reduction of order to find a second solution, $y_2$, to the DE so that $\{y_1,y_2\}$ forms a fundamental set. 
+    $$t^2 y'' -4t y' + 6y = 0, \quad t>0, \quad y_1(t) = t^2$$
+        
+    \question[10] % 4.5 5
+    Determine the general solution to the differential equation. 
+    $$y'' + 9y = t^2 e^{3t} + 6$$
+    
+    \question[10] % 5.7 3
+    Find the solution of the given initial value problem and draw its graph.
+    $$y'' +3y' +2y = \delta (t-5)+ u_{10}(t), \quad y(0) = 0, \quad y'(0) = \frac 1 2$$
+    
+    \question[10] %
+    For the system below a) identify all critical points, b) construct the linear system for each critical point, and c) classify the critical points of the linear system according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    $$\dxdt = 1 - y, \quad \dydt = x^2 - y^2$$
+    
+    \question[10] Use the Laplace transform to solve the following IVP.
+
+    $$\displaystyle y''-2y'+4y=0,\qquad y(0)=2,\quad y'(0)=0$$ % HW 5.4#5
+    
+    \question[10] %2.5.11 verbatim 
+    Consider the differential equation $\displaystyle \dydt = y(3-y^2) = 3y - y^3$, where $y$ is a real function of $t$. 
+    \begin{parts}
+        \part State the critical points of the differential equation.  
+        \part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable. 
+        \part Determine where $y$ is concave up and concave down. 
+        \part Using results from parts (a) and (b), sketch several solution curves in the $ty$-plane for $y \ge 0$. 
+    \end{parts}
+    
+\end{questions}
+
+\newpage
+
+\subsection*{Textbook Key}
+Questions in this practice final are all odd numbered textbook problems from the recommended homework set. Answers are at the back of the textbook. You should have solutions to each question. The questions were as follows.
+\begin{enumerate}
+    \item 2.2 19
+    % \item 2.6 7
+    % \item 2.7 3
+    \item 3.3 13
+    \item 3.4 7
+    \item 4.2 29
+    \item 4.5 5
+    \item 5.7 3
+    \item 7.2 7
+    \item 5.4 5
+    \item 2.5 11
+\end{enumerate}
+
+
+\end{document}
+

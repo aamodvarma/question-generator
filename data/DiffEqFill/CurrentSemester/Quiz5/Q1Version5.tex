@@ -1,0 +1,48 @@
+\question[6] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= (x-2)(y-3) , \qquad \dydt = y^2+x- 3
+\end{align*}
+\begin{parts}
+\part Sketch the nullclines of the system on the axes below. Clearly indicate the critical points and clearly label your nullclines. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Green lines are the $x-$nullclines, red parabola is the $y-$nullcline.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.75]
+    \draw[thick, ->] (-8, 0) -- (6.25, 0);
+    \draw[thick, ->] (0, -3) -- (0, 6.25);
+    \node[overlay, below] at (6, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 6) {$y$};   
+    \draw[line width = 0.75mm,DarkGreen, -] (2, 6) -- (2, -3);        
+    \draw[line width = 0.75mm,DarkGreen, -] (-7.5, 3) -- (6, 3);   
+    \draw[DarkRed, line width = 0.75mm]   plot[smooth,domain=-7.95:3] (\x, {sqrt(3-\x)});
+    \draw[DarkRed, line width = 0.75mm]   plot[smooth,domain=-3.95:3] (\x, {-sqrt(3-\x)});
+    \filldraw[black] (2,1) circle (4pt) node[anchor=south west]{$(2,1)$};
+    \filldraw[black] (2,-1) circle (4pt) node[anchor=north west]{$(2,-1)$};
+    \filldraw[black] (-6,3) circle (4pt) node[anchor=south west]{$(-6,3)$};
+    \end{tikzpicture}
+    \end{center}            
+    } 
+    \else 
+    \begin{center}
+    \begin{tikzpicture}[scale=0.55]
+    \draw[very thick, ->] (-6, 0) -- (6.25, 0);
+    \draw[very thick, ->] (0, -6) -- (0, 6.25);
+    \node[overlay, below] at (6, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 6) {$y$};        
+    \end{tikzpicture}
+    \end{center}    
+    \fi
+    \part Determine the locations of the critical points. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Setting both $x'=0$ and $y'=0$, we obtain three critical points as follows. 
+    
+    Setting $x'=0$ implies $y=3$ or $x=2$. 
+        \begin{itemize}
+            \item If $y=3$, then for $y'=0$ we need $x=6$. There is a CP at $(-6,3)$. 
+            \item If $x=2$, then for $y'=0$ we solve $0 = y^2 + 2 - 3$. So there are CPs at $(2,\pm 1)$.
+        \end{itemize}
+        } 
+    \else 
+    \vfill
+    \fi
+\end{parts}

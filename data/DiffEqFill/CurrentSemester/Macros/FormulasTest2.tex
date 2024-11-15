@@ -1,0 +1,62 @@
+\begin{center}
+
+    \textbf{Complex Solutions to First Order Systems}
+    \begin{align*}
+        \lambda_k &= \alpha + i \beta, \ \beta \ne 0 , \ \vec v_k = \vec a + i \vec b, \quad 
+        \vec x_k = e^{\alpha t} (\vec a \cos \beta t - \vec b \sin \beta t), 
+        \quad 
+        \vec x_{k+1} = e^{\alpha t} (\vec a \sin \beta t + \vec b \cos \beta t)
+    \end{align*}
+
+    \vspace{4pt}
+    \textbf{Second Order Homogeneous Constant Coefficient}
+    \begin{tabular}{ p{4.2cm} p{4.6cm} }
+        
+        $\lambda_1, \lambda_2$ &  general solution 
+        \\[2pt] \hline 
+        real distinct &  $c_1 e^{\lambda_1 t} + c_2 e^{\lambda_2 t}$\\       
+        real repeated, $\lambda_1 = \lambda_2$ & $c_1 e^{\lambda_1 t} + c_2 t e^{\lambda_1 t}$\\
+        complex, $\lambda_1 = \alpha + i \beta$ & $e^{\alpha t} \left( c_1 \cos \beta t + c_2 \sin \beta t \right)$\\[2pt] \hline
+    \end{tabular}    
+    
+    \vspace{4pt}
+    \textbf{Second Order Homogeneous Cauchy-Euler}
+    \begin{tabular}{ p{6.2cm} p{6cm} }
+        roots &  general solution 
+        \\[2pt] \hline 
+        real distinct, $m_1 \ne m_2$ &  $c_1 t^{m_1} + c_2 t^{m_2}$\\       
+        real repeated, $m = m_1 = m_2$ & $c_1 t^{m} + c_2 t^m \ln(t)$\\
+        complex, $m_1 = \alpha + i \beta$ & $c_1t^{\alpha}\cos(\beta \ln(t)) + c_2t^{\alpha}\sin(\beta \ln (t))$\\[2pt] \hline
+    \end{tabular}
+    
+    \vspace{4pt}
+    \textbf{Undetermined Coefficients} 
+    \begin{align*}
+        P_n &= a_0t^n + a_1t^{n-1} \ldots + a_n, \
+        Q_n = A_0t^n + A_1t^{n-1} \ldots + A_n, \       
+        R_n = B_0t^n + B_1t^{n-1} \ldots + B_n     
+    \end{align*}
+    \vspace{-0.4cm}
+    \setlength{\extrarowheight}{0.05cm}
+    \begin{tabular}{ p{3.9cm} p{5cm} }
+        $g(t)$ &  particular solution $y_p(t)$ 
+        \\[2pt] \hline $P_n(t)$  & $t^s Q_n$   \\        
+        $P_n(t)e^{\alpha t}$ &  $t^s e^{\alpha t}Q_n$\\       
+        $P_n(t)e^{\alpha t}\sin(\beta t)$ & $t^s e^{\alpha t} \left(\cos(\beta t)Q_n+\sin(\beta t) R_n\right)$\\
+        $P_n(t)e^{\alpha t}\cos(\beta t)$ & $t^s e^{\alpha t} \left(\cos(\beta t)Q_n+\sin(\beta t) R_n\right)$\\[2pt] \hline
+    \end{tabular}
+    \setlength{\extrarowheight}{0.0cm}
+
+    \vspace{14pt}
+    \textbf{Variation of Parameters}    
+    \begin{align*}
+        \text{scalar form: } y_p &= v_1 (t) y_1(t) + v_2(t) y_2(t) , \quad 
+        v_1 = - \int \frac{y_2(t)g(t)}{W[y_1,y_2]}dt , \quad 
+        v_2 = \int \frac{y_1(t)g(t)}{W[y_1,y_2]} dt \\
+        \text{first-order system: }\vec x \, ' &= P \vec x + \vec g(t), \quad \vec x_p = X(t) \int X^{-1}(t) \vec g(t) \, dt
+    \end{align*}        
+    
+    \vspace{1pt}
+    \textbf{Matrix Inverse}  
+    $$\text{if } A= \begin{pmatrix} a& b\\c&d\end{pmatrix}, \ \text{then } A^{-1} = \frac{1}{|A|}\begin{pmatrix} d&-b\\-c&a\end{pmatrix}$$
+\end{center}

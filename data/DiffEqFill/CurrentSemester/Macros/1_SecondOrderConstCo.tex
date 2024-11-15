@@ -1,0 +1,35 @@
+% Command for a 2nd Order Constant Coefficient Equation
+% Input two positive distinct integers that are the roots of the equation. 
+% For Example, call \SecondOrderConstantCo{3}{5}  
+%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcounter{ccrootI}  %  root of the characteristic
+\newcounter{ccrootII}  %  root of the characteristic
+\newcounter{cccoefficientB}  %  coefficioent of the DE
+\newcounter{cccoefficientC}  %  coefficioent of the DE
+
+\newcommand{\SecondOrderConstCo}[2]{
+\setcounter{ccrootI}{#1}
+\setcounter{ccrootII}{#2}
+\setcounter{cccoefficientB}{\theccrootI+\theccrootII} 
+\setcounter{cccoefficientC}{\theccrootI*\theccrootII} 
+
+% \setcounter{AtoA}{10-\theAtoB} \setcounter{BtoB}{10-\theBtoA} 
+\question[2]
+    Determine all possible values of $r$ so that the DE $\displaystyle y'' - \thecccoefficientB  y' +\thecccoefficientC y =0$ will have solutions of the form $\displaystyle y = e^{rt}$ for $t\ge0$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkGreen} 
+    \textbf{Solutions:} if $e^{rt}$ is a solution then it must satisfy the DE. So to determine the values of $r$ so that $y=e^{rt}$ is a solution we can substitute it into the DE. 
+    \begin{align}
+        0 &= y'' - \thecccoefficientB y' + \thecccoefficientC y \\
+        &= (e^{rt})'' - \thecccoefficientB (e^{rt})' + \thecccoefficientC(e^{rt}) \\ 
+        &= r^2 e^{rt} - \thecccoefficientB re^{rt} + \thecccoefficientC e^{rt} \\ 
+        &= r^2 - \thecccoefficientB r + \thecccoefficientC \\ 
+        &= (r-\theccrootI)(r-\theccrootII) 
+    \end{align}
+    Therefore $r=\theccrootI,\theccrootII$. 
+} 
+\else 
+\fi
+
+}
+

@@ -1,0 +1,85 @@
+\documentclass[11pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{MATH 2552 Lecture Participation Activity 8: Inverse Laplace Transform} \fi
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% % ADJUST MARGINS
+% \usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+% \geometry{margin=0.76in}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 24pt % space between header and top of body
+
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\vspace{6pt}
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\def\dm{\displaystyle}
+
+\begin{center}
+    {\bf Elementary Laplace Transforms}\\[0pt]
+\end{center}
+$
+\hspace*{-.5em}
+\begin{array}{lllllll}
+ 1.  & 1 \quad  & 1/s,\quad s>0 & \qquad  \ \quad & 8.  & f'(t) \  \quad  &  sF(s) - f(0)\\[0ex]
+ 2.  & e^{at} \quad  & 1/(s-a),\quad s>a  & \qquad  \ \quad & 9.  & f''(t) \  \quad   & s^2F(s) - sf(0) - f'(0) \\[0ex]
+ 3.  & t^n  \quad  & n!/s^{n+1},\quad s>0 & \qquad  \ \quad & 10.  & t^n e^{at}\  \quad  & \frac{n!}{(s-a)^{n+1}},\quad s>a\\[0ex] 
+ 4.  & \sin(at) \quad  & a/(s^2+a^2),\quad s>0  & \qquad  \ \quad & 11. & u_c(t)\ \ (c\ge 0) \quad  & e^{-cs}/s,\quad s>0 \\[0ex]
+ 5.  & \cos(at) \quad  & s/(s^2+a^2),\quad s>0  & \qquad  \ \quad & 12.  & u_c(t)f(t-c)\  \quad  & \dm e^{-cs} F(s) \ (c\ge 0) \\[0ex] 
+ 6.  & e^{at}\sin(bt) \quad  & \dm\frac{b}{(s-a)^2+b^2},\quad s>a  & \qquad  \ \quad & 13.  & e^{ct}f(t) \quad  & \dm F(s-c) \\[0ex] 
+ 7.  & e^{at}\cos(bt) \quad  & \dm\frac{s-a}{(s-a)^2+b^2},\quad s>a & \qquad  \ \quad & 14.  & t^n f(t) \quad  & \dm (-1)^n F^{(n)}(s)  
+\end{array} 
+$
+\subsection*{Using the Laplace Transform to Solve IVPs}
+
+Consider the IVP: $y''-4y'+4y=0,\qquad y(0)=1,\quad y'(0)=1$. 
+
+\subsection*{Exercises}
+\begin{questions}
+\question[1] Obtain the solution to the IVP without using the Laplace Transform. \newpage 
+
+\question[2] Take the Laplace Transform of this IVP to obtain an expression for $Y(s) = \mathcal{L}[y(t)]$. Solve your expression for $Y(s)$ so that you have an explicit expression for $Y(s)$. You may want to use a table of Laplace Transforms. 
+
+\vfill
+
+\question[1] Use the inverse transform to obtain the solution to the IVP. Use partial fractions and algebraic manipulation as needed. You may also want to refer to a table of Laplace Transforms. Does your answer in Part 4 agree with your answer in Part 1? If not, revise your work until your solutions are the same. 
+
+    \vfill
+
+\end{questions}
+
+\end{document}
+
+
+
+

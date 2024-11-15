@@ -1,0 +1,23 @@
+\hspace{1cm}\begin{tikzpicture}
+
+\tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.3cm,post length=0.3cm,segment length=6}]
+
+% WALL PATTERN
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.75cm,minimum height=0.3cm,inner sep=0pt,outer sep=0pt]
+
+% MASS
+\node [style={draw,outer sep=0pt,very thick},yshift=-2cm] (M) [minimum width=1cm, minimum height=1.0cm] {$m$};
+
+% WALL
+\node (ground) [ground,anchor=north,yshift=3cm,minimum width=3.0cm,xshift=-0.03cm] at (M.south) {};
+\draw (ground.north east) -- (ground.north west);
+\draw (ground.south east) -- (ground.south west);
+\draw (ground.north east) -- (ground.south east);
+\draw (ground.north west) -- (ground.south west);
+
+% SPRING
+\draw [spring] (ground.south) -- (M.north);
+% \node (y) at (ground.130) [yshift = 0.02cm,xshift=1.2cm] {$k$};
+% \draw [spring] (wall.100) -- ($(M.north west)!(wall.100)!(M.south west)$);
+
+\end{tikzpicture}

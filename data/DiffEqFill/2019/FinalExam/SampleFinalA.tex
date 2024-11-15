@@ -1,0 +1,121 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Sample Final A}
+\newcommand{\TestDate}{2019}
+\newcommand{\TestTime}{ 170 minutes}
+\newcommand{\Duration}{170 \ }
+\newcommand{\Points}{80ish \ }
+
+
+\begin{document}
+    
+\input{../CMCoverPage}
+
+\newpage
+    
+    \begin{center}
+    {\Large \TestName, \Course, \Semester \ \Year}
+    \end{center}
+    
+\vspace{1cm} 
+
+
+\newpage 
+\textit{On the actual exam, each page would only have one or two questions. Point values are approximate.} 
+
+\begin{questions}
+
+    \question[10] % 1.2 #13
+    Sketch the graph of $f (y)$ versus $y$, determine the critical (equilibrium) points, and classify each one as asymptotically stable, unstable, or semistable. Draw the phase line, and sketch several graphs of solutions in the $ty$-plane.
+
+    $$\dydt = y^2(1-y)^2, \qquad -\infty < y < \infty$$
+
+    \question[2] % 2.4 #5
+    Determine (without solving the problem) an interval in which the solution of the given initial value problem is certain to exist. 
+    
+    $$(4-t^2)y'+2ty=3t^2, \qquad y(1) = -3$$
+
+
+    % \question[5] % 2.7 #13
+    % Solve the differential equation. $$t \, \dydt +y = t^2y^2$$
+    
+    \question[5] %3.3 #17
+    The eigenvalues and eigenvectors of a matrix $A$ are given. Consider the corresponding system $\vec x \, ' = A \vec x$. 
+    \begin{enumerate}[label=(\alph*)]
+        \item Sketch a phase portrait of the system.
+        \item Sketch the trajectory passing through the initial point $(2, 3)$.
+        \item For the trajectory in part (b), sketch the component plots of $x_1$ versus $t$ and of $x_2$ versus $t$ on the same set of axes.
+    \end{enumerate}
+
+    $$\lambda_1 = -1, \quad \vec v_1 = \spalignmat{-1;2}, \quad \lambda_2 = -2, \quad \vec v_2 = \spalignmat{1;2}$$
+    
+
+    \question[10] % 3.5 #5
+    Determine the general solution of the system. Also draw a direction field and a phase portrait. Describe the behavior of the solutions as $t \to \infty$.
+    
+    $$ \vec x \, ' = A \vec x = \spalignmat{-1 -\frac{1}{2}; 2 -3}\vec x$$
+
+    \question[5] % 4.2 21
+    If the Wronskian of $f$ and $g$ is $t \cos t−\sin t$, and if $u= f+3g, v=f-g$, find the Wronskian of $u$ and $v$. 
+
+    %\question[5] % 4.1 11
+    %Write down the appropriate initial value problem based on the physical description.\\
+    %\textit{A mass of 100 g stretches a spring 20 cm. The mass is set in motion from its equilibrium position with a downward velocity of 5 cm/s. Assume there is no damping.}
+
+    
+    \question[10] %4.7 \#11
+    Use the method of variation of parameters to find a particular solution of the given differential equation.
+    $$y'' - y' -2y = 2e^{-t}$$
+    
+    \question[5] % 5.3 \#19
+    Compute the inverse Laplace Transform of the function.
+    $$\frac{3(3s+2)}{(s-2)(s+2)(s+1)}$$
+    
+    \question[5] %5.5 \#15
+    Compute the inverse Laplace Transform of the function.
+    $$F(s) = \frac{2(s-1)e^{-2s}}{s^2-2s+2}$$
+    
+    \question[10] Find the solution of the given initial value problem. Draw the graphs of the solution and of the forcing function.
+    $$y''+y=f(t), \quad y(0) = 5, \quad y'(0) = 3, \quad f(t) = \begin{cases} 1, & 0 \le t < \pi/2 \\ 0 , & \text{else} \end{cases}$$
+
+    \question[10] % 7.2 9
+    For the system below a) identify all critical points, b) construct the linear system for each critical point, and c) classify the critical points of the linear system according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    $$\dxdt = -(x-y)(6-x-y), \quad \dydt = x(4+y)$$
+    
+    \question[4] % 8.2 17
+    Obtain a formula for the local truncation error for the Euler method in terms of $t$ and the solution, $\phi$. 
+    $$y ' = t^2 + y^2, \quad y(0) = 1$$
+    
+    \question[4] % 8.1 1
+    Find the approximate value of the solution to the IVP using the Euler method at $t = 0.2$ with $h = 0.1$. 
+    $$y' = 3+t-y, \quad y(0) = 1$$
+\end{questions}
+
+\newpage
+
+\subsection*{Textbook Key}
+Questions in this practice final are all odd numbered textbook problems. The questions were:
+
+\begin{enumerate}
+    \item 1.2 \#13
+    \item 2.4 \#5
+    % \item 2.7 \#13
+    \item 3.3 \#17
+    \item 3.5 \#5
+    \item 4.2 \#21
+    %\item 4.1 \#11
+    \item 4.7 \#11
+    \item 5.3 \#19 
+    \item 5.5 \#15
+    \item 5.6 \#1
+    \item 7.2 \#9
+    \item 8.2 \#17
+    \item 8.1 \#1
+\end{enumerate}
+
+
+\end{document}
+

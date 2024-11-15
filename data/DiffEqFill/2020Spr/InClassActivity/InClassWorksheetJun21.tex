@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{graphicx} % allows for graphics
+\usepackage{textcomp} % allows for single apostrophe
+%\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{amsfonts} % for real numbers symbol and other sets
+
+\usepackage{../spalign}
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{In-Class Worksheet June 21}
+
+\usepackage{enumitem}
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+
+\setlength{\parindent}{0pt}
+
+\usepackage{enumitem}   
+
+\begin{document}
+    
+\vspace*{-.5cm}
+
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+
+\begin{center}
+{\Large \TestName 
+\\[4pt]
+\Course}
+\end{center}
+
+\begin{center}    
+{\small
+\textit{This worksheet will not be collected}
+}
+\end{center}
+
+
+% \subsection*{Questions}
+\begin{enumerate}[label=\Alph*)]
+    
+    \item Use the method of reduction of order to find a second solution, $y_2$, to the DE so that $\{y_1,y_2\}$ forms a fundamental set. $$  t^2 y'' - 3t y' + 4y = 0, \quad t>0, \quad y_1(t) = t^2$$
+
+    \item Determine a suitable form for the particular solution, $Y(t)$, to the differential equation if the method of undetermined coefficients is to be used. Do not determine the values of the coefficients or solve the differential equation. 
+
+    $$y'' + 2y' + 5y = 3te^{-t} \cos2t -2 te^{-2t} \cos t$$ 
+    
+    \item Solve using variation of parameters. The solution to the homogeneous equation is given. 
+    
+    $$y=y(x), \quad y'' - 4y' + 4y =(x+1)e^{2x}, \quad y_h = c_1 e^{2x} + c_2 xe^{2x}$$
+    
+\end{enumerate}
+
+
+\end{document}
+

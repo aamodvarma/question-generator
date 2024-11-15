@@ -1,0 +1,67 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 2}
+\newcommand{\TestDate}{on Feb 27 at 8:00 am}
+\newcommand{\TestTime}{50 minutes}
+\newcommand{\Duration}{50  }
+\newcommand{\Points}{35 }
+
+
+\begin{document}
+    
+\input{../CMCoverPage}
+
+\newpage
+
+\InitialsRight
+
+\begin{questions}
+
+    \question[4] Determine all values of $\alpha$, if any, for which all solutions tend to zero as $t\to\infty$. $$y'' - (2\alpha - 1) y' + (\alpha^2-\alpha+1) y = 0, \quad \alpha \in \mathbb R$$ \vspace{10cm}  % 4.3.47
+    
+    \question[3]  Determine a suitable form for the particular solution, $Y(t)$, to the differential equations if the method of undetermined coefficients is to be used. Do not determine the values of the coefficients or solve the differential equation.
+        $$y'' + 4y = t^2 + \sin(2t)$$
+        % \part $y'' +2y' - 3y = 3te^t\sin t$
+    
+    \newpage    \InitialsLeft
+    
+        \question[10] Consider the system of equations. 
+        $$
+        x_1 ' = 7x_1 , \qquad x_2 ' = 6x_2 + x_3 , \qquad x_3 ' = x_2 + 6x_3 
+        $$
+        \begin{enumerate} 
+            \item[a)] Express the system of equations in the form $\vec x \, ' = A \vec x$, where $A$ is a $3\times3$ matrix. \vspace{3cm} 
+
+            \item[b)] Determine the eigenvectors of $A$ and use them to write down the general solution. You may use that the only eigenvalues of $A$ are $7$ and $5$. Show your work when computing the eigenvectors: it ok to check your work with software, but you should show that you can compute eigenvectors by hand. 
+                
+        \end{enumerate}
+        
+    \newpage \InitialsRight
+    \Scratch 
+
+    \newpage \InitialsLeft
+    
+    \question[10] A 4 kg mass stretches a spring 0.1 meters. The mass is pushed upward, contracting the spring a distance of 0.1 meters from its equilibrium position, and then set in motion with an initial downward velocity of 2 m/s. There is no damping. 
+    \begin{parts} \part[4] Construct an IVP for this situation. \vspace{3cm} \part[4] Solve your IVP. You may use that the acceleration due to gravity is $g = 10$ m/s$^2$. \textit{Note: the solution to the DE can be found by inspection, it is ok to just write the answer for solving the DE, but if you want to show work you can.} \vspace{9cm} \part[2] Sketch the phase portrait for this system. 
+    % Also include the trajectory, $\vec r(t)$, in the phase portrait that corresponds to the initial conditions. 
+    Do not forget to label your axes, and indicate the direction of motion.  \end{parts} 
+    
+    \newpage \InitialsRight 
+    \Scratch 
+
+    \newpage \InitialsLeft
+
+    \question[8] Use variation of parameters to identify the general solution to $$y'' - \frac{t+2}{t}y' + \frac{t+2}{t^2}y = 5t, \quad t > 0$$ Solutions to the corresponding homogeneous equation are $y_1(t) = t$, $y_2(t) = te^t$. 
+    
+
+\end{questions}
+    
+\newpage \InitialsRight
+\LastPage 
+
+
+\end{document}
+

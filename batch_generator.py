@@ -182,8 +182,8 @@ if __name__ == "__main__":
     input_file = args.file
     generation_type = args.type
 
-    print(input_file)
-    print(generation_type)
+    # print(input_file)
+    # print(generation_type)
     client = initialize_client()
     data = get_data(input_file)
     content_file = create_content_file(input_file, data)

@@ -1,0 +1,186 @@
+\newpage 
+\ifnum \Version=1  
+\question[4] Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} = \frac{\cos(t)}{t^2} - 3y, \quad y(\pi) = 2, \quad t > 0$$.
+\fi
+
+\ifnum \Version=2
+\question[4] Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle \frac{dy}{dt} = 12e^{3t}e^{-2y}, \quad y(0) = 2, \quad t \ge 0$$.
+\fi
+
+\ifnum \Version=3
+\question[4] Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 3y =  36 t^{-2}e^{-t}, \ y(1) = 0, \quad t > 0$$.
+\fi   
+
+\ifnum \Version=4
+\question[4] Solve the initial value problem and solve for $y$ to obtain an expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle \frac{dy}{dt} = \frac{16e^{2t}}{y}, \quad y(1) = 2, \quad t > 0$$.
+\fi
+
+\ifnum \Version=5
+\question[4] Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 2y =  36 t^{-1}e^{t}, \ y(1) = 2e, \quad t > 0$$.
+\fi   
+
+
+
+\ifnum \Version=6
+\question[4] 
+Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 4y =  24 t^{-3}e^{2t}, \ y(1) = 2, \quad t > 0$$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+To solve the differential equation \( t y' + 4 y = 24 t^{-3} e^{2t} \) with the initial condition \( y(1) = 2 \), we can follow these steps.
+\begin{enumerate}
+    \item Rewrite the DE in standard form:
+   \[ y' + \frac{4}{t} y = 24 t^{-4} e^{2t} \]
+   \item Integrating factor:
+   \[ \mu(t) = e^{\int \frac{4}{t} \, dt} = e^{4 \ln |t|} = t^4 \]
+   \item Multiply both sides of the differential equation by the integrating factor:
+   \begin{align*}
+       t^4 y' + 4 t^3 y &= 24 e^{2t} \\
+       \frac{d}{dt} (t^4 y) &= 24 e^{2t}
+   \end{align*} 
+   \item Integrate both sides with respect to \( t \) and solve for $y$:
+   \begin{align}
+       t^4 y &= \int 24 e^{2t} \, dt + C \\
+       t^4 y &= 12 e^{2t} + C \\
+        y &= \frac{12 e^{2t} + C}{t^4} 
+   \end{align} 
+   \item Apply the initial condition \( y(1) = 2 \):
+   \[ 2 = \frac{12 e^{2 \cdot 1} + C}{1^4} \]
+   \[ 2 = 12 e^2 + C \]
+   \[ C = 2 - 12 e^2 \]
+   \item Substitute \( C \) back into the solution:
+   \[ y = \frac{12 e^{2t} + 2 - 12 e^2}{t^4} \]
+\end{enumerate}
+} 
+\else 
+\newpage
+\fi
+\fi   
+
+
+
+
+
+\ifnum \Version=7
+\question[4] 
+Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 5y =  20 t^{-4}e^{2t}, \ y(1) = e^2, \quad t > 0$$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+To solve the differential equation \( t y' + 5 y = 20 t^{-3} e^{2t} \) with the initial condition \( y(1) = 2 \), we can follow these steps.
+\begin{enumerate}
+    \item Rewrite the DE in standard form:
+   \[ y' + \frac{5}{t} y = 20 t^{-4} e^{2t} \]
+   \item Integrating factor:
+   \[ \mu(t) = e^{\int \frac{5}{t} \, dt} = e^{5 \ln |t|} = t^5 \]
+   \item Multiply both sides of the differential equation by the integrating factor:
+   \begin{align*}
+       t^5 y' + 5 t^4 y &= 20 e^{2t} \\
+       \frac{d}{dt} (t^5 y) &= 20 e^{2t}
+   \end{align*} 
+   \item Integrate both sides with respect to \( t \) and solve for $y$:
+   \begin{align}
+       t^5 y &= \int 20 e^{2t} \, dt + C \\
+       t^5 y &= 10 e^{2t} + C \\
+        y &= \frac{10 e^{2t} + C}{t^5} 
+   \end{align} 
+   \item Apply the initial condition \( y(1) = e^2 \):
+   \[ e^2 = \frac{10 e^{2 \cdot 1} + C}{1^5} \]
+   \[ e^2 = 10 e^2 + C \]
+   \[ C = - 9 e^2 \]
+   \item Substitute \( C \) back into the solution:
+   \[ y = \frac{10 e^{2t} - 9 e^2}{t^5} \]
+\end{enumerate}
+} 
+\else 
+\newpage
+\fi
+\fi   
+
+
+
+
+
+
+\ifnum \Version=8
+\question[4] 
+Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 6y =  24 t^{-5}e^{4t}, \ y(1) = 8e^4, \quad t > 0$$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+To solve the DE with the given initial condition we can follow these steps.
+\begin{enumerate}
+    \item Rewrite the DE in standard form:
+   \[ y' + \frac{6}{t} y = 24 t^{-6} e^{4t} \]
+   \item Integrating factor:
+   \[ \mu(t) = e^{\int \frac{6}{t} \, dt} = e^{6 \ln |t|} = t^6 \]
+   \item Multiply both sides of the differential equation by the integrating factor:
+   \begin{align*}
+       t^6 y' + 6 t^5 y &= 24 e^{4t} \\
+       \frac{d}{dt} (t^6 y) &= 24 e^{4t}
+   \end{align*} 
+   \item Integrate both sides with respect to \( t \) and solve for $y$:
+   \begin{align}
+       t^6 y &= \int 24 e^{4t} \, dt + C \\
+       t^6 y &= 6 e^{4t} + C \\
+        y &= \frac{6 e^{4t} + C}{t^6} 
+   \end{align} 
+   \item Apply the initial condition:
+   \[ 8e^4 = \frac{6 e^{4 \cdot 1} + C}{1^5} \]
+   \[ 8e^4 = 6 e^4 + C \]
+   \[ C = 2 e^4 \]
+   \item Substitute \( C \) back into the solution:
+   \[ y = \frac{6 e^{4t} +2 e^4}{t^6} \]
+\end{enumerate}
+} 
+\else 
+\newpage
+\fi
+\fi   
+
+
+
+\ifnum \Version=9
+\question[4] 
+Solve the initial value problem and solve for $y$ to obtain an explicit expression for $y$ in terms of $t$. Please show your work.
+$$\displaystyle t\,\frac{dy}{dt} + 5y =  20 t^{-4}e^{2t}, \ y(1) = e^2, \quad t > 0$$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:}
+To solve the differential equation \( t y' + 5 y = 20 t^{-3} e^{2t} \) with the initial condition \( y(1) = 2 \), we can follow these steps.
+\begin{enumerate}
+    \item Rewrite the DE in standard form:
+   \[ y' + \frac{5}{t} y = 20 t^{-4} e^{2t} \]
+   \item Integrating factor:
+   \[ \mu(t) = e^{\int \frac{5}{t} \, dt} = e^{5 \ln |t|} = t^5 \]
+   \item Multiply both sides of the differential equation by the integrating factor:
+   \begin{align*}
+       t^5 y' + 5 t^4 y &= 20 e^{2t} \\
+       \frac{d}{dt} (t^5 y) &= 20 e^{2t}
+   \end{align*} 
+   \item Integrate both sides with respect to \( t \) and solve for $y$:
+   \begin{align}
+       t^5 y &= \int 20 e^{2t} \, dt + C \\
+       t^5 y &= 10 e^{2t} + C \\
+        y &= \frac{10 e^{2t} + C}{t^5} 
+   \end{align} 
+   \item Apply the initial condition \( y(1) = e^2 \):
+   \[ e^2 = \frac{10 e^{2 \cdot 1} + C}{1^5} \]
+   \[ e^2 = 10 e^2 + C \]
+   \[ C = - 9 e^2 \]
+   \item Substitute \( C \) back into the solution:
+   \[ y = \frac{10 e^{2t} - 9 e^2}{t^5} \]
+\end{enumerate}
+} 
+\else 
+\newpage
+\fi
+\fi   

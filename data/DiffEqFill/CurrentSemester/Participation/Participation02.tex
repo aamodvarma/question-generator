@@ -1,0 +1,67 @@
+\documentclass[12pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{Lecture Participation Activity 2:  Linear Systems} \fi
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{Please write your last name: \framebox{\strut\hspace{5cm}} }}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\begin{questions}
+
+    \question[4] Later in the course we will see that we can model the motion of a mass attached to a spring that is hanging from a horizontal surface using the equation
+    \begin{align}\label{Eq:SMS}
+        m y'' + \gamma y' + ky = 0
+    \end{align} 
+    where 
+\begin{align*}
+    m & \text{ is the mass of an object attached to the spring} \\
+    \gamma & \text{ is the a constant that represents resistance to the motion} \\
+    k & \text{ is the spring constant that comes from Hooke's Law} 
+\end{align*}
+
+\begin{enumerate}[label=\alph*)]
+        \item Express the second order DE as a first order system in the form $\vec x \, ' = A\vec x$, where $$\displaystyle  \vec x = \begin{pmatrix} y\\y'\end{pmatrix}$$ For simplicity let's assume that $m=k=1$. 
+        \vspace{2cm}
+        \item Calculate the eigenvalues of $A$. They will depend on $\gamma$. 
+        \vspace{3cm}
+        \item We have seen how the solutions to a first order constant coefficient linear system in two equations have solutions of the form $\vec x = e^{\lambda t} \vec v$, where $\vec v$ is an eigenvector of the matrix $A$. But for some values of $\gamma$ the eigenvalues are complex! For what values of $\gamma$ will the eigenvalues be real? 
+        \vspace{2cm}
+        \item Suppose that at time $t=0$ that the mass has position equal to 1 and velocity 0. So $y(0)=1$ and $y'(0)=0$. Given that $\vec x(t)$ is a solution to $\vec x \,' = A \vec x$, calculate $\vec x \,'(0)$. 
+    \end{enumerate}
+
+\vfill 
+
+\end{questions}
+
+\end{document}
+
+

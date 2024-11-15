@@ -1,0 +1,78 @@
+\documentclass[12pt]{exam}
+
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{graphicx} % allows for graphics
+\usepackage{textcomp} % allows for single apostrophe
+%\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{amsfonts} % for real numbers symbol and other sets
+
+\usepackage{../spalign}
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{In-Class Worksheet, 6.1, Midterm 1 Review}
+
+\usepackage{enumitem}
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    
+\vspace*{-.5cm}
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+
+\begin{center}
+{\Large \TestName 
+\\[4pt]
+\Course}
+\end{center}
+
+\begin{center}    
+{\small
+\textit{This worksheet will not be collected}
+}
+\end{center}
+
+\vspace{.5cm}
+
+% \subsection*{Questions}
+
+\begin{questions}
+    
+        \question $A(t) = \spalignmat{e^{2t},  \pi \sin(\pi t) ; 0, 4t}$, compute $\displaystyle \int_0^1 A(t) \, dt$.
+        
+        \question Express the equation as an equivalent first order linear system. $$my'' + ky = \sin(t), \ m >0, k >0$$
+    
+        \question Determine the eigenvalues and eigenvectors of $X$. 
+        \begin{align*}
+            X & = \spalignmat{-1 -1; 1 -1 } 
+        \end{align*}
+        \question For the following system of differential equations, 
+        \begin{enumerate}
+            \item rewrite the system as a matrix equation
+            \item determine the general solution
+            \item sketch the phase portrait, identify the type of the equilibrium points, and determine the stability of each equilibrium point. 
+        \end{enumerate}
+        $$\frac{dx_1}{dt} = -4x_1 -2x_2, \quad \frac{dx_2}{dt} = 3x_1 - 11x_2 $$
+            
+
+\end{questions}
+
+
+\end{document}
+

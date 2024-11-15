@@ -1,0 +1,117 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 2}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{12 hours }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{8:00 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+\input{2021Spr/coverpage} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+
+
+
+    \question[10] Use the variation of parameters method to identify the general solution to the following system. \[\vec{x} \, ' = \left( \begin{array}{rr} 1 & 6 \\ 0 & 2 \end{array} \right) \vec{x}  +     \begin{pmatrix} 42e^{-t} \\ 0\end{pmatrix} , \quad \vec x = \vec x(t) \]    Please show your work. 
+
+    \newpage 
+    
+    \question[10] Solve the DE using the method of undetermined coefficients. Please show your work. 
+    $$y''+ 25y'=-24te^{-t}$$
+    
+    
+    
+    
+    \newpage 
+    
+    \question[8] Consider the initial value problem. 
+
+        $$
+        \vec x \, ' = A\vec x, \quad A = \begin{pmatrix} 4&0&2\\2&2&2\\2&0&4\end{pmatrix}, \quad \vec x = \vec x(t)
+        $$
+        \begin{parts} 
+
+            \part Determine the eigenvectors of $A$. You may use that the eigenvalues of $A$ are $\lambda_1=6$ and $\lambda_2 = 2$, and one of the eigenvalues has a multiplicity of two. \textit{Show your work when computing the eigenvectors: it is ok to check your work with software, but you should show that you can compute eigenvectors by hand. }
+            
+            \vspace{14cm}
+            
+            \part Use your results from Part (a) to write down the general solution to the system of differential equations. 
+                
+
+        \end{parts}
+
+\newpage 
+    \question[7] Consider the DE $$y''-4y'+3y = 0$$
+\begin{parts}
+    \part Solve the DE. \vspace{10cm}
+    \part Classify the critical point of the corresponding dynamical system according to type (node, spiral, saddle, etc) and stability. \vspace{2cm}
+    \part Sketch the phase portrait of the system. Include in your diagram straight-line orbits (if any). Please label your axes. Indicate the direction of motion on your solution curves. 
+    
+\end{parts}
+    
+    \newpage 
+    \question[2] Determine all values of $t$ over which solutions to the DE are sure to exist. $$(t^2-25)y''+ y'+\sqrt{t}\, y = 0, \quad y=y(t)$$ %6.2#6
+
+    \vspace{6cm}
+    
+    \question[2] A mass of 0.2 kg stretches a spring 0.04 m. Suppose that the mass is also attached to a viscous damper with a damping constant of 100 N/m. The mass is then pulled down an additional 0.2 m and then released from rest. Construct an initial value problem (IVP) for this situation. Do not solve your IVP.
+    
+    \newpage
+
+    \question[1] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}

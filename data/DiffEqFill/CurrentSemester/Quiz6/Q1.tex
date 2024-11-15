@@ -1,0 +1,175 @@
+\ifnum \Version=1
+\question[8] Compute the Laplace Transform of the following functions using the above table of transforms or the definition of the Laplace Transform. You do not need to state the interval over which the transform is defined. 
+\begin{parts}
+    \part $y(t) = t\cos(2t)$
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the above table and the product rule:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        &= -\frac{d}{ds} \left( \frac{s}{s^2+2^2} \right) \\ 
+        &= -\frac{d}{ds} \left( (s)(s^2+2^2)^{-1} \right) \\ 
+        &= - \left((\frac{d}{ds} s) \left(s^2+2^2\right)^{-1} +s\frac{d}{ds}\left(s^2+2^2\right)^{-1} \right)\\
+        &= - \left(1\cdot (s^2+2^2)^{-1} +\frac{-2s^2}{(s^2+2^2)^{2}} \right) \\        
+        & = - \frac{1}{s^2+4}+ \frac{2s^2}{(s^2+4)^2}
+    \end{align}
+    We could also use the quotient rule to compute the derivative. 
+    } 
+    \else 
+    \vspace{5cm}
+    \fi    
+    \part $\displaystyle y(t) = \begin{cases} 2 & 0 \le t < 3  \\ 0 & 3 \leq t  \end{cases} $
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the definition of the transform:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        &= \int_0^{3} e^{-st} \, 2 \, dt 
+        =  \left. \frac{-2}{s}e^{-st}\right|_{t=0}^{t=3} 
+        =  \frac{-2}{s}\left(e^{-3s} - 1\right) 
+    \end{align}
+    We could also use the table of transforms, specifically the transform of the step function $u_c(t)$ and its product with another function. 
+    } 
+    \else 
+    \vspace{3cm}
+    \fi    
+\end{parts}
+\fi 
+
+
+
+
+\ifnum \Version=2
+\question[8] Compute the Laplace Transform of the following functions using the above table of transforms or the definition of the Laplace Transform. You do not need to state the interval over which the transform is defined. 
+\begin{parts}
+    \part $y(t) = t\sin(4t)$
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the derivative theorem (\#14) in the given table of Laplace Transforms we obtain:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        &= -\frac{d}{ds} \left( \frac{4}{s^2+4^2} \right) \\
+        &= +  \frac{4}{(s^2+4^2)^2} \cdot \left(\frac{d}{ds} (s^2+4^2) \right) \\
+        &=  \frac{8s}{(s^2+4^2)^2}
+    \end{align}
+    } 
+    \else 
+    \vspace{5cm}
+    \fi    
+    \part $\displaystyle y(t) = \begin{cases} 0 & 0 \le t < 3  \\ e^t & 3 \leq t  \le 4 
+    \\ 0 & 4 \leq t  \end{cases} $
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the definition of the transform:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        = \int_3^{4} e^{-st} \, e^t \, dt 
+        &= \int_3^{4} e^{(1-s)t}  \, dt \\
+        &=  \left. \frac{1}{(1-s)}e^{(1-s)t}\right|_{t=3}^{t=4} \\
+        &=  \frac{1}{(1-s)}\left(e^{4(1-s)} - e^{3(1-s)}\right) 
+    \end{align}
+    We could also use the table of transforms to obtain this result, using the transform of the step function $u_c(t)$ and its product with another function. 
+    } 
+    \else 
+    \vspace{3cm}
+    \fi    
+\end{parts}
+\fi 
+
+
+\ifnum \Version=3
+\question[8] Compute the Laplace Transform of the following functions using the above table of transforms or the definition of the Laplace Transform. You do not need to state the interval over which the transform is defined. 
+\begin{parts}
+    \part $y(t) = 6t^3e^{-2t}$
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the above table with $n=3$:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt &= 6\frac{3!}{(s+2)^4} = \frac{36}{(s+2)^4}
+    \end{align}
+    } 
+    \else 
+    \vspace{5cm}
+    \fi    
+    \part $\displaystyle y(t) = 
+    \begin{cases} 
+    0 & 0 \le t < 6  \\ 
+    e^{2t} & 6 \leq t  \le 8 \\ 
+    0 & 8 \leq t  
+    \end{cases} $
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] Using the definition of the transform:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        = \int_6^{8} e^{-st} \, e^{2t} \, dt 
+        &= \int_6^{8} e^{(2-s)t}  \, dt \\
+        &=  \left. \frac{1}{(2-s)}e^{(2-s)t}\right|_{t=6}^{t=8} \\
+        &=  \frac{1}{(2-s)}\left(e^{8(2-s)} - e^{6(2-s)}\right) 
+    \end{align}
+    We could also use the table of transforms to obtain this result, using the transform of the step function $u_c(t)$ and its product with another function.
+    } 
+    \else 
+    \vspace{3cm}
+    \fi    
+\end{parts}
+\fi 
+
+
+
+
+\ifnum \Version=4
+\question[4] Consider the following IVP: $y' = y^2 + 2t$, $y(0) = 2$. Use the Euler method to estimate $y(1)$ with step size $h=0.5$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} We need two iterations to approximate the solution to the initial value problem (IVP) using Euler's method with a step size of \( h = 0.5 \).
+
+\begin{itemize}
+    \item \( n = 0 \):
+     \[
+     t_0 = 0, \quad y_0 = 2
+     \]
+     \[
+     f(t_0, y_0) = y_0^2 + 2t_0 = 2^2 + 2 \cdot 0 = 4
+     \]
+     \[
+     y_1 = y_0 + h f(t_0, y_0) = 2 + 0.5 \cdot 4 = 2 + 2 = 4
+     \]
+    \item \( n = 1 \):
+     \[
+     t_1 = 0.5, \quad y_1 = 4
+     \]
+     \[
+     f(t_1, y_1) = y_1^2 + 2t_1 = 4^2 + 2 \cdot 0.5 = 16 + 1 = 17
+     \]
+     \[
+     y_2 = y_1 + h f(t_1, y_1) = 4 + 0.5 \cdot 17 = 4 + 8.5 = 12.5
+     \]
+\end{itemize}
+
+The estimated value of \( y(1) \) is \( 12.5 \) using Euler's method with a step size of \( h = 0.5 \).
+} 
+\else 
+\newpage
+\fi
+\fi 
+
+
+
+\ifnum \Version=5
+\question[4] Consider the following IVP: $y' = y + 8t^2$, $y(0) = 4$. Use the Euler method to estimate $y(1)$ with step size $h=0.5$.
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} We need two iterations to approximate the solution to the initial value problem (IVP) using Euler's method with a step size of \( h = 0.5 \).
+
+\begin{itemize}
+    \item Calculate $y_1$. 
+        \begin{align}
+            t_0 &= 0 \\
+            y_0 &= 4 f(t_0, y_0) = y_0 + 8t_0^2 = 4 + 8 \cdot 0^2 = 4 \\
+            y_1 &= y_0 + h f(t_0, y_0) = 4 + 0.5 \cdot 4 = 4 + 2 = 6
+        \end{align}
+            
+    \item Calculate \( y_2 \).
+        \begin{align}
+            t_1 &= t_0 + h = 0 + 0.5 = 0.5 \\
+            y_1 &= 6 \\
+            f(t_1, y_1) &= y_1 + 8t_1^2 = 6 + 8 \cdot (0.5)^2 = 6 + 8 \cdot 0.25 = 6 + 2 = 8 \\
+          y_2 &= y_1 + h f(t_1, y_1) = 6 + 0.5 \cdot 8 = 6 + 4 = 10
+        \end{align} 
+\end{itemize}
+
+The estimated value of \( y(1) \) is \( 10 \) using Euler's method with a step size of \( h = 0.5 \).
+} 
+\else 
+\newpage
+\fi
+\fi 

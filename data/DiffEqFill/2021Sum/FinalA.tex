@@ -1,0 +1,205 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Final Exam}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{ }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{Aug 5, 5:30 pm ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+
+\begin{document}
+    
+
+\input{2021Spr/coverpage} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+
+    \question[3] Write down a suitable form for the particular solution, $Y(t)$, to the differential equations if the method of undetermined coefficients is to be used. Do not determine the values of the coefficients or solve the differential equation. 
+
+    $$y'' - 4y' - 5y = 3te^{-t}$$
+
+    \vspace{7cm}
+    
+    \question[3] Determine all values of $k$, if any, for which all solutions tend to zero as $t\to\infty$. $$y'' +(2-k)y'+(1-k)y = 0 , \quad k \in \mathbb R, \quad y=y(t)$$ Show your work. \vspace{6cm}  
+
+    
+    \newpage 
+    
+    \question[3]  Compute the inverse Laplace Transform of the following function. Do not use the convolution theorem. 
+    
+    $$F(s) = \frac{4e^{2s}}{(s-1)^2+9}$$
+    
+    \vspace{5cm}
+    
+    \question[3]  Consider the system $$\vec x \, ' = A\vec x, \quad A = \begin{pmatrix} -4&-1\\1&-4 \end{pmatrix}, \quad \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $$ The eigenvalues of $A$ are $\lambda = -4\pm i$. Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves, and do not forget to label your axes.         
+    
+    \newpage 
+    
+    \question[2] Consider the DE $y''+ t^3y'+3y = \cos(t)$.
+    \begin{parts}
+        \part State whether the DE is linear or non-linear. \vspace{1cm}
+        \part State whether the DE is autonomous or nonautonomous. \vspace{1cm}
+        \part State whether the DE is homogeneous or nonhomogeneous. \vspace{1cm}
+        \part What is the order of the DE? \vspace{1cm}
+    \end{parts}
+    
+    \question[2] Compute the inverse Laplace transform of the given function using the convolution theorem. 
+    
+    $$F(s) = \frac{2}{((s-1)^2+4)s^2}$$ % 5.8 #10
+    
+    \newpage
+    \question[5]
+    $y(t)$ is a periodic function with period $2$. A sketch of $y(t)$ is below.
+    
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2] 
+            \begin{axis}[
+            width=3in,
+            height=1.75in,
+            clip=false,
+            axis lines=middle,
+            xmin=-.1,xmax=4.75,
+            ymin=-0.25, ymax=2.75,
+            xtick={0,0.5,1,1.5,2,2.5,3,3.5,4,4.5},
+            xticklabels={0,,1,,2,,3,,4},
+            ytick={0,0.5,1,1.5,2,2.5},
+            yticklabels={0,,1,,2},        
+            axis line style={shorten >=-7.5pt, shorten <=-7.5pt},
+            xlabel=$t$,
+            ylabel=$y(t)$,
+            xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel style={at={(ticklabel* cs:1)},anchor= east},
+            grid style={line width=.2pt, draw=gray!30},
+            grid=both,
+            ]
+            \addplot[black,samples=25,domain=0:1,very thick] {2};% 
+            \addplot[black,samples=25,domain=1:2,very thick] {1};% 
+            \addplot[black,samples=25,domain=2:3,very thick] {2};% 
+            \addplot[black,samples=25,domain=3:4,very thick] {1};% 
+            \addplot[black,samples=25,domain=4:4.8,very thick] {2};% 
+            \end{axis}
+        \end{tikzpicture} 
+        \end{center}
+        
+        Over the interval from $0$ to $2$, $y(t)$ is given by $$y(t) = \begin{cases} 2, & 0 \le t < 1  \\  1 , & 1 \le t < 2 \end{cases}$$ The function $y$ is defined for $t \ge 0$. Calculate the Laplace transform of the periodic function $y(t)$. Do not leave your work in terms of integrals. Show your work. 
+    
+    \newpage 
+    
+    \newpage \Initials
+    \question[8] Consider the homogeneous linear system of differential equations. $$\vec x \, ' = A \vec x =  \begin{pmatrix} 4&1\\1&4 \end{pmatrix} \vec x, \quad \vec x = \vec x(t) = \begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix}$$
+ 	
+    \begin{parts}
+        \part Express the general solution of the system in terms of real valued functions. 
+        \vspace{9cm} 
+        % \newpage 
+        \part Sketch the phase portrait of the system. Please include the eigenspaces in your sketch, indicate the direction of motion of your solution curves and eigenspaces, and do not forget to label your axes.      
+        % \vspace{4cm} 
+    \end{parts}    
+
+    \newpage 
+    
+    \question[10] Solve the DE using variation of parameters. Solutions to the homogeneous problem are $y_1 = t^{3}$ and $y_2 = t^{-2}$. Please show your work. $$t^2y'' - 6y = t^3, \quad y=y(t), \quad t > 0$$    
+    
+    
+    \newpage 
+    
+    
+
+    
+
+    
+    \question[10] %2.5.11 verbatim 
+    Consider the differential equation $\displaystyle \dydt = (y-1)(y^2-k)$, where $y$ is a real function of $t$, and $t \ge 0$, and $k>1$. 
+    \begin{parts}
+        \part State the critical points of the differential equation.  \vspace{1cm} 
+        \part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable. Show your work. 
+        \vspace{10cm}
+        \part Using results from parts (a) and (b) sketch several solution curves in the $ty$-plane for $t \ge 0$ and $y\in \mathbb R$.
+    \end{parts}
+    
+    \newpage 
+    
+
+
+    \question[10] 
+    Consider the non-linear system below.
+    
+    \[\displaystyle \dxdt = 2y-x-1, \qquad \dydt = (y-2)(y-4)\] % ad hoc  %%% SP21 
+    
+    \begin{parts} 
+        % \part Plot and label the nullclines of the system. Please label your axes. 
+        % \vspace{5cm} 
+        \part Identify all critical points of the system. Show your work. 
+        \vspace{10cm}
+        % \part Compute the Jacobian matrix for the point $(x,y)$. 
+        % \vspace{3cm} 
+        \part Compute the Jacobian matrix. For each critical point you identified in part (a), use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}        
+
+
+
+    \newpage 
+    \question[10] Use the method of reduction of order to find a second solution $y_2$ of the given DE such that $\{ y_1 , y_2 \}$ is a fundamental set of solutions on the given interval.
+    
+    $$t^2y'' - 12y = 0, \quad t > 0, \quad y_1(t) = t^4$$
+    
+    \newpage 
+    \question[1] One point will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}
+
+
+
+\end{document}

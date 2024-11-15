@@ -1,0 +1,48 @@
+\question[6] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= (x-1)(y+1) , \qquad \dydt = y+x^2- 3
+\end{align*}
+\begin{parts}
+\part Sketch the nullclines of the system on the axes below. Clearly indicate the critical points and clearly label your nullclines. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Green lines are the $x-$nullclines, red parabola is the $y-$nullcline.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.75]
+    \draw[thick, ->] (-6, 0) -- (6.25, 0);
+    \draw[thick, ->] (0, -6) -- (0, 6.25);
+    \node[overlay, below] at (6, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 6) {$y$};   
+    \draw[ultra thick,DarkGreen, -] (1, 6) -- (1, -6);        
+    \draw[ultra thick,DarkGreen, -] (-6, -1) -- (6, -1);   
+    \draw[DarkRed, line width = 0.75mm]   plot[smooth,domain=-2.5:2.5] (\x, {3-\x*\x});
+    \filldraw[black] (1,2) circle (4pt) node[anchor=south west]{(1,2)};
+    \filldraw[black] (-2,-1) circle (4pt) node[anchor=south west]{(-2,-1)};
+    \filldraw[black] (2,-1) circle (4pt) node[anchor=south west]{(2,-1)};
+    \end{tikzpicture}
+    \end{center}            
+    } 
+    \else 
+    \begin{center}
+    \begin{tikzpicture}[scale=0.55]
+    \draw[very thick, ->] (-6, 0) -- (6.25, 0);
+    \draw[very thick, ->] (0, -6) -- (0, 6.25);
+    \node[overlay, below] at (6, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 6) {$y$};        
+    \end{tikzpicture}
+    \end{center}    
+    \fi
+    \part Determine the locations of the critical points. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Setting both $x'=0$ and $y'=0$, we obtain three critical points as follows. 
+    
+    Setting $x'=0$ implies $y=-1$ or $x=1$. 
+        \begin{itemize}
+            \item If $y=-1$, then for $y'=0$ we need $x=\pm2$. There are CPs at $(-2,1)$ and $(2,1)$. 
+            \item If $x=1$, then for $y'=0$ we solve $0 = y + 1^2 - 3$. So there is a CP at $(1,2)$.
+        \end{itemize}
+        The CPs are located at $(1,2)$, $(-2,1)$, $(2,1)$. 
+        } 
+    \else 
+    \vfill
+    \fi
+\end{parts}

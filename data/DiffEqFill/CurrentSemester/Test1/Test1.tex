@@ -1,0 +1,41 @@
+\documentclass[12pt]{exam}
+
+\newcommand{\Version}{6} 
+\newcommand{\Solutions}{0} 
+\newcommand{\TestName}{}
+\newcommand{\ID}{}
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+\input{CurrentSemester/Macros/1_PhaseLine}
+\input{CurrentSemester/Macros/1_SaltWaterTank}
+
+\begin{document}
+
+
+
+    \renewcommand{\Version}{6} 
+    \input{CurrentSemester/Test1/Header}
+    \ifnum \Version=10
+        \renewcommand{\Version}{8}
+    \fi
+    \input{CurrentSemester/Test1/Questions}
+    % VERSION B
+    \newpage 
+    \renewcommand{\Version}{7} 
+    \input{CurrentSemester/Test1/Header}
+    \input{CurrentSemester/Test1/Questions}
+    % VERSION C
+    \newpage 
+    \renewcommand{\Version}{8} 
+    \input{CurrentSemester/Test1/Header}
+    \input{CurrentSemester/Test1/Questions}
+    % VERSION D
+    \newpage 
+    \renewcommand{\Version}{9} 
+    \input{CurrentSemester/Test1/Header}
+    \input{CurrentSemester/Test1/Questions}
+    
+\end{document}
+
+

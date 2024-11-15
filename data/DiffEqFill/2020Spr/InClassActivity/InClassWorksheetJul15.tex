@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{graphicx} % allows for graphics
+\usepackage{textcomp} % allows for single apostrophe
+%\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{amsfonts} % for real numbers symbol and other sets
+
+\usepackage{../spalign}
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{In-Class Worksheet}
+
+\usepackage{enumitem}
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+
+\setlength{\parindent}{0pt}
+
+\usepackage{enumitem}   
+
+\begin{document}
+    
+\vspace*{-.5cm}
+
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+
+\begin{center}
+{\Large \TestName 
+\\[4pt]
+\Course}
+\end{center}
+
+% \begin{center}    
+% {\small
+% \textit{This worksheet will not be collected}
+% }
+% \end{center}
+
+
+% \subsection*{Questions}
+\begin{enumerate}[label=\Alph*)]
+    
+    \item Consider the competing species system that describe interactions between two populations, $A(t)$ and $H(t)$. 
+    $$\frac{dA}{dt} = A(1-A-H), \qquad \frac{dH}{dt} = \frac H4(3-4H-2A)$$
+    \begin{enumerate}
+        \item Identify the critical points. 
+        \item Classify the critical points according to stability and type. 
+    \end{enumerate}    
+    
+
+    
+    \item Solve using the Laplace Transform. % Dieci Q4
+    $$y'' -2y' + 4y = 0, \quad y(0) = 2, \ y'(0) = 0$$ 
+    
+    \item Consider the predator-prey system that describe interactions between two populations: rabbits, $R(t)$, and foxes, $F(t)$.
+    $$\frac{dR}{dt} = \alpha R - k RF, \quad \frac{dF}{dt} = - \beta F +  k RF, \quad  \alpha > 0 , \ \beta > 0, \ k > 0$$
+    \begin{enumerate}
+        \item Give the equations for the non-zero nullclines. 
+        \item Identify the critical points. 
+        \item Classify the critical points according to stability and type. 
+    \end{enumerate}
+    
+    \item Calculate the Laplace transform of the periodic function. $f(t)$ has period 4. 
+    $$ f(t) =  \begin{cases}
+    \delta(t - 2), \ 0 \le t < 3\\
+    1, \qquad 3 \le t < 4
+    \end{cases}
+    $$
+    
+    % \item Solve using the Laplace Transform. % Kang F2.2016
+    % $$y^{(4)} - y = 0, \qquad y(0) = y'(0) = y'''(0) = 2, \quad y''(0) = -2 $$
+    
+    
+    % \item Consider the following IVP. %
+    % $$y'' + 4y = g(t), \qquad y(0) = y'(0) = 0, \quad g(t) =  \begin{cases}
+    % 0, \qquad 0 \le t < 5\\
+    % \frac15(t-5), \ 5 \le t < 10 \\
+    % 1, \qquad 10 \le t
+    % \end{cases}
+    % $$
+    % \begin{enumerate}
+    %     \item Sketch $g(t)$
+    %     \item Solve the IVP using the Laplace Transform.
+    % \end{enumerate}    
+        
+    
+    % \item Solve the IVP
+    
+    % $$x'' +9x = 3\delta (t - \pi), \quad x(0) = 1, \ x'(0) = 0,\ \quad x = x(t)$$
+
+        
+\end{enumerate}
+
+% \newcounter{NumberInTable}
+% \newcommand{\LTNUM}{\stepcounter{NumberInTable}{\theNumberInTable.}}
+
+% \vspace{-0ex}
+%     \renewcommand{\arraystretch}{1.1}
+%     \begin{center}
+%     \textit{This is Table 5.3.1, and it will be on your midterm 3 and final exam}
+%     \vspace{.2cm}
+    
+%     \begin{tabular}{ p{1cm} p{6cm} p{8cm} }
+%         & $f(t)$ & $\mathcal  L\{f(t)\}  =F(s)$ \\ \hline
+
+%     \end{tabular}
+%     \renewcommand{\arraystretch}{.5}
+
+% \end{center}
+
+\end{document}
+

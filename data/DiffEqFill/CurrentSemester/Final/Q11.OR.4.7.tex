@@ -1,0 +1,354 @@
+\ifnum \Version=1
+\newpage 
+\question[5] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 16t^3, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = t$ and $y_2 = t^3$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \begin{enumerate}
+        \item[a)] The Wronskian is
+    \begin{align}
+        W = \det \begin{pmatrix} t&t^3\\1&3t^2\end{pmatrix} = 2t^3
+    \end{align}
+    To apply the formulas for the variation of parameters method for a second order DE we also use
+    \begin{align}
+        y_1 & = t \\
+        y_2 &= t^3 \\
+        g &= 16t^3 
+    \end{align}
+    Applying the formulas for $v_1$ and $v_2$ we obtain
+    \begin{align}
+        v_1 &= - \int \frac{y_2(t)g(t)}{W[y_1,y_2]}dt = - \int \frac{t^3 \cdot 16t^3}{2t^3} dt = - \int 8 t^3 \, dt = -2t^4 + k_1\\
+        v_2 &= \int \frac{y_1(t)g(t)}{W[y_1,y_2]} dt = \int \frac{t\cdot16t^3}{2t^3} dt = \int 8 t \, dt = 4t^2 + k_2
+    \end{align}
+    The arbitrary constants of integration, $k_1$ and $k_2$, in the above are actually not necessary. In the end they will only produce redundant terms because they are solutions to the homogeneous equation. But it is OK to leave them in the expressions for $v_1$ and $v_2$, in the expression for $y_p$, and the expression for $y$. The expression for $y_p$ becomes
+    \begin{align}
+        y_p &= v_1y_1 + v_2y_2 
+        = (-2t^4 )\cdot t + (4t^2 ) t^3 
+        = 2t^5
+    \end{align}
+    \item [b)] The general solution to the differential equation is
+    \begin{align}
+        y &= y_h + y_p \\
+        &= c_1y_1 + c_2y_2 + v_1y_1 + v_2y_2 \\
+        &= c_1t +c_2t^3 + 2t^5 
+    \end{align}
+    \end{enumerate}
+    } 
+    \else 
+    \fi    
+\fi
+
+
+
+\ifnum \Version=2
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Consider the first order constant-coefficient system below. 
+    
+\[\vec{x}\, ' = P\vec {x} + \vec g, \quad \vec g = \begin{pmatrix} 9\\2\end{pmatrix}\] 
+
+Matrix $P$ is $2\times2$ with real entries. A fundamental set of solutions to the corresponding homogeneous problem is given by the following vectors.   
+\[\vec{x}_{1}(t)=e^{t}\begin{pmatrix}1\\0\end{pmatrix},\qquad \vec{x}_{2}(t)=e^{2t}\begin{pmatrix}4\\1\end{pmatrix}\]  
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the system of differential equations.
+    \end{parts}
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution.} 
+    We will use the formula given in the formula page
+$$\vec x_p(t) = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g} (t) dt.$$
+The fundamental matrix and its inverse are:
+\begin{align}
+    \mathbf{X} (t) 
+    &= \begin{pmatrix} \vec{x}_{1} & \vec{x}_{2}\end{pmatrix} 
+    = \begin{pmatrix} e ^ {t} & 4e ^ {2t}\\ 0 &   e ^ {2t} \end{pmatrix} \\
+    \mathbf{X}^{-1} 
+    &= \frac{1}{e^{3t}}\begin{pmatrix} e^{2t} & -4e^{2t} \\0 & e^{t}\end{pmatrix} 
+    = \begin{pmatrix} e^{-t} & -4e^{-t} \\0 & e^{-2t} \end{pmatrix}
+\end{align}
+The inverse was obtained using the formula for the inverse of a $2\times 2$ matrix. 
+\begin{align}
+    \mathbf{X} ^ {-1} (t) \vec{g}(t) 
+    &= \begin{pmatrix} e^{-t} & -4e^{-t} \\0 & e^{-2t} \end{pmatrix} \begin{pmatrix} 9\\2 \end{pmatrix} 
+    = \begin{pmatrix} e^{-t} \\ 2e^{-2t}\end{pmatrix} \\
+    \int \mathbf{X} ^ {-1} (t) \vec{g}(t) dt 
+    &= \int \begin{pmatrix} e^{-t} \\ 2e^{2t}\end{pmatrix} dt = \begin{pmatrix} -e^{-t} \\ -e^{-2t} \end{pmatrix} \\
+    \vec x_p = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g}(t) dt 
+    &= \begin{pmatrix} e^{t} & 4e^{2t}\\ 0 & e^{2t} \end{pmatrix}\begin{pmatrix} -e^{-t} \\ -e^{-2t} \end{pmatrix}
+    = \begin{pmatrix} -5 \\ -1 \end{pmatrix}
+\end{align}
+The particular solution is a constant vector. 
+\begin{align}
+    \vec x_p =  \begin{pmatrix} -5 \\ -1 \end{pmatrix} = - \begin{pmatrix} 5 \\ 1 \end{pmatrix}
+\end{align}
+
+The general solution is the homogeneous solution plus the particular solution. 
+\begin{align}
+    \vec x = \vec x_h + \vec x_p = c_1e^{t}\begin{pmatrix}1\\0\end{pmatrix} + c_2e^{2t}\begin{pmatrix}4\\1\end{pmatrix} - \begin{pmatrix} 5\\1\end{pmatrix}
+\end{align}
+
+    } 
+   \else
+   \fi
+
+\fi 
+
+
+
+
+
+\ifnum \Version=3
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Consider the first order constant-coefficient system below. 
+    
+\[\vec{x}\, ' = P\vec {x} + \vec g, \quad \vec g = \begin{pmatrix} 5\\2\end{pmatrix}\] 
+
+Matrix $P$ is $2\times2$ with real entries. A fundamental set of solutions to the corresponding homogeneous problem is given by the following vectors.   
+\[\vec{x}_{1}(t)=e^{-t}\begin{pmatrix}1\\0\end{pmatrix},\qquad \vec{x}_{2}(t)=e^{-2t}\begin{pmatrix}2\\1\end{pmatrix}\]  
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the system of differential equations.
+    \end{parts}
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution.} 
+    We will use the formula
+$$\vec x_p(t) = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g} (t) dt.$$
+The fundamental matrix and its inverse are:
+\begin{align}
+    \mathbf{X} (t) &= \begin{pmatrix} \vec{x}_{1} & \vec{x}_{2}\end{pmatrix} = \begin{pmatrix} 
+    e ^ {-t} & 2e ^ {-2t}\\ 0 &   e ^ {-2t} \end{pmatrix} \\
+    \mathbf{X}^{-1} &= \frac{1}{e^{-3t}}\begin{pmatrix} e^{-2t} & -2e^{-2t} \\0 & e^{-t}\end{pmatrix} = \begin{pmatrix} e^t & -2e^t \\0 & e^{2t} \end{pmatrix}
+\end{align}
+The inverse was obtained using the formula for the inverse of a $2\times 2$ matrix we obtain. Then:
+\begin{align}
+    \mathbf{X} ^ {-1} (t) \vec{g}(t) &= \begin{pmatrix} e^t & -2e^t \\0 & e^{2t} \end{pmatrix} \begin{pmatrix} 5\\2 \end{pmatrix} = \begin{pmatrix} e^t \\ 2e^{2t}\end{pmatrix} \\
+    \int \mathbf{X} ^ {-1} (t) \vec{g}(t) dt &= \int \begin{pmatrix} e^t \\ 2e^{2t}\end{pmatrix} dt = \begin{pmatrix} e^t \\ e^{2t} \end{pmatrix} \\
+    \vec x_p = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g}(t) dt &= \begin{pmatrix} 
+    e ^ {-t} & 2e ^ {-2t}\\ 0 &   e ^ {-2t} \end{pmatrix} \begin{pmatrix} e^t \\ e^{2t} \end{pmatrix} = \begin{pmatrix} 3 \\ 1 \end{pmatrix}
+\end{align}
+The particular solution is a constant vector. 
+\begin{align}
+    \vec x_p =  \begin{pmatrix} 3 \\ 1 \end{pmatrix}
+\end{align}
+
+The general solution is the homogeneous solution plus the particular solution. 
+\begin{align}
+    \vec x = \vec x_h + \vec x_p = c_1e^{-t}\begin{pmatrix}1\\0\end{pmatrix} + c_2e^{-2t}\begin{pmatrix}2\\1\end{pmatrix} + \begin{pmatrix} 3\\1\end{pmatrix}
+\end{align}
+
+    } 
+   \else
+   \fi
+
+\fi 
+
+
+
+
+
+\ifnum \Version=4
+\ifnum \Solutions=0 \newpage \fi
+\question[5] Consider the first order constant-coefficient system below. 
+\[\vec{x}\, ' = P\vec {x} + \vec g, \quad \vec g = \begin{pmatrix} 14\\3\end{pmatrix}\] 
+
+Matrix $P$ is $2\times2$ with real entries. A fundamental set of solutions to the corresponding homogeneous problem is given by the following vectors.   
+\[\vec{x}_{1}(t)=e^{-2t}\begin{pmatrix}1\\0\end{pmatrix},\qquad \vec{x}_{2}(t)=e^{-3t}\begin{pmatrix}4\\1\end{pmatrix}\]  
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the system of differential equations.
+    \end{parts}
+    
+    \ifnum \Solutions=1 {\color{DarkBlue} \textit{Solution.} 
+    We will use the formula
+$$\vec x_p(t) = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g} (t) dt.$$
+The fundamental matrix and its inverse are:
+\begin{align}
+    \mathbf{X} (t) &= \begin{pmatrix} \vec{x}_{1} & \vec{x}_{2}\end{pmatrix} 
+    = \begin{pmatrix}  e ^ {-2t} & 4e ^ {-3t}\\ 0 &   e ^ {-3t} \end{pmatrix} \\
+    \mathbf{X}^{-1} 
+    &= \frac{1}{e^{-5t}}\begin{pmatrix} e^{-3t} & -4e^{-3t} \\0 & e^{-2t}\end{pmatrix} = e^{5t}\begin{pmatrix} e^{-3t} & -4e^{-3t} \\0 & e^{-2t}\end{pmatrix} 
+    = \begin{pmatrix} e^{2t} & -4e^{2t} \\0 & e^{3t} \end{pmatrix}
+\end{align}
+The inverse was obtained using the formula for the inverse of a $2\times 2$ matrix we obtain. Then:
+\begin{align}
+    \vec x_p = \mathbf{X}(t) \int \mathbf{X} ^ {-1} (t) \vec{g}(t) \, dt 
+    &= \mathbf{X}(t) \int \begin{pmatrix} e^{2t} & -4e^{2t} \\0 & e^{3t} \end{pmatrix} \begin{pmatrix} 14 \\ 3 \end{pmatrix} \, dt \\
+    & = \mathbf{X}(t) \int \begin{pmatrix} 2e^{2t} \\ 3e^{3t}\end{pmatrix} \, dt \\
+    & = \mathbf{X}(t)  \begin{pmatrix} e^{2t} \\ e^{3t}\end{pmatrix} \\
+    & = \begin{pmatrix}  e ^ {-2t} & 4e ^ {-3t}\\ 0 &   e ^ {-3t} \end{pmatrix}  \begin{pmatrix} e^{2t} \\ e^{3t}\end{pmatrix} \\
+    & =  \begin{pmatrix} 1 + 4 \\ 0 + 1\end{pmatrix} 
+\end{align}
+The particular solution is a constant vector $\displaystyle \vec x_p =  \begin{pmatrix} 5 \\ 1 \end{pmatrix}$. The general solution is the homogeneous solution plus the particular solution. 
+\begin{align}
+    \vec x = \vec x_h + \vec x_p = c_1e^{-2t}\begin{pmatrix}1\\0\end{pmatrix} + c_2e^{-3t}\begin{pmatrix}4\\1\end{pmatrix} + \begin{pmatrix} 5\\1\end{pmatrix}
+\end{align}
+
+    } 
+   \else
+   \fi
+
+\fi 
+
+
+
+
+
+
+
+
+\ifnum \Version=5
+\question[5] Determine the general solution to the differential equation. 
+$$y'' + 4y = 100te^{-t}, \quad y=y(t)$$
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+The homogeneous equation has the characteristic equation
+$$\lambda ^2+4\lambda = 0$$
+The roots are $\lambda= 0$, $\lambda = -4$, so the homogeneous solution is
+$$y_h = c_1 e^{0t} + c_2 e^{-4t} = c_1 + c_2 e^{-4t}$$
+We can use undetermined coefficients to identify the particular solution. With undetermined coefficients we can try a solution of the form $y_p = (At+B)e^{-t}$. To substitute this expression for the particular solution to the given differential equation, we differentiate twice to obtain:
+\begin{align}
+    y_p ' &= Ae^{-t} - Ate^{-t} - Be^{-t} \\
+    y_p'' &= -2Ae^{-t} +Ate^{-t} + Be^{-t}
+\end{align}
+Substituting these expressions into the differential equation we have:
+\begin{align}
+    0 &= y'' + 4y \\
+    0 &= (-2Ae^{-t} +Ate^{-t} +    Be^{-t}) +4 (Ae^{-t} - Ate^{-t} - Be^{-t}) \\ 
+    0 &= 2Ae^{-t} - 4Ate^{-t} + Be^{-t}
+\end{align}
+By comparison, we obtain
+$$ A = , B = 0$$
+The full solution to the DE is NEED TO FINISH SOLUTIONS
+$$y = y_h + y_p = c_1y_1  + c_2y_2 + y_p = c_1 + c_2 e^{-4t} + $$
+} 
+\else 
+\vspace{3cm}
+\fi
+\fi 
+
+
+
+
+\ifnum \Version=6
+\newpage 
+\question[4] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 12e^{-t}, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = e^{-t}, \ y_2 = te^{-t}$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \begin{enumerate}
+        \item[a)] The Wronskian is
+    \begin{align}
+        W = \det \begin{pmatrix} e^{-t}&te^{-t}\\-e^{-t}&e^{-t}-te^{-t}\end{pmatrix} = e^{-t}(e^{-t}-te^{-t})+te^{-2t} = e^{-2t}(1 -t+t) = e^{-2t}
+    \end{align}
+    To apply the formulas for the variation of parameters method for a second order DE we also use
+    \begin{align}
+        y_1 & = e^{-t} \\
+        y_2 &= te^{-t} \\
+        g &= 12e^{-t}
+    \end{align}
+    Applying the formulas for $v_1$ and $v_2$ we obtain
+    \begin{align}
+        v_1 &= - \int \frac{y_2(t)g(t)}{W[y_1,y_2]}dt = - \int \frac{te^{-t} \cdot 12e^{-t}}{e^{-2t}} dt = - \int 12t \, dt = -6t^2 + k_1\\
+        v_2 &= \int \frac{y_1(t)g(t)}{W[y_1,y_2]} dt = \int \frac{e^{-t}\cdot12e^{-t}}{e^{-2t}} dt = \int 12 \, dt = 12t + k_2
+    \end{align}
+    The arbitrary constants of integration, $k_1$ and $k_2$, in the above are actually not necessary. In the end they will only produce redundant terms because they are solutions to the homogeneous equation. But it is OK to leave them in the expressions for $v_1$ and $v_2$, in the expression for $y_p$, and the expression for $y$. The expression for $y_p$ becomes
+    \begin{align}
+        y_p &= v_1y_1 + v_2y_2 
+        = -6t^2 e^{-t} + 12t^2e^{-t} = 6t^2e^{-t}
+    \end{align}
+    \item [b)] The general solution to the differential equation is
+    \begin{align}
+        y &= y_h + y_p \\
+        &= c_1y_1 + c_2y_2 + v_1y_1 + v_2y_2 \\
+        &= c_1e^{-t} +c_2te^{-t} + 6t^2e^{-t}
+    \end{align}
+    \end{enumerate}
+    } 
+    \else 
+    \fi    
+\fi
+
+
+
+
+
+
+\ifnum \Version=7
+\newpage 
+\question[4] Consider the differential equation
+
+    $$y'' + p(t)y' + q(t)y = 12e^{-t}, \quad y=y(t)$$    
+    
+    Solutions to the corresponding homogeneous problem are $y_1 = e^{-t}, \ y_2 = te^{-t}$. 
+
+    \begin{parts}
+        \part Determine a particular solution to the differential equation using variation of parameters. Do not use the method of undetermined coefficients. 
+        \ifnum \Solutions=0 
+        \vspace{16cm}
+        \fi
+        \part State the general solution to the differential equation.
+    \end{parts}
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    \begin{enumerate}
+        \item[a)] The Wronskian is
+    \begin{align}
+        W = \det \begin{pmatrix} e^{-t}&te^{-t}\\-e^{-t}&e^{-t}-te^{-t}\end{pmatrix} = e^{-t}(e^{-t}-te^{-t})+te^{-2t} = e^{-2t}(1 -t+t) = e^{-2t}
+    \end{align}
+    To apply the formulas for the variation of parameters method for a second order DE we also use
+    \begin{align}
+        y_1 & = e^{-t} \\
+        y_2 &= te^{-t} \\
+        g &= 12e^{-t}
+    \end{align}
+    Applying the formulas for $v_1$ and $v_2$ we obtain
+    \begin{align}
+        v_1 &= - \int \frac{y_2(t)g(t)}{W[y_1,y_2]}dt = - \int \frac{te^{-t} \cdot 12e^{-t}}{e^{-2t}} dt = - \int 12t \, dt = -6t^2 + k_1\\
+        v_2 &= \int \frac{y_1(t)g(t)}{W[y_1,y_2]} dt = \int \frac{e^{-t}\cdot12e^{-t}}{e^{-2t}} dt = \int 12 \, dt = 12t + k_2
+    \end{align}
+    The arbitrary constants of integration, $k_1$ and $k_2$, in the above are actually not necessary. In the end they will only produce redundant terms because they are solutions to the homogeneous equation. But it is OK to leave them in the expressions for $v_1$ and $v_2$, in the expression for $y_p$, and the expression for $y$. The expression for $y_p$ becomes
+    \begin{align}
+        y_p &= v_1y_1 + v_2y_2 
+        = -6t^2 e^{-t} + 12t^2e^{-t} = 6t^2e^{-t}
+    \end{align}
+    \item [b)] The general solution to the differential equation is
+    \begin{align}
+        y &= y_h + y_p \\
+        &= c_1y_1 + c_2y_2 + v_1y_1 + v_2y_2 \\
+        &= c_1e^{-t} +c_2te^{-t} + 6t^2e^{-t}
+    \end{align}
+    \end{enumerate}
+    } 
+    \else 
+    \fi    
+\fi
+

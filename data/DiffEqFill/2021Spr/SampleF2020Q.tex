@@ -1,0 +1,272 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{1} %solution =1 or 0
+
+\input{./preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Sample Final Summer 2020, Version X}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{3 hours }
+\newcommand{\Points}{}
+\newcommand{\DueDate}{12:30 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+% \input{2021Spr/coverpage} % cover page for unproctored exam
+% \newpage
+
+\begin{center}
+{\Large \TestName, \Course }
+\end{center}
+
+
+\begin{questions}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    \question[5] % 5.8.9
+    Compute the inverse Laplace transform of $F(s)$ using the convolution theorem. You may leave your answer in terms of an integral. 
+    % $$F(s) = \frac{1}{(s+3)^4(s^2+4)}$$  % A
+    % $$F(s) = \frac{s}{(s+4)^3(s^2+16)}$$  % Q
+    
+    % $$F(s) = \frac{s}{(s+3)^5(s^2+4)}$$  % X
+    % $$F(s) = \frac{1}{(s+2)^4(s^2+9)}$$  % Y
+    $$F(s) = \frac{s}{(s+1)^3(s^2+36)}$$  % Z
+    
+    
+\newpage \Initials
+    
+    \question[2] % 8.1.11 and 13
+    Use one iteration of the Euler method to estimate the solution to the IVP at the point $t = 0.1$. Show your work
+    % $$y' = \frac t2 + 5\sqrt y, \quad y(0) = 4$$ % 11, A
+    % $$y' = \frac{4 - ty}{5 + y^2}, \quad y(0) = 2$$ % 13, Q
+    
+    % $$y' = 4t+3y^2, \quad y(0) = 2$$ % 13, X
+    % $$y' = 3t+\frac12y^2, \quad y(0) = 4$$ % 13, Y
+    $$y' = 2t+2y^2, \quad y(0) = 3$$ % 13, Z
+    
+    
+    
+\newpage \Initials
+
+    \question[6] Consider the linear system of first order differential equations $\displaystyle \mathbf x \, ' = A \mathbf x$, where $\mathbf x = \mathbf x(t)$, $t\ge 0$, and $A$ has the eigenvalues and eigenvectors below. 
+    % $$ % SUMMER 2019
+    % \lambda_1 = 0, \ \mathbf v_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix},
+    % \quad \lambda _2 = -1 , \  \mathbf v_2 = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix}, 
+    % \quad \lambda _3 = -1 , \  \mathbf v_3 = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix} 
+    % $$
+
+
+    % $$ % X
+    % \lambda_1 = -1, \ \mathbf v_1 = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix},
+    % \quad \lambda _2 = -2 , \  \mathbf v_2 = \begin{pmatrix} 4 \\ 0 \\ 3 \end{pmatrix}, 
+    % \quad \lambda _3 = -2 , \  \mathbf v_3 = \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
+    % $$
+    
+    
+    $$ % Y AND Z
+    \lambda_1 = -2, \ \mathbf v_1 = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix},
+    \quad \lambda _2 = -3 , \  \mathbf v_2 = \begin{pmatrix} 4 \\ 0 \\ 7 \end{pmatrix}, 
+    \quad \lambda _3 = -3 , \  \mathbf v_3 = \begin{pmatrix} 2 \\ 1 \\ 2 \end{pmatrix} 
+    $$    
+
+    
+    \begin{enumerate}[label=\roman*)]
+      \item Identify three solutions to the system, $\mathbf x_1(t)$, $\mathbf x_2(t)$, and $\mathbf x_3(t)$. 
+      \vspace{3cm} 
+      \item Use a determinant to identify values of $t$, if any, where $\mathbf x_1$, $\mathbf x_2$, and $\mathbf x_3$ form a fundamental set of solutions. You may assume that they are solutions to $\mathbf x \, ' = A\mathbf x$. 
+      \vspace{3cm}
+      \item Given the initial value $\mathbf x(0) = \begin{pmatrix}0\\1\\0\end{pmatrix}$, give a solution to the IVP. Please show your work. 
+      
+    \end{enumerate}    
+  
+    
+    
+    
+    
+    
+    
+    \newpage \Initials
+    \question[7] Solve the following IVP using the Laplace Transform. Do not leave your answer in terms of an integral. 
+        % $$y''-y=-k\delta(t-3), \quad y(0)=2,\quad y'(0)=2, \quad k \in \mathbb R, \quad t \ge 0$$ % X
+        
+        % $$y''-y=-k\delta(t-4), \quad y(0)=3,\quad y'(0)=3, \quad k \in \mathbb R, \quad t \ge 0$$ % Y
+        
+        $$y''-y=-k\delta(t-8), \quad y(0)=4,\quad y'(0)=4, \quad k \in \mathbb R, \quad t \ge 0$$ % Z
+      
+    
+    
+    
+
+
+\newpage \Initials
+
+    \question[10] Solve the following IVP using the Laplace Transform. Do not leave your answer in terms of an integral. 
+        % $$y'' - 2y'  + 2y =\cos t, \quad y(0)=1,\quad y'(0)=0$$  % HW 5.4.8
+  $$ y' + y = f(t), \quad y(0) = 0, \quad f(t) = \begin{cases} +1, & 0 \le t < 1 \\ -1 , & 1 \le t \end{cases}
+  $$
+    
+    
+    
+\newpage \Initials
+    \question[2] State the longest interval, if any, in which the given IVP is certain to have a unique, twice-differentiable solution. Do not attempt to solve the differential equation. 
+    
+    % $$\sqrt{ t-4} \, y''+3ty'+4y=2\ln(7 - t),\quad y(3)=0,\ y'(3)=-1$$ % 4.1.1 WS, A
+    % $$\ln (4 - t) \, y''+\frac{t}{t^2-25}y'+y=0, \quad y(1)=4,\ y'(1)=1$$ % 4.1.1 WS Q
+
+    % $$\ln (2 - t) \, y''+\frac{t}{t^2-36}y'+y=0, \quad y(1)=4,\ y'(1)=1$$ %  WS X
+    $$\ln (5 - t) \, y''+\frac{t}{t^2-100}y'+y=0, \quad y(1)=4,\ y'(1)=1$$ % WS YZ
+    
+    \vspace{2cm} 
+
+    \question[3] Consider the linear system of first order differential equations $\displaystyle \mathbf x \, ' = A \mathbf x$, where $\mathbf x = \mathbf x(t)$, $t\ge 0$, and $A$ has the eigenvalues and eigenvectors below. Sketch the phase portrait. Please label your axes.
+    
+    % $$ % X
+    % \lambda_1 = -4, \ \mathbf v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix},  \quad \lambda _2 = -1 , \  \mathbf v_2 = \begin{pmatrix} 3 \\ 1  \end{pmatrix}$$  
+    
+    $$ % YZ
+    \lambda_1 = 5, \ \mathbf v_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix},  \quad \lambda _2 = 2 , \  \mathbf v_2 = \begin{pmatrix} 1 \\ 3  \end{pmatrix}$$   
+    
+    
+\newpage \Initials
+
+    \question[5] 
+    Solve the IVP. 
+    % $$y' - 2 y = t + 2e^t, \quad y(0) = 0$$ % X
+    % $$y' - 3 y = t + 2e^t, \quad y(0) = 0$$ % Y
+    $$y' - 2 y = t + 2e^t, \quad y(0) = 0$$ % Z
+
+            
+
+    
+
+    
+    
+\newpage \Initials
+
+    \question[8] A 2 kg mass stretches a spring 1 meter. The mass is pushed upward, contracting the spring a distance of 0.2 meters, and then set in motion with an upward velocity of 5 m/s. There is no damping. 
+    \begin{parts} \part Solve the IVP. You may use that the acceleration due to gravity is $g = 10$ m/s$^2$. \vspace{9cm} \part What is the frequency of the motion? It is not necessary to specify units. \vspace{1cm} \part Sketch the phase portrait for this system. Include the trajectory, $\vec r(t)$, in the phase portrait that corresponds to the initial conditions. Clearly label this trajectory and do not forget to label your axes.  \end{parts} 
+    % 4.4# 6a or 7, or midterm 2A #3
+    
+    
+    
+\newpage \Initials
+
+    \question[10] % 
+    Suppose $\vec x \, ' = A \vec x$, where $A$ is the $2\times 2$ matrix below. 
+    % $$A = \spalignmat{1 -1;1 3}$$ % A
+    % $$A = \spalignmat{0 -1;1 2}$$ % X
+    $$A = \spalignmat{1 -1;1 3}$$ % YZ
+    
+    \begin{parts} 
+    
+        \part Determine the eigenvalues and eigenvectors of $A$. 
+        \vspace{5cm}
+        \part Express the general solution of $\vec x \, ' = A \vec x$ in terms of real valued functions. 
+        \vspace{8cm} 
+        \part Sketch the phase portrait of the system. Do not forget to label your axes.      
+        \vspace{1cm} 
+    \end{parts}    
+    
+
+    
+
+    
+\newpage \Initials
+
+    \question[10] Consider the autonomous differential equation 
+    $$\dydt = y(k - y), \quad t \ge 0, \quad k  > 0$$  % 1.2,9 and 2.5, A 
+    \begin{enumerate}[label=(\roman*)]
+        \item list the critical points \vspace{1cm}
+        \item sketch the phase line and classify the critical points according to their stability \vspace{4cm}
+        \item Determine where $y$ is concave up and concave down \vspace{6cm}
+        \item sketch several solution curves in the $ty$-plane. 
+    \end{enumerate}
+
+\newpage \Initials
+
+    \question[10] 
+    
+    % Use variation of parameters to identify the general solution to \[\vec{x} \, ' = \left( \begin{array}{rr} 1 & 5 \\ 5 & 1 \end{array} \right) \vec{x}  + \left( \begin{array}{r}  40\\ 0\end{array} \right)  \]   % 4.7.2 A
+    
+    Use variation of parameters to identify the general solution to the DE below. 
+    $$ y'' - y = \frac12 (e^{-t} + e^t)    $$
+    
+
+
+\newpage \Initials
+
+    \question[10] 
+    Consider the homogeneous system 
+    % $$\vec x\,'=A\vec x=\spalignmat{0,1;-25,\alpha}\vec x,\ \alpha \in \mathbb R$$ % 3.4 14, A
+    $$\vec x\,'=A\vec x=\spalignmat{0,1;-4,\alpha;}\vec x,\ \alpha \in \mathbb R$$ % 3.4 14, Q
+    \begin{parts}
+        \part Determine the eigenvalues of $A$ in terms of $\alpha$. 
+        \vspace{5cm} 
+        
+        \part Identify the values of $\alpha$ (if any) where the qualitative nature of phase portrait for system changes. 
+        \vspace{4cm} 
+        
+        \part For each value of $\alpha$ that you listed in part (b), sketch the phase portrait for a value of $\alpha$ that is slightly less than the value(s) that you identified. For example, if you identified only one $\alpha$ value, you need to only give one sketch. Do not forget to label your axes. 
+    \end{parts}
+           
+\newpage \Initials
+    \question[10] 
+    Consider the system $\displaystyle \frac{dx}{dt} = \frac32 x - x^2 - \frac{xy}{2} , \quad \frac{dy}{dt} = 2y - \frac 32 xy - \frac{y^2}{2}$. % A HW7.2#1
+    
+    \begin{parts} 
+        \part Identify all critical points of the system.
+        \vspace{7cm}
+        \part For each critical point, use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}    
+% \newpage \Initials \\ \LastPage     
+            
+    
+\newpage \Initials
+    
+
+    \question[2] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    \vspace{2pt}
+    
+    \textbf{Georgia Tech Honor Code}:\ \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}

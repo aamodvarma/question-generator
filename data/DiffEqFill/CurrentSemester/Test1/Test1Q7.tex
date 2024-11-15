@@ -1,0 +1,50 @@
+\ifnum \Version=1  
+\question[8] Consider the differential equation $\displaystyle \frac{dy}{dt}= (y-2)(y-4k), \ k > 2$. The variable $y$ is a real function of $t$. Assume $y \in  \mathbb R$ and $t \ge 0$.
+\fi
+\ifnum \Version=2  
+\question[8] Consider the differential equation $\displaystyle \frac{dy}{dt}= y^2-9$. The variable $y$ is a real function of $t$. Assume $y \in  \mathbb R$ and $t \ge 0$.
+\fi 
+\ifnum \Version=3
+\question[8] Consider the differential equation $\displaystyle \frac{dy}{dt}= (y-1)(y+2)$. The variable $y$ is a real function of $t$. Assume $y \in  \mathbb R$ and $t \ge 0$.
+\fi 
+\ifnum \Version=4
+\question[8] Consider the differential equation $\displaystyle \frac{dy}{dt}= y^2-4$. The variable $y$ is a real function of $t$. Assume $y \in  \mathbb R$ and $t \ge 0$.
+\fi 
+\ifnum \Version=5
+\question[8] Consider the differential equation $\displaystyle \frac{dy}{dt}= (y+2)(y-3)$. The variable $y$ is a real function of $t$. Assume $y \in  \mathbb R$ and $t \ge 0$.
+\fi 
+
+\ifnum \Version<6
+\begin{parts}
+\part State the critical points of the differential equation.\vspace{1cm}
+\part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable.
+\vspace{4cm}
+\part Determine where $y$ is concave up and where $y$ is concave down for all $y \in \mathbb R$.  Show your work.
+\vspace{7cm}
+\part Use your results from parts A, B, and C to sketch several solution curves in the $ty$-plane for $y \in \mathbb R$ and $t \ge 0$. Clearly indicate the critical points and the points where the concavity changes. Please label your axes.     
+\end{parts}
+\fi
+
+
+\ifnum \Version>5
+\question[4] Consider the DE $\displaystyle \dydt = (y-4)(y-8)=y^2-12y+32$. Determine the values of $y$ where the solution curves are concave up and where the curves are concave down. Please show your work. 
+\ifnum \Solutions=1 {\color{DarkBlue} 
+    \text{Solutions:} Setting $y'=0$ we find that the equilibrium points are $y = 4, 6.$ And if $f(y) = y'$, then $$\dydtt = \dfdy \, \dydt$$ Also 
+    $$\dfdy = \ddy\left(y^2-12y+32)\right) = 2y-12 = 2(y-6)$$
+    So $df/dy = 0$ when $y=6$. There may be inflection points where either (or both) $df/dy$ and $dy/dt$ are zero. So there could be inflection points at $$y = 4, \ y = 8$$ A table will help determine concavity. When both derivatives have the same sign, the solutions are concave up, and when they have opposite signs the solutions are concave down. 
+    \begin{center}            
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{c|cccc} 
+        $ y $ & $ (-\infty,4) $ & $(4,6)$ & $(6,8)$ & $(8,\infty)$  \\ \hline 
+        $\displaystyle  dy/dt=(y-4)(y-8)$ & $+$ & $-$ & $-$ & $+$  \\ \hline
+        $ \displaystyle df/dy = 2(y-6) $ & $-$ & $-$ & $+$ & $+$  \\[4pt] \hline
+        $ \text{concavity} $ & \text{down} & \text{up} & \text{down} & \text{up} \\ \hline
+        \end{tabular}
+    \end{center}  
+    So concave up on $y>8$ and $4<y<6$. Concave down on $y<4$, and $6<y<8$. 
+} 
+\else 
+\fi
+\fi 
+
+

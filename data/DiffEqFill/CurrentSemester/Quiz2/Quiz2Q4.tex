@@ -1,0 +1,179 @@
+\ifnum \Version<6 
+\question[2] You do not need to show your work for this question. Consider the differential equation 
+\ifnum \Version=1
+\begin{align*}
+    2y'' - 4ty' - t^2y = 12\sin t
+\end{align*}
+\fi
+\ifnum \Version=2
+$4y'' - ty' - t^2y = 12\sin t$.
+\fi
+\ifnum \Version=3
+$4y'' - ty' - 8y = 12t$.
+\fi
+\ifnum \Version=4
+$3y'' - ty' + 9y = 12e^t$.
+\fi
+\ifnum \Version=5
+$4y'' + 8y' - t^2y = 12\cos(2t)$.
+\fi
+The DE can be expressed in the form $\vec x\, ' = A\vec x + \vec g$, where 
+\begin{align*}
+ A = \left( \hbox to 2cm{\vbox to 0.85cm{}} \right), \quad \vec g = \left( \hbox to 1.2cm{\vbox to 0.85cm{}} \right)
+\end{align*}
+Fill in the missing entries in the above to define $A$ and $\vec g$. 
+\fi 
+
+\ifnum \Version=6
+\question[5] Solve the following DE. Determine an explicit expression for the solution, $y(t)$. Please show your work. 
+\begin{align*}
+    y'-2y=12t
+\end{align*}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} To solve the first-order linear differential equation we use the method of integrating factors. The integrating factor, \( \mu(t) \), is:
+\[
+\mu(t) = e^{\int p(t) \, dt} = e^{\int -2 \, dt} = e^{-2t}
+\]
+
+Multiply both sides of the DE by the integrating factor and integrate. 
+\begin{align}
+e^{-2t} y' - 2 e^{-2t} y &= 12t e^{-2t}\\
+\frac{d}{dt} \left( e^{-2t} y \right) &= 12t e^{-2t}\\
+\int \frac{d}{dt} \left( e^{-2t} y \right) \, dt &= \int 12t e^{-2t} \, dt\\
+e^{-2t} y &= \int 12t e^{-2t} \, dt
+\end{align}
+To solve the integral on the right-hand side, use integration by parts. Let \( u = 12t \) and \( dv = e^{-2t} dt \). Then \( du = 12 dt \) and \( v = \int e^{-2t} dt = -\frac{1}{2} e^{-2t} \). Using the integration by parts formula \(\int u \, dv = uv - \int v \, du\):
+\begin{align}
+    \int 12t e^{-2t} \, dt &= 12 \int t e^{-2t} \, dt \\
+&= 12 \left[ t \left( -\frac{1}{2} e^{-2t} \right) - \int \left( -\frac{1}{2} e^{-2t} \right) dt \right]\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} + \frac{1}{2} \int e^{-2t} \, dt \right)\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} + \frac{1}{2} \left( -\frac{1}{2} e^{-2t} \right) \right)\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} - \frac{1}{4} e^{-2t} \right)\\
+&= -6t e^{-2t} - 3 e^{-2t}
+\end{align}
+Thus, the general solution to the DE is:
+\begin{align}
+    e^{-2t} y &= -6t e^{-2t} - 3 e^{-2t} + C\\
+y &= -6t - 3 + Ce^{2t}
+\end{align}
+
+} 
+\else 
+\fi
+\fi
+
+\ifnum \Version=7
+\question[5] Solve the following DE. Determine an explicit expression for the solution, $y(t)$. Please show your work. 
+\begin{align*}
+    y'+2y=8t
+\end{align*}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} We can use the method of integrating factors. The integrating factor, \( \mu(t) \), is:
+\[
+\mu(t) = e^{\int p(t) \, dt} = e^{\int 2 \, dt} = e^{2t}
+\]
+Next, multiply both sides of the differential equation by the integrating factor and integrate. 
+\begin{align}
+e^{2t} y' + 2 e^{2t} y &= 8t e^{2t}\\
+\frac{d}{dt} \left( e^{2t} y \right) &= 8t e^{2t}\\
+\int \frac{d}{dt} \left( e^{2t} y \right) \, dt &= \int 8t e^{2t} \, dt\\
+e^{2t} y &= \int 8t e^{2t} \, dt    
+\end{align}
+
+To solve the integral on the right-hand side, use integration by parts. Let \( u = 8t \) and \( dv = e^{2t} dt \). Then \( du = 8 dt \) and \( v = \int e^{2t} dt = \frac{1}{2} e^{2t} \). Using the integration by parts formula \(\int u \, dv = uv - \int v \, du\):
+\begin{align}
+    \int 8t e^{2t} \, dt 
+    &= 8 \left[ t \left( \frac{1}{2} e^{2t} \right) - \int \left( \frac{1}{2} e^{2t} \right) dt \right]\\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{2} \int e^{2t} \, dt \right)\\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{2} \left( \frac{1}{2} e^{2t} \right) \right) \\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{4} e^{2t} \right)\\ 
+    &= 4 t e^{2t} - 2 e^{2t}
+\end{align}
+So,
+\begin{align}
+    e^{2t} y &= 4 t e^{2t} - 2 e^{2t} + C    \\ 
+    y &= 4 t - 2 + C e^{-2t} 
+\end{align}
+
+} 
+\else 
+\fi
+\fi
+
+
+
+\ifnum \Version=8
+\question[5] Solve the following DE. Determine an explicit expression for the solution, $y(t)$. Please show your work. 
+\begin{align*}
+    y'+2y=8t
+\end{align*}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} We can use the method of integrating factors. The integrating factor, \( \mu(t) \), is:
+\[
+\mu(t) = e^{\int p(t) \, dt} = e^{\int 2 \, dt} = e^{2t}
+\]
+Next, multiply both sides of the differential equation by the integrating factor and integrate. 
+\begin{align}
+e^{2t} y' + 2 e^{2t} y &= 8t e^{2t}\\
+\frac{d}{dt} \left( e^{2t} y \right) &= 8t e^{2t}\\
+\int \frac{d}{dt} \left( e^{2t} y \right) \, dt &= \int 8t e^{2t} \, dt\\
+e^{2t} y &= \int 8t e^{2t} \, dt    
+\end{align}
+
+To solve the integral on the right-hand side, use integration by parts. Let \( u = 8t \) and \( dv = e^{2t} dt \). Then \( du = 8 dt \) and \( v = \int e^{2t} dt = \frac{1}{2} e^{2t} \). Using the integration by parts formula \(\int u \, dv = uv - \int v \, du\):
+\begin{align}
+    \int 8t e^{2t} \, dt 
+    &= 8 \left[ t \left( \frac{1}{2} e^{2t} \right) - \int \left( \frac{1}{2} e^{2t} \right) dt \right]\\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{2} \int e^{2t} \, dt \right)\\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{2} \left( \frac{1}{2} e^{2t} \right) \right) \\
+    &= 8 \left( \frac{1}{2} t e^{2t} - \frac{1}{4} e^{2t} \right)\\ 
+    &= 4 t e^{2t} - 2 e^{2t}
+\end{align}
+So,
+\begin{align}
+    e^{2t} y &= 4 t e^{2t} - 2 e^{2t} + C    \\ 
+    y &= 4 t - 2 + C e^{-2t} 
+\end{align}
+
+} 
+\else 
+\fi
+\fi
+
+\ifnum \Version=9
+\question[5] Solve the following DE. Determine an explicit expression for the solution, $y(t)$. Please show your work. 
+\begin{align*}
+    y'-2y=12t
+\end{align*}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} To solve the first-order linear differential equation we use the method of integrating factors. The integrating factor, \( \mu(t) \), is:
+\[
+\mu(t) = e^{\int p(t) \, dt} = e^{\int -2 \, dt} = e^{-2t}
+\]
+
+Multiply both sides of the DE by the integrating factor and integrate. 
+\begin{align}
+e^{-2t} y' - 2 e^{-2t} y &= 12t e^{-2t}\\
+\frac{d}{dt} \left( e^{-2t} y \right) &= 12t e^{-2t}\\
+\int \frac{d}{dt} \left( e^{-2t} y \right) \, dt &= \int 12t e^{-2t} \, dt\\
+e^{-2t} y &= \int 12t e^{-2t} \, dt
+\end{align}
+To solve the integral on the right-hand side, use integration by parts. Let \( u = 12t \) and \( dv = e^{-2t} dt \). Then \( du = 12 dt \) and \( v = \int e^{-2t} dt = -\frac{1}{2} e^{-2t} \). Using the integration by parts formula \(\int u \, dv = uv - \int v \, du\):
+\begin{align}
+    \int 12t e^{-2t} \, dt &= 12 \int t e^{-2t} \, dt \\
+&= 12 \left[ t \left( -\frac{1}{2} e^{-2t} \right) - \int \left( -\frac{1}{2} e^{-2t} \right) dt \right]\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} + \frac{1}{2} \int e^{-2t} \, dt \right)\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} + \frac{1}{2} \left( -\frac{1}{2} e^{-2t} \right) \right)\\
+&= 12 \left( -\frac{1}{2} t e^{-2t} - \frac{1}{4} e^{-2t} \right)\\
+&= -6t e^{-2t} - 3 e^{-2t}
+\end{align}
+Thus, the general solution to the DE is:
+\begin{align}
+    e^{-2t} y &= -6t e^{-2t} - 3 e^{-2t} + C\\
+y &= -6t - 3 + Ce^{2t}
+\end{align}
+
+} 
+\else 
+\fi
+\fi

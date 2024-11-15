@@ -1,0 +1,38 @@
+\begin{enumerate}
+    \item[a)] The Wronskian is
+\begin{align}
+    W = \det \begin{pmatrix} 1&t^2\\0&2t\end{pmatrix} = 2t
+\end{align}
+To apply the formulas for the variation of parameters method for a second order DE we also use
+\begin{align}
+    y_1 & = 1 \\
+    y_2 &= t^2 \\
+    g &= 60t^3 
+\end{align}
+Applying the formulas for $v_1$ and $v_2$ we obtain
+\begin{align}
+    v_1 &= - \int \frac{y_2(t)g(t)}{W[y_1,y_2]}dt = - \int \frac{t^2 \cdot 60t^3}{2t} dt = - \int 30 t^4 \, dt = -6t^5 + k_1\\
+    v_2 &= \int \frac{y_1(t)g(t)}{W[y_1,y_2]} dt = \int \frac{1\cdot60t^3}{2t} dt = \int 30 t^2 \, dt = 10t^3 + k_2
+\end{align}
+The arbitrary constants of integration, $k_1$ and $k_2$, in the above are actually not necessary. In the end they will only produce redundant terms because they are solutions to the homogeneous equation. But it is OK to leave them in the expressions for $v_1$ and $v_2$, in the expression for $y_p$, and the expression for $y$. The expression for $y_p$ becomes
+\begin{align}
+    y_p &= v_1y_1 + v_2y_2 \\
+    &= (-6t^5 + k_1)\cdot 1 + (10t^3 + k_2) t^2 \\
+    &= -6t^5 + k_1 + 10t^5 + k_2 t^2 \\
+    &= 4t^5 + k_1 + k_2t^2
+\end{align}
+It is OK to ignore the terms with the integration constants and leave the solution as
+\begin{align}
+    y_p = v_1y_1 + v_2y_2 = -6t^5  + 10t^5 = 4t^5
+\end{align}
+\item [b)] The general solution to the differential equation is
+\begin{align}
+    y &= y_h + y_p \\
+    &= c_1y_1 + c_2y_2 + v_1y_1 + v_2y_2 \\
+    &= c_1 +c_2t^2 + 4t^5 + k_1  + k_2 t^2
+\end{align}
+Or we can write
+\begin{align}
+    y &= y_h + y_p  = c_1 +c_2t^2 + 4t^5 
+\end{align}
+\end{enumerate}

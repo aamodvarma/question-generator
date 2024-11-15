@@ -1,0 +1,124 @@
+\documentclass[12pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 1 M}
+\newcommand{\TestDate}{June 2019}
+\newcommand{\TestTime}{75 minutes}
+\newcommand{\Duration}{75  }
+\newcommand{\Points}{50 }
+
+
+\begin{document}
+    
+\input{../CMCoverPage}
+
+\newpage
+
+\begin{questions}
+    
+    \newpage 
+    
+    \question[10] %2.5.11 verbatim 
+    Consider the differential equation $\displaystyle \dydt = y^2(y^2 - 2) $, where $y$ is a real function of $t$. 
+    \begin{parts}
+        \part State the critical points of the differential equation. 
+        \vspace{1cm} 
+        \part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable. 
+        \vspace{5cm} 
+        \part Determine where $y$ is concave up and concave down for $y \ge 0$. 
+        \vspace{6cm}
+        \part Using results from parts (a), (b), and (c), sketch several solution curves in the $ty$-plane for $y \ge 0$.
+    \end{parts}    
+    
+    \newpage 
+    \question[10] Solve the following initial value problems. You do not need to calculate an explicit expression for $y$ in terms of $t$. 
+    \begin{parts} 
+    \part $\displaystyle t\dydt = 4y + t^6e^t, \quad y(1) = 1$ 
+    \vspace{10cm} 
+    \part $\displaystyle \frac{dy}{dt}=\frac{t^2}{1+y^2}, \quad y(1) = 1.$ 
+    \end{parts}
+    
+    \newpage
+    \question[10] Suppose $A = \spalignmat{2 -1;3 -2}.$  
+ 	
+   \begin{parts} 
+    
+        \part Determine the eigenvalues of $A$.
+        \vspace{3cm} 
+        
+        \part Determine the eigenvectors of $A$. 
+        \vspace{5cm}
+        
+        \part Express the general solution of the system $\vec x \, ' = A \vec x$ in terms of real valued functions. 
+        \vspace{3cm} 
+        
+        \part Sketch the phase portrait of the system. Do not forget to label your axes.      
+        \vspace{4cm} 
+        
+    \end{parts}
+    
+    \newpage
+    
+    \question[2] %2.4.2 based on
+    State the largest possible interval on which solutions to the IVP are certain to exist. $$t(t-4) \dydt + 7t y = \frac{1}{\sin t}, \quad y(5) = 1$$.    \vspace{3cm}
+    
+    \question[3] % Worksheet 2.3 # 2
+    The population of fish in a lake increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 1,000 fish in the area initially. Predators remove $k$ fish per month. Construct an initial value problem that models the population of fish in the area per year. You do not need to solve your initial value problem. 
+    \vspace{4cm}
+    
+    \question[3] % 
+    Transform the given equation into a system of first order equations. 
+    $$2\dydtt + t^2\dydt +8y = 1$$
+    
+    \vspace{3cm}
+    
+
+    
+
+    
+    \newpage 
+    
+
+    
+    \newpage
+    
+    \question[5] % 3.4 13
+    Consider the homogeneous system $\displaystyle \vec x \, ' = A \vec x = \spalignmat{\alpha, 1;-1, \alpha}\vec x, \ \alpha \in \mathbb R$. 
+    \begin{parts}
+        \part Determine the eigenvalues of $A$ in terms of $\alpha$. 
+        \vspace{5cm} 
+        
+        \part Identify the values of $\alpha$ (if any) where the qualitative nature of phase portrait for system changes. 
+        \vspace{4cm} 
+        
+        \part For each value of $\alpha$ that you listed in part (b), sketch the phase portrait for a value of $\alpha$ that is slightly less than the value(s) that you identified. For example, if you identified only one $\alpha$ value, you need to only give one sketch. Do not forget to label your axes. 
+    \end{parts}
+    
+    \newpage 
+    
+    \question[7] 
+    The eigenvalues of $A = \spalignmat{-1 -4;1 -1}$ are $\lambda = -1 \pm 2i$.  % based on 3.4.1
+ 	
+   \begin{parts} 
+        
+        \part Determine the eigenvectors of $A$. 
+        \vspace{7cm}
+        
+        \part Express the general solution of the system $\vec x \, ' = A \vec x$ in terms of real valued functions. 
+        \vspace{3cm} 
+        
+        \part Sketch the phase portrait of the system.  Do not forget to label your axes.      
+        \vspace{4cm} 
+        
+    \end{parts}
+
+
+    
+\end{questions}
+    
+    \newpage \LastPage 
+
+\end{document}
+

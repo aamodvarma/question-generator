@@ -1,0 +1,146 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 3}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{12 hours }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{8:00 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+\input{2021Spr/coverpage} % cover page for unproctored exam
+
+\newpage
+
+
+
+\begin{questions}
+
+
+
+    \question[10] 
+    Consider the non-linear system below.
+    
+    \[\displaystyle \dxdt = x^2-y/4, \qquad \dydt = 2-y-2x\] % ad hoc  %%% SP21 
+    
+    \begin{parts} 
+        % \part Plot and label the nullclines of the system. Please label your axes. 
+        % \vspace{5cm} 
+        \part Identify all critical points of the system. Show your work. 
+        \vspace{10cm}
+        % \part Compute the Jacobian matrix for the point $(x,y)$. 
+        % \vspace{3cm} 
+        \part Compute the Jacobian matrix. For each critical point you identified in part (a), use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}    
+
+    
+    \newpage
+    
+    \question[10] Use the Laplace transform to solve the following IVP. Please show your work.
+    
+    $$ y''+ 3y' =  u_{2}(t) + u_{3}(t), \quad y(0) = 0, \quad y'(0) = 0$$ % modified version of B&B 5.7#3 adjusted, need to check
+    
+    
+    \newpage 
+    
+    \question[9] Use the Laplace transform to solve the following IVP. Please show your work. 
+
+    $$ y''+ 2y'+ 10 y =  \delta(t - 1) + \delta(t - 2), \quad y(0) = 0, \quad y'(0) = 12$$ % B&B 5.7#1    
+
+    \newpage
+    \question[5] Compute the inverse Laplace transform of the given function using the convolution theorem. You can leave your answer in terms of an integral. 
+    
+    $$F(s) = \frac{s-2}{((s-2)^2+36)(s+12)}$$ % 5.8 #12
+    
+
+
+    
+    \newpage
+    \question[5]
+    $y(t)$ is a periodic function with period $1$. A sketch of $y(t)$ is below.
+    
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2] 
+            \begin{axis}[
+            width=2.25in,
+            height=1.5in,
+            clip=false,
+            axis lines=middle,
+            xmin=-.1,xmax=2.75,
+            ymin=-0.25, ymax=1.5,
+            xtick={0,0.5,1,1.5,2,2.5},
+            xticklabels={0,,1,,2,},
+            ytick={0,0.5,1},
+            yticklabels={0,0.5,1},        
+            axis line style={shorten >=-7.5pt, shorten <=-7.5pt},
+            xlabel=$t$,
+            ylabel=$y(t)$,
+            xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel style={at={(ticklabel* cs:1)},anchor= east},
+            grid style={line width=.2pt, draw=gray!30},
+            grid=both,
+            ]
+            \addplot[black,samples=50,domain=0:0.5,very thick] {1-2*x};% 
+            \addplot[black,samples=50,domain=0.5:1,very thick] {0};% 
+            \addplot[black,samples=50,domain=1:1.5,very thick] {1-2*(x-1)};% 
+            \addplot[black,samples=50,domain=1.5:2,very thick] {0};% 
+            \addplot[black,samples=50,domain=2:2.5,very thick] {1-2*(x-2)};% 
+            \addplot[black,samples=50,domain=2.5:3,very thick] {0};%             
+            \end{axis}
+        \end{tikzpicture} 
+        \end{center}
+        
+        Over the interval from $0$ to $1$, $y(t)$ is given by $$y(t) = \begin{cases} 1-2t, & 0 \le t < \frac12  \\  0 , & \frac12\le t < 1 \end{cases}$$ The function $y$ is defined for $t \ge 0$. Calculate the Laplace transform of the periodic function $y(t)$. Do not leave your work in terms of integrals and show your work. 
+        
+
+    \newpage 
+    \question[1] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}

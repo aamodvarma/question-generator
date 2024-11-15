@@ -1,0 +1,276 @@
+\ifnum \Version=1
+\question[2]{} A 600-liter tank initially contains 200 liters of water containing 10 kilograms of salt. Suppose that salt water flows into the top of the tank at a rate of 10 liters per minute, and the concentration of salt flowing into the tank is 0.1 kg/L. The water in the tank is kept well mixed, and 5 liters per minute are removed from the bottom of the tank. Construct an IVP that models the amount of salt in the tank. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Let $y$ be the amount of salt in the tank at time $t$, and $V$ be the volume of fluid in the tank at time $t$. Then $V = 200+5t$
+\begin{align}
+    \dydt 
+    &= \left(\text{rate in}\right) - \left(\text{rate out}\right) \\
+    &=10\cdot 0.1 - \frac{y}{V}\cdot 5 \\
+    &= 1 - \frac{5y}{200+5t}
+\end{align}
+The IVP is
+\begin{align}
+    \dydt + \frac{5y}{200+5t} = 1, \quad y(0) = 10
+\end{align}
+} 
+\else 
+\vspace{3cm}
+\fi
+
+\question[5] Consider the system $\displaystyle \vec x \, ' = A\vec x, \quad A = \begin{pmatrix} 1 & 1 \\ 4 & -2 \end{pmatrix}, \quad \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $. 
+\begin{parts}
+   \part Determine the eigenvalues and eigenvectors of $A$. Please show your work. 
+   \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    Eigenvalues:
+    \begin{align}
+        0 = \text{det}\left( A - \lambda I \right) = (1-\lambda)(-2-\lambda)-4 = \lambda^2 + \lambda -6 = (\lambda +3)(\lambda -2)
+    \end{align} 
+    Therefore $\lambda_1 = -3$, $\lambda_2 = 2$. Eigenvectors:
+    $$A - \lambda_1 I = \begin{pmatrix} 4&1\\4&1\end{pmatrix} \quad \Rightarrow \quad \mathbf v_1 = \begin{pmatrix} -1\\ 4 \end{pmatrix}$$
+    and
+    $$A - \lambda_2 I = \begin{pmatrix} -1&1\\4&-4\end{pmatrix} \quad \Rightarrow \quad \mathbf v_2 = \begin{pmatrix} 1\\ 1 \end{pmatrix}$$
+    } 
+    \else 
+    \vspace{5cm}
+    \fi
+        \part Write down the general solution to the system of differential equations. 
+        \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        General solution is
+        $$\displaystyle \mathbf x(t) = C_1 e ^{-3t} \begin{pmatrix} -1\\ 4 \end{pmatrix} + C_2 e ^ {2t} \begin{pmatrix} 1\\ 1 \end{pmatrix}. $$
+    } 
+    \else 
+    \vspace{2cm}
+    \fi
+    \part There is a critical point at the origin. Classify the critical point according to stability and type.
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+    The critical point is an unstable saddle.
+    } 
+    \else 
+    \vspace{1cm}
+    \fi    
+    \part Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \node[overlay, below] at (3, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 3) {$y$};       
+    \end{tikzpicture}
+    \end{center}
+\end{parts}
+
+
+\fi
+
+
+\ifnum \Version=2
+\question[3] Consider the system $\displaystyle \vec x \, ' = A\vec x, \ A = \begin{pmatrix} 1&-1\\5&-1 \end{pmatrix}, \ \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $.
+\begin{parts}
+    \part Determine the eigenvalues of $A$. Please show your work. 
+    \ifnum \Solutions=0 \vspace{7cm} \fi
+    \part Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves. \begin{center}
+\begin{tikzpicture}[scale=0.75]
+\draw[very thick, ->] (-3, 0) -- (3.25, 0);
+\draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \node[overlay, below] at (3, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 3) {$y$};     
+\end{tikzpicture}
+\end{center}
+\part Classify the critical point at the origin according to its stability and type. 
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Solution has three parts.
+\begin{enumerate}
+    \item Eigenvalues are roots of the characteristic polynomial:
+\begin{align}
+    \text{det}\left(A - \lambda I\right) &= (1-\lambda)(-1- \lambda) + 5 =\lambda^2 + 4
+\end{align}
+Thus $\lambda = \pm 2i$. 
+\item The phase portrait should show counterclockwise trajectories moving along ellipsoids or circles. It is ok to sketch them as circles. 
+\item The critical point is a \textbf{stable center} or \textbf{stable circle}.  If students write that the critical point is \textbf{asymptotically stable} they are incorrect, but for the purposes of this course it is ok to write asymptotically stable. We didn't actually require that students distinguish between stable and asymptotically stable on any homework, test, or quizzes leading up to the final exam. Also, writing \textbf{semi-stable is incorrect}, as we did not have a definition for semi-stable for critical points for two-dimensional systems. 
+\end{enumerate}
+
+
+} 
+\else 
+\vspace{1cm}
+\fi
+
+\question[2]{} The population of fish in a certain area increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 1,000 fish in the area initially, and 500 fish are removed from the population each year because of predators. Construct an IVP that models the population of fish. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Let $y(t)$ be the population at time $t$. Then 
+$$\dydt = ky - 500, \ y(0) = 1000$$
+To determine $k$, use the exponential growth model $y = c_0e^{kt}$, so 
+\begin{align}
+    y(1) & = 2y(0) \\
+    c_0e^{k\cdot1} &= 2c_0e^{k\cdot0} \\
+    e^{k} &= 2 \\
+    k &= \ln 2
+\end{align}
+The IVP is 
+$$\dydt = (\ln2 )y - 500, \ y(0) = 1000$$
+} 
+\else 
+\fi
+\fi
+
+
+\ifnum \Version=3
+\question[3] Consider the system $\displaystyle \vec x \, ' = A\vec x, \ A = \begin{pmatrix} 1&-2\\1&3 \end{pmatrix}, \ \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $.
+\begin{parts}
+   \part Determine the eigenvalues of $A$. Please show your work. 
+    \ifnum \Solutions=0 \vspace{7cm} \fi   
+    \part Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves.  \begin{center}
+\begin{tikzpicture}[scale=0.75]
+\draw[very thick, ->] (-3, 0) -- (3.25, 0);
+\draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \node[overlay, below] at (3, -0.2) {$x$};
+    \node[overlay, below] at (-0.6, 3) {$y$};     
+\end{tikzpicture}
+\end{center}
+\part Classify the critical point at the origin according to its stability and type. 
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Eigenvalues are roots of the characteristic polynomial:
+\begin{align}
+    \text{det}\left(A - \lambda I\right) &= (1-\lambda)(3 - \lambda) + 2 =\lambda^2 - 4\lambda + 5 \\
+    \lambda &= \frac{4}{2} \pm \frac12 \sqrt{4^2 - 4\cdot5} = 2 \pm i 
+\end{align}
+Thus $\lambda =  2\pm i$. The phase portrait should show counterclockwise trajectories moving along spirals. The critical point is an unstable spiral.  
+
+} 
+\else 
+\vspace{1cm}
+\fi
+
+
+
+\question[2]{} The population of birds in a certain area increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 2,000 birds in the area initially, and 500 birds are removed from the population each year because of predators. Construct an IVP that models the population of birds. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Let $y(t)$ be the population at time $t$. Then 
+$$\dydt = ky - 500, \ y(0) = 2000$$
+To determine $k$, use the exponential growth model $y = c_0e^{kt}$, so 
+\begin{align}
+    y(1) & = 2y(0) \\
+    c_0e^{k\cdot1} &= 2c_0e^{k\cdot0} \\
+    e^{k} &= 2 \\
+    k &= \ln 2
+\end{align}
+The IVP is 
+$$\dydt = \ln2 y - 500, \ y(0) = 2000$$
+} 
+\else 
+\fi
+\fi
+
+
+
+\ifnum \Version=4
+\setlength{\extrarowheight}{0.0cm}
+\question[3] Consider the system $\displaystyle \vec x \, ' = A\vec x, \ A = \begin{pmatrix} -2&-1\\1&-1 \end{pmatrix}, \ \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $.
+\begin{parts}
+   \part Determine the eigenvalues of $A$. Please show your work. \vspace{6cm}
+    \part Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves and label your axes.  \begin{center}
+\begin{tikzpicture}[scale=0.85]
+\draw[very thick, ->] (-3, 0) -- (3.25, 0);
+\draw[very thick, ->] (0, -3) -- (0, 3.25);
+\end{tikzpicture}
+\end{center}
+\end{parts}
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Eigenvalues are roots of the characteristic polynomial:
+\begin{align}
+    \text{det}\left(A - \lambda I\right) &= (-2-\lambda)(-1 - \lambda) + 1 =\lambda^2 + 3\lambda + 3 \\
+    \lambda &= -\frac{3}{2} \pm \frac12 \sqrt{3^2 - 4\cdot3} = 2 \pm i \sqrt3/2
+\end{align}
+Thus $\lambda =  2\pm i\sqrt3/2$. The phase portrait should show counterclockwise trajectories moving along spirals towards origin. The critical point is a stable spiral.  
+
+} 
+\else 
+\vspace{1cm}
+\fi
+
+\question[2]{} The population of rabbits in a certain area increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 1,500 rabbits in the area initially, and 100 rabbits are removed from the population each year because of predators. Construct an IVP that models the population of rabbits. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Let $y(t)$ be the population at time $t$. Then 
+$$\dydt = ky - 100, \ y(0) = 1500$$
+To determine $k$, use the exponential growth model $y = c_0e^{kt}$, so 
+\begin{align}
+    y(1) & = 2y(0) \\
+    c_0e^{k\cdot1} &= 2c_0e^{k\cdot0} \\
+    e^{k} &= 2 \\
+    k &= \ln 2
+\end{align}
+The IVP is 
+$$\dydt = \ln2 y - 100, \ y(0) = 1500$$
+} 
+\else 
+\fi
+\fi
+
+
+\ifnum \Version=5
+\question[2] Consider the system $\displaystyle \vec x \, ' = A\vec x, \ A = \begin{pmatrix} 0&-1\\5&-2 \end{pmatrix}, \ \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $.
+\begin{parts}
+   \part Determine the eigenvalues of $A$. Please show your work. \vspace{6cm}
+    \part Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves and label your axes.  \begin{center}
+\begin{tikzpicture}[scale=0.85]
+\draw[very thick, ->] (-3, 0) -- (3.25, 0);
+\draw[very thick, ->] (0, -3) -- (0, 3.25);
+\end{tikzpicture}
+\end{center}
+\end{parts}
+\question[2]{} The population of fish in a certain area increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 1,000 fish in the area initially, and 500 fish are removed from the population each year because of predators. Construct an IVP that models the population of fish. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+\fi
+
+
+
+\ifnum \Version=6
+\newpage
+\question[2]{} A 600-liter tank initially contains 400 liters of water containing 10 kilograms of salt. Suppose that salt water flows into the top of the tank at a rate of 10 liters per minute, and the concentration of salt flowing into the tank is 0.2 kg/L. The water in the tank is kept well mixed, and fluid is removed from the bottom of the tank at a rate of 2 liters per minute. Construct an IVP that models the amount of salt in the tank. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Let $y$ be the amount of salt in the tank at time $t$, and $V$ be the volume of fluid in the tank at time $t$. Then $V = 400+8t$
+\begin{align}
+    \dydt 
+    &= \left(\text{rate in}\right) - \left(\text{rate out}\right) \\
+    &=10\cdot 0.2 - \frac{y}{V}\cdot 2 \\
+    &= 2 - \frac{2y}{400+8t}
+\end{align}
+The IVP is
+\begin{align}
+    \dydt + \frac{2y}{400+8t} = 2, \quad y(0) = 10
+\end{align}
+If you prefer can also use
+\begin{align}
+    \dydt + \frac{y}{200+4t} = 2, \quad y(0) = 10
+\end{align}
+} 
+\else 
+\vspace{8cm}
+\fi
+\fi
+
+
+\ifnum \Version=7
+\newpage
+\question[2]{} The population of birds in a certain area increases at a rate proportional to the current population, and in the absence of other factors, the population doubles each year. There are 2,500 birds in the area initially, and 100 birds are removed from the population each year because of predators. Construct an IVP that models the population of birds. You do not need to solve the DE in your IVP. But determine the values of any parameters in your model. 
+    \ifnum \Solutions=1 {\color{DarkBlue} 
+    Let $y(t)$ be the population at time $t$. Then 
+    $$\dydt = ky - 500, \ y(0) = 2000$$
+    To determine $k$, use the exponential growth model $y = c_0e^{kt}$, so 
+    \begin{align}
+        y(1) & = 2y(0) \\
+        c_0e^{k\cdot1} &= 2c_0e^{k\cdot0} \\
+        e^{k} &= 2 \\
+        k &= \ln 2
+    \end{align}
+    The IVP is 
+    $$\dydt = \ln(2) \cdot y - 100, \ y(0) = 2500$$
+    } 
+    \else 
+    \vspace{8cm}
+    \fi
+\fi

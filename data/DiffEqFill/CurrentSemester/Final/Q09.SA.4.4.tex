@@ -1,0 +1,111 @@
+\ifnum \Version=1
+\question[2] A spring is hung from a horizontal surface as in the figure below. A mass of $m=0.4$ kg stretches the spring 0.08 m. Frictional forces also exert a force on the mass while it is moving that is proportional to the velocity of the mass. The proportionality constant for these frictional forces is 3 N s/m. The mass is then pulled down an additional 0.07 m and then released with an initial velocity of $1$ m/s. Assume that position of the mass, $y$, increases as the mass moves down. Write down an IVP based on this physical description that describes the position of the mass $y(t)$, as a function of time, $t$. You do not need to solve your IVP. You may use $g=10 m/s^2$.  \\[4pt]
+\input{CurrentSemester/Macros/2_DiagramSpringMass}
+
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+To determine the spring constant we use Hooks law, 
+$$F = mg  = kx \quad \Rightarrow \quad 0.4g = 0.08k \quad \Rightarrow \quad k = 5g$$
+We can use $g=10$ or $g=9.8$. The equation of motion is $my''+\gamma y' + ky = f(t)$.
+But $m=0.4, \gamma = 3, f(t) = 0$, so the IVP is
+$$0.4y'' + 3 y' + 5gy = 0, \quad y(0) = 0.07, \quad y'(0) = 1$$
+Don't forget that we need to include the initial conditions to have a complete initial value problem.
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+
+
+\ifnum \Version=2
+\question[2] A small car with mass $m = 0.2$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $4$ N when it is extended a distance of $0.8$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.6$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 0.5t$ N. The car is released from rest after it is moved 0.05 m to the left of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+% \input{2023Summer/Quiz4/DiagramCar}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Spring constant: $F = kL$ implies $4 = 0.8k$, so $k = \frac{4}{0.8} = 5$. Then the IVP is
+\begin{align}
+    my'' + \gamma y' + ky &= F, \quad y(0) = -0.05, \quad y'(0) = 0 \\
+    0.2y'' + 0.6 y' + 5y &= 0.5t, \quad y(0) = -0.05, \quad y'(0) = 0 
+\end{align}
+} 
+\else 
+\fi
+\fi 
+
+
+
+\ifnum \Version=3
+\question[2] A small car with mass $m = 0.4$ kg is moving along a straight line on a horizontal surface. The car is attached to a spring. The spring exerts a force of $2$ N when it is extended a distance of $0.4$ meters from its equilibrium position. Frictional forces also exert a force on the car while it is moving that is proportional to the velocity of the car. The proportionality constant for these frictional forces is $0.3$ N s/m. The car also has an engine that pushes the car forward with a force of $F = 0.5t$ N. The car is released from rest after it is moved 0.01 m to the left of its equilibrium position. Assume that position of the car, $y$, increases as the car move to the right. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. You do not need to solve your IVP. \\
+\input{2023Summer/Quiz4/DiagramCar}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Spring constant: $F = kL$ implies $2 = 0.4k$, so $k = \frac{2}{0.4} = 5$. Then the IVP is
+\begin{align}
+    my'' + \gamma y' + ky &= F, \quad y(0) = -0.01, \quad y'(0) = 0 \\
+    0.4y'' + 0.3 y' + 5y &= 0.5t, \quad y(0) = -0.01, \quad y'(0) = 0 
+\end{align}
+} 
+\else 
+\fi
+\fi 
+
+
+
+
+\ifnum \Version=4
+\question[2] A spring is hung from a horizontal surface as in the figure below. A mass of $m=0.2$ kg stretches the spring 0.04 m. Frictional forces also exert a force on the mass while it is moving that is proportional to the velocity of the mass. The proportionality constant for these frictional forces is 2 N s/m. The mass is then pulled down an additional 0.03 m and then released from rest. Assume that position of the mass, $y$, increases as the mass moves down. Write down an IVP based on this physical description that describes the position of the mass $y(t)$, as a function of time, $t$. You do not need to solve your IVP. You may use $g = 10$ m/s$^2$. \\[4pt]
+\input{CurrentSemester/Macros/2_DiagramSpringMass}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+Spring constant: $mg = kL$ implies $0.2 \cdot g = 0.04k$, so $k = \frac{0.2g}{0.04} = 5g$. Then the IVP is
+\begin{align}
+    my'' + \gamma y' + ky &= F, \quad y(0) = 0.03, \quad y'(0) = 0 \\
+    0.2y'' + 2 y' + 5gy &= 0.5t, \quad y(0) = 0.03, \quad y'(0) = 0 
+\end{align}
+} 
+\else \vspace{2cm}
+\fi
+\fi 
+
+
+
+
+\ifnum \Version=6
+\question[2] A toy car with mass $m = 0.4$ kg is moving along a straight line on a horizontal surface. See diagram below. The car is attached to a spring. The spring exerts a force of $2.5$ N when it is extended a distance of $0.1$ meters from its equilibrium position. There are no frictional or resistive forces. The car has an engine that pushes the car forward with a force of $F = 0.5$ N for $0 \le t < 1$. At $t = 1$ the engine switches off. The car is released from rest after it is moved 0.01 m to the left of its equilibrium position. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. Do not solve your IVP but determine the values of any parameters in your DE. Assume that position of the car, $y$, increases as the car moves to the right. Express $F$ using step and/or indicator functions. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} spring constant:
+$$F = kx \quad \Rightarrow \quad k = \frac{2.5}{0.1} = 25$$
+General form of damped forced oscillator:
+$$my'' + \gamma y' + ky = F$$
+Using given information and initial conditions, the IVP is
+\begin{align}
+    0.4 y'' + 25y = 0.5u_{0,1}, \quad y(0) = -0.01, \quad y'(0) = 0
+\end{align}
+} 
+\else 
+\vfill
+\fi
+\fi 
+
+
+\ifnum \Version=7
+\question[2] A toy car with mass $m = 0.3$ kg is moving along a straight line on a horizontal surface. See diagram below. The car is attached to a spring. The spring exerts a force of $2.5$ N when it is extended a distance of $0.1$ meters from its equilibrium position. There are no frictional or resistive forces. The car has an engine that pushes the car forward with a force of $F = 0.7$ N for $0 \le t < 2$. At $t = 2$ the engine switches off. The car is released from rest after it is moved 0.01 m to the left of its equilibrium position. Write down the IVP based on this physical description that describes the position of the car as a function of time, $t$. Do not solve your IVP but determine the values of any parameters in your DE. Assume that position of the car, $y$, increases as the car moves to the right. Express $F$ using step and/or indicator functions. \\
+\input{CurrentSemester/Macros/2_DiagramCar}
+
+\ifnum \Solutions=1 {\color{DarkBlue} 
+\textbf{Solutions:} spring constant:
+$$F = kx \quad \Rightarrow \quad k = \frac{2.5}{0.1} = 25$$
+General form of damped forced oscillator:
+$$my'' + \gamma y' + ky = F$$
+Using given information and initial conditions, the IVP is
+\begin{align}
+    0.3 y'' + 25y = 0.7u_{0,2}, \quad y(0) = -0.01, \quad y'(0) = 0
+\end{align}
+} 
+\else 
+\vfill
+\fi
+\fi 
+

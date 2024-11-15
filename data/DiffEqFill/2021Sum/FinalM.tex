@@ -1,0 +1,230 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Final Exam M}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{ }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{170 minutes after the exam starts.}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+
+\begin{document}
+    
+
+\input{2021Spr/coverpage} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+
+    \question[2] Convert the fourth order DE to a first order system. Express your system in the form $\vec x \, ' = A\vec x +\vec b$. 
+    $$y^{(4)}- 2 y'' -3ty'+4y = e^{-t}$$
+    \vspace{6cm}
+    
+    \question[1] State whether the following differential equation is linear or non-linear, separable or not separable, and whether it is autonomous or not autonomous. 
+    $$t^2\dydt + \sin(t) y = 0$$
+    \vspace{2cm}
+
+    \question[4] Determine a suitable form for the particular solution, \(y_p(t)\), if the method of undetermined coefficients is to be used. 
+    $$y''+ 15y'+36y = 4\cos(3t)+2e^{-12t}+5t^2$$  
+    
+    
+    \newpage 
+    \question[3]  Consider the system $$\vec x \, ' = A\vec x, \quad A = \begin{pmatrix} 1&-2\\2&-3 \end{pmatrix}, \quad \vec x = \begin{pmatrix} x(t)\\y(t)\end{pmatrix} $$ Sketch the phase portrait of the system. Please indicate the direction of motion on your solution curves, and do not forget to label your axes. Please show your work.
+    \vspace{5cm}
+    
+    
+    
+    
+    
+
+    % \newpage 
+    % \question[10] Use the variation of parameters method to identify the general solution to \[\vec{x} \, ' = \left( \begin{array}{rr} -5 & 2 \\ 2 & -2 \end{array} \right) \vec{x}  +  \begin{pmatrix} 60\\ 0 \end{pmatrix} . \]
+    % Please show your work.
+    
+    
+    \newpage 
+    \question[10] Use the Laplace transform to solve the following IVP. Please show your work. 
+
+    $$ y''+ 4y =  g(t), \quad y(0) = 1, \quad y'(0) = 0, \quad g(t) = \begin{cases} 2t & 0 \le t < 3  \\ 6 & 3 \leq t  \end{cases}$$ % B&B 5.7#9 modified
+    
+    \newpage 
+    \question[10] 
+    Consider the non-linear system below.
+    \[\displaystyle \dxdt = y^2-x^2, \qquad \dydt = 3-y-2x\] % ad hoc  %%% SP21 
+    \begin{parts} 
+        % \part Plot and label the nullclines of the system. Please label your axes. 
+        % \vspace{7cm} 
+        \part Identify all critical points of the system. Show your work. 
+        \vspace{7cm}
+
+        \part (Question 7 continued) Compute the Jacobian matrix. For each critical point you identified in part (a), use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}    
+    
+
+    \newpage
+
+   \question[8] 
+    Consider a one-dimensional lattice consisting of $3$ lattice points, as shown in the figure below.
+    
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{scope}[->,>=stealth',shorten >=1pt,auto,node distance=1.75cm,thick, main node/.style={circle,fill=gray!10,draw}]
+            \node[main node] (1) {$x_1$};
+            \node[main node] (2) [right of=1] {$x_2$};
+            \node[main node] (3) [right of=2] {$x_3$};
+            \path[every node/.style={font=\sffamily\small}]
+            (1) edge node[below] {} (2)
+            (2) edge node [above] {} (3)
+            (3) edge node [above] {} (2);
+            %edge node[right] {} (5)
+            %(4) edge node [above] {} (5)
+            %(4) edge node [above] {} (5);
+            \end{scope}
+        \end{tikzpicture}  
+    \end{center}  
+    
+    Let $x_j(t)$ be the number of particles residing at the $j$th lattice point at time $t$. Assume that $x_j$ satisfies the following rate equations.
+    \begin{align*} 
+        \frac{dx_1(t)}{dt} &= -kx_1 \\
+        \frac{dx_2(t)}{dt} &= kx_1 + k(x_3 - x_2) \\
+        \frac{dx_3(t)}{dt} &= k(x_2 - x_3) 
+    \end{align*} % {{-2,1,0,1},{1,-3,1,1},{0,1,-2,1},{1,1,1,-3}}
+    Assume $k > 0$ and $t \ge 0$. 
+    \begin{parts} 
+        \part Express the system of equations in the form $\vec x \, ' = A \vec x$. \vspace{2cm}
+        \part The eigenvalues of $A$ are $0, -1, -2$.   Compute the eigenvectors of $A$. Show your work. 
+        \newpage 
+        \part (previous question continued) Use your results from parts (a) and (b) to determine the solution to the IVP $$\vec x \, ' = A \vec x, \quad \vec x(0) = \begin{pmatrix}1\\0\\0 \end{pmatrix}.$$
+        Show your work. 
+        \vspace{16cm}
+        \part Use your results from part (c) to determine what $\vec x$ converges to as $t \to \infty$.
+    \end{parts}
+
+
+    % \newpage 
+
+    % \question[5] Solve the following initial value problem. Obtain an explicit expression for $y(t)$ Show your work. 
+    % $$t^2y' - 6ty = 3t^3+14, \quad t \ge 0, \quad y(1) = 4$$
+
+    
+
+    
+    
+    
+    \newpage 
+    \question[10] %2.5.11 verbatim 
+    Consider the differential equation $\displaystyle \dydt = \frac12y(y-\frac12)^2$, where $y$ is a real function of $t$, and $t \ge 0$, and $k>0$. 
+    \begin{parts}
+        \part State the critical points of the differential equation.  \vspace{1cm} 
+        \part Draw the phase line, and determine whether the critical points (if any) are stable, semi-stable, or unstable. Show your work. 
+        \vspace{6cm}
+        \part Determine where $y$ is concave up and concave down for $y \ge 0$. Show your work. 
+        \vspace{6cm}
+        \part Using results from parts (a), (b), and (c) to sketch several solution curves in the $ty$-plane for $t \ge 0$. 
+    \end{parts}
+    
+    
+
+
+
+    \newpage 
+    \question[8] Consider the linear system. $$\vec x \, ' = A \vec x, \quad A = \begin{pmatrix} 8&-2\\2&4 \end{pmatrix}, \quad \vec x = \vec x(t) = \begin{pmatrix} x_1(t) \\ x_2(t) \end{pmatrix}$$
+    \begin{parts}
+        \part[4] Determine the eigenvalues and eigenvectors of $A$. Show your work. \vspace{8cm}
+        \part[4] Express the general solution of the system in terms of real valued functions.
+        \vspace{8cm} 
+        % % \newpage 
+        % \part[3] Sketch the phase portrait of the system. Please include the eigenspaces in your sketch, indicate the direction of motion of your solution curves and eigenspaces, and do not forget to label your axes.      
+        % \vspace{4cm} 
+    \end{parts}
+
+
+
+    \newpage 
+    \question[10] Solve the IVP using the method of undetermined coefficients.
+    $$y''+20y'=324te^{-2t}, \quad y(0)=0, \quad y'(0) = 1$$
+    
+    
+
+
+
+
+
+
+
+
+    \newpage 
+
+    \question[3] % ad hoc
+    Consider the homogeneous system $\displaystyle \vec x \, ' = A \vec x = \spalignmat{\alpha, -1;1, \alpha}\vec x, \ \alpha \in \mathbb R$. 
+    \begin{parts}
+        \part Determine the eigenvalues of $A$ in terms of $\alpha$. 
+        \vspace{5cm} 
+        
+        \part Identify the values of $\alpha$ (if any) where the qualitative nature of phase portrait for system changes. 
+        \vspace{4cm} 
+        
+        \part For one value of $\alpha$ that you listed in part (b), sketch the phase portrait for a value of $\alpha$ that is less than the value that you identified, and one phase portrait for a value of $\alpha$ that is greater than the value you identified. Indicate the value of $\alpha$ that you selected and do not forget to label your axes. Indicate the direction of motion in your phase plane trajectories. 
+    \end{parts}
+    
+
+
+
+    \newpage 
+    \question[1] One point will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}
+
+
+
+\end{document}

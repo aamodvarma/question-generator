@@ -1,0 +1,101 @@
+\documentclass[12pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{MATH 2552 Participation Activity 3: Test 1 Review} \fi
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% % ADJUST MARGINS
+% \usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+% \geometry{margin=0.76in}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{ }{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 12pt % space between header and top of body
+
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\begin{questions}
+
+    \question[4] Suppose that the position of an object, $y(t)$, at time $t$ can be modeled with
+    \begin{align}
+        \dydtt + 4 \dydt + ky = 0, \quad y(0) = y_0, \quad y'(0) = y_1
+    \end{align} 
+    Assume that the constant $k$ can be any real number. 
+\begin{enumerate}[label=\alph*)]
+        \item Express the DE as a 1$^{st}$ order system $\vec x \, ' = A\vec x$ and determine the eigenvalues of $A$. \vspace{3cm}
+        \item Sketch the phase diagrams for the cases where $k = 3$ and $k = 8$. 
+        \vspace{12pt}
+            \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+        \node[overlay, above] at (0, 3.3) {$k = 3$};    
+    \end{tikzpicture}  \qquad  \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+        \node[overlay, above] at (0, 3.3) {$k = 8$};    
+    \end{tikzpicture}
+    \end{center}
+        \item The system $\vec x \, ' = A \vec x$ has a critical point at the origin. Determine the values of $k$ where the stability and/or type of the critical point changes. 
+    \end{enumerate} 
+    \newpage  
+
+
+\vfill 
+\question Sketch the phase diagrams for the following systems. The eigenvectors and/or eigenvalues of $A$ are given in each case. Classify the critical point in terms of stability and type in each case. Don't forget to label your axes. 
+\begin{parts}
+    \part $\vec x \, ' = A \vec x$, $\lambda_1 = 1$, $\vec v_1 = \begin{pmatrix} 2\\1\end{pmatrix}$, $\lambda_2 = 4$, $\vec v_2 = \begin{pmatrix} 1\\-2\end{pmatrix}$.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \end{tikzpicture} 
+    \end{center}
+    \part $\vec x \, ' = A \vec x$, $\lambda = 4 \pm i$, $A = \begin{pmatrix} 5&-2\\1&3\end{pmatrix}$.
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \end{tikzpicture} 
+    \end{center}
+    \part $\vec x \, ' = A \vec x$, $\lambda = -3$, $A = \begin{pmatrix} 1&-4\\4&-7\end{pmatrix}$, $A$ is defective. 
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+    \draw[very thick, ->] (-3, 0) -- (3.25, 0);
+    \draw[very thick, ->] (0, -3) -- (0, 3.25);
+    \end{tikzpicture} 
+    \end{center}    
+\end{parts}
+\end{questions}
+
+\end{document}
+
+

@@ -1,0 +1,227 @@
+\documentclass[11pt]{exam}
+
+\input{../CMPreamble.tex}
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Final Exam}
+\newcommand{\TestDate}{Apr 23 at 8:00 am}
+\newcommand{\TestTime}{4.5 hrs}
+\newcommand{\Duration}{270  }
+\newcommand{\Points}{70 }
+
+
+\begin{document}
+    
+    
+\input{../CoverCovid}
+
+\vspace{1cm}
+\begin{center}
+    A TABLE OF LAPLACE TRANSFORMS IS ON THE LAST PAGE
+\end{center}
+
+
+\newpage \InitialsRight
+
+\begin{questions}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    \question[6] % 5.8.9
+    Compute the inverse Laplace transform of $F(s)$ using the convolution theorem. You may leave your answer in terms of an integral in the $t$ domain. 
+    
+    $$F(s) = \frac{1}{(s+3)^4(s^2+4)}$$  % A
+    % $$F(s) = \frac{s}{(s+4)^3(s^2+16)}$$  % Q
+    
+    \vspace{8cm} 
+    
+    \question[2] % 8.1.11 and 13
+    Use one iteration of the Euler method to estimate the solution to the IVP at the point $t = 0.1$. 
+    $$y' = \frac t2 + 5\sqrt y, \quad y(0) = 4$$ % 11, A
+    % $$y' = \frac{4 - ty}{5 + y^2}, \quad y(0) = 2$$ % 13, Q
+    
+    
+    
+\newpage \InitialsLeft
+
+    \question[6] Consider the linear system of first order differential equations $\displaystyle \mathbf x \, ' = A \mathbf x$, where $A$ has eigenvalues and eigenvectors 
+    $$\lambda_1 = 0, \ \mathbf v_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, 
+    \quad \lambda _2 = -1 , \  \mathbf v_2 = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix}, 
+    \quad \lambda _3 = -1 , \  \mathbf v_3 = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix} 
+    $$
+    % FROM WS 3.3 AND 6.2 
+    
+    \begin{enumerate}[label=\roman*)]
+      \item Identify three solutions to the system, $\mathbf x_1(t)$, $\mathbf x_2(t)$, and $\mathbf x_3(t)$. 
+      \vspace{3cm} 
+      \item Use a determinant to identify values of $t$, if any, where $\mathbf x_1$, $\mathbf x_2$, and $\mathbf x_3$ form a fundamental set of solutions. You may assume that they are solutions to $\mathbf x \, ' = A\mathbf x$. 
+      \vspace{3cm}
+      \item Given the initial value $\mathbf x(0) = \begin{pmatrix}0\\2\\0\end{pmatrix}$, give a solution to the IVP.  
+      
+    \end{enumerate}    
+    
+    \newpage \InitialsLeft
+    \question[6] Solve the following IVP using the Laplace Transform. 
+        $$y''-y=-k\delta(t-3), \quad y(0)=2,\quad y'(0)=4, \quad k \in \mathbb R$$  % Worksheet 5.7 # 1
+      
+    
+    
+    
+\newpage \InitialsRight
+    \question[10] 
+    Consider the system $\displaystyle \frac{dx}{dt} = \frac32 x - x^2 - \frac{xy}{2} , \quad \frac{dy}{dt} = 2y - \frac 32 xy - \frac{y^2}{2}$. % A HW7.2#1
+    
+    \begin{parts} 
+        \part Identify all critical points of the system.
+        \vspace{7cm}
+        \part For each critical point, use eigenvalues to classify the critical points according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+    \end{parts}    
+\newpage \InitialsLeft \\ \LastPage     
+    
+
+% \newpage \InitialsRight
+
+%     \question[8] Solve the following IVP using the Laplace Transform. 
+%         $$y'' - 2y'  + 2y =\cos t, \quad y(0)=1,\quad y'(0)=0$$  % HW 5.4.8
+  
+    
+    
+    
+\newpage \InitialsLeft
+    \question[2] State the longest interval, if any, in which the given IVP is certain to have a unique, twice-differentiable solution. Do not attempt to solve the differential equation. 
+    
+    $$\sqrt{ t-4} \, y''+3ty'+4y=2\ln(7 - t),\quad y(3)=0,\ y'(3)=-1$$ % 4.1.1 WS, A
+    % $$\ln (4 - t) \, y''+\frac{t}{t^2-25}y'+y=0, \quad y(1)=4,\ y'(1)=1$$ % 4.1.1 WS Q
+    
+    \vspace{2cm} 
+
+    % \question[8] 
+    % Consider the IVP 
+    % $$y' - 2 t = t + 2e^t, \quad y(0) = y_0$$ % 2.2.31 A
+    % \begin{parts} 
+    %     \part Solve the IVP. \vspace{8cm}
+    %     \part Determine the value of $y_0$ that separates solutions that grow positively as $t \to \infty$ to those that grow negatively. 
+    % \end{parts}
+            
+
+    
+
+    
+    
+% \newpage \InitialsRight
+
+    \question[6] A 2 kg mass stretches a spring 1 meter. The mass is pushed upward, contracting the spring a distance of 0.2 meters, and then set in motion with an upward velocity of 5 m/s. There is no damping. Set up the IVP and solve it. You may use that the acceleration due to gravity is $g = 10$ m/s$^2$. % \vspace{9cm} \part[1] What is the frequency of the motion? It is not necessary to specify units. \vspace{1cm} \part[3] Sketch the phase portrait for this system. Include the trajectory, $\vec r(t)$, in the phase portrait that corresponds to the initial conditions. Clearly label this trajectory and do not forget to label your axes.  \end{parts} 
+    % 4.4# 6a or 7, or midterm 2A #3
+    
+    
+    
+\newpage \InitialsLeft
+
+    \question[10] % 
+    Suppose $\vec x \, ' = A \vec x$, where $A$ is the $2\times 2$ matrix 
+    $$A = \spalignmat{1 -1;1 3}$$
+    \begin{parts} 
+    
+        \part Determine the eigenvalues and eigenvectors of $A$. 
+        \vspace{5cm}
+        \part Express the general solution of $\vec x \, ' = A \vec x$ in terms of real valued functions. 
+        \vspace{8cm} 
+        \part Sketch the phase portrait of the system. Do not forget to label your axes.      
+        \vspace{1cm} 
+    \end{parts}    
+    
+
+    
+
+    
+\newpage \InitialsRight
+
+    \question[10] Consider the autonomous differential equation 
+    $$\dydt = y(k - y), \quad t \ge 0, \quad k  > 0$$  % 1.2,9 and 2.5, A 
+    \begin{enumerate}[label=(\roman*)]
+        \item list the critical points \vspace{1cm}
+        \item sketch the phase line and classify the critical points according to their stability \vspace{4cm}
+        \item Determine where $y$ is concave up and concave down \vspace{6cm}
+        \item sketch several solution curves in the $ty$-plane. 
+    \end{enumerate}
+
+\newpage \InitialsLeft
+
+    \question[8] 
+    
+    Use variation of parameters to identify the general solution to \[\vec{x} \, ' = \left( \begin{array}{rr} 1 & 5 \\ 5 & 1 \end{array} \right) \vec{x}  + \left( \begin{array}{r}  40\\ 0\end{array} \right)  \]   % 4.7.2 A
+    
+    % Use variation of parameters to identify the general solution to $$t y'' - (1+t)y' + y = t^2e^{2t}, \quad t > 0$$ Solutions to the corresponding homogeneous equation are $y_1(t) = 1+t$, $y_2(t) = e^t$. % 4.7.23 Q
+    
+
+
+\newpage \InitialsRight
+
+    \question[4] 
+    Consider the homogeneous system 
+    % $$\vec x\,'=A\vec x=\spalignmat{0,1;-25,\alpha}\vec x,\ \alpha \in \mathbb R$$ % 3.4 14, A
+    $$\vec x\,'=A\vec x=\spalignmat{0,1;-4,\alpha;}\vec x,\ \alpha \in \mathbb R$$ % 3.4 14, Q
+    \begin{parts}
+        \part Determine the eigenvalues of $A$ in terms of $\alpha$. 
+        \vspace{5cm} 
+        
+        \part Identify the values of $\alpha$ (if any) where the qualitative nature of phase portrait for system changes. 
+        \vspace{4cm} 
+        
+        % \part For each value of $\alpha$ that you listed in part (b), sketch the phase portrait for a value of $\alpha$ that is slightly less than the value(s) that you identified. For example, if you identified only one $\alpha$ value, you need to only give one sketch. Do not forget to label your axes. 
+    \end{parts}
+           
+        
+    
+\end{questions}
+
+
+
+
+\newpage \InitialsLeft \\ \LastPage
+
+
+\newpage \InitialsRight
+
+\newcounter{NumberInTable}
+\newcommand{\LTNUM}{\stepcounter{NumberInTable}{\theNumberInTable.}}
+
+\vspace{-0ex}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{center}
+    \subsection*{Elementary Laplace Transforms}
+    \vspace{.5cm}
+    
+    \begin{tabular}{ p{1cm} p{6cm} p{8cm} }
+        & $f(t)$ & $\mathcal  L\{f(t)\}  =F(s)$ \\ \hline
+        \LTNUM & $1$ & $\displaystyle \frac{1}{s}$  \\ 
+        \LTNUM & $e^{at}$	& $\displaystyle \frac{1}{s-a}$ \\ 
+        \LTNUM & $t^n$, $n$ positive integer	& $\displaystyle \frac{n!}{s^{n+1}}$  \\ 
+        \LTNUM & $t^p$, $p > -1$	& $\displaystyle \frac{\Gamma(p+1)}{s^{p+1}}$  \\ 
+        \LTNUM &$\sin at$ 	& $\displaystyle \dfrac{a}{s^2+a^2}$ \\ 
+        \LTNUM &$\cos at$ 	& $\displaystyle \dfrac{s}{s^2+a^2}$ \\ 
+        \LTNUM &$\sinh at$	& $\displaystyle \dfrac{a}{s^2-a^2}$ \\ 
+        \LTNUM &$\cosh at$	& $\displaystyle \dfrac{s}{s^2-a^2}$ \\ 
+        \LTNUM &$e^{at}\sin bt$	& $\displaystyle \dfrac{b}{(s-a)^2+b^2}$   \\ 
+        \LTNUM &$e^{at}\cos bt$	& $\displaystyle \dfrac{s-a}{(s-a)^2+b^2}$  \\ 
+        \LTNUM &$t^ne^{at}$, $n$ positive integer	& $\displaystyle \dfrac{n!}{(s-a)^{n+1}}$  \\ 
+        \LTNUM &$u_c(t)$	& $\displaystyle \dfrac{e^{-cs}}{s}$  \\ 
+        \LTNUM &$u_c(t)f(t-c)$& $\displaystyle e^{-cs}F(s)$  \\ 
+        \LTNUM &$e^{ct}f(t)$& $\displaystyle F(s-c)$  \\ 
+        \LTNUM &$\int_0^t f(t - \tau) g(\tau) d\tau$& $\displaystyle F(s)G(s)$  \\ 
+        \LTNUM &$\delta(t-c)$& $e^{-cs}$  \\ 
+        \LTNUM &$f^{(n)}(t)$& $\displaystyle s^nF(s)-s^{(n-1)}f(0) - \ldots -f^{(n-1)}(0)$  \\ 
+        \LTNUM & $t^n f(t)$& $\displaystyle (-1)^nF^{(n)}(s)$  \\ 
+    \end{tabular}
+    \renewcommand{\arraystretch}{.5}
+
+\end{center}
+
+\end{document}
+    
+    
+
+    
+
+    
+

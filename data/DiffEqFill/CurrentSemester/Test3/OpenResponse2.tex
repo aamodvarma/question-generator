@@ -1,0 +1,148 @@
+\ifnum \Solutions=0
+\newpage 
+\fi
+\ifnum \Version=1
+\question[5] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= x^2+y-2x-12 , \qquad \dydt = y-x-6
+\end{align*}
+The critical points are located at $(-2,4)$ and $(3,9)$. 
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue}
+        \begin{align}
+            F &= x'\\
+            G &= y' \\
+            J &= \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} = \begin{pmatrix} 2x-2&1\\-1&1\end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vfill
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(-2,4)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(-2,4)$, $J = \begin{pmatrix} -6&1\\-1&1\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (-6-\lambda)(1-\lambda)+1 = \lambda^2 +5\lambda - 5
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = -\frac52 \pm \frac12 \sqrt{25-4\cdot(-5)} = -\frac52 \pm \frac{\sqrt{45}}{2}
+        \end{align}
+        $\lambda \in \mathbb R$, and the eigenvalues have opposite signs. The critical point is an unstable saddle. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(3,9)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(3,9)$, $J = \begin{pmatrix} 4&1\\-1&1\end{pmatrix}$. The eigenvalues are the roots of \begin{align}
+            (4-\lambda)(1-\lambda)+1 = \lambda^2 - 5\lambda +5 
+        \end{align}
+        Thus 
+        \begin{align}
+            \lambda = \frac52 \pm \frac12 \sqrt{25-4\cdot(5)} = \frac52 \pm \frac{\sqrt{5}}{2}
+        \end{align}
+        $\lambda \in \mathbb R$, and the eigenvalues both positive. The critical point is an unstable node. 
+    } 
+    \else 
+    \vfill
+\fi
+\end{parts}
+\fi
+
+
+
+\ifnum \Version=2
+\question[6] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= x(1-x-y) , \qquad \dydt = y(2-x-y)
+\end{align*}
+The critical points are located at $(0,0)$, $(0,2)$, and $(1,0)$. 
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    Set $ F = x'$ and $G = y'$. Then
+        \begin{align}
+            F_x &= 1 - 2x -y\\
+            F_y &= -x \\
+            G_x &= 2-x-2y \\
+            G_y &= -y \\
+            J &= \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} = \begin{pmatrix} -1-x-2y & -x\\-y&2-x-2y \end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vfill
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(0,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,0)$, $J = \begin{pmatrix} 1&0\\0&2\end{pmatrix}$. The eigenvalues are $\lambda = 1,2$. \\ Thus the critical point is an \textbf{unstable node}. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(0,2)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,2)$, $J = \begin{pmatrix} -1&0\\-2&-4\end{pmatrix}$. The eigenvalues are $\lambda = -1,-4$. \\Thus the critical point is a \textbf{stable node}. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(1,0)$, $J = \begin{pmatrix} -1&-1\\0&1\end{pmatrix}$. The eigenvalues are $\lambda = \pm 1$. \\ Thus the critical point is an \textbf{unstable saddle}. 
+        } 
+    \else 
+    \vfill
+    \fi    
+\end{parts}
+\fi
+
+
+
+
+
+
+
+
+
+
+\ifnum \Version>5
+\question[6] Consider the non-linear system below.  
+\begin{align*}
+    \dxdt &= x(4-x-y) , \qquad \dydt = y(6-2x-y)
+\end{align*}
+\begin{parts}
+    \part Compute the Jacobian matrix, $J$, for the approximating linear system. 
+    \ifnum \Solutions=1 {\color{DarkBlue} \\
+    Set $ F = x'$ and $G = y'$. Then
+        \begin{align}
+            F &= 4x - x^2 - xy \\
+            G &= 6y -2xy - y^2 \\
+            J &= \begin{pmatrix} F_x&F_y\\ G_x & G_y\end{pmatrix} 
+            = \begin{pmatrix} 4-2x-y & -x\\-2y& 6-2x-2y \end{pmatrix}
+        \end{align}
+        } 
+    \else 
+    \vfill
+    \fi        
+    \part Use eigenvalues to classify the critical point at $(0,6)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,0)$, $J = \begin{pmatrix} -2&0\\-12&-6\end{pmatrix}$. The eigenvalues are $\lambda = -2, -6$. The CP is a \textbf{stable node}. 
+        } 
+    \else 
+    \vfill
+    \fi
+    \part Use eigenvalues to classify the critical point at $(2,2)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc).
+    \ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+        At $(0,2)$, $J = \begin{pmatrix} -2&-2\\-4&-2\end{pmatrix}$. Eigenvalues:
+        \begin{align}
+            0 &= (\lambda + 2)^2 - 8 = \lambda^2 + 4\lambda -4  \\
+            \lambda &= -2 \pm \frac12 \sqrt{16 + 16} = -2 \pm 2\sqrt 2
+        \end{align}\\Thus the critical point is an \textbf{unstable saddle}. 
+        } 
+    \else 
+    \vfill
+    \fi
+\end{parts}
+\fi
+

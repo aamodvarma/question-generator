@@ -1,0 +1,141 @@
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+\usepackage{graphicx} % if images are needed
+
+\addpoints
+
+\usepackage{pgfplots} % for surfaces (chapter 7)
+\usepackage{tikz-3dplot} 
+\pgfplotsset{compat=1.9}
+\usetikzlibrary{decorations.pathmorphing,patterns} % for some tikz diagrams
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% INITIALS
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+
+\newcommand{\InitialsLeft}{\noindent \hspace{-18pt}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+
+\newcommand{\InitialsRight}{\begin{flushright}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}\end{flushright}}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% INSTRUCTIONS FOR DISTANCE LEARNING WITH NO PROCTOR
+\newcommand{\InstructionsFormatAndTiming}{
+
+    \begin{itemize} \setlength\itemsep{.1em}
+    
+        \item You should only need 2 hours and 50 min to take the exam, but students will have \Duration to submit the exam, from the time that it is released.
+        
+        \item {\bf Show your work} and justify your answers for all questions unless stated otherwise.
+        
+        \item Please write neatly, and use dark and clear writing so that the scan is easy to read. 
+        
+        \item Please write your name or initials at the top of every page 
+        
+        \item Please solve the questions in the exam in the order they are given. 
+        
+        \item You do not need to print the exam. As long as you solve problems in the order they are given (just like the written homework sets), you can write your answers on your own paper. But students can print the exam and write their answers on the printed copy if they prefer. 
+        
+    \end{itemize}
+
+}
+
+\newcommand{\InstructionsSubmission}{
+
+    \begin{itemize} \setlength\itemsep{.1em}
+        \item Students should scan their work and submit it through Gradescope. There should be an \textbf{assignment} in Gradescope for this exam. The process for submitting your work will be similar to what you have used for homework. 
+        
+        \item Work must be submitted today by \DueDate. 
+        
+        \item Please upload your work as a single PDF file. If this is not possible you can email your work to your instructor. 
+        
+        \item During the upload process in Gradescope, please indicate which page of your work corresponds to each question in the exam. 
+    \end{itemize}
+}
+
+\newcommand{\InstructionsQuestions}{
+
+    \begin{itemize} \setlength\itemsep{.1em}
+        
+        \item If there are questions during the exam, students can email their instructor or message them through Canvas. 
+        
+        \item Our course Piazza forum will be temporarily inactive for 24 hrs on the day of the exam. 
+        
+        \item If you run into any technical issues or any unanticipated emergencies, please email your instructor as soon as you can. 
+    
+        
+    \end{itemize}
+
+}
+
+
+\newcommand{\InstructionsHonor}{
+
+    \begin{itemize} \setlength\itemsep{.1em}    
+        \item Students can use any resources while taking these tests including online calculators and Mathematica
+        \item Students cannot communicate with anyone during these tests including using Reddit or online message boards 
+        \item Students cannot use solutions provided from another student or third party. 
+        \item In other words: do your own work but you can use technology to solve problems. 
+ 
+    \end{itemize}
+
+}
+
+
+
+
+
+
+\newcommand{\GTHonorCode}{Having read the Georgia Institute of Technology Academic Honor Code, I understand and accept my responsibility as a member of the Georgia Tech community to uphold the Honor Code at all times. }
+
+
+
+% FANCY HEADERS - MAKE EMPTY
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+
+
+% ADJUST MARGINS FOR DISTANCE LEARNING REQUIREMENTS
+\usepackage[tmargin=1.0in,bmargin=1.0in,left=1in,right=1in]{geometry}
+
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows} 
+\usetikzlibrary{calc} 
+
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+\newcommand{\Instructors}{}
+
+% WHO TO CONTACT DURING EXAM IF QUESTIONS
+\newcommand{\InstructorContact}{}
+
+\usepackage{spalign} % Joe Rabinoff's matrix package
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+

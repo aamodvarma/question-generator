@@ -1,0 +1,116 @@
+\documentclass[11pt]{exam}
+
+\newcommand{\Version}{6} 
+\newcommand{\Solutions}{1} 
+\newcommand{\Set}{1} % can set to any integer initially
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{Final Exam} \fi
+\ifnum \Version=2 \newcommand{\TestName}{Final Exam  Version A} \fi
+\ifnum \Version=3 \newcommand{\TestName}{Final Exam  Version B} \fi
+\ifnum \Version=4 \newcommand{\TestName}{Final Exam  Version C} \fi
+% 2024
+\ifnum \Version=5 \newcommand{\TestName}{Final Exam Make-up A} \fi
+\ifnum \Version=6 \newcommand{\TestName}{Final Exam  Version A} \fi
+\ifnum \Version=7 \newcommand{\TestName}{Final Exam  Version B} \fi
+
+\input{CurrentSemester/Macros/ExamPreamble}
+\input{CurrentSemester/Macros/1_PhaseLine}
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+% \runningfooter{}{}{}
+\runningfooter{}{}{\textit{Page \thepage \ of \pageref{LastPage}} }
+\runningheader{\textit{Please write your last name: \framebox{\strut\hspace{5cm}} }}{}{\textit{\TestName} }
+
+% ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~
+\begin{document}
+
+% REDUCE VERSIONS FOR SANITY
+\ifnum \Version=5
+    \renewcommand{\Version}{4}
+\fi
+
+% SCRAMBLE QUESTION ORDER
+\ifnum \Version=1
+    \renewcommand{\Set}{1}
+\fi
+\ifnum \Version=2
+    \renewcommand{\Set}{2}
+\fi
+\ifnum \Version=3
+    \renewcommand{\Set}{3}
+\fi
+\ifnum \Version=4
+    \renewcommand{\Set}{4}
+\fi
+\ifnum \Version>5
+    \renewcommand{\Set}{5}
+\fi
+
+\vspace*{-1cm}
+
+% TITLE 
+\begin{center}
+\ifnum \Solutions=1 {\Large {\color{DarkBlue}\textit{\TestName \ Solutions}}\\[4pt]}
+\else 
+    {\Large \TestName, \Course}
+\fi
+\end{center}
+
+% NAME AND STUDENT ID
+\newcommand{\ID}{Please enter the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}, and with all CAPITAL LETTERS  print your first name: \framebox{\strut\hspace{3.6cm}}, and last name: \framebox{\strut\hspace{3.8cm}}.}
+\ID
+
+% FORMULA SHEET
+\input{CurrentSemester/Macros/FormulasFinalExam}
+
+% EXAM STARTS HERE
+\newpage
+
+\begin{questions}
+
+    \ifnum \Set>0
+
+        \input{CurrentSemester/Final/Q01.SA.1.3}
+        \input{CurrentSemester/Final/Q02.SA.3.2}
+        \input{CurrentSemester/Final/Q03.SA.2.5}
+        
+        \input{CurrentSemester/Final/Q04.SA.2.3}
+        \input{CurrentSemester/Final/Q05.SA.4.5}
+        \input{CurrentSemester/Final/Q06.OR.2.5}
+        
+        \input{CurrentSemester/Final/Q07.OR.3.3}
+        \input{CurrentSemester/Final/Q10.OR.6.4}
+        \input{CurrentSemester/Final/Q11.OR.4.7}
+
+        \input{CurrentSemester/Final/Q12.SA.7.1}
+        \input{CurrentSemester/Final/Q09.SA.4.4}
+        
+        \input{CurrentSemester/Final/Q13.SA.5.1}
+        \input{CurrentSemester/Final/Q08.SA.4.2}
+        \input{CurrentSemester/Final/Q14.SA.5.3}
+        \input{CurrentSemester/Final/Q15.OR.7.2}
+        \input{CurrentSemester/Final/Q16.OR.5.7}
+
+        
+    %     \ifnum \Solutions=0 \newpage \fi
+    %     \ifnum \Solutions=0 
+    %     \vspace{2cm}
+    %     \begin{center}
+    %         \textit{This remainder of this page can be used for scratch work. }
+    %     \end{center}
+    %     \vfill
+    %     \fi 
+    
+    \ifnum \Solutions=0 \newpage \fi
+    \begin{center}
+        \textit{This page can be used for scratch work. }
+    \end{center}
+
+\end{questions}
+
+
+\end{document}
+
+

@@ -1,0 +1,38 @@
+
+\ifnum \Version=2
+\question[3] 
+Compute the Laplace transform of the function below. Do not leave your answer in terms of an integral. Please show your work. 
+$$y(t) = \begin{cases} 0, \quad 0 \le t < 1 \\ 4e^{t}, \quad 1 \le t < 3 \\ 0, \quad 3 \le t < \infty\end{cases}$$
+\ifnum \Solutions=1 {\color{DarkBlue} \\[12pt] 
+There are a few different ways to solve this. Any of the approaches below are sufficient. 
+\subsection*{Method 1: Direct Integration }
+Direct integration uses the definition of the Laplace Transform:
+    \begin{align}
+        \int_0^{\infty} e^{-st} y(t) \, dt 
+        = \int_1^{3} e^{-st} \, 4e^{t} \, dt 
+        &= 4\int_1^{3} e^{(1-s)t}  \, dt  \\         
+        &= \left.\frac{4}{1-s} e^{(1-s)t} \right|_1^3  \\         
+        &= \frac{4}{1-s} \left(e^{3(1-s)}  - e^{1-s} \right)     
+    \end{align}
+    \subsection*{Method 2: Step Functions}
+    We could also use the table of transforms, specifically the transform of the step function $u_c(t)$ and its product with another function. 
+    \begin{align}
+        y(t) &= 0u_{0,1} + 4e^tu_{1,3} + 0u_{3} 
+        =4e^t(u_1-u_3) \\
+        &= 4e^tu_1 - 4 e^tu_3 \\
+        &= 4e^{t-1+1}u_1 - 4 e^{t-3+3}u_3 \\
+        &= 4ee^{t-1}u_1 - 4 e^3e^{t-3}u_3 \\
+    \end{align}   
+    Using the table of transforms the Laplace transform is
+    \begin{align}
+        Y(s) = 4 e\frac{e^{-s}}{s-1} - 4\frac{e^{-3s}}{s}
+    \end{align}
+} 
+\else 
+    \vfill
+    \begin{center}
+        \textit{This remainder of this page can be used for scratch work. }
+    \end{center}
+    \vfill
+\fi
+\fi

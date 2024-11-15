@@ -4,42 +4,6 @@ import re
 from pylatexenc.latexencode import unicode_to_latex
 import json
 
-# questions = []
-# with open("./batches/batch_responses/tf_multivar-del-newline.jsonl", "r") as file: for line in file: json_object = json.loads(line)
-#         custom_id = json_object['custom_id'].split('|')
-#         q = json_object['response']['body']['choices'][0]["message"]["content"]
-#         q = q.replace("`", "").replace("json", "").replace("\n", "")
-#         q = q[q.find("{"):]
-#         q = q.replace(",}", "}")
-#         try:
-#             json_question = json.loads(q)
-#         except:
-#             print(q)
-#             break
-#         json_question['chapter'] = custom_id[0]
-#         json_question['section'] = custom_id[1]
-#         json_question['number'] = custom_id[2]
-#         questions.append(json_question)
-
-# all_questions =  dict()
-# for q in questions:
-#     chapter = q['chapter']
-#     section = q['section']
-#     quest = q['question'].replace("\\\\", "\\")
-#     try:
-#         explanation = q['explanation'].replace("\\\\", "\\")
-#     except:
-#         continue;
-#     generated_question = f"""\\item {quest.replace("True or False:", "").strip()}
-    
-#     \\ifnum \\Solutions=1 {{\\color{{EmphBlue}} Answer: {q['answer']} \\\\ Explanation: {explanation}}}
-#     \\fi"""
-
-#     if (chapter not in all_questions):
-#         all_questions[chapter] = dict()
-#     if (section not in all_questions[chapter]):
-#         all_questions[chapter][section] = []
-#     all_questions[chapter][section].append(generated_question)
         
 
 def book(file):
@@ -79,7 +43,7 @@ def book(file):
     i = 0
     for a in all_questions:
         i+=1
-        print("\\chapter{" + a + "}")
+        # print("\\chapter{" + a + "}")
         for b in all_questions[a]:
             print("\\input{Chapter" + str(i) + f"/{b}" + "}")
 
@@ -88,14 +52,13 @@ def book(file):
 def exam(name):
     latex_commands = ['nabla', 'noindent', 'newline', 'norm', 'nonumber', 'neq', 'nexists']
     latex_commands = [x[1:] for x in latex_commands]
-    # name = "./generated_files/LinearFill_20240919_1028.json"
+    # name = "./generated_files/DiffEqFill_20241110_1727.json"
     with open(name, "r") as f:
         questions = json.load(f)
 
     for exam in questions:
-        location = f"./generated_files/LinearFill/202408/{exam}/"
+        location = f"./generated_files/DiffEqFill/CurrentSemester/{exam}/"
         for number in questions[exam]:
-            print(number)
             q_list = []
             count = 1
             for q in questions[exam][number]:
@@ -129,12 +92,11 @@ def exam(name):
         \fi        
     \fi"""
                     count+=1;
-                    print(q_tex)
+                    # print(q_tex)
                     q_list.append(q_tex)
                 except:
                     continue
             with open(location+number, "w") as f:
-
                 f.write("\n\n".join(q_list))
 
 
@@ -146,6 +108,7 @@ if __name__ == "__main__":
                     prog='Batch Generator',
                     description='Generates Questoins')
     parser.add_argument('--type', type=str, required=True, choices=["book", "exam"], help="The type of generation")
+    parser.add_argument('--file', type=str, required=True, help="File location")
     args = parser.parse_args()
     if (args.type == "book"):
         book(args.file);

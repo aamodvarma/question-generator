@@ -1,0 +1,40 @@
+% Command for a Cauchy-Euler equation
+% Input two positive distinct integers that are the roots of the equation. 
+% For Example, call \SecondOrderCauchyEuler{3}{5}  
+%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcounter{rootI}  %  root of the characteristic
+\newcounter{rootII}  %  root of the characteristic
+\newcounter{coefficientB}  %  coefficioent of the DE
+\newcounter{coefficientC}  %  coefficioent of the DE
+\newcounter{coeffcharacter}  %  a coefficioent of the characteristic 
+
+\newcommand{\SecondOrderCauchyEuler}[2]{
+\setcounter{rootI}{#1}
+\setcounter{rootII}{#2}
+\setcounter{coefficientB}{\therootI+\therootII-1} 
+\setcounter{coefficientC}{\therootI*\therootII} 
+\setcounter{coeffcharacter}{\thecoefficientB + 1} 
+
+% \setcounter{AtoA}{10-\theAtoB} \setcounter{BtoB}{10-\theBtoA} 
+\question[2]
+    Determine all possible values of $r$ so that the DE $\displaystyle t^2y'' - \thecoefficientB  ty' +\thecoefficientC y =0$ will have solutions of the form $\displaystyle y = t^r$ for $t>0$. Please show your work.
+    
+    \ifnum \Solutions=1 {\color{DarkGreen} 
+    \textbf{Solutions:} if $t^r$ is a solution then it must satisfy the DE. So to determine the values of $r$ so that $y=t^r$ is a solution we can substitute it into the DE. 
+    \begin{align}
+        0 &= t^2y'' - \thecoefficientB ty' + \thecoefficientC y \\
+        &= t^2(t^r)'' - \thecoefficientB t(t^r)' + \thecoefficientC(t^r) \\ 
+        &= t^2r(r-1)(t^{r-2}) - \thecoefficientB tr(t^{r-1}) + \thecoefficientC(t^r) \\ 
+        &= r(r-1)(t^{r}) - \thecoefficientB r(t^{r}) + \thecoefficientC(t^r) \\ 
+        &= r(r-1) - \thecoefficientB r + \thecoefficientC \\ 
+        &= r^2 - r - \thecoefficientB r + \thecoefficientC \\ 
+        &= r^2 - \thecoeffcharacter r + \thecoefficientC \\ 
+        &= (r-\therootI)(r-\therootII) 
+    \end{align}
+    Therefore $r=\therootI,\therootII$. 
+} 
+\else 
+\fi
+
+}
+

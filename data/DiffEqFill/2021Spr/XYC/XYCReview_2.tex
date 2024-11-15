@@ -1,0 +1,377 @@
+
+ 
+%%%%% Problems %%%%%
+
+%%% Homog 2D linear systems: Repeated eigenvalues
+\item  
+For each of the following equations, 
+\begin{description}
+\item{$\bullet$} find general solutions;
+\item{$\bullet$} solve the initial value problem with 
+initial condition $x_1(0)=-1,x_2(0)=2$;
+\item{$\bullet$} sketch the phase portrait, identify the
+type of each equilibrium, and determine the stability of each equilibrium.
+\end{description}
+
+(a) $ {d \over dt}\bmatrix{x_1\cr x_2}
+ = \bmatrix{ x_1 +4x_2\cr -x_1 +5x_2}$
+\hfil
+(b) $ \bmatrix{x_1'\cr x_2'} =
+\bmatrix{ -5 & -1 \cr   4 & -1}\bmatrix{x_1\cr x_2}$
+\hfil
+(c) $ \vec{\bf x}' = \bmatrix{ -2 & 0\cr 0 & -2} \vec{\bf x}$
+
+
+
+\item
+For each of the following equations, 
+\begin{description}
+\item{$\bullet$} find all equilibria;
+\item{$\bullet$} find general solutions;
+\item{$\bullet$} solve the initial value problem with 
+initial condition $x_1(0)=2,x_2(0)=1$;
+\item{$\bullet$} sketch the phase portrait, identify the
+type of each equilibrium, and determine the stability of each equilibrium.
+\end{description}
+
+(a) 
+$\bmatrix{x_1'\cr x_2'}=\bmatrix{3 & 10\cr -5& -7}\bmatrix{x_1 -1 \cr x_2+2}$
+\hfill
+(b) 
+$\bmatrix{x_1'\cr x_2'}=\bmatrix{1 & 4\cr 2& -1}\bmatrix{x_1  \cr x_2}
++\bmatrix{-5\cr -1}$
+
+
+
+%%% A tank system with two distinct negative eigenvalues
+\item
+Tank~1 initially contains 100~gallons of brine with 10~lb
+of salt dissolved in it and Tank~2 contains 50~gallons of pure water. 
+Pure water flows from an outside source into Tank~1 at 5~gal/min. 
+The mixture flows from Tank 1 into Tank~2 at the same rate 
+and, with the same rate, 
+it is discharged out of the system from Tank~2. 
+Assume that solutions are well-stirred in each tank. 
+
+Denote by $x_1(t)$ and $x_2(t)$, the amounts of salt
+in the two tanks after $t$ minutes.
+
+	\begin{enumerate}
+	\item
+Write the initial value problem for $x_1(t)$ and $x_2(t)$.
+	\item
+Find $x_1(t)$ and $x_2(t)$. 
+	\item
+Find the maximum amount of salt ever in Tank~2. 
+	\end{enumerate}
+
+
+
+%%% A tank system with repeated eigenvalues
+\def\TANKSREPEATED{
+\item
+Tank~1 initially contains 100~gallons of brine with 10~lb
+of salt dissolved in it and Tank~2 contains 100~gallons of pure water. 
+Pure water flows from an outside source into Tank~1 at 5~gal/min. 
+The mixture flows from Tank 1 into Tank~2 at the same rate 
+and, with the same rate, 
+it is discharged out of the system from Tank~2. 
+Assume that solutions are well-stirred in each tank. 
+	\begin{enumerate}
+	\item
+Find the amounts $x_1(t)$ and $x_2(t)$ of salt
+in the two tanks at time $t\ge 0$. 
+	\item
+Find the maximum amount of salt ever in Tank~2. 
+	\end{enumerate}
+}
+
+
+
+\item
+	\begin{enumerate}
+	\item
+Verify that $y_1(t)=1+t^2$ and $y_2(t)=e^{-t}$ are solutions of 
+$$
+(1+t)y'' +(-1+t) y' -2y=0.
+\leqno{(*)}
+$$
+	\item
+What are the general solutions of $(*)$?
+	\item
+Find the solution of $(*)$ under the initial conditions 
+$y(0)=1, y'(0)=2$.
+	\item
+Convert $(*)$ to a system of first order differential equations.
+What are the general solutions of the obtained system?
+	\item
+Verify that $y_0(t)=e^{2t}$ is a solution of 
+$$
+(1+t)y'' +(-1+t) y' -2y=6t e^{2t}.
+\leqno{(**)}
+$$
+	\item
+What are the general solutions of $(**)$?
+	\item
+Find the solution of $(**)$ under the initial conditions 
+$y(0)=7, y'(0)=5$.
+	\item
+Convert $(**)$ to a system of first order differential equations.
+What are the general solutions of the obtained system?
+	\end{enumerate}
+
+\item
+For each of the following equations, 
+\begin{description}
+\item{$\bullet$} find general solutions;
+\item{$\bullet$} solve the initial value problem with 
+initial condition $y(0)=-1,y'(0)=2$;
+\item{$\bullet$} sketch the phase portrait, identify the type of each
+equilibrium, and determine the stability of each equilibrium.
+\end{description}
+
+\begin{tabular}{lll}
+(a) $ 2y''+9y'+4y=0$
+\qquad\qquad&
+(b) $ y''+2y'-8y=0$
+\qquad\qquad&
+(c) $ 4y''-12y'+5y=0$
+\\
+(d) $ 2y''-3y'=0$
+\qquad\qquad&
+(e) $ y''-2y'+5y=0$
+\qquad\qquad&
+(f) $ 4y''+9y=0$
+\\
+(g) $ 9y''+6y'+y=0$
+&&
+\end{tabular}
+
+
+\item  Solve
+	\begin{enumerate}
+	\item
+$
+{\bf x}'(t)=\left[ \matrix{ 
+1&4 \cr
+1&1 \cr}
+\right]
+{\bf x}(t)+\left[ \matrix{ 
+e^{3t} \cr
+0 \cr}
+\right],\qquad {\bf x}(0)=\left[ \matrix{ 
+0\cr
+0\cr}
+\right].
+$
+	\item
+$ y''+4y'+4y= 8t^2 +10\cos 4 t + e^{-2t},\quad y(0)=-1,y'(0)=2.$
+Use the method of undetermined coefficients.
+	\item
+$ 4y''-y={8 e^{t/2} \over 2+e^{t/2}}$
+	\end{enumerate}
+
+
+
+
+\item 
+Find the general solutions of 
+${\bf x}'=\bmatrix{ 
+2 & 3 & -3\cr
+4 & 2 & -4\cr
+4 & 3 & -5}{\bf x}
++\bmatrix{ 
+\frac{e^{3t}}{1+e^t}\cr
+\frac{e^{3t}+e^{-2t}}{1+e^t}\cr
+\frac{e^{3t}+e^{-2t}}{1+e^t}
+}$.
+
+\item 
+Find the general solutions of
+$2y'''+8y'=5\cot(2t)$.
+%%% anoter version: $4y'''+36y'=8\cot(3t)$.
+ 	
+
+\item
+Consider the following nonhomogeneous linear
+system of differential equations:
+$$\left\{ \begin{array}{l}
+y'' +z = \cos t,\\
+z'' +y = \cos t.
+\end{array} \right.$$
+
+	\begin{enumerate}
+	\item
+Set $x_1=y,x_2=z,x_3=y',x_4=z'$.
+Convert the above nonhomogeneous linear system for $(y,z)$ into
+a nonhomogeneous linear system for
+${\bf x}=\bmatrix{x_1 \cr x_2\cr x_3\cr x_4}$.
+	\item
+Find a fundamental matrix $M(t)$ for the corresponding
+homogenous linear system.
+\item
+In the nonhomogeneous system obtained in (a),
+set ${\bf x}(t)=M(t){\bf u}(t)$. Write down the system of
+equations for ${\bf u}(t)$.
+	\item
+Find a particular solution ${\bf u}_p(t)$
+and then a particular solution ${\bf x}_p(t)$.
+	\item
+Find general solutions ${\bf x}(t)$.
+	\item
+Find general solutions $y(t)$ and $z(t)$.
+	\end{enumerate}
+
+
+
+\item
+A spring is suspended from a ceiling.
+A mass weighing 60~lb stretches
+the spring 0.5~ft.
+Assume that the gravitational acceleration is
+$g=32$~$\mbox{ft}/\mbox{s}^2$.
+Ignore the damping.
+
+\begin{enumerate}
+\item
+If the mass is pulled further 1~ft down
+below the equilibrium position and is given
+an initial upward velocity of 2~ft/s,
+write the initial value problem
+for $y(t)$,
+the upward displacement (measured in ft)
+from the equilibrium position
+after $t$ seconds.
+
+Solve $y(t)$.
+
+Find the amplitude, frequency and period of the 
+oscillation.
+\item
+The mass is removed and a person grabs
+the end of the spring and proceeds
+to bounce up and down with a period of 1~second.
+How much does the person weigh?
+\end{enumerate}
+
+
+\item
+A spring-mass system has mass $m=50$~kg, 
+and spring constant $k=100$~N/m.
+Assume that the spring is streched $0.1$~m from the equilibrium position
+at $t=0$, and is given initial velocity $=0$.
+	\begin{enumerate} 
+	\item
+Assume that the damping coefficient is $\gamma=100$~N$\cdot$s/m.
+Find the position of the mass after $t$ seconds.
+	\item
+Assume that the damping coefficient is $\gamma=150$~N$\cdot$s/m.
+Find the position of the mass after $t$ seconds.
+ 	\end{enumerate}
+
+\item
+An undamped spring-mass system has
+a mass that weighs 48~lb and a spring constant 0.5~lb/in.
+The mass is suddenly set in motion at $t=0$ by an external force
+of $3\cos(2t)$~lb.
+Assume that the gravitational acceleration is
+$g=32$~$\mbox{ft}/\mbox{s}^2$.
+
+Find the position of mass as a function of time $t$.
+
+\item
+A damped spring-mass system has mass $m=50$~kg,
+damping coefficient $\gamma=50$~N$\cdot$s/m,
+and spring constant $k=100$~N/m.
+Assume that an external force of $10\cos(\omega t)$~N acts on the mass.
+	\begin{enumerate}
+	\item
+Write the differential equation for the displacement $y(t)$.
+	\item
+	Determine the steady-state response of the system, when $\omega=1$.
+	\item
+	If we increase the frequency of the external force from $\omega=1$ a little,
+	will the amplitude of the steady-state response increase or decrease?
+	\item
+	Determine the steady-state response of the system, when $\omega=2$.
+	\item
+	If we increase the frequency of the external force from $\omega=2$ a little,
+	will the amplitude of the steady-state response increase or decrease?
+ 	\end{enumerate}
+
+\item
+Find the Laplace transform of $f(t)=\left\{ \begin{array}{ll}
+0 \qquad & t<3,\\
+e^{4t} \qquad & 3\le t<7,\\
+0\qquad & t\ge 7.
+\end{array}\right.$
+
+\item
+Find the Laplace transform of 
+$f(t)=3t^5-7t^2+9+2e^{-3t}+t^3 e^{2t} +4\cos(6t)-5\sin(6t)$.
+
+\item
+Find the Laplace transform of
+$$
+f(t)=e^{-t}\cos(3t) +t\sin(3t) -7te^{-2t}\sin(3t).
+$$
+
+
+\item
+Find the inverse Laplace tansform of 
+$$
+G(s)= -\frac{5}{s} +\frac{3}{s^6}+\frac{1}{(s-5)^3}
++\frac{-4s^2-5s+14}{(s-2)(s-4)(s+1)}
++\frac{2s+1}{s^2+\pi^2}
+-\frac{4s}{s^2 +6s +34}.
+$$
+
+
+\item
+Consider the initial value problem
+$y'(t)+2y(t)=6e^{3t}, \quad y(0)=7.$
+	\begin{enumerate}
+	\item
+Transform the above initial value problem
+ into an algebraic equation for $Y(s)={\cal L}\{y(t)\}$. 
+	\item
+Find $Y(s)$; i.e., solve the equation in the $s$-domain.
+	\item
+Find the solution of the initial value problem by using
+$y(t)={\cal L}^{-1}\{Y(s)\}$.
+	\end{enumerate}
+
+\item
+Consider the initial value problem
+$$
+y''(t)+2y'(t)+y(t)=8e^{3t}, \quad y(0)=-3, y'(0)=2.
+$$
+	\begin{enumerate}
+	\item
+Transform the above initial value problem
+ into an algebraic equation for $Y(s)={\cal L}\{y(t)\}$. 
+	\item
+Find $Y(s)$; i.e., solve the equation in the $s$-domain.
+	\item
+Find the solution of the initial value problem by using
+$y(t)={\cal L}^{-1}\{Y(s)\}$.
+	\end{enumerate}
+
+\item
+Consider the initial value problem
+$$
+x''(t)=-6x(t)+4y(t),
+y'(t)=5x(t), \quad x(0)=1, x'(0)=-2, y(0)=4.
+$$
+	\begin{enumerate}
+	\item
+Transform the above initial value problem
+ into an algebraic equation for $X(s)={\cal L}\{x(t)\}$ and $Y(s)={\cal L}\{y(t)\}$. 
+	\item
+Find $X(s)$ and $Y(s)$.
+	\item
+Find the solution of the initial value problem by using
+$x(t)={\cal L}^{-1}\{X(s)\}$ and
+$y(t)={\cal L}^{-1}\{Y(s)\}$.
+	\end{enumerate}
+

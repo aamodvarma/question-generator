@@ -1,0 +1,217 @@
+\ifnum \Version=1    
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[2pt] \hline 
+    a) & $f(t) = t^3+1$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    b) & $f(t) = e^{-t^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = e^{2t^4}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    d) & $f(t) = \sin(3t)$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    e) & $f(t) = 4$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item exponential order, because $|t^3+1| < Ke^{at}$ for $K=a=1$ and $t$ greater than some value $M$. In other words, $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{t^3+1}{e^t} \to 0$$ We can see this by using l'Hospital's rule. 
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{-t^2}}{e^t} \to 0$$
+    \item not exponential order, because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+
+\ifnum \Version=2  
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[2pt] \hline 
+    a) & $f(t) = 4$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    b) & $f(t) = e^{t^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = \frac{1}{(t-3)^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt]    
+    d) & $f(t) = 2^t$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item exponential order, because $|4| = 4 < Ke^{at}$ for $K=a=1$ and $t$ greater than some value $M$. In other words, $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$ We can see this by using l'Hospital's rule. 
+    \item not exponential order, because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{1/((t-3)^2)}{e^t} \to 0$$    
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+\ifnum \Version=3
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[2pt] \hline 
+    a) & $f(t) = 1$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    b) & $f(t) = \frac{1}{\sqrt t}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = t^2$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    d) & $f(t) = e^{-t^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item exponential order, because $|4| = 4 < Ke^{at}$ for $K=a=1$ and $t$ greater than some value $M$. In other words, $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$ We can see this by using l'Hospital's rule. 
+    \item not exponential order, because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{1/((t-3)^2)}{e^t} \to 0$$    
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+
+
+\ifnum \Version=4
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[2pt] \hline 
+    a) & $f(t) = 4$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    b) & $f(t) = e^{t^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = \frac{1}{(t-3)^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    d) & $f(t) = 2^t$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item exponential order, because $|4| = 4 < Ke^{at}$ for $K=a=1$ and $t$ greater than some value $M$. In other words, $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$ We can see this by using l'Hospital's rule. 
+    \item not exponential order, because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{1/((t-3)^2)}{e^t} \to 0$$    
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+\ifnum \Version=5
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[2pt] \hline 
+    a) & $f(t) = 1$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    b) & $f(t) = \frac{1}{\sqrt t}$  & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    c) & $f(t) = t^2$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    d) & $f(t) = e^{-t^2}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item exponential order, because $|4| = 4 < Ke^{at}$ for $K=a=1$ and $t$ greater than some value $M$. In other words, $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$ We can see this by using l'Hospital's rule. 
+    \item not exponential order, because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{1/((t-3)^2)}{e^t} \to 0$$    
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{4}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+
+
+\ifnum \Version=6
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[6pt] \hline 
+    a) & $\displaystyle f(t) = e^{\sqrt t}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    b) & $f(t) = e^{t^2/4}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = \sqrt{t}$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    d) & $f(t) = 1+\ln t$  & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{exponential order} (EO) if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $f$ is EO $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item EO because $f < Ke^{at}$ for $K=a=1$ and $t > M=1$. 
+    \item Not EO because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^{t}} = \lim_{t\to \infty}\frac{e^{t^2/4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item exponential order, because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{\sqrt t}{e^t} \to 0$$    
+    \item exponential order because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{1+\ln t}{e^t} \to 0$$
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 
+
+
+
+\ifnum \Version=7
+\question[2] You do not need to show your work for this question. Fill in the appropriate circle to indicate whether the following functions are exponential order. 
+\vspace{-0.2cm}
+\setlength{\extrarowheight}{0.10cm}
+\begin{center}
+\hspace{-.9cm}\begin{tabular}{ p{0.20cm} p{4cm} p{3.5cm} p{4cm} }
+    & & exponential order &  not exponential order  \\[4pt] \hline 
+    a) & $f(t) = e^{t^2-t}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    b) & $f(t) = e^{\sqrt t}$  & $\bigcirc$  & $\bigcirc$ \\[4pt] 
+    c) & $f(t) = |t|+\sin t$ & $\bigcirc$  & $\bigcirc$ \\[4pt]  
+    d) & $\displaystyle f(t) = \frac{t^2+3}{t+4}$  & $\bigcirc$  & $\bigcirc$ \\[6pt]  
+
+    \hline
+\end{tabular}
+\end{center}
+\setlength{\extrarowheight}{0.0cm}
+\ifnum \Solutions=1 {\color{DarkBlue} A function 
+$f$ is \textbf{of exponential order} (EO) if there exists constants $K, \ a, \ M$ such that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$. In other words, $f$ is EO $$ \frac{f(t)}{e^{at}}  $$ is bounded for sufficiently large $t$.
+\begin{enumerate}[label=(\alph*)]
+    \item Not EO because 
+    $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{e^{2t^4}}{e^t} \to \infty$$ In other words, there are no values of $K,a,M$ so that $$  |f(t)| \leq Ke^{at}  $$ for all $t > M$.
+    \item EO because $f < Ke^{at}$ for $K=a=1$ and $t > M=1$. 
+    \item EO because $$\lim_{t\to \infty}\frac{f(t)}{e^t} = \lim_{t\to \infty}\frac{|t| + \sin t}{e^t} \to 0$$    
+    \item EO because $e^t$ goes to infinity faster than $f$. 
+\end{enumerate}
+}
+\fi
+\vspace{-6pt} 
+\fi 

@@ -1,0 +1,66 @@
+% LOAD PACKAGES
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{amssymb} % 
+\usepackage{mathtools} % allows for single apostrophe
+\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{lastpage}
+\usepackage{array} % for table alignments
+
+\usepackage{graphicx} % if images are needed
+\usepackage{wrapfig} % to allow text wrapping
+
+\addpoints
+
+\usepackage{pgfplots} % for surfaces (chapter 7)
+\usepackage{tikz-3dplot} 
+\pgfplotsset{compat=1.9}
+\usetikzlibrary{decorations.pathmorphing,patterns} % for some tikz diagrams
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% INITIALS
+\newcommand{\Initials}{\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+
+\newcommand{\InitialsLeft}{\noindent \hspace{-18pt}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}}
+
+\newcommand{\InitialsRight}{\begin{flushright}\textit{\Course, \TestName. Your initials: \underline{\hspace{3cm}}} \vspace{1pt}\end{flushright}}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+% ADJUST MARGINS 
+\usepackage[a4paper, tmargin=0.8in,bmargin=0.8in,left=1in,right=1in]{geometry}
+
+% TIKZ DIAGRAMS
+\usepackage{color}
+\usepackage{tikz}  \usetikzlibrary{arrows} 
+\usetikzlibrary{calc} 
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552, Differential Equations}
+\newcommand{\Instructors}{}
+
+\newcommand{\LastPage}{\begin{center}\textit{This page may be used for scratch work. Please indicate clearly if you would like your work on this page to be graded. }\end{center}   }
+
+% DERIVATIVES
+\newcommand{\dfdy}{{\frac{df}{dy}}} % 
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\ddy}{{\frac{d}{dy}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+
+% COLORS FOR SOLUTIONS
+\definecolor{DarkBlue}{rgb}{0.0,0.2,0.4} % 
+\definecolor{DarkRed}{rgb}{0.4,0.1,0.1} % 
+\definecolor{DarkGreen}{rgb}{0.0,0.25,0.15} % 

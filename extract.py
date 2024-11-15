@@ -6,7 +6,7 @@ import textwrap
 import os
 import time
 import requests
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 from IPython.display import display
 from IPython.display import Markdown
@@ -132,13 +132,53 @@ def MVCExam():
     with open("./data/MultiFill.json", "w") as f:
         json.dump(all_questions, f, indent=4)
 
+def DiffEqExam():
+    all_questions = {}
+    folder = "./data/DiffEqFill/CurrentSemester/"
+    exams = [x for x in os.listdir(folder) if x not in ("Macros", "Participation")]
+    for exam in tqdm(exams):
+        all_questions[exam] = {}
+        files = [x for x in os.listdir(folder + exam) if x.find("tex") != -1]
+        for file in tqdm(files):
+            all_questions[exam][file] = []
+            file_location = folder + exam + "/"+ file
+            with open(file_location) as f:
+                text = f.read()
+                pattern = r'\\ifnum.*?\\fi'
+                matches = re.findall(pattern, text, re.DOTALL)
+                for match in matches:
+                    pattern = r'\\Version=.(.*?)\\ifnum'
+                    question_matches = re.findall(pattern, match, re.DOTALL)
+
+                    try:
+                        question = question_matches[0].strip()
+                    except:
+                        continue;
+
+                    # pattern = r'\\textbf{Solutions.}(.*?)\\fi'
+
+                    pattern = r'\\Solutions(.*?)\\fi'
+                    answer_matches = re.findall(pattern, match, re.DOTALL)
+
+                    # print(answer_matches[0])
+                    # return
+
+                    try:
+                        answer = (answer_matches[0].strip())
+                    except:
+                        continue;
+                    q = {"question" : question, "answer" : answer}
+                    all_questions[exam][file].append(q);
+    with open("./data/DiffEqFill.json", "w") as f:
+        json.dump(all_questions, f, indent=4)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
                     prog='Extract Questions',
                     description='Extracts Questoins')
     
     parser.add_argument('--type', type=str, required=True, choices=["openstax", "exam"], help="The type of generation")
-    parser.add_argument('--subject', type=str, required=True, choices=["linear", "multi"], help="The type of generation")
+    parser.add_argument('--subject', type=str, required=True, choices=["linear", "multi", "diffeq"], help="The type of generation")
 
     args = parser.parse_args()
 
@@ -148,5 +188,7 @@ if __name__ == "__main__":
     elif args.type == "exam":
         if (args.subject == "linear"):
             LinearExam()
-        else:
+        elif(args.subject == "multi"):
             MVCExam()
+        elif(args.subject == "diffeq"):
+            DiffEqExam()

@@ -1,0 +1,86 @@
+\documentclass[11pt]{exam}
+
+% \usetikzlibrary{calc,patterns}
+
+\newcommand{\Version}{1} 
+\newcommand{\Solutions}{0} 
+
+% TEST SPECIFIC INFORMATION
+\ifnum \Version=1 \newcommand{\TestName}{Lecture Participation Activity 9: Test 3 Review} \fi
+
+
+\input{CurrentSemester/Macros/ExamPreamble}
+
+% % ADJUST MARGINS
+% \usepackage[tmargin=2.0in,bmargin=1.5in]{geometry}
+% \geometry{margin=0.76in}
+
+% ADJUST FIRST LINE IN PARAGRAPH INDENTATION 
+\setlength\parindent{0pt}
+
+% FONT FORMAT
+\renewcommand*\rmdefault{lmss} % change font to lat mod ss
+
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{}{}{\textit{\TestName, Page \thepage \ of \pageref{LastPage}} }
+% \headheight 42pt % distance from top of page to top of header
+% \headsep 24pt % space between header and top of body
+
+
+\begin{document}
+    
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName}
+\end{center}
+\newcommand{\ID}{Please print your first name: \framebox{\strut\hspace{4.2cm}}, last name: \framebox{\strut\hspace{4.2cm}}, \\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID
+
+\vspace{6pt}
+\textbf{Instructions}: for full credit please show your work and answer all questions. Your work will be graded for completion, not accuracy. Please submit your work before the end of lecture. 
+\def\dm{\displaystyle}
+
+% \input{2023Summer/FormulasLaplaceLong}
+
+\subsection*{Exercises}
+\begin{questions}
+
+
+    \question[2] Calculate the Laplace transforms of the following. 
+    \begin{parts}
+        \part The function $f(t)$ has period $2$ and 
+        $$f(t) = \begin{cases} e^{-2t}, \quad 0 \le t < 1 \\ 0, \quad 1 \le t < 2 \end{cases}$$
+        \vfill
+        % \part $f(t) = u_4\cos(2(t-4))$ \vfill 
+        \part $f(t) = \begin{cases}0, \quad 0 \le t < 1 \\ t-4, \quad 1 \le t < 2 \\ 0 , \quad t \ge 2\end{cases}$
+        \vfill
+
+    \end{parts}
+
+        \newpage 
+   \question[2] 
+    % FROM 2019 M3A 
+    Consider the system: $\displaystyle dx/dt = x(1-x-y), \quad dy/dt = y(1.5-y-x)$. % Q HW7.3#5 
+    
+    % $\displaystyle dx/dt = x+y^2, \quad dy/dt = x + 2y$. % A HW7.2#3
+       
+    \begin{parts} 
+        \part Sketch the set of points where solution curves are horizontal, and the set of points where solution curves are vertical. 
+        \vfill
+        \part Identify all critical points of the system. You can use your sketch from the previous part. 
+        \vspace{3cm}
+        \part Use eigenvalues to classify the critical point at $(1,0)$ according to stability (stable, unstable, asymptotically stable) and type (saddle, proper node, etc). 
+        \vfill
+    \end{parts}
+    
+    \newpage 
+
+
+\vspace{-6pt}     
+\end{questions}
+\end{document}

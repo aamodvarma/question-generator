@@ -1,0 +1,29 @@
+% TEST SPECIFIC INFORMATION
+
+% SAMPLE
+\ifnum \Version=1 \renewcommand{\TestName}{Sample Quiz 5} \fi
+
+% 2023 VERSIONS
+\ifnum \Version=2 \renewcommand{\TestName}{Quiz 5 Version A} \fi
+\ifnum \Version=3 \renewcommand{\TestName}{Quiz 5 Version B} \fi
+
+% 2024 VERSIONS
+\ifnum \Version=4 \renewcommand{\TestName}{Quiz 5 Version A} \fi
+\ifnum \Version=5 \renewcommand{\TestName}{Quiz 5 Version B} \fi
+
+% HEADERS AND FOOTERS
+\pagestyle{headandfoot}
+\runningfooter{}{}{}
+\runningheader{\textit{Please write your last name: \framebox{\strut\hspace{5cm}} }}{}{\textit{\TestName} }
+
+\vspace*{-1cm}
+
+\begin{center}
+{\Large \TestName, \Course}
+\end{center}
+\renewcommand{\ID}{Please print your first name: 
+\framebox{\strut\hspace{4.2cm}}, 
+last name: \framebox{\strut\hspace{4.2cm}}, 
+\\[2pt] and the remaining digits of your GTID:  \framebox{\strut $9$}\framebox{\strut $0$}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}\framebox{\strut\hspace{0.19cm}}.}
+
+\ID

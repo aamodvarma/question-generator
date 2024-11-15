@@ -1,0 +1,75 @@
+\documentclass[12pt]{exam}
+
+\usepackage{amsmath} % allows for align env and other things
+\usepackage{graphicx} % allows for graphics
+\usepackage{textcomp} % allows for single apostrophe
+%\usepackage{enumitem} % allows for alpha lettering in enumerated lists
+\usepackage{amsfonts} % for real numbers symbol and other sets
+
+\usepackage{../spalign}
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{In-Class Worksheet, Section 3.3}
+
+\usepackage{enumitem}
+
+% DERIVATIVES
+\newcommand{\dydt}{{\frac{dy}{dt}}} % 
+\newcommand{\dydx}{{\frac{dy}{dx}}} % 
+\newcommand{\dydtt}{{\frac{d ^2y}{dt^2}}} % 
+\newcommand{\dydxx}{{\frac{d^2y}{dx^2}}} % 
+\newcommand{\dydttt}{{\frac{d^3y}{dt^3}}} % 
+
+\newcommand{\ddt}{{\frac{d}{dt}}} % 
+\newcommand{\ddx}{{\frac{d}{dx}}} % 
+\newcommand{\dudt}{{\frac{du}{dt}}} % 
+\newcommand{\dvdx}{{\frac{dv}{dx}}} % 
+\newcommand{\dxdt}{{\frac{dx}{dt}}} % 
+\newcommand{\dxdtt}{{\frac{d^2x}{dt^2}}} % 
+\newcommand{\dzdt}{{\frac{dz}{dt}}} % 
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    
+\vspace*{-.5cm}
+
+% COURSE SPECIFIC INFORMATION
+\newcommand{\Course}{Math 2552}
+
+\begin{center}
+{\Large \TestName 
+\\[4pt]
+\Course}
+\end{center}
+
+\begin{center}    
+{\small
+\textit{This worksheet will not be collected}
+}
+\end{center}
+
+\vspace{.5cm}
+
+% \subsection*{Questions}
+
+Suppose that the position of a moving object is given by $y(t)$, and that $y(t)$ satisfies $$\dydtt + 2\dydt + \alpha y = 0, \quad \alpha \in \mathbb R$$
+
+\begin{questions}
+    
+        \question Transform the given differential equation into a system of first order equations. Express the system using a matrix equation of the form $\vec x ' = A \vec x$, where $\vec x = \spalignmat{x_1;x_2}$. 
+        \question Express the eigenvalues of $A$ in terms of $\alpha$. 
+        \question Let $\alpha = -3$. 
+        \begin{parts}
+            \part Determine the eigenvectors of $A$. 
+            \part Write down the solution to the first order system. 
+            \part Sketch the phase portrait and classify the critical points of the system. 
+    \end{parts}
+    
+    \question Repeat question (3) with $\displaystyle \alpha = \frac34$.
+
+\end{questions}
+
+Note: you can obtain direction fields in WolframAlpha with \textit{streamplot}. Try giving this to WolframAlpha: $$\text{streamplot}[\{y,-2y+3x\},\{x,-1,1\},\{y,-1,1\}]$$
+
+\end{document}
+

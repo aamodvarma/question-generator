@@ -1,0 +1,136 @@
+\documentclass[12pt]{exam}
+
+\usepackage{graphicx} % allows for graphics
+\usepackage{ifthen}  % for if statements 
+
+\newcommand{\sol}{0} %solution =1 or 0
+
+\input{preamble.tex}
+
+% COLORS FOR DIAGRAMS
+\definecolor{DarkBlue}{rgb}{0.0,0.0,0.6} % 
+% \definecolor{DarkGreen}{rgb}{0.0,0.3,0.0} % 
+% \definecolor{DarkRed}{rgb}{0.6,0.0,0.0} % 
+
+% TEST SPECIFIC INFORMATION
+\newcommand{\TestName}{Midterm 2 Make-Up}
+\newcommand{\TestTime}{}
+\newcommand{\Duration}{12 hours }
+\newcommand{\Points}{}
+% \newcommand{\DueDate}{12:30 PM ET}
+\newcommand{\DueDate}{8:30 PM ET}
+
+
+% \usepackage{tikz}
+% \usetikzlibrary{shapes,snakes}   
+% \usetikzlibrary{arrows,automata}
+
+\begin{document}
+    
+
+\input{2021Spr/coverpage} % cover page for unproctored exam
+
+\newpage
+
+
+\InitialsRight
+
+\begin{questions}
+
+
+
+
+    \question[2] Determine all values of $\alpha$, if any, for which all solutions tend to zero as $t\to\infty$. $$y'' +(\alpha+2)y'+4y = 0 , \quad \alpha \in \mathbb R$$ Show your work. \vspace{6cm}  
+    
+    \question[2] Determine whether the functions $y_1 = e^{2t}$ and $y_2 = e^{3t} $ are a fundamental set of solutions to the differential equation $y''+5y'+6y = 0$ with $y=y(t)$. Show your work. 
+    
+    \newpage
+    
+    \question[1] State whether the following differential equation is linear or non-linear, and whether it is homogeneous or non-homogeneous. 
+    
+    $$y'' + (1-y)y' + 2y = 1$$
+    
+    \vspace{4cm}
+    
+    \question[3] Construct an initial value problem for the following situation. Show your work.  
+
+    \begin{itemize}
+        \item[] A 0.05 Newtons (N) force stretches a spring 0.01 m. A mass weighing 2 kg is attached to the spring, and the spring is also attached to a viscous damper that applies a force of 0.4 N when the velocity of the mass is 0.1 m/s. The mass is pulled down 0.1 m below its equilibrium position and given an initial upward velocity of 0.6 m/s. 
+    \end{itemize}
+    
+    
+    \newpage \Initials
+    
+    \question[3] If $Y = W[f, g]$ is the Wronskian of $f$ and $g$, and if $u=3f+g, \ v=f-3g$, express the Wronskian $W[u,v]$ of $u$ and $v$ in terms of $Y$. Show your work. 
+    
+    \vspace{8cm}
+    
+    \question[3] Determine a suitable form for the particular solution \(Y(t)\) if the method of undetermined coefficients is to be used. Please show your work. 
+    $$y''+ 11y'+24y = 4\sin(4t)+2e^{-8t}$$    
+    
+    \newpage \Initials
+    
+    \question[5] The position of a moving object, $y(t)$, for time $t \ge 0$ satisfies the IVP
+    $$y''+ 2y' + 4y=0,\quad y(0)=1,\ y'(0)=4,  \quad y=y(t)$$
+    
+    \begin{parts}
+        \part Express the differential equation in the IVP as a first-order system in the form $\vec x \, ' = A\vec x$.
+        
+        \vspace{2cm}
+        
+        \part Solve the DE using any method you like. You do not need to solve the IVP, but show your work. 
+        
+        \vspace{4cm}
+        
+        \part Sketch the trajectory of the object for $t\ge 0$ in the phase plane. Indicate the location of the object at time $t=0$, the direction of motion, and label your axes. 
+        
+    \end{parts}
+
+    
+    % \newpage \Initials
+
+    % \question[10] Use the variation of parameters method to identify the general solution to \[\vec{x} \, ' = \left( \begin{array}{rr} 2 & 4 \\ 4 & 2 \end{array} \right) \vec{x}  + \left( \begin{array}{r}  12 \\ 0 \end{array} \right)  \]
+    
+
+    \newpage \Initials
+
+    \question[10] Solve the DE. Show your work. $$y'' + 25y = 60\cos(5t), \quad y=y(t)$$
+    
+    \newpage \Initials
+
+    \question[10] Solve the DE using variation of parameters. Solutions to the homogeneous problem are $y_1 = t^{2}$ and $y_2 = t^{-2}$. Please show your work. $$t^2y'' + ty' -4y = t, \quad y=y(t), \quad t > 0$$    
+
+    \newpage \Initials
+    
+    \question[1] A small number of points will be allocated for presentation, neatness, and organization. Please ensure that
+    \begin{enumerate}
+        % \item your scan is under 5 MB in file size
+        \item your work is legible in the scan
+        \item your name or initials are at the top of every page
+        \item questions are answered in the order in which they were given
+        \item during the upload process you have indicated which pages correspond to which question, and made sure that none of your pages are upside down or sideways (you can also change the orientation of the pages when you upload in Gradescope)
+    \end{enumerate}
+    Ensuring that these criteria are met helps ensure that your exam is graded efficiently and accurately. 
+    
+
+
+    
+\end{questions}
+    
+    Please sign and date the following GT Honor Code statement. \\ 
+    
+    \vspace{6pt}
+    \textbf{Georgia Tech Honor Code}\\
+    \GTHonorCode
+    
+    \begin{center}
+    \begin{center}
+        \def\arraystretch{0.35}%  1 is the default, change whatever you need
+        \begin{tabular}{ b{8cm} b{8cm} }
+        \vspace{.5cm} \underline{\hspace{7cm}} & \vspace{.5cm} \underline{\hspace{4.5cm}}  \tabularnewline
+        \vspace{6pt} signature & \vspace{6pt} date    
+        \end{tabular}
+    \end{center}
+    \end{center}    
+\end{document}
+
